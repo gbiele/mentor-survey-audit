@@ -365,11 +365,24 @@
     if (!col.observedValues || col.observedValues.length === 0) {
       html += '<p style="color: var(--text-muted); font-size: 0.85rem; margin-top: 0.5rem;">No responses observed in uploaded sample dataset (all blank).</p>';
     } else {
-      const totalObs = col.observedValues.reduce((sum, o) => sum + o.count, 0);
+      const totalObs = col.validCount != null ? col.validCount : col.observedValues.reduce((sum, o) => sum + o.count, 0);
+      const skipped = col.skippedCount != null ? col.skippedCount : 0;
+      const skippedPct = col.skippedPct != null ? col.skippedPct : '0.0';
+      const validPct = (100 - parseFloat(skippedPct)).toFixed(0);
       const maxCount = Math.max(...col.observedValues.map(o => o.count), 1);
 
-      html += `<div style="margin-top: 0.5rem; display: flex; justify-content: space-between; align-items: baseline;">
-        <strong style="font-size: 0.825rem; color: var(--text-muted);">Observed Response Frequency (${totalObs} response${totalObs > 1 ? 's' : ''}):</strong>
+      html += `
+        <div class="response-stats-banner">
+          <div><strong style="color: var(--status-green-text);">✓ ${totalObs} Valid Responses</strong> (${validPct}%)</div>
+          <div style="color: var(--text-dim);">•</div>
+          <div style="color: ${skipped > 0 ? 'var(--text-muted)' : 'var(--text-dim)'};">
+            <strong>${skipped} Skipped / Unanswered</strong> (${skippedPct}%)
+          </div>
+        </div>
+      `;
+
+      html += `<div style="margin-top: 0.35rem; display: flex; justify-content: space-between; align-items: baseline;">
+        <strong style="font-size: 0.825rem; color: var(--text-muted);">Response Distribution across Valid Answers:</strong>
       </div>`;
 
       html += '<div class="freq-bars-container">';

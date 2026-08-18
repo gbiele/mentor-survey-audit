@@ -141,8 +141,15 @@ format:
         <div class="guide-item guide-gray">
           <span style="font-size: 1.25rem; line-height: 1;">⚪</span>
           <div>
-            <strong>Open-Ended / Continuous</strong>
-            Free-text fields, continuous dates/years, numerical intervals (e.g., MacArthur ladder), or matrix header titles where discrete categorical options do not apply.
+            <strong>Open-Ended / Free Text</strong>
+            Free-text fields (e.g. trauma descriptions) where discrete categorical options do not apply.
+          </div>
+        </div>
+        <div class="guide-item" style="grid-column: 1 / -1; background: #f8fafc; border: 1px solid var(--border-subtle); color: var(--text-main);">
+          <span style="font-size: 1.25rem; line-height: 1;">💡</span>
+          <div>
+            <strong>Skipped Questions vs. Explicit Refusal Options:</strong>
+            <strong>Missing data</strong> occurs when a respondent <em>skips a question</em> entirely, leaving the cell blank/empty in the export. This is strictly distinct from respondents actively selecting coded special options such as <em>"Prefer not to answer"</em> (recode <code>[999]</code>), <em>"Don't know"</em> (recode <code>[998]</code>), or <em>"Not applicable"</em> (recode <code>[997]</code>). The Details panel displays both the valid vs. skipped breakdown and the exact distribution across all chosen options.
           </div>
         </div>
       </div>

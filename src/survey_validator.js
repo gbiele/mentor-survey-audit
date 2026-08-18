@@ -311,7 +311,7 @@
           }
         }
 
-        const columnAudit = this.evaluateColumn(headerInfo, observedCounts, observedIds, nonNullCount);
+        const columnAudit = this.evaluateColumn(headerInfo, observedCounts, observedIds, nonNullCount, dataRows.length);
         columns.push(columnAudit);
       }
 
@@ -335,9 +335,11 @@
     /**
      * Evaluate single column against master dictionary
      */
-    evaluateColumn(headerInfo, observedCounts, observedIds, nonNullCount) {
+    evaluateColumn(headerInfo, observedCounts, observedIds, nonNullCount, totalRespondents = 0) {
       let canonical = headerInfo.canonical;
       const extractedId = headerInfo.extractedId;
+      const skippedCount = Math.max(0, totalRespondents - nonNullCount);
+      const skippedPct = totalRespondents > 0 ? ((skippedCount / totalRespondents) * 100).toFixed(1) : '0.0';
 
       // If extractedId is ID426 and not yet matched, try stem match to mhls01
       if (!canonical && extractedId === 'ID426') {
@@ -362,6 +364,10 @@
             status: 'open_ended',
             statusIcon: '⚪',
             statusLabel: 'Open-Ended / Free Text',
+            totalRespondents,
+            validCount: nonNullCount,
+            skippedCount,
+            skippedPct,
             observedCount: nonNullCount,
             observedValues: Array.from(observedCounts.entries()).map(([label, count]) => ({
               label,
@@ -391,6 +397,10 @@
           status: 'missing_options',
           statusIcon: '🔴',
           statusLabel: 'Missing Options',
+          totalRespondents,
+          validCount: nonNullCount,
+          skippedCount,
+          skippedPct,
           observedCount: nonNullCount,
           observedValues: Array.from(observedCounts.entries()).map(([label, count]) => ({
             label,
@@ -505,6 +515,10 @@
         status,
         statusIcon,
         statusLabel,
+        totalRespondents,
+        validCount: nonNullCount,
+        skippedCount,
+        skippedPct,
         observedCount: nonNullCount,
         observedValues: Array.from(observedCounts.entries()).map(([label, count]) => ({
           label,

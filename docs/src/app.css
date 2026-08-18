@@ -647,6 +647,19 @@ body {
   margin-top: 0.5rem;
 }
 
+.response-stats-banner {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: var(--bg-subtle);
+  border: 1px solid var(--border-subtle);
+  padding: 0.45rem 0.75rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.8rem;
+  margin-bottom: 0.75rem;
+  color: var(--text-main);
+}
+
 .freq-bar-row {
   display: flex;
   flex-direction: column;
