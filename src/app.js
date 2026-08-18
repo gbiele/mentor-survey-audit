@@ -180,6 +180,13 @@
 
   let expandedMatrixGroups = new Set();
 
+  function getSubscalePrefix(varName) {
+    if (!varName) return '';
+    // Strip trailing digits: bcfpi_coop1 -> bcfpi_coop, bcfpi_af6 -> bcfpi_af, igd5 -> igd
+    const m = varName.match(/^([a-zA-Z_]+?)\d+$/);
+    return m ? m[1] : varName;
+  }
+
   function buildTableGroups(columns) {
     const groups = [];
     let currentMatrix = null;
@@ -189,7 +196,9 @@
       const can = col.canonical;
 
       // Rule: Matrix grouping only applies when canonical is non-null
+      // and items share the same subscale variable prefix AND the same question stem
       const stem = can && can.question_stem ? can.question_stem.trim() : null;
+      const prefix = can ? getSubscalePrefix(can.variable) : null;
       const isMatrixType = can && (
         can.question_type === 'matrix' ||
         can.scale === 'Likert' ||
@@ -197,8 +206,8 @@
         (stem && stem.length > 20)
       );
 
-      if (can && stem && isMatrixType) {
-        if (currentMatrix && currentMatrix.stem === stem && currentMatrix.section === can.section) {
+      if (can && stem && prefix && isMatrixType) {
+        if (currentMatrix && currentMatrix.stem === stem && currentMatrix.prefix === prefix && currentMatrix.section === can.section) {
           currentMatrix.columns.push(col);
           continue;
         } else {
@@ -208,6 +217,7 @@
           currentMatrix = {
             type: 'matrix_candidate',
             stem: stem,
+            prefix: prefix,
             section: can.section || 'General',
             scale: can.scale || 'Likert',
             columns: [col]

@@ -13,6 +13,13 @@ const sheet = wb.Sheets[wb.SheetNames[0]];
 const rows = XLSX.utils.sheet_to_json(sheet, { header: 1 });
 const auditResult = auditor.auditSheet(rows);
 
+function getSubscalePrefix(varName) {
+  if (!varName) return '';
+  // Strip trailing digits: bcfpi_coop1 -> bcfpi_coop, bcfpi_af6 -> bcfpi_af, igd5 -> igd
+  const m = varName.match(/^([a-zA-Z_]+?)\d+$/);
+  return m ? m[1] : varName;
+}
+
 // Import or define buildTableGroups logic
 function buildTableGroups(columns) {
   const groups = [];
@@ -22,9 +29,10 @@ function buildTableGroups(columns) {
     const col = columns[i];
     const can = col.canonical;
 
-    // Rule: Matrix grouping is only allowed if canonical is non-null
-    // and question has a valid question_stem and is of matrix / Likert scale type
+    // Rule: Matrix grouping only applies when canonical is non-null
+    // and items share the same subscale variable prefix AND the same question stem
     const stem = can && can.question_stem ? can.question_stem.trim() : null;
+    const prefix = can ? getSubscalePrefix(can.variable) : null;
     const isMatrixType = can && (
       can.question_type === 'matrix' ||
       can.scale === 'Likert' ||
@@ -32,8 +40,8 @@ function buildTableGroups(columns) {
       (stem && stem.length > 20)
     );
 
-    if (can && stem && isMatrixType) {
-      if (currentMatrix && currentMatrix.stem === stem && currentMatrix.section === can.section) {
+    if (can && stem && prefix && isMatrixType) {
+      if (currentMatrix && currentMatrix.stem === stem && currentMatrix.prefix === prefix && currentMatrix.section === can.section) {
         currentMatrix.columns.push(col);
         continue;
       } else {
@@ -43,6 +51,7 @@ function buildTableGroups(columns) {
         currentMatrix = {
           type: 'matrix_candidate',
           stem: stem,
+          prefix: prefix,
           section: can.section || 'General',
           scale: can.scale || 'Likert',
           columns: [col]
@@ -125,12 +134,18 @@ console.log(`Total original columns: ${auditResult.columns.length} -> Condensed 
 assert(tableGroups.length < 50, `Expected table to condense to under 50 rows, got ${tableGroups.length}`);
 console.log(`✓ Table successfully condensed from 174 rows to ${tableGroups.length} rows`);
 
-// Test 2: BCFPI mental health items (bcfpi_yf01-yf12) grouped
-const bcfpiGroup = tableGroups.find(g => g.type === 'matrix' && g.varRange.includes('bcfpi_yf01'));
-assert(bcfpiGroup, 'bcfpi_yf01-yf12 must form a matrix group');
-assert.strictEqual(bcfpiGroup.itemCount, 12, 'bcfpi_yf group must have 12 items');
-assert.strictEqual(bcfpiGroup.status, 'fully_identified', 'bcfpi_yf group must be fully identified');
-console.log('✓ BCFPI Mental Health 12-item matrix group verified');
+// Test 2: BCFPI subscales are distinctly grouped (bcfpi_coop1-6, bcfpi_af1-6, bcfpi_yf01-12)
+const coopGroup = tableGroups.find(g => g.type === 'matrix' && g.varRange === 'bcfpi_coop1 – bcfpi_coop6');
+const afGroup = tableGroups.find(g => g.type === 'matrix' && g.varRange === 'bcfpi_af1 – bcfpi_af6');
+const yfGroup = tableGroups.find(g => g.type === 'matrix' && g.varRange === 'bcfpi_yf01 – bcfpi_yf12');
+
+assert(coopGroup, 'bcfpi_coop1-6 must form its own distinct matrix group');
+assert.strictEqual(coopGroup.itemCount, 6, 'bcfpi_coop group must have exactly 6 items');
+assert(afGroup, 'bcfpi_af1-6 must form its own distinct matrix group');
+assert.strictEqual(afGroup.itemCount, 6, 'bcfpi_af group must have exactly 6 items');
+assert(yfGroup, 'bcfpi_yf01-12 must form its own distinct matrix group');
+assert.strictEqual(yfGroup.itemCount, 12, 'bcfpi_yf group must have exactly 12 items');
+console.log('✓ BCFPI Subscales correctly separated (bcfpi_coop: 6, bcfpi_af: 6, bcfpi_yf: 12)');
 
 // Test 3: Gaming addiction items (igd1-9) grouped with Incomplete status
 const igdGroup = tableGroups.find(g => g.type === 'matrix' && g.varRange.includes('igd1'));
