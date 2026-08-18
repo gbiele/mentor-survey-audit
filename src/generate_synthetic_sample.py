@@ -21,7 +21,7 @@ DICT_FILE = SRC_DIR / "master_dictionary.json"
 random.seed(42)  # Deterministic generation
 
 
-def generate_synthetic_data(n_respondents=50):
+def generate_synthetic_data(n_respondents=100):
     with open(DICT_FILE, encoding="utf-8") as f:
         master_dict = json.load(f)
 
@@ -39,7 +39,7 @@ def generate_synthetic_data(n_respondents=50):
     ws.title = "Content"
 
     # Set metadata rows
-    ws.append(["Alias", "MENTORMasterGER1_Synthetic50"] + [None] * (n_cols - 2))
+    ws.append(["Alias", "MENTORMasterGER1_Synthetic100"] + [None] * (n_cols - 2))
     ws.append(["Export Date", datetime(2026, 8, 18, 17, 30, 0)] + [None] * (n_cols - 2))
     ws.append([None] * n_cols)
     ws.append(headers)
@@ -55,11 +55,10 @@ def generate_synthetic_data(n_respondents=50):
         col_vals = [gen(resp_id) for resp_id in range(1, n_respondents + 1)]
 
         # Introduce 3% to 6% missingness per question
-        # For n=50: 3% is 1.5, 6% is 3.0 -> 2 or 3 missing values per column (4% to 6%)
-        # Check if this column is a standard question (not sparse conditional branch)
+        # For n=100: 3 to 6 missing values per column (3.0% to 6.0%)
         non_none_indices = [i for i, v in enumerate(col_vals) if v is not None and str(v).strip() != ""]
-        if len(non_none_indices) > 10:
-            n_missing = random.choice([2, 3])  # 2/50 = 4%, 3/50 = 6%
+        if len(non_none_indices) > 20:
+            n_missing = random.randint(3, 6)  # 3/100 = 3%, 6/100 = 6%
             missing_indices = random.sample(non_none_indices, min(n_missing, len(non_none_indices)))
             for idx in missing_indices:
                 col_vals[idx] = None
@@ -113,4 +112,4 @@ def update_sample_data_js(clean_rows):
 
 
 if __name__ == "__main__":
-    generate_synthetic_data(50)
+    generate_synthetic_data(100)

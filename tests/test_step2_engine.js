@@ -38,7 +38,7 @@ function runTests() {
 
   console.log('Plain export audit summary:', plainResult.summary);
   assert.strictEqual(plainResult.summary.totalColumns, 174, 'Plain export should have 174 columns');
-  assert.strictEqual(plainResult.summary.metadata.dataRowCount, 50, 'Should detect 50 synthetic survey data rows');
+  assert.strictEqual(plainResult.summary.metadata.dataRowCount, 100, 'Should detect 100 synthetic survey data rows');
   assert.strictEqual(plainResult.summary.fullyIdentified, 156, 'Expected 156 fully identified columns');
   assert.strictEqual(plainResult.summary.incomplete, 11, 'Expected 11 incomplete columns');
   assert.strictEqual(plainResult.summary.missingOptions, 6, 'Expected 6 missing options columns');
