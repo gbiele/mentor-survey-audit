@@ -260,7 +260,7 @@
         </td>
         <td>
           <span class="var-tag">${varName}</span>
-          <span class="section-label">${origVar !== varName && origVar !== '-' ? origVar : ''}</span>
+          <span class="section-label" style="font-family: var(--font-mono); font-size: 0.725rem; color: var(--text-dim); margin-top: 0.15rem;">orig: ${origVar || '-'}</span>
         </td>
         <td>
           <div style="font-weight: 500; max-width: 380px; line-height: 1.35;">${col.cleanedText || col.rawHeader}</div>
