@@ -1,5 +1,5 @@
 /**
- * MENTOR Survey Option Auditor & Validator
+ * JA-MENTOR Youth Survey Option Auditor & Validator
  * Client-Side Validation & Mapping Engine
  */
 

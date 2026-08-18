@@ -1,4 +1,4 @@
-# MENTOR Survey Option Auditor & Validator
+# JA-MENTOR Youth Survey Option Auditor & Validator
 
 An interactive, browser-based auditing tool for the **JA-MENTOR youth mental health questionnaire**.
 

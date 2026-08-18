@@ -1,6 +1,6 @@
 # Implementation Guidelines & Execution Roadmap
 
-This document defines the development roadmap, testing protocols, and version control guidelines for building the **MENTOR Survey Option Auditor & Validator**.
+This document defines the development roadmap, testing protocols, and version control guidelines for building the **JA-MENTOR Youth Survey Option Auditor & Validator**.
 
 ---
 

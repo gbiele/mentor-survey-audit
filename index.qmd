@@ -1,5 +1,5 @@
 ---
-title: "MENTOR Survey Option Auditor & Validator"
+title: "JA-MENTOR Youth Survey Option Auditor & Validator"
 format:
   html:
     theme: none
@@ -13,7 +13,7 @@ format:
 <div class="app-header">
   <div class="header-inner">
     <div class="badge-tag">🔬 JA-MENTOR Cross-Country Harmonization</div>
-    <h1 class="app-title">MENTOR Survey Option Auditor & Validator</h1>
+    <h1 class="app-title">JA-MENTOR Youth Survey Option Auditor & Validator</h1>
     <p class="app-subtitle">
       Interactive quality assurance & harmonization engine for the <strong>JA-MENTOR youth mental health questionnaire</strong>.
     </p>
