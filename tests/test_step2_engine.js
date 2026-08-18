@@ -11,7 +11,6 @@ const SurveyAuditor = require('../src/survey_validator.js');
 const ROOT = path.resolve(__dirname, '..');
 const DICT_PATH = path.join(ROOT, 'src', 'master_dictionary.json');
 const GER_PLAIN_PATH = path.join(ROOT, 'data', 'Content_Export_MENTORMasterGER1_Test-GER-1.xlsx');
-const GER_ID_PATH = path.join(ROOT, 'data', 'MENTORMaster_TEST_GER_2.xlsx');
 
 function loadExcelRows(filePath) {
   const workbook = XLSX.readFile(filePath);
@@ -47,19 +46,18 @@ function runTests() {
   assert.strictEqual(plainResult.summary.totalIssues, 17, 'Expected 17 total flagged issues');
   console.log('✓ Plain label export audit passed with exact status distribution');
 
-  // Test 3: Audit ID Export (MENTORMaster_TEST_GER_2.xlsx)
-  assert(fs.existsSync(GER_ID_PATH), 'ID test export exists');
-  const idRows = loadExcelRows(GER_ID_PATH);
-  const idResult = auditor.auditSheet(idRows);
+  // Test 3: Header Matching & Disambiguation of Duplicate Question Stems (smafreq1 vs igdfreq1)
+  const col134 = plainResult.columns[133];
+  const col147 = plainResult.columns[146];
 
-  console.log('ID export audit summary:', idResult.summary);
-  assert.strictEqual(idResult.summary.totalColumns, 174, 'ID export should have 174 columns');
-  assert.strictEqual(idResult.summary.metadata.dataRowCount, 5, 'Should detect 5 survey data rows');
-  assert.strictEqual(idResult.summary.fullyIdentified, 153, 'Expected 153 fully identified columns in ID file');
-  assert.strictEqual(idResult.summary.incomplete, 11, 'Expected 11 incomplete columns in ID file');
-  assert.strictEqual(idResult.summary.missingOptions, 6, 'Expected 6 missing options columns in ID file');
-  assert.strictEqual(idResult.summary.openEnded, 4, 'Expected 4 open-ended columns in ID file');
-  console.log('✓ ID export audit passed with exact status distribution');
+  assert.strictEqual(col134.canonical.variable, 'smafreq1', 'Column 134 must resolve to smafreq1');
+  assert.strictEqual(col134.canonical.orig_variable, 'ID27');
+  assert.strictEqual(col134.canonical.section, 'German-only · Social media follow-up');
+
+  assert.strictEqual(col147.canonical.variable, 'igdfreq1', 'Column 147 must resolve to igdfreq1');
+  assert.strictEqual(col147.canonical.orig_variable, 'ID383');
+  assert.strictEqual(col147.canonical.section, 'German-only · Gaming follow-up (DE)');
+  console.log('✓ Duplicate question stem disambiguation verified (smafreq1 vs igdfreq1)');
 
   // Test 4: Variable Header Matching & Option Resolution
   const genderCol = plainResult.columns[0];

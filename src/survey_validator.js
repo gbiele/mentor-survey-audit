@@ -147,12 +147,47 @@
     /**
      * Match a column header to a canonical variable definition
      */
-    matchVariable(headerStr, colIndex) {
+    matchVariable(headerStr, colIndex, context) {
       const { text, varId } = parseHeader(headerStr);
       const { stem, itemText, isMatrix } = splitStemItem(text);
 
       let canonical = null;
       let matchType = 'unmatched';
+
+      // Helper to pick best candidate when multiple canonical variables match
+      const selectCandidate = (candidates, baseType) => {
+        if (!candidates || candidates.length === 0) return null;
+        if (candidates.length === 1) {
+          return { candidate: candidates[0], type: baseType };
+        }
+
+        // 1. Context check: check if preceding matched variable was gaming (igd) vs social media (sma)
+        if (context && context.prevCanonical) {
+          const prevVar = context.prevCanonical.variable || '';
+          if (prevVar.startsWith('igd') || prevVar.includes('gaming')) {
+            const igdMatch = candidates.find(c => (c.variable.startsWith('igd') || (c.section && c.section.toLowerCase().includes('gaming'))));
+            if (igdMatch && (!context.matchedVars || !context.matchedVars.has(igdMatch.variable))) {
+              return { candidate: igdMatch, type: baseType + '_context' };
+            }
+          }
+          if (prevVar.startsWith('sma') || prevVar.includes('social')) {
+            const smaMatch = candidates.find(c => (c.variable.startsWith('sma') || (c.section && c.section.toLowerCase().includes('social'))));
+            if (smaMatch && (!context.matchedVars || !context.matchedVars.has(smaMatch.variable))) {
+              return { candidate: smaMatch, type: baseType + '_context' };
+            }
+          }
+        }
+
+        // 2. Sequential check: pick the first unassigned candidate
+        if (context && context.matchedVars) {
+          const unassigned = candidates.find(c => !context.matchedVars.has(c.variable));
+          if (unassigned) {
+            return { candidate: unassigned, type: baseType + '_sequential' };
+          }
+        }
+
+        return { candidate: candidates[0], type: baseType };
+      };
 
       // 1. Try match by extracted varId
       if (varId) {
@@ -170,9 +205,11 @@
       if (!canonical && itemText) {
         const ikey = normKey(itemText);
         if (this.byItemKey.has(ikey)) {
-          const candidates = this.byItemKey.get(ikey);
-          canonical = candidates[0];
-          matchType = 'item_text_exact';
+          const res = selectCandidate(this.byItemKey.get(ikey), 'item_text_exact');
+          if (res) {
+            canonical = res.candidate;
+            matchType = res.type;
+          }
         }
       }
 
@@ -180,10 +217,10 @@
       if (!canonical && stem) {
         const skey = normKey(stem);
         if (this.byStemKey.has(skey)) {
-          const candidates = this.byStemKey.get(skey);
-          if (candidates.length === 1) {
-            canonical = candidates[0];
-            matchType = 'stem_text_exact';
+          const res = selectCandidate(this.byStemKey.get(skey), 'stem_text_exact');
+          if (res) {
+            canonical = res.candidate;
+            matchType = res.type;
           }
         }
       }
@@ -192,8 +229,11 @@
       if (!canonical && text) {
         const tkey = normKey(text);
         if (this.byStemKey.has(tkey)) {
-          canonical = this.byStemKey.get(tkey)[0];
-          matchType = 'question_text_exact';
+          const res = selectCandidate(this.byStemKey.get(tkey), 'question_text_exact');
+          if (res) {
+            canonical = res.candidate;
+            matchType = res.type;
+          }
         }
       }
 
@@ -232,6 +272,8 @@
       const dataRows = rows.slice(4);
 
       const columns = [];
+      const matchedVars = new Set();
+      let prevCanonical = null;
 
       for (let colIdx = 0; colIdx < headerRow.length; colIdx++) {
         const rawHeader = headerRow[colIdx];
@@ -239,7 +281,13 @@
           continue; // Skip trailing empty columns
         }
 
-        const headerInfo = this.matchVariable(rawHeader, colIdx);
+        const context = { matchedVars, prevCanonical };
+        const headerInfo = this.matchVariable(rawHeader, colIdx, context);
+
+        if (headerInfo.canonical && headerInfo.canonical.variable) {
+          matchedVars.add(headerInfo.canonical.variable);
+          prevCanonical = headerInfo.canonical;
+        }
 
         // Collect observed values for this column
         const observedCounts = new Map();
