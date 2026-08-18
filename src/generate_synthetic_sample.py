@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
 """Generate a synthetic survey test-data export with 50 respondents.
 
-Preserves the exact 174-column header structure and the structural
-missing/incomplete option characteristics of the German EUSurvey instrument.
+Preserves the exact 174-column header structure, the structural
+missing/incomplete option characteristics, and introduces 3% to 6%
+random item non-response (missing data) across all survey questions.
 """
 
 import json
@@ -29,9 +30,6 @@ def generate_synthetic_data(n_respondents=50):
     ws_template = wb_template[wb_template.sheetnames[0]]
     template_rows = list(ws_template.iter_rows(values_only=True))
 
-    row0 = list(template_rows[0])
-    row1 = list(template_rows[1])
-    row2 = list(template_rows[2])
     headers = list(template_rows[3])
     n_cols = len(headers)
 
@@ -50,17 +48,32 @@ def generate_synthetic_data(n_respondents=50):
     from survey_validator_py import build_column_generators
     col_generators = build_column_generators(headers, master_dict, template_rows[4:])
 
-    for resp_id in range(1, n_respondents + 1):
-        row_values = []
-        for col_idx in range(n_cols):
-            gen = col_generators[col_idx]
-            val = gen(resp_id)
-            row_values.append(val)
+    # Generate complete matrix of responses
+    column_data = []
+    for col_idx in range(n_cols):
+        gen = col_generators[col_idx]
+        col_vals = [gen(resp_id) for resp_id in range(1, n_respondents + 1)]
+
+        # Introduce 3% to 6% missingness per question
+        # For n=50: 3% is 1.5, 6% is 3.0 -> 2 or 3 missing values per column (4% to 6%)
+        # Check if this column is a standard question (not sparse conditional branch)
+        non_none_indices = [i for i, v in enumerate(col_vals) if v is not None and str(v).strip() != ""]
+        if len(non_none_indices) > 10:
+            n_missing = random.choice([2, 3])  # 2/50 = 4%, 3/50 = 6%
+            missing_indices = random.sample(non_none_indices, min(n_missing, len(non_none_indices)))
+            for idx in missing_indices:
+                col_vals[idx] = None
+
+        column_data.append(col_vals)
+
+    # Write rows to worksheet
+    for resp_idx in range(n_respondents):
+        row_values = [column_data[col_idx][resp_idx] for col_idx in range(n_cols)]
         ws.append(row_values)
 
     out_file = DATA_DIR / "Content_Export_MENTORMasterGER1_Test-GER-1.xlsx"
     wb.save(out_file)
-    print(f"Saved synthetic survey export with {n_respondents} respondents to {out_file}")
+    print(f"Saved synthetic survey export with {n_respondents} respondents (3-6% missingness per item) to {out_file}")
 
     # Also update src/sample_data.js and docs/src/sample_data.js
     rows = list(ws.iter_rows(values_only=True))
@@ -86,7 +99,6 @@ def update_sample_data_js(clean_rows):
     with open(js_file, "r", encoding="utf-8") as f:
         code = f.read()
 
-    # Replace __BUNDLED_SAMPLE_ROWS__
     prefix = code.split("window.__BUNDLED_SAMPLE_ROWS__ =")[0]
     new_code = prefix + f"window.__BUNDLED_SAMPLE_ROWS__ = {json.dumps(clean_rows, ensure_ascii=False)};\n"
 
@@ -97,7 +109,7 @@ def update_sample_data_js(clean_rows):
         with open(docs_js_file, "w", encoding="utf-8") as f:
             f.write(new_code)
 
-    print(f"Updated sample_data.js with {len(clean_rows)} rows (50 respondents)")
+    print(f"Updated sample_data.js with {len(clean_rows)} rows (50 respondents with 3-6% missingness)")
 
 
 if __name__ == "__main__":
