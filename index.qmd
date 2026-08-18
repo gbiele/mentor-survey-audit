@@ -105,9 +105,9 @@ format:
     <!-- Status & Harmonization Explanation Guide -->
     <div class="status-guide-card">
       <div class="status-guide-header">
-        <div class="status-guide-title">
+        <h2 class="status-guide-title">
           <span>📖</span> Understanding Audit Statuses & Harmonization Flags
-        </div>
+        </h2>
       </div>
       <div class="status-guide-grid">
         <div class="guide-item guide-yellow">
