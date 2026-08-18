@@ -39,12 +39,24 @@ function runTests() {
   console.log('Plain export audit summary:', plainResult.summary);
   assert.strictEqual(plainResult.summary.totalColumns, 174, 'Plain export should have 174 columns');
   assert.strictEqual(plainResult.summary.metadata.dataRowCount, 5, 'Should detect 5 survey data rows');
-  assert.strictEqual(plainResult.summary.fullyIdentified, 153, 'Expected 153 fully identified columns');
+  assert.strictEqual(plainResult.summary.fullyIdentified, 156, 'Expected 156 fully identified columns');
   assert.strictEqual(plainResult.summary.incomplete, 11, 'Expected 11 incomplete columns');
   assert.strictEqual(plainResult.summary.missingOptions, 6, 'Expected 6 missing options columns');
-  assert.strictEqual(plainResult.summary.openEnded, 4, 'Expected 4 open-ended columns');
+  assert.strictEqual(plainResult.summary.openEnded, 1, 'Expected 1 open-ended free text column (catsoth1)');
   assert.strictEqual(plainResult.summary.totalIssues, 17, 'Expected 17 total flagged issues');
   console.log('✓ Plain label export audit passed with exact status distribution');
+
+  // Test 3: Numerical & Interval variables with defined canonical options are Fully Identified
+  const byearCol = plainResult.columns.find(c => c.canonical && c.canonical.variable === 'byear1');
+  const bageCol = plainResult.columns.find(c => c.canonical && c.canonical.variable === 'bage1');
+  const ladderCol = plainResult.columns.find(c => c.canonical && c.canonical.variable === 'ladder1');
+  const catsothCol = plainResult.columns.find(c => c.canonical && c.canonical.variable === 'catsoth1');
+
+  assert.strictEqual(byearCol.status, 'fully_identified', 'byear1 must be fully_identified');
+  assert.strictEqual(bageCol.status, 'fully_identified', 'bage1 must be fully_identified');
+  assert.strictEqual(ladderCol.status, 'fully_identified', 'ladder1 must be fully_identified');
+  assert.strictEqual(catsothCol.status, 'open_ended', 'catsoth1 (Describe:) must be open_ended');
+  console.log('✓ Numeric/interval variables with canonical options verified as fully identified');
 
   // Test 3: Header Matching & Disambiguation of Duplicate Question Stems (smafreq1 vs igdfreq1)
   const col134 = plainResult.columns[133];

@@ -346,28 +346,26 @@
         }
       }
 
+      // Check if genuinely open-ended / free-text variable (no discrete canonical options)
       if (canonical) {
-        const isContinuous = (
-          canonical.scale === 'interval' ||
+        const isOpenEndedText = (
           canonical.scale === 'text' ||
-          canonical.scale === 'none' ||
-          canonical.question_type === 'text' ||
-          canonical.question_type === 'interval'
-        );
+          canonical.question_type === 'text'
+        ) && (!canonical.options || canonical.options.length === 0);
 
-        if (isContinuous) {
+        if (isOpenEndedText) {
           return {
             ...headerInfo,
             status: 'open_ended',
             statusIcon: '⚪',
-            statusLabel: 'Open-Ended / Continuous',
+            statusLabel: 'Open-Ended / Free Text',
             observedCount: nonNullCount,
             observedValues: Array.from(observedCounts.entries()).map(([label, count]) => ({
               label,
               count,
               answerId: observedIds.get(label) || null
             })),
-            canonicalOptions: canonical.options || [],
+            canonicalOptions: [],
             mappedOptions: [],
             unmappedObserved: [],
             unobservedCanonical: [],
@@ -418,6 +416,7 @@
 
       for (const opt of canonicalOpts) {
         if (opt.label) canByLabel.set(normKey(opt.label), opt);
+        if (opt.value != null) canByLabel.set(String(opt.value), opt);
         if (opt.eusurvey_answer_id) canById.set(opt.eusurvey_answer_id, opt);
         if (opt.alias) canByAlias.set(normKey(opt.alias), opt);
         if (opt.label_with_id) canByLabel.set(normKey(opt.label_with_id), opt);
