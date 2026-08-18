@@ -1,0 +1,19 @@
+project:
+  type: website
+  output-dir: docs
+  render:
+    - "index.qmd"
+  resources:
+    - "src/**"
+    - "data/**"
+
+website:
+  title: "MENTOR Survey Option Auditor"
+
+format:
+  html:
+    theme: none
+    minimal: true
+    toc: false
+    page-layout: custom
+    css: src/app.css
