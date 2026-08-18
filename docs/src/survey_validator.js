@@ -34,6 +34,9 @@
   function norm(str) {
     if (str == null) return "";
     let s = String(str).normalize("NFKC");
+    if (/^-?\d+\.0+$/.test(s.trim())) {
+      s = s.trim().split('.')[0];
+    }
     s = s.replace(/[\u00a0\u2000-\u200b\u202f\u205f]/g, " ");
     s = s.replace(/[–—]/g, "-").replace(/…/g, "...");
     s = s.replace(/[’‘`]/g, "'");
