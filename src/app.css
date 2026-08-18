@@ -639,6 +639,81 @@ body {
   color: var(--text-dim);
 }
 
+/* Response Frequency Bar Chart */
+.freq-bars-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  margin-top: 0.5rem;
+}
+
+.freq-bar-row {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.freq-bar-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.815rem;
+}
+
+.freq-bar-label {
+  font-weight: 500;
+  color: var(--text-main);
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 75%;
+}
+
+.freq-bar-label.unmapped {
+  color: var(--status-red-text);
+  font-weight: 600;
+}
+
+.freq-bar-count {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+
+.freq-bar-count strong {
+  color: var(--text-main);
+}
+
+.freq-bar-pct {
+  font-size: 0.725rem;
+  color: var(--text-dim);
+}
+
+.freq-bar-track {
+  width: 100%;
+  height: 8px;
+  background: #e2e8f0;
+  border-radius: 9999px;
+  overflow: hidden;
+}
+
+.freq-bar-fill {
+  height: 100%;
+  border-radius: 9999px;
+  transition: width 0.3s ease;
+}
+
+.freq-bar-fill.fill-green {
+  background: linear-gradient(90deg, #10b981 0%, #059669 100%);
+}
+
+.freq-bar-fill.fill-red {
+  background: linear-gradient(90deg, #ef4444 0%, #dc2626 100%);
+}
+
 .issue-alert {
   padding: 0.6rem 0.85rem;
   border-radius: var(--radius-sm);

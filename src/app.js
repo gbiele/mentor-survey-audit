@@ -361,20 +361,42 @@
       });
     }
 
-    // Show Observed responses
+    // Show Observed responses as frequency bar plot
     if (!col.observedValues || col.observedValues.length === 0) {
-      html += '<p style="color: var(--text-muted); font-size: 0.85rem;">No responses observed in uploaded sample dataset (all blank).</p>';
+      html += '<p style="color: var(--text-muted); font-size: 0.85rem; margin-top: 0.5rem;">No responses observed in uploaded sample dataset (all blank).</p>';
     } else {
-      html += '<div style="margin-top: 0.5rem;"><strong style="font-size: 0.8rem; color: var(--text-muted);">Observed in Survey:</strong></div>';
-      html += '<div class="option-pill-list" style="margin-top: 0.35rem;">';
+      const totalObs = col.observedValues.reduce((sum, o) => sum + o.count, 0);
+      const maxCount = Math.max(...col.observedValues.map(o => o.count), 1);
+
+      html += `<div style="margin-top: 0.5rem; display: flex; justify-content: space-between; align-items: baseline;">
+        <strong style="font-size: 0.825rem; color: var(--text-muted);">Observed Response Frequency (${totalObs} response${totalObs > 1 ? 's' : ''}):</strong>
+      </div>`;
+
+      html += '<div class="freq-bars-container">';
       col.observedValues.forEach(obs => {
         const isMapped = col.mappedOptions.some(m => m.observedLabel === obs.label);
-        const pillClass = isMapped ? 'matched' : 'unmapped';
-        const idStr = obs.answerId ? ` (${obs.answerId})` : '';
+        const idStr = obs.answerId ? ` <span style="color: var(--text-dim); font-size: 0.75rem;">(${obs.answerId})</span>` : '';
+        const pct = totalObs > 0 ? ((obs.count / totalObs) * 100).toFixed(0) : 0;
+        const widthPct = Math.max(8, ((obs.count / maxCount) * 100).toFixed(0));
+        const statusIcon = isMapped ? '🟢' : '🔴';
+        const fillClass = isMapped ? 'fill-green' : 'fill-red';
 
-        html += `<span class="option-pill ${pillClass}">
-          ${obs.label}${idStr} × ${obs.count}
-        </span>`;
+        html += `
+          <div class="freq-bar-row">
+            <div class="freq-bar-header">
+              <span class="freq-bar-label ${isMapped ? 'matched' : 'unmapped'}" title="${obs.label}">
+                <span>${statusIcon}</span>
+                <span>${obs.label}${idStr}</span>
+              </span>
+              <span class="freq-bar-count">
+                <strong>${obs.count}</strong> <span class="freq-bar-pct">(${pct}%)</span>
+              </span>
+            </div>
+            <div class="freq-bar-track">
+              <div class="freq-bar-fill ${fillClass}" style="width: ${widthPct}%;"></div>
+            </div>
+          </div>
+        `;
       });
       html += '</div>';
     }
