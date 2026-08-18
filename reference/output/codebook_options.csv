@@ -1,0 +1,1149 @@
+variable,orig_variable,group_id,option_order,option_label,option_label_with_id,option_alias,eusurvey_answer_id,value,scale,multiple,source,options_complete
+consent1,background_01,do_you_wish_to_participate_in_mentor,0,Yes,,,,1,nominal,false,fhi_only,true
+consent1,background_01,do_you_wish_to_participate_in_mentor,1,No,,,,0,nominal,false,fhi_only,true
+gender1,gender1,what_gender_do_you_identify_as,0,Boy,Boy (ID2),,ID2,1,nominal,false,both,true
+gender1,gender1,what_gender_do_you_identify_as,1,Girl,Girl (ID3),,ID3,2,nominal,false,both,true
+gender1,gender1,what_gender_do_you_identify_as,2,Other gender identity,,,,3,nominal,false,both,true
+gender1,gender1,what_gender_do_you_identify_as,3,Prefer not to answer,,,,999,nominal,false,both,true
+ident1,gender2,what_do_you_identify_as,0,Non-binary,,,,1,nominal,true,both,true
+ident1,gender2,what_do_you_identify_as,1,Transgender,,,,2,nominal,true,both,true
+ident1,gender2,what_do_you_identify_as,2,Intersex,,,,3,nominal,true,both,true
+ident1,gender2,what_do_you_identify_as,3,Questioning,,,,4,nominal,true,both,true
+ident1,gender2,what_do_you_identify_as,4,Unsure,,,,5,nominal,true,both,true
+ident1,gender2,what_do_you_identify_as,5,Prefer not to answer,,,,999,nominal,true,both,true
+grade1,grade1,what_grade_are_you_in,0,8th,,,,0,ordinal,false,both,true
+grade1,grade1,what_grade_are_you_in,1,9th,,,,1,ordinal,false,both,true
+grade1,grade1,what_grade_are_you_in,2,10th,,,,2,ordinal,false,both,true
+grade1,grade1,what_grade_are_you_in,3,11th,11th (ID294),,ID294,3,ordinal,false,both,true
+grade1,grade1,what_grade_are_you_in,4,12th,12th (ID295),,ID295,4,ordinal,false,both,true
+grade1,grade1,what_grade_are_you_in,5,13th,,,,5,ordinal,false,both,true
+grade1,grade1,what_grade_are_you_in,6,Graduated from school,Graduated from school (ID309),,ID309,6,ordinal,false,both,true
+grade1,grade1,what_grade_are_you_in,7,Quit school before graduating,,,,7,ordinal,false,both,true
+byear1,born1,what_year_were_you_born,0,2000,,,,2000,interval,false,both,true
+byear1,born1,what_year_were_you_born,1,2001,,,,2001,interval,false,both,true
+byear1,born1,what_year_were_you_born,2,2002,,,,2002,interval,false,both,true
+byear1,born1,what_year_were_you_born,3,2003,,,,2003,interval,false,both,true
+byear1,born1,what_year_were_you_born,4,2004,,,,2004,interval,false,both,true
+byear1,born1,what_year_were_you_born,5,2005,,,,2005,interval,false,both,true
+byear1,born1,what_year_were_you_born,6,2006,2006 (ID276),,ID276,2006,interval,false,both,true
+byear1,born1,what_year_were_you_born,7,2007,2007 (ID280),,ID280,2007,interval,false,both,true
+byear1,born1,what_year_were_you_born,8,2008,,,,2008,interval,false,both,true
+byear1,born1,what_year_were_you_born,9,2009,2009 (ID282),,ID282,2009,interval,false,both,true
+byear1,born1,what_year_were_you_born,10,2010,,,,2010,interval,false,both,true
+byear1,born1,what_year_were_you_born,11,2011,,,,2011,interval,false,both,true
+bmonth1,ID289,what_month_were_you_born,0,January,,,,1,ordinal,false,both,true
+bmonth1,ID289,what_month_were_you_born,1,February,,,,2,ordinal,false,both,true
+bmonth1,ID289,what_month_were_you_born,2,March,March (ID316),,ID316,3,ordinal,false,both,true
+bmonth1,ID289,what_month_were_you_born,3,April,,,,4,ordinal,false,both,true
+bmonth1,ID289,what_month_were_you_born,4,May,May (ID318),,ID318,5,ordinal,false,both,true
+bmonth1,ID289,what_month_were_you_born,5,June,,,,6,ordinal,false,both,true
+bmonth1,ID289,what_month_were_you_born,6,July,,,,7,ordinal,false,both,true
+bmonth1,ID289,what_month_were_you_born,7,August,,,,8,ordinal,false,both,true
+bmonth1,ID289,what_month_were_you_born,8,September,September (ID326),,ID326,9,ordinal,false,both,true
+bmonth1,ID289,what_month_were_you_born,9,October,,,,10,ordinal,false,both,true
+bmonth1,ID289,what_month_were_you_born,10,November,November (ID328),,ID328,11,ordinal,false,both,true
+bmonth1,ID289,what_month_were_you_born,11,December,,,,12,ordinal,false,both,true
+bplace1,born2,where_were_you_born,0,[COUNTRY],,,,1,nominal,false,both,true
+bplace1,born2,where_were_you_born,1,Ukraine,,,,2,nominal,false,both,true
+bplace1,born2,where_were_you_born,2,Albania,,,,3,nominal,false,both,true
+bplace1,born2,where_were_you_born,3,Andorra,,,,4,nominal,false,both,true
+bplace1,born2,where_were_you_born,4,Austria,,,,5,nominal,false,both,true
+bplace1,born2,where_were_you_born,5,Belarus,,,,6,nominal,false,both,true
+bplace1,born2,where_were_you_born,6,Belgium,,,,7,nominal,false,both,true
+bplace1,born2,where_were_you_born,7,Bosnia and Herzegovina,,,,8,nominal,false,both,true
+bplace1,born2,where_were_you_born,8,Bulgaria,,,,9,nominal,false,both,true
+bplace1,born2,where_were_you_born,9,Croatia,,,,10,nominal,false,both,true
+bplace1,born2,where_were_you_born,10,Cyprus,,,,11,nominal,false,both,true
+bplace1,born2,where_were_you_born,11,Czech Republic,,,,12,nominal,false,both,true
+bplace1,born2,where_were_you_born,12,Denmark,,,,13,nominal,false,both,true
+bplace1,born2,where_were_you_born,13,Estonia,,,,14,nominal,false,both,true
+bplace1,born2,where_were_you_born,14,Finland,,,,15,nominal,false,both,true
+bplace1,born2,where_were_you_born,15,France,,,,16,nominal,false,both,true
+bplace1,born2,where_were_you_born,16,Germany,Germany (ID83),,ID83,17,nominal,false,both,true
+bplace1,born2,where_were_you_born,17,Greece,,,,18,nominal,false,both,true
+bplace1,born2,where_were_you_born,18,Hungary,,,,19,nominal,false,both,true
+bplace1,born2,where_were_you_born,19,Iceland,,,,20,nominal,false,both,true
+bplace1,born2,where_were_you_born,20,Ireland,,,,21,nominal,false,both,true
+bplace1,born2,where_were_you_born,21,Italy,,,,22,nominal,false,both,true
+bplace1,born2,where_were_you_born,22,Kosovo,,,,23,nominal,false,both,true
+bplace1,born2,where_were_you_born,23,Latvia,,,,24,nominal,false,both,true
+bplace1,born2,where_were_you_born,24,Liechtenstein,,,,25,nominal,false,both,true
+bplace1,born2,where_were_you_born,25,Lithuania,,,,26,nominal,false,both,true
+bplace1,born2,where_were_you_born,26,Luxembourg,,,,27,nominal,false,both,true
+bplace1,born2,where_were_you_born,27,Malta,,,,28,nominal,false,both,true
+bplace1,born2,where_were_you_born,28,Moldova,,,,29,nominal,false,both,true
+bplace1,born2,where_were_you_born,29,Monaco,,,,30,nominal,false,both,true
+bplace1,born2,where_were_you_born,30,Montenegro,,,,31,nominal,false,both,true
+bplace1,born2,where_were_you_born,31,Netherlands,,,,32,nominal,false,both,true
+bplace1,born2,where_were_you_born,32,North Macedonia,,,,33,nominal,false,both,true
+bplace1,born2,where_were_you_born,33,Norway,,,,34,nominal,false,both,true
+bplace1,born2,where_were_you_born,34,Poland,,,,35,nominal,false,both,true
+bplace1,born2,where_were_you_born,35,Portugal,,,,36,nominal,false,both,true
+bplace1,born2,where_were_you_born,36,Romania,,,,37,nominal,false,both,true
+bplace1,born2,where_were_you_born,37,Russia,,,,38,nominal,false,both,true
+bplace1,born2,where_were_you_born,38,Serbia,,,,39,nominal,false,both,true
+bplace1,born2,where_were_you_born,39,Slovakia,,,,40,nominal,false,both,true
+bplace1,born2,where_were_you_born,40,Slovenia,,,,41,nominal,false,both,true
+bplace1,born2,where_were_you_born,41,Spain,,,,42,nominal,false,both,true
+bplace1,born2,where_were_you_born,42,Sweden,,,,43,nominal,false,both,true
+bplace1,born2,where_were_you_born,43,Switzerland,,,,44,nominal,false,both,true
+bplace1,born2,where_were_you_born,44,Turkey,,,,45,nominal,false,both,true
+bplace1,born2,where_were_you_born,45,United Kingdom,,,,46,nominal,false,both,true
+bplace1,born2,where_were_you_born,46,Middle East or North Africa,,,,47,nominal,false,both,true
+bplace1,born2,where_were_you_born,47,Sub-Saharan Africa,,,,48,nominal,false,both,true
+bplace1,born2,where_were_you_born,48,Asia,,,,49,nominal,false,both,true
+bplace1,born2,where_were_you_born,49,North America,,,,50,nominal,false,both,true
+bplace1,born2,where_were_you_born,50,South or Central America,,,,51,nominal,false,both,true
+bplace1,born2,where_were_you_born,51,Oseania,,,,52,nominal,false,both,true
+bplace1,born2,where_were_you_born,52,Other,,,,53,nominal,false,both,true
+bage1,born3,approximately_how_old_were_you_when_you_came_mov,0,0,0 (ID235),,ID235,0,interval,false,both,true
+bage1,born3,approximately_how_old_were_you_when_you_came_mov,1,1,,,,1,interval,false,both,true
+bage1,born3,approximately_how_old_were_you_when_you_came_mov,2,2,,,,2,interval,false,both,true
+bage1,born3,approximately_how_old_were_you_when_you_came_mov,3,3,,,,3,interval,false,both,true
+bage1,born3,approximately_how_old_were_you_when_you_came_mov,4,4,,,,4,interval,false,both,true
+bage1,born3,approximately_how_old_were_you_when_you_came_mov,5,5,,,,5,interval,false,both,true
+bage1,born3,approximately_how_old_were_you_when_you_came_mov,6,6,,,,6,interval,false,both,true
+bage1,born3,approximately_how_old_were_you_when_you_came_mov,7,7,,,,7,interval,false,both,true
+bage1,born3,approximately_how_old_were_you_when_you_came_mov,8,8,,,,8,interval,false,both,true
+bage1,born3,approximately_how_old_were_you_when_you_came_mov,9,9,,,,9,interval,false,both,true
+bage1,born3,approximately_how_old_were_you_when_you_came_mov,10,10,,,,10,interval,false,both,true
+bage1,born3,approximately_how_old_were_you_when_you_came_mov,11,11,,,,11,interval,false,both,true
+bage1,born3,approximately_how_old_were_you_when_you_came_mov,12,12,,,,12,interval,false,both,true
+bage1,born3,approximately_how_old_were_you_when_you_came_mov,13,13,,,,13,interval,false,both,true
+bage1,born3,approximately_how_old_were_you_when_you_came_mov,14,14,,,,14,interval,false,both,true
+bage1,born3,approximately_how_old_were_you_when_you_came_mov,15,15,,,,15,interval,false,both,true
+bage1,born3,approximately_how_old_were_you_when_you_came_mov,16,16,,,,16,interval,false,both,true
+bage1,born3,approximately_how_old_were_you_when_you_came_mov,17,17,,,,17,interval,false,both,true
+bage1,born3,approximately_how_old_were_you_when_you_came_mov,18,18,,,,18,interval,false,both,true
+bmborn1,born4,where_was_your_biological_mother_born,0,[COUNTRY],,,,1,nominal,false,both,true
+bmborn1,born4,where_was_your_biological_mother_born,1,Ukraine,,,,2,nominal,false,both,true
+bmborn1,born4,where_was_your_biological_mother_born,2,Albania,,,,3,nominal,false,both,true
+bmborn1,born4,where_was_your_biological_mother_born,3,Andorra,,,,4,nominal,false,both,true
+bmborn1,born4,where_was_your_biological_mother_born,4,Austria,,,,5,nominal,false,both,true
+bmborn1,born4,where_was_your_biological_mother_born,5,Belarus,,,,6,nominal,false,both,true
+bmborn1,born4,where_was_your_biological_mother_born,6,Belgium,,,,7,nominal,false,both,true
+bmborn1,born4,where_was_your_biological_mother_born,7,Bosnia and Herzegovina,,,,8,nominal,false,both,true
+bmborn1,born4,where_was_your_biological_mother_born,8,Bulgaria,,,,9,nominal,false,both,true
+bmborn1,born4,where_was_your_biological_mother_born,9,Croatia,,,,10,nominal,false,both,true
+bmborn1,born4,where_was_your_biological_mother_born,10,Cyprus,,,,11,nominal,false,both,true
+bmborn1,born4,where_was_your_biological_mother_born,11,Czech Republic,,,,12,nominal,false,both,true
+bmborn1,born4,where_was_your_biological_mother_born,12,Denmark,,,,13,nominal,false,both,true
+bmborn1,born4,where_was_your_biological_mother_born,13,Estonia,,,,14,nominal,false,both,true
+bmborn1,born4,where_was_your_biological_mother_born,14,Finland,,,,15,nominal,false,both,true
+bmborn1,born4,where_was_your_biological_mother_born,15,France,,,,16,nominal,false,both,true
+bmborn1,born4,where_was_your_biological_mother_born,16,Germany,Germany (ID145),,ID145,17,nominal,false,both,true
+bmborn1,born4,where_was_your_biological_mother_born,17,Greece,,,,18,nominal,false,both,true
+bmborn1,born4,where_was_your_biological_mother_born,18,Hungary,,,,19,nominal,false,both,true
+bmborn1,born4,where_was_your_biological_mother_born,19,Iceland,,,,20,nominal,false,both,true
+bmborn1,born4,where_was_your_biological_mother_born,20,Ireland,,,,21,nominal,false,both,true
+bmborn1,born4,where_was_your_biological_mother_born,21,Italy,,,,22,nominal,false,both,true
+bmborn1,born4,where_was_your_biological_mother_born,22,Kosovo,,,,23,nominal,false,both,true
+bmborn1,born4,where_was_your_biological_mother_born,23,Latvia,,,,24,nominal,false,both,true
+bmborn1,born4,where_was_your_biological_mother_born,24,Liechtenstein,,,,25,nominal,false,both,true
+bmborn1,born4,where_was_your_biological_mother_born,25,Lithuania,,,,26,nominal,false,both,true
+bmborn1,born4,where_was_your_biological_mother_born,26,Luxembourg,,,,27,nominal,false,both,true
+bmborn1,born4,where_was_your_biological_mother_born,27,Malta,,,,28,nominal,false,both,true
+bmborn1,born4,where_was_your_biological_mother_born,28,Moldova,,,,29,nominal,false,both,true
+bmborn1,born4,where_was_your_biological_mother_born,29,Monaco,,,,30,nominal,false,both,true
+bmborn1,born4,where_was_your_biological_mother_born,30,Montenegro,,,,31,nominal,false,both,true
+bmborn1,born4,where_was_your_biological_mother_born,31,Netherlands,,,,32,nominal,false,both,true
+bmborn1,born4,where_was_your_biological_mother_born,32,North Macedonia,,,,33,nominal,false,both,true
+bmborn1,born4,where_was_your_biological_mother_born,33,Norway,,,,34,nominal,false,both,true
+bmborn1,born4,where_was_your_biological_mother_born,34,Poland,,,,35,nominal,false,both,true
+bmborn1,born4,where_was_your_biological_mother_born,35,Portugal,Portugal (ID164),,ID164,36,nominal,false,both,true
+bmborn1,born4,where_was_your_biological_mother_born,36,Romania,,,,37,nominal,false,both,true
+bmborn1,born4,where_was_your_biological_mother_born,37,Russia,,,,38,nominal,false,both,true
+bmborn1,born4,where_was_your_biological_mother_born,38,Serbia,,,,39,nominal,false,both,true
+bmborn1,born4,where_was_your_biological_mother_born,39,Slovakia,,,,40,nominal,false,both,true
+bmborn1,born4,where_was_your_biological_mother_born,40,Slovenia,,,,41,nominal,false,both,true
+bmborn1,born4,where_was_your_biological_mother_born,41,Spain,,,,42,nominal,false,both,true
+bmborn1,born4,where_was_your_biological_mother_born,42,Sweden,,,,43,nominal,false,both,true
+bmborn1,born4,where_was_your_biological_mother_born,43,Switzerland,,,,44,nominal,false,both,true
+bmborn1,born4,where_was_your_biological_mother_born,44,Turkey,,,,45,nominal,false,both,true
+bmborn1,born4,where_was_your_biological_mother_born,45,United Kingdom,,,,46,nominal,false,both,true
+bmborn1,born4,where_was_your_biological_mother_born,46,Middle East or North Africa,,,,47,nominal,false,both,true
+bmborn1,born4,where_was_your_biological_mother_born,47,Sub-Saharan Africa,,,,48,nominal,false,both,true
+bmborn1,born4,where_was_your_biological_mother_born,48,Asia,,,,49,nominal,false,both,true
+bmborn1,born4,where_was_your_biological_mother_born,49,North America,,,,50,nominal,false,both,true
+bmborn1,born4,where_was_your_biological_mother_born,50,South or Central America,,,,51,nominal,false,both,true
+bmborn1,born4,where_was_your_biological_mother_born,51,Oseania,,,,52,nominal,false,both,true
+bmborn1,born4,where_was_your_biological_mother_born,52,Other,Other (ID181),,ID181,53,nominal,false,both,true
+bfborn1,born6,where_was_your_biological_father_born,0,[COUNTRY],,,,1,nominal,false,both,true
+bfborn1,born6,where_was_your_biological_father_born,1,Ukraine,,,,2,nominal,false,both,true
+bfborn1,born6,where_was_your_biological_father_born,2,Albania,,,,3,nominal,false,both,true
+bfborn1,born6,where_was_your_biological_father_born,3,Andorra,,,,4,nominal,false,both,true
+bfborn1,born6,where_was_your_biological_father_born,4,Austria,,,,5,nominal,false,both,true
+bfborn1,born6,where_was_your_biological_father_born,5,Belarus,,,,6,nominal,false,both,true
+bfborn1,born6,where_was_your_biological_father_born,6,Belgium,,,,7,nominal,false,both,true
+bfborn1,born6,where_was_your_biological_father_born,7,Bosnia and Herzegovina,,,,8,nominal,false,both,true
+bfborn1,born6,where_was_your_biological_father_born,8,Bulgaria,,,,9,nominal,false,both,true
+bfborn1,born6,where_was_your_biological_father_born,9,Croatia,,,,10,nominal,false,both,true
+bfborn1,born6,where_was_your_biological_father_born,10,Cyprus,,,,11,nominal,false,both,true
+bfborn1,born6,where_was_your_biological_father_born,11,Czech Republic,,,,12,nominal,false,both,true
+bfborn1,born6,where_was_your_biological_father_born,12,Denmark,,,,13,nominal,false,both,true
+bfborn1,born6,where_was_your_biological_father_born,13,Estonia,,,,14,nominal,false,both,true
+bfborn1,born6,where_was_your_biological_father_born,14,Finland,,,,15,nominal,false,both,true
+bfborn1,born6,where_was_your_biological_father_born,15,France,,,,16,nominal,false,both,true
+bfborn1,born6,where_was_your_biological_father_born,16,Germany,Germany (ID38),,ID38,17,nominal,false,both,true
+bfborn1,born6,where_was_your_biological_father_born,17,Greece,,,,18,nominal,false,both,true
+bfborn1,born6,where_was_your_biological_father_born,18,Hungary,,,,19,nominal,false,both,true
+bfborn1,born6,where_was_your_biological_father_born,19,Iceland,,,,20,nominal,false,both,true
+bfborn1,born6,where_was_your_biological_father_born,20,Ireland,,,,21,nominal,false,both,true
+bfborn1,born6,where_was_your_biological_father_born,21,Italy,,,,22,nominal,false,both,true
+bfborn1,born6,where_was_your_biological_father_born,22,Kosovo,,,,23,nominal,false,both,true
+bfborn1,born6,where_was_your_biological_father_born,23,Latvia,,,,24,nominal,false,both,true
+bfborn1,born6,where_was_your_biological_father_born,24,Liechtenstein,,,,25,nominal,false,both,true
+bfborn1,born6,where_was_your_biological_father_born,25,Lithuania,,,,26,nominal,false,both,true
+bfborn1,born6,where_was_your_biological_father_born,26,Luxembourg,,,,27,nominal,false,both,true
+bfborn1,born6,where_was_your_biological_father_born,27,Malta,,,,28,nominal,false,both,true
+bfborn1,born6,where_was_your_biological_father_born,28,Moldova,,,,29,nominal,false,both,true
+bfborn1,born6,where_was_your_biological_father_born,29,Monaco,,,,30,nominal,false,both,true
+bfborn1,born6,where_was_your_biological_father_born,30,Montenegro,,,,31,nominal,false,both,true
+bfborn1,born6,where_was_your_biological_father_born,31,Netherlands,,,,32,nominal,false,both,true
+bfborn1,born6,where_was_your_biological_father_born,32,North Macedonia,,,,33,nominal,false,both,true
+bfborn1,born6,where_was_your_biological_father_born,33,Norway,,,,34,nominal,false,both,true
+bfborn1,born6,where_was_your_biological_father_born,34,Poland,,,,35,nominal,false,both,true
+bfborn1,born6,where_was_your_biological_father_born,35,Portugal,,,,36,nominal,false,both,true
+bfborn1,born6,where_was_your_biological_father_born,36,Romania,,,,37,nominal,false,both,true
+bfborn1,born6,where_was_your_biological_father_born,37,Russia,,,,38,nominal,false,both,true
+bfborn1,born6,where_was_your_biological_father_born,38,Serbia,,,,39,nominal,false,both,true
+bfborn1,born6,where_was_your_biological_father_born,39,Slovakia,,,,40,nominal,false,both,true
+bfborn1,born6,where_was_your_biological_father_born,40,Slovenia,,,,41,nominal,false,both,true
+bfborn1,born6,where_was_your_biological_father_born,41,Spain,,,,42,nominal,false,both,true
+bfborn1,born6,where_was_your_biological_father_born,42,Sweden,,,,43,nominal,false,both,true
+bfborn1,born6,where_was_your_biological_father_born,43,Switzerland,,,,44,nominal,false,both,true
+bfborn1,born6,where_was_your_biological_father_born,44,Turkey,,,,45,nominal,false,both,true
+bfborn1,born6,where_was_your_biological_father_born,45,United Kingdom,,,,46,nominal,false,both,true
+bfborn1,born6,where_was_your_biological_father_born,46,Middle East or North Africa,,,,47,nominal,false,both,true
+bfborn1,born6,where_was_your_biological_father_born,47,Sub-Saharan Africa,,,,48,nominal,false,both,true
+bfborn1,born6,where_was_your_biological_father_born,48,Asia,,,,49,nominal,false,both,true
+bfborn1,born6,where_was_your_biological_father_born,49,North America,,,,50,nominal,false,both,true
+bfborn1,born6,where_was_your_biological_father_born,50,South or Central America,,,,51,nominal,false,both,true
+bfborn1,born6,where_was_your_biological_father_born,51,Oseania,,,,52,nominal,false,both,true
+bfborn1,born6,where_was_your_biological_father_born,52,Other,Other (ID127),,ID127,53,nominal,false,both,true
+live1,living1,thinking_about_the_people_you_live_with_what_bes,0,I live with both my parents together,I live with both my parents together (ID243),,ID243,1,nominal,false,both,true
+live1,living1,thinking_about_the_people_you_live_with_what_bes,1,"My parents live apart, and I live only with my mother",,,,2,nominal,false,both,true
+live1,living1,thinking_about_the_people_you_live_with_what_bes,2,"My parents live apart, and I live only with my father",,,,3,nominal,false,both,true
+live1,living1,thinking_about_the_people_you_live_with_what_bes,3,"My parents live apart, and I live with both parents",,,,4,nominal,false,both,true
+live1,living1,thinking_about_the_people_you_live_with_what_bes,4,I do not live with my parents,,,,5,nominal,false,both,true
+livead1,living2,which_adults_do_you_live_with,0,"Relatives (e.g., grandparents, aunt, uncle)",,,,1,nominal,true,both,true
+livead1,living2,which_adults_do_you_live_with,1,Foster parents,,,,2,nominal,true,both,true
+livead1,living2,which_adults_do_you_live_with,2,Supervised centre/Youth home,,,,3,nominal,true,both,true
+livead1,living2,which_adults_do_you_live_with,3,Other,,,,4,nominal,true,both,true
+livesp1,living3,what_best_describes_your_situation,0,I live mostly with my mother,,,,1,nominal,false,both,true
+livesp1,living3,what_best_describes_your_situation,1,I live mostly with my father,,,,2,nominal,false,both,true
+livesp1,living3,what_best_describes_your_situation,2,I live equally with my mother and father,,,,3,nominal,false,both,true
+momprt1,living4,does_your_mother_have_a_new_partner,0,Yes,,,,1,nominal,false,both,true
+momprt1,living4,does_your_mother_have_a_new_partner,1,No,,,,0,nominal,false,both,true
+momprt1,living4,does_your_mother_have_a_new_partner,2,Don't know,,,,998,nominal,false,both,true
+dadprt1,living5,does_your_father_have_a_new_partner,0,Yes,,,,1,nominal,false,both,true
+dadprt1,living5,does_your_father_have_a_new_partner,1,No,,,,0,nominal,false,both,true
+dadprt1,living5,does_your_father_have_a_new_partner,2,Don't know,,,,998,nominal,false,both,true
+sibs1,siblings1,how_many_siblings_half_siblings_step_siblings_do,0,None,None (ID285),,ID285,0,ordinal,false,both,true
+sibs1,siblings1,how_many_siblings_half_siblings_step_siblings_do,1,1,1 (ID286),,ID286,1,ordinal,false,both,true
+sibs1,siblings1,how_many_siblings_half_siblings_step_siblings_do,2,2,,,,2,ordinal,false,both,true
+sibs1,siblings1,how_many_siblings_half_siblings_step_siblings_do,3,3 or more,,,,3,ordinal,false,both,true
+edumom1,edu1,what_best_describes_your_mother_s_education,0,Less than high school,,,,0,ordinal,false,both,true
+edumom1,edu1,what_best_describes_your_mother_s_education,1,High school diploma or equivalent,High school diploma or equivalent (ID297),,ID297,1,ordinal,false,both,true
+edumom1,edu1,what_best_describes_your_mother_s_education,2,"Come college, no degree",,,,2,ordinal,false,both,true
+edumom1,edu1,what_best_describes_your_mother_s_education,3,Bachelor's degree,,,,3,ordinal,false,both,true
+edumom1,edu1,what_best_describes_your_mother_s_education,4,Master's degree or more,Master's degree or more (ID300),,ID300,4,ordinal,false,both,true
+edumom1,edu1,what_best_describes_your_mother_s_education,5,Don't know,Don't know (ID301),,ID301,998,ordinal,false,both,true
+edudad1,edu2,what_best_describes_your_father_s_education,0,Less than high school,,,,0,ordinal,false,both,true
+edudad1,edu2,what_best_describes_your_father_s_education,1,High school diploma or equivalent,,,,1,ordinal,false,both,true
+edudad1,edu2,what_best_describes_your_father_s_education,2,"Come college, no degree",,,,2,ordinal,false,both,true
+edudad1,edu2,what_best_describes_your_father_s_education,3,Bachelor's degree,,,,3,ordinal,false,both,true
+edudad1,edu2,what_best_describes_your_father_s_education,4,Master's degree or more,Master's degree or more (ID307),,ID307,4,ordinal,false,both,true
+edudad1,edu2,what_best_describes_your_father_s_education,5,Don't know,Don't know (ID308),,ID308,998,ordinal,false,both,true
+ladder1,soc1,imagine_a_ladder_that_represents_how_country_soc,0,1,,,,1,interval,false,both,true
+ladder1,soc1,imagine_a_ladder_that_represents_how_country_soc,0,Bottom of the ladder,,Bottom of the ladder,,1,interval,false,both,true
+ladder1,soc1,imagine_a_ladder_that_represents_how_country_soc,1,2,,,,2,interval,false,both,true
+ladder1,soc1,imagine_a_ladder_that_represents_how_country_soc,2,3,,,,3,interval,false,both,true
+ladder1,soc1,imagine_a_ladder_that_represents_how_country_soc,3,4,,,,4,interval,false,both,true
+ladder1,soc1,imagine_a_ladder_that_represents_how_country_soc,4,5,,,,5,interval,false,both,true
+ladder1,soc1,imagine_a_ladder_that_represents_how_country_soc,5,6,,,,6,interval,false,both,true
+ladder1,soc1,imagine_a_ladder_that_represents_how_country_soc,6,7,,,,7,interval,false,both,true
+ladder1,soc1,imagine_a_ladder_that_represents_how_country_soc,7,8,,,,8,interval,false,both,true
+ladder1,soc1,imagine_a_ladder_that_represents_how_country_soc,8,9,,,,9,interval,false,both,true
+ladder1,soc1,imagine_a_ladder_that_represents_how_country_soc,9,10,,,,10,interval,false,both,true
+ladder1,soc1,imagine_a_ladder_that_represents_how_country_soc,9,Top of the ladder,,Top of the ladder,,10,interval,false,both,true
+afford1,soc2,i_feel_that_my_family_can_usually_afford_to_buy_,0,Strongly disagree,Strongly disagree (ID322),,ID322,0,ordinal,false,both,true
+afford1,soc2,i_feel_that_my_family_can_usually_afford_to_buy_,1,Somewhat disagree,,,,1,ordinal,false,both,true
+afford1,soc2,i_feel_that_my_family_can_usually_afford_to_buy_,2,Somewhat agree,Somewhat agree (ID324),,ID324,2,ordinal,false,both,true
+afford1,soc2,i_feel_that_my_family_can_usually_afford_to_buy_,3,Strongly agree,Strongly agree (ID325),,ID325,3,ordinal,false,both,true
+bcfpi_raia1,raia1,the_following_are_descriptions_of_emotions_and_b,0,NEVER true,NEVER true (ID194),,ID194,0,ordinal,false,both,true
+bcfpi_raia1,raia1,the_following_are_descriptions_of_emotions_and_b,1,SOMETIMES true,SOMETIMES true (ID195),,ID195,1,ordinal,false,both,true
+bcfpi_raia1,raia1,the_following_are_descriptions_of_emotions_and_b,2,OFTEN true,OFTEN true (ID196),,ID196,2,ordinal,false,both,true
+bcfpi_raia2,raia2,the_following_are_descriptions_of_emotions_and_b,0,NEVER true,NEVER true (ID194),,ID194,0,ordinal,false,both,true
+bcfpi_raia2,raia2,the_following_are_descriptions_of_emotions_and_b,1,SOMETIMES true,SOMETIMES true (ID195),,ID195,1,ordinal,false,both,true
+bcfpi_raia2,raia2,the_following_are_descriptions_of_emotions_and_b,2,OFTEN true,OFTEN true (ID196),,ID196,2,ordinal,false,both,true
+bcfpi_raia3,raia3,the_following_are_descriptions_of_emotions_and_b,0,NEVER true,NEVER true (ID194),,ID194,0,ordinal,false,both,true
+bcfpi_raia3,raia3,the_following_are_descriptions_of_emotions_and_b,1,SOMETIMES true,SOMETIMES true (ID195),,ID195,1,ordinal,false,both,true
+bcfpi_raia3,raia3,the_following_are_descriptions_of_emotions_and_b,2,OFTEN true,OFTEN true (ID196),,ID196,2,ordinal,false,both,true
+bcfpi_raia4,raia4,the_following_are_descriptions_of_emotions_and_b,0,NEVER true,NEVER true (ID194),,ID194,0,ordinal,false,both,true
+bcfpi_raia4,raia4,the_following_are_descriptions_of_emotions_and_b,1,SOMETIMES true,SOMETIMES true (ID195),,ID195,1,ordinal,false,both,true
+bcfpi_raia4,raia4,the_following_are_descriptions_of_emotions_and_b,2,OFTEN true,OFTEN true (ID196),,ID196,2,ordinal,false,both,true
+bcfpi_raia5,raia5,the_following_are_descriptions_of_emotions_and_b,0,NEVER true,NEVER true (ID194),,ID194,0,ordinal,false,both,true
+bcfpi_raia5,raia5,the_following_are_descriptions_of_emotions_and_b,1,SOMETIMES true,SOMETIMES true (ID195),,ID195,1,ordinal,false,both,true
+bcfpi_raia5,raia5,the_following_are_descriptions_of_emotions_and_b,2,OFTEN true,OFTEN true (ID196),,ID196,2,ordinal,false,both,true
+bcfpi_raia6,raia6,the_following_are_descriptions_of_emotions_and_b,0,NEVER true,NEVER true (ID194),,ID194,0,ordinal,false,both,true
+bcfpi_raia6,raia6,the_following_are_descriptions_of_emotions_and_b,1,SOMETIMES true,SOMETIMES true (ID195),,ID195,1,ordinal,false,both,true
+bcfpi_raia6,raia6,the_following_are_descriptions_of_emotions_and_b,2,OFTEN true,OFTEN true (ID196),,ID196,2,ordinal,false,both,true
+bcfpi_coop1,coop1,please_select_the_response_that_best_reflects_ho,0,NEVER true,NEVER true (ID240),,ID240,0,ordinal,false,both,true
+bcfpi_coop1,coop1,please_select_the_response_that_best_reflects_ho,1,SOMETIMES true,SOMETIMES true (ID241),,ID241,1,ordinal,false,both,true
+bcfpi_coop1,coop1,please_select_the_response_that_best_reflects_ho,2,OFTEN true,OFTEN true (ID242),,ID242,2,ordinal,false,both,true
+bcfpi_coop2,coop2,please_select_the_response_that_best_reflects_ho,0,NEVER true,NEVER true (ID240),,ID240,0,ordinal,false,both,true
+bcfpi_coop2,coop2,please_select_the_response_that_best_reflects_ho,1,SOMETIMES true,SOMETIMES true (ID241),,ID241,1,ordinal,false,both,true
+bcfpi_coop2,coop2,please_select_the_response_that_best_reflects_ho,2,OFTEN true,OFTEN true (ID242),,ID242,2,ordinal,false,both,true
+bcfpi_coop3,coop3,please_select_the_response_that_best_reflects_ho,0,NEVER true,NEVER true (ID240),,ID240,0,ordinal,false,both,true
+bcfpi_coop3,coop3,please_select_the_response_that_best_reflects_ho,1,SOMETIMES true,SOMETIMES true (ID241),,ID241,1,ordinal,false,both,true
+bcfpi_coop3,coop3,please_select_the_response_that_best_reflects_ho,2,OFTEN true,OFTEN true (ID242),,ID242,2,ordinal,false,both,true
+bcfpi_coop4,coop4,please_select_the_response_that_best_reflects_ho,0,NEVER true,NEVER true (ID240),,ID240,0,ordinal,false,both,true
+bcfpi_coop4,coop4,please_select_the_response_that_best_reflects_ho,1,SOMETIMES true,SOMETIMES true (ID241),,ID241,1,ordinal,false,both,true
+bcfpi_coop4,coop4,please_select_the_response_that_best_reflects_ho,2,OFTEN true,OFTEN true (ID242),,ID242,2,ordinal,false,both,true
+bcfpi_coop5,coop5,please_select_the_response_that_best_reflects_ho,0,NEVER true,NEVER true (ID240),,ID240,0,ordinal,false,both,true
+bcfpi_coop5,coop5,please_select_the_response_that_best_reflects_ho,1,SOMETIMES true,SOMETIMES true (ID241),,ID241,1,ordinal,false,both,true
+bcfpi_coop5,coop5,please_select_the_response_that_best_reflects_ho,2,OFTEN true,OFTEN true (ID242),,ID242,2,ordinal,false,both,true
+bcfpi_coop6,coop6,please_select_the_response_that_best_reflects_ho,0,NEVER true,NEVER true (ID240),,ID240,0,ordinal,false,both,true
+bcfpi_coop6,coop6,please_select_the_response_that_best_reflects_ho,1,SOMETIMES true,SOMETIMES true (ID241),,ID241,1,ordinal,false,both,true
+bcfpi_coop6,coop6,please_select_the_response_that_best_reflects_ho,2,OFTEN true,OFTEN true (ID242),,ID242,2,ordinal,false,both,true
+bcfpi_ma1,ma1,please_select_the_response_that_best_reflects_ho_2,0,NEVER true,NEVER true (ID228),,ID228,0,ordinal,false,both,true
+bcfpi_ma1,ma1,please_select_the_response_that_best_reflects_ho_2,1,SOMETIMES true,SOMETIMES true (ID229),,ID229,1,ordinal,false,both,true
+bcfpi_ma1,ma1,please_select_the_response_that_best_reflects_ho_2,2,OFTEN true,OFTEN true (ID230),,ID230,2,ordinal,false,both,true
+bcfpi_ma2,ma2,please_select_the_response_that_best_reflects_ho_2,0,NEVER true,NEVER true (ID228),,ID228,0,ordinal,false,both,true
+bcfpi_ma2,ma2,please_select_the_response_that_best_reflects_ho_2,1,SOMETIMES true,SOMETIMES true (ID229),,ID229,1,ordinal,false,both,true
+bcfpi_ma2,ma2,please_select_the_response_that_best_reflects_ho_2,2,OFTEN true,OFTEN true (ID230),,ID230,2,ordinal,false,both,true
+bcfpi_ma3,ma3,please_select_the_response_that_best_reflects_ho_2,0,NEVER true,NEVER true (ID228),,ID228,0,ordinal,false,both,true
+bcfpi_ma3,ma3,please_select_the_response_that_best_reflects_ho_2,1,SOMETIMES true,SOMETIMES true (ID229),,ID229,1,ordinal,false,both,true
+bcfpi_ma3,ma3,please_select_the_response_that_best_reflects_ho_2,2,OFTEN true,OFTEN true (ID230),,ID230,2,ordinal,false,both,true
+bcfpi_ma4,ma4,please_select_the_response_that_best_reflects_ho_2,0,NEVER true,NEVER true (ID228),,ID228,0,ordinal,false,both,true
+bcfpi_ma4,ma4,please_select_the_response_that_best_reflects_ho_2,1,SOMETIMES true,SOMETIMES true (ID229),,ID229,1,ordinal,false,both,true
+bcfpi_ma4,ma4,please_select_the_response_that_best_reflects_ho_2,2,OFTEN true,OFTEN true (ID230),,ID230,2,ordinal,false,both,true
+bcfpi_ma5,ma5,please_select_the_response_that_best_reflects_ho_2,0,NEVER true,NEVER true (ID228),,ID228,0,ordinal,false,both,true
+bcfpi_ma5,ma5,please_select_the_response_that_best_reflects_ho_2,1,SOMETIMES true,SOMETIMES true (ID229),,ID229,1,ordinal,false,both,true
+bcfpi_ma5,ma5,please_select_the_response_that_best_reflects_ho_2,2,OFTEN true,OFTEN true (ID230),,ID230,2,ordinal,false,both,true
+bcfpi_ma6,ma6,please_select_the_response_that_best_reflects_ho_2,0,NEVER true,NEVER true (ID228),,ID228,0,ordinal,false,both,true
+bcfpi_ma6,ma6,please_select_the_response_that_best_reflects_ho_2,1,SOMETIMES true,SOMETIMES true (ID229),,ID229,1,ordinal,false,both,true
+bcfpi_ma6,ma6,please_select_the_response_that_best_reflects_ho_2,2,OFTEN true,OFTEN true (ID230),,ID230,2,ordinal,false,both,true
+bcfpi_sa1,sa1,please_select_the_response_that_best_reflects_ho_3,0,NEVER true,NEVER true (ID218),,ID218,0,ordinal,false,both,true
+bcfpi_sa1,sa1,please_select_the_response_that_best_reflects_ho_3,1,SOMETIMES true,SOMETIMES true (ID219),,ID219,1,ordinal,false,both,true
+bcfpi_sa1,sa1,please_select_the_response_that_best_reflects_ho_3,2,OFTEN true,,,,2,ordinal,false,both,true
+bcfpi_sa2,sa2,please_select_the_response_that_best_reflects_ho_3,0,NEVER true,NEVER true (ID218),,ID218,0,ordinal,false,both,true
+bcfpi_sa2,sa2,please_select_the_response_that_best_reflects_ho_3,1,SOMETIMES true,SOMETIMES true (ID219),,ID219,1,ordinal,false,both,true
+bcfpi_sa2,sa2,please_select_the_response_that_best_reflects_ho_3,2,OFTEN true,,,,2,ordinal,false,both,true
+bcfpi_sa3,sa3,please_select_the_response_that_best_reflects_ho_3,0,NEVER true,NEVER true (ID218),,ID218,0,ordinal,false,both,true
+bcfpi_sa3,sa3,please_select_the_response_that_best_reflects_ho_3,1,SOMETIMES true,SOMETIMES true (ID219),,ID219,1,ordinal,false,both,true
+bcfpi_sa3,sa3,please_select_the_response_that_best_reflects_ho_3,2,OFTEN true,,,,2,ordinal,false,both,true
+bcfpi_sa4,sa4,please_select_the_response_that_best_reflects_ho_3,0,NEVER true,NEVER true (ID218),,ID218,0,ordinal,false,both,true
+bcfpi_sa4,sa4,please_select_the_response_that_best_reflects_ho_3,1,SOMETIMES true,SOMETIMES true (ID219),,ID219,1,ordinal,false,both,true
+bcfpi_sa4,sa4,please_select_the_response_that_best_reflects_ho_3,2,OFTEN true,,,,2,ordinal,false,both,true
+bcfpi_sa5,sa5,please_select_the_response_that_best_reflects_ho_3,0,NEVER true,NEVER true (ID218),,ID218,0,ordinal,false,both,true
+bcfpi_sa5,sa5,please_select_the_response_that_best_reflects_ho_3,1,SOMETIMES true,SOMETIMES true (ID219),,ID219,1,ordinal,false,both,true
+bcfpi_sa5,sa5,please_select_the_response_that_best_reflects_ho_3,2,OFTEN true,,,,2,ordinal,false,both,true
+bcfpi_sa6,sa6,please_select_the_response_that_best_reflects_ho_3,0,NEVER true,NEVER true (ID218),,ID218,0,ordinal,false,both,true
+bcfpi_sa6,sa6,please_select_the_response_that_best_reflects_ho_3,1,SOMETIMES true,SOMETIMES true (ID219),,ID219,1,ordinal,false,both,true
+bcfpi_sa6,sa6,please_select_the_response_that_best_reflects_ho_3,2,OFTEN true,,,,2,ordinal,false,both,true
+bcfpi_mood1,mood1,please_select_the_response_that_best_reflects_ho_4,0,NEVER true,NEVER true (ID208),,ID208,0,ordinal,false,both,true
+bcfpi_mood1,mood1,please_select_the_response_that_best_reflects_ho_4,1,SOMETIMES true,SOMETIMES true (ID209),,ID209,1,ordinal,false,both,true
+bcfpi_mood1,mood1,please_select_the_response_that_best_reflects_ho_4,2,OFTEN true,OFTEN true (ID210),,ID210,2,ordinal,false,both,true
+bcfpi_mood2,mood2,please_select_the_response_that_best_reflects_ho_4,0,NEVER true,NEVER true (ID208),,ID208,0,ordinal,false,both,true
+bcfpi_mood2,mood2,please_select_the_response_that_best_reflects_ho_4,1,SOMETIMES true,SOMETIMES true (ID209),,ID209,1,ordinal,false,both,true
+bcfpi_mood2,mood2,please_select_the_response_that_best_reflects_ho_4,2,OFTEN true,OFTEN true (ID210),,ID210,2,ordinal,false,both,true
+bcfpi_mood3,mood3,please_select_the_response_that_best_reflects_ho_4,0,NEVER true,NEVER true (ID208),,ID208,0,ordinal,false,both,true
+bcfpi_mood3,mood3,please_select_the_response_that_best_reflects_ho_4,1,SOMETIMES true,SOMETIMES true (ID209),,ID209,1,ordinal,false,both,true
+bcfpi_mood3,mood3,please_select_the_response_that_best_reflects_ho_4,2,OFTEN true,OFTEN true (ID210),,ID210,2,ordinal,false,both,true
+bcfpi_mood4,mood4,please_select_the_response_that_best_reflects_ho_4,0,NEVER true,NEVER true (ID208),,ID208,0,ordinal,false,both,true
+bcfpi_mood4,mood4,please_select_the_response_that_best_reflects_ho_4,1,SOMETIMES true,SOMETIMES true (ID209),,ID209,1,ordinal,false,both,true
+bcfpi_mood4,mood4,please_select_the_response_that_best_reflects_ho_4,2,OFTEN true,OFTEN true (ID210),,ID210,2,ordinal,false,both,true
+bcfpi_mood5,mood5,please_select_the_response_that_best_reflects_ho_4,0,NEVER true,NEVER true (ID208),,ID208,0,ordinal,false,both,true
+bcfpi_mood5,mood5,please_select_the_response_that_best_reflects_ho_4,1,SOMETIMES true,SOMETIMES true (ID209),,ID209,1,ordinal,false,both,true
+bcfpi_mood5,mood5,please_select_the_response_that_best_reflects_ho_4,2,OFTEN true,OFTEN true (ID210),,ID210,2,ordinal,false,both,true
+bcfpi_mood6,mood6,please_select_the_response_that_best_reflects_ho_4,0,NEVER true,NEVER true (ID208),,ID208,0,ordinal,false,both,true
+bcfpi_mood6,mood6,please_select_the_response_that_best_reflects_ho_4,1,SOMETIMES true,SOMETIMES true (ID209),,ID209,1,ordinal,false,both,true
+bcfpi_mood6,mood6,please_select_the_response_that_best_reflects_ho_4,2,OFTEN true,OFTEN true (ID210),,ID210,2,ordinal,false,both,true
+bcfpi_af1,af1,please_select_the_response_that_best_reflects_ho_5,0,NEVER true,NEVER true (ID198),,ID198,0,ordinal,false,both,true
+bcfpi_af1,af1,please_select_the_response_that_best_reflects_ho_5,1,SOMETIMES true,SOMETIMES true (ID199),,ID199,1,ordinal,false,both,true
+bcfpi_af1,af1,please_select_the_response_that_best_reflects_ho_5,2,OFTEN true,OFTEN true (ID200),,ID200,2,ordinal,false,both,true
+bcfpi_af2,af2,please_select_the_response_that_best_reflects_ho_5,0,NEVER true,NEVER true (ID198),,ID198,0,ordinal,false,both,true
+bcfpi_af2,af2,please_select_the_response_that_best_reflects_ho_5,1,SOMETIMES true,SOMETIMES true (ID199),,ID199,1,ordinal,false,both,true
+bcfpi_af2,af2,please_select_the_response_that_best_reflects_ho_5,2,OFTEN true,OFTEN true (ID200),,ID200,2,ordinal,false,both,true
+bcfpi_af3,af3,please_select_the_response_that_best_reflects_ho_5,0,NEVER true,NEVER true (ID198),,ID198,0,ordinal,false,both,true
+bcfpi_af3,af3,please_select_the_response_that_best_reflects_ho_5,1,SOMETIMES true,SOMETIMES true (ID199),,ID199,1,ordinal,false,both,true
+bcfpi_af3,af3,please_select_the_response_that_best_reflects_ho_5,2,OFTEN true,OFTEN true (ID200),,ID200,2,ordinal,false,both,true
+bcfpi_af4,af4,please_select_the_response_that_best_reflects_ho_5,0,NEVER true,NEVER true (ID198),,ID198,0,ordinal,false,both,true
+bcfpi_af4,af4,please_select_the_response_that_best_reflects_ho_5,1,SOMETIMES true,SOMETIMES true (ID199),,ID199,1,ordinal,false,both,true
+bcfpi_af4,af4,please_select_the_response_that_best_reflects_ho_5,2,OFTEN true,OFTEN true (ID200),,ID200,2,ordinal,false,both,true
+bcfpi_af5,af5,please_select_the_response_that_best_reflects_ho_5,0,NEVER true,NEVER true (ID198),,ID198,0,ordinal,false,both,true
+bcfpi_af5,af5,please_select_the_response_that_best_reflects_ho_5,1,SOMETIMES true,SOMETIMES true (ID199),,ID199,1,ordinal,false,both,true
+bcfpi_af5,af5,please_select_the_response_that_best_reflects_ho_5,2,OFTEN true,OFTEN true (ID200),,ID200,2,ordinal,false,both,true
+bcfpi_af6,af6,please_select_the_response_that_best_reflects_ho_5,0,NEVER true,NEVER true (ID198),,ID198,0,ordinal,false,both,true
+bcfpi_af6,af6,please_select_the_response_that_best_reflects_ho_5,1,SOMETIMES true,SOMETIMES true (ID199),,ID199,1,ordinal,false,both,true
+bcfpi_af6,af6,please_select_the_response_that_best_reflects_ho_5,2,OFTEN true,OFTEN true (ID200),,ID200,2,ordinal,false,both,true
+bcfpi_yf01,yf01,now_some_questions_about_your_day_to_day_activit,0,NEVER true,NEVER true (ID377),,ID377,0,ordinal,false,both,true
+bcfpi_yf01,yf01,now_some_questions_about_your_day_to_day_activit,1,SOMETIMES true,SOMETIMES true (ID378),,ID378,1,ordinal,false,both,true
+bcfpi_yf01,yf01,now_some_questions_about_your_day_to_day_activit,2,OFTEN true,OFTEN true (ID379),,ID379,2,ordinal,false,both,true
+bcfpi_yf02,yf02,now_some_questions_about_your_day_to_day_activit,0,NEVER true,NEVER true (ID377),,ID377,0,ordinal,false,both,true
+bcfpi_yf02,yf02,now_some_questions_about_your_day_to_day_activit,1,SOMETIMES true,SOMETIMES true (ID378),,ID378,1,ordinal,false,both,true
+bcfpi_yf02,yf02,now_some_questions_about_your_day_to_day_activit,2,OFTEN true,OFTEN true (ID379),,ID379,2,ordinal,false,both,true
+bcfpi_yf03,yf03,now_some_questions_about_your_day_to_day_activit,0,NEVER true,NEVER true (ID377),,ID377,0,ordinal,false,both,true
+bcfpi_yf03,yf03,now_some_questions_about_your_day_to_day_activit,1,SOMETIMES true,SOMETIMES true (ID378),,ID378,1,ordinal,false,both,true
+bcfpi_yf03,yf03,now_some_questions_about_your_day_to_day_activit,2,OFTEN true,OFTEN true (ID379),,ID379,2,ordinal,false,both,true
+bcfpi_yf04,yf04,now_some_questions_about_your_day_to_day_activit,0,NEVER true,NEVER true (ID377),,ID377,0,ordinal,false,both,true
+bcfpi_yf04,yf04,now_some_questions_about_your_day_to_day_activit,1,SOMETIMES true,SOMETIMES true (ID378),,ID378,1,ordinal,false,both,true
+bcfpi_yf04,yf04,now_some_questions_about_your_day_to_day_activit,2,OFTEN true,OFTEN true (ID379),,ID379,2,ordinal,false,both,true
+bcfpi_yf05,yf05,now_some_questions_about_your_day_to_day_activit,0,NEVER true,NEVER true (ID377),,ID377,0,ordinal,false,both,true
+bcfpi_yf05,yf05,now_some_questions_about_your_day_to_day_activit,1,SOMETIMES true,SOMETIMES true (ID378),,ID378,1,ordinal,false,both,true
+bcfpi_yf05,yf05,now_some_questions_about_your_day_to_day_activit,2,OFTEN true,OFTEN true (ID379),,ID379,2,ordinal,false,both,true
+bcfpi_yf06,yf06,now_some_questions_about_your_day_to_day_activit,0,NEVER true,NEVER true (ID377),,ID377,0,ordinal,false,both,true
+bcfpi_yf06,yf06,now_some_questions_about_your_day_to_day_activit,1,SOMETIMES true,SOMETIMES true (ID378),,ID378,1,ordinal,false,both,true
+bcfpi_yf06,yf06,now_some_questions_about_your_day_to_day_activit,2,OFTEN true,OFTEN true (ID379),,ID379,2,ordinal,false,both,true
+bcfpi_yf07,yf07,now_some_questions_about_your_day_to_day_activit,0,NEVER true,NEVER true (ID377),,ID377,0,ordinal,false,both,true
+bcfpi_yf07,yf07,now_some_questions_about_your_day_to_day_activit,1,SOMETIMES true,SOMETIMES true (ID378),,ID378,1,ordinal,false,both,true
+bcfpi_yf07,yf07,now_some_questions_about_your_day_to_day_activit,2,OFTEN true,OFTEN true (ID379),,ID379,2,ordinal,false,both,true
+bcfpi_yf08,yf08,now_some_questions_about_your_day_to_day_activit,0,NEVER true,NEVER true (ID377),,ID377,0,ordinal,false,both,true
+bcfpi_yf08,yf08,now_some_questions_about_your_day_to_day_activit,1,SOMETIMES true,SOMETIMES true (ID378),,ID378,1,ordinal,false,both,true
+bcfpi_yf08,yf08,now_some_questions_about_your_day_to_day_activit,2,OFTEN true,OFTEN true (ID379),,ID379,2,ordinal,false,both,true
+bcfpi_yf09,yf09,now_some_questions_about_your_day_to_day_activit,0,NEVER true,NEVER true (ID377),,ID377,0,ordinal,false,both,true
+bcfpi_yf09,yf09,now_some_questions_about_your_day_to_day_activit,1,SOMETIMES true,SOMETIMES true (ID378),,ID378,1,ordinal,false,both,true
+bcfpi_yf09,yf09,now_some_questions_about_your_day_to_day_activit,2,OFTEN true,OFTEN true (ID379),,ID379,2,ordinal,false,both,true
+bcfpi_yf10,yf10,now_some_questions_about_your_day_to_day_activit,0,NEVER true,NEVER true (ID377),,ID377,0,ordinal,false,both,true
+bcfpi_yf10,yf10,now_some_questions_about_your_day_to_day_activit,1,SOMETIMES true,SOMETIMES true (ID378),,ID378,1,ordinal,false,both,true
+bcfpi_yf10,yf10,now_some_questions_about_your_day_to_day_activit,2,OFTEN true,OFTEN true (ID379),,ID379,2,ordinal,false,both,true
+bcfpi_yf11,yf11,now_some_questions_about_your_day_to_day_activit,0,NEVER true,NEVER true (ID377),,ID377,0,ordinal,false,both,true
+bcfpi_yf11,yf11,now_some_questions_about_your_day_to_day_activit,1,SOMETIMES true,SOMETIMES true (ID378),,ID378,1,ordinal,false,both,true
+bcfpi_yf11,yf11,now_some_questions_about_your_day_to_day_activit,2,OFTEN true,OFTEN true (ID379),,ID379,2,ordinal,false,both,true
+bcfpi_yf12,yf12,now_some_questions_about_your_day_to_day_activit,0,NEVER true,NEVER true (ID377),,ID377,0,ordinal,false,both,true
+bcfpi_yf12,yf12,now_some_questions_about_your_day_to_day_activit,1,SOMETIMES true,SOMETIMES true (ID378),,ID378,1,ordinal,false,both,true
+bcfpi_yf12,yf12,now_some_questions_about_your_day_to_day_activit,2,OFTEN true,OFTEN true (ID379),,ID379,2,ordinal,false,both,true
+acepar1,adverse_childhood_experiences_01,relationship_with_parents_guardians_if_you_did_n,0,Always,,,,4,ordinal,false,fhi_only,true
+acepar1,adverse_childhood_experiences_01,relationship_with_parents_guardians_if_you_did_n,1,Most of the time,,,,3,ordinal,false,fhi_only,true
+acepar1,adverse_childhood_experiences_01,relationship_with_parents_guardians_if_you_did_n,2,Sometimes,,,,2,ordinal,false,fhi_only,true
+acepar1,adverse_childhood_experiences_01,relationship_with_parents_guardians_if_you_did_n,3,Rarely,,,,1,ordinal,false,fhi_only,true
+acepar1,adverse_childhood_experiences_01,relationship_with_parents_guardians_if_you_did_n,4,Never,,,,0,ordinal,false,fhi_only,true
+acepar2,adverse_childhood_experiences_02,relationship_with_parents_guardians_if_you_did_n,0,Always,,,,4,ordinal,false,fhi_only,true
+acepar2,adverse_childhood_experiences_02,relationship_with_parents_guardians_if_you_did_n,1,Most of the time,,,,3,ordinal,false,fhi_only,true
+acepar2,adverse_childhood_experiences_02,relationship_with_parents_guardians_if_you_did_n,2,Sometimes,,,,2,ordinal,false,fhi_only,true
+acepar2,adverse_childhood_experiences_02,relationship_with_parents_guardians_if_you_did_n,3,Rarely,,,,1,ordinal,false,fhi_only,true
+acepar2,adverse_childhood_experiences_02,relationship_with_parents_guardians_if_you_did_n,4,Never,,,,0,ordinal,false,fhi_only,true
+aceneg1,adverse_childhood_experiences_03,during_your_life_up_to_this_point,0,Many times,,,,3,ordinal,false,fhi_only,true
+aceneg1,adverse_childhood_experiences_03,during_your_life_up_to_this_point,1,A few times,,,,2,ordinal,false,fhi_only,true
+aceneg1,adverse_childhood_experiences_03,during_your_life_up_to_this_point,2,Once,,,,1,ordinal,false,fhi_only,true
+aceneg1,adverse_childhood_experiences_03,during_your_life_up_to_this_point,3,Never,,,,0,ordinal,false,fhi_only,true
+aceneg2,adverse_childhood_experiences_04,during_your_life_up_to_this_point,0,Many times,,,,3,ordinal,false,fhi_only,true
+aceneg2,adverse_childhood_experiences_04,during_your_life_up_to_this_point,1,A few times,,,,2,ordinal,false,fhi_only,true
+aceneg2,adverse_childhood_experiences_04,during_your_life_up_to_this_point,2,Once,,,,1,ordinal,false,fhi_only,true
+aceneg2,adverse_childhood_experiences_04,during_your_life_up_to_this_point,3,Never,,,,0,ordinal,false,fhi_only,true
+aceneg3,adverse_childhood_experiences_05,during_your_life_up_to_this_point,0,Many times,,,,3,ordinal,false,fhi_only,true
+aceneg3,adverse_childhood_experiences_05,during_your_life_up_to_this_point,1,A few times,,,,2,ordinal,false,fhi_only,true
+aceneg3,adverse_childhood_experiences_05,during_your_life_up_to_this_point,2,Once,,,,1,ordinal,false,fhi_only,true
+aceneg3,adverse_childhood_experiences_05,during_your_life_up_to_this_point,3,Never,,,,0,ordinal,false,fhi_only,true
+acehh1,adverse_childhood_experiences_06,during_your_life_up_to_this_point_2,0,Yes,,,,1,nominal,false,fhi_only,true
+acehh1,adverse_childhood_experiences_06,during_your_life_up_to_this_point_2,1,No,,,,0,nominal,false,fhi_only,true
+acehh2,adverse_childhood_experiences_07,during_your_life_up_to_this_point_2,0,Yes,,,,1,nominal,false,fhi_only,true
+acehh2,adverse_childhood_experiences_07,during_your_life_up_to_this_point_2,1,No,,,,0,nominal,false,fhi_only,true
+acehh3,adverse_childhood_experiences_08,during_your_life_up_to_this_point_2,0,Yes,,,,1,nominal,false,fhi_only,true
+acehh3,adverse_childhood_experiences_08,during_your_life_up_to_this_point_2,1,No,,,,0,nominal,false,fhi_only,true
+acehh4,adverse_childhood_experiences_09,during_your_life_up_to_this_point_2,0,Yes,,,,1,nominal,false,fhi_only,true
+acehh4,adverse_childhood_experiences_09,during_your_life_up_to_this_point_2,1,No,,,,0,nominal,false,fhi_only,true
+acehh5,adverse_childhood_experiences_10,during_your_life_up_to_this_point_2,0,Yes,,,,1,nominal,false,fhi_only,true
+acehh5,adverse_childhood_experiences_10,during_your_life_up_to_this_point_2,1,No,,,,0,nominal,false,fhi_only,true
+acefam1,adverse_childhood_experiences_11,family_environment_these_next_questions_are_abou,0,Many times,,,,3,ordinal,false,fhi_only,true
+acefam1,adverse_childhood_experiences_11,family_environment_these_next_questions_are_abou,1,A few times,,,,2,ordinal,false,fhi_only,true
+acefam1,adverse_childhood_experiences_11,family_environment_these_next_questions_are_abou,2,Once,,,,1,ordinal,false,fhi_only,true
+acefam1,adverse_childhood_experiences_11,family_environment_these_next_questions_are_abou,3,Never,,,,0,ordinal,false,fhi_only,true
+acefam2,adverse_childhood_experiences_12,family_environment_these_next_questions_are_abou,0,Many times,,,,3,ordinal,false,fhi_only,true
+acefam2,adverse_childhood_experiences_12,family_environment_these_next_questions_are_abou,1,A few times,,,,2,ordinal,false,fhi_only,true
+acefam2,adverse_childhood_experiences_12,family_environment_these_next_questions_are_abou,2,Once,,,,1,ordinal,false,fhi_only,true
+acefam2,adverse_childhood_experiences_12,family_environment_these_next_questions_are_abou,3,Never,,,,0,ordinal,false,fhi_only,true
+acefam3,adverse_childhood_experiences_13,family_environment_these_next_questions_are_abou,0,Many times,,,,3,ordinal,false,fhi_only,true
+acefam3,adverse_childhood_experiences_13,family_environment_these_next_questions_are_abou,1,A few times,,,,2,ordinal,false,fhi_only,true
+acefam3,adverse_childhood_experiences_13,family_environment_these_next_questions_are_abou,2,Once,,,,1,ordinal,false,fhi_only,true
+acefam3,adverse_childhood_experiences_13,family_environment_these_next_questions_are_abou,3,Never,,,,0,ordinal,false,fhi_only,true
+aceyou1,adverse_childhood_experiences_14,these_next_questions_are_about_certain_things_yo,0,Many times,,,,3,ordinal,false,fhi_only,true
+aceyou1,adverse_childhood_experiences_14,these_next_questions_are_about_certain_things_yo,1,A few times,,,,2,ordinal,false,fhi_only,true
+aceyou1,adverse_childhood_experiences_14,these_next_questions_are_about_certain_things_yo,2,Once,,,,1,ordinal,false,fhi_only,true
+aceyou1,adverse_childhood_experiences_14,these_next_questions_are_about_certain_things_yo,3,Never,,,,0,ordinal,false,fhi_only,true
+aceyou2,adverse_childhood_experiences_15,these_next_questions_are_about_certain_things_yo,0,Many times,,,,3,ordinal,false,fhi_only,true
+aceyou2,adverse_childhood_experiences_15,these_next_questions_are_about_certain_things_yo,1,A few times,,,,2,ordinal,false,fhi_only,true
+aceyou2,adverse_childhood_experiences_15,these_next_questions_are_about_certain_things_yo,2,Once,,,,1,ordinal,false,fhi_only,true
+aceyou2,adverse_childhood_experiences_15,these_next_questions_are_about_certain_things_yo,3,Never,,,,0,ordinal,false,fhi_only,true
+aceyou3,adverse_childhood_experiences_16,these_next_questions_are_about_certain_things_yo,0,Many times,,,,3,ordinal,false,fhi_only,true
+aceyou3,adverse_childhood_experiences_16,these_next_questions_are_about_certain_things_yo,1,A few times,,,,2,ordinal,false,fhi_only,true
+aceyou3,adverse_childhood_experiences_16,these_next_questions_are_about_certain_things_yo,2,Once,,,,1,ordinal,false,fhi_only,true
+aceyou3,adverse_childhood_experiences_16,these_next_questions_are_about_certain_things_yo,3,Never,,,,0,ordinal,false,fhi_only,true
+aceyou4,adverse_childhood_experiences_17,these_next_questions_are_about_certain_things_yo,0,Many times,,,,3,ordinal,false,fhi_only,true
+aceyou4,adverse_childhood_experiences_17,these_next_questions_are_about_certain_things_yo,1,A few times,,,,2,ordinal,false,fhi_only,true
+aceyou4,adverse_childhood_experiences_17,these_next_questions_are_about_certain_things_yo,2,Once,,,,1,ordinal,false,fhi_only,true
+aceyou4,adverse_childhood_experiences_17,these_next_questions_are_about_certain_things_yo,3,Never,,,,0,ordinal,false,fhi_only,true
+aceyou5,adverse_childhood_experiences_18,these_next_questions_are_about_certain_things_yo,0,Many times,,,,3,ordinal,false,fhi_only,true
+aceyou5,adverse_childhood_experiences_18,these_next_questions_are_about_certain_things_yo,1,A few times,,,,2,ordinal,false,fhi_only,true
+aceyou5,adverse_childhood_experiences_18,these_next_questions_are_about_certain_things_yo,2,Once,,,,1,ordinal,false,fhi_only,true
+aceyou5,adverse_childhood_experiences_18,these_next_questions_are_about_certain_things_yo,3,Never,,,,0,ordinal,false,fhi_only,true
+aceyou6,adverse_childhood_experiences_19,these_next_questions_are_about_certain_things_yo,0,Many times,,,,3,ordinal,false,fhi_only,true
+aceyou6,adverse_childhood_experiences_19,these_next_questions_are_about_certain_things_yo,1,A few times,,,,2,ordinal,false,fhi_only,true
+aceyou6,adverse_childhood_experiences_19,these_next_questions_are_about_certain_things_yo,2,Once,,,,1,ordinal,false,fhi_only,true
+aceyou6,adverse_childhood_experiences_19,these_next_questions_are_about_certain_things_yo,3,Never,,,,0,ordinal,false,fhi_only,true
+aceyou7,adverse_childhood_experiences_20,these_next_questions_are_about_certain_things_yo,0,Many times,,,,3,ordinal,false,fhi_only,true
+aceyou7,adverse_childhood_experiences_20,these_next_questions_are_about_certain_things_yo,1,A few times,,,,2,ordinal,false,fhi_only,true
+aceyou7,adverse_childhood_experiences_20,these_next_questions_are_about_certain_things_yo,2,Once,,,,1,ordinal,false,fhi_only,true
+aceyou7,adverse_childhood_experiences_20,these_next_questions_are_about_certain_things_yo,3,Never,,,,0,ordinal,false,fhi_only,true
+aceyou8,adverse_childhood_experiences_21,these_next_questions_are_about_certain_things_yo,0,Many times,,,,3,ordinal,false,fhi_only,true
+aceyou8,adverse_childhood_experiences_21,these_next_questions_are_about_certain_things_yo,1,A few times,,,,2,ordinal,false,fhi_only,true
+aceyou8,adverse_childhood_experiences_21,these_next_questions_are_about_certain_things_yo,2,Once,,,,1,ordinal,false,fhi_only,true
+aceyou8,adverse_childhood_experiences_21,these_next_questions_are_about_certain_things_yo,3,Never,,,,0,ordinal,false,fhi_only,true
+acebull1,adverse_childhood_experiences_22,peer_violence_these_next_questions_are_about_bei,0,Many times,,,,3,ordinal,false,fhi_only,true
+acebull1,adverse_childhood_experiences_22,peer_violence_these_next_questions_are_about_bei,1,A few times,,,,2,ordinal,false,fhi_only,true
+acebull1,adverse_childhood_experiences_22,peer_violence_these_next_questions_are_about_bei,2,Once,,,,1,ordinal,false,fhi_only,true
+acebull1,adverse_childhood_experiences_22,peer_violence_these_next_questions_are_about_bei,3,Never,,,,0,ordinal,false,fhi_only,true
+acehow1,adverse_childhood_experiences_23,how_were_you_bullied_most_often,0,"I was hit, kicked, pushed, shoved around, or locked indoors.",,,,1,nominal,false,fhi_only,true
+acehow1,adverse_childhood_experiences_23,how_were_you_bullied_most_often,1,"I was made fun of because of my race, nationality or colour",,,,2,nominal,false,fhi_only,true
+acehow1,adverse_childhood_experiences_23,how_were_you_bullied_most_often,2,I was made fun of because of my religion,,,,3,nominal,false,fhi_only,true
+acehow1,adverse_childhood_experiences_23,how_were_you_bullied_most_often,3,"I was made fun of with sexual jokes, comments, or gestures",,,,4,nominal,false,fhi_only,true
+acehow1,adverse_childhood_experiences_23,how_were_you_bullied_most_often,4,I was left out of activities on purpose or completely ignored,,,,5,nominal,false,fhi_only,true
+acehow1,adverse_childhood_experiences_23,how_were_you_bullied_most_often,5,I was made fun of because of how my body or face looked,,,,6,nominal,false,fhi_only,true
+acehow1,adverse_childhood_experiences_23,how_were_you_bullied_most_often,6,I was bullied in some other way,,,,7,nominal,false,fhi_only,true
+acefght1,adverse_childhood_experiences_24,this_next_question_is_about_physical_fights_a_ph,0,Many times,,,,3,ordinal,false,fhi_only,true
+acefght1,adverse_childhood_experiences_24,this_next_question_is_about_physical_fights_a_ph,1,A few times,,,,2,ordinal,false,fhi_only,true
+acefght1,adverse_childhood_experiences_24,this_next_question_is_about_physical_fights_a_ph,2,Once,,,,1,ordinal,false,fhi_only,true
+acefght1,adverse_childhood_experiences_24,this_next_question_is_about_physical_fights_a_ph,3,Never,,,,0,ordinal,false,fhi_only,true
+acenbr1,adverse_childhood_experiences_25,these_next_questions_are_about_how_often_you_may,0,Many times,,,,3,ordinal,false,fhi_only,true
+acenbr1,adverse_childhood_experiences_25,these_next_questions_are_about_how_often_you_may,1,A few times,,,,2,ordinal,false,fhi_only,true
+acenbr1,adverse_childhood_experiences_25,these_next_questions_are_about_how_often_you_may,2,Once,,,,1,ordinal,false,fhi_only,true
+acenbr1,adverse_childhood_experiences_25,these_next_questions_are_about_how_often_you_may,3,Never,,,,0,ordinal,false,fhi_only,true
+acenbr2,adverse_childhood_experiences_26,these_next_questions_are_about_how_often_you_may,0,Many times,,,,3,ordinal,false,fhi_only,true
+acenbr2,adverse_childhood_experiences_26,these_next_questions_are_about_how_often_you_may,1,A few times,,,,2,ordinal,false,fhi_only,true
+acenbr2,adverse_childhood_experiences_26,these_next_questions_are_about_how_often_you_may,2,Once,,,,1,ordinal,false,fhi_only,true
+acenbr2,adverse_childhood_experiences_26,these_next_questions_are_about_how_often_you_may,3,Never,,,,0,ordinal,false,fhi_only,true
+acenbr3,adverse_childhood_experiences_27,these_next_questions_are_about_how_often_you_may,0,Many times,,,,3,ordinal,false,fhi_only,true
+acenbr3,adverse_childhood_experiences_27,these_next_questions_are_about_how_often_you_may,1,A few times,,,,2,ordinal,false,fhi_only,true
+acenbr3,adverse_childhood_experiences_27,these_next_questions_are_about_how_often_you_may,2,Once,,,,1,ordinal,false,fhi_only,true
+acenbr3,adverse_childhood_experiences_27,these_next_questions_are_about_how_often_you_may,3,Never,,,,0,ordinal,false,fhi_only,true
+acewar1,adverse_childhood_experiences_28,exposure_to_war_collective_violence_these_questi,0,Many times,,,,3,ordinal,false,fhi_only,true
+acewar1,adverse_childhood_experiences_28,exposure_to_war_collective_violence_these_questi,1,A few times,,,,2,ordinal,false,fhi_only,true
+acewar1,adverse_childhood_experiences_28,exposure_to_war_collective_violence_these_questi,2,Once,,,,1,ordinal,false,fhi_only,true
+acewar1,adverse_childhood_experiences_28,exposure_to_war_collective_violence_these_questi,3,Never,,,,0,ordinal,false,fhi_only,true
+acewar2,adverse_childhood_experiences_29,exposure_to_war_collective_violence_these_questi,0,Many times,,,,3,ordinal,false,fhi_only,true
+acewar2,adverse_childhood_experiences_29,exposure_to_war_collective_violence_these_questi,1,A few times,,,,2,ordinal,false,fhi_only,true
+acewar2,adverse_childhood_experiences_29,exposure_to_war_collective_violence_these_questi,2,Once,,,,1,ordinal,false,fhi_only,true
+acewar2,adverse_childhood_experiences_29,exposure_to_war_collective_violence_these_questi,3,Never,,,,0,ordinal,false,fhi_only,true
+acewar3,adverse_childhood_experiences_30,exposure_to_war_collective_violence_these_questi,0,Many times,,,,3,ordinal,false,fhi_only,true
+acewar3,adverse_childhood_experiences_30,exposure_to_war_collective_violence_these_questi,1,A few times,,,,2,ordinal,false,fhi_only,true
+acewar3,adverse_childhood_experiences_30,exposure_to_war_collective_violence_these_questi,2,Once,,,,1,ordinal,false,fhi_only,true
+acewar3,adverse_childhood_experiences_30,exposure_to_war_collective_violence_these_questi,3,Never,,,,0,ordinal,false,fhi_only,true
+acewar4,adverse_childhood_experiences_31,exposure_to_war_collective_violence_these_questi,0,Many times,,,,3,ordinal,false,fhi_only,true
+acewar4,adverse_childhood_experiences_31,exposure_to_war_collective_violence_these_questi,1,A few times,,,,2,ordinal,false,fhi_only,true
+acewar4,adverse_childhood_experiences_31,exposure_to_war_collective_violence_these_questi,2,Once,,,,1,ordinal,false,fhi_only,true
+acewar4,adverse_childhood_experiences_31,exposure_to_war_collective_violence_these_questi,3,Never,,,,0,ordinal,false,fhi_only,true
+cyrm01,cyrm01,to_what_extent_do_the_following_statements_apply,0,Not at all,Not at all (ID203),,ID203,0,ordinal,false,both,true
+cyrm01,cyrm01,to_what_extent_do_the_following_statements_apply,1,A little,A little (ID204),,ID204,1,ordinal,false,both,true
+cyrm01,cyrm01,to_what_extent_do_the_following_statements_apply,2,Somewhat,Somewhat (ID205),,ID205,2,ordinal,false,both,true
+cyrm01,cyrm01,to_what_extent_do_the_following_statements_apply,3,Quite a bit,Quite a bit (ID206),,ID206,3,ordinal,false,both,true
+cyrm01,cyrm01,to_what_extent_do_the_following_statements_apply,4,A lot,A lot (ID211),,ID211,4,ordinal,false,both,true
+cyrm02,cyrm02,to_what_extent_do_the_following_statements_apply,0,Not at all,Not at all (ID203),,ID203,0,ordinal,false,both,true
+cyrm02,cyrm02,to_what_extent_do_the_following_statements_apply,1,A little,A little (ID204),,ID204,1,ordinal,false,both,true
+cyrm02,cyrm02,to_what_extent_do_the_following_statements_apply,2,Somewhat,Somewhat (ID205),,ID205,2,ordinal,false,both,true
+cyrm02,cyrm02,to_what_extent_do_the_following_statements_apply,3,Quite a bit,Quite a bit (ID206),,ID206,3,ordinal,false,both,true
+cyrm02,cyrm02,to_what_extent_do_the_following_statements_apply,4,A lot,A lot (ID211),,ID211,4,ordinal,false,both,true
+cyrm03,cyrm03,to_what_extent_do_the_following_statements_apply,0,Not at all,Not at all (ID203),,ID203,0,ordinal,false,both,true
+cyrm03,cyrm03,to_what_extent_do_the_following_statements_apply,1,A little,A little (ID204),,ID204,1,ordinal,false,both,true
+cyrm03,cyrm03,to_what_extent_do_the_following_statements_apply,2,Somewhat,Somewhat (ID205),,ID205,2,ordinal,false,both,true
+cyrm03,cyrm03,to_what_extent_do_the_following_statements_apply,3,Quite a bit,Quite a bit (ID206),,ID206,3,ordinal,false,both,true
+cyrm03,cyrm03,to_what_extent_do_the_following_statements_apply,4,A lot,A lot (ID211),,ID211,4,ordinal,false,both,true
+cyrm04,cyrm04,to_what_extent_do_the_following_statements_apply,0,Not at all,Not at all (ID203),,ID203,0,ordinal,false,both,true
+cyrm04,cyrm04,to_what_extent_do_the_following_statements_apply,1,A little,A little (ID204),,ID204,1,ordinal,false,both,true
+cyrm04,cyrm04,to_what_extent_do_the_following_statements_apply,2,Somewhat,Somewhat (ID205),,ID205,2,ordinal,false,both,true
+cyrm04,cyrm04,to_what_extent_do_the_following_statements_apply,3,Quite a bit,Quite a bit (ID206),,ID206,3,ordinal,false,both,true
+cyrm04,cyrm04,to_what_extent_do_the_following_statements_apply,4,A lot,A lot (ID211),,ID211,4,ordinal,false,both,true
+cyrm05,cyrm05,to_what_extent_do_the_following_statements_apply,0,Not at all,Not at all (ID203),,ID203,0,ordinal,false,both,true
+cyrm05,cyrm05,to_what_extent_do_the_following_statements_apply,1,A little,A little (ID204),,ID204,1,ordinal,false,both,true
+cyrm05,cyrm05,to_what_extent_do_the_following_statements_apply,2,Somewhat,Somewhat (ID205),,ID205,2,ordinal,false,both,true
+cyrm05,cyrm05,to_what_extent_do_the_following_statements_apply,3,Quite a bit,Quite a bit (ID206),,ID206,3,ordinal,false,both,true
+cyrm05,cyrm05,to_what_extent_do_the_following_statements_apply,4,A lot,A lot (ID211),,ID211,4,ordinal,false,both,true
+cyrm06,cyrm06,to_what_extent_do_the_following_statements_apply,0,Not at all,Not at all (ID203),,ID203,0,ordinal,false,both,true
+cyrm06,cyrm06,to_what_extent_do_the_following_statements_apply,1,A little,A little (ID204),,ID204,1,ordinal,false,both,true
+cyrm06,cyrm06,to_what_extent_do_the_following_statements_apply,2,Somewhat,Somewhat (ID205),,ID205,2,ordinal,false,both,true
+cyrm06,cyrm06,to_what_extent_do_the_following_statements_apply,3,Quite a bit,Quite a bit (ID206),,ID206,3,ordinal,false,both,true
+cyrm06,cyrm06,to_what_extent_do_the_following_statements_apply,4,A lot,A lot (ID211),,ID211,4,ordinal,false,both,true
+cyrm07,cyrm07,to_what_extent_do_the_following_statements_apply,0,Not at all,Not at all (ID203),,ID203,0,ordinal,false,both,true
+cyrm07,cyrm07,to_what_extent_do_the_following_statements_apply,1,A little,A little (ID204),,ID204,1,ordinal,false,both,true
+cyrm07,cyrm07,to_what_extent_do_the_following_statements_apply,2,Somewhat,Somewhat (ID205),,ID205,2,ordinal,false,both,true
+cyrm07,cyrm07,to_what_extent_do_the_following_statements_apply,3,Quite a bit,Quite a bit (ID206),,ID206,3,ordinal,false,both,true
+cyrm07,cyrm07,to_what_extent_do_the_following_statements_apply,4,A lot,A lot (ID211),,ID211,4,ordinal,false,both,true
+cyrm08,cyrm08,to_what_extent_do_the_following_statements_apply,0,Not at all,Not at all (ID203),,ID203,0,ordinal,false,both,true
+cyrm08,cyrm08,to_what_extent_do_the_following_statements_apply,1,A little,A little (ID204),,ID204,1,ordinal,false,both,true
+cyrm08,cyrm08,to_what_extent_do_the_following_statements_apply,2,Somewhat,Somewhat (ID205),,ID205,2,ordinal,false,both,true
+cyrm08,cyrm08,to_what_extent_do_the_following_statements_apply,3,Quite a bit,Quite a bit (ID206),,ID206,3,ordinal,false,both,true
+cyrm08,cyrm08,to_what_extent_do_the_following_statements_apply,4,A lot,A lot (ID211),,ID211,4,ordinal,false,both,true
+cyrm09,cyrm09,to_what_extent_do_the_following_statements_apply,0,Not at all,Not at all (ID203),,ID203,0,ordinal,false,both,true
+cyrm09,cyrm09,to_what_extent_do_the_following_statements_apply,1,A little,A little (ID204),,ID204,1,ordinal,false,both,true
+cyrm09,cyrm09,to_what_extent_do_the_following_statements_apply,2,Somewhat,Somewhat (ID205),,ID205,2,ordinal,false,both,true
+cyrm09,cyrm09,to_what_extent_do_the_following_statements_apply,3,Quite a bit,Quite a bit (ID206),,ID206,3,ordinal,false,both,true
+cyrm09,cyrm09,to_what_extent_do_the_following_statements_apply,4,A lot,A lot (ID211),,ID211,4,ordinal,false,both,true
+cyrm10,cyrm10,to_what_extent_do_the_following_statements_apply,0,Not at all,Not at all (ID203),,ID203,0,ordinal,false,both,true
+cyrm10,cyrm10,to_what_extent_do_the_following_statements_apply,1,A little,A little (ID204),,ID204,1,ordinal,false,both,true
+cyrm10,cyrm10,to_what_extent_do_the_following_statements_apply,2,Somewhat,Somewhat (ID205),,ID205,2,ordinal,false,both,true
+cyrm10,cyrm10,to_what_extent_do_the_following_statements_apply,3,Quite a bit,Quite a bit (ID206),,ID206,3,ordinal,false,both,true
+cyrm10,cyrm10,to_what_extent_do_the_following_statements_apply,4,A lot,A lot (ID211),,ID211,4,ordinal,false,both,true
+cyrm11,cyrm11,to_what_extent_do_the_following_statements_apply,0,Not at all,Not at all (ID203),,ID203,0,ordinal,false,both,true
+cyrm11,cyrm11,to_what_extent_do_the_following_statements_apply,1,A little,A little (ID204),,ID204,1,ordinal,false,both,true
+cyrm11,cyrm11,to_what_extent_do_the_following_statements_apply,2,Somewhat,Somewhat (ID205),,ID205,2,ordinal,false,both,true
+cyrm11,cyrm11,to_what_extent_do_the_following_statements_apply,3,Quite a bit,Quite a bit (ID206),,ID206,3,ordinal,false,both,true
+cyrm11,cyrm11,to_what_extent_do_the_following_statements_apply,4,A lot,A lot (ID211),,ID211,4,ordinal,false,both,true
+cyrm12,cyrm12,to_what_extent_do_the_following_statements_apply,0,Not at all,Not at all (ID203),,ID203,0,ordinal,false,both,true
+cyrm12,cyrm12,to_what_extent_do_the_following_statements_apply,1,A little,A little (ID204),,ID204,1,ordinal,false,both,true
+cyrm12,cyrm12,to_what_extent_do_the_following_statements_apply,2,Somewhat,Somewhat (ID205),,ID205,2,ordinal,false,both,true
+cyrm12,cyrm12,to_what_extent_do_the_following_statements_apply,3,Quite a bit,Quite a bit (ID206),,ID206,3,ordinal,false,both,true
+cyrm12,cyrm12,to_what_extent_do_the_following_statements_apply,4,A lot,A lot (ID211),,ID211,4,ordinal,false,both,true
+ks1,ks02,when_you_think_about_the_past_week,0,Never,,,,0,ordinal,false,both,true
+ks1,ks02,when_you_think_about_the_past_week,1,Rarely,Rarely (ID359),,ID359,1,ordinal,false,both,true
+ks1,ks02,when_you_think_about_the_past_week,2,Quite often,Quite often (ID361),,ID361,2,ordinal,false,both,true
+ks1,ks02,when_you_think_about_the_past_week,3,Very often,Very often (ID362),,ID362,3,ordinal,false,both,true
+ks1,ks02,when_you_think_about_the_past_week,4,Always,Always (ID363),,ID363,4,ordinal,false,both,true
+ks2,ks03,when_you_think_about_the_past_week,0,Never,,,,0,ordinal,false,both,true
+ks2,ks03,when_you_think_about_the_past_week,1,Rarely,Rarely (ID359),,ID359,1,ordinal,false,both,true
+ks2,ks03,when_you_think_about_the_past_week,2,Quite often,Quite often (ID361),,ID361,2,ordinal,false,both,true
+ks2,ks03,when_you_think_about_the_past_week,3,Very often,Very often (ID362),,ID362,3,ordinal,false,both,true
+ks2,ks03,when_you_think_about_the_past_week,4,Always,Always (ID363),,ID363,4,ordinal,false,both,true
+ks3,ks04,when_you_think_about_the_past_week,0,Never,,,,0,ordinal,false,both,true
+ks3,ks04,when_you_think_about_the_past_week,1,Rarely,Rarely (ID359),,ID359,1,ordinal,false,both,true
+ks3,ks04,when_you_think_about_the_past_week,2,Quite often,Quite often (ID361),,ID361,2,ordinal,false,both,true
+ks3,ks04,when_you_think_about_the_past_week,3,Very often,Very often (ID362),,ID362,3,ordinal,false,both,true
+ks3,ks04,when_you_think_about_the_past_week,4,Always,Always (ID363),,ID363,4,ordinal,false,both,true
+ks4,ks05,when_you_think_about_the_past_week,0,Never,,,,0,ordinal,false,both,true
+ks4,ks05,when_you_think_about_the_past_week,1,Rarely,Rarely (ID359),,ID359,1,ordinal,false,both,true
+ks4,ks05,when_you_think_about_the_past_week,2,Quite often,Quite often (ID361),,ID361,2,ordinal,false,both,true
+ks4,ks05,when_you_think_about_the_past_week,3,Very often,Very often (ID362),,ID362,3,ordinal,false,both,true
+ks4,ks05,when_you_think_about_the_past_week,4,Always,Always (ID363),,ID363,4,ordinal,false,both,true
+ks5,ks06,when_you_think_about_the_past_week,0,Never,,,,0,ordinal,false,both,true
+ks5,ks06,when_you_think_about_the_past_week,1,Rarely,Rarely (ID359),,ID359,1,ordinal,false,both,true
+ks5,ks06,when_you_think_about_the_past_week,2,Quite often,Quite often (ID361),,ID361,2,ordinal,false,both,true
+ks5,ks06,when_you_think_about_the_past_week,3,Very often,Very often (ID362),,ID362,3,ordinal,false,both,true
+ks5,ks06,when_you_think_about_the_past_week,4,Always,Always (ID363),,ID363,4,ordinal,false,both,true
+ks6,ks07,when_you_think_about_the_past_week,0,Never,,,,0,ordinal,false,both,true
+ks6,ks07,when_you_think_about_the_past_week,1,Rarely,Rarely (ID359),,ID359,1,ordinal,false,both,true
+ks6,ks07,when_you_think_about_the_past_week,2,Quite often,Quite often (ID361),,ID361,2,ordinal,false,both,true
+ks6,ks07,when_you_think_about_the_past_week,3,Very often,Very often (ID362),,ID362,3,ordinal,false,both,true
+ks6,ks07,when_you_think_about_the_past_week,4,Always,Always (ID363),,ID363,4,ordinal,false,both,true
+ks7,ks08,when_you_think_about_the_past_week,0,Never,,,,0,ordinal,false,both,true
+ks7,ks08,when_you_think_about_the_past_week,1,Rarely,Rarely (ID359),,ID359,1,ordinal,false,both,true
+ks7,ks08,when_you_think_about_the_past_week,2,Quite often,Quite often (ID361),,ID361,2,ordinal,false,both,true
+ks7,ks08,when_you_think_about_the_past_week,3,Very often,Very often (ID362),,ID362,3,ordinal,false,both,true
+ks7,ks08,when_you_think_about_the_past_week,4,Always,Always (ID363),,ID363,4,ordinal,false,both,true
+ks8,ks10,when_you_think_about_the_past_week,0,Never,,,,0,ordinal,false,both,true
+ks8,ks10,when_you_think_about_the_past_week,1,Rarely,Rarely (ID359),,ID359,1,ordinal,false,both,true
+ks8,ks10,when_you_think_about_the_past_week,2,Quite often,Quite often (ID361),,ID361,2,ordinal,false,both,true
+ks8,ks10,when_you_think_about_the_past_week,3,Very often,Very often (ID362),,ID362,3,ordinal,false,both,true
+ks8,ks10,when_you_think_about_the_past_week,4,Always,Always (ID363),,ID363,4,ordinal,false,both,true
+qol1,quality_of_life_01,when_you_think_about_the_past_week_2,0,Not at all,,,,0,ordinal,false,fhi_only,true
+qol1,quality_of_life_01,when_you_think_about_the_past_week_2,1,A little,,,,1,ordinal,false,fhi_only,true
+qol1,quality_of_life_01,when_you_think_about_the_past_week_2,2,Quite,,,,2,ordinal,false,fhi_only,true
+qol1,quality_of_life_01,when_you_think_about_the_past_week_2,3,Very,,,,3,ordinal,false,fhi_only,true
+qol1,quality_of_life_01,when_you_think_about_the_past_week_2,4,To a great extent,,,,4,ordinal,false,fhi_only,true
+qol2,quality_of_life_02,when_you_think_about_the_past_week_2,0,Not at all,,,,0,ordinal,false,fhi_only,true
+qol2,quality_of_life_02,when_you_think_about_the_past_week_2,1,A little,,,,1,ordinal,false,fhi_only,true
+qol2,quality_of_life_02,when_you_think_about_the_past_week_2,2,Quite,,,,2,ordinal,false,fhi_only,true
+qol2,quality_of_life_02,when_you_think_about_the_past_week_2,3,Very,,,,3,ordinal,false,fhi_only,true
+qol2,quality_of_life_02,when_you_think_about_the_past_week_2,4,To a great extent,,,,4,ordinal,false,fhi_only,true
+smwd1,social_media_and_gaming_01,think_about_a_normal_weekday_how_much_time_do_yo,0,Less than 1 hour,,,,0,ordinal,false,fhi_only,true
+smwd1,social_media_and_gaming_01,think_about_a_normal_weekday_how_much_time_do_yo,1,1-2 hours,,,,1,ordinal,false,fhi_only,true
+smwd1,social_media_and_gaming_01,think_about_a_normal_weekday_how_much_time_do_yo,2,3-4 hours,,,,2,ordinal,false,fhi_only,true
+smwd1,social_media_and_gaming_01,think_about_a_normal_weekday_how_much_time_do_yo,3,5-6 hours,,,,3,ordinal,false,fhi_only,true
+smwd1,social_media_and_gaming_01,think_about_a_normal_weekday_how_much_time_do_yo,4,7 hours or more,,,,4,ordinal,false,fhi_only,true
+smwd2,social_media_and_gaming_02,think_about_a_normal_weekday_how_much_time_do_yo,0,Less than 1 hour,,,,0,ordinal,false,fhi_only,true
+smwd2,social_media_and_gaming_02,think_about_a_normal_weekday_how_much_time_do_yo,1,1-2 hours,,,,1,ordinal,false,fhi_only,true
+smwd2,social_media_and_gaming_02,think_about_a_normal_weekday_how_much_time_do_yo,2,3-4 hours,,,,2,ordinal,false,fhi_only,true
+smwd2,social_media_and_gaming_02,think_about_a_normal_weekday_how_much_time_do_yo,3,5-6 hours,,,,3,ordinal,false,fhi_only,true
+smwd2,social_media_and_gaming_02,think_about_a_normal_weekday_how_much_time_do_yo,4,7 hours or more,,,,4,ordinal,false,fhi_only,true
+smwd3,social_media_and_gaming_03,think_about_a_normal_weekday_how_much_time_do_yo,0,Less than 1 hour,,,,0,ordinal,false,fhi_only,true
+smwd3,social_media_and_gaming_03,think_about_a_normal_weekday_how_much_time_do_yo,1,1-2 hours,,,,1,ordinal,false,fhi_only,true
+smwd3,social_media_and_gaming_03,think_about_a_normal_weekday_how_much_time_do_yo,2,3-4 hours,,,,2,ordinal,false,fhi_only,true
+smwd3,social_media_and_gaming_03,think_about_a_normal_weekday_how_much_time_do_yo,3,5-6 hours,,,,3,ordinal,false,fhi_only,true
+smwd3,social_media_and_gaming_03,think_about_a_normal_weekday_how_much_time_do_yo,4,7 hours or more,,,,4,ordinal,false,fhi_only,true
+smwd4,social_media_and_gaming_04,think_about_a_normal_weekday_how_much_time_do_yo,0,Less than 1 hour,,,,0,ordinal,false,fhi_only,true
+smwd4,social_media_and_gaming_04,think_about_a_normal_weekday_how_much_time_do_yo,1,1-2 hours,,,,1,ordinal,false,fhi_only,true
+smwd4,social_media_and_gaming_04,think_about_a_normal_weekday_how_much_time_do_yo,2,3-4 hours,,,,2,ordinal,false,fhi_only,true
+smwd4,social_media_and_gaming_04,think_about_a_normal_weekday_how_much_time_do_yo,3,5-6 hours,,,,3,ordinal,false,fhi_only,true
+smwd4,social_media_and_gaming_04,think_about_a_normal_weekday_how_much_time_do_yo,4,7 hours or more,,,,4,ordinal,false,fhi_only,true
+smwd5,social_media_and_gaming_05,think_about_a_normal_weekday_how_much_time_do_yo,0,Less than 1 hour,,,,0,ordinal,false,fhi_only,true
+smwd5,social_media_and_gaming_05,think_about_a_normal_weekday_how_much_time_do_yo,1,1-2 hours,,,,1,ordinal,false,fhi_only,true
+smwd5,social_media_and_gaming_05,think_about_a_normal_weekday_how_much_time_do_yo,2,3-4 hours,,,,2,ordinal,false,fhi_only,true
+smwd5,social_media_and_gaming_05,think_about_a_normal_weekday_how_much_time_do_yo,3,5-6 hours,,,,3,ordinal,false,fhi_only,true
+smwd5,social_media_and_gaming_05,think_about_a_normal_weekday_how_much_time_do_yo,4,7 hours or more,,,,4,ordinal,false,fhi_only,true
+smwe1,social_media_and_gaming_06,think_about_a_normal_weekend_day_how_much_time_d,0,Less than 1 hour,,,,0,ordinal,false,fhi_only,true
+smwe1,social_media_and_gaming_06,think_about_a_normal_weekend_day_how_much_time_d,1,1-2 hours,,,,1,ordinal,false,fhi_only,true
+smwe1,social_media_and_gaming_06,think_about_a_normal_weekend_day_how_much_time_d,2,3-4 hours,,,,2,ordinal,false,fhi_only,true
+smwe1,social_media_and_gaming_06,think_about_a_normal_weekend_day_how_much_time_d,3,5-6 hours,,,,3,ordinal,false,fhi_only,true
+smwe1,social_media_and_gaming_06,think_about_a_normal_weekend_day_how_much_time_d,4,7 hours or more,,,,4,ordinal,false,fhi_only,true
+smwe2,social_media_and_gaming_07,think_about_a_normal_weekend_day_how_much_time_d,0,Less than 1 hour,,,,0,ordinal,false,fhi_only,true
+smwe2,social_media_and_gaming_07,think_about_a_normal_weekend_day_how_much_time_d,1,1-2 hours,,,,1,ordinal,false,fhi_only,true
+smwe2,social_media_and_gaming_07,think_about_a_normal_weekend_day_how_much_time_d,2,3-4 hours,,,,2,ordinal,false,fhi_only,true
+smwe2,social_media_and_gaming_07,think_about_a_normal_weekend_day_how_much_time_d,3,5-6 hours,,,,3,ordinal,false,fhi_only,true
+smwe2,social_media_and_gaming_07,think_about_a_normal_weekend_day_how_much_time_d,4,7 hours or more,,,,4,ordinal,false,fhi_only,true
+smwe3,social_media_and_gaming_08,think_about_a_normal_weekend_day_how_much_time_d,0,Less than 1 hour,,,,0,ordinal,false,fhi_only,true
+smwe3,social_media_and_gaming_08,think_about_a_normal_weekend_day_how_much_time_d,1,1-2 hours,,,,1,ordinal,false,fhi_only,true
+smwe3,social_media_and_gaming_08,think_about_a_normal_weekend_day_how_much_time_d,2,3-4 hours,,,,2,ordinal,false,fhi_only,true
+smwe3,social_media_and_gaming_08,think_about_a_normal_weekend_day_how_much_time_d,3,5-6 hours,,,,3,ordinal,false,fhi_only,true
+smwe3,social_media_and_gaming_08,think_about_a_normal_weekend_day_how_much_time_d,4,7 hours or more,,,,4,ordinal,false,fhi_only,true
+smwe4,social_media_and_gaming_09,think_about_a_normal_weekend_day_how_much_time_d,0,Less than 1 hour,,,,0,ordinal,false,fhi_only,true
+smwe4,social_media_and_gaming_09,think_about_a_normal_weekend_day_how_much_time_d,1,1-2 hours,,,,1,ordinal,false,fhi_only,true
+smwe4,social_media_and_gaming_09,think_about_a_normal_weekend_day_how_much_time_d,2,3-4 hours,,,,2,ordinal,false,fhi_only,true
+smwe4,social_media_and_gaming_09,think_about_a_normal_weekend_day_how_much_time_d,3,5-6 hours,,,,3,ordinal,false,fhi_only,true
+smwe4,social_media_and_gaming_09,think_about_a_normal_weekend_day_how_much_time_d,4,7 hours or more,,,,4,ordinal,false,fhi_only,true
+smwe5,social_media_and_gaming_10,think_about_a_normal_weekend_day_how_much_time_d,0,Less than 1 hour,,,,0,ordinal,false,fhi_only,true
+smwe5,social_media_and_gaming_10,think_about_a_normal_weekend_day_how_much_time_d,1,1-2 hours,,,,1,ordinal,false,fhi_only,true
+smwe5,social_media_and_gaming_10,think_about_a_normal_weekend_day_how_much_time_d,2,3-4 hours,,,,2,ordinal,false,fhi_only,true
+smwe5,social_media_and_gaming_10,think_about_a_normal_weekend_day_how_much_time_d,3,5-6 hours,,,,3,ordinal,false,fhi_only,true
+smwe5,social_media_and_gaming_10,think_about_a_normal_weekend_day_how_much_time_d,4,7 hours or more,,,,4,ordinal,false,fhi_only,true
+playwith1,social_media_and_gaming_11,when_gaming_on_your_console_computer_do_you,0,Mostly play games alone?,,,,1,nominal,false,fhi_only,true
+playwith1,social_media_and_gaming_11,when_gaming_on_your_console_computer_do_you,1,Mostly play games online with others?,,,,2,nominal,false,fhi_only,true
+playwith1,social_media_and_gaming_11,when_gaming_on_your_console_computer_do_you,2,Mostly play games with others while chatting with them?,,,,3,nominal,false,fhi_only,true
+ai1,social_media_and_gaming_12,do_you_ever_use_ai_e_g_chatgpt_gemini_my_ai_repl,0,Yes,,,,1,nominal,false,fhi_only,true
+ai1,social_media_and_gaming_12,do_you_ever_use_ai_e_g_chatgpt_gemini_my_ai_repl,1,No,,,,0,nominal,false,fhi_only,true
+aiuse1,social_media_and_gaming_13,please_indicate_what_you_usually_use_ai_for,0,For schoolwork,,,,1,nominal,true,fhi_only,true
+aiuse1,social_media_and_gaming_13,please_indicate_what_you_usually_use_ai_for,1,For entertainment,,,,2,nominal,true,fhi_only,true
+aiuse1,social_media_and_gaming_13,please_indicate_what_you_usually_use_ai_for,2,For social company,,,,3,nominal,true,fhi_only,true
+smpos1,social_media_and_gaming_14,how_often_do_you_experience_positive_feelings_af,0,Nearly all the time,,,,4,ordinal,false,fhi_only,true
+smpos1,social_media_and_gaming_14,how_often_do_you_experience_positive_feelings_af,1,Often,,,,3,ordinal,false,fhi_only,true
+smpos1,social_media_and_gaming_14,how_often_do_you_experience_positive_feelings_af,2,Sometimes,,,,2,ordinal,false,fhi_only,true
+smpos1,social_media_and_gaming_14,how_often_do_you_experience_positive_feelings_af,3,Rarely,,,,1,ordinal,false,fhi_only,true
+smpos1,social_media_and_gaming_14,how_often_do_you_experience_positive_feelings_af,4,Never,,,,0,ordinal,false,fhi_only,true
+smneg1,social_media_and_gaming_15,how_often_do_you_experience_negative_feelings_af,0,Nearly all the time,,,,4,ordinal,false,fhi_only,true
+smneg1,social_media_and_gaming_15,how_often_do_you_experience_negative_feelings_af,1,Often,,,,3,ordinal,false,fhi_only,true
+smneg1,social_media_and_gaming_15,how_often_do_you_experience_negative_feelings_af,2,Sometimes,,,,2,ordinal,false,fhi_only,true
+smneg1,social_media_and_gaming_15,how_often_do_you_experience_negative_feelings_af,3,Rarely,,,,1,ordinal,false,fhi_only,true
+smneg1,social_media_and_gaming_15,how_often_do_you_experience_negative_feelings_af,4,Never,,,,0,ordinal,false,fhi_only,true
+smharm1,social_media_and_gaming_16,for_each_of_the_following_life_areas_please_indi,0,Nearly all the time,,,,4,ordinal,false,fhi_only,true
+smharm1,social_media_and_gaming_16,for_each_of_the_following_life_areas_please_indi,1,Often,,,,3,ordinal,false,fhi_only,true
+smharm1,social_media_and_gaming_16,for_each_of_the_following_life_areas_please_indi,2,Sometimes,,,,2,ordinal,false,fhi_only,true
+smharm1,social_media_and_gaming_16,for_each_of_the_following_life_areas_please_indi,3,Rarely,,,,1,ordinal,false,fhi_only,true
+smharm1,social_media_and_gaming_16,for_each_of_the_following_life_areas_please_indi,4,Never,,,,0,ordinal,false,fhi_only,true
+smharm2,social_media_and_gaming_17,for_each_of_the_following_life_areas_please_indi,0,Nearly all the time,,,,4,ordinal,false,fhi_only,true
+smharm2,social_media_and_gaming_17,for_each_of_the_following_life_areas_please_indi,1,Often,,,,3,ordinal,false,fhi_only,true
+smharm2,social_media_and_gaming_17,for_each_of_the_following_life_areas_please_indi,2,Sometimes,,,,2,ordinal,false,fhi_only,true
+smharm2,social_media_and_gaming_17,for_each_of_the_following_life_areas_please_indi,3,Rarely,,,,1,ordinal,false,fhi_only,true
+smharm2,social_media_and_gaming_17,for_each_of_the_following_life_areas_please_indi,4,Never,,,,0,ordinal,false,fhi_only,true
+smharm3,social_media_and_gaming_18,for_each_of_the_following_life_areas_please_indi,0,Nearly all the time,,,,4,ordinal,false,fhi_only,true
+smharm3,social_media_and_gaming_18,for_each_of_the_following_life_areas_please_indi,1,Often,,,,3,ordinal,false,fhi_only,true
+smharm3,social_media_and_gaming_18,for_each_of_the_following_life_areas_please_indi,2,Sometimes,,,,2,ordinal,false,fhi_only,true
+smharm3,social_media_and_gaming_18,for_each_of_the_following_life_areas_please_indi,3,Rarely,,,,1,ordinal,false,fhi_only,true
+smharm3,social_media_and_gaming_18,for_each_of_the_following_life_areas_please_indi,4,Never,,,,0,ordinal,false,fhi_only,true
+smharm4,social_media_and_gaming_19,for_each_of_the_following_life_areas_please_indi,0,Nearly all the time,,,,4,ordinal,false,fhi_only,true
+smharm4,social_media_and_gaming_19,for_each_of_the_following_life_areas_please_indi,1,Often,,,,3,ordinal,false,fhi_only,true
+smharm4,social_media_and_gaming_19,for_each_of_the_following_life_areas_please_indi,2,Sometimes,,,,2,ordinal,false,fhi_only,true
+smharm4,social_media_and_gaming_19,for_each_of_the_following_life_areas_please_indi,3,Rarely,,,,1,ordinal,false,fhi_only,true
+smharm4,social_media_and_gaming_19,for_each_of_the_following_life_areas_please_indi,4,Never,,,,0,ordinal,false,fhi_only,true
+smharm5,social_media_and_gaming_20,for_each_of_the_following_life_areas_please_indi,0,Nearly all the time,,,,4,ordinal,false,fhi_only,true
+smharm5,social_media_and_gaming_20,for_each_of_the_following_life_areas_please_indi,1,Often,,,,3,ordinal,false,fhi_only,true
+smharm5,social_media_and_gaming_20,for_each_of_the_following_life_areas_please_indi,2,Sometimes,,,,2,ordinal,false,fhi_only,true
+smharm5,social_media_and_gaming_20,for_each_of_the_following_life_areas_please_indi,3,Rarely,,,,1,ordinal,false,fhi_only,true
+smharm5,social_media_and_gaming_20,for_each_of_the_following_life_areas_please_indi,4,Never,,,,0,ordinal,false,fhi_only,true
+smharm6,social_media_and_gaming_21,for_each_of_the_following_life_areas_please_indi,0,Nearly all the time,,,,4,ordinal,false,fhi_only,true
+smharm6,social_media_and_gaming_21,for_each_of_the_following_life_areas_please_indi,1,Often,,,,3,ordinal,false,fhi_only,true
+smharm6,social_media_and_gaming_21,for_each_of_the_following_life_areas_please_indi,2,Sometimes,,,,2,ordinal,false,fhi_only,true
+smharm6,social_media_and_gaming_21,for_each_of_the_following_life_areas_please_indi,3,Rarely,,,,1,ordinal,false,fhi_only,true
+smharm6,social_media_and_gaming_21,for_each_of_the_following_life_areas_please_indi,4,Never,,,,0,ordinal,false,fhi_only,true
+apps1,social_media_and_gaming_22,please_select_up_to_three_apps_or_services_you_u,0,Snapchat,,,,1,nominal,true,fhi_only,true
+apps1,social_media_and_gaming_22,please_select_up_to_three_apps_or_services_you_u,1,Instagram,,,,2,nominal,true,fhi_only,true
+apps1,social_media_and_gaming_22,please_select_up_to_three_apps_or_services_you_u,2,Facebook,,,,3,nominal,true,fhi_only,true
+apps1,social_media_and_gaming_22,please_select_up_to_three_apps_or_services_you_u,3,Reddit,,,,4,nominal,true,fhi_only,true
+apps1,social_media_and_gaming_22,please_select_up_to_three_apps_or_services_you_u,4,TikTok,,,,5,nominal,true,fhi_only,true
+apps1,social_media_and_gaming_22,please_select_up_to_three_apps_or_services_you_u,5,Twitch,,,,6,nominal,true,fhi_only,true
+apps1,social_media_and_gaming_22,please_select_up_to_three_apps_or_services_you_u,6,Messenger,,,,7,nominal,true,fhi_only,true
+apps1,social_media_and_gaming_22,please_select_up_to_three_apps_or_services_you_u,7,Telegram,,,,8,nominal,true,fhi_only,true
+apps1,social_media_and_gaming_22,please_select_up_to_three_apps_or_services_you_u,8,WhatsApp,,,,9,nominal,true,fhi_only,true
+apps1,social_media_and_gaming_22,please_select_up_to_three_apps_or_services_you_u,9,YouTube,,,,10,nominal,true,fhi_only,true
+apps1,social_media_and_gaming_22,please_select_up_to_three_apps_or_services_you_u,10,X/Twitter,,,,11,nominal,true,fhi_only,true
+apps1,social_media_and_gaming_22,please_select_up_to_three_apps_or_services_you_u,11,Pinterest,,,,12,nominal,true,fhi_only,true
+apps1,social_media_and_gaming_22,please_select_up_to_three_apps_or_services_you_u,12,"AI (e.g., ChatGPT, Gemini, Claude)",,,,13,nominal,true,fhi_only,true
+apps1,social_media_and_gaming_22,please_select_up_to_three_apps_or_services_you_u,13,"Streaming services (e.g., Netflix, Disney+)",,,,14,nominal,true,fhi_only,true
+apps1,social_media_and_gaming_22,please_select_up_to_three_apps_or_services_you_u,14,Other,,,,15,nominal,true,fhi_only,true
+cats01,ID226,stressful_or_scary_events_happen_to_many_people_,0,No,No (ID128),,ID128,0,nominal,false,ger_only,true
+cats01,ID226,stressful_or_scary_events_happen_to_many_people_,1,Yes,Yes (ID31),,ID31,1,nominal,false,ger_only,true
+cats02,cats02,stressful_or_scary_events_happen_to_many_people_,0,No,No (ID128),,ID128,0,nominal,false,ger_only,true
+cats02,cats02,stressful_or_scary_events_happen_to_many_people_,1,Yes,Yes (ID31),,ID31,1,nominal,false,ger_only,true
+cats03,ID228,stressful_or_scary_events_happen_to_many_people_,0,No,No (ID128),,ID128,0,nominal,false,ger_only,true
+cats03,ID228,stressful_or_scary_events_happen_to_many_people_,1,Yes,Yes (ID31),,ID31,1,nominal,false,ger_only,true
+cats04,ID229,stressful_or_scary_events_happen_to_many_people_,0,No,No (ID128),,ID128,0,nominal,false,ger_only,true
+cats04,ID229,stressful_or_scary_events_happen_to_many_people_,1,Yes,Yes (ID31),,ID31,1,nominal,false,ger_only,true
+cats05,ID330,stressful_or_scary_events_happen_to_many_people_,0,No,No (ID128),,ID128,0,nominal,false,ger_only,true
+cats05,ID330,stressful_or_scary_events_happen_to_many_people_,1,Yes,Yes (ID31),,ID31,1,nominal,false,ger_only,true
+cats06,ID331,stressful_or_scary_events_happen_to_many_people_,0,No,No (ID128),,ID128,0,nominal,false,ger_only,true
+cats06,ID331,stressful_or_scary_events_happen_to_many_people_,1,Yes,Yes (ID31),,ID31,1,nominal,false,ger_only,true
+cats07,ID332,stressful_or_scary_events_happen_to_many_people_,0,No,No (ID128),,ID128,0,nominal,false,ger_only,true
+cats07,ID332,stressful_or_scary_events_happen_to_many_people_,1,Yes,Yes (ID31),,ID31,1,nominal,false,ger_only,true
+cats08,ID333,stressful_or_scary_events_happen_to_many_people_,0,No,No (ID128),,ID128,0,nominal,false,ger_only,true
+cats08,ID333,stressful_or_scary_events_happen_to_many_people_,1,Yes,Yes (ID31),,ID31,1,nominal,false,ger_only,true
+cats09,ID334,stressful_or_scary_events_happen_to_many_people_,0,No,No (ID128),,ID128,0,nominal,false,ger_only,true
+cats09,ID334,stressful_or_scary_events_happen_to_many_people_,1,Yes,Yes (ID31),,ID31,1,nominal,false,ger_only,true
+cats10,ID335,stressful_or_scary_events_happen_to_many_people_,0,No,No (ID128),,ID128,0,nominal,false,ger_only,true
+cats10,ID335,stressful_or_scary_events_happen_to_many_people_,1,Yes,Yes (ID31),,ID31,1,nominal,false,ger_only,true
+cats11,ID336,stressful_or_scary_events_happen_to_many_people_,0,No,No (ID128),,ID128,0,nominal,false,ger_only,true
+cats11,ID336,stressful_or_scary_events_happen_to_many_people_,1,Yes,Yes (ID31),,ID31,1,nominal,false,ger_only,true
+cats12,ID337,stressful_or_scary_events_happen_to_many_people_,0,No,No (ID128),,ID128,0,nominal,false,ger_only,true
+cats12,ID337,stressful_or_scary_events_happen_to_many_people_,1,Yes,Yes (ID31),,ID31,1,nominal,false,ger_only,true
+cats13,ID338,stressful_or_scary_events_happen_to_many_people_,0,No,No (ID128),,ID128,0,nominal,false,ger_only,true
+cats13,ID338,stressful_or_scary_events_happen_to_many_people_,1,Yes,Yes (ID31),,ID31,1,nominal,false,ger_only,true
+cats14,ID339,stressful_or_scary_events_happen_to_many_people_,0,No,No (ID128),,ID128,0,nominal,false,ger_only,true
+cats14,ID339,stressful_or_scary_events_happen_to_many_people_,1,Yes,Yes (ID31),,ID31,1,nominal,false,ger_only,true
+cats15,ID344,stressful_or_scary_events_happen_to_many_people_,0,No,No (ID128),,ID128,0,nominal,false,ger_only,true
+cats15,ID344,stressful_or_scary_events_happen_to_many_people_,1,Yes,Yes (ID31),,ID31,1,nominal,false,ger_only,true
+cats16,ID345,stressful_or_scary_events_happen_to_many_people_,0,No,No (ID128),,ID128,0,nominal,false,ger_only,true
+cats16,ID345,stressful_or_scary_events_happen_to_many_people_,1,Yes,Yes (ID31),,ID31,1,nominal,false,ger_only,true
+ptsd01,ID399,mark_how_often_the_following_things_have_bothere,0,Never,Never (ID368),,ID368,0,ordinal,false,ger_only,true
+ptsd01,ID399,mark_how_often_the_following_things_have_bothere,1,Once in a while,Once in a while (ID369),,ID369,1,ordinal,false,ger_only,true
+ptsd01,ID399,mark_how_often_the_following_things_have_bothere,2,Half the time,Half the time (ID372),,ID372,2,ordinal,false,ger_only,true
+ptsd01,ID399,mark_how_often_the_following_things_have_bothere,3,Almost always,Almost always (ID373),,ID373,3,ordinal,false,ger_only,true
+ptsd02,ID400,mark_how_often_the_following_things_have_bothere,0,Never,Never (ID368),,ID368,0,ordinal,false,ger_only,true
+ptsd02,ID400,mark_how_often_the_following_things_have_bothere,1,Once in a while,Once in a while (ID369),,ID369,1,ordinal,false,ger_only,true
+ptsd02,ID400,mark_how_often_the_following_things_have_bothere,2,Half the time,Half the time (ID372),,ID372,2,ordinal,false,ger_only,true
+ptsd02,ID400,mark_how_often_the_following_things_have_bothere,3,Almost always,Almost always (ID373),,ID373,3,ordinal,false,ger_only,true
+ptsd03,ID401,mark_how_often_the_following_things_have_bothere,0,Never,Never (ID368),,ID368,0,ordinal,false,ger_only,true
+ptsd03,ID401,mark_how_often_the_following_things_have_bothere,1,Once in a while,Once in a while (ID369),,ID369,1,ordinal,false,ger_only,true
+ptsd03,ID401,mark_how_often_the_following_things_have_bothere,2,Half the time,Half the time (ID372),,ID372,2,ordinal,false,ger_only,true
+ptsd03,ID401,mark_how_often_the_following_things_have_bothere,3,Almost always,Almost always (ID373),,ID373,3,ordinal,false,ger_only,true
+ptsd04,ID403,mark_how_often_the_following_things_have_bothere,0,Never,Never (ID368),,ID368,0,ordinal,false,ger_only,true
+ptsd04,ID403,mark_how_often_the_following_things_have_bothere,1,Once in a while,Once in a while (ID369),,ID369,1,ordinal,false,ger_only,true
+ptsd04,ID403,mark_how_often_the_following_things_have_bothere,2,Half the time,Half the time (ID372),,ID372,2,ordinal,false,ger_only,true
+ptsd04,ID403,mark_how_often_the_following_things_have_bothere,3,Almost always,Almost always (ID373),,ID373,3,ordinal,false,ger_only,true
+ptsd05,ID404,mark_how_often_the_following_things_have_bothere,0,Never,Never (ID368),,ID368,0,ordinal,false,ger_only,true
+ptsd05,ID404,mark_how_often_the_following_things_have_bothere,1,Once in a while,Once in a while (ID369),,ID369,1,ordinal,false,ger_only,true
+ptsd05,ID404,mark_how_often_the_following_things_have_bothere,2,Half the time,Half the time (ID372),,ID372,2,ordinal,false,ger_only,true
+ptsd05,ID404,mark_how_often_the_following_things_have_bothere,3,Almost always,Almost always (ID373),,ID373,3,ordinal,false,ger_only,true
+ptsd06,ID406,mark_how_often_the_following_things_have_bothere,0,Never,Never (ID368),,ID368,0,ordinal,false,ger_only,true
+ptsd06,ID406,mark_how_often_the_following_things_have_bothere,1,Once in a while,Once in a while (ID369),,ID369,1,ordinal,false,ger_only,true
+ptsd06,ID406,mark_how_often_the_following_things_have_bothere,2,Half the time,Half the time (ID372),,ID372,2,ordinal,false,ger_only,true
+ptsd06,ID406,mark_how_often_the_following_things_have_bothere,3,Almost always,Almost always (ID373),,ID373,3,ordinal,false,ger_only,true
+ptsd07,ID407,mark_how_often_the_following_things_have_bothere,0,Never,Never (ID368),,ID368,0,ordinal,false,ger_only,true
+ptsd07,ID407,mark_how_often_the_following_things_have_bothere,1,Once in a while,Once in a while (ID369),,ID369,1,ordinal,false,ger_only,true
+ptsd07,ID407,mark_how_often_the_following_things_have_bothere,2,Half the time,Half the time (ID372),,ID372,2,ordinal,false,ger_only,true
+ptsd07,ID407,mark_how_often_the_following_things_have_bothere,3,Almost always,Almost always (ID373),,ID373,3,ordinal,false,ger_only,true
+ptsd08,ID408,mark_how_often_the_following_things_have_bothere,0,Never,Never (ID368),,ID368,0,ordinal,false,ger_only,true
+ptsd08,ID408,mark_how_often_the_following_things_have_bothere,1,Once in a while,Once in a while (ID369),,ID369,1,ordinal,false,ger_only,true
+ptsd08,ID408,mark_how_often_the_following_things_have_bothere,2,Half the time,Half the time (ID372),,ID372,2,ordinal,false,ger_only,true
+ptsd08,ID408,mark_how_often_the_following_things_have_bothere,3,Almost always,Almost always (ID373),,ID373,3,ordinal,false,ger_only,true
+ptsd09,ID409,mark_how_often_the_following_things_have_bothere,0,Never,Never (ID368),,ID368,0,ordinal,false,ger_only,true
+ptsd09,ID409,mark_how_often_the_following_things_have_bothere,1,Once in a while,Once in a while (ID369),,ID369,1,ordinal,false,ger_only,true
+ptsd09,ID409,mark_how_often_the_following_things_have_bothere,2,Half the time,Half the time (ID372),,ID372,2,ordinal,false,ger_only,true
+ptsd09,ID409,mark_how_often_the_following_things_have_bothere,3,Almost always,Almost always (ID373),,ID373,3,ordinal,false,ger_only,true
+ptsd10,ID410,mark_how_often_the_following_things_have_bothere,0,Never,Never (ID368),,ID368,0,ordinal,false,ger_only,true
+ptsd10,ID410,mark_how_often_the_following_things_have_bothere,1,Once in a while,Once in a while (ID369),,ID369,1,ordinal,false,ger_only,true
+ptsd10,ID410,mark_how_often_the_following_things_have_bothere,2,Half the time,Half the time (ID372),,ID372,2,ordinal,false,ger_only,true
+ptsd10,ID410,mark_how_often_the_following_things_have_bothere,3,Almost always,Almost always (ID373),,ID373,3,ordinal,false,ger_only,true
+ptsd11,ID411,mark_how_often_the_following_things_have_bothere,0,Never,Never (ID368),,ID368,0,ordinal,false,ger_only,true
+ptsd11,ID411,mark_how_often_the_following_things_have_bothere,1,Once in a while,Once in a while (ID369),,ID369,1,ordinal,false,ger_only,true
+ptsd11,ID411,mark_how_often_the_following_things_have_bothere,2,Half the time,Half the time (ID372),,ID372,2,ordinal,false,ger_only,true
+ptsd11,ID411,mark_how_often_the_following_things_have_bothere,3,Almost always,Almost always (ID373),,ID373,3,ordinal,false,ger_only,true
+ptsd12,ID416,mark_how_often_the_following_things_have_bothere,0,Never,Never (ID368),,ID368,0,ordinal,false,ger_only,true
+ptsd12,ID416,mark_how_often_the_following_things_have_bothere,1,Once in a while,Once in a while (ID369),,ID369,1,ordinal,false,ger_only,true
+ptsd12,ID416,mark_how_often_the_following_things_have_bothere,2,Half the time,Half the time (ID372),,ID372,2,ordinal,false,ger_only,true
+ptsd12,ID416,mark_how_often_the_following_things_have_bothere,3,Almost always,Almost always (ID373),,ID373,3,ordinal,false,ger_only,true
+ptsd13,ID417,mark_how_often_the_following_things_have_bothere,0,Never,Never (ID368),,ID368,0,ordinal,false,ger_only,true
+ptsd13,ID417,mark_how_often_the_following_things_have_bothere,1,Once in a while,Once in a while (ID369),,ID369,1,ordinal,false,ger_only,true
+ptsd13,ID417,mark_how_often_the_following_things_have_bothere,2,Half the time,Half the time (ID372),,ID372,2,ordinal,false,ger_only,true
+ptsd13,ID417,mark_how_often_the_following_things_have_bothere,3,Almost always,Almost always (ID373),,ID373,3,ordinal,false,ger_only,true
+ptsd14,ID418,mark_how_often_the_following_things_have_bothere,0,Never,Never (ID368),,ID368,0,ordinal,false,ger_only,true
+ptsd14,ID418,mark_how_often_the_following_things_have_bothere,1,Once in a while,Once in a while (ID369),,ID369,1,ordinal,false,ger_only,true
+ptsd14,ID418,mark_how_often_the_following_things_have_bothere,2,Half the time,Half the time (ID372),,ID372,2,ordinal,false,ger_only,true
+ptsd14,ID418,mark_how_often_the_following_things_have_bothere,3,Almost always,Almost always (ID373),,ID373,3,ordinal,false,ger_only,true
+ptsd15,ID419,mark_how_often_the_following_things_have_bothere,0,Never,Never (ID368),,ID368,0,ordinal,false,ger_only,true
+ptsd15,ID419,mark_how_often_the_following_things_have_bothere,1,Once in a while,Once in a while (ID369),,ID369,1,ordinal,false,ger_only,true
+ptsd15,ID419,mark_how_often_the_following_things_have_bothere,2,Half the time,Half the time (ID372),,ID372,2,ordinal,false,ger_only,true
+ptsd15,ID419,mark_how_often_the_following_things_have_bothere,3,Almost always,Almost always (ID373),,ID373,3,ordinal,false,ger_only,true
+ptsd16,ID421,mark_how_often_the_following_things_have_bothere,0,Never,Never (ID368),,ID368,0,ordinal,false,ger_only,true
+ptsd16,ID421,mark_how_often_the_following_things_have_bothere,1,Once in a while,Once in a while (ID369),,ID369,1,ordinal,false,ger_only,true
+ptsd16,ID421,mark_how_often_the_following_things_have_bothere,2,Half the time,Half the time (ID372),,ID372,2,ordinal,false,ger_only,true
+ptsd16,ID421,mark_how_often_the_following_things_have_bothere,3,Almost always,Almost always (ID373),,ID373,3,ordinal,false,ger_only,true
+ptsd17,ID422,mark_how_often_the_following_things_have_bothere,0,Never,Never (ID368),,ID368,0,ordinal,false,ger_only,true
+ptsd17,ID422,mark_how_often_the_following_things_have_bothere,1,Once in a while,Once in a while (ID369),,ID369,1,ordinal,false,ger_only,true
+ptsd17,ID422,mark_how_often_the_following_things_have_bothere,2,Half the time,Half the time (ID372),,ID372,2,ordinal,false,ger_only,true
+ptsd17,ID422,mark_how_often_the_following_things_have_bothere,3,Almost always,Almost always (ID373),,ID373,3,ordinal,false,ger_only,true
+ptsd18,ID423,mark_how_often_the_following_things_have_bothere,0,Never,Never (ID368),,ID368,0,ordinal,false,ger_only,true
+ptsd18,ID423,mark_how_often_the_following_things_have_bothere,1,Once in a while,Once in a while (ID369),,ID369,1,ordinal,false,ger_only,true
+ptsd18,ID423,mark_how_often_the_following_things_have_bothere,2,Half the time,Half the time (ID372),,ID372,2,ordinal,false,ger_only,true
+ptsd18,ID423,mark_how_often_the_following_things_have_bothere,3,Almost always,Almost always (ID373),,ID373,3,ordinal,false,ger_only,true
+ptsd19,ID428,mark_how_often_the_following_things_have_bothere,0,Never,Never (ID368),,ID368,0,ordinal,false,ger_only,true
+ptsd19,ID428,mark_how_often_the_following_things_have_bothere,1,Once in a while,Once in a while (ID369),,ID369,1,ordinal,false,ger_only,true
+ptsd19,ID428,mark_how_often_the_following_things_have_bothere,2,Half the time,Half the time (ID372),,ID372,2,ordinal,false,ger_only,true
+ptsd19,ID428,mark_how_often_the_following_things_have_bothere,3,Almost always,Almost always (ID373),,ID373,3,ordinal,false,ger_only,true
+ptsd20,ID429,mark_how_often_the_following_things_have_bothere,0,Never,Never (ID368),,ID368,0,ordinal,false,ger_only,true
+ptsd20,ID429,mark_how_often_the_following_things_have_bothere,1,Once in a while,Once in a while (ID369),,ID369,1,ordinal,false,ger_only,true
+ptsd20,ID429,mark_how_often_the_following_things_have_bothere,2,Half the time,Half the time (ID372),,ID372,2,ordinal,false,ger_only,true
+ptsd20,ID429,mark_how_often_the_following_things_have_bothere,3,Almost always,Almost always (ID373),,ID373,3,ordinal,false,ger_only,true
+sma1,ID213,social_media_use_addiction_matrix,0,strongly disagree,strongly disagree (ID222),,ID222,0,ordinal,false,ger_only,true
+sma1,ID213,social_media_use_addiction_matrix,1,somewhat disagree,somewhat disagree (ID223),,ID223,1,ordinal,false,ger_only,true
+sma1,ID213,social_media_use_addiction_matrix,2,partially agree / partially disagree,partially agree / partially disagree (ID224),,ID224,2,ordinal,false,ger_only,true
+sma1,ID213,social_media_use_addiction_matrix,3,somewhat agree,somewhat agree (ID225),,ID225,3,ordinal,false,ger_only,true
+sma1,ID213,social_media_use_addiction_matrix,4,strongly agree,strongly agree (ID259),,ID259,4,ordinal,false,ger_only,true
+sma2,ID214,social_media_use_addiction_matrix,0,strongly disagree,strongly disagree (ID222),,ID222,0,ordinal,false,ger_only,true
+sma2,ID214,social_media_use_addiction_matrix,1,somewhat disagree,somewhat disagree (ID223),,ID223,1,ordinal,false,ger_only,true
+sma2,ID214,social_media_use_addiction_matrix,2,partially agree / partially disagree,partially agree / partially disagree (ID224),,ID224,2,ordinal,false,ger_only,true
+sma2,ID214,social_media_use_addiction_matrix,3,somewhat agree,somewhat agree (ID225),,ID225,3,ordinal,false,ger_only,true
+sma2,ID214,social_media_use_addiction_matrix,4,strongly agree,strongly agree (ID259),,ID259,4,ordinal,false,ger_only,true
+sma3,ID215,social_media_use_addiction_matrix,0,strongly disagree,strongly disagree (ID222),,ID222,0,ordinal,false,ger_only,true
+sma3,ID215,social_media_use_addiction_matrix,1,somewhat disagree,somewhat disagree (ID223),,ID223,1,ordinal,false,ger_only,true
+sma3,ID215,social_media_use_addiction_matrix,2,partially agree / partially disagree,partially agree / partially disagree (ID224),,ID224,2,ordinal,false,ger_only,true
+sma3,ID215,social_media_use_addiction_matrix,3,somewhat agree,somewhat agree (ID225),,ID225,3,ordinal,false,ger_only,true
+sma3,ID215,social_media_use_addiction_matrix,4,strongly agree,strongly agree (ID259),,ID259,4,ordinal,false,ger_only,true
+sma4,ID290,social_media_use_addiction_matrix,0,strongly disagree,strongly disagree (ID222),,ID222,0,ordinal,false,ger_only,true
+sma4,ID290,social_media_use_addiction_matrix,1,somewhat disagree,somewhat disagree (ID223),,ID223,1,ordinal,false,ger_only,true
+sma4,ID290,social_media_use_addiction_matrix,2,partially agree / partially disagree,partially agree / partially disagree (ID224),,ID224,2,ordinal,false,ger_only,true
+sma4,ID290,social_media_use_addiction_matrix,3,somewhat agree,somewhat agree (ID225),,ID225,3,ordinal,false,ger_only,true
+sma4,ID290,social_media_use_addiction_matrix,4,strongly agree,strongly agree (ID259),,ID259,4,ordinal,false,ger_only,true
+sma5,ID291,social_media_use_addiction_matrix,0,strongly disagree,strongly disagree (ID222),,ID222,0,ordinal,false,ger_only,true
+sma5,ID291,social_media_use_addiction_matrix,1,somewhat disagree,somewhat disagree (ID223),,ID223,1,ordinal,false,ger_only,true
+sma5,ID291,social_media_use_addiction_matrix,2,partially agree / partially disagree,partially agree / partially disagree (ID224),,ID224,2,ordinal,false,ger_only,true
+sma5,ID291,social_media_use_addiction_matrix,3,somewhat agree,somewhat agree (ID225),,ID225,3,ordinal,false,ger_only,true
+sma5,ID291,social_media_use_addiction_matrix,4,strongly agree,strongly agree (ID259),,ID259,4,ordinal,false,ger_only,true
+sma6,ID292,social_media_use_addiction_matrix,0,strongly disagree,strongly disagree (ID222),,ID222,0,ordinal,false,ger_only,true
+sma6,ID292,social_media_use_addiction_matrix,1,somewhat disagree,somewhat disagree (ID223),,ID223,1,ordinal,false,ger_only,true
+sma6,ID292,social_media_use_addiction_matrix,2,partially agree / partially disagree,partially agree / partially disagree (ID224),,ID224,2,ordinal,false,ger_only,true
+sma6,ID292,social_media_use_addiction_matrix,3,somewhat agree,somewhat agree (ID225),,ID225,3,ordinal,false,ger_only,true
+sma6,ID292,social_media_use_addiction_matrix,4,strongly agree,strongly agree (ID259),,ID259,4,ordinal,false,ger_only,true
+sma7,ID310,social_media_use_addiction_matrix,0,strongly disagree,strongly disagree (ID222),,ID222,0,ordinal,false,ger_only,true
+sma7,ID310,social_media_use_addiction_matrix,1,somewhat disagree,somewhat disagree (ID223),,ID223,1,ordinal,false,ger_only,true
+sma7,ID310,social_media_use_addiction_matrix,2,partially agree / partially disagree,partially agree / partially disagree (ID224),,ID224,2,ordinal,false,ger_only,true
+sma7,ID310,social_media_use_addiction_matrix,3,somewhat agree,somewhat agree (ID225),,ID225,3,ordinal,false,ger_only,true
+sma7,ID310,social_media_use_addiction_matrix,4,strongly agree,strongly agree (ID259),,ID259,4,ordinal,false,ger_only,true
+sma8,ID311,social_media_use_addiction_matrix,0,strongly disagree,strongly disagree (ID222),,ID222,0,ordinal,false,ger_only,true
+sma8,ID311,social_media_use_addiction_matrix,1,somewhat disagree,somewhat disagree (ID223),,ID223,1,ordinal,false,ger_only,true
+sma8,ID311,social_media_use_addiction_matrix,2,partially agree / partially disagree,partially agree / partially disagree (ID224),,ID224,2,ordinal,false,ger_only,true
+sma8,ID311,social_media_use_addiction_matrix,3,somewhat agree,somewhat agree (ID225),,ID225,3,ordinal,false,ger_only,true
+sma8,ID311,social_media_use_addiction_matrix,4,strongly agree,strongly agree (ID259),,ID259,4,ordinal,false,ger_only,true
+sma9,ID312,social_media_use_addiction_matrix,0,strongly disagree,strongly disagree (ID222),,ID222,0,ordinal,false,ger_only,true
+sma9,ID312,social_media_use_addiction_matrix,1,somewhat disagree,somewhat disagree (ID223),,ID223,1,ordinal,false,ger_only,true
+sma9,ID312,social_media_use_addiction_matrix,2,partially agree / partially disagree,partially agree / partially disagree (ID224),,ID224,2,ordinal,false,ger_only,true
+sma9,ID312,social_media_use_addiction_matrix,3,somewhat agree,somewhat agree (ID225),,ID225,3,ordinal,false,ger_only,true
+sma9,ID312,social_media_use_addiction_matrix,4,strongly agree,strongly agree (ID259),,ID259,4,ordinal,false,ger_only,true
+smafreq1,ID27,how_often_did_you_experience_such_problems_confl,0,not at all,not at all (ID28),,ID28,0,ordinal,false,ger_only,false
+smafreq1,ID27,how_often_did_you_experience_such_problems_confl,1,only on single days,only on single days (ID29),,ID29,1,ordinal,false,ger_only,false
+igd1,ID390,gaming_addiction_matrix,0,0 = strongly disagree,0 = strongly disagree (ID26),,ID26,0,ordinal,false,ger_only,inferred
+igd1,ID390,gaming_addiction_matrix,1,1 = somewhat disagree,1 = somewhat disagree (ID185),,ID185,1,ordinal,false,ger_only,inferred
+igd1,ID390,gaming_addiction_matrix,2,2 = partially agree / partially disagree,2 = partially agree / partially disagree (ID186),,ID186,2,ordinal,false,ger_only,inferred
+igd1,ID390,gaming_addiction_matrix,3,3 = somewhat agree,,,,3,ordinal,false,ger_only,inferred
+igd1,ID390,gaming_addiction_matrix,4,4 = strongly agree,,,,4,ordinal,false,ger_only,inferred
+igd2,ID391,gaming_addiction_matrix,0,0 = strongly disagree,0 = strongly disagree (ID26),,ID26,0,ordinal,false,ger_only,inferred
+igd2,ID391,gaming_addiction_matrix,1,1 = somewhat disagree,1 = somewhat disagree (ID185),,ID185,1,ordinal,false,ger_only,inferred
+igd2,ID391,gaming_addiction_matrix,2,2 = partially agree / partially disagree,2 = partially agree / partially disagree (ID186),,ID186,2,ordinal,false,ger_only,inferred
+igd2,ID391,gaming_addiction_matrix,3,3 = somewhat agree,,,,3,ordinal,false,ger_only,inferred
+igd2,ID391,gaming_addiction_matrix,4,4 = strongly agree,,,,4,ordinal,false,ger_only,inferred
+igd3,ID394,gaming_addiction_matrix,0,0 = strongly disagree,0 = strongly disagree (ID26),,ID26,0,ordinal,false,ger_only,inferred
+igd3,ID394,gaming_addiction_matrix,1,1 = somewhat disagree,1 = somewhat disagree (ID185),,ID185,1,ordinal,false,ger_only,inferred
+igd3,ID394,gaming_addiction_matrix,2,2 = partially agree / partially disagree,2 = partially agree / partially disagree (ID186),,ID186,2,ordinal,false,ger_only,inferred
+igd3,ID394,gaming_addiction_matrix,3,3 = somewhat agree,,,,3,ordinal,false,ger_only,inferred
+igd3,ID394,gaming_addiction_matrix,4,4 = strongly agree,,,,4,ordinal,false,ger_only,inferred
+igd4,ID395,gaming_addiction_matrix,0,0 = strongly disagree,0 = strongly disagree (ID26),,ID26,0,ordinal,false,ger_only,inferred
+igd4,ID395,gaming_addiction_matrix,1,1 = somewhat disagree,1 = somewhat disagree (ID185),,ID185,1,ordinal,false,ger_only,inferred
+igd4,ID395,gaming_addiction_matrix,2,2 = partially agree / partially disagree,2 = partially agree / partially disagree (ID186),,ID186,2,ordinal,false,ger_only,inferred
+igd4,ID395,gaming_addiction_matrix,3,3 = somewhat agree,,,,3,ordinal,false,ger_only,inferred
+igd4,ID395,gaming_addiction_matrix,4,4 = strongly agree,,,,4,ordinal,false,ger_only,inferred
+igd5,ID353,gaming_addiction_matrix,0,0 = strongly disagree,0 = strongly disagree (ID26),,ID26,0,ordinal,false,ger_only,inferred
+igd5,ID353,gaming_addiction_matrix,1,1 = somewhat disagree,1 = somewhat disagree (ID185),,ID185,1,ordinal,false,ger_only,inferred
+igd5,ID353,gaming_addiction_matrix,2,2 = partially agree / partially disagree,2 = partially agree / partially disagree (ID186),,ID186,2,ordinal,false,ger_only,inferred
+igd5,ID353,gaming_addiction_matrix,3,3 = somewhat agree,,,,3,ordinal,false,ger_only,inferred
+igd5,ID353,gaming_addiction_matrix,4,4 = strongly agree,,,,4,ordinal,false,ger_only,inferred
+igd6,ID396,gaming_addiction_matrix,0,0 = strongly disagree,0 = strongly disagree (ID26),,ID26,0,ordinal,false,ger_only,inferred
+igd6,ID396,gaming_addiction_matrix,1,1 = somewhat disagree,1 = somewhat disagree (ID185),,ID185,1,ordinal,false,ger_only,inferred
+igd6,ID396,gaming_addiction_matrix,2,2 = partially agree / partially disagree,2 = partially agree / partially disagree (ID186),,ID186,2,ordinal,false,ger_only,inferred
+igd6,ID396,gaming_addiction_matrix,3,3 = somewhat agree,,,,3,ordinal,false,ger_only,inferred
+igd6,ID396,gaming_addiction_matrix,4,4 = strongly agree,,,,4,ordinal,false,ger_only,inferred
+igd7,ID355,gaming_addiction_matrix,0,0 = strongly disagree,0 = strongly disagree (ID26),,ID26,0,ordinal,false,ger_only,inferred
+igd7,ID355,gaming_addiction_matrix,1,1 = somewhat disagree,1 = somewhat disagree (ID185),,ID185,1,ordinal,false,ger_only,inferred
+igd7,ID355,gaming_addiction_matrix,2,2 = partially agree / partially disagree,2 = partially agree / partially disagree (ID186),,ID186,2,ordinal,false,ger_only,inferred
+igd7,ID355,gaming_addiction_matrix,3,3 = somewhat agree,,,,3,ordinal,false,ger_only,inferred
+igd7,ID355,gaming_addiction_matrix,4,4 = strongly agree,,,,4,ordinal,false,ger_only,inferred
+igd8,ID397,gaming_addiction_matrix,0,0 = strongly disagree,0 = strongly disagree (ID26),,ID26,0,ordinal,false,ger_only,inferred
+igd8,ID397,gaming_addiction_matrix,1,1 = somewhat disagree,1 = somewhat disagree (ID185),,ID185,1,ordinal,false,ger_only,inferred
+igd8,ID397,gaming_addiction_matrix,2,2 = partially agree / partially disagree,2 = partially agree / partially disagree (ID186),,ID186,2,ordinal,false,ger_only,inferred
+igd8,ID397,gaming_addiction_matrix,3,3 = somewhat agree,,,,3,ordinal,false,ger_only,inferred
+igd8,ID397,gaming_addiction_matrix,4,4 = strongly agree,,,,4,ordinal,false,ger_only,inferred
+igd9,ID398,gaming_addiction_matrix,0,0 = strongly disagree,0 = strongly disagree (ID26),,ID26,0,ordinal,false,ger_only,inferred
+igd9,ID398,gaming_addiction_matrix,1,1 = somewhat disagree,1 = somewhat disagree (ID185),,ID185,1,ordinal,false,ger_only,inferred
+igd9,ID398,gaming_addiction_matrix,2,2 = partially agree / partially disagree,2 = partially agree / partially disagree (ID186),,ID186,2,ordinal,false,ger_only,inferred
+igd9,ID398,gaming_addiction_matrix,3,3 = somewhat agree,,,,3,ordinal,false,ger_only,inferred
+igd9,ID398,gaming_addiction_matrix,4,4 = strongly agree,,,,4,ordinal,false,ger_only,inferred
+igdfreq1,ID383,how_often_did_you_experience_such_problems_confl_2,0,not at all,not at all (ID384),,ID384,0,ordinal,false,ger_only,false
+igdfreq1,ID383,how_often_did_you_experience_such_problems_confl_2,1,only on single days,only on single days (ID385),,ID385,1,ordinal,false,ger_only,false
+mhls01,ID405,how_easy_or_difficult_is_it_for_you,0,very difficult,very difficult (ID415),,ID415,0,ordinal,false,ger_only,true
+mhls01,ID405,how_easy_or_difficult_is_it_for_you,1,eher schwierig,eher schwierig (ID420),,ID420,1,ordinal,false,ger_only,true
+mhls01,ID405,how_easy_or_difficult_is_it_for_you,1,rather difficult,rather difficult (ID420),rather difficult,ID420,1,ordinal,false,ger_only,true
+mhls01,ID405,how_easy_or_difficult_is_it_for_you,1,somewhat difficult,somewhat difficult (ID420),somewhat difficult,ID420,1,ordinal,false,ger_only,true
+mhls01,ID405,how_easy_or_difficult_is_it_for_you,2,eher einfach,eher einfach (ID424),,ID424,2,ordinal,false,ger_only,true
+mhls01,ID405,how_easy_or_difficult_is_it_for_you,2,rather easy,rather easy (ID424),rather easy,ID424,2,ordinal,false,ger_only,true
+mhls01,ID405,how_easy_or_difficult_is_it_for_you,2,somewhat easy,somewhat easy (ID424),somewhat easy,ID424,2,ordinal,false,ger_only,true
+mhls01,ID405,how_easy_or_difficult_is_it_for_you,3,very easy,very easy (ID425),,ID425,3,ordinal,false,ger_only,true
+mhls02,ID412,how_easy_or_difficult_is_it_for_you,0,very difficult,very difficult (ID415),,ID415,0,ordinal,false,ger_only,true
+mhls02,ID412,how_easy_or_difficult_is_it_for_you,1,eher schwierig,eher schwierig (ID420),,ID420,1,ordinal,false,ger_only,true
+mhls02,ID412,how_easy_or_difficult_is_it_for_you,1,rather difficult,rather difficult (ID420),rather difficult,ID420,1,ordinal,false,ger_only,true
+mhls02,ID412,how_easy_or_difficult_is_it_for_you,1,somewhat difficult,somewhat difficult (ID420),somewhat difficult,ID420,1,ordinal,false,ger_only,true
+mhls02,ID412,how_easy_or_difficult_is_it_for_you,2,eher einfach,eher einfach (ID424),,ID424,2,ordinal,false,ger_only,true
+mhls02,ID412,how_easy_or_difficult_is_it_for_you,2,rather easy,rather easy (ID424),rather easy,ID424,2,ordinal,false,ger_only,true
+mhls02,ID412,how_easy_or_difficult_is_it_for_you,2,somewhat easy,somewhat easy (ID424),somewhat easy,ID424,2,ordinal,false,ger_only,true
+mhls02,ID412,how_easy_or_difficult_is_it_for_you,3,very easy,very easy (ID425),,ID425,3,ordinal,false,ger_only,true
+mhls03,ID413,how_easy_or_difficult_is_it_for_you,0,very difficult,very difficult (ID415),,ID415,0,ordinal,false,ger_only,true
+mhls03,ID413,how_easy_or_difficult_is_it_for_you,1,eher schwierig,eher schwierig (ID420),,ID420,1,ordinal,false,ger_only,true
+mhls03,ID413,how_easy_or_difficult_is_it_for_you,1,rather difficult,rather difficult (ID420),rather difficult,ID420,1,ordinal,false,ger_only,true
+mhls03,ID413,how_easy_or_difficult_is_it_for_you,1,somewhat difficult,somewhat difficult (ID420),somewhat difficult,ID420,1,ordinal,false,ger_only,true
+mhls03,ID413,how_easy_or_difficult_is_it_for_you,2,eher einfach,eher einfach (ID424),,ID424,2,ordinal,false,ger_only,true
+mhls03,ID413,how_easy_or_difficult_is_it_for_you,2,rather easy,rather easy (ID424),rather easy,ID424,2,ordinal,false,ger_only,true
+mhls03,ID413,how_easy_or_difficult_is_it_for_you,2,somewhat easy,somewhat easy (ID424),somewhat easy,ID424,2,ordinal,false,ger_only,true
+mhls03,ID413,how_easy_or_difficult_is_it_for_you,3,very easy,very easy (ID425),,ID425,3,ordinal,false,ger_only,true
+mhls04,ID427,how_easy_or_difficult_is_it_for_you,0,very difficult,very difficult (ID415),,ID415,0,ordinal,false,ger_only,true
+mhls04,ID427,how_easy_or_difficult_is_it_for_you,1,eher schwierig,eher schwierig (ID420),,ID420,1,ordinal,false,ger_only,true
+mhls04,ID427,how_easy_or_difficult_is_it_for_you,1,rather difficult,rather difficult (ID420),rather difficult,ID420,1,ordinal,false,ger_only,true
+mhls04,ID427,how_easy_or_difficult_is_it_for_you,1,somewhat difficult,somewhat difficult (ID420),somewhat difficult,ID420,1,ordinal,false,ger_only,true
+mhls04,ID427,how_easy_or_difficult_is_it_for_you,2,eher einfach,eher einfach (ID424),,ID424,2,ordinal,false,ger_only,true
+mhls04,ID427,how_easy_or_difficult_is_it_for_you,2,rather easy,rather easy (ID424),rather easy,ID424,2,ordinal,false,ger_only,true
+mhls04,ID427,how_easy_or_difficult_is_it_for_you,2,somewhat easy,somewhat easy (ID424),somewhat easy,ID424,2,ordinal,false,ger_only,true
+mhls04,ID427,how_easy_or_difficult_is_it_for_you,3,very easy,very easy (ID425),,ID425,3,ordinal,false,ger_only,true
+mhls05,ID430,how_easy_or_difficult_is_it_for_you,0,very difficult,very difficult (ID415),,ID415,0,ordinal,false,ger_only,true
+mhls05,ID430,how_easy_or_difficult_is_it_for_you,1,eher schwierig,eher schwierig (ID420),,ID420,1,ordinal,false,ger_only,true
+mhls05,ID430,how_easy_or_difficult_is_it_for_you,1,rather difficult,rather difficult (ID420),rather difficult,ID420,1,ordinal,false,ger_only,true
+mhls05,ID430,how_easy_or_difficult_is_it_for_you,1,somewhat difficult,somewhat difficult (ID420),somewhat difficult,ID420,1,ordinal,false,ger_only,true
+mhls05,ID430,how_easy_or_difficult_is_it_for_you,2,eher einfach,eher einfach (ID424),,ID424,2,ordinal,false,ger_only,true
+mhls05,ID430,how_easy_or_difficult_is_it_for_you,2,rather easy,rather easy (ID424),rather easy,ID424,2,ordinal,false,ger_only,true
+mhls05,ID430,how_easy_or_difficult_is_it_for_you,2,somewhat easy,somewhat easy (ID424),somewhat easy,ID424,2,ordinal,false,ger_only,true
+mhls05,ID430,how_easy_or_difficult_is_it_for_you,3,very easy,very easy (ID425),,ID425,3,ordinal,false,ger_only,true
+mhls06,ID367,how_easy_or_difficult_is_it_for_you,0,very difficult,very difficult (ID415),,ID415,0,ordinal,false,ger_only,true
+mhls06,ID367,how_easy_or_difficult_is_it_for_you,1,eher schwierig,eher schwierig (ID420),,ID420,1,ordinal,false,ger_only,true
+mhls06,ID367,how_easy_or_difficult_is_it_for_you,1,rather difficult,rather difficult (ID420),rather difficult,ID420,1,ordinal,false,ger_only,true
+mhls06,ID367,how_easy_or_difficult_is_it_for_you,1,somewhat difficult,somewhat difficult (ID420),somewhat difficult,ID420,1,ordinal,false,ger_only,true
+mhls06,ID367,how_easy_or_difficult_is_it_for_you,2,eher einfach,eher einfach (ID424),,ID424,2,ordinal,false,ger_only,true
+mhls06,ID367,how_easy_or_difficult_is_it_for_you,2,rather easy,rather easy (ID424),rather easy,ID424,2,ordinal,false,ger_only,true
+mhls06,ID367,how_easy_or_difficult_is_it_for_you,2,somewhat easy,somewhat easy (ID424),somewhat easy,ID424,2,ordinal,false,ger_only,true
+mhls06,ID367,how_easy_or_difficult_is_it_for_you,3,very easy,very easy (ID425),,ID425,3,ordinal,false,ger_only,true
+mhls07,ID370,how_easy_or_difficult_is_it_for_you,0,very difficult,very difficult (ID415),,ID415,0,ordinal,false,ger_only,true
+mhls07,ID370,how_easy_or_difficult_is_it_for_you,1,eher schwierig,eher schwierig (ID420),,ID420,1,ordinal,false,ger_only,true
+mhls07,ID370,how_easy_or_difficult_is_it_for_you,1,rather difficult,rather difficult (ID420),rather difficult,ID420,1,ordinal,false,ger_only,true
+mhls07,ID370,how_easy_or_difficult_is_it_for_you,1,somewhat difficult,somewhat difficult (ID420),somewhat difficult,ID420,1,ordinal,false,ger_only,true
+mhls07,ID370,how_easy_or_difficult_is_it_for_you,2,eher einfach,eher einfach (ID424),,ID424,2,ordinal,false,ger_only,true
+mhls07,ID370,how_easy_or_difficult_is_it_for_you,2,rather easy,rather easy (ID424),rather easy,ID424,2,ordinal,false,ger_only,true
+mhls07,ID370,how_easy_or_difficult_is_it_for_you,2,somewhat easy,somewhat easy (ID424),somewhat easy,ID424,2,ordinal,false,ger_only,true
+mhls07,ID370,how_easy_or_difficult_is_it_for_you,3,very easy,very easy (ID425),,ID425,3,ordinal,false,ger_only,true
+mhls08,ID431,how_easy_or_difficult_is_it_for_you,0,very difficult,very difficult (ID415),,ID415,0,ordinal,false,ger_only,true
+mhls08,ID431,how_easy_or_difficult_is_it_for_you,1,eher schwierig,eher schwierig (ID420),,ID420,1,ordinal,false,ger_only,true
+mhls08,ID431,how_easy_or_difficult_is_it_for_you,1,rather difficult,rather difficult (ID420),rather difficult,ID420,1,ordinal,false,ger_only,true
+mhls08,ID431,how_easy_or_difficult_is_it_for_you,1,somewhat difficult,somewhat difficult (ID420),somewhat difficult,ID420,1,ordinal,false,ger_only,true
+mhls08,ID431,how_easy_or_difficult_is_it_for_you,2,eher einfach,eher einfach (ID424),,ID424,2,ordinal,false,ger_only,true
+mhls08,ID431,how_easy_or_difficult_is_it_for_you,2,rather easy,rather easy (ID424),rather easy,ID424,2,ordinal,false,ger_only,true
+mhls08,ID431,how_easy_or_difficult_is_it_for_you,2,somewhat easy,somewhat easy (ID424),somewhat easy,ID424,2,ordinal,false,ger_only,true
+mhls08,ID431,how_easy_or_difficult_is_it_for_you,3,very easy,very easy (ID425),,ID425,3,ordinal,false,ger_only,true
+mhls09,ID432,how_easy_or_difficult_is_it_for_you,0,very difficult,very difficult (ID415),,ID415,0,ordinal,false,ger_only,true
+mhls09,ID432,how_easy_or_difficult_is_it_for_you,1,eher schwierig,eher schwierig (ID420),,ID420,1,ordinal,false,ger_only,true
+mhls09,ID432,how_easy_or_difficult_is_it_for_you,1,rather difficult,rather difficult (ID420),rather difficult,ID420,1,ordinal,false,ger_only,true
+mhls09,ID432,how_easy_or_difficult_is_it_for_you,1,somewhat difficult,somewhat difficult (ID420),somewhat difficult,ID420,1,ordinal,false,ger_only,true
+mhls09,ID432,how_easy_or_difficult_is_it_for_you,2,eher einfach,eher einfach (ID424),,ID424,2,ordinal,false,ger_only,true
+mhls09,ID432,how_easy_or_difficult_is_it_for_you,2,rather easy,rather easy (ID424),rather easy,ID424,2,ordinal,false,ger_only,true
+mhls09,ID432,how_easy_or_difficult_is_it_for_you,2,somewhat easy,somewhat easy (ID424),somewhat easy,ID424,2,ordinal,false,ger_only,true
+mhls09,ID432,how_easy_or_difficult_is_it_for_you,3,very easy,very easy (ID425),,ID425,3,ordinal,false,ger_only,true
+mhls10,ID448,how_easy_or_difficult_is_it_for_you,0,very difficult,very difficult (ID415),,ID415,0,ordinal,false,ger_only,true
+mhls10,ID448,how_easy_or_difficult_is_it_for_you,1,eher schwierig,eher schwierig (ID420),,ID420,1,ordinal,false,ger_only,true
+mhls10,ID448,how_easy_or_difficult_is_it_for_you,1,rather difficult,rather difficult (ID420),rather difficult,ID420,1,ordinal,false,ger_only,true
+mhls10,ID448,how_easy_or_difficult_is_it_for_you,1,somewhat difficult,somewhat difficult (ID420),somewhat difficult,ID420,1,ordinal,false,ger_only,true
+mhls10,ID448,how_easy_or_difficult_is_it_for_you,2,eher einfach,eher einfach (ID424),,ID424,2,ordinal,false,ger_only,true
+mhls10,ID448,how_easy_or_difficult_is_it_for_you,2,rather easy,rather easy (ID424),rather easy,ID424,2,ordinal,false,ger_only,true
+mhls10,ID448,how_easy_or_difficult_is_it_for_you,2,somewhat easy,somewhat easy (ID424),somewhat easy,ID424,2,ordinal,false,ger_only,true
+mhls10,ID448,how_easy_or_difficult_is_it_for_you,3,very easy,very easy (ID425),,ID425,3,ordinal,false,ger_only,true
+mhls11,ID449,how_easy_or_difficult_is_it_for_you,0,very difficult,very difficult (ID415),,ID415,0,ordinal,false,ger_only,true
+mhls11,ID449,how_easy_or_difficult_is_it_for_you,1,eher schwierig,eher schwierig (ID420),,ID420,1,ordinal,false,ger_only,true
+mhls11,ID449,how_easy_or_difficult_is_it_for_you,1,rather difficult,rather difficult (ID420),rather difficult,ID420,1,ordinal,false,ger_only,true
+mhls11,ID449,how_easy_or_difficult_is_it_for_you,1,somewhat difficult,somewhat difficult (ID420),somewhat difficult,ID420,1,ordinal,false,ger_only,true
+mhls11,ID449,how_easy_or_difficult_is_it_for_you,2,eher einfach,eher einfach (ID424),,ID424,2,ordinal,false,ger_only,true
+mhls11,ID449,how_easy_or_difficult_is_it_for_you,2,rather easy,rather easy (ID424),rather easy,ID424,2,ordinal,false,ger_only,true
+mhls11,ID449,how_easy_or_difficult_is_it_for_you,2,somewhat easy,somewhat easy (ID424),somewhat easy,ID424,2,ordinal,false,ger_only,true
+mhls11,ID449,how_easy_or_difficult_is_it_for_you,3,very easy,very easy (ID425),,ID425,3,ordinal,false,ger_only,true
+mhls12,ID450,how_easy_or_difficult_is_it_for_you,0,very difficult,very difficult (ID415),,ID415,0,ordinal,false,ger_only,true
+mhls12,ID450,how_easy_or_difficult_is_it_for_you,1,eher schwierig,eher schwierig (ID420),,ID420,1,ordinal,false,ger_only,true
+mhls12,ID450,how_easy_or_difficult_is_it_for_you,1,rather difficult,rather difficult (ID420),rather difficult,ID420,1,ordinal,false,ger_only,true
+mhls12,ID450,how_easy_or_difficult_is_it_for_you,1,somewhat difficult,somewhat difficult (ID420),somewhat difficult,ID420,1,ordinal,false,ger_only,true
+mhls12,ID450,how_easy_or_difficult_is_it_for_you,2,eher einfach,eher einfach (ID424),,ID424,2,ordinal,false,ger_only,true
+mhls12,ID450,how_easy_or_difficult_is_it_for_you,2,rather easy,rather easy (ID424),rather easy,ID424,2,ordinal,false,ger_only,true
+mhls12,ID450,how_easy_or_difficult_is_it_for_you,2,somewhat easy,somewhat easy (ID424),somewhat easy,ID424,2,ordinal,false,ger_only,true
+mhls12,ID450,how_easy_or_difficult_is_it_for_you,3,very easy,very easy (ID425),,ID425,3,ordinal,false,ger_only,true
+mhls13,ID451,how_easy_or_difficult_is_it_for_you,0,very difficult,very difficult (ID415),,ID415,0,ordinal,false,ger_only,true
+mhls13,ID451,how_easy_or_difficult_is_it_for_you,1,eher schwierig,eher schwierig (ID420),,ID420,1,ordinal,false,ger_only,true
+mhls13,ID451,how_easy_or_difficult_is_it_for_you,1,rather difficult,rather difficult (ID420),rather difficult,ID420,1,ordinal,false,ger_only,true
+mhls13,ID451,how_easy_or_difficult_is_it_for_you,1,somewhat difficult,somewhat difficult (ID420),somewhat difficult,ID420,1,ordinal,false,ger_only,true
+mhls13,ID451,how_easy_or_difficult_is_it_for_you,2,eher einfach,eher einfach (ID424),,ID424,2,ordinal,false,ger_only,true
+mhls13,ID451,how_easy_or_difficult_is_it_for_you,2,rather easy,rather easy (ID424),rather easy,ID424,2,ordinal,false,ger_only,true
+mhls13,ID451,how_easy_or_difficult_is_it_for_you,2,somewhat easy,somewhat easy (ID424),somewhat easy,ID424,2,ordinal,false,ger_only,true
+mhls13,ID451,how_easy_or_difficult_is_it_for_you,3,very easy,very easy (ID425),,ID425,3,ordinal,false,ger_only,true
+mhls14,ID452,how_easy_or_difficult_is_it_for_you,0,very difficult,very difficult (ID415),,ID415,0,ordinal,false,ger_only,true
+mhls14,ID452,how_easy_or_difficult_is_it_for_you,1,eher schwierig,eher schwierig (ID420),,ID420,1,ordinal,false,ger_only,true
+mhls14,ID452,how_easy_or_difficult_is_it_for_you,1,rather difficult,rather difficult (ID420),rather difficult,ID420,1,ordinal,false,ger_only,true
+mhls14,ID452,how_easy_or_difficult_is_it_for_you,1,somewhat difficult,somewhat difficult (ID420),somewhat difficult,ID420,1,ordinal,false,ger_only,true
+mhls14,ID452,how_easy_or_difficult_is_it_for_you,2,eher einfach,eher einfach (ID424),,ID424,2,ordinal,false,ger_only,true
+mhls14,ID452,how_easy_or_difficult_is_it_for_you,2,rather easy,rather easy (ID424),rather easy,ID424,2,ordinal,false,ger_only,true
+mhls14,ID452,how_easy_or_difficult_is_it_for_you,2,somewhat easy,somewhat easy (ID424),somewhat easy,ID424,2,ordinal,false,ger_only,true
+mhls14,ID452,how_easy_or_difficult_is_it_for_you,3,very easy,very easy (ID425),,ID425,3,ordinal,false,ger_only,true
+mhls15,ID453,how_easy_or_difficult_is_it_for_you,0,very difficult,very difficult (ID415),,ID415,0,ordinal,false,ger_only,true
+mhls15,ID453,how_easy_or_difficult_is_it_for_you,1,eher schwierig,eher schwierig (ID420),,ID420,1,ordinal,false,ger_only,true
+mhls15,ID453,how_easy_or_difficult_is_it_for_you,1,rather difficult,rather difficult (ID420),rather difficult,ID420,1,ordinal,false,ger_only,true
+mhls15,ID453,how_easy_or_difficult_is_it_for_you,1,somewhat difficult,somewhat difficult (ID420),somewhat difficult,ID420,1,ordinal,false,ger_only,true
+mhls15,ID453,how_easy_or_difficult_is_it_for_you,2,eher einfach,eher einfach (ID424),,ID424,2,ordinal,false,ger_only,true
+mhls15,ID453,how_easy_or_difficult_is_it_for_you,2,rather easy,rather easy (ID424),rather easy,ID424,2,ordinal,false,ger_only,true
+mhls15,ID453,how_easy_or_difficult_is_it_for_you,2,somewhat easy,somewhat easy (ID424),somewhat easy,ID424,2,ordinal,false,ger_only,true
+mhls15,ID453,how_easy_or_difficult_is_it_for_you,3,very easy,very easy (ID425),,ID425,3,ordinal,false,ger_only,true
+mhls16,ID454,how_easy_or_difficult_is_it_for_you,0,very difficult,very difficult (ID415),,ID415,0,ordinal,false,ger_only,true
+mhls16,ID454,how_easy_or_difficult_is_it_for_you,1,eher schwierig,eher schwierig (ID420),,ID420,1,ordinal,false,ger_only,true
+mhls16,ID454,how_easy_or_difficult_is_it_for_you,1,rather difficult,rather difficult (ID420),rather difficult,ID420,1,ordinal,false,ger_only,true
+mhls16,ID454,how_easy_or_difficult_is_it_for_you,1,somewhat difficult,somewhat difficult (ID420),somewhat difficult,ID420,1,ordinal,false,ger_only,true
+mhls16,ID454,how_easy_or_difficult_is_it_for_you,2,eher einfach,eher einfach (ID424),,ID424,2,ordinal,false,ger_only,true
+mhls16,ID454,how_easy_or_difficult_is_it_for_you,2,rather easy,rather easy (ID424),rather easy,ID424,2,ordinal,false,ger_only,true
+mhls16,ID454,how_easy_or_difficult_is_it_for_you,2,somewhat easy,somewhat easy (ID424),somewhat easy,ID424,2,ordinal,false,ger_only,true
+mhls16,ID454,how_easy_or_difficult_is_it_for_you,3,very easy,very easy (ID425),,ID425,3,ordinal,false,ger_only,true
+mhls17,ID455,how_easy_or_difficult_is_it_for_you,0,very difficult,very difficult (ID415),,ID415,0,ordinal,false,ger_only,true
+mhls17,ID455,how_easy_or_difficult_is_it_for_you,1,eher schwierig,eher schwierig (ID420),,ID420,1,ordinal,false,ger_only,true
+mhls17,ID455,how_easy_or_difficult_is_it_for_you,1,rather difficult,rather difficult (ID420),rather difficult,ID420,1,ordinal,false,ger_only,true
+mhls17,ID455,how_easy_or_difficult_is_it_for_you,1,somewhat difficult,somewhat difficult (ID420),somewhat difficult,ID420,1,ordinal,false,ger_only,true
+mhls17,ID455,how_easy_or_difficult_is_it_for_you,2,eher einfach,eher einfach (ID424),,ID424,2,ordinal,false,ger_only,true
+mhls17,ID455,how_easy_or_difficult_is_it_for_you,2,rather easy,rather easy (ID424),rather easy,ID424,2,ordinal,false,ger_only,true
+mhls17,ID455,how_easy_or_difficult_is_it_for_you,2,somewhat easy,somewhat easy (ID424),somewhat easy,ID424,2,ordinal,false,ger_only,true
+mhls17,ID455,how_easy_or_difficult_is_it_for_you,3,very easy,very easy (ID425),,ID425,3,ordinal,false,ger_only,true
+mhls18,ID456,how_easy_or_difficult_is_it_for_you,0,very difficult,very difficult (ID415),,ID415,0,ordinal,false,ger_only,true
+mhls18,ID456,how_easy_or_difficult_is_it_for_you,1,eher schwierig,eher schwierig (ID420),,ID420,1,ordinal,false,ger_only,true
+mhls18,ID456,how_easy_or_difficult_is_it_for_you,1,rather difficult,rather difficult (ID420),rather difficult,ID420,1,ordinal,false,ger_only,true
+mhls18,ID456,how_easy_or_difficult_is_it_for_you,1,somewhat difficult,somewhat difficult (ID420),somewhat difficult,ID420,1,ordinal,false,ger_only,true
+mhls18,ID456,how_easy_or_difficult_is_it_for_you,2,eher einfach,eher einfach (ID424),,ID424,2,ordinal,false,ger_only,true
+mhls18,ID456,how_easy_or_difficult_is_it_for_you,2,rather easy,rather easy (ID424),rather easy,ID424,2,ordinal,false,ger_only,true
+mhls18,ID456,how_easy_or_difficult_is_it_for_you,2,somewhat easy,somewhat easy (ID424),somewhat easy,ID424,2,ordinal,false,ger_only,true
+mhls18,ID456,how_easy_or_difficult_is_it_for_you,3,very easy,very easy (ID425),,ID425,3,ordinal,false,ger_only,true
+mhls19,ID457,how_easy_or_difficult_is_it_for_you,0,very difficult,very difficult (ID415),,ID415,0,ordinal,false,ger_only,true
+mhls19,ID457,how_easy_or_difficult_is_it_for_you,1,eher schwierig,eher schwierig (ID420),,ID420,1,ordinal,false,ger_only,true
+mhls19,ID457,how_easy_or_difficult_is_it_for_you,1,rather difficult,rather difficult (ID420),rather difficult,ID420,1,ordinal,false,ger_only,true
+mhls19,ID457,how_easy_or_difficult_is_it_for_you,1,somewhat difficult,somewhat difficult (ID420),somewhat difficult,ID420,1,ordinal,false,ger_only,true
+mhls19,ID457,how_easy_or_difficult_is_it_for_you,2,eher einfach,eher einfach (ID424),,ID424,2,ordinal,false,ger_only,true
+mhls19,ID457,how_easy_or_difficult_is_it_for_you,2,rather easy,rather easy (ID424),rather easy,ID424,2,ordinal,false,ger_only,true
+mhls19,ID457,how_easy_or_difficult_is_it_for_you,2,somewhat easy,somewhat easy (ID424),somewhat easy,ID424,2,ordinal,false,ger_only,true
+mhls19,ID457,how_easy_or_difficult_is_it_for_you,3,very easy,very easy (ID425),,ID425,3,ordinal,false,ger_only,true
+mhls20,ID458,how_easy_or_difficult_is_it_for_you,0,very difficult,very difficult (ID415),,ID415,0,ordinal,false,ger_only,true
+mhls20,ID458,how_easy_or_difficult_is_it_for_you,1,eher schwierig,eher schwierig (ID420),,ID420,1,ordinal,false,ger_only,true
+mhls20,ID458,how_easy_or_difficult_is_it_for_you,1,rather difficult,rather difficult (ID420),rather difficult,ID420,1,ordinal,false,ger_only,true
+mhls20,ID458,how_easy_or_difficult_is_it_for_you,1,somewhat difficult,somewhat difficult (ID420),somewhat difficult,ID420,1,ordinal,false,ger_only,true
+mhls20,ID458,how_easy_or_difficult_is_it_for_you,2,eher einfach,eher einfach (ID424),,ID424,2,ordinal,false,ger_only,true
+mhls20,ID458,how_easy_or_difficult_is_it_for_you,2,rather easy,rather easy (ID424),rather easy,ID424,2,ordinal,false,ger_only,true
+mhls20,ID458,how_easy_or_difficult_is_it_for_you,2,somewhat easy,somewhat easy (ID424),somewhat easy,ID424,2,ordinal,false,ger_only,true
+mhls20,ID458,how_easy_or_difficult_is_it_for_you,3,very easy,very easy (ID425),,ID425,3,ordinal,false,ger_only,true
+mhls21,ID459,how_easy_or_difficult_is_it_for_you,0,very difficult,very difficult (ID415),,ID415,0,ordinal,false,ger_only,true
+mhls21,ID459,how_easy_or_difficult_is_it_for_you,1,eher schwierig,eher schwierig (ID420),,ID420,1,ordinal,false,ger_only,true
+mhls21,ID459,how_easy_or_difficult_is_it_for_you,1,rather difficult,rather difficult (ID420),rather difficult,ID420,1,ordinal,false,ger_only,true
+mhls21,ID459,how_easy_or_difficult_is_it_for_you,1,somewhat difficult,somewhat difficult (ID420),somewhat difficult,ID420,1,ordinal,false,ger_only,true
+mhls21,ID459,how_easy_or_difficult_is_it_for_you,2,eher einfach,eher einfach (ID424),,ID424,2,ordinal,false,ger_only,true
+mhls21,ID459,how_easy_or_difficult_is_it_for_you,2,rather easy,rather easy (ID424),rather easy,ID424,2,ordinal,false,ger_only,true
+mhls21,ID459,how_easy_or_difficult_is_it_for_you,2,somewhat easy,somewhat easy (ID424),somewhat easy,ID424,2,ordinal,false,ger_only,true
+mhls21,ID459,how_easy_or_difficult_is_it_for_you,3,very easy,very easy (ID425),,ID425,3,ordinal,false,ger_only,true
+mhls22,ID460,how_easy_or_difficult_is_it_for_you,0,very difficult,very difficult (ID415),,ID415,0,ordinal,false,ger_only,true
+mhls22,ID460,how_easy_or_difficult_is_it_for_you,1,eher schwierig,eher schwierig (ID420),,ID420,1,ordinal,false,ger_only,true
+mhls22,ID460,how_easy_or_difficult_is_it_for_you,1,rather difficult,rather difficult (ID420),rather difficult,ID420,1,ordinal,false,ger_only,true
+mhls22,ID460,how_easy_or_difficult_is_it_for_you,1,somewhat difficult,somewhat difficult (ID420),somewhat difficult,ID420,1,ordinal,false,ger_only,true
+mhls22,ID460,how_easy_or_difficult_is_it_for_you,2,eher einfach,eher einfach (ID424),,ID424,2,ordinal,false,ger_only,true
+mhls22,ID460,how_easy_or_difficult_is_it_for_you,2,rather easy,rather easy (ID424),rather easy,ID424,2,ordinal,false,ger_only,true
+mhls22,ID460,how_easy_or_difficult_is_it_for_you,2,somewhat easy,somewhat easy (ID424),somewhat easy,ID424,2,ordinal,false,ger_only,true
+mhls22,ID460,how_easy_or_difficult_is_it_for_you,3,very easy,very easy (ID425),,ID425,3,ordinal,false,ger_only,true
+mhls23,ID461,how_easy_or_difficult_is_it_for_you,0,very difficult,very difficult (ID415),,ID415,0,ordinal,false,ger_only,true
+mhls23,ID461,how_easy_or_difficult_is_it_for_you,1,eher schwierig,eher schwierig (ID420),,ID420,1,ordinal,false,ger_only,true
+mhls23,ID461,how_easy_or_difficult_is_it_for_you,1,rather difficult,rather difficult (ID420),rather difficult,ID420,1,ordinal,false,ger_only,true
+mhls23,ID461,how_easy_or_difficult_is_it_for_you,1,somewhat difficult,somewhat difficult (ID420),somewhat difficult,ID420,1,ordinal,false,ger_only,true
+mhls23,ID461,how_easy_or_difficult_is_it_for_you,2,eher einfach,eher einfach (ID424),,ID424,2,ordinal,false,ger_only,true
+mhls23,ID461,how_easy_or_difficult_is_it_for_you,2,rather easy,rather easy (ID424),rather easy,ID424,2,ordinal,false,ger_only,true
+mhls23,ID461,how_easy_or_difficult_is_it_for_you,2,somewhat easy,somewhat easy (ID424),somewhat easy,ID424,2,ordinal,false,ger_only,true
+mhls23,ID461,how_easy_or_difficult_is_it_for_you,3,very easy,very easy (ID425),,ID425,3,ordinal,false,ger_only,true
