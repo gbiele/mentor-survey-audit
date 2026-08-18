@@ -1,0 +1,157 @@
+---
+title: "MENTOR Survey Option Auditor & Validator"
+format:
+  html:
+    theme: none
+    minimal: true
+    toc: false
+    page-layout: custom
+    css: src/app.css
+---
+
+```{=html}
+<div class="app-header">
+  <div class="header-inner">
+    <div class="badge-tag">🔬 JA-MENTOR Cross-Country Harmonization</div>
+    <h1 class="app-title">MENTOR Survey Option Auditor & Validator</h1>
+    <p class="app-subtitle">
+      Interactive quality assurance & harmonization engine for the <strong>JA-MENTOR youth mental health questionnaire</strong>.
+    </p>
+    <div class="purpose-box">
+      <strong>💡 Harmonization Objective:</strong>
+      In the JA-MENTOR project, surveys are implemented across multiple European countries in different languages. This auditor evaluates whether national survey implementations can be reliably mapped into a unified common data format.
+      <br />
+      <div class="privacy-badge">
+        🔒 100% Client-Side Privacy: Spreadsheets are processed exclusively in your browser's local RAM. No data is sent over the network.
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="main-layout">
+
+  <!-- Upload & Action Bar -->
+  <div class="action-card">
+    <div class="drop-zone" id="drop-zone">
+      <div class="drop-zone-icon">📁</div>
+      <div class="drop-zone-text">Drop your country survey export file here (<code>Content_Export_*.xlsx</code>)</div>
+      <div class="drop-zone-hint">or click to browse local files (.xlsx, .xls)</div>
+      <input type="file" id="file-input" accept=".xlsx, .xls" style="display: none;" />
+    </div>
+    <div class="action-buttons">
+      <button type="button" id="btn-load-sample" class="btn btn-primary" onclick="window.loadBundledSample()">
+        🚀 Load Sample Data
+      </button>
+      <button type="button" id="btn-export-issues" class="btn btn-export" onclick="window.exportAuditIssuesCSV()">
+        📥 Export Audit Issues (CSV)
+      </button>
+    </div>
+  </div>
+
+  <!-- Initial Empty State -->
+  <div id="empty-state-view" class="table-card empty-state">
+    <div class="empty-state-icon">📊</div>
+    <div class="empty-state-title">No Survey File Loaded</div>
+    <p style="max-width: 500px; margin: 0 auto 1.5rem auto;">
+      Upload your national survey data export spreadsheet, or click <strong>"Load Sample Data"</strong> to test the auditor with the bundled example dataset.
+    </p>
+    <button type="button" class="btn btn-primary" onclick="window.loadBundledSample()">
+      🚀 Test with Bundled Sample Dataset
+    </button>
+  </div>
+
+  <!-- Dashboard View (Shown after file load) -->
+  <div id="dashboard-view" style="display: none;">
+
+    <!-- Loaded file indicator -->
+    <div style="margin-bottom: 1rem;">
+      <span id="loaded-file-info" class="badge-tag" style="background: rgba(37, 99, 235, 0.1); color: var(--primary-700); border-color: rgba(37, 99, 235, 0.2); font-size: 0.85rem; display: none;"></span>
+    </div>
+
+    <!-- KPI Summary Cards -->
+    <div class="kpi-grid">
+      <div class="kpi-card kpi-all active" data-filter="all" id="kpi-card-all">
+        <div class="kpi-title">Total Variables <span>📋</span></div>
+        <div class="kpi-value" id="kpi-val-total">0</div>
+        <div class="kpi-subtext">Columns in survey export</div>
+      </div>
+      <div class="kpi-card kpi-green" data-filter="fully_identified" id="kpi-card-green">
+        <div class="kpi-title">Fully Identified <span>🟢</span></div>
+        <div class="kpi-value" id="kpi-val-green" style="color: var(--status-green-text);">0</div>
+        <div class="kpi-subtext">Canonical options match</div>
+      </div>
+      <div class="kpi-card kpi-yellow" data-filter="incomplete" id="kpi-card-yellow">
+        <div class="kpi-title">Incomplete / Inferred <span>🟡</span></div>
+        <div class="kpi-value" id="kpi-val-yellow" style="color: var(--status-yellow-text);">0</div>
+        <div class="kpi-subtext">Observed only / partial</div>
+      </div>
+      <div class="kpi-card kpi-red" data-filter="missing_options" id="kpi-card-red">
+        <div class="kpi-title">Missing Options <span>🔴</span></div>
+        <div class="kpi-value" id="kpi-val-red" style="color: var(--status-red-text);">0</div>
+        <div class="kpi-subtext">No canonical options</div>
+      </div>
+      <div class="kpi-card kpi-gray" data-filter="open_ended" id="kpi-card-gray">
+        <div class="kpi-title">Open-Ended <span>⚪</span></div>
+        <div class="kpi-value" id="kpi-val-gray" style="color: var(--status-gray-text);">0</div>
+        <div class="kpi-subtext">Continuous / Free text</div>
+      </div>
+      <div class="kpi-card kpi-red" data-filter="issues" id="kpi-card-issues">
+        <div class="kpi-title">Flagged Issues <span>⚠️</span></div>
+        <div class="kpi-value" id="kpi-val-issues" style="color: var(--status-red-text);">0</div>
+        <div class="kpi-subtext">Discrepancies requiring review</div>
+      </div>
+    </div>
+
+    <!-- Search & Filter Controls -->
+    <div class="controls-bar">
+      <div class="search-wrapper">
+        <span class="search-icon">🔍</span>
+        <input type="text" id="search-input" class="search-input" placeholder="Search by variable ID, question text, or section..." />
+      </div>
+      <div class="filter-pills">
+        <button type="button" class="pill-btn active" data-filter="all">All</button>
+        <button type="button" class="pill-btn" data-filter="fully_identified">🟢 Fully Identified</button>
+        <button type="button" class="pill-btn" data-filter="incomplete">🟡 Incomplete</button>
+        <button type="button" class="pill-btn" data-filter="missing_options">🔴 Missing</button>
+        <button type="button" class="pill-btn" data-filter="open_ended">⚪ Open-Ended</button>
+        <button type="button" class="pill-btn" data-filter="issues">⚠️ Issues Only</button>
+      </div>
+    </div>
+
+    <!-- Table View -->
+    <div class="table-card">
+      <div style="padding: 0.85rem 1.25rem; background: var(--bg-subtle); border-bottom: 1px solid var(--border-color); display: flex; justify-content: space-between; align-items: center;">
+        <strong style="font-size: 0.9rem;">Variable Audit & Harmonization Table</strong>
+        <span id="table-count-label" style="font-size: 0.8rem; color: var(--text-muted);">Showing 0 variables</span>
+      </div>
+      <div class="table-responsive">
+        <table class="audit-table">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Status</th>
+              <th>Variable</th>
+              <th>Question Header / Section</th>
+              <th>Scale & Type</th>
+              <th>Options Coverage</th>
+              <th style="text-align: right;">Action</th>
+            </tr>
+          </thead>
+          <tbody id="audit-table-body">
+            <!-- Rows rendered dynamically by src/app.js -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+<!-- Embedded Libraries and Application Modules -->
+<script src="src/xlsx.full.min.js"></script>
+<script src="src/master_dictionary_bundle.js"></script>
+<script src="src/survey_validator.js"></script>
+<script src="src/sample_data.js"></script>
+<script src="src/app.js"></script>
+```
