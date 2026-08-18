@@ -206,9 +206,14 @@ ul.task-list li input[type="checkbox"] {
 
     <!-- Table View -->
     <div class="table-card">
-      <div style="padding: 0.85rem 1.25rem; background: var(--bg-subtle); border-bottom: 1px solid var(--border-color); display: flex; justify-content: space-between; align-items: center;">
-        <strong style="font-size: 0.9rem;">Variable Audit &amp; Harmonization Table</strong>
-        <span id="table-count-label" style="font-size: 0.8rem; color: var(--text-muted);">Showing 0 variables</span>
+      <div style="padding: 1rem 1.25rem; background: var(--bg-subtle); border-bottom: 1px solid var(--border-color); display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 0.75rem;">
+        <div>
+          <strong style="font-size: 0.95rem; display: block; color: var(--text-main); margin-bottom: 0.15rem;">Variable Audit &amp; Harmonization Table</strong>
+          <span style="font-size: 0.825rem; color: var(--text-muted);">
+            💡 <strong>Row Inspection:</strong> Click the <strong>"Details"</strong> button on any row to compare the master specification against observed export responses, view numeric recode values (e.g. <code>[1]</code>, <code>[999]</code>), and review specific harmonization warnings.
+          </span>
+        </div>
+        <span id="table-count-label" class="badge-tag" style="background: rgba(100, 116, 139, 0.1); color: var(--text-muted); border-color: var(--border-color); font-size: 0.775rem; margin: 0;">Showing 0 variables</span>
       </div>
       <div class="table-responsive">
         
