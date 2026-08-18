@@ -183,7 +183,7 @@ format:
         <div>
           <strong style="font-size: 0.95rem; display: block; color: var(--text-main); margin-bottom: 0.15rem;">Variable Audit & Harmonization Table</strong>
           <span style="font-size: 0.825rem; color: var(--text-muted);">
-            💡 <strong>Row Inspection:</strong> Click the <strong>"Details"</strong> button on any row to compare the master specification against observed export responses, view numeric recode values (e.g. <code>[1]</code>, <code>[999]</code>), and review specific harmonization warnings.
+            💡 <strong>Interactive Inspection:</strong> Multi-item matrix scales (e.g. <code>bcfpi_yf01–12</code>, <code>cyrm01–12</code>) are grouped into collapsible summary rows. Click <strong>"▾ Expand"</strong> to view individual child questions, and click <strong>"Details"</strong> on any item to inspect option recodes and response frequency plots.
           </span>
         </div>
         <span id="table-count-label" class="badge-tag" style="background: rgba(100, 116, 139, 0.1); color: var(--text-muted); border-color: var(--border-color); font-size: 0.775rem; margin: 0;">Showing 0 variables</span>

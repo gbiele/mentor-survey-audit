@@ -559,11 +559,111 @@ body {
   font-size: 0.75rem;
   color: var(--text-muted);
   cursor: pointer;
+  white-space: nowrap;
 }
 
 .btn-toggle-row:hover {
   background: var(--bg-subtle);
   color: var(--text-main);
+}
+
+/* Matrix Group Rows */
+.matrix-group-row {
+  background-color: #f8fafc !important;
+  font-weight: 500;
+  border-top: 1px solid var(--border-color);
+}
+
+.matrix-group-row td {
+  padding: 0.95rem 1rem !important;
+}
+
+.matrix-group-row:hover {
+  background-color: #f1f5f9 !important;
+}
+
+.matrix-range-tag {
+  font-family: var(--font-mono);
+  font-weight: 700;
+  color: #3b82f6;
+  background: #eff6ff;
+  border: 1px solid #bfdbfe;
+  padding: 0.2rem 0.5rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.825rem;
+  display: inline-block;
+}
+
+.matrix-count-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-size: 0.725rem;
+  color: #64748b;
+  font-weight: 600;
+  margin-top: 0.2rem;
+}
+
+.btn-toggle-matrix {
+  background: #ffffff;
+  border: 1px solid #cbd5e1;
+  border-radius: 9999px;
+  padding: 0.35rem 0.85rem;
+  font-size: 0.775rem;
+  font-weight: 600;
+  color: #1e293b;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  transition: all 0.15s ease;
+  white-space: nowrap;
+}
+
+.btn-toggle-matrix:hover {
+  background: #f8fafc;
+  border-color: #94a3b8;
+  color: #0f172a;
+}
+
+.btn-toggle-matrix.active {
+  background: #eff6ff;
+  border-color: #93c5fd;
+  color: #1d4ed8;
+}
+
+/* Indented Matrix Child Rows */
+.matrix-child-row {
+  background-color: #ffffff;
+}
+
+.matrix-child-row td {
+  padding: 0.7rem 1rem !important;
+}
+
+.matrix-child-row td:first-child {
+  padding-left: 1.5rem !important;
+  color: var(--text-dim) !important;
+}
+
+.matrix-child-row td:nth-child(3) {
+  padding-left: 1.25rem !important;
+  position: relative;
+}
+
+.matrix-child-row td:nth-child(3)::before {
+  content: "↳";
+  position: absolute;
+  left: 0.25rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #94a3b8;
+  font-size: 0.9rem;
+}
+
+.matrix-child-row:hover {
+  background-color: #f8fafc !important;
 }
 
 /* Expandable Details Row */

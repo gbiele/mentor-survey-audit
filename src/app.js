@@ -178,6 +178,107 @@
     });
   }
 
+  let expandedMatrixGroups = new Set();
+
+  function buildTableGroups(columns) {
+    const groups = [];
+    let currentMatrix = null;
+
+    for (let i = 0; i < columns.length; i++) {
+      const col = columns[i];
+      const can = col.canonical;
+
+      // Rule: Matrix grouping only applies when canonical is non-null
+      const stem = can && can.question_stem ? can.question_stem.trim() : null;
+      const isMatrixType = can && (
+        can.question_type === 'matrix' ||
+        can.scale === 'Likert' ||
+        can.scale === 'matrix' ||
+        (stem && stem.length > 20)
+      );
+
+      if (can && stem && isMatrixType) {
+        if (currentMatrix && currentMatrix.stem === stem && currentMatrix.section === can.section) {
+          currentMatrix.columns.push(col);
+          continue;
+        } else {
+          if (currentMatrix) {
+            finalizeGroup(currentMatrix, groups);
+          }
+          currentMatrix = {
+            type: 'matrix_candidate',
+            stem: stem,
+            section: can.section || 'General',
+            scale: can.scale || 'Likert',
+            columns: [col]
+          };
+          continue;
+        }
+      }
+
+      if (currentMatrix) {
+        finalizeGroup(currentMatrix, groups);
+        currentMatrix = null;
+      }
+
+      // Standalone single item (including unmapped columns)
+      groups.push({
+        type: 'single',
+        column: col
+      });
+    }
+
+    if (currentMatrix) {
+      finalizeGroup(currentMatrix, groups);
+    }
+
+    return groups;
+  }
+
+  function finalizeGroup(cand, groups) {
+    if (cand.columns.length >= 2) {
+      let groupStatus = 'fully_identified';
+      let groupStatusIcon = '🟢';
+      let groupStatusLabel = 'Fully Identified';
+
+      if (cand.columns.some(c => c.status === 'missing_options')) {
+        groupStatus = 'missing_options';
+        groupStatusIcon = '🔴';
+        groupStatusLabel = 'Missing Options';
+      } else if (cand.columns.some(c => c.status === 'incomplete')) {
+        groupStatus = 'incomplete';
+        groupStatusIcon = '🟡';
+        groupStatusLabel = 'Incomplete / Inferred';
+      }
+
+      const firstVar = cand.columns[0].canonical ? cand.columns[0].canonical.variable : `col_${cand.columns[0].colIndex}`;
+      const lastVar = cand.columns[cand.columns.length - 1].canonical ? cand.columns[cand.columns.length - 1].canonical.variable : `col_${cand.columns[cand.columns.length - 1].colIndex}`;
+
+      groups.push({
+        type: 'matrix',
+        groupId: `matrix_${firstVar}_${lastVar}`,
+        stem: cand.stem,
+        section: cand.section,
+        scale: cand.scale,
+        varRange: `${firstVar} – ${lastVar}`,
+        firstColIndex: cand.columns[0].colIndex,
+        lastColIndex: cand.columns[cand.columns.length - 1].colIndex,
+        itemCount: cand.columns.length,
+        status: groupStatus,
+        statusIcon: groupStatusIcon,
+        statusLabel: groupStatusLabel,
+        columns: cand.columns
+      });
+    } else {
+      cand.columns.forEach(col => {
+        groups.push({
+          type: 'single',
+          column: col
+        });
+      });
+    }
+  }
+
   function getFilteredColumns() {
     if (!currentAuditResult) return [];
 
@@ -203,14 +304,20 @@
         const cleanT = (c.cleanedText || '').toLowerCase();
         const varId = (c.extractedId || '').toLowerCase();
         const canVar = (c.canonical && c.canonical.variable ? c.canonical.variable : '').toLowerCase();
+        const origVar = (c.canonical && c.canonical.orig_variable ? c.canonical.orig_variable : '').toLowerCase();
         const section = (c.canonical && c.canonical.section ? c.canonical.section : '').toLowerCase();
+        const stem = (c.canonical && c.canonical.question_stem ? c.canonical.question_stem : '').toLowerCase();
+        const item = (c.canonical && c.canonical.item_text ? c.canonical.item_text : '').toLowerCase();
         const status = c.statusLabel.toLowerCase();
 
         return rawH.includes(searchQuery) ||
                cleanT.includes(searchQuery) ||
                varId.includes(searchQuery) ||
                canVar.includes(searchQuery) ||
+               origVar.includes(searchQuery) ||
                section.includes(searchQuery) ||
+               stem.includes(searchQuery) ||
+               item.includes(searchQuery) ||
                status.includes(searchQuery);
       });
     }
@@ -223,86 +330,209 @@
     const countLabel = document.getElementById('table-count-label');
     if (!tbody) return;
 
-    const cols = getFilteredColumns();
+    const filteredCols = getFilteredColumns();
+    const tableGroups = buildTableGroups(filteredCols);
+
     if (countLabel) {
-      countLabel.textContent = `Showing ${cols.length} of ${currentAuditResult.columns.length} variables`;
+      countLabel.textContent = `Showing ${filteredCols.length} variables (${tableGroups.length} table blocks)`;
     }
 
     tbody.innerHTML = '';
 
-    if (cols.length === 0) {
+    if (tableGroups.length === 0) {
       tbody.innerHTML = `<tr><td colspan="7" style="text-align:center; padding: 2.5rem; color: var(--text-muted);">No variables match the selected filter or search query.</td></tr>`;
       return;
     }
 
-    cols.forEach((col, idx) => {
-      const isExpanded = expandedRows.has(col.colIndex);
-      const tr = document.createElement('tr');
-      if (isExpanded) tr.classList.add('expanded-row-parent');
+    // If actively searching or filtering by issues, auto-expand relevant matrix groups
+    const autoExpand = Boolean(searchQuery || activeFilter === 'issues' || activeFilter === 'incomplete' || activeFilter === 'missing_options');
 
-      const varName = col.canonical ? col.canonical.variable : (col.extractedId || `col_${col.colIndex}`);
-      const origVar = col.canonical ? col.canonical.orig_variable : (col.extractedId || '-');
-      const section = col.canonical ? col.canonical.section : 'Uncategorized';
-      const scaleType = col.canonical ? `${col.canonical.scale} (${col.canonical.question_type})` : 'Unknown';
-
-      let statusBadgeClass = 'badge-green';
-      if (col.status === 'incomplete') statusBadgeClass = 'badge-yellow';
-      else if (col.status === 'missing_options') statusBadgeClass = 'badge-red';
-      else if (col.status === 'open_ended') statusBadgeClass = 'badge-gray';
-
-      const nCan = col.canonicalOptions ? col.canonicalOptions.length : 0;
-      const nObs = col.observedValues ? col.observedValues.length : 0;
-
-      tr.innerHTML = `
-        <td style="color: var(--text-muted); font-size: 0.8rem; width: 40px;">${col.colIndex + 1}</td>
-        <td>
-          <span class="status-badge ${statusBadgeClass}">${col.statusIcon} ${col.statusLabel}</span>
-        </td>
-        <td>
-          <span class="var-tag">${varName}</span>
-          <span class="section-label" style="font-family: var(--font-mono); font-size: 0.725rem; color: var(--text-dim); margin-top: 0.15rem;">orig: ${origVar || '-'}</span>
-        </td>
-        <td>
-          <div style="font-weight: 500; max-width: 380px; line-height: 1.35;">${col.cleanedText || col.rawHeader}</div>
-          <span class="section-label" style="margin-top: 0.25rem;">${section}</span>
-        </td>
-        <td style="font-size: 0.8rem; color: var(--text-muted);">${scaleType}</td>
-        <td style="font-size: 0.825rem;">
-          <div><strong>${nObs}</strong> observed / <strong>${nCan}</strong> canonical</div>
-          ${col.unmappedObserved.length > 0 ? `<div style="color: var(--status-red-text); font-size: 0.75rem; font-weight: 600;">⚠️ ${col.unmappedObserved.length} unmapped</div>` : ''}
-        </td>
-        <td style="text-align: right; width: 100px;">
-          <button class="btn-toggle-row" data-col="${col.colIndex}">
-            ${isExpanded ? 'Hide Details' : 'Details'}
-          </button>
-        </td>
-      `;
-
-      tbody.appendChild(tr);
-
-      // Render Expanded Details Row if active
-      if (isExpanded) {
-        const detailTr = document.createElement('tr');
-        detailTr.classList.add('details-row');
-        detailTr.innerHTML = `
-          <td colspan="7">
-            <div class="details-panel">
-              <div class="details-card">
-                <div class="details-title">Canonical Response Specification</div>
-                ${renderCanonicalOptions(col)}
-              </div>
-              <div class="details-card">
-                <div class="details-title">Observed Export Values & Audit Issues</div>
-                ${renderObservedValuesAndIssues(col)}
-              </div>
-            </div>
-          </td>
-        `;
-        tbody.appendChild(detailTr);
+    tableGroups.forEach(group => {
+      if (group.type === 'single') {
+        renderSingleRow(tbody, group.column);
+      } else if (group.type === 'matrix') {
+        const isExpanded = autoExpand || expandedMatrixGroups.has(group.groupId);
+        renderMatrixGroup(tbody, group, isExpanded);
       }
     });
 
-    // Attach row toggle handlers
+    attachTableEventHandlers();
+  }
+
+  function renderSingleRow(tbody, col) {
+    const isExpanded = expandedRows.has(col.colIndex);
+    const tr = document.createElement('tr');
+    if (isExpanded) tr.classList.add('expanded-row-parent');
+
+    const varName = col.canonical ? col.canonical.variable : (col.extractedId || `col_${col.colIndex}`);
+    const origVar = col.canonical ? col.canonical.orig_variable : (col.extractedId || '-');
+    const section = col.canonical ? col.canonical.section : 'Uncategorized';
+    const scaleType = col.canonical ? `${col.canonical.scale} (${col.canonical.question_type})` : 'Unknown';
+
+    let statusBadgeClass = 'badge-green';
+    if (col.status === 'incomplete') statusBadgeClass = 'badge-yellow';
+    else if (col.status === 'missing_options') statusBadgeClass = 'badge-red';
+    else if (col.status === 'open_ended') statusBadgeClass = 'badge-gray';
+
+    const nCan = col.canonicalOptions ? col.canonicalOptions.length : 0;
+    const nObs = col.observedValues ? col.observedValues.length : 0;
+
+    tr.innerHTML = `
+      <td style="color: var(--text-muted); font-size: 0.8rem; width: 45px;">${col.colIndex + 1}</td>
+      <td>
+        <span class="status-badge ${statusBadgeClass}">${col.statusIcon} ${col.statusLabel}</span>
+      </td>
+      <td>
+        <span class="var-tag">${varName}</span>
+        <span class="section-label" style="font-family: var(--font-mono); font-size: 0.725rem; color: var(--text-dim); margin-top: 0.15rem;">orig: ${origVar || '-'}</span>
+      </td>
+      <td>
+        <div style="font-weight: 500; max-width: 380px; line-height: 1.35;">${col.cleanedText || col.rawHeader}</div>
+        <span class="section-label" style="margin-top: 0.25rem;">${section}</span>
+      </td>
+      <td style="font-size: 0.8rem; color: var(--text-muted);">${scaleType}</td>
+      <td style="font-size: 0.825rem;">
+        <div><strong>${nObs}</strong> observed / <strong>${nCan}</strong> canonical</div>
+        ${col.unmappedObserved.length > 0 ? `<div style="color: var(--status-red-text); font-size: 0.75rem; font-weight: 600;">⚠️ ${col.unmappedObserved.length} unmapped</div>` : ''}
+      </td>
+      <td style="text-align: right; width: 110px;">
+        <button class="btn-toggle-row" data-col="${col.colIndex}">
+          ${isExpanded ? 'Hide Details' : 'Details'}
+        </button>
+      </td>
+    `;
+
+    tbody.appendChild(tr);
+
+    if (isExpanded) {
+      renderDetailsRow(tbody, col);
+    }
+  }
+
+  function renderMatrixGroup(tbody, group, isExpanded) {
+    const tr = document.createElement('tr');
+    tr.classList.add('matrix-group-row');
+
+    let statusBadgeClass = 'badge-green';
+    if (group.status === 'incomplete') statusBadgeClass = 'badge-yellow';
+    else if (group.status === 'missing_options') statusBadgeClass = 'badge-red';
+
+    const colRange = `${group.firstColIndex + 1}–${group.lastColIndex + 1}`;
+
+    tr.innerHTML = `
+      <td style="color: #64748b; font-size: 0.8rem; font-weight: 700; width: 55px;">${colRange}</td>
+      <td>
+        <span class="status-badge ${statusBadgeClass}">${group.statusIcon} ${group.statusLabel}</span>
+      </td>
+      <td>
+        <span class="matrix-range-tag">${group.varRange}</span>
+        <div class="matrix-count-badge">📑 ${group.itemCount} items</div>
+      </td>
+      <td>
+        <div style="font-weight: 600; color: #1e293b; max-width: 400px; line-height: 1.35;">${group.stem}</div>
+        <span class="section-label" style="margin-top: 0.25rem;">${group.section}</span>
+      </td>
+      <td style="font-size: 0.8rem; color: var(--text-muted);">${group.scale} (matrix)</td>
+      <td style="font-size: 0.825rem; color: #334155;">
+        <div><strong>${group.itemCount}</strong> items in scale</div>
+      </td>
+      <td style="text-align: right; width: 140px;">
+        <button class="btn-toggle-matrix ${isExpanded ? 'active' : ''}" data-group="${group.groupId}">
+          ${isExpanded ? '▴ Collapse' : `▾ Expand (${group.itemCount})`}
+        </button>
+      </td>
+    `;
+
+    tbody.appendChild(tr);
+
+    // If expanded, render individual child items
+    if (isExpanded) {
+      group.columns.forEach(childCol => {
+        const isChildDetailsExpanded = expandedRows.has(childCol.colIndex);
+        const childTr = document.createElement('tr');
+        childTr.classList.add('matrix-child-row');
+        if (isChildDetailsExpanded) childTr.classList.add('expanded-row-parent');
+
+        const varName = childCol.canonical ? childCol.canonical.variable : (childCol.extractedId || `col_${childCol.colIndex}`);
+        const origVar = childCol.canonical ? childCol.canonical.orig_variable : (childCol.extractedId || '-');
+        const itemText = childCol.canonical && childCol.canonical.item_text ? childCol.canonical.item_text : (childCol.cleanedText || childCol.rawHeader);
+
+        let childBadgeClass = 'badge-green';
+        if (childCol.status === 'incomplete') childBadgeClass = 'badge-yellow';
+        else if (childCol.status === 'missing_options') childBadgeClass = 'badge-red';
+        else if (childCol.status === 'open_ended') childBadgeClass = 'badge-gray';
+
+        const nCan = childCol.canonicalOptions ? childCol.canonicalOptions.length : 0;
+        const nObs = childCol.observedValues ? childCol.observedValues.length : 0;
+
+        childTr.innerHTML = `
+          <td style="font-size: 0.775rem;">${childCol.colIndex + 1}</td>
+          <td>
+            <span class="status-badge ${childBadgeClass}" style="font-size: 0.725rem; padding: 0.15rem 0.5rem;">${childCol.statusIcon} ${childCol.statusLabel}</span>
+          </td>
+          <td>
+            <span class="var-tag" style="font-size: 0.775rem;">${varName}</span>
+            <span class="section-label" style="font-family: var(--font-mono); font-size: 0.7rem; color: var(--text-dim);">orig: ${origVar || '-'}</span>
+          </td>
+          <td>
+            <div style="font-weight: 500; font-size: 0.85rem; max-width: 380px; line-height: 1.3;">${itemText}</div>
+          </td>
+          <td style="font-size: 0.775rem; color: var(--text-muted);">item</td>
+          <td style="font-size: 0.8rem;">
+            <div><strong>${nObs}</strong> observed / <strong>${nCan}</strong> canonical</div>
+            ${childCol.unmappedObserved.length > 0 ? `<div style="color: var(--status-red-text); font-size: 0.725rem; font-weight: 600;">⚠️ ${childCol.unmappedObserved.length} unmapped</div>` : ''}
+          </td>
+          <td style="text-align: right;">
+            <button class="btn-toggle-row" data-col="${childCol.colIndex}">
+              ${isChildDetailsExpanded ? 'Hide Details' : 'Details'}
+            </button>
+          </td>
+        `;
+
+        tbody.appendChild(childTr);
+
+        if (isChildDetailsExpanded) {
+          renderDetailsRow(tbody, childCol);
+        }
+      });
+    }
+  }
+
+  function renderDetailsRow(tbody, col) {
+    const detailTr = document.createElement('tr');
+    detailTr.classList.add('details-row');
+    detailTr.innerHTML = `
+      <td colspan="7">
+        <div class="details-panel">
+          <div class="details-card">
+            <div class="details-title">Canonical Response Specification</div>
+            ${renderCanonicalOptions(col)}
+          </div>
+          <div class="details-card">
+            <div class="details-title">Observed Export Values & Audit Issues</div>
+            ${renderObservedValuesAndIssues(col)}
+          </div>
+        </div>
+      </td>
+    `;
+    tbody.appendChild(detailTr);
+  }
+
+  function attachTableEventHandlers() {
+    // Matrix group toggles
+    document.querySelectorAll('.btn-toggle-matrix').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        const groupId = e.currentTarget.getAttribute('data-group');
+        if (expandedMatrixGroups.has(groupId)) {
+          expandedMatrixGroups.delete(groupId);
+        } else {
+          expandedMatrixGroups.add(groupId);
+        }
+        renderTable();
+      });
+    });
+
+    // Row details toggles
     document.querySelectorAll('.btn-toggle-row').forEach(btn => {
       btn.addEventListener('click', (e) => {
         const colIdx = parseInt(e.currentTarget.getAttribute('data-col'), 10);
