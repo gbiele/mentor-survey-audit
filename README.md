@@ -60,12 +60,15 @@ mentor-survey-audit/
 
 When a user drops or selects an export file, the auditor classifies each column into one of four statuses against the pre-loaded master specification:
 
-| Status | Icon | Description |
+| Status | Icon | Description & Harmonization Risk |
 | :--- | :---: | :--- |
-| **Fully Identified** | 🟢 | All canonical response options exist in the master specification and match observed responses. |
-| **Observed Only / Incomplete** | 🟡 | Options are inferred solely from sample responses (unobserved branches risk being missed). |
-| **Missing Options** | 🔴 | Variable is present in the survey export but lacks option definitions in the master specification. |
-| **Open-Ended / Continuous** | ⚪ | Free-text, date, or numeric/interval variables where categorical options do not apply. |
+| **Fully Identified** | 🟢 | All canonical response options exist in the master specification and match observed responses with verified numerical codes. |
+| **Observed Only / Incomplete** | 🟡 | Options are inferred solely from sample responses or parallel scale patterns. *Risk:* unobserved answer branches not selected by sample respondents risk being omitted from the canonical data model. |
+| **Missing Options** | 🔴 | Variable is present in the survey export but lacks option definitions in the master specification (e.g., conditional branching follow-ups). Cannot be harmonized until options and value codes are explicitly added. |
+| **Open-Ended / Continuous** | ⚪ | Free-text, date, or numeric/interval variables (e.g. birth year, MacArthur ladder) where categorical options do not apply. |
+
+> [!IMPORTANT]
+> **Flagged Issues (⚠️)** is the exact sum of **Observed Only / Incomplete (🟡)** and **Missing Options (🔴)** variables (`Issues = 🟡 Incomplete + 🔴 Missing`). These represent the actionable set of variables requiring review or specification updates before data freezing.
 
 ---
 

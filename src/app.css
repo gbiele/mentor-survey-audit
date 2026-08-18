@@ -282,29 +282,89 @@ body {
 .kpi-card.kpi-red.active { border-color: var(--status-red-accent); background: var(--status-red-bg); }
 .kpi-card.kpi-gray.active { border-color: var(--status-gray-accent); background: var(--status-gray-bg); }
 
-.kpi-title {
-  font-size: 0.8rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  color: var(--text-muted);
-  margin-bottom: 0.35rem;
+/* Status Explanation Guide Card */
+.status-guide-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 1.25rem 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.status-guide-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin-bottom: 0.85rem;
 }
 
-.kpi-value {
-  font-size: 1.85rem;
-  font-weight: 800;
-  line-height: 1;
+.status-guide-title {
+  font-size: 0.95rem;
+  font-weight: 700;
   color: var(--text-main);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 
-.kpi-subtext {
-  font-size: 0.75rem;
-  color: var(--text-muted);
-  margin-top: 0.35rem;
+.status-guide-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.85rem;
+}
+
+@media (min-width: 768px) {
+  .status-guide-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.guide-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  padding: 0.75rem 0.9rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.84rem;
+  line-height: 1.45;
+}
+
+.guide-item strong {
+  display: block;
+  font-size: 0.85rem;
+  margin-bottom: 0.15rem;
+}
+
+.guide-item.guide-yellow {
+  background: var(--status-yellow-bg);
+  border: 1px solid var(--status-yellow-border);
+  color: var(--status-yellow-text);
+}
+
+.guide-item.guide-red {
+  background: var(--status-red-bg);
+  border: 1px solid var(--status-red-border);
+  color: var(--status-red-text);
+}
+
+.guide-item.guide-issues {
+  background: #f8fafc;
+  border: 1px solid var(--border-subtle);
+  color: var(--text-main);
+  grid-column: 1 / -1;
+}
+
+.guide-item.guide-green {
+  background: var(--status-green-bg);
+  border: 1px solid var(--status-green-border);
+  color: var(--status-green-text);
+}
+
+.guide-item.guide-gray {
+  background: var(--status-gray-bg);
+  border: 1px solid var(--status-gray-border);
+  color: var(--status-gray-text);
 }
 
 /* Filter and Search Bar */

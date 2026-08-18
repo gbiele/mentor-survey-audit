@@ -112,17 +112,17 @@ ul.task-list li input[type="checkbox"] {
       <div class="kpi-card kpi-green" data-filter="fully_identified" id="kpi-card-green">
         <div class="kpi-title">Fully Identified <span>🟢</span></div>
         <div class="kpi-value" id="kpi-val-green" style="color: var(--status-green-text);">0</div>
-        <div class="kpi-subtext">Canonical options match</div>
+        <div class="kpi-subtext">All canonical options defined</div>
       </div>
       <div class="kpi-card kpi-yellow" data-filter="incomplete" id="kpi-card-yellow">
         <div class="kpi-title">Incomplete / Inferred <span>🟡</span></div>
         <div class="kpi-value" id="kpi-val-yellow" style="color: var(--status-yellow-text);">0</div>
-        <div class="kpi-subtext">Observed only / partial</div>
+        <div class="kpi-subtext">Options inferred / partial list</div>
       </div>
       <div class="kpi-card kpi-red" data-filter="missing_options" id="kpi-card-red">
         <div class="kpi-title">Missing Options <span>🔴</span></div>
         <div class="kpi-value" id="kpi-val-red" style="color: var(--status-red-text);">0</div>
-        <div class="kpi-subtext">No canonical options</div>
+        <div class="kpi-subtext">No options in specification</div>
       </div>
       <div class="kpi-card kpi-gray" data-filter="open_ended" id="kpi-card-gray">
         <div class="kpi-title">Open-Ended <span>⚪</span></div>
@@ -132,7 +132,53 @@ ul.task-list li input[type="checkbox"] {
       <div class="kpi-card kpi-red" data-filter="issues" id="kpi-card-issues">
         <div class="kpi-title">Flagged Issues <span>⚠️</span></div>
         <div class="kpi-value" id="kpi-val-issues" style="color: var(--status-red-text);">0</div>
-        <div class="kpi-subtext">Discrepancies requiring review</div>
+        <div class="kpi-subtext">Sum of Incomplete (🟡) + Missing (🔴)</div>
+      </div>
+    </div>
+
+    <!-- Status & Harmonization Explanation Guide -->
+    <div class="status-guide-card">
+      <div class="status-guide-header">
+        <div class="status-guide-title">
+          <span>📖</span> Understanding Audit Statuses &amp; Harmonization Flags
+        </div>
+      </div>
+      <div class="status-guide-grid">
+        <div class="guide-item guide-yellow">
+          <span style="font-size: 1.25rem; line-height: 1;">🟡</span>
+          <div>
+            <strong>Incomplete / Inferred Options</strong>
+            The canonical response options were not fully pre-enumerated in the master English specification, but rather inferred from observed sample responses or parallel scale patterns. <em>Harmonization Risk:</em> Unobserved answer branches (e.g., categories not selected by any respondent in the sample) risk being omitted from the canonical data model.
+          </div>
+        </div>
+        <div class="guide-item guide-red">
+          <span style="font-size: 1.25rem; line-height: 1;">🔴</span>
+          <div>
+            <strong>Missing Options</strong>
+            The variable is present in the national survey export, but has <strong>0 defined response options</strong> in the master specification (e.g. conditional branching follow-up questions). <em>Harmonization Risk:</em> Cannot be automatically harmonized until response categories and value codes are explicitly added to the master dictionary.
+          </div>
+        </div>
+        <div class="guide-item guide-issues">
+          <span style="font-size: 1.25rem; line-height: 1;">⚠️</span>
+          <div>
+            <strong>Flagged Issues = Incomplete (🟡) + Missing Options (🔴)</strong>
+            This metric represents the <strong>total sum of all problematic variables</strong> requiring review by survey programmers and field teams. These items need explicit option specification, translation verification, or scale completion before freezing data for cross-country joint analysis.
+          </div>
+        </div>
+        <div class="guide-item guide-green">
+          <span style="font-size: 1.25rem; line-height: 1;">🟢</span>
+          <div>
+            <strong>Fully Identified</strong>
+            All canonical response categories are fully defined in the master specification and match the observed survey values with confirmed numerical coding.
+          </div>
+        </div>
+        <div class="guide-item guide-gray">
+          <span style="font-size: 1.25rem; line-height: 1;">⚪</span>
+          <div>
+            <strong>Open-Ended / Continuous</strong>
+            Free-text fields, continuous dates/years, numerical intervals (e.g., MacArthur ladder), or matrix header titles where discrete categorical options do not apply.
+          </div>
+        </div>
       </div>
     </div>
 
