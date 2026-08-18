@@ -389,8 +389,9 @@
       col.observedValues.forEach(obs => {
         const isMapped = col.mappedOptions.some(m => m.observedLabel === obs.label);
         const idStr = obs.answerId ? ` <span style="color: var(--text-dim); font-size: 0.75rem;">(${obs.answerId})</span>` : '';
-        const pct = totalObs > 0 ? ((obs.count / totalObs) * 100).toFixed(0) : 0;
-        const widthPct = Math.max(8, ((obs.count / maxCount) * 100).toFixed(0));
+        const totalResp = col.totalRespondents || (totalObs + skipped);
+        const pct = totalResp > 0 ? ((obs.count / totalResp) * 100).toFixed(0) : 0;
+        const widthPct = Math.max(6, ((obs.count / maxCount) * 100).toFixed(0));
         const statusIcon = isMapped ? '🟢' : '🔴';
         const fillClass = isMapped ? 'fill-green' : 'fill-red';
 
@@ -411,6 +412,28 @@
           </div>
         `;
       });
+
+      // Render Missing / Skipped Data row in red
+      if (skipped > 0) {
+        const skippedWidthPct = Math.max(6, ((skipped / maxCount) * 100).toFixed(0));
+        html += `
+          <div class="freq-bar-row missing-row">
+            <div class="freq-bar-header">
+              <span class="freq-bar-label missing-label" title="Missing / Skipped data (empty cell)">
+                <span>🔴</span>
+                <span><em>Missing / Skipped (empty cell)</em></span>
+              </span>
+              <span class="freq-bar-count">
+                <strong style="color: var(--status-red-text);">${skipped}</strong> <span class="freq-bar-pct">(${skippedPct}%)</span>
+              </span>
+            </div>
+            <div class="freq-bar-track">
+              <div class="freq-bar-fill fill-missing" style="width: ${skippedWidthPct}%;"></div>
+            </div>
+          </div>
+        `;
+      }
+
       html += '</div>';
     }
 

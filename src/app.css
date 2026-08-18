@@ -685,9 +685,16 @@ body {
   max-width: 75%;
 }
 
-.freq-bar-label.unmapped {
+.freq-bar-label.unmapped,
+.freq-bar-label.missing-label {
   color: var(--status-red-text);
   font-weight: 600;
+}
+
+.freq-bar-row.missing-row {
+  margin-top: 0.35rem;
+  padding-top: 0.4rem;
+  border-top: 1px dashed var(--border-subtle);
 }
 
 .freq-bar-count {
@@ -725,6 +732,10 @@ body {
 
 .freq-bar-fill.fill-red {
   background: linear-gradient(90deg, #ef4444 0%, #dc2626 100%);
+}
+
+.freq-bar-fill.fill-missing {
+  background: linear-gradient(90deg, #f87171 0%, #dc2626 100%);
 }
 
 .issue-alert {
