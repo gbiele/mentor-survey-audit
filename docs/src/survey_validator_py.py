@@ -47,7 +47,7 @@ def split_stem_item(text):
 
 def parse_header(header_str):
     raw = norm(header_str)
-    m = re.match(r"^(.*)\s+\(([A-Za-z0-9_.-]{1,32})\)\s*$", raw)
+    m = re.match(r"^(.*?)\s*[\(\[\{]([A-Za-z0-9_.-]{1,32})[\)\]\}]\s*$", raw)
     if m:
         return norm(m.group(1)), norm(m.group(2))
     return raw, ""

@@ -51,11 +51,11 @@
   }
 
   /**
-   * Parse header string: "Question text (var_id)" -> { text, varId }
+   * Parse header string: "Question text (var_id)" or "Question text [var_id]" -> { text, varId }
    */
   function parseHeader(headerStr) {
     const raw = norm(headerStr);
-    const m = raw.match(/^(.*)\s+\(([A-Za-z0-9_.-]{1,32})\)\s*$/);
+    const m = raw.match(/^(.*?)\s*[\(\[\{]([A-Za-z0-9_.-]{1,32})[\)\]\}]\s*$/);
     if (m) {
       return { text: norm(m[1]), varId: norm(m[2]) };
     }
@@ -87,13 +87,13 @@
   }
 
   /**
-   * Parse cell answer: "Girl (ID3)" -> { label: "Girl", answerId: "ID3" }
+   * Parse cell answer: "Girl (ID3)" or "Girl [ID3]" -> { label: "Girl", answerId: "ID3" }
    */
   function parseAnswer(cellVal) {
     if (cellVal == null) return { label: "", answerId: null, raw: "" };
     const s = norm(cellVal);
     if (!s) return { label: "", answerId: null, raw: "" };
-    const m = s.match(/^(.*)\s+\((ID\d+)\)\s*$/);
+    const m = s.match(/^(.*?)\s*[\(\[\{](ID\d+|[A-Za-z0-9_.-]+)[\)\]\}]\s*$/);
     if (m) {
       return { label: norm(m[1]), answerId: m[2], raw: s };
     }
@@ -314,6 +314,16 @@
         const columnAudit = this.evaluateColumn(headerInfo, observedCounts, observedIds, nonNullCount, dataRows.length);
         columns.push(columnAudit);
       }
+
+      let idTagFound = false;
+      for (const col of columns) {
+        if (col.extractedId) idTagFound = true;
+        if (col.observedValues && col.observedValues.some(v => v.answerId)) idTagFound = true;
+      }
+      metadata.detectedFormat = idTagFound ? 'id_tagged' : 'plain_text';
+      metadata.formatLabel = idTagFound
+        ? 'Platform Export with Raw IDs (Automatically Cleaned)'
+        : 'Standard Clean Question Export';
 
       // Compute summary metrics
       const summary = {

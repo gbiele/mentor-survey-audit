@@ -1,5 +1,6 @@
 const assert = require('assert');
 const fs = require('fs');
+const path = require('path');
 const XLSX = require('xlsx');
 const SurveyAuditor = require('../src/survey_validator.js');
 
@@ -174,6 +175,16 @@ assert.strictEqual(mockGroups[1].type, 'single', 'Unmapped column must be single
 assert.strictEqual(mockGroups[1].column.canonical, null, 'Unmapped column preserved');
 console.log('✓ Safety constraint verified: unmapped columns are NEVER inferred as matrix groups');
 
+// Test 6: ID-Tagged platform export (MENTORMaster_TEST_GER_2.xlsx) grouping
+const idTaggedRows = XLSX.utils.sheet_to_json(
+  XLSX.readFile(path.join(__dirname, '..', 'data', 'MENTORMaster_TEST_GER_2.xlsx')).Sheets['Content'],
+  { header: 1 }
+);
+const idTaggedAudit = auditor.auditSheet(idTaggedRows);
+const idTaggedGroups = buildTableGroups(idTaggedAudit.columns);
+assert.strictEqual(idTaggedGroups.length, 42, 'ID-tagged export must also condense into 42 table groups');
+console.log('✓ Dual-format grouping parity verified (Format A & B both yield 42 blocks)');
+
 console.log('\n========================================');
-console.log('ALL STEP 3 GROUPING TESTS PASSED (5/5)');
+console.log('ALL STEP 3 GROUPING TESTS PASSED (6/6)');
 console.log('========================================\n');

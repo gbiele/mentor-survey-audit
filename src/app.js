@@ -127,7 +127,8 @@
     // Update File info badge
     const fileInfo = document.getElementById('loaded-file-info');
     if (fileInfo) {
-      fileInfo.textContent = `Audited file: ${result.filename} (${summary.metadata.dataRowCount} respondents, ${summary.totalColumns} variables)`;
+      const formatStr = summary.metadata && summary.metadata.formatLabel ? ` • 🏷️ ${summary.metadata.formatLabel}` : '';
+      fileInfo.textContent = `Audited file: ${result.filename} (${summary.metadata.dataRowCount} respondents, ${summary.totalColumns} variables${formatStr})`;
       fileInfo.style.display = 'inline-block';
     }
 
