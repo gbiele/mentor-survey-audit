@@ -123,23 +123,22 @@ body {
 
 .header-logo-wrap {
   flex-shrink: 0;
-  background: rgba(255, 255, 255, 0.95);
-  padding: 0.5rem 0.9rem;
-  border-radius: var(--radius-md);
-  border: 1px solid rgba(255, 255, 255, 0.6);
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
+  background: transparent;
+  padding: 0;
+  border: none;
+  box-shadow: none;
   display: flex;
   align-items: center;
   justify-content: center;
-  backdrop-filter: blur(10px);
 }
 
 .ja-mentor-logo {
-  height: 52px;
+  height: 62px;
   width: auto;
-  max-width: 190px;
+  max-width: 210px;
   object-fit: contain;
   display: block;
+  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.5)) drop-shadow(0 0 12px rgba(255, 255, 255, 0.4));
 }
 
 @media (max-width: 768px) {
