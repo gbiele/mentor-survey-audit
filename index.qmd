@@ -12,22 +12,23 @@ format:
 <!-- JA-MENTOR Brand Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;0,800;1,400&family=Kalam:wght@700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="src/app.css?v=20260819_brand">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="src/app.css?v=20260819_mint">
 
 <div class="app-header">
   <div class="header-inner">
-    <div class="badge-tag">🔬 JA-MENTOR Cross-Country Harmonization</div>
     <h1 class="app-title">JA-MENTOR Youth Survey Option Auditor & Validator</h1>
     <p class="app-subtitle">
-      Interactive quality assurance & harmonization engine for the <strong>JA-MENTOR youth mental health questionnaire</strong>.
+      Quality assurance & harmonization engine for the <strong>JA-MENTOR youth mental health questionnaire</strong>.
     </p>
     <div class="purpose-box">
-      <strong>💡 Harmonization Objective:</strong>
-      In the JA-MENTOR project, surveys are implemented across multiple European countries in different languages. This auditor evaluates whether national survey implementations can be reliably mapped into a unified common data format.
-      <br />
-      <div class="privacy-badge">
-        🔒 100% Client-Side Privacy: Spreadsheets are processed exclusively in your browser's local RAM. No data is sent over the network.
+      <p style="margin: 0 0 0.5rem 0;">
+        <strong>Harmonization Objective:</strong>
+        In the JA-MENTOR project, surveys are implemented across multiple European countries in different languages. This auditor evaluates whether national survey implementations can be reliably mapped into a unified common data format. By clicking on the <strong>Details</strong> button for any question, you can inspect the canonical option recodes, the response distribution across participants, and the exact level of item non-response / missing data.
+      </p>
+      <div class="privacy-card">
+        <strong>Data Privacy & Confidentiality:</strong>
+        Your survey data remains strictly confidential and never leaves your computer. All files are analyzed entirely within your web browser session. No participant data or survey responses are uploaded to external servers or stored online.
       </div>
     </div>
   </div>
@@ -39,16 +40,16 @@ format:
   <div class="action-card">
     <div class="drop-zone" id="drop-zone">
       <div class="drop-zone-icon">📁</div>
-      <div class="drop-zone-text">Drop your country survey export file here (<code>Content_Export_*.xlsx</code> or <code>MENTORMaster_*.xlsx</code>)</div>
-      <div class="drop-zone-hint">Plain question export or platform export with raw IDs (.xlsx, .xls)</div>
+      <div class="drop-zone-text">Drop your country survey export file in Excel format downloaded from EU survey here</div>
+      <div class="drop-zone-hint">or click to browse local files (.xlsx, .xls)</div>
       <input type="file" id="file-input" accept=".xlsx, .xls" style="display: none;" />
     </div>
     <div class="action-buttons">
-      <button type="button" id="btn-load-sample" class="btn btn-primary" onclick="window.loadBundledSample()">
-        🚀 Load Sample Data
-      </button>
       <button type="button" id="btn-export-issues" class="btn btn-export" onclick="window.exportAuditIssuesCSV()">
         📥 Export Audit Issues (CSV)
+      </button>
+      <button type="button" id="btn-load-sample" class="btn btn-subtle btn-sm" onclick="window.loadBundledSample()" title="Load bundled 100-respondent example data for demonstration purposes">
+        Load sample data
       </button>
     </div>
   </div>
@@ -57,11 +58,11 @@ format:
   <div id="empty-state-view" class="table-card empty-state">
     <div class="empty-state-icon">📊</div>
     <div class="empty-state-title">No Survey File Loaded</div>
-    <p style="max-width: 500px; margin: 0 auto 1.5rem auto;">
-      Upload your national survey data export spreadsheet, or click <strong>"Load Sample Data"</strong> to test the auditor with the bundled example dataset.
+    <p style="max-width: 540px; margin: 0 auto 1.25rem auto; color: var(--text-muted);">
+      Drag and drop your country survey export file downloaded from EU Survey into the box above, or browse to select your spreadsheet.
     </p>
-    <button type="button" class="btn btn-primary" onclick="window.loadBundledSample()">
-      🚀 Test with Bundled Sample Dataset
+    <button type="button" class="btn btn-subtle btn-sm" onclick="window.loadBundledSample()">
+      Load sample data (demo)
     </button>
   </div>
 
