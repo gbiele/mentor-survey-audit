@@ -1,14 +1,9 @@
 project:
-  type: website
+  type: default
   output-dir: docs
-  render:
-    - "index.qmd"
   resources:
     - "src/**"
     - "data/**"
-
-website:
-  title: "JA-MENTOR Youth Survey Option Auditor"
 
 format:
   html:
@@ -17,3 +12,4 @@ format:
     toc: false
     page-layout: custom
     css: src/app.css
+
