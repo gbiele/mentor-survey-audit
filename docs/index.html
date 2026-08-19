@@ -113,6 +113,103 @@ ul.task-list li input[type="checkbox"] {
       <span id="loaded-file-info" class="badge-tag" style="background: rgba(37, 99, 235, 0.1); color: var(--primary-700); border-color: rgba(37, 99, 235, 0.2); font-size: 0.85rem; display: none;"></span>
     </div>
 
+    <!-- Survey Coverage & Completeness Summary Table -->
+    <div class="table-card coverage-card" id="coverage-card" style="margin-bottom: 1.5rem;">
+      <div class="coverage-header">
+        <div>
+          <h2 class="coverage-title">📊 Survey Coverage &amp; Completeness Summary</h2>
+          <p class="coverage-subtitle">
+            Coverage evaluation of uploaded survey questions against the authoritative <strong>Core Master Dictionary (<span id="cov-dict-total-title">143</span> variables)</strong>.
+          </p>
+        </div>
+        <span id="coverage-overall-badge" class="badge-tag badge-cov-pill">100% Core Coverage</span>
+      </div>
+      
+      <div class="table-responsive">
+        
+<table class="coverage-table caption-top">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th" style="width: 40%">Coverage Dimension</th>
+<th data-quarto-table-cell-role="th" style="width: 18%">Questions / Items</th>
+<th data-quarto-table-cell-role="th" style="width: 14%">Coverage (%)</th>
+<th data-quarto-table-cell-role="th" style="width: 28%">Visual Indicator &amp; Details</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><div class="cov-dim-name">
+<span class="cov-dot dot-green"></span> <strong>Core Survey Questions Covered in Data</strong>
+</div>
+<div class="cov-dim-desc">
+Standard canonical variables identified in uploaded file
+</div></td>
+<td class="cov-metric-cell"><span id="cov-core-covered-count" class="cov-metric-num">0</span> <span id="cov-core-total-denom" class="cov-metric-denom">/ 143 core vars</span></td>
+<td class="cov-pct-cell"><span id="cov-core-covered-pct" class="cov-pct-value pct-green">0.0%</span></td>
+<td><div class="cov-bar-track">
+<div id="cov-bar-covered" class="cov-bar-fill fill-green" style="width: 0%;">
+
+</div>
+</div></td>
+</tr>
+<tr class="even">
+<td><div class="cov-dim-name">
+<span class="cov-dot dot-red"></span> <strong>Core Survey Questions Missing in Data</strong>
+</div>
+<div class="cov-dim-desc">
+Canonical variables omitted or unfielded in this export
+</div></td>
+<td class="cov-metric-cell"><span id="cov-core-missing-count" class="cov-metric-num">0</span> <span id="cov-core-missing-denom" class="cov-metric-denom">/ 143 core vars</span></td>
+<td class="cov-pct-cell"><span id="cov-core-missing-pct" class="cov-pct-value pct-red">0.0%</span></td>
+<td><div class="cov-bar-track">
+<div id="cov-bar-missing" class="cov-bar-fill fill-red" style="width: 0%;">
+
+</div>
+</div>
+<div id="cov-missing-details" style="display: none; margin-top: 0.4rem;">
+<button type="button" class="btn-toggle-pills" onclick="window.toggleCoveragePills('missing')">
+<span id="cov-missing-toggle-text">Show missing variables (0)</span> ▾
+</button>
+<div id="cov-missing-pills-list" class="cov-pills-container" style="display: none;">
+
+</div>
+</div></td>
+</tr>
+<tr class="odd">
+<td><div class="cov-dim-name">
+<span class="cov-dot dot-gray"></span> <strong>Extra Data Questions (Not in Master Dictionary)</strong>
+</div>
+<div class="cov-dim-desc">
+Country-specific additions or unmapped survey columns
+</div></td>
+<td class="cov-metric-cell"><span id="cov-extra-count" class="cov-metric-num">0</span> <span id="cov-extra-denom" class="cov-metric-denom">/ 0 total cols</span></td>
+<td class="cov-pct-cell"><span id="cov-extra-pct" class="cov-pct-value pct-gray">0.0%</span></td>
+<td><div class="cov-bar-track">
+<div id="cov-bar-extra" class="cov-bar-fill fill-gray" style="width: 0%;">
+
+</div>
+</div>
+<div id="cov-extra-details" style="display: none; margin-top: 0.4rem;">
+<button type="button" class="btn-toggle-pills" onclick="window.toggleCoveragePills('extra')">
+<span id="cov-extra-toggle-text">Show extra variables (0)</span> ▾
+</button>
+<div id="cov-extra-pills-list" class="cov-pills-container" style="display: none;">
+
+</div>
+</div></td>
+</tr>
+</tbody>
+</table>
+
+      </div>
+    </div>
+
     <!-- KPI Summary Cards -->
     <div class="kpi-grid">
       <div class="kpi-card kpi-all active" data-filter="all" id="kpi-card-all">

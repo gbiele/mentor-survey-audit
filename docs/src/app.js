@@ -10,6 +10,16 @@
   let searchQuery = '';
   let expandedRows = new Set();
 
+  function escapeHtml(str) {
+    if (str == null) return '';
+    return String(str)
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;')
+      .replace(/'/g, '&#039;');
+  }
+
   // Initialize application once DOM is ready
   document.addEventListener('DOMContentLoaded', async () => {
     initApp();
@@ -132,8 +142,227 @@
       fileInfo.style.display = 'inline-block';
     }
 
+    // Update Coverage Summary Table
+    if (summary.coverage) {
+      updateCoverageSummary(summary.coverage);
+    }
+
     renderTable();
   }
+
+  function updateCoverageSummary(cov) {
+    const titleTotal = document.getElementById('cov-dict-total-title');
+    if (titleTotal) titleTotal.textContent = cov.totalCore;
+
+    // Row 1: Core Covered
+    const covCount = document.getElementById('cov-core-covered-count');
+    if (covCount) covCount.textContent = cov.coveredCoreCount;
+    const covDenom = document.getElementById('cov-core-total-denom');
+    if (covDenom) covDenom.textContent = `/ ${cov.totalCore} core vars`;
+    const covPct = document.getElementById('cov-core-covered-pct');
+    if (covPct) covPct.textContent = `${cov.coveredCorePct}%`;
+    const barCovered = document.getElementById('cov-bar-covered');
+    if (barCovered) barCovered.style.width = `${Math.min(100, parseFloat(cov.coveredCorePct))}%`;
+
+    // Row 2: Core Missing
+    const missCount = document.getElementById('cov-core-missing-count');
+    if (missCount) missCount.textContent = cov.missingCoreCount;
+    const missDenom = document.getElementById('cov-core-missing-denom');
+    if (missDenom) missDenom.textContent = `/ ${cov.totalCore} core vars`;
+    const missPct = document.getElementById('cov-core-missing-pct');
+    if (missPct) missPct.textContent = `${cov.missingCorePct}%`;
+    const barMissing = document.getElementById('cov-bar-missing');
+    if (barMissing) barMissing.style.width = `${Math.min(100, parseFloat(cov.missingCorePct))}%`;
+
+    // Missing details toggle & list
+    const missDetails = document.getElementById('cov-missing-details');
+    const missToggleText = document.getElementById('cov-missing-toggle-text');
+    const missPillsList = document.getElementById('cov-missing-pills-list');
+
+    const missingScales = groupMissingIntoScales(cov.missingCoreVars || []);
+    if (cov.missingCoreCount > 0) {
+      if (missDetails) missDetails.style.display = 'block';
+      if (missToggleText) missToggleText.textContent = `Show missing scales (${missingScales.length} scales · ${cov.missingCoreCount} items)`;
+      if (missPillsList) {
+        missPillsList.innerHTML = missingScales.map(s => {
+          return `
+            <div class="cov-scale-card scale-missing">
+              <div class="cov-scale-header">
+                <strong>${escapeHtml(s.title)}</strong>
+                <span class="cov-scale-badge">${escapeHtml(s.varRange)} · ${s.count} item${s.count > 1 ? 's' : ''}</span>
+              </div>
+              ${s.stem && s.count > 1 ? `<div class="cov-scale-desc">${escapeHtml(s.stem)}</div>` : ''}
+            </div>
+          `;
+        }).join('');
+      }
+    } else {
+      if (missDetails) missDetails.style.display = 'none';
+    }
+
+    // Row 3: Extra columns
+    const extraCount = document.getElementById('cov-extra-count');
+    if (extraCount) extraCount.textContent = cov.extraCount;
+    const extraDenom = document.getElementById('cov-extra-denom');
+    if (extraDenom) extraDenom.textContent = `/ ${cov.totalUploaded} upload cols`;
+    const extraPct = document.getElementById('cov-extra-pct');
+    if (extraPct) extraPct.textContent = `${cov.extraPct}%`;
+    const barExtra = document.getElementById('cov-bar-extra');
+    if (barExtra) barExtra.style.width = `${Math.min(100, parseFloat(cov.extraPct))}%`;
+
+    // Extra details toggle & list
+    const extraDetails = document.getElementById('cov-extra-details');
+    const extraToggleText = document.getElementById('cov-extra-toggle-text');
+    const extraPillsList = document.getElementById('cov-extra-pills-list');
+
+    const extraScales = groupExtraIntoScales(cov.extraColumns || []);
+    if (cov.extraCount > 0) {
+      if (extraDetails) extraDetails.style.display = 'block';
+      if (extraToggleText) extraToggleText.textContent = `Show extra scales (${extraScales.length} scales · ${cov.extraCount} items)`;
+      if (extraPillsList) {
+        extraPillsList.innerHTML = extraScales.map(s => {
+          return `
+            <div class="cov-scale-card scale-extra">
+              <div class="cov-scale-header">
+                <strong>${escapeHtml(s.title)}</strong>
+                <span class="cov-scale-badge">${escapeHtml(s.colRange)} · ${s.count} item${s.count > 1 ? 's' : ''}</span>
+              </div>
+            </div>
+          `;
+        }).join('');
+      }
+    } else {
+      if (extraDetails) extraDetails.style.display = 'none';
+    }
+
+    // Overall Badge
+    const overallBadge = document.getElementById('coverage-overall-badge');
+    if (overallBadge) {
+      if (cov.missingCoreCount === 0) {
+        overallBadge.textContent = '🟢 100% Core Coverage';
+        overallBadge.style.background = 'rgba(16, 185, 129, 0.1)';
+        overallBadge.style.color = '#059669';
+        overallBadge.style.borderColor = 'rgba(16, 185, 129, 0.25)';
+      } else {
+        overallBadge.textContent = `⚠️ ${cov.coveredCorePct}% Core Coverage (${cov.missingCoreCount} Missing)`;
+        overallBadge.style.background = 'rgba(239, 68, 68, 0.1)';
+        overallBadge.style.color = '#dc2626';
+        overallBadge.style.borderColor = 'rgba(239, 68, 68, 0.25)';
+      }
+    }
+  }
+
+  function groupMissingIntoScales(missingVars) {
+    const scaleGroups = [];
+    let currentGroup = null;
+
+    for (const v of missingVars) {
+      const prefix = v.variable.replace(/\d+$/, '');
+      const stem = (v.stem || '').trim();
+      const section = v.section || 'General';
+
+      if (currentGroup && currentGroup.prefix === prefix && currentGroup.stem === stem && currentGroup.section === section) {
+        currentGroup.items.push(v);
+      } else {
+        if (currentGroup) scaleGroups.push(currentGroup);
+        currentGroup = {
+          prefix,
+          stem,
+          section,
+          items: [v]
+        };
+      }
+    }
+    if (currentGroup) scaleGroups.push(currentGroup);
+
+    return scaleGroups.map(g => {
+      const first = g.items[0].orig_variable || g.items[0].variable;
+      const last = g.items[g.items.length - 1].orig_variable || g.items[g.items.length - 1].variable;
+      const range = g.items.length > 1 ? `${first}–${last}` : first;
+      
+      let title = g.section;
+      if (g.items.length > 1) {
+        if (g.stem && g.stem.length < 55) {
+          title += ` · ${g.stem}`;
+        } else if (g.stem) {
+          title += ` · ${g.stem.substring(0, 48)}...`;
+        }
+      } else {
+        const itemLabel = g.items[0].item_text || g.items[0].stem || first;
+        title += ` · ${itemLabel.length < 55 ? itemLabel : itemLabel.substring(0, 48) + '...'}`;
+      }
+
+      return {
+        title,
+        section: g.section,
+        varRange: range,
+        count: g.items.length,
+        stem: g.stem,
+        items: g.items
+      };
+    });
+  }
+
+  function groupExtraIntoScales(extraCols) {
+    const scaleGroups = [];
+    let currentGroup = null;
+
+    for (const c of extraCols) {
+      let stem = c.cleanedText || c.rawHeader || '';
+      if (stem.startsWith('Matrix:')) stem = 'Matrix Scale';
+      else if (stem.includes(':')) stem = stem.split(':')[0].trim();
+      
+      const isConsecutive = currentGroup && (c.colIndex === currentGroup.lastColIndex + 1);
+
+      if (currentGroup && isConsecutive && currentGroup.stem === stem) {
+        currentGroup.columns.push(c);
+        currentGroup.lastColIndex = c.colIndex;
+      } else {
+        if (currentGroup) scaleGroups.push(currentGroup);
+        currentGroup = {
+          stem,
+          firstColIndex: c.colIndex,
+          lastColIndex: c.colIndex,
+          columns: [c]
+        };
+      }
+    }
+    if (currentGroup) scaleGroups.push(currentGroup);
+
+    return scaleGroups.map(g => {
+      const firstCol = g.firstColIndex + 1;
+      const lastCol = g.lastColIndex + 1;
+      const colRange = g.columns.length > 1 ? `Cols ${firstCol}–${lastCol}` : `Col ${firstCol}`;
+      const firstId = g.columns[0].extractedId;
+      const lastId = g.columns[g.columns.length - 1].extractedId;
+      const idRange = (firstId && lastId && g.columns.length > 1) ? ` (${firstId}–${lastId})` : (firstId ? ` (${firstId})` : '');
+
+      let title = g.stem;
+      if (title.length > 55) {
+        title = title.substring(0, 50) + '...';
+      }
+
+      return {
+        title: title || 'Additional Survey Questions',
+        colRange: colRange + idRange,
+        count: g.columns.length,
+        columns: g.columns
+      };
+    });
+  }
+
+  // Global helper for toggling coverage pills
+  window.toggleCoveragePills = function(type) {
+    const list = document.getElementById(type === 'missing' ? 'cov-missing-pills-list' : 'cov-extra-pills-list');
+    const toggleText = document.getElementById(type === 'missing' ? 'cov-missing-toggle-text' : 'cov-extra-toggle-text');
+    if (!list) return;
+    const isHidden = list.style.display === 'none';
+    list.style.display = isHidden ? 'flex' : 'none';
+    if (toggleText) {
+      const currentText = toggleText.textContent.replace(/ [▾▴]$/, '');
+      toggleText.textContent = `${currentText} ${isHidden ? '▴' : '▾'}`;
+    }
+  };
 
   function setupFilterHandlers() {
     const kpiCards = document.querySelectorAll('.kpi-card');

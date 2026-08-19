@@ -325,6 +325,58 @@
         ? 'Platform Export with Raw IDs (Automatically Cleaned)'
         : 'Standard Clean Question Export';
 
+      // Compute Core survey coverage metrics
+      const dictVars = this.dictionary.variables || [];
+      const coreDictVars = dictVars.filter(v => v.is_core !== false);
+      const matchedCoreVars = new Set();
+      const matchedAllVars = new Set();
+
+      for (const col of columns) {
+        if (col.canonical) {
+          matchedAllVars.add(col.canonical.variable);
+          if (col.canonical.is_core !== false) {
+            matchedCoreVars.add(col.canonical.variable);
+          }
+        }
+      }
+
+      const missingCoreVars = coreDictVars.filter(v => !matchedCoreVars.has(v.variable));
+      const extraColumns = columns.filter(c => !c.canonical);
+
+      const totalCore = coreDictVars.length;
+      const coveredCoreCount = matchedCoreVars.size;
+      const missingCoreCount = missingCoreVars.length;
+      const coveredCorePct = totalCore > 0 ? ((coveredCoreCount / totalCore) * 100).toFixed(1) : '0.0';
+      const missingCorePct = totalCore > 0 ? ((missingCoreCount / totalCore) * 100).toFixed(1) : '0.0';
+
+      const totalUploaded = columns.length;
+      const extraCount = extraColumns.length;
+      const extraPct = totalUploaded > 0 ? ((extraCount / totalUploaded) * 100).toFixed(1) : '0.0';
+
+      const coverageSummary = {
+        totalCore,
+        coveredCoreCount,
+        coveredCorePct,
+        missingCoreCount,
+        missingCorePct,
+        missingCoreVars: missingCoreVars.map(v => ({
+          variable: v.variable,
+          orig_variable: v.orig_variable,
+          section: v.section,
+          stem: v.question_stem,
+          item_text: v.item_text
+        })),
+        totalUploaded,
+        extraCount,
+        extraPct,
+        extraColumns: extraColumns.map(c => ({
+          colIndex: c.colIndex,
+          rawHeader: c.rawHeader,
+          cleanedText: c.cleanedText,
+          extractedId: c.extractedId
+        }))
+      };
+
       // Compute summary metrics
       const summary = {
         totalColumns: columns.length,
@@ -333,6 +385,7 @@
         missingOptions: columns.filter(c => c.status === 'missing_options').length,
         openEnded: columns.filter(c => c.status === 'open_ended').length,
         totalIssues: columns.filter(c => c.status === 'incomplete' || c.status === 'missing_options').length,
+        coverage: coverageSummary,
         metadata
       };
 

@@ -172,6 +172,7 @@ class Item:
     source: str  # canonical_en
     ger_header: str = ""
     short_name: str = ""  # analysis name: ≤8 letter stem + item number
+    is_core: bool = True
 
 
 @dataclass
@@ -187,6 +188,7 @@ class Question:
     items: list[Item]
     options_complete: str  # true | false | inferred
     source: str
+    is_core: bool = True
     notes: str = ""
 
 
@@ -996,6 +998,7 @@ def write_csv(codebook: list[Question]) -> None:
                 "n_options",
                 "multiple",
                 "source",
+                "is_core",
                 "options_complete",
                 "scale_confidence",
                 "notes",
@@ -1017,6 +1020,7 @@ def write_csv(codebook: list[Question]) -> None:
                         "n_options": len(q.options),
                         "multiple": str(q.multiple).lower(),
                         "source": it.source,
+                        "is_core": str(it.is_core).lower(),
                         "options_complete": q.options_complete,
                         "scale_confidence": q.scale_confidence,
                         "notes": q.notes,

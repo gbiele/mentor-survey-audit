@@ -77,6 +77,9 @@ def build_master_dictionary():
         orig_var = row["orig_variable"]
         opts = options_by_var.get(var_name, [])
 
+        is_core_raw = row.get("is_core")
+        is_core = parse_bool_safe(is_core_raw) if is_core_raw is not None and is_core_raw != "" else True
+
         var_entry = {
             "variable": var_name,
             "orig_variable": orig_var,
@@ -89,6 +92,7 @@ def build_master_dictionary():
             "n_options": parse_int_safe(row.get("n_options")),
             "multiple": parse_bool_safe(row.get("multiple")),
             "source": row.get("source", ""),
+            "is_core": is_core,
             "options_complete": parse_bool_safe(row.get("options_complete")),
             "scale_confidence": row.get("scale_confidence", ""),
             "notes": row.get("notes", ""),
@@ -104,12 +108,14 @@ def build_master_dictionary():
 
     # Add metadata
     sections = sorted(list({v["section"] for v in variables if v["section"]}))
+    total_core = sum(1 for v in variables if v.get("is_core", True))
     master_dict = {
         "metadata": {
             "title": "JA-MENTOR Master Survey Dictionary",
             "version": "1.0.0",
             "source_specification": "data/mentor_fhi-EN.xlsx",
             "total_variables": len(variables),
+            "total_core_variables": total_core,
             "total_options": len(opts_rows),
             "sections": sections,
             "special_codes": SPECIAL_CODES

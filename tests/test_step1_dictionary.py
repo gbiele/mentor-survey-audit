@@ -41,7 +41,11 @@ class TestMasterDictionary(unittest.TestCase):
         self.assertEqual(total_extracted_options, n_opts, f"Extracted {total_extracted_options} options, expected {n_opts}")
 
         self.assertEqual(self.data["metadata"]["total_variables"], n_vars)
+        self.assertEqual(self.data["metadata"]["total_core_variables"], n_vars)
         self.assertEqual(self.data["metadata"]["total_options"], n_opts)
+
+        for v in extracted_vars:
+            self.assertTrue(v.get("is_core", False), f"Variable {v['variable']} should be marked is_core=True")
 
     def test_variable_metadata_fidelity(self):
         var_by_name = {v["variable"]: v for v in self.data["variables"]}
