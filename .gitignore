@@ -9,3 +9,7 @@ __pycache__/
 # Survey data files (confidential / raw exports)
 data/
 docs/data/
+
+# Internal reference pipelines and raw codebook files
+reference/
+docs/reference/

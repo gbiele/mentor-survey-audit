@@ -1,97 +1,104 @@
 # JA-MENTOR Youth Survey Option Auditor & Validator
 
-An interactive, browser-based auditing tool for the **JA-MENTOR youth mental health questionnaire**.
+[![Live Demo](https://img.shields.io/badge/Live%20App-GitHub%20Pages-2563eb?style=for-the-badge&logo=github)](https://gbiele.github.io/mentor-survey-audit/)
+[![Zero Server Dependencies](https://img.shields.io/badge/Architecture-100%25%20Client--Side-10b981?style=for-the-badge)](https://gbiele.github.io/mentor-survey-audit/)
+[![GDPR Compliant](https://img.shields.io/badge/Privacy-100%25%20In--Browser%20RAM-059669?style=for-the-badge)](https://gbiele.github.io/mentor-survey-audit/)
 
-### 💡 Purpose & Core Question
-In the JA-MENTOR project, surveys are implemented across multiple countries in different languages. **The core purpose of this tool is to determine whether national survey implementations can be reliably mapped into a unified, common data format** for cross-country harmonization and joint analysis.
+An interactive, client-side quality assurance and harmonization tool for the **JA-MENTOR Youth Mental Health Survey**.
 
-The application comes pre-configured with the **English Master Specification (`mentor_fhi-EN.xlsx`)** as the built-in reference baseline containing all canonical response options. **Users only need to upload their single country survey data export file (`Content_Export_*.xlsx`)**—no setup or configuration required.
-
----
-
-## 🎯 Project Goals
-
-1. **Cross-Country Harmonization Check:** Verify whether country-specific survey exports and language adaptations map cleanly into the canonical common data model.
-2. **Automated Option Verification:** Check if every variable in a country's survey export has an exact, known set of response options defined in the master specification.
-3. **Coverage & Gap Detection:** Flag unobserved branches, missing categories, unmapped free-text strings, or translation discrepancies before data freezing and analysis.
-4. **Zero-Install Client-Side Web App:** Run completely inside the web browser via Quarto HTML / WebAssembly or JavaScript—enabling researchers without Python/R environments to audit new survey export files locally and securely.
-5. **Deployable on GitHub Pages:** Fully static architecture with zero backend server dependencies, allowing one-click publishing to GitHub Pages while maintaining complete data privacy (files are processed in local browser RAM, never uploaded to external servers).
+🔗 **Access the Live Web Application:**  
+👉 **[https://gbiele.github.io/mentor-survey-audit/](https://gbiele.github.io/mentor-survey-audit/)**
 
 ---
 
-## ✨ Key Features & User Experience
+## 💡 Harmonization Objective
 
-1. **📖 Clear On-Page Context & Motivation:**
-   * Prominent header and explanation banner outlining the tool's purpose: evaluating whether country-specific survey exports can be harmonized into a single common data format.
-2. **🚀 One-Click Demo / Sample Data Loader:**
-   * Built-in *"Load Sample Data"* button to instantly test and explore the auditor using the bundled sample export without needing to find or prepare local files first.
-3. **📥 One-Click Discrepancy & Issue Export (CSV / Excel):**
-   * Download a dedicated audit report of flagged issues (🔴 *Missing Options*, 🟡 *Observed Only / Incomplete*, unmapped values, translation gaps) to easily share with survey programmers and national field teams.
-4. **🔍 Summary Status KPI Cards & Instant Filters:**
-   * Interactive overview badges at the top showing real-time counts across all validation statuses.
-   * Clicking any badge immediately filters the variable table to focus on specific problem areas (e.g., viewing only missing or incomplete variables).
+In the **JA-MENTOR** project, youth mental health surveys are fielded across multiple European partner countries in different languages and regional adaptations. 
+
+**The primary objective of this auditor is to evaluate whether national survey implementations can be reliably mapped into a unified common data format** prior to data freezing and joint epidemiological analysis.
+
+The application comes pre-configured with the authoritative **Core Master Survey Dictionary (143 standardized variables)**. Researchers and data managers simply drag-and-drop their national EU Survey export file (`.xlsx`) to perform an immediate, comprehensive audit.
 
 ---
 
-## 📁 Repository Structure
+## ✨ Key Capabilities
 
+1. **📊 Survey Coverage & Completeness Summary**:
+   - **Core Survey Coverage**: Real-time calculation of the percentage ($\%$) and number of standard core questions fielded.
+   - **Missing Scales Breakdown**: Aggregates missing items into clear scale and sub-scale blocks (e.g. *Adverse Childhood Experiences*, *Social Media Negative Impacts*, *Quality of Life*) with exact variable ranges and item counts.
+   - **Extra / Country-Specific Scales**: Identifies and groups national additions and unmapped survey modules (e.g. *CATS Trauma*, *PTSD Symptoms*, *Addiction Scales*).
+
+2. **🟢 Dynamic Categorization & Issue Detection**:
+   - **Fully Identified (🟢)**: Canonical response options fully defined and verified against observed codes.
+   - **Incomplete / Inferred Options (🟡)**: Options inferred from sample responses or parallel scales, highlighting unobserved categories.
+   - **Missing Options (🔴)**: Variables lacking canonical option definitions in the master specification.
+   - **Open-Ended (⚪)**: Free-text fields where discrete categorical options do not apply.
+   - **Flagged Issues (⚠️)**: Immediate sum of all problematic variables requiring programmer review.
+
+3. **🧩 Multi-Item Matrix Scale Condensation**:
+   - Multi-item battery questions (e.g., *BCFPI Mental Health*, *CYRM Resilience*, *KIDSCREEN Quality of Life*) automatically condense into single summary rows, reducing table clutter while supporting one-click expansion.
+
+4. **📈 Response Distribution & Missing Data Auditing**:
+   - Interactive item modal displays canonical recodes, observed response frequencies, and exact levels of item non-response / skipped questions.
+
+5. **📥 One-Click Audit Discrepancy Export (CSV)**:
+   - Export an actionable spreadsheet of all flagged variables and harmonization discrepancies to share directly with survey programmers and field teams.
+
+---
+
+## 🔒 100% Data Privacy & Security
+
+- **Strictly Client-Side Execution**: All spreadsheet parsing, validation logic, and frequency calculations run entirely inside your web browser's local memory (RAM).
+- **No External Servers**: Survey responses, participant data, and uploaded files are **never uploaded to external servers or transmitted across the internet**.
+
+---
+
+## 🚀 Quick Start & Local Development
+
+### 1. Using the Live Application
+Visit **[https://gbiele.github.io/mentor-survey-audit/](https://gbiele.github.io/mentor-survey-audit/)** and:
+- Drag-and-drop your country survey export file (`.xlsx`, `.xls`), or
+- Click **"Load sample data"** to explore the auditor with pre-loaded demo data.
+
+### 2. Running Locally
+
+Clone the repository and preview with [Quarto](https://quarto.org/):
+
+```bash
+# Clone the repository
+git clone https://github.com/gbiele/mentor-survey-audit.git
+cd mentor-survey-audit
+
+# Start local live preview server
+quarto preview index.qmd --port 4200
 ```
-mentor-survey-audit/
-├── data/                                 # Example survey specifications and test exports
-│   ├── mentor_fhi-EN.xlsx                # Pre-loaded Master English survey instrument specification
-│   └── Content_Export_MENTORMasterGER1_Test-GER-1.xlsx  # Raw plain-label EUSurvey export
-│
-├── reference/                            # Existing baseline scripts and generated codebooks
-│   ├── build_codebook.py                 # Python codebook construction pipeline
-│   ├── recode_mentor.R                   # R script generating haven::labelled datasets
-│   └── output/
-│       ├── codebook_variables.csv        # 229 audited variables metadata
-│       ├── codebook_options.csv          # 1,148 enumerated option mappings
-│       └── codebook.html                 # Interactive codebook reference
-│
-├── index.qmd                             # (Coming soon) Quarto source for the interactive web app
-├── implementation_guidelines.md          # Step-by-step roadmap and independent verification protocol
-└── README.md                             # This documentation
+
+Open your browser at `http://localhost:4200/index.html`.
+
+### 3. Running Automated Tests
+
+```bash
+# Test Master Dictionary fidelity & is_core tagging
+python tests/test_step1_dictionary.py
+
+# Test Client-side Validation Engine & Coverage Math
+node tests/test_step2_engine.js
+
+# Test Matrix Grouping & Table Condensation
+node tests/test_step3_grouping.js
 ```
 
 ---
 
-## 🔍 Validation Logic & Status Categorization
+## 🏗️ Architecture & Technology Stack
 
-When a user drops or selects an export file, the auditor classifies each column into one of four statuses against the pre-loaded master specification:
-
-| Status | Icon | Description & Harmonization Risk |
-| :--- | :---: | :--- |
-| **Fully Identified** | 🟢 | All canonical response options exist in the master specification and match observed responses with verified numerical codes. |
-| **Observed Only / Incomplete** | 🟡 | Options are inferred solely from sample responses or parallel scale patterns. *Risk:* unobserved answer branches not selected by sample respondents risk being omitted from the canonical data model. |
-| **Missing Options** | 🔴 | Variable is present in the survey export but lacks option definitions in the master specification (e.g., conditional branching follow-ups). Cannot be harmonized until options and value codes are explicitly added. |
-| **Open-Ended / Continuous** | ⚪ | Free-text, date, or numeric/interval variables (e.g. birth year, MacArthur ladder) where categorical options do not apply. |
-
-> [!IMPORTANT]
-> **Flagged Issues (⚠️)** is the exact sum of **Observed Only / Incomplete (🟡)** and **Missing Options (🔴)** variables (`Issues = 🟡 Incomplete + 🔴 Missing`). These represent the actionable set of variables requiring review or specification updates before data freezing.
+- **Frontend & Logic**: Vanilla JavaScript (ES6+), HTML5, CSS3 with custom JA-MENTOR mint palette.
+- **Spreadsheet Parsing**: [SheetJS (xlsx)](https://sheetjs.com/) for high-speed client-side workbook decoding.
+- **Site Generation**: [Quarto](https://quarto.org/) static site compilation (`docs/` deployment target for GitHub Pages).
+- **Automated Testing**: Python `unittest` & Node.js test suites.
 
 ---
 
-## 🚀 GitHub Pages Deployment
+## 📄 License & Attribution
 
-To host this tool publicly or within an organization on GitHub Pages:
-
-1. Render the Quarto project:
-   ```bash
-   quarto render index.qmd --output-dir docs
-   ```
-2. Push to GitHub:
-   ```bash
-   git add .
-   git commit -m "Build survey auditor tool"
-   git push origin main
-   ```
-3. In GitHub repository settings:
-   * Navigate to **Settings** → **Pages**
-   * Under **Build and deployment**, select **Deploy from a branch** → `main` branch and `/docs` folder.
-
----
-
-## 🔒 Data Privacy & GDPR Compliance
-
-All file processing occurs **entirely within the client's web browser memory**. No survey responses, participant data, or uploaded spreadsheets are transmitted across the network or stored on GitHub servers.
+Developed for the **JA-MENTOR (Joint Action on Mental Health)** Consortium.
