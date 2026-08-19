@@ -29,17 +29,19 @@ class TestMasterDictionary(unittest.TestCase):
             self.ref_opts = list(csv.DictReader(f))
 
     def test_variable_and_option_counts(self):
-        self.assertEqual(len(self.ref_vars), 229, "Expected 229 reference variables")
-        self.assertEqual(len(self.ref_opts), 1148, "Expected 1,148 reference options")
+        n_vars = len(self.ref_vars)
+        n_opts = len(self.ref_opts)
+        self.assertEqual(n_vars, 143, "Expected 143 canonical reference variables")
+        self.assertEqual(n_opts, 756, "Expected 756 canonical reference options")
 
         extracted_vars = self.data["variables"]
-        self.assertEqual(len(extracted_vars), 229, f"Extracted {len(extracted_vars)} variables, expected 229")
+        self.assertEqual(len(extracted_vars), n_vars, f"Extracted {len(extracted_vars)} variables, expected {n_vars}")
 
         total_extracted_options = sum(len(v["options"]) for v in extracted_vars)
-        self.assertEqual(total_extracted_options, 1148, f"Extracted {total_extracted_options} options, expected 1148")
+        self.assertEqual(total_extracted_options, n_opts, f"Extracted {total_extracted_options} options, expected {n_opts}")
 
-        self.assertEqual(self.data["metadata"]["total_variables"], 229)
-        self.assertEqual(self.data["metadata"]["total_options"], 1148)
+        self.assertEqual(self.data["metadata"]["total_variables"], n_vars)
+        self.assertEqual(self.data["metadata"]["total_options"], n_opts)
 
     def test_variable_metadata_fidelity(self):
         var_by_name = {v["variable"]: v for v in self.data["variables"]}

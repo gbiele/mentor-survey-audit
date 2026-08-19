@@ -5,3 +5,7 @@ __pycache__/
 
 /.quarto/
 **/*.quarto_ipynb
+
+# Survey data files (confidential / raw exports)
+data/
+docs/data/

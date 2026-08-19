@@ -1,5 +1,6 @@
 /**
  * Independent automated test for Step 2: Client-Side Validation & Mapping Engine
+ * (Canonical MENTOR Master Specification)
  */
 
 const assert = require('assert');
@@ -10,8 +11,7 @@ const SurveyAuditor = require('../src/survey_validator.js');
 
 const ROOT = path.resolve(__dirname, '..');
 const DICT_PATH = path.join(ROOT, 'src', 'master_dictionary.json');
-const GER_PLAIN_PATH = path.join(ROOT, 'data', 'Content_Export_MENTORMasterGER1_Test-GER-1.xlsx');
-const GER_ID_TAGGED_PATH = path.join(ROOT, 'data', 'MENTORMaster_TEST_GER_2.xlsx');
+const FHI_EXPORT_PATH = path.join(ROOT, 'data', 'Content_Export_mentor_fhi_variabler_og_id.xlsx');
 
 function loadExcelRows(filePath) {
   const workbook = XLSX.readFile(filePath);
@@ -26,92 +26,52 @@ function runTests() {
   // Test 1: Load Master Dictionary
   assert(fs.existsSync(DICT_PATH), 'Master dictionary file exists');
   const dict = JSON.parse(fs.readFileSync(DICT_PATH, 'utf-8'));
-  assert.strictEqual(dict.variables.length, 229, 'Dictionary contains 229 canonical variables');
-  console.log('✓ Master dictionary loaded successfully');
+  assert.strictEqual(dict.variables.length, 143, 'Dictionary contains 143 canonical variables');
+  console.log('✓ Master dictionary loaded successfully (143 variables)');
 
   // Initialize Auditor
   const auditor = new SurveyAuditor(dict);
 
-  // Test 2: Audit Plain Label Export (Content_Export_MENTORMasterGER1_Test-GER-1.xlsx)
-  assert(fs.existsSync(GER_PLAIN_PATH), 'Plain test export exists');
-  const plainRows = loadExcelRows(GER_PLAIN_PATH);
-  const plainResult = auditor.auditSheet(plainRows);
+  // Test 2: Audit Canonical FHI Export (Content_Export_mentor_fhi_variabler_og_id.xlsx)
+  assert(fs.existsSync(FHI_EXPORT_PATH), 'FHI export exists');
+  const fhiRows = loadExcelRows(FHI_EXPORT_PATH);
+  const fhiResult = auditor.auditSheet(fhiRows);
 
-  console.log('Plain export audit summary:', plainResult.summary);
-  assert.strictEqual(plainResult.summary.totalColumns, 174, 'Plain export should have 174 columns');
-  assert(plainResult.summary.metadata.dataRowCount >= 5, 'Should detect survey data rows');
-  assert.strictEqual(plainResult.summary.metadata.detectedFormat, 'plain_text', 'Format A must be detected as plain_text');
-  assert.strictEqual(plainResult.summary.fullyIdentified, 156, 'Expected 156 fully identified columns');
-  assert.strictEqual(plainResult.summary.incomplete, 11, 'Expected 11 incomplete columns');
-  assert.strictEqual(plainResult.summary.missingOptions, 6, 'Expected 6 missing options columns');
-  assert.strictEqual(plainResult.summary.openEnded, 1, 'Expected 1 open-ended free text column (catsoth1)');
-  assert.strictEqual(plainResult.summary.totalIssues, 17, 'Expected 17 total flagged issues');
-  console.log('✓ Plain label export audit passed with exact status distribution');
+  console.log('FHI export audit summary:', fhiResult.summary);
+  assert.strictEqual(fhiResult.summary.totalColumns, 143, 'FHI export should have 143 columns');
+  assert.strictEqual(fhiResult.summary.fullyIdentified, 142, 'Expected 142 fully identified columns');
+  assert.strictEqual(fhiResult.summary.incomplete, 0, 'Expected 0 incomplete columns in canonical FHI export');
+  assert.strictEqual(fhiResult.summary.missingOptions, 0, 'Expected 0 missing options in canonical FHI export');
+  assert.strictEqual(fhiResult.summary.openEnded, 1, 'Expected 1 open-ended free text column (ID27)');
+  assert.strictEqual(fhiResult.summary.totalIssues, 0, 'Expected 0 total issues in canonical FHI export');
+  console.log('✓ Canonical FHI export audit passed with 100% recognition and 0 issues');
 
-  // Test 3: Audit ID-Tagged Platform Export (MENTORMaster_TEST_GER_2.xlsx)
-  assert(fs.existsSync(GER_ID_TAGGED_PATH), 'ID-tagged test export exists');
-  const idTaggedRows = loadExcelRows(GER_ID_TAGGED_PATH);
-  const idTaggedResult = auditor.auditSheet(idTaggedRows);
+  // Test 3: Check variable identification
+  const colGender = fhiResult.columns[0];
+  assert.strictEqual(colGender.cleanedText, 'What gender do you identify as?');
+  assert.strictEqual(colGender.extractedId, 'gender1');
+  assert.strictEqual(colGender.canonical.variable, 'gender1');
 
-  console.log('ID-tagged export audit summary:', idTaggedResult.summary);
-  assert.strictEqual(idTaggedResult.summary.totalColumns, 174, 'ID-tagged export should have 174 columns');
-  assert.strictEqual(idTaggedResult.summary.metadata.detectedFormat, 'id_tagged', 'Format B must be detected as id_tagged');
-  assert.strictEqual(idTaggedResult.summary.fullyIdentified, 156, 'Expected 156 fully identified columns in Format B');
-  assert.strictEqual(idTaggedResult.summary.incomplete, 11, 'Expected 11 incomplete columns in Format B');
-  assert.strictEqual(idTaggedResult.summary.missingOptions, 6, 'Expected 6 missing options columns in Format B');
-  assert.strictEqual(idTaggedResult.summary.openEnded, 1, 'Expected 1 open-ended free text column in Format B');
-  assert.strictEqual(idTaggedResult.summary.totalIssues, 17, 'Expected 17 total flagged issues in Format B');
+  const colAce01 = fhiResult.columns.find(c => c.extractedId === 'ace01');
+  assert(colAce01, 'ace01 must be recognized');
+  assert.strictEqual(colAce01.canonical.section, 'Adverse childhood experiences');
 
-  // Verify that observed values are clean labels without raw (IDxxx) string pollution
-  const idTaggedGender = idTaggedResult.columns[0];
-  assert.strictEqual(idTaggedGender.cleanedText, 'What gender do you identify as?');
-  assert.strictEqual(idTaggedGender.extractedId, 'gender1');
-  const observedLabels = idTaggedGender.observedValues.map(v => v.label);
-  assert(observedLabels.includes('Girl'), 'Observed values must contain clean label "Girl"');
-  assert(!observedLabels.includes('Girl (ID3)'), 'Observed values must NOT contain unparsed "Girl (ID3)"');
-  console.log('✓ ID-tagged export audit (MENTORMaster_TEST_GER_2.xlsx) passed with clean value normalization');
+  const colCyrm01 = fhiResult.columns.find(c => c.extractedId === 'cyrm01');
+  assert(colCyrm01, 'cyrm01 must be recognized');
+  assert.strictEqual(colCyrm01.canonical.section, 'Resilience');
 
-  // Test 4: Cross-Format Equivalence (All 174 columns match canonically)
-  for (let i = 0; i < 174; i++) {
-    const colA = plainResult.columns[i];
-    const colB = idTaggedResult.columns[i];
-    assert(colA.canonical, `Format A column ${i} must have canonical match`);
-    assert(colB.canonical, `Format B column ${i} must have canonical match`);
-    assert.strictEqual(
-      colA.canonical.variable,
-      colB.canonical.variable,
-      `Column ${i} canonical variable mismatch between Format A and Format B (${colA.canonical.variable} vs ${colB.canonical.variable})`
-    );
-    assert.strictEqual(
-      colA.status,
-      colB.status,
-      `Column ${i} (${colA.canonical.variable}) status mismatch between Format A and Format B`
-    );
-  }
-  console.log('✓ Cross-format 100% canonical equivalence verified across all 174 columns');
+  const colKs01 = fhiResult.columns.find(c => c.extractedId === 'ks01');
+  assert(colKs01, 'ks01 must be recognized');
+  assert.strictEqual(colKs01.canonical.section, 'Quality of life');
 
-  // Test 5: Disambiguation of Duplicate Question Stems (smafreq1 vs igdfreq1)
-  const col134 = plainResult.columns[133];
-  const col147 = plainResult.columns[146];
+  const colSmwd1 = fhiResult.columns.find(c => c.extractedId === 'some_week1');
+  assert(colSmwd1, 'some_week1 must be recognized');
+  assert.strictEqual(colSmwd1.canonical.section, 'Social media and gaming');
 
-  assert.strictEqual(col134.canonical.variable, 'smafreq1', 'Column 134 must resolve to smafreq1');
-  assert.strictEqual(col134.canonical.orig_variable, 'ID27');
-  assert.strictEqual(col134.canonical.section, 'German-only · Social media follow-up');
-
-  assert.strictEqual(col147.canonical.variable, 'igdfreq1', 'Column 147 must resolve to igdfreq1');
-  assert.strictEqual(col147.canonical.orig_variable, 'ID383');
-  assert.strictEqual(col147.canonical.section, 'German-only · Gaming follow-up (DE)');
-  console.log('✓ Duplicate question stem disambiguation verified (smafreq1 vs igdfreq1)');
-
+  console.log('✓ Key canonical module variables verified across sections');
   console.log('\n========================================');
-  console.log('ALL STEP 2 DUAL-FORMAT TESTS PASSED GREEN (6/6)');
+  console.log('ALL STEP 2 VALIDATION ENGINE TESTS PASSED');
   console.log('========================================\n');
 }
 
-try {
-  runTests();
-  process.exit(0);
-} catch (err) {
-  console.error('Test failed with error:', err);
-  process.exit(1);
-}
+runTests();

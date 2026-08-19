@@ -123,7 +123,20 @@ def build_master_dictionary():
     with open(OUT_FILE, "w", encoding="utf-8") as f:
         json.dump(master_dict, f, indent=2, ensure_ascii=False)
 
-    print(f"Extracted {len(variables)} variables and {len(opts_rows)} options into {OUT_FILE}")
+    # Also bundle as JS for browser usage
+    bundle_file = ROOT / "src" / "master_dictionary_bundle.js"
+    with open(bundle_file, "w", encoding="utf-8") as f:
+        f.write(f"window.__MASTER_DICTIONARY__ = {json.dumps(master_dict, ensure_ascii=False)};\n")
+
+    # Mirror to docs/ if present
+    docs_dir = ROOT / "docs" / "src"
+    if docs_dir.exists():
+        with open(docs_dir / "master_dictionary.json", "w", encoding="utf-8") as f:
+            json.dump(master_dict, f, indent=2, ensure_ascii=False)
+        with open(docs_dir / "master_dictionary_bundle.js", "w", encoding="utf-8") as f:
+            f.write(f"window.__MASTER_DICTIONARY__ = {json.dumps(master_dict, ensure_ascii=False)};\n")
+
+    print(f"Extracted {len(variables)} variables and {len(opts_rows)} options into {OUT_FILE} and bundles.")
     return master_dict
 
 
