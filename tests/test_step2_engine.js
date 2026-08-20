@@ -10,7 +10,7 @@ const XLSX = require('xlsx');
 const SurveyAuditor = require('../src/survey_validator.js');
 
 const ROOT = path.resolve(__dirname, '..');
-const DICT_PATH = path.join(ROOT, 'src', 'master_dictionary.json');
+const DICT_PATH = path.join(ROOT, 'data', 'master_dictionary.json');
 const FHI_EXPORT_PATH = path.join(ROOT, 'data', 'Content_Export_mentor_fhi_variabler_og_id.xlsx');
 const GER_EXPORT_PATH = path.join(ROOT, 'data', 'MENTORMaster_TEST_GER_2.xlsx');
 

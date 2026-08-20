@@ -95,7 +95,7 @@ body {
 .app-header {
   position: relative;
   background-color: #253368;
-  background-image: linear-gradient(rgba(20, 28, 61, 0.45), rgba(20, 28, 61, 0.75)), url('ja_mentor_bg.jpg');
+  background-image: linear-gradient(rgba(20, 28, 61, 0.45), rgba(20, 28, 61, 0.75)), url('../assets/ja_mentor_bg.jpg');
   background-size: cover;
   background-position: center center;
   color: #ffffff;

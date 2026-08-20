@@ -6,10 +6,10 @@ const SurveyAuditor = require('../src/survey_validator.js');
 
 console.log('--- Starting Step 3 Matrix Grouping Test Suite ---');
 
-const masterDict = JSON.parse(fs.readFileSync('./src/master_dictionary.json', 'utf-8'));
+const masterDict = JSON.parse(fs.readFileSync(path.join(__dirname, '../data/master_dictionary.json'), 'utf-8'));
 const auditor = new SurveyAuditor(masterDict);
 
-const wb = XLSX.readFile('./data/Content_Export_mentor_fhi_variabler_og_id.xlsx');
+const wb = XLSX.readFile(path.join(__dirname, '../data/Content_Export_mentor_fhi_variabler_og_id.xlsx'));
 const sheet = wb.Sheets[wb.SheetNames[0]];
 const rows = XLSX.utils.sheet_to_json(sheet, { header: 1 });
 const auditResult = auditor.auditSheet(rows);

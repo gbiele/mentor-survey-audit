@@ -7,7 +7,7 @@ import unittest
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-DICT_FILE = ROOT / "src" / "master_dictionary.json"
+DICT_FILE = ROOT / "data" / "master_dictionary.json"
 VARS_CSV = ROOT / "reference" / "output" / "codebook_variables.csv"
 OPTS_CSV = ROOT / "reference" / "output" / "codebook_options.csv"
 

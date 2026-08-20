@@ -31,7 +31,7 @@
       let dictData = window.__MASTER_DICTIONARY__;
       if (!dictData) {
         // Fetch local JSON if not pre-embedded
-        const res = await fetch('src/master_dictionary.json');
+        const res = await fetch('data/master_dictionary.json');
         dictData = await res.json();
       }
       auditor = new SurveyAuditor(dictData);

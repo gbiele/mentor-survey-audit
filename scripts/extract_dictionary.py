@@ -8,7 +8,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 DATA_DIR = ROOT / "data"
 REF_OUT_DIR = ROOT / "reference" / "output"
-OUT_FILE = ROOT / "src" / "master_dictionary.json"
+OUT_FILE = ROOT / "data" / "master_dictionary.json"
 
 SPECIAL_CODES = {997: "Not applicable", 998: "Don't know", 999: "Prefer not to answer"}
 
@@ -135,11 +135,15 @@ def build_master_dictionary():
         f.write(f"window.__MASTER_DICTIONARY__ = {json.dumps(master_dict, ensure_ascii=False)};\n")
 
     # Mirror to docs/ if present
-    docs_dir = ROOT / "docs" / "src"
-    if docs_dir.exists():
-        with open(docs_dir / "master_dictionary.json", "w", encoding="utf-8") as f:
+    docs_data_dir = ROOT / "docs" / "data"
+    docs_src_dir = ROOT / "docs" / "src"
+    if docs_data_dir.exists() or (ROOT / "docs").exists():
+        docs_data_dir.mkdir(parents=True, exist_ok=True)
+        with open(docs_data_dir / "master_dictionary.json", "w", encoding="utf-8") as f:
             json.dump(master_dict, f, indent=2, ensure_ascii=False)
-        with open(docs_dir / "master_dictionary_bundle.js", "w", encoding="utf-8") as f:
+    if docs_src_dir.exists() or (ROOT / "docs").exists():
+        docs_src_dir.mkdir(parents=True, exist_ok=True)
+        with open(docs_src_dir / "master_dictionary_bundle.js", "w", encoding="utf-8") as f:
             f.write(f"window.__MASTER_DICTIONARY__ = {json.dumps(master_dict, ensure_ascii=False)};\n")
 
     print(f"Extracted {len(variables)} variables and {len(opts_rows)} options into {OUT_FILE} and bundles.")

@@ -16,7 +16,7 @@ ROOT = Path(__file__).resolve().parent.parent
 DATA_DIR = ROOT / "data"
 SRC_DIR = ROOT / "src"
 TEMPLATE_FILE = DATA_DIR / "Content_Export_MENTORMasterGER1_Test-GER-1.xlsx"
-DICT_FILE = SRC_DIR / "master_dictionary.json"
+DICT_FILE = DATA_DIR / "master_dictionary.json"
 
 random.seed(42)  # Deterministic generation
 
