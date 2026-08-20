@@ -94,8 +94,8 @@
       "keywords": [
         "gender identity",
         "gender",
-        "sex",
         "demographics",
+        "sex",
         "identity"
       ]
     },
@@ -184,11 +184,11 @@
         }
       ],
       "keywords": [
+        "ethnic identity",
+        "cultural identity",
         "identity",
-        "social identity",
-        "self-concept",
         "demographics",
-        "personal identity"
+        "ethnicity"
       ]
     },
     {
@@ -298,12 +298,11 @@
         }
       ],
       "keywords": [
+        "school grade",
         "grade level",
         "education",
-        "school",
-        "academic achievement",
         "demographics",
-        "student"
+        "academic year"
       ]
     },
     {
@@ -460,7 +459,8 @@
         "birth year",
         "age",
         "demographics",
-        "year of birth"
+        "date of birth",
+        "dob"
       ]
     },
     {
@@ -615,8 +615,9 @@
       ],
       "keywords": [
         "birth month",
+        "age",
         "demographics",
-        "month of birth"
+        "date of birth"
       ]
     },
     {
@@ -1222,10 +1223,10 @@
       ],
       "keywords": [
         "place of birth",
-        "birthplace",
-        "demographics",
         "country of origin",
-        "nationality"
+        "demographics",
+        "nativity",
+        "immigration"
       ]
     },
     {
@@ -1456,11 +1457,11 @@
         }
       ],
       "keywords": [
-        "immigration age",
+        "age at immigration",
+        "immigration",
         "migration",
-        "demographics",
         "acculturation",
-        "age of arrival"
+        "demographics"
       ]
     },
     {
@@ -2065,11 +2066,11 @@
         }
       ],
       "keywords": [
-        "maternal origin",
-        "parental origin",
+        "maternal birthplace",
+        "mother nativity",
+        "parental immigration",
         "demographics",
-        "mother's birthplace",
-        "family background"
+        "family origin"
       ]
     },
     {
@@ -2674,11 +2675,11 @@
         }
       ],
       "keywords": [
-        "paternal origin",
-        "parental origin",
+        "paternal birthplace",
+        "father nativity",
+        "parental immigration",
         "demographics",
-        "father's birthplace",
-        "family background"
+        "family origin"
       ]
     },
     {
@@ -2755,11 +2756,11 @@
         }
       ],
       "keywords": [
-        "household composition",
-        "living situation",
-        "family structure",
-        "cohabitation",
-        "demographics"
+        "living arrangement",
+        "household structure",
+        "family composition",
+        "demographics",
+        "home environment"
       ]
     },
     {
@@ -2825,10 +2826,10 @@
         }
       ],
       "keywords": [
-        "household composition",
-        "living arrangements",
-        "parental figures",
-        "family structure",
+        "household adults",
+        "living situation",
+        "caregivers",
+        "parental presence",
         "demographics"
       ]
     },
@@ -2885,10 +2886,9 @@
       ],
       "keywords": [
         "living situation",
+        "housing arrangement",
         "family structure",
-        "household composition",
-        "demographics",
-        "relationship status"
+        "demographics"
       ]
     },
     {
@@ -2943,10 +2943,10 @@
         }
       ],
       "keywords": [
+        "maternal partner",
+        "stepfamily",
         "family structure",
-        "parental relationships",
         "blended family",
-        "step-parent",
         "demographics"
       ]
     },
@@ -3002,10 +3002,10 @@
         }
       ],
       "keywords": [
+        "paternal partner",
+        "stepfamily",
         "family structure",
-        "parental relationships",
         "blended family",
-        "step-parent",
         "demographics"
       ]
     },
@@ -3072,11 +3072,11 @@
         }
       ],
       "keywords": [
-        "sibling count",
+        "siblings",
         "family size",
-        "family structure",
-        "household composition",
-        "demographics"
+        "household size",
+        "demographics",
+        "brothers and sisters"
       ]
     },
     {
@@ -3164,10 +3164,10 @@
         }
       ],
       "keywords": [
+        "maternal education",
         "parental education",
         "socioeconomic status",
-        "educational attainment",
-        "family background",
+        "ses",
         "demographics"
       ]
     },
@@ -3256,10 +3256,10 @@
         }
       ],
       "keywords": [
+        "paternal education",
         "parental education",
         "socioeconomic status",
-        "educational attainment",
-        "family background",
+        "ses",
         "demographics"
       ]
     },
@@ -3414,11 +3414,11 @@
         }
       ],
       "keywords": [
+        "macarthur",
         "subjective social status",
         "socioeconomic status",
-        "macarthur scale",
-        "social class",
-        "perceived social status",
+        "ses",
+        "social ladder",
         "family wealth"
       ]
     },
@@ -3485,12 +3485,12 @@
         }
       ],
       "keywords": [
-        "financial strain",
-        "economic hardship",
+        "financial security",
+        "family affluence",
         "socioeconomic status",
-        "financial well-being",
-        "family income",
-        "affordability"
+        "ses",
+        "perceived wealth",
+        "poverty"
       ]
     },
     {
@@ -3545,12 +3545,12 @@
         }
       ],
       "keywords": [
-        "inattention",
-        "hyperactivity",
-        "impulsivity",
+        "bcfpi",
         "adhd",
-        "attention deficit hyperactivity disorder",
-        "bcfpi"
+        "inattention",
+        "task completion",
+        "attention deficit",
+        "focus"
       ]
     },
     {
@@ -3605,12 +3605,12 @@
         }
       ],
       "keywords": [
-        "inattention",
-        "hyperactivity",
-        "impulsivity",
+        "bcfpi",
         "adhd",
-        "attention deficit hyperactivity disorder",
-        "bcfpi"
+        "distractibility",
+        "inattention",
+        "attention span",
+        "focus"
       ]
     },
     {
@@ -3665,12 +3665,12 @@
         }
       ],
       "keywords": [
+        "bcfpi",
+        "adhd",
         "inattention",
         "hyperactivity",
-        "impulsivity",
-        "adhd",
-        "attention deficit hyperactivity disorder",
-        "bcfpi"
+        "restlessness",
+        "task switching"
       ]
     },
     {
@@ -3725,12 +3725,11 @@
         }
       ],
       "keywords": [
-        "inattention",
-        "hyperactivity",
-        "impulsivity",
+        "bcfpi",
         "adhd",
-        "attention deficit hyperactivity disorder",
-        "bcfpi"
+        "inattention",
+        "following instructions",
+        "executive function"
       ]
     },
     {
@@ -3785,12 +3784,12 @@
         }
       ],
       "keywords": [
-        "inattention",
-        "hyperactivity",
-        "impulsivity",
+        "bcfpi",
         "adhd",
-        "attention deficit hyperactivity disorder",
-        "bcfpi"
+        "impulsivity",
+        "self-control",
+        "inhibitory control",
+        "rash action"
       ]
     },
     {
@@ -3845,12 +3844,12 @@
         }
       ],
       "keywords": [
-        "inattention",
-        "hyperactivity",
-        "impulsivity",
+        "bcfpi",
         "adhd",
-        "attention deficit hyperactivity disorder",
-        "bcfpi"
+        "hyperactivity",
+        "fidgeting",
+        "restlessness",
+        "motor activity"
       ]
     },
     {
@@ -3905,12 +3904,12 @@
         }
       ],
       "keywords": [
-        "oppositional defiant disorder",
-        "conduct problems",
-        "aggression",
-        "defiance",
-        "irritability",
-        "bcfpi"
+        "bcfpi",
+        "externalizing",
+        "oppositional defiant",
+        "blame",
+        "accountability",
+        "conduct"
       ]
     },
     {
@@ -3965,12 +3964,12 @@
         }
       ],
       "keywords": [
-        "oppositional defiant disorder",
-        "conduct problems",
-        "aggression",
-        "defiance",
+        "bcfpi",
         "irritability",
-        "bcfpi"
+        "anger",
+        "oppositional defiant",
+        "mood",
+        "temperament"
       ]
     },
     {
@@ -4025,12 +4024,12 @@
         }
       ],
       "keywords": [
-        "oppositional defiant disorder",
-        "conduct problems",
-        "aggression",
-        "defiance",
-        "irritability",
-        "bcfpi"
+        "bcfpi",
+        "temper tantrums",
+        "anger",
+        "emotional dysregulation",
+        "oppositional defiant",
+        "outbursts"
       ]
     },
     {
@@ -4085,12 +4084,12 @@
         }
       ],
       "keywords": [
-        "oppositional defiant disorder",
-        "conduct problems",
-        "aggression",
+        "bcfpi",
         "defiance",
-        "irritability",
-        "bcfpi"
+        "oppositional defiant",
+        "noncompliance",
+        "cooperation",
+        "conduct"
       ]
     },
     {
@@ -4145,12 +4144,12 @@
         }
       ],
       "keywords": [
-        "oppositional defiant disorder",
-        "conduct problems",
-        "aggression",
+        "bcfpi",
+        "argumentativeness",
+        "oppositional defiant",
         "defiance",
-        "irritability",
-        "bcfpi"
+        "talking back",
+        "authority conflict"
       ]
     },
     {
@@ -4205,12 +4204,12 @@
         }
       ],
       "keywords": [
-        "oppositional defiant disorder",
-        "conduct problems",
-        "aggression",
-        "defiance",
-        "irritability",
-        "bcfpi"
+        "bcfpi",
+        "resentment",
+        "spitefulness",
+        "vindictiveness",
+        "oppositional defiant",
+        "anger"
       ]
     },
     {
@@ -4265,12 +4264,12 @@
         }
       ],
       "keywords": [
+        "bcfpi",
         "generalized anxiety",
         "anxiety",
-        "worry",
         "nervousness",
-        "fear of failure",
-        "bcfpi"
+        "worry",
+        "gad"
       ]
     },
     {
@@ -4325,12 +4324,12 @@
         }
       ],
       "keywords": [
-        "generalized anxiety",
-        "anxiety",
+        "bcfpi",
+        "perfectionism",
+        "performance anxiety",
         "worry",
-        "nervousness",
-        "fear of failure",
-        "bcfpi"
+        "achievement stress",
+        "anxiety"
       ]
     },
     {
@@ -4385,12 +4384,12 @@
         }
       ],
       "keywords": [
-        "generalized anxiety",
+        "bcfpi",
+        "rumination",
+        "guilt",
         "anxiety",
-        "worry",
-        "nervousness",
-        "fear of failure",
-        "bcfpi"
+        "regret",
+        "worry"
       ]
     },
     {
@@ -4445,12 +4444,12 @@
         }
       ],
       "keywords": [
-        "generalized anxiety",
+        "bcfpi",
+        "moral anxiety",
+        "fear of making mistakes",
         "anxiety",
-        "worry",
-        "nervousness",
-        "fear of failure",
-        "bcfpi"
+        "scrupulosity",
+        "worry"
       ]
     },
     {
@@ -4505,12 +4504,12 @@
         }
       ],
       "keywords": [
+        "bcfpi",
+        "anticipatory anxiety",
         "generalized anxiety",
-        "anxiety",
-        "worry",
-        "nervousness",
-        "fear of failure",
-        "bcfpi"
+        "future worry",
+        "gad",
+        "worry"
       ]
     },
     {
@@ -4565,12 +4564,12 @@
         }
       ],
       "keywords": [
-        "generalized anxiety",
-        "anxiety",
-        "worry",
-        "nervousness",
+        "bcfpi",
         "fear of failure",
-        "bcfpi"
+        "perfectionism",
+        "anxiety",
+        "error sensitivity",
+        "mistakes"
       ]
     },
     {
@@ -4625,12 +4624,12 @@
         }
       ],
       "keywords": [
+        "bcfpi",
         "social anxiety",
-        "social phobia",
-        "shyness",
-        "social avoidance",
         "embarrassment",
-        "bcfpi"
+        "social phobia",
+        "social fear",
+        "sad"
       ]
     },
     {
@@ -4685,12 +4684,12 @@
         }
       ],
       "keywords": [
+        "bcfpi",
         "social anxiety",
+        "self-consciousness",
+        "fear of scrutiny",
         "social phobia",
-        "shyness",
-        "social avoidance",
-        "embarrassment",
-        "bcfpi"
+        "sad"
       ]
     },
     {
@@ -4745,12 +4744,12 @@
         }
       ],
       "keywords": [
+        "bcfpi",
         "social anxiety",
-        "social phobia",
-        "shyness",
+        "eye contact",
+        "conversation anxiety",
         "social avoidance",
-        "embarrassment",
-        "bcfpi"
+        "social inhibition"
       ]
     },
     {
@@ -4805,12 +4804,12 @@
         }
       ],
       "keywords": [
-        "social anxiety",
-        "social phobia",
-        "shyness",
+        "bcfpi",
         "social avoidance",
-        "embarrassment",
-        "bcfpi"
+        "social anxiety",
+        "escape behavior",
+        "social withdrawal",
+        "social phobia"
       ]
     },
     {
@@ -4865,12 +4864,12 @@
         }
       ],
       "keywords": [
+        "bcfpi",
+        "social avoidance",
+        "school avoidance",
         "social anxiety",
         "social phobia",
-        "shyness",
-        "social avoidance",
-        "embarrassment",
-        "bcfpi"
+        "gatherings"
       ]
     },
     {
@@ -4925,12 +4924,12 @@
         }
       ],
       "keywords": [
+        "bcfpi",
+        "somatic anxiety",
         "social anxiety",
-        "social phobia",
-        "shyness",
-        "social avoidance",
-        "embarrassment",
-        "bcfpi"
+        "palpitations",
+        "physiological arousal",
+        "panic symptoms"
       ]
     },
     {
@@ -4985,12 +4984,12 @@
         }
       ],
       "keywords": [
+        "bcfpi",
         "depression",
-        "depressive symptoms",
         "sadness",
-        "anhedonia",
-        "hopelessness",
-        "bcfpi"
+        "depressed mood",
+        "unhappiness",
+        "internalizing"
       ]
     },
     {
@@ -5045,12 +5044,12 @@
         }
       ],
       "keywords": [
-        "depression",
-        "depressive symptoms",
-        "sadness",
+        "bcfpi",
         "anhedonia",
-        "hopelessness",
-        "bcfpi"
+        "loss of pleasure",
+        "depression",
+        "loss of interest",
+        "internalizing"
       ]
     },
     {
@@ -5105,12 +5104,12 @@
         }
       ],
       "keywords": [
-        "depression",
-        "depressive symptoms",
-        "sadness",
+        "bcfpi",
+        "apathy",
         "anhedonia",
-        "hopelessness",
-        "bcfpi"
+        "loss of interest",
+        "depression",
+        "unmotivated"
       ]
     },
     {
@@ -5165,12 +5164,12 @@
         }
       ],
       "keywords": [
+        "bcfpi",
+        "loneliness",
+        "social isolation",
         "depression",
-        "depressive symptoms",
-        "sadness",
-        "anhedonia",
-        "hopelessness",
-        "bcfpi"
+        "feeling lost",
+        "alienation"
       ]
     },
     {
@@ -5225,12 +5224,12 @@
         }
       ],
       "keywords": [
+        "bcfpi",
+        "relative unhappiness",
         "depression",
-        "depressive symptoms",
-        "sadness",
-        "anhedonia",
-        "hopelessness",
-        "bcfpi"
+        "subjective well-being",
+        "low mood",
+        "life satisfaction"
       ]
     },
     {
@@ -5285,12 +5284,12 @@
         }
       ],
       "keywords": [
-        "depression",
-        "depressive symptoms",
-        "sadness",
-        "anhedonia",
+        "bcfpi",
         "hopelessness",
-        "bcfpi"
+        "depression",
+        "pessimism",
+        "despair",
+        "internalizing"
       ]
     },
     {
@@ -5345,11 +5344,11 @@
         }
       ],
       "keywords": [
-        "emotional dysregulation",
-        "affect regulation",
-        "emotional control",
-        "impulsivity",
         "bcfpi",
+        "affect dysregulation",
+        "emotion regulation",
+        "emotional lability",
+        "impulse control",
         "mood swings"
       ]
     },
@@ -5405,12 +5404,11 @@
         }
       ],
       "keywords": [
-        "emotional regulation",
-        "affect regulation",
-        "distress tolerance",
         "bcfpi",
-        "difficulty calming down",
-        "getting upset"
+        "emotional dysregulation",
+        "affect regulation",
+        "calming down",
+        "anger control"
       ]
     },
     {
@@ -5465,12 +5463,11 @@
         }
       ],
       "keywords": [
-        "emotional dysregulation",
-        "emotional control",
-        "helplessness",
         "bcfpi",
-        "feelings taking over",
-        "overwhelmed by emotions"
+        "emotional overwhelm",
+        "loss of control",
+        "affect regulation",
+        "feelings"
       ]
     },
     {
@@ -5525,12 +5522,11 @@
         }
       ],
       "keywords": [
+        "bcfpi",
         "emotional avoidance",
         "thought suppression",
         "coping mechanisms",
-        "bcfpi",
-        "avoiding feelings",
-        "not thinking about emotions"
+        "feelings"
       ]
     },
     {
@@ -5585,12 +5581,11 @@
         }
       ],
       "keywords": [
+        "bcfpi",
         "emotional suppression",
         "emotional control",
-        "coping strategies",
-        "bcfpi",
-        "keeping feelings in control",
-        "emotional restraint"
+        "cognitive avoidance",
+        "affect regulation"
       ]
     },
     {
@@ -5645,12 +5640,11 @@
         }
       ],
       "keywords": [
-        "emotional suppression",
-        "emotional expression",
-        "social withdrawal",
         "bcfpi",
-        "keeping feelings private",
-        "bottling up emotions"
+        "internalizing",
+        "emotional suppression",
+        "bottling up feelings",
+        "affect regulation"
       ]
     },
     {
@@ -5705,12 +5699,11 @@
         }
       ],
       "keywords": [
-        "social relationships",
-        "peer relationships",
-        "friendship maintenance",
         "bcfpi",
-        "trouble with friends",
-        "losing friends"
+        "peer relationships",
+        "making friends",
+        "social functioning",
+        "friendship difficulty"
       ]
     },
     {
@@ -5765,12 +5758,11 @@
         }
       ],
       "keywords": [
-        "peer relationships",
-        "social interaction",
-        "social difficulties",
         "bcfpi",
-        "trouble with peers",
-        "not getting along with others"
+        "peer relations",
+        "social skills",
+        "social conflict",
+        "getting along"
       ]
     },
     {
@@ -5825,12 +5817,11 @@
         }
       ],
       "keywords": [
-        "family relationships",
-        "family conflict",
-        "interpersonal relationships",
         "bcfpi",
-        "family problems",
-        "not getting along with family"
+        "family conflict",
+        "family functioning",
+        "family relations",
+        "interpersonal conflict"
       ]
     },
     {
@@ -5885,12 +5876,11 @@
         }
       ],
       "keywords": [
-        "adult relationships",
-        "authority figures",
-        "interpersonal conflict",
         "bcfpi",
-        "trouble with adults",
-        "adult relationship problems"
+        "authority figures",
+        "adult relationships",
+        "interpersonal conflict",
+        "social functioning"
       ]
     },
     {
@@ -5945,12 +5935,11 @@
         }
       ],
       "keywords": [
-        "functional impairment",
-        "daily activities",
-        "extracurricular activities",
         "bcfpi",
-        "trouble with activities",
-        "difficulty with sports"
+        "extracurricular activities",
+        "sports",
+        "functional impairment",
+        "hobbies"
       ]
     },
     {
@@ -6005,12 +5994,12 @@
         }
       ],
       "keywords": [
-        "functional impairment",
-        "daily living skills",
-        "routine difficulties",
         "bcfpi",
-        "trouble with daily routines",
-        "difficulty with chores"
+        "activities of daily living",
+        "daily routines",
+        "functional impairment",
+        "morning routine",
+        "chores"
       ]
     },
     {
@@ -6065,12 +6054,11 @@
         }
       ],
       "keywords": [
-        "social isolation",
-        "social withdrawal",
-        "loneliness",
         "bcfpi",
-        "self-isolation",
-        "staying alone"
+        "social isolation",
+        "withdrawal",
+        "loneliness",
+        "self-isolation"
       ]
     },
     {
@@ -6125,13 +6113,11 @@
         }
       ],
       "keywords": [
-        "screen time",
-        "internet addiction",
-        "media use",
         "bcfpi",
-        "igd",
-        "excessive gaming",
-        "internet overuse"
+        "screen time",
+        "video games",
+        "internet use",
+        "excessive television"
       ]
     },
     {
@@ -6186,12 +6172,11 @@
         }
       ],
       "keywords": [
-        "peer relationships",
-        "school environment",
-        "social difficulties",
         "bcfpi",
-        "trouble with classmates",
-        "student conflict"
+        "peer conflict",
+        "school adjustment",
+        "classmates",
+        "social difficulties"
       ]
     },
     {
@@ -6246,12 +6231,11 @@
         }
       ],
       "keywords": [
-        "teacher-student relationships",
-        "school environment",
-        "authority figures",
         "bcfpi",
-        "trouble with teachers",
-        "teacher conflict"
+        "teacher relations",
+        "authority conflict",
+        "school adjustment",
+        "classroom behavior"
       ]
     },
     {
@@ -6306,12 +6290,11 @@
         }
       ],
       "keywords": [
-        "school attendance",
-        "truancy",
-        "absenteeism",
         "bcfpi",
+        "truancy",
+        "school absenteeism",
         "skipping school",
-        "missing school"
+        "school attendance"
       ]
     },
     {
@@ -6366,12 +6349,11 @@
         }
       ],
       "keywords": [
-        "academic performance",
-        "school achievement",
-        "academic difficulties",
         "bcfpi",
-        "bad grades",
-        "poor school performance"
+        "academic performance",
+        "low grades",
+        "school failure",
+        "academic achievement"
       ]
     },
     {
@@ -6448,12 +6430,11 @@
         }
       ],
       "keywords": [
+        "ace-iq",
         "parental support",
-        "parent-child communication",
-        "family relationships",
-        "aces",
+        "emotional support",
         "parental understanding",
-        "parents listening"
+        "parent-child relationship"
       ]
     },
     {
@@ -6530,12 +6511,11 @@
         }
       ],
       "keywords": [
+        "ace-iq",
         "parental monitoring",
         "parental supervision",
-        "parental involvement",
-        "aces",
-        "parents knowing where you are",
-        "parental awareness"
+        "parental awareness",
+        "free time"
       ]
     },
     {
@@ -6601,12 +6581,11 @@
         }
       ],
       "keywords": [
-        "childhood neglect",
+        "ace-iq",
         "physical neglect",
-        "food insecurity",
-        "aces",
-        "not enough food",
-        "going hungry"
+        "child neglect",
+        "food deprivation",
+        "hunger"
       ]
     },
     {
@@ -6672,12 +6651,11 @@
         }
       ],
       "keywords": [
+        "ace-iq",
         "parental substance abuse",
-        "household dysfunction",
-        "childhood neglect",
-        "aces",
-        "drunk parents",
-        "drug use by parents"
+        "parental intoxication",
+        "child neglect",
+        "caregiver impairment"
       ]
     },
     {
@@ -6743,12 +6721,11 @@
         }
       ],
       "keywords": [
+        "ace-iq",
         "educational neglect",
-        "childhood neglect",
-        "school attendance",
-        "aces",
-        "not sent to school",
-        "missing school"
+        "school deprivation",
+        "child neglect",
+        "childhood trauma"
       ]
     },
     {
@@ -6792,12 +6769,12 @@
         }
       ],
       "keywords": [
+        "ace-iq",
         "household substance abuse",
-        "parental substance use disorder",
-        "family dysfunction",
-        "aces",
-        "alcoholic in house",
-        "drug user in family"
+        "parental addiction",
+        "alcoholism",
+        "drug misuse",
+        "family dysfunction"
       ]
     },
     {
@@ -6841,12 +6818,11 @@
         }
       ],
       "keywords": [
+        "ace-iq",
         "household mental illness",
-        "parental mental health",
-        "family dysfunction",
-        "aces",
-        "mentally ill family member",
-        "depressed parent"
+        "parental depression",
+        "family suicidality",
+        "family dysfunction"
       ]
     },
     {
@@ -6890,12 +6866,11 @@
         }
       ],
       "keywords": [
+        "ace-iq",
         "household incarceration",
-        "parental incarceration",
-        "family dysfunction",
-        "aces",
-        "family member in jail",
-        "parent in prison"
+        "parental imprisonment",
+        "criminal justice",
+        "family dysfunction"
       ]
     },
     {
@@ -6939,12 +6914,11 @@
         }
       ],
       "keywords": [
-        "parental separation",
+        "ace-iq",
         "parental divorce",
-        "family structure",
-        "aces",
-        "parents divorced",
-        "separated parents"
+        "parental separation",
+        "family dissolution",
+        "broken home"
       ]
     },
     {
@@ -6988,12 +6962,12 @@
         }
       ],
       "keywords": [
+        "ace-iq",
         "parental death",
-        "bereavement",
+        "parental bereavement",
         "childhood loss",
-        "aces",
-        "parent died",
-        "guardian death"
+        "orphanhood",
+        "grief"
       ]
     },
     {
@@ -7059,12 +7033,11 @@
         }
       ],
       "keywords": [
-        "emotional abuse witnessed",
-        "verbal abuse witnessed",
-        "household violence",
-        "aces",
-        "family arguments",
-        "yelling at home"
+        "ace-iq",
+        "witnessing domestic violence",
+        "emotional abuse",
+        "domestic verbal abuse",
+        "household fighting"
       ]
     },
     {
@@ -7130,12 +7103,11 @@
         }
       ],
       "keywords": [
-        "domestic violence witnessed",
-        "physical abuse witnessed",
-        "household violence",
-        "aces",
-        "witnessed physical abuse",
-        "family fighting"
+        "ace-iq",
+        "witnessing domestic violence",
+        "physical domestic abuse",
+        "intimate partner violence",
+        "household violence"
       ]
     },
     {
@@ -7201,12 +7173,11 @@
         }
       ],
       "keywords": [
-        "domestic violence witnessed",
-        "severe physical abuse witnessed",
-        "household violence",
-        "aces",
-        "witnessed severe violence",
-        "seeing someone attacked"
+        "ace-iq",
+        "witnessing domestic violence",
+        "weapon violence",
+        "severe domestic abuse",
+        "household violence"
       ]
     },
     {
@@ -7272,12 +7243,12 @@
         }
       ],
       "keywords": [
+        "ace-iq",
         "emotional abuse",
         "verbal abuse",
-        "psychological abuse",
-        "aces",
-        "yelled at",
-        "insulted"
+        "parental hostility",
+        "insults",
+        "humiliation"
       ]
     },
     {
@@ -7343,12 +7314,11 @@
         }
       ],
       "keywords": [
+        "ace-iq",
         "emotional abuse",
-        "neglect",
-        "abandonment",
-        "aces",
-        "threatened abandonment",
-        "thrown out"
+        "abandonment threat",
+        "kicked out",
+        "childhood trauma"
       ]
     },
     {
@@ -7414,12 +7384,11 @@
         }
       ],
       "keywords": [
+        "ace-iq",
         "physical abuse",
         "corporal punishment",
         "child maltreatment",
-        "aces",
-        "beaten up",
-        "hit by parent"
+        "beating"
       ]
     },
     {
@@ -7485,12 +7454,11 @@
         }
       ],
       "keywords": [
+        "ace-iq",
         "severe physical abuse",
+        "weapon assault",
         "child maltreatment",
-        "physical violence",
-        "aces",
-        "hit with object",
-        "weapon abuse"
+        "physical violence"
       ]
     },
     {
@@ -7556,12 +7524,11 @@
         }
       ],
       "keywords": [
-        "sexual abuse",
+        "ace-iq",
         "child sexual abuse",
-        "unwanted sexual contact",
-        "aces",
-        "unwanted touching",
-        "sexual fondling"
+        "sexual harassment",
+        "fondling",
+        "unwanted touching"
       ]
     },
     {
@@ -7627,12 +7594,11 @@
         }
       ],
       "keywords": [
-        "sexual abuse",
+        "ace-iq",
         "child sexual abuse",
-        "sexual coercion",
-        "aces",
-        "forced sexual touching",
-        "unwanted sexual contact"
+        "forced touching",
+        "unwanted sexual contact",
+        "sexual exploitation"
       ]
     },
     {
@@ -7698,12 +7664,11 @@
         }
       ],
       "keywords": [
-        "attempted sexual assault",
-        "child sexual abuse",
-        "sexual violence",
-        "aces",
+        "ace-iq",
+        "attempted sexual abuse",
         "attempted rape",
-        "sexual assault attempt"
+        "sexual assault",
+        "sexual violence"
       ]
     },
     {
@@ -7769,12 +7734,11 @@
         }
       ],
       "keywords": [
-        "sexual assault",
+        "ace-iq",
         "child sexual abuse",
         "rape",
-        "aces",
-        "sexual violence",
-        "sexual abuse"
+        "sexual assault",
+        "sexual intercourse"
       ]
     },
     {
@@ -7840,12 +7804,11 @@
         }
       ],
       "keywords": [
+        "ace-iq",
         "bullying",
         "peer victimization",
         "school bullying",
-        "aces",
-        "being bullied",
-        "peer harassment"
+        "harassment"
       ]
     },
     {
@@ -7944,12 +7907,11 @@
         }
       ],
       "keywords": [
-        "types of bullying",
-        "bullying experiences",
+        "ace-iq",
+        "bullying types",
         "peer victimization",
-        "aces",
-        "forms of bullying",
-        "how bullied"
+        "teasing",
+        "harassment"
       ]
     },
     {
@@ -8015,12 +7977,11 @@
         }
       ],
       "keywords": [
-        "physical aggression",
-        "peer conflict",
-        "fighting",
-        "aces",
+        "ace-iq",
         "physical fights",
-        "fighting with peers"
+        "peer violence",
+        "physical aggression",
+        "youth fighting"
       ]
     },
     {
@@ -8086,12 +8047,11 @@
         }
       ],
       "keywords": [
-        "witnessed violence",
+        "ace-iq",
         "community violence",
-        "exposure to violence",
-        "aces",
-        "seeing someone beaten",
-        "witnessing violence"
+        "witnessing violence",
+        "neighborhood crime",
+        "physical assault"
       ]
     },
     {
@@ -8157,12 +8117,12 @@
         }
       ],
       "keywords": [
-        "witnessed violence",
+        "ace-iq",
         "community violence",
-        "exposure to severe violence",
-        "aces",
-        "seeing someone stabbed",
-        "witnessing shooting"
+        "gun violence",
+        "knife crime",
+        "witnessing shooting",
+        "stabbing"
       ]
     },
     {
@@ -8228,12 +8188,11 @@
         }
       ],
       "keywords": [
-        "witnessed violence",
+        "ace-iq",
         "community violence",
-        "exposure to threats",
-        "aces",
-        "seeing weapon threats",
-        "witnessing threats"
+        "weapon threats",
+        "neighborhood crime",
+        "armed threat"
       ]
     },
     {
@@ -8299,12 +8258,11 @@
         }
       ],
       "keywords": [
+        "ace-iq",
+        "war exposure",
         "forced displacement",
-        "collective violence",
-        "war trauma",
-        "aces",
-        "forced to move",
-        "displacement"
+        "refugee trauma",
+        "collective violence"
       ]
     },
     {
@@ -8370,12 +8328,11 @@
         }
       ],
       "keywords": [
+        "ace-iq",
+        "war exposure",
         "home destruction",
-        "collective violence",
-        "war trauma",
-        "aces",
-        "home destroyed",
-        "war damage"
+        "property destruction",
+        "collective violence"
       ]
     },
     {
@@ -8441,12 +8398,12 @@
         }
       ],
       "keywords": [
-        "collective violence",
-        "state-sponsored violence",
-        "gang violence",
-        "aces",
-        "beaten by soldiers",
-        "police brutality"
+        "ace-iq",
+        "war exposure",
+        "state violence",
+        "police brutality",
+        "militia violence",
+        "gang violence"
       ]
     },
     {
@@ -8512,12 +8469,11 @@
         }
       ],
       "keywords": [
-        "witnessed collective violence",
-        "loss of loved ones",
-        "war trauma",
-        "aces",
-        "family killed",
-        "friend beaten"
+        "ace-iq",
+        "war exposure",
+        "violent bereavement",
+        "killed family member",
+        "collective violence"
       ]
     },
     {
@@ -8594,12 +8550,11 @@
         }
       ],
       "keywords": [
-        "role models",
-        "social support",
-        "positive influences",
         "cyrm",
-        "mentors",
-        "inspiration"
+        "resilience",
+        "role models",
+        "mentorship",
+        "social support"
       ]
     },
     {
@@ -8676,12 +8631,11 @@
         }
       ],
       "keywords": [
-        "educational aspirations",
-        "academic motivation",
-        "future orientation",
         "cyrm",
-        "importance of education",
-        "valuing school"
+        "resilience",
+        "academic aspirations",
+        "value of education",
+        "school motivation"
       ]
     },
     {
@@ -8758,12 +8712,11 @@
         }
       ],
       "keywords": [
+        "cyrm",
+        "resilience",
         "parental monitoring",
-        "parental involvement",
-        "caregiver knowledge",
-        "family support",
-        "parent-child relationship",
-        "youth safety"
+        "caregiver connection",
+        "family support"
       ]
     },
     {
@@ -8840,12 +8793,12 @@
         }
       ],
       "keywords": [
-        "perseverance",
+        "cyrm",
+        "resilience",
         "grit",
-        "conscientiousness",
-        "goal achievement",
-        "self-discipline",
-        "determination"
+        "task completion",
+        "perseverance",
+        "self-regulation"
       ]
     },
     {
@@ -8922,12 +8875,12 @@
         }
       ],
       "keywords": [
-        "problem-solving skills",
-        "coping mechanisms",
-        "self-harm prevention",
+        "cyrm",
+        "resilience",
+        "adaptive coping",
+        "substance use",
         "violence prevention",
-        "substance use prevention",
-        "healthy coping"
+        "problem solving"
       ]
     },
     {
@@ -9004,12 +8957,11 @@
         }
       ],
       "keywords": [
+        "cyrm",
+        "resilience",
         "community support",
-        "help-seeking behavior",
-        "social support",
-        "resourcefulness",
-        "community resources",
-        "access to help"
+        "help-seeking",
+        "social resources"
       ]
     },
     {
@@ -9086,12 +9038,11 @@
         }
       ],
       "keywords": [
+        "cyrm",
+        "resilience",
         "school belonging",
-        "school engagement",
-        "social inclusion",
-        "peer relationships",
-        "school environment",
-        "sense of belonging"
+        "school connectedness",
+        "social inclusion"
       ]
     },
     {
@@ -9168,12 +9119,11 @@
         }
       ],
       "keywords": [
+        "cyrm",
+        "resilience",
         "family support",
-        "social support",
-        "family resilience",
-        "emotional support",
-        "family relationships",
-        "family strength"
+        "perceived support",
+        "family cohesion"
       ]
     },
     {
@@ -9250,12 +9200,11 @@
         }
       ],
       "keywords": [
+        "cyrm",
+        "resilience",
         "peer support",
-        "social support",
         "friendship",
-        "peer relationships",
-        "emotional support",
-        "friend loyalty"
+        "social support"
       ]
     },
     {
@@ -9332,12 +9281,12 @@
         }
       ],
       "keywords": [
-        "perceived fairness",
-        "social justice",
-        "community equity",
-        "discrimination",
-        "community relations",
-        "equal treatment"
+        "cyrm",
+        "resilience",
+        "fairness",
+        "community safety",
+        "perceived justice",
+        "social inclusion"
       ]
     },
     {
@@ -9414,12 +9363,12 @@
         }
       ],
       "keywords": [
+        "cyrm",
+        "resilience",
         "skill development",
         "future orientation",
-        "life skills",
-        "personal growth",
-        "career readiness",
-        "opportunity"
+        "self-efficacy",
+        "growth opportunities"
       ]
     },
     {
@@ -9496,12 +9445,12 @@
         }
       ],
       "keywords": [
+        "cyrm",
+        "resilience",
         "cultural identity",
         "family traditions",
-        "cultural pride",
-        "ethnic identity",
-        "cultural engagement",
-        "family values"
+        "cultural heritage",
+        "belonging"
       ]
     },
     {
@@ -9578,12 +9527,11 @@
         }
       ],
       "keywords": [
-        "energy levels",
-        "vitality",
-        "physical well-being",
-        "fatigue",
+        "kidscreen",
         "quality of life",
-        "vigor"
+        "energy",
+        "vitality",
+        "physical well-being"
       ]
     },
     {
@@ -9660,12 +9608,12 @@
         }
       ],
       "keywords": [
+        "kidscreen",
+        "quality of life",
         "sadness",
         "depression",
         "emotional well-being",
-        "mood",
-        "negative affect",
-        "low spirits"
+        "mood"
       ]
     },
     {
@@ -9742,12 +9690,11 @@
         }
       ],
       "keywords": [
+        "kidscreen",
+        "quality of life",
         "loneliness",
         "social isolation",
-        "social well-being",
-        "social connection",
-        "solitude",
-        "feeling alone"
+        "peer relations"
       ]
     },
     {
@@ -9824,12 +9771,12 @@
         }
       ],
       "keywords": [
+        "kidscreen",
+        "quality of life",
         "personal time",
-        "self-care",
-        "leisure time",
-        "work-life balance",
-        "me time",
-        "free time"
+        "autonomy",
+        "time pressure",
+        "leisure"
       ]
     },
     {
@@ -9906,11 +9853,11 @@
         }
       ],
       "keywords": [
-        "leisure activities",
-        "free time activities",
-        "enjoyment",
+        "kidscreen",
         "quality of life",
-        "hobbies",
+        "free time",
+        "autonomy",
+        "leisure activities",
         "recreation"
       ]
     },
@@ -9988,12 +9935,12 @@
         }
       ],
       "keywords": [
-        "parental fairness",
-        "parent-child relationship",
-        "family dynamics",
-        "perceived justice",
-        "parental treatment",
-        "family conflict"
+        "kidscreen",
+        "quality of life",
+        "parenting",
+        "family relations",
+        "fair treatment",
+        "parental fairness"
       ]
     },
     {
@@ -10070,12 +10017,12 @@
         }
       ],
       "keywords": [
-        "peer relationships",
-        "social interaction",
+        "kidscreen",
+        "quality of life",
         "friendship",
-        "social enjoyment",
-        "fun with friends",
-        "social activities"
+        "peer relations",
+        "fun",
+        "social well-being"
       ]
     },
     {
@@ -10152,12 +10099,12 @@
         }
       ],
       "keywords": [
+        "kidscreen",
+        "quality of life",
         "attention",
         "concentration",
-        "focus",
         "cognitive function",
-        "academic performance",
-        "attentiveness"
+        "focus"
       ]
     },
     {
@@ -10234,12 +10181,12 @@
         }
       ],
       "keywords": [
+        "kidscreen",
+        "quality of life",
         "physical health",
-        "well-being",
         "fitness",
         "general health",
-        "physical condition",
-        "feeling good"
+        "well-being"
       ]
     },
     {
@@ -10316,12 +10263,12 @@
         }
       ],
       "keywords": [
-        "academic performance",
-        "school adjustment",
-        "work performance",
-        "educational success",
-        "job satisfaction",
-        "school well-being"
+        "kidscreen",
+        "quality of life",
+        "school performance",
+        "academic adjustment",
+        "work satisfaction",
+        "school functioning"
       ]
     },
     {
@@ -10398,12 +10345,11 @@
         }
       ],
       "keywords": [
-        "gaming",
         "video games",
-        "console gaming",
-        "computer gaming",
         "screen time",
-        "digital media use"
+        "gaming",
+        "console gaming",
+        "weekday screen use"
       ]
     },
     {
@@ -10481,11 +10427,10 @@
       ],
       "keywords": [
         "mobile gaming",
-        "phone games",
-        "casual gaming",
         "screen time",
-        "digital media use",
-        "smartphone use"
+        "smartphone use",
+        "video games",
+        "weekday gaming"
       ]
     },
     {
@@ -10562,13 +10507,12 @@
         }
       ],
       "keywords": [
-        "social media",
         "instant messaging",
-        "online communication",
-        "snapchat",
-        "whatsapp",
-        "messenger",
-        "social networking"
+        "social media",
+        "chatting",
+        "texting",
+        "screen time",
+        "peer communication"
       ]
     },
     {
@@ -10646,11 +10590,10 @@
       ],
       "keywords": [
         "video streaming",
+        "screen time",
         "youtube",
         "twitch",
-        "online video",
-        "digital media consumption",
-        "screen time"
+        "media consumption"
       ]
     },
     {
@@ -10727,13 +10670,12 @@
         }
       ],
       "keywords": [
+        "short-form video",
         "social media",
+        "screen time",
         "tiktok",
-        "instagram",
-        "youtube shorts",
-        "passive scrolling",
-        "digital media consumption",
-        "screen time"
+        "scrolling",
+        "instagram"
       ]
     },
     {
@@ -10810,12 +10752,11 @@
         }
       ],
       "keywords": [
-        "gaming",
         "video games",
-        "console gaming",
-        "computer gaming",
-        "weekend screen time",
-        "digital media use"
+        "screen time",
+        "gaming",
+        "weekend screen use",
+        "console gaming"
       ]
     },
     {
@@ -10893,11 +10834,10 @@
       ],
       "keywords": [
         "mobile gaming",
-        "phone games",
-        "casual gaming",
-        "weekend screen time",
-        "digital media use",
-        "smartphone use"
+        "screen time",
+        "smartphone use",
+        "weekend gaming",
+        "video games"
       ]
     },
     {
@@ -10974,13 +10914,12 @@
         }
       ],
       "keywords": [
-        "social media",
         "instant messaging",
-        "online communication",
-        "snapchat",
-        "whatsapp",
-        "messenger",
-        "weekend social networking"
+        "social media",
+        "chatting",
+        "screen time",
+        "peer communication",
+        "weekend screen use"
       ]
     },
     {
@@ -11058,11 +10997,11 @@
       ],
       "keywords": [
         "video streaming",
+        "screen time",
         "youtube",
         "twitch",
-        "online video",
-        "weekend digital media",
-        "screen time"
+        "media consumption",
+        "weekend screen use"
       ]
     },
     {
@@ -11139,13 +11078,12 @@
         }
       ],
       "keywords": [
+        "short-form video",
         "social media",
+        "screen time",
         "tiktok",
-        "instagram",
-        "youtube shorts",
-        "passive scrolling",
-        "weekend digital media",
-        "screen time"
+        "scrolling",
+        "feed scrolling"
       ]
     },
     {
@@ -11200,12 +11138,11 @@
         }
       ],
       "keywords": [
-        "gaming habits",
-        "video game use",
-        "online gaming",
         "gaming behavior",
-        "console gaming",
-        "computer gaming"
+        "video games",
+        "multiplayer",
+        "gaming habits",
+        "social gaming"
       ]
     },
     {
@@ -11250,12 +11187,10 @@
       ],
       "keywords": [
         "artificial intelligence",
-        "ai use",
+        "ai adoption",
         "chatgpt",
-        "gemini",
-        "replika",
-        "technology adoption",
-        "ai tools"
+        "generative ai",
+        "technology use"
       ]
     },
     {
@@ -11311,11 +11246,11 @@
       ],
       "keywords": [
         "ai usage",
-        "artificial intelligence applications",
-        "ai purposes",
+        "chatgpt",
+        "study tools",
         "technology use",
-        "ai tools",
-        "digital literacy"
+        "productivity",
+        "social ai"
       ]
     },
     {
@@ -11392,13 +11327,11 @@
         }
       ],
       "keywords": [
-        "social media positive effects",
-        "gaming positive effects",
-        "well-being",
-        "social connection",
-        "motivation",
-        "inspiration",
-        "digital well-being"
+        "social media effects",
+        "positive affect",
+        "social connectedness",
+        "digital well-being",
+        "motivation"
       ]
     },
     {
@@ -11475,14 +11408,12 @@
         }
       ],
       "keywords": [
-        "social media negative effects",
-        "gaming negative effects",
-        "mental health",
-        "self-esteem",
+        "social media effects",
+        "negative affect",
         "guilt",
-        "shame",
-        "distressing content",
-        "digital harm"
+        "self-esteem",
+        "distress",
+        "digital well-being"
       ]
     },
     {
@@ -11559,12 +11490,11 @@
         }
       ],
       "keywords": [
-        "sleep",
-        "sleep quality",
+        "digital well-being",
+        "screen time",
         "sleep disturbance",
-        "screen time effects",
-        "digital media harm",
-        "sleep deprivation"
+        "sleep quality",
+        "problematic internet use"
       ]
     },
     {
@@ -11641,12 +11571,11 @@
         }
       ],
       "keywords": [
-        "schoolwork",
-        "academic performance",
-        "academic achievement",
-        "screen time effects",
-        "digital media harm",
-        "study habits"
+        "academic impairment",
+        "school performance",
+        "screen time",
+        "distraction",
+        "digital well-being"
       ]
     },
     {
@@ -11723,12 +11652,11 @@
         }
       ],
       "keywords": [
-        "self-esteem",
         "mental health",
-        "psychological well-being",
-        "screen time effects",
-        "digital media harm",
-        "body image"
+        "self-esteem",
+        "digital well-being",
+        "screen time impact",
+        "psychological distress"
       ]
     },
     {
@@ -11805,12 +11733,10 @@
         }
       ],
       "keywords": [
-        "peer relationships",
-        "friendship",
-        "social relationships",
-        "screen time effects",
-        "digital media harm",
-        "social connection"
+        "peer relations",
+        "friendship conflict",
+        "social media effects",
+        "interpersonal relationships"
       ]
     },
     {
@@ -11887,12 +11813,10 @@
         }
       ],
       "keywords": [
-        "family relationships",
-        "family dynamics",
-        "parent-child relationships",
-        "screen time effects",
-        "digital media harm",
-        "family conflict"
+        "family conflict",
+        "parent-child relationship",
+        "social media effects",
+        "family dynamics"
       ]
     },
     {
@@ -11969,12 +11893,11 @@
         }
       ],
       "keywords": [
-        "outdoor activities",
         "physical activity",
-        "sports",
-        "screen time effects",
-        "digital media harm",
-        "sedentary lifestyle"
+        "sedentary behavior",
+        "sports participation",
+        "outdoor activities",
+        "screen displacement"
       ]
     },
     {
@@ -12162,11 +12085,9 @@
       ],
       "keywords": [
         "app usage",
-        "social media apps",
-        "digital services",
+        "social media platforms",
         "smartphone apps",
-        "popular apps",
-        "technology use"
+        "technology preferences"
       ]
     },
     {
@@ -12187,13 +12108,11 @@
       "notes": "Free text response / unmapped export variable",
       "options": [],
       "keywords": [
-        "consent",
-        "participation",
+        "survey administration",
+        "lottery",
         "incentive",
-        "gift card",
-        "survey participation",
-        "data collection",
-        "sms code"
+        "raffle",
+        "contact info"
       ]
     },
     {
@@ -12237,12 +12156,11 @@
         }
       ],
       "keywords": [
-        "natural disaster",
+        "cats",
         "trauma",
-        "stressful event",
-        "environmental trauma",
-        "disaster exposure",
-        "ptsd"
+        "ptsd",
+        "natural disaster",
+        "traumatic events"
       ]
     },
     {
@@ -12286,13 +12204,11 @@
         }
       ],
       "keywords": [
-        "accident",
-        "injury",
+        "cats",
         "trauma",
-        "physical trauma",
-        "car crash",
-        "dog bite",
-        "ptsd"
+        "ptsd",
+        "accidents",
+        "physical injury"
       ]
     },
     {
@@ -12336,12 +12252,12 @@
         }
       ],
       "keywords": [
-        "domestic violence",
-        "child abuse",
-        "family violence",
+        "cats",
         "trauma",
-        "maltreatment",
-        "ptsd"
+        "ptsd",
+        "domestic violence",
+        "family conflict",
+        "physical abuse"
       ]
     },
     {
@@ -12385,12 +12301,12 @@
         }
       ],
       "keywords": [
-        "community violence",
-        "school violence",
-        "bullying",
-        "peer violence",
+        "cats",
         "trauma",
-        "ptsd"
+        "ptsd",
+        "bullying",
+        "community violence",
+        "assault"
       ]
     },
     {
@@ -12434,13 +12350,13 @@
         }
       ],
       "keywords": [
-        "assault",
-        "violence",
-        "robbery",
-        "threat",
+        "cats",
         "trauma",
-        "victimization",
-        "ptsd"
+        "ptsd",
+        "violent crime",
+        "assault",
+        "robbery",
+        "threat"
       ]
     },
     {
@@ -12484,12 +12400,12 @@
         }
       ],
       "keywords": [
-        "witnessing violence",
-        "domestic violence exposure",
-        "family trauma",
-        "secondary trauma",
+        "cats",
+        "trauma",
         "ptsd",
-        "vicarious trauma"
+        "witnessing violence",
+        "domestic violence",
+        "interparental violence"
       ]
     },
     {
@@ -12533,12 +12449,12 @@
         }
       ],
       "keywords": [
-        "witnessing violence",
-        "community violence exposure",
-        "school violence exposure",
-        "secondary trauma",
+        "cats",
+        "trauma",
         "ptsd",
-        "vicarious trauma"
+        "witnessing violence",
+        "community violence",
+        "bystander trauma"
       ]
     },
     {
@@ -12582,12 +12498,12 @@
         }
       ],
       "keywords": [
+        "trauma",
+        "cats",
         "sexual abuse",
         "sexual assault",
-        "child sexual abuse",
-        "trauma",
-        "aces",
-        "sexual violence"
+        "ptsd",
+        "childhood trauma"
       ]
     },
     {
@@ -12631,12 +12547,12 @@
         }
       ],
       "keywords": [
-        "sexual coercion",
-        "sexual pressure",
-        "non-consensual sexual acts",
-        "sexual abuse",
         "trauma",
-        "consent"
+        "cats",
+        "sexual coercion",
+        "sexual assault",
+        "ptsd",
+        "abuse"
       ]
     },
     {
@@ -12680,12 +12596,12 @@
         }
       ],
       "keywords": [
-        "online sexual exploitation",
-        "cyber sexual abuse",
-        "sextortion",
-        "online grooming",
-        "social media abuse",
-        "digital sexual violence"
+        "trauma",
+        "cats",
+        "cyberbullying",
+        "online harassment",
+        "sexual harassment",
+        "social media"
       ]
     },
     {
@@ -12730,11 +12646,11 @@
       ],
       "keywords": [
         "bullying",
-        "in-person bullying",
-        "verbal abuse",
+        "cats",
         "peer victimization",
-        "school bullying",
-        "trauma"
+        "trauma",
+        "harassment",
+        "intimidation"
       ]
     },
     {
@@ -12779,11 +12695,11 @@
       ],
       "keywords": [
         "cyberbullying",
-        "online bullying",
-        "digital harassment",
-        "internet bullying",
-        "peer victimization",
-        "social media bullying"
+        "cats",
+        "online harassment",
+        "bullying",
+        "social media",
+        "trauma"
       ]
     },
     {
@@ -12827,13 +12743,12 @@
         }
       ],
       "keywords": [
+        "trauma",
+        "cats",
         "bereavement",
         "grief",
-        "sudden death",
-        "violent death",
         "loss",
-        "trauma",
-        "aces"
+        "ptsd"
       ]
     },
     {
@@ -12878,10 +12793,11 @@
       ],
       "keywords": [
         "medical trauma",
-        "traumatic medical experience",
-        "hospitalization trauma",
-        "medical stress",
-        "aces"
+        "cats",
+        "hospitalization",
+        "illness",
+        "ptsd",
+        "procedure"
       ]
     },
     {
@@ -12925,13 +12841,12 @@
         }
       ],
       "keywords": [
-        "war trauma",
-        "combat exposure",
-        "refugee experience",
-        "conflict exposure",
-        "violence exposure",
+        "war",
+        "cats",
         "trauma",
-        "aces"
+        "conflict",
+        "violence",
+        "ptsd"
       ]
     },
     {
@@ -12976,11 +12891,11 @@
       ],
       "keywords": [
         "trauma",
+        "cats",
         "stressful events",
-        "adverse childhood experiences",
-        "aces",
-        "critical life events",
-        "traumatic experiences"
+        "life events",
+        "ptsd",
+        "adversity"
       ]
     },
     {
@@ -13046,12 +12961,12 @@
         }
       ],
       "keywords": [
+        "ptsd",
+        "cats",
         "intrusive thoughts",
         "flashbacks",
         "re-experiencing",
-        "ptsd symptoms",
-        "trauma symptoms",
-        "cats"
+        "trauma"
       ]
     },
     {
@@ -13117,11 +13032,12 @@
         }
       ],
       "keywords": [
+        "ptsd",
+        "cats",
         "nightmares",
-        "trauma dreams",
-        "ptsd symptoms",
-        "re-experiencing",
-        "cats"
+        "bad dreams",
+        "sleep",
+        "trauma"
       ]
     },
     {
@@ -13187,12 +13103,12 @@
         }
       ],
       "keywords": [
+        "ptsd",
+        "cats",
         "flashbacks",
-        "dissociation",
         "re-experiencing",
-        "ptsd symptoms",
-        "trauma symptoms",
-        "cats"
+        "trauma",
+        "dissociation"
       ]
     },
     {
@@ -13258,12 +13174,12 @@
         }
       ],
       "keywords": [
+        "ptsd",
+        "cats",
+        "triggers",
         "emotional distress",
-        "trauma triggers",
-        "ptsd symptoms",
-        "re-experiencing",
-        "emotional reactivity",
-        "cats"
+        "reactivity",
+        "trauma"
       ]
     },
     {
@@ -13329,12 +13245,12 @@
         }
       ],
       "keywords": [
-        "physiological arousal",
+        "ptsd",
+        "cats",
+        "physiological reactivity",
         "somatic symptoms",
-        "ptsd symptoms",
-        "trauma response",
-        "fight-or-flight",
-        "cats"
+        "hyperarousal",
+        "trauma"
       ]
     },
     {
@@ -13400,12 +13316,12 @@
         }
       ],
       "keywords": [
+        "ptsd",
+        "cats",
         "avoidance",
-        "emotional numbing",
-        "ptsd symptoms",
-        "trauma coping",
         "thought suppression",
-        "cats"
+        "coping",
+        "trauma"
       ]
     },
     {
@@ -13471,12 +13387,12 @@
         }
       ],
       "keywords": [
+        "ptsd",
+        "cats",
         "avoidance",
-        "situational avoidance",
-        "ptsd symptoms",
-        "trauma triggers",
         "behavioral avoidance",
-        "cats"
+        "triggers",
+        "trauma"
       ]
     },
     {
@@ -13542,12 +13458,12 @@
         }
       ],
       "keywords": [
-        "dissociative amnesia",
+        "ptsd",
+        "cats",
+        "amnesia",
         "memory loss",
-        "ptsd symptoms",
-        "trauma memory",
-        "repression",
-        "cats"
+        "dissociation",
+        "trauma"
       ]
     },
     {
@@ -13613,12 +13529,12 @@
         }
       ],
       "keywords": [
+        "ptsd",
+        "cats",
         "negative cognitions",
-        "distorted beliefs",
-        "ptsd symptoms",
-        "trauma beliefs",
-        "self-blame",
-        "cats"
+        "trust issues",
+        "hopelessness",
+        "trauma"
       ]
     },
     {
@@ -13684,13 +13600,12 @@
         }
       ],
       "keywords": [
+        "ptsd",
+        "cats",
         "self-blame",
         "guilt",
-        "blame",
-        "ptsd symptoms",
-        "trauma cognitions",
-        "responsibility",
-        "cats"
+        "cognitive distortion",
+        "trauma"
       ]
     },
     {
@@ -13756,12 +13671,12 @@
         }
       ],
       "keywords": [
+        "ptsd",
+        "cats",
         "negative affect",
-        "emotional dysregulation",
-        "ptsd symptoms",
-        "trauma emotions",
-        "mood disturbance",
-        "cats"
+        "shame",
+        "guilt",
+        "fear"
       ]
     },
     {
@@ -13827,12 +13742,12 @@
         }
       ],
       "keywords": [
+        "ptsd",
+        "cats",
         "anhedonia",
         "loss of interest",
-        "ptsd symptoms",
-        "social withdrawal",
-        "apathy",
-        "cats"
+        "depression",
+        "trauma"
       ]
     },
     {
@@ -13898,12 +13813,12 @@
         }
       ],
       "keywords": [
-        "social isolation",
+        "ptsd",
+        "cats",
         "detachment",
-        "ptsd symptoms",
-        "relationship difficulties",
-        "emotional numbing",
-        "cats"
+        "social isolation",
+        "loneliness",
+        "alienation"
       ]
     },
     {
@@ -13969,11 +13884,12 @@
         }
       ],
       "keywords": [
+        "ptsd",
+        "cats",
         "emotional numbing",
         "anhedonia",
-        "ptsd symptoms",
-        "positive affect reduction",
-        "cats"
+        "positive affect",
+        "happiness"
       ]
     },
     {
@@ -14039,12 +13955,12 @@
         }
       ],
       "keywords": [
-        "anger outbursts",
+        "ptsd",
+        "cats",
+        "anger",
         "irritability",
-        "ptsd symptoms",
         "aggression",
-        "emotional dysregulation",
-        "cats"
+        "tantrums"
       ]
     },
     {
@@ -14110,12 +14026,12 @@
         }
       ],
       "keywords": [
-        "reckless behavior",
-        "self-destructive behavior",
-        "ptsd symptoms",
-        "impulsivity",
+        "ptsd",
+        "cats",
         "risk-taking",
-        "cats"
+        "reckless behavior",
+        "impulsivity",
+        "safety"
       ]
     },
     {
@@ -14181,12 +14097,12 @@
         }
       ],
       "keywords": [
+        "ptsd",
+        "cats",
         "hypervigilance",
+        "on guard",
         "paranoia",
-        "ptsd symptoms",
-        "heightened awareness",
-        "safety seeking",
-        "cats"
+        "safety"
       ]
     },
     {
@@ -14252,11 +14168,12 @@
         }
       ],
       "keywords": [
-        "exaggerated startle response",
-        "jumpiness",
-        "ptsd symptoms",
+        "ptsd",
+        "cats",
+        "startle response",
+        "jumpy",
         "hyperarousal",
-        "cats"
+        "anxiety"
       ]
     },
     {
@@ -14322,12 +14239,12 @@
         }
       ],
       "keywords": [
-        "concentration difficulties",
-        "attention problems",
-        "ptsd symptoms",
-        "cognitive impairment",
-        "focus issues",
-        "cats"
+        "ptsd",
+        "cats",
+        "concentration",
+        "attention",
+        "focus",
+        "cognitive problems"
       ]
     },
     {
@@ -14393,12 +14310,12 @@
         }
       ],
       "keywords": [
-        "sleep disturbance",
+        "ptsd",
+        "cats",
         "insomnia",
-        "ptsd symptoms",
         "sleep problems",
-        "hyperarousal",
-        "cats"
+        "sleep disturbance",
+        "bedtime"
       ]
     },
     {
@@ -14475,12 +14392,11 @@
         }
       ],
       "keywords": [
-        "problematic social media use",
-        "social media addiction",
-        "excessive social media use",
-        "sma",
+        "social media",
+        "screen time",
         "internet addiction",
-        "screen time"
+        "sma",
+        "loss of control"
       ]
     },
     {
@@ -14557,12 +14473,12 @@
         }
       ],
       "keywords": [
-        "problematic social media use",
-        "social media addiction",
-        "loss of control",
-        "compulsive social media use",
+        "social media",
         "sma",
-        "digital addiction"
+        "loss of control",
+        "compulsive use",
+        "addiction",
+        "screen time"
       ]
     },
     {
@@ -14639,12 +14555,12 @@
         }
       ],
       "keywords": [
-        "problematic social media use",
-        "social media addiction",
-        "neglect of interests",
-        "social withdrawal",
+        "social media",
         "sma",
-        "real-life activities"
+        "anhedonia",
+        "lifestyle",
+        "screen time",
+        "hobbies"
       ]
     },
     {
@@ -14721,12 +14637,12 @@
         }
       ],
       "keywords": [
-        "problematic social media use",
-        "social media addiction",
-        "neglect of duties",
-        "functional impairment",
+        "social media",
         "sma",
-        "daily responsibilities"
+        "neglect of responsibilities",
+        "procrastination",
+        "screen time",
+        "chores"
       ]
     },
     {
@@ -14803,12 +14719,12 @@
         }
       ],
       "keywords": [
-        "problematic social media use",
-        "social media addiction",
-        "relationship conflict",
-        "interpersonal problems",
+        "social media",
         "sma",
-        "family stress"
+        "interpersonal conflict",
+        "family conflict",
+        "screen time",
+        "relationships"
       ]
     },
     {
@@ -14885,12 +14801,12 @@
         }
       ],
       "keywords": [
-        "problematic social media use",
-        "social media addiction",
-        "academic impairment",
-        "job performance",
-        "school grades",
-        "sma"
+        "social media",
+        "sma",
+        "academic performance",
+        "grades",
+        "school functioning",
+        "screen time"
       ]
     },
     {
@@ -14967,12 +14883,11 @@
         }
       ],
       "keywords": [
-        "problematic social media use",
-        "social media addiction",
-        "self-neglect",
-        "health consequences",
-        "hygiene",
+        "social media",
         "sma",
+        "self-care",
+        "hygiene",
+        "health neglect",
         "sleep"
       ]
     },
@@ -15050,12 +14965,12 @@
         }
       ],
       "keywords": [
-        "problematic social media use",
-        "social media addiction",
-        "relationship loss",
-        "social isolation",
+        "social media",
         "sma",
-        "interpersonal relationships"
+        "relationship loss",
+        "loneliness",
+        "interpersonal problems",
+        "isolation"
       ]
     },
     {
@@ -15132,13 +15047,12 @@
         }
       ],
       "keywords": [
-        "problematic social media use",
-        "social media addiction",
-        "academic failure",
-        "career impact",
-        "school performance",
+        "social media",
         "sma",
-        "job loss"
+        "academic failure",
+        "grades",
+        "employment",
+        "consequences"
       ]
     },
     {
@@ -15182,12 +15096,12 @@
         }
       ],
       "keywords": [
-        "problematic social media use",
-        "social media addiction",
-        "duration of problems",
-        "chronic issues",
+        "social media",
         "sma",
-        "long-term impact"
+        "chronicity",
+        "duration",
+        "internet addiction",
+        "diagnosis"
       ]
     },
     {
@@ -15231,12 +15145,12 @@
         }
       ],
       "keywords": [
-        "problematic social media use",
-        "social media addiction",
-        "frequency of problems",
-        "recurrence",
+        "social media",
         "sma",
-        "episodic problems"
+        "recurrence",
+        "chronicity",
+        "patterns of use",
+        "addiction"
       ]
     },
     {
@@ -15313,12 +15227,12 @@
         }
       ],
       "keywords": [
-        "problematic social media use",
-        "social media addiction",
-        "duration of episodes",
-        "problem length",
+        "social media",
         "sma",
-        "time spent"
+        "duration",
+        "chronicity",
+        "time course",
+        "addiction"
       ]
     },
     {
@@ -15395,13 +15309,12 @@
         }
       ],
       "keywords": [
-        "problematic gaming",
-        "gaming disorder",
-        "excessive gaming",
+        "gaming",
+        "video games",
         "igd",
-        "internet gaming disorder",
-        "compulsive gaming",
-        "screen time"
+        "gaming disorder",
+        "screen time",
+        "loss of control"
       ]
     },
     {
@@ -15478,12 +15391,12 @@
         }
       ],
       "keywords": [
-        "problematic gaming",
-        "gaming disorder",
-        "loss of control",
-        "compulsive gaming",
+        "gaming",
+        "video games",
         "igd",
-        "digital addiction"
+        "gaming disorder",
+        "compulsive gaming",
+        "loss of control"
       ]
     },
     {
@@ -15560,12 +15473,12 @@
         }
       ],
       "keywords": [
-        "problematic gaming",
-        "gaming disorder",
-        "neglect of interests",
-        "social withdrawal",
+        "gaming",
+        "video games",
         "igd",
-        "real-life activities"
+        "gaming disorder",
+        "lifestyle",
+        "hobbies"
       ]
     },
     {
@@ -15642,12 +15555,12 @@
         }
       ],
       "keywords": [
-        "problematic gaming",
-        "gaming disorder",
-        "neglect of duties",
-        "functional impairment",
+        "gaming",
+        "video games",
         "igd",
-        "daily responsibilities"
+        "gaming disorder",
+        "procrastination",
+        "neglect of duties"
       ]
     },
     {
@@ -15724,12 +15637,12 @@
         }
       ],
       "keywords": [
-        "problematic gaming",
-        "gaming disorder",
-        "relationship conflict",
-        "interpersonal problems",
+        "gaming",
+        "video games",
         "igd",
-        "family stress"
+        "gaming disorder",
+        "interpersonal conflict",
+        "family conflict"
       ]
     },
     {
@@ -15806,12 +15719,12 @@
         }
       ],
       "keywords": [
-        "problematic gaming",
+        "gaming",
+        "video games",
+        "igd",
         "gaming disorder",
-        "academic impairment",
-        "job performance",
-        "school grades",
-        "igd"
+        "academic performance",
+        "grades"
       ]
     },
     {
@@ -15888,13 +15801,12 @@
         }
       ],
       "keywords": [
-        "problematic gaming",
-        "gaming disorder",
-        "self-neglect",
-        "health consequences",
-        "hygiene",
+        "gaming",
+        "video games",
         "igd",
-        "sleep"
+        "gaming disorder",
+        "self-care",
+        "health neglect"
       ]
     },
     {
@@ -15971,12 +15883,12 @@
         }
       ],
       "keywords": [
-        "problematic gaming",
+        "gaming",
+        "video games",
+        "igd",
         "gaming disorder",
         "relationship loss",
-        "social isolation",
-        "igd",
-        "interpersonal relationships"
+        "social isolation"
       ]
     },
     {
@@ -16053,13 +15965,12 @@
         }
       ],
       "keywords": [
-        "problematic gaming",
+        "gaming",
+        "video games",
+        "igd",
         "gaming disorder",
         "academic failure",
-        "career impact",
-        "school performance",
-        "igd",
-        "job loss"
+        "consequences"
       ]
     },
     {
@@ -16127,10 +16038,9 @@
       "keywords": [
         "problematic social media use",
         "social media addiction",
-        "internet addiction",
-        "digital well-being",
-        "screen time problems",
-        "social media conflict"
+        "interpersonal conflict",
+        "screen time",
+        "smd"
       ]
     },
     {
@@ -16197,11 +16107,10 @@
       ],
       "keywords": [
         "mental health literacy",
+        "mhl",
         "stress management",
-        "coping skills",
-        "resilience",
-        "mental well-being",
-        "handling stress"
+        "coping",
+        "well-being"
       ]
     },
     {
@@ -16268,11 +16177,10 @@
       ],
       "keywords": [
         "mental health literacy",
-        "health information literacy",
-        "media literacy",
-        "information assessment",
+        "health information",
         "commercial bias",
-        "reliable mental health info"
+        "media literacy",
+        "mental health services"
       ]
     },
     {
@@ -16339,11 +16247,10 @@
       ],
       "keywords": [
         "mental health literacy",
-        "health information literacy",
-        "information accuracy",
-        "critical thinking",
-        "media literacy",
-        "reliable mental health info"
+        "information evaluation",
+        "fact checking",
+        "health communication",
+        "accuracy"
       ]
     },
     {
@@ -16411,10 +16318,9 @@
       "keywords": [
         "mental health literacy",
         "help-seeking",
-        "self-assessment",
-        "mental health awareness",
         "professional help",
-        "when to get help"
+        "needs assessment",
+        "psychotherapy"
       ]
     },
     {
@@ -16482,10 +16388,9 @@
       "keywords": [
         "mental health literacy",
         "help-seeking",
-        "access to care",
-        "mental health services",
-        "contacting support",
-        "finding a therapist"
+        "healthcare access",
+        "professional support",
+        "therapy"
       ]
     },
     {
@@ -16552,11 +16457,10 @@
       ],
       "keywords": [
         "mental health literacy",
-        "help-seeking for others",
-        "social support",
         "crisis intervention",
-        "peer support",
-        "helping a friend"
+        "help-seeking",
+        "social support",
+        "peer support"
       ]
     },
     {
@@ -16624,10 +16528,9 @@
       "keywords": [
         "mental health literacy",
         "coping strategies",
-        "problem-solving",
         "resilience",
-        "stress management",
-        "dealing with difficult situations"
+        "problem solving",
+        "stress management"
       ]
     },
     {
@@ -16696,9 +16599,8 @@
         "mental health literacy",
         "workplace well-being",
         "occupational health",
-        "employee assistance programs",
-        "well-being initiatives",
-        "workplace mental health"
+        "health promotion",
+        "workplace initiatives"
       ]
     },
     {
@@ -16765,11 +16667,10 @@
       ],
       "keywords": [
         "mental health literacy",
-        "help-seeking",
-        "self-assessment",
-        "professional assessment",
-        "early intervention",
-        "signs of mental illness"
+        "clinical assessment",
+        "screening",
+        "diagnosis",
+        "professional help"
       ]
     },
     {
@@ -16837,10 +16738,9 @@
       "keywords": [
         "mental health literacy",
         "media literacy",
-        "health information literacy",
-        "information assessment",
-        "critical thinking",
-        "reliable media info"
+        "misinformation",
+        "source credibility",
+        "health communication"
       ]
     },
     {
@@ -16907,11 +16807,10 @@
       ],
       "keywords": [
         "mental health literacy",
-        "self-efficacy",
-        "well-being",
         "living conditions",
-        "agency",
-        "social determinants of health"
+        "social determinants of health",
+        "well-being",
+        "environment"
       ]
     },
     {
@@ -16978,11 +16877,10 @@
       ],
       "keywords": [
         "mental health literacy",
-        "service evaluation",
         "stress management",
+        "conflict resolution",
         "resilience training",
-        "coping skills",
-        "usefulness of services"
+        "intervention evaluation"
       ]
     },
     {
@@ -17050,10 +16948,9 @@
       "keywords": [
         "mental health literacy",
         "help-seeking",
-        "symptom recognition",
-        "access to care",
-        "professional help",
-        "finding mental health support"
+        "health information seeking",
+        "professional support",
+        "symptom recognition"
       ]
     },
     {
@@ -17120,11 +17017,10 @@
       ],
       "keywords": [
         "mental health literacy",
-        "media literacy",
-        "coping strategies",
-        "stress management",
+        "media-based coping",
         "self-help",
-        "using media for coping"
+        "stress coping",
+        "digital health"
       ]
     },
     {
@@ -17192,10 +17088,9 @@
       "keywords": [
         "mental health literacy",
         "mental health promotion",
-        "well-being strategies",
         "prevention",
         "health education",
-        "maintaining mental health"
+        "self-care"
       ]
     },
     {
@@ -17262,11 +17157,10 @@
       ],
       "keywords": [
         "mental health literacy",
+        "social participation",
+        "positive psychology",
         "well-being",
-        "prosocial behavior",
-        "social connection",
-        "self-care",
-        "positive impact activities"
+        "leisure activities"
       ]
     },
     {
@@ -17333,11 +17227,10 @@
       ],
       "keywords": [
         "mental health literacy",
+        "life satisfaction",
+        "emotional balance",
         "self-awareness",
-        "well-being",
-        "self-care",
-        "emotional regulation",
-        "finding balance"
+        "well-being"
       ]
     },
     {
@@ -17404,11 +17297,10 @@
       ],
       "keywords": [
         "mental health literacy",
-        "media literacy",
-        "well-being promotion",
-        "health information",
-        "self-improvement",
-        "media and well-being"
+        "health media",
+        "health promotion",
+        "public health communication",
+        "well-being"
       ]
     },
     {
@@ -17475,11 +17367,10 @@
       ],
       "keywords": [
         "mental health literacy",
-        "media literacy",
-        "health information literacy",
-        "comprehension",
-        "understanding mental health media",
-        "information processing"
+        "health literacy",
+        "media comprehension",
+        "health communication",
+        "public awareness"
       ]
     },
     {
@@ -17547,10 +17438,9 @@
       "keywords": [
         "mental health literacy",
         "patient-provider communication",
-        "health literacy",
-        "comprehension",
-        "treatment adherence",
-        "understanding medical advice"
+        "health comprehension",
+        "psychiatry",
+        "psychotherapy"
       ]
     },
     {
@@ -17618,9 +17508,8 @@
       "keywords": [
         "mental health literacy",
         "symptom recognition",
-        "information seeking",
-        "mental health awareness",
-        "mental illness symptoms",
+        "health information seeking",
+        "mental illness awareness",
         "diagnosis"
       ]
     },
@@ -17688,11 +17577,10 @@
       ],
       "keywords": [
         "mental health literacy",
-        "self-awareness",
-        "well-being",
-        "lifestyle factors",
-        "health behaviors",
-        "habits and attitudes"
+        "lifestyle habits",
+        "mindset",
+        "attitudes",
+        "well-being"
       ]
     },
     {
@@ -17759,11 +17647,9 @@
       ],
       "keywords": [
         "mental health literacy",
-        "well-being",
-        "lifestyle factors",
-        "health behaviors",
+        "lifestyle medicine",
         "sleep",
-        "diet",
+        "diet and nutrition",
         "exercise"
       ]
     },
@@ -17785,12 +17671,10 @@
       "notes": "Free text response / unmapped export variable",
       "options": [],
       "keywords": [
-        "qualitative data",
         "open-ended response",
-        "descriptive data",
-        "free text",
-        "description",
-        "survey comments"
+        "qualitative text",
+        "drawing task",
+        "free description"
       ]
     },
     {
@@ -17814,9 +17698,8 @@
         "problematic social media use",
         "social media addiction",
         "interpersonal conflict",
-        "relationship strain",
-        "digital well-being",
-        "screen time stress"
+        "compulsive screen time",
+        "bsmas"
       ]
     },
     {
@@ -17837,13 +17720,11 @@
       "notes": "Free text response / unmapped export variable",
       "options": [],
       "keywords": [
-        "problematic gaming",
-        "gaming disorder",
         "internet gaming disorder",
         "igd",
-        "neglect",
-        "self-care",
-        "health behaviors"
+        "self-neglect",
+        "personal hygiene",
+        "lifestyle disruption"
       ]
     },
     {
@@ -17864,13 +17745,11 @@
       "notes": "Free text response / unmapped export variable",
       "options": [],
       "keywords": [
-        "problematic gaming",
-        "gaming disorder",
         "internet gaming disorder",
         "igd",
-        "duration of problems",
-        "gaming addiction",
-        "chronicity"
+        "gaming chronicity",
+        "problem gaming",
+        "duration of symptoms"
       ]
     },
     {
@@ -17891,13 +17770,11 @@
       "notes": "Free text response / unmapped export variable",
       "options": [],
       "keywords": [
-        "problematic gaming",
-        "gaming disorder",
         "internet gaming disorder",
         "igd",
-        "frequency of problems",
-        "recurrence",
-        "gaming addiction"
+        "episode frequency",
+        "problem gaming",
+        "relapse"
       ]
     },
     {
@@ -17918,13 +17795,11 @@
       "notes": "Free text response / unmapped export variable",
       "options": [],
       "keywords": [
-        "problematic gaming",
-        "gaming disorder",
         "internet gaming disorder",
         "igd",
-        "duration of problems",
-        "intensity",
-        "gaming addiction"
+        "gaming episode duration",
+        "gaming addiction",
+        "video games"
       ]
     },
     {
@@ -17946,11 +17821,10 @@
       "options": [],
       "keywords": [
         "mental health literacy",
+        "health literacy",
         "mhl",
-        "self-efficacy",
         "perceived difficulty",
-        "mental health knowledge",
-        "attitudes"
+        "self-efficacy"
       ]
     }
   ],
