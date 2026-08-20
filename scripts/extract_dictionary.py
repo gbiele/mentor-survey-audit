@@ -108,12 +108,14 @@ def build_master_dictionary():
 
     # Add metadata
     sections = sorted(list({v["section"] for v in variables if v["section"]}))
+    sources = sorted(list({v["source"] for v in variables if v.get("source")}))
     total_core = sum(1 for v in variables if v.get("is_core", True))
     master_dict = {
         "metadata": {
             "title": "JA-MENTOR Master Survey Dictionary",
             "version": "1.0.0",
-            "source_specification": "data/mentor_fhi-EN.xlsx",
+            "source_specification": "data/questions_response_options.xlsx",
+            "sources": sources,
             "total_variables": len(variables),
             "total_core_variables": total_core,
             "total_options": len(opts_rows),

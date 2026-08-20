@@ -27,9 +27,11 @@ function runTests() {
   // Test 1: Load Master Dictionary
   assert(fs.existsSync(DICT_PATH), 'Master dictionary file exists');
   const dict = JSON.parse(fs.readFileSync(DICT_PATH, 'utf-8'));
-  assert.strictEqual(dict.variables.length, 143, 'Dictionary contains 143 canonical variables');
+  const coreVars = dict.variables.filter(v => v.is_core !== false);
+  assert.strictEqual(coreVars.length, 143, 'Dictionary contains 143 core canonical variables');
   assert.strictEqual(dict.metadata.total_core_variables, 143, 'Dictionary contains 143 core variables');
-  console.log('✓ Master dictionary loaded successfully (143 core variables)');
+  assert(dict.variables.length >= 143, 'Dictionary contains at least 143 total variables');
+  console.log(`✓ Master dictionary loaded successfully (143 core variables, ${dict.variables.length} total)`);
 
   // Initialize Auditor
   const auditor = new SurveyAuditor(dict);

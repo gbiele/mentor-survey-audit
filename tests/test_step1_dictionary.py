@@ -31,8 +31,6 @@ class TestMasterDictionary(unittest.TestCase):
     def test_variable_and_option_counts(self):
         n_vars = len(self.ref_vars)
         n_opts = len(self.ref_opts)
-        self.assertEqual(n_vars, 143, "Expected 143 canonical reference variables")
-        self.assertEqual(n_opts, 756, "Expected 756 canonical reference options")
 
         extracted_vars = self.data["variables"]
         self.assertEqual(len(extracted_vars), n_vars, f"Extracted {len(extracted_vars)} variables, expected {n_vars}")
@@ -40,12 +38,23 @@ class TestMasterDictionary(unittest.TestCase):
         total_extracted_options = sum(len(v["options"]) for v in extracted_vars)
         self.assertEqual(total_extracted_options, n_opts, f"Extracted {total_extracted_options} options, expected {n_opts}")
 
-        self.assertEqual(self.data["metadata"]["total_variables"], n_vars)
-        self.assertEqual(self.data["metadata"]["total_core_variables"], n_vars)
-        self.assertEqual(self.data["metadata"]["total_options"], n_opts)
+        core_vars = [v for v in extracted_vars if v.get("is_core", True)]
+        non_core_vars = [v for v in extracted_vars if not v.get("is_core", True)]
+        self.assertEqual(len(core_vars), 143, f"Expected 143 core variables, found {len(core_vars)}")
+        self.assertGreater(len(non_core_vars), 0, "Expected non-core variables from country subdirectories")
 
-        for v in extracted_vars:
+        self.assertEqual(self.data["metadata"]["total_variables"], n_vars)
+        self.assertEqual(self.data["metadata"]["total_core_variables"], 143)
+        self.assertEqual(self.data["metadata"]["total_options"], n_opts)
+        self.assertIn("canonical_en", self.data["metadata"].get("sources", []))
+        self.assertIn("germany", self.data["metadata"].get("sources", []))
+
+        for v in core_vars:
             self.assertTrue(v.get("is_core", False), f"Variable {v['variable']} should be marked is_core=True")
+
+        for v in non_core_vars:
+            self.assertFalse(v.get("is_core", True), f"Variable {v['variable']} should be marked is_core=False")
+            self.assertEqual(v["source"], "germany")
 
     def test_variable_metadata_fidelity(self):
         var_by_name = {v["variable"]: v for v in self.data["variables"]}

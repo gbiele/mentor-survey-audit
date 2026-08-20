@@ -341,7 +341,9 @@
       }
 
       const missingCoreVars = coreDictVars.filter(v => !matchedCoreVars.has(v.variable));
-      const extraColumns = columns.filter(c => !c.canonical);
+      const nonCoreColumns = columns.filter(c => c.canonical && c.canonical.is_core === false);
+      const unmappedColumns = columns.filter(c => !c.canonical);
+      const extraColumns = columns.filter(c => !c.canonical || c.canonical.is_core === false);
 
       const totalCore = coreDictVars.length;
       const coveredCoreCount = matchedCoreVars.size;
@@ -359,6 +361,8 @@
         coveredCorePct,
         missingCoreCount,
         missingCorePct,
+        nonCoreCount: nonCoreColumns.length,
+        unmappedCount: unmappedColumns.length,
         missingCoreVars: missingCoreVars.map(v => ({
           variable: v.variable,
           orig_variable: v.orig_variable,
@@ -373,7 +377,8 @@
           colIndex: c.colIndex,
           rawHeader: c.rawHeader,
           cleanedText: c.cleanedText,
-          extractedId: c.extractedId
+          extractedId: c.extractedId,
+          isNonCore: Boolean(c.canonical && c.canonical.is_core === false)
         }))
       };
 

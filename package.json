@@ -7,7 +7,7 @@
     "test": "tests"
   },
   "scripts": {
-    "test": "node tests/test_step2_engine.js && node tests/test_step3_grouping.js && python tests/test_step1_dictionary.py"
+    "test": "node tests/test_step2_engine.js && node tests/test_step3_grouping.js && python tests/test_step1_dictionary.py && python tests/test_multi_country_scan.py"
   },
   "keywords": [],
   "author": "",
