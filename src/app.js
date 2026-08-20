@@ -549,6 +549,8 @@
         const stem = (c.canonical && c.canonical.question_stem ? c.canonical.question_stem : '').toLowerCase();
         const item = (c.canonical && c.canonical.item_text ? c.canonical.item_text : '').toLowerCase();
         const status = c.statusLabel.toLowerCase();
+        const keywords = (c.canonical && Array.isArray(c.canonical.keywords)) ? c.canonical.keywords : [];
+        const matchKeywords = keywords.some(k => k.toLowerCase().includes(searchQuery));
 
         return rawH.includes(searchQuery) ||
                cleanT.includes(searchQuery) ||
@@ -558,7 +560,8 @@
                section.includes(searchQuery) ||
                stem.includes(searchQuery) ||
                item.includes(searchQuery) ||
-               status.includes(searchQuery);
+               status.includes(searchQuery) ||
+               matchKeywords;
       });
     }
 
@@ -584,14 +587,11 @@
       return;
     }
 
-    // If actively searching or filtering by issues, auto-expand relevant matrix groups
-    const autoExpand = Boolean(searchQuery || activeFilter === 'issues' || activeFilter === 'incomplete' || activeFilter === 'missing_options');
-
     tableGroups.forEach(group => {
       if (group.type === 'single') {
         renderSingleRow(tbody, group.column);
       } else if (group.type === 'matrix') {
-        const isExpanded = autoExpand || expandedMatrixGroups.has(group.groupId);
+        const isExpanded = expandedMatrixGroups.has(group.groupId);
         renderMatrixGroup(tbody, group, isExpanded);
       }
     });
@@ -811,6 +811,14 @@
     if (col.canonical && col.canonical.notes) {
       html += `<div style="margin-top: 0.75rem; font-size: 0.8rem; color: var(--text-muted); background: var(--bg-subtle); padding: 0.5rem; border-radius: var(--radius-sm);">
         <strong>Specification Note:</strong> ${col.canonical.notes}
+      </div>`;
+    }
+
+    const keywords = (col.canonical && col.canonical.keywords) || [];
+    if (keywords.length > 0) {
+      html += `<div style="margin-top: 0.75rem; display: flex; flex-wrap: wrap; gap: 0.35rem; align-items: center;">
+        <span style="font-size: 0.75rem; font-weight: 600; color: var(--text-muted);">🏷️ Tags:</span>
+        ${keywords.map(k => `<span style="font-size: 0.725rem; background: rgba(59, 130, 246, 0.08); color: #2563eb; border: 1px solid rgba(59, 130, 246, 0.2); padding: 0.1rem 0.45rem; border-radius: 9999px;">${escapeHtml(k)}</span>`).join('')}
       </div>`;
     }
 

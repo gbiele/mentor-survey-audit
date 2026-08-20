@@ -4,6 +4,7 @@
 import csv
 import json
 from pathlib import Path
+from enrich_keywords import enrich_variables_with_llm
 
 ROOT = Path(__file__).resolve().parent.parent
 DATA_DIR = ROOT / "data"
@@ -30,7 +31,7 @@ def parse_bool_safe(val):
     return False
 
 
-def build_master_dictionary():
+def build_master_dictionary(force_refresh_keywords=False):
     # Read variables
     vars_csv = REF_OUT_DIR / "codebook_variables.csv"
     opts_csv = REF_OUT_DIR / "codebook_options.csv"
@@ -105,6 +106,9 @@ def build_master_dictionary():
             by_orig_variable[orig_var] = var_entry
             if orig_var.startswith("ID"):
                 by_eusurvey_id[orig_var] = var_entry
+
+    # Enrich variables with LLM keywords (cached)
+    variables = enrich_variables_with_llm(variables, force_refresh=force_refresh_keywords)
 
     # Add metadata
     sections = sorted(list({v["section"] for v in variables if v["section"]}))

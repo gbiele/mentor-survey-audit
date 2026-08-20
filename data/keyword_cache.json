@@ -1,0 +1,1852 @@
+{
+  "gender1": [
+    "gender identity",
+    "gender",
+    "sex",
+    "demographics",
+    "identity"
+  ],
+  "ident1": [
+    "identity",
+    "social identity",
+    "self-concept",
+    "demographics",
+    "personal identity"
+  ],
+  "grade1": [
+    "grade level",
+    "education",
+    "school",
+    "academic achievement",
+    "demographics",
+    "student"
+  ],
+  "byear1": [
+    "birth year",
+    "age",
+    "demographics",
+    "year of birth"
+  ],
+  "bmonth1": [
+    "birth month",
+    "demographics",
+    "month of birth"
+  ],
+  "bplace1": [
+    "place of birth",
+    "birthplace",
+    "demographics",
+    "country of origin",
+    "nationality"
+  ],
+  "bage1": [
+    "immigration age",
+    "migration",
+    "demographics",
+    "acculturation",
+    "age of arrival"
+  ],
+  "bmborn1": [
+    "maternal origin",
+    "parental origin",
+    "demographics",
+    "mother's birthplace",
+    "family background"
+  ],
+  "bfborn1": [
+    "paternal origin",
+    "parental origin",
+    "demographics",
+    "father's birthplace",
+    "family background"
+  ],
+  "live1": [
+    "household composition",
+    "living situation",
+    "family structure",
+    "cohabitation",
+    "demographics"
+  ],
+  "livead1": [
+    "household composition",
+    "living arrangements",
+    "parental figures",
+    "family structure",
+    "demographics"
+  ],
+  "livesp1": [
+    "living situation",
+    "family structure",
+    "household composition",
+    "demographics",
+    "relationship status"
+  ],
+  "momprt1": [
+    "family structure",
+    "parental relationships",
+    "blended family",
+    "step-parent",
+    "demographics"
+  ],
+  "dadprt1": [
+    "family structure",
+    "parental relationships",
+    "blended family",
+    "step-parent",
+    "demographics"
+  ],
+  "sibs1": [
+    "sibling count",
+    "family size",
+    "family structure",
+    "household composition",
+    "demographics"
+  ],
+  "edumom1": [
+    "parental education",
+    "socioeconomic status",
+    "educational attainment",
+    "family background",
+    "demographics"
+  ],
+  "edudad1": [
+    "parental education",
+    "socioeconomic status",
+    "educational attainment",
+    "family background",
+    "demographics"
+  ],
+  "ladder1": [
+    "subjective social status",
+    "socioeconomic status",
+    "macarthur scale",
+    "social class",
+    "perceived social status",
+    "family wealth"
+  ],
+  "afford1": [
+    "financial strain",
+    "economic hardship",
+    "socioeconomic status",
+    "financial well-being",
+    "family income",
+    "affordability"
+  ],
+  "bcfpi_raia1": [
+    "inattention",
+    "hyperactivity",
+    "impulsivity",
+    "adhd",
+    "attention deficit hyperactivity disorder",
+    "bcfpi"
+  ],
+  "bcfpi_raia2": [
+    "inattention",
+    "hyperactivity",
+    "impulsivity",
+    "adhd",
+    "attention deficit hyperactivity disorder",
+    "bcfpi"
+  ],
+  "bcfpi_raia3": [
+    "inattention",
+    "hyperactivity",
+    "impulsivity",
+    "adhd",
+    "attention deficit hyperactivity disorder",
+    "bcfpi"
+  ],
+  "bcfpi_raia4": [
+    "inattention",
+    "hyperactivity",
+    "impulsivity",
+    "adhd",
+    "attention deficit hyperactivity disorder",
+    "bcfpi"
+  ],
+  "bcfpi_raia5": [
+    "inattention",
+    "hyperactivity",
+    "impulsivity",
+    "adhd",
+    "attention deficit hyperactivity disorder",
+    "bcfpi"
+  ],
+  "bcfpi_raia6": [
+    "inattention",
+    "hyperactivity",
+    "impulsivity",
+    "adhd",
+    "attention deficit hyperactivity disorder",
+    "bcfpi"
+  ],
+  "bcfpi_coop1": [
+    "oppositional defiant disorder",
+    "conduct problems",
+    "aggression",
+    "defiance",
+    "irritability",
+    "bcfpi"
+  ],
+  "bcfpi_coop2": [
+    "oppositional defiant disorder",
+    "conduct problems",
+    "aggression",
+    "defiance",
+    "irritability",
+    "bcfpi"
+  ],
+  "bcfpi_coop3": [
+    "oppositional defiant disorder",
+    "conduct problems",
+    "aggression",
+    "defiance",
+    "irritability",
+    "bcfpi"
+  ],
+  "bcfpi_coop4": [
+    "oppositional defiant disorder",
+    "conduct problems",
+    "aggression",
+    "defiance",
+    "irritability",
+    "bcfpi"
+  ],
+  "bcfpi_coop5": [
+    "oppositional defiant disorder",
+    "conduct problems",
+    "aggression",
+    "defiance",
+    "irritability",
+    "bcfpi"
+  ],
+  "bcfpi_coop6": [
+    "oppositional defiant disorder",
+    "conduct problems",
+    "aggression",
+    "defiance",
+    "irritability",
+    "bcfpi"
+  ],
+  "bcfpi_ma1": [
+    "generalized anxiety",
+    "anxiety",
+    "worry",
+    "nervousness",
+    "fear of failure",
+    "bcfpi"
+  ],
+  "bcfpi_ma2": [
+    "generalized anxiety",
+    "anxiety",
+    "worry",
+    "nervousness",
+    "fear of failure",
+    "bcfpi"
+  ],
+  "bcfpi_ma3": [
+    "generalized anxiety",
+    "anxiety",
+    "worry",
+    "nervousness",
+    "fear of failure",
+    "bcfpi"
+  ],
+  "bcfpi_ma4": [
+    "generalized anxiety",
+    "anxiety",
+    "worry",
+    "nervousness",
+    "fear of failure",
+    "bcfpi"
+  ],
+  "bcfpi_ma5": [
+    "generalized anxiety",
+    "anxiety",
+    "worry",
+    "nervousness",
+    "fear of failure",
+    "bcfpi"
+  ],
+  "bcfpi_ma6": [
+    "generalized anxiety",
+    "anxiety",
+    "worry",
+    "nervousness",
+    "fear of failure",
+    "bcfpi"
+  ],
+  "bcfpi_sa1": [
+    "social anxiety",
+    "social phobia",
+    "shyness",
+    "social avoidance",
+    "embarrassment",
+    "bcfpi"
+  ],
+  "bcfpi_sa2": [
+    "social anxiety",
+    "social phobia",
+    "shyness",
+    "social avoidance",
+    "embarrassment",
+    "bcfpi"
+  ],
+  "bcfpi_sa3": [
+    "social anxiety",
+    "social phobia",
+    "shyness",
+    "social avoidance",
+    "embarrassment",
+    "bcfpi"
+  ],
+  "bcfpi_sa4": [
+    "social anxiety",
+    "social phobia",
+    "shyness",
+    "social avoidance",
+    "embarrassment",
+    "bcfpi"
+  ],
+  "bcfpi_sa5": [
+    "social anxiety",
+    "social phobia",
+    "shyness",
+    "social avoidance",
+    "embarrassment",
+    "bcfpi"
+  ],
+  "bcfpi_sa6": [
+    "social anxiety",
+    "social phobia",
+    "shyness",
+    "social avoidance",
+    "embarrassment",
+    "bcfpi"
+  ],
+  "bcfpi_mood1": [
+    "depression",
+    "depressive symptoms",
+    "sadness",
+    "anhedonia",
+    "hopelessness",
+    "bcfpi"
+  ],
+  "bcfpi_mood2": [
+    "depression",
+    "depressive symptoms",
+    "sadness",
+    "anhedonia",
+    "hopelessness",
+    "bcfpi"
+  ],
+  "bcfpi_mood3": [
+    "depression",
+    "depressive symptoms",
+    "sadness",
+    "anhedonia",
+    "hopelessness",
+    "bcfpi"
+  ],
+  "bcfpi_mood4": [
+    "depression",
+    "depressive symptoms",
+    "sadness",
+    "anhedonia",
+    "hopelessness",
+    "bcfpi"
+  ],
+  "bcfpi_mood5": [
+    "depression",
+    "depressive symptoms",
+    "sadness",
+    "anhedonia",
+    "hopelessness",
+    "bcfpi"
+  ],
+  "bcfpi_mood6": [
+    "depression",
+    "depressive symptoms",
+    "sadness",
+    "anhedonia",
+    "hopelessness",
+    "bcfpi"
+  ],
+  "bcfpi_af1": [
+    "emotional dysregulation",
+    "affect regulation",
+    "emotional control",
+    "impulsivity",
+    "bcfpi",
+    "mood swings"
+  ],
+  "bcfpi_af2": [
+    "emotional regulation",
+    "affect regulation",
+    "distress tolerance",
+    "bcfpi",
+    "difficulty calming down",
+    "getting upset"
+  ],
+  "bcfpi_af3": [
+    "emotional dysregulation",
+    "emotional control",
+    "helplessness",
+    "bcfpi",
+    "feelings taking over",
+    "overwhelmed by emotions"
+  ],
+  "bcfpi_af4": [
+    "emotional avoidance",
+    "thought suppression",
+    "coping mechanisms",
+    "bcfpi",
+    "avoiding feelings",
+    "not thinking about emotions"
+  ],
+  "bcfpi_af5": [
+    "emotional suppression",
+    "emotional control",
+    "coping strategies",
+    "bcfpi",
+    "keeping feelings in control",
+    "emotional restraint"
+  ],
+  "bcfpi_af6": [
+    "emotional suppression",
+    "emotional expression",
+    "social withdrawal",
+    "bcfpi",
+    "keeping feelings private",
+    "bottling up emotions"
+  ],
+  "bcfpi_yf01": [
+    "social relationships",
+    "peer relationships",
+    "friendship maintenance",
+    "bcfpi",
+    "trouble with friends",
+    "losing friends"
+  ],
+  "bcfpi_yf02": [
+    "peer relationships",
+    "social interaction",
+    "social difficulties",
+    "bcfpi",
+    "trouble with peers",
+    "not getting along with others"
+  ],
+  "bcfpi_yf03": [
+    "family relationships",
+    "family conflict",
+    "interpersonal relationships",
+    "bcfpi",
+    "family problems",
+    "not getting along with family"
+  ],
+  "bcfpi_yf04": [
+    "adult relationships",
+    "authority figures",
+    "interpersonal conflict",
+    "bcfpi",
+    "trouble with adults",
+    "adult relationship problems"
+  ],
+  "bcfpi_yf05": [
+    "functional impairment",
+    "daily activities",
+    "extracurricular activities",
+    "bcfpi",
+    "trouble with activities",
+    "difficulty with sports"
+  ],
+  "bcfpi_yf06": [
+    "functional impairment",
+    "daily living skills",
+    "routine difficulties",
+    "bcfpi",
+    "trouble with daily routines",
+    "difficulty with chores"
+  ],
+  "bcfpi_yf07": [
+    "social isolation",
+    "social withdrawal",
+    "loneliness",
+    "bcfpi",
+    "self-isolation",
+    "staying alone"
+  ],
+  "bcfpi_yf08": [
+    "screen time",
+    "internet addiction",
+    "media use",
+    "bcfpi",
+    "igd",
+    "excessive gaming",
+    "internet overuse"
+  ],
+  "bcfpi_yf09": [
+    "peer relationships",
+    "school environment",
+    "social difficulties",
+    "bcfpi",
+    "trouble with classmates",
+    "student conflict"
+  ],
+  "bcfpi_yf10": [
+    "teacher-student relationships",
+    "school environment",
+    "authority figures",
+    "bcfpi",
+    "trouble with teachers",
+    "teacher conflict"
+  ],
+  "bcfpi_yf11": [
+    "school attendance",
+    "truancy",
+    "absenteeism",
+    "bcfpi",
+    "skipping school",
+    "missing school"
+  ],
+  "bcfpi_yf12": [
+    "academic performance",
+    "school achievement",
+    "academic difficulties",
+    "bcfpi",
+    "bad grades",
+    "poor school performance"
+  ],
+  "rpginsfy1": [
+    "parental support",
+    "parent-child communication",
+    "family relationships",
+    "aces",
+    "parental understanding",
+    "parents listening"
+  ],
+  "rpginsfy2": [
+    "parental monitoring",
+    "parental supervision",
+    "parental involvement",
+    "aces",
+    "parents knowing where you are",
+    "parental awareness"
+  ],
+  "dlup1": [
+    "childhood neglect",
+    "physical neglect",
+    "food insecurity",
+    "aces",
+    "not enough food",
+    "going hungry"
+  ],
+  "dlup2": [
+    "parental substance abuse",
+    "household dysfunction",
+    "childhood neglect",
+    "aces",
+    "drunk parents",
+    "drug use by parents"
+  ],
+  "dlup3": [
+    "educational neglect",
+    "childhood neglect",
+    "school attendance",
+    "aces",
+    "not sent to school",
+    "missing school"
+  ],
+  "dlupa1": [
+    "household substance abuse",
+    "parental substance use disorder",
+    "family dysfunction",
+    "aces",
+    "alcoholic in house",
+    "drug user in family"
+  ],
+  "dlupa2": [
+    "household mental illness",
+    "parental mental health",
+    "family dysfunction",
+    "aces",
+    "mentally ill family member",
+    "depressed parent"
+  ],
+  "dlupa3": [
+    "household incarceration",
+    "parental incarceration",
+    "family dysfunction",
+    "aces",
+    "family member in jail",
+    "parent in prison"
+  ],
+  "dlupa4": [
+    "parental separation",
+    "parental divorce",
+    "family structure",
+    "aces",
+    "parents divorced",
+    "separated parents"
+  ],
+  "dlupa5": [
+    "parental death",
+    "bereavement",
+    "childhood loss",
+    "aces",
+    "parent died",
+    "guardian death"
+  ],
+  "fetnqact1": [
+    "emotional abuse witnessed",
+    "verbal abuse witnessed",
+    "household violence",
+    "aces",
+    "family arguments",
+    "yelling at home"
+  ],
+  "fetnqact2": [
+    "domestic violence witnessed",
+    "physical abuse witnessed",
+    "household violence",
+    "aces",
+    "witnessed physical abuse",
+    "family fighting"
+  ],
+  "fetnqact3": [
+    "domestic violence witnessed",
+    "severe physical abuse witnessed",
+    "household violence",
+    "aces",
+    "witnessed severe violence",
+    "seeing someone attacked"
+  ],
+  "tnqactmh1": [
+    "emotional abuse",
+    "verbal abuse",
+    "psychological abuse",
+    "aces",
+    "yelled at",
+    "insulted"
+  ],
+  "tnqactmh2": [
+    "emotional abuse",
+    "neglect",
+    "abandonment",
+    "aces",
+    "threatened abandonment",
+    "thrown out"
+  ],
+  "tnqactmh3": [
+    "physical abuse",
+    "corporal punishment",
+    "child maltreatment",
+    "aces",
+    "beaten up",
+    "hit by parent"
+  ],
+  "tnqactmh4": [
+    "severe physical abuse",
+    "child maltreatment",
+    "physical violence",
+    "aces",
+    "hit with object",
+    "weapon abuse"
+  ],
+  "tnqactmh5": [
+    "sexual abuse",
+    "child sexual abuse",
+    "unwanted sexual contact",
+    "aces",
+    "unwanted touching",
+    "sexual fondling"
+  ],
+  "tnqactmh6": [
+    "sexual abuse",
+    "child sexual abuse",
+    "sexual coercion",
+    "aces",
+    "forced sexual touching",
+    "unwanted sexual contact"
+  ],
+  "tnqactmh7": [
+    "attempted sexual assault",
+    "child sexual abuse",
+    "sexual violence",
+    "aces",
+    "attempted rape",
+    "sexual assault attempt"
+  ],
+  "tnqactmh8": [
+    "sexual assault",
+    "child sexual abuse",
+    "rape",
+    "aces",
+    "sexual violence",
+    "sexual abuse"
+  ],
+  "pvtnqabb1": [
+    "bullying",
+    "peer victimization",
+    "school bullying",
+    "aces",
+    "being bullied",
+    "peer harassment"
+  ],
+  "bmo1": [
+    "types of bullying",
+    "bullying experiences",
+    "peer victimization",
+    "aces",
+    "forms of bullying",
+    "how bullied"
+  ],
+  "nqapfpfo1": [
+    "physical aggression",
+    "peer conflict",
+    "fighting",
+    "aces",
+    "physical fights",
+    "fighting with peers"
+  ],
+  "tnqaomhs1": [
+    "witnessed violence",
+    "community violence",
+    "exposure to violence",
+    "aces",
+    "seeing someone beaten",
+    "witnessing violence"
+  ],
+  "tnqaomhs2": [
+    "witnessed violence",
+    "community violence",
+    "exposure to severe violence",
+    "aces",
+    "seeing someone stabbed",
+    "witnessing shooting"
+  ],
+  "tnqaomhs3": [
+    "witnessed violence",
+    "community violence",
+    "exposure to threats",
+    "aces",
+    "seeing weapon threats",
+    "witnessing threats"
+  ],
+  "ewcvtqaw1": [
+    "forced displacement",
+    "collective violence",
+    "war trauma",
+    "aces",
+    "forced to move",
+    "displacement"
+  ],
+  "ewcvtqaw2": [
+    "home destruction",
+    "collective violence",
+    "war trauma",
+    "aces",
+    "home destroyed",
+    "war damage"
+  ],
+  "ewcvtqaw3": [
+    "collective violence",
+    "state-sponsored violence",
+    "gang violence",
+    "aces",
+    "beaten by soldiers",
+    "police brutality"
+  ],
+  "ewcvtqaw4": [
+    "witnessed collective violence",
+    "loss of loved ones",
+    "war trauma",
+    "aces",
+    "family killed",
+    "friend beaten"
+  ],
+  "cyrm01": [
+    "role models",
+    "social support",
+    "positive influences",
+    "cyrm",
+    "mentors",
+    "inspiration"
+  ],
+  "cyrm02": [
+    "educational aspirations",
+    "academic motivation",
+    "future orientation",
+    "cyrm",
+    "importance of education",
+    "valuing school"
+  ],
+  "cyrm03": [
+    "parental monitoring",
+    "parental involvement",
+    "caregiver knowledge",
+    "family support",
+    "parent-child relationship",
+    "youth safety"
+  ],
+  "cyrm04": [
+    "perseverance",
+    "grit",
+    "conscientiousness",
+    "goal achievement",
+    "self-discipline",
+    "determination"
+  ],
+  "cyrm05": [
+    "problem-solving skills",
+    "coping mechanisms",
+    "self-harm prevention",
+    "violence prevention",
+    "substance use prevention",
+    "healthy coping"
+  ],
+  "cyrm06": [
+    "community support",
+    "help-seeking behavior",
+    "social support",
+    "resourcefulness",
+    "community resources",
+    "access to help"
+  ],
+  "cyrm07": [
+    "school belonging",
+    "school engagement",
+    "social inclusion",
+    "peer relationships",
+    "school environment",
+    "sense of belonging"
+  ],
+  "cyrm08": [
+    "family support",
+    "social support",
+    "family resilience",
+    "emotional support",
+    "family relationships",
+    "family strength"
+  ],
+  "cyrm09": [
+    "peer support",
+    "social support",
+    "friendship",
+    "peer relationships",
+    "emotional support",
+    "friend loyalty"
+  ],
+  "cyrm10": [
+    "perceived fairness",
+    "social justice",
+    "community equity",
+    "discrimination",
+    "community relations",
+    "equal treatment"
+  ],
+  "cyrm11": [
+    "skill development",
+    "future orientation",
+    "life skills",
+    "personal growth",
+    "career readiness",
+    "opportunity"
+  ],
+  "cyrm12": [
+    "cultural identity",
+    "family traditions",
+    "cultural pride",
+    "ethnic identity",
+    "cultural engagement",
+    "family values"
+  ],
+  "ks1": [
+    "energy levels",
+    "vitality",
+    "physical well-being",
+    "fatigue",
+    "quality of life",
+    "vigor"
+  ],
+  "ks2": [
+    "sadness",
+    "depression",
+    "emotional well-being",
+    "mood",
+    "negative affect",
+    "low spirits"
+  ],
+  "ks3": [
+    "loneliness",
+    "social isolation",
+    "social well-being",
+    "social connection",
+    "solitude",
+    "feeling alone"
+  ],
+  "ks4": [
+    "personal time",
+    "self-care",
+    "leisure time",
+    "work-life balance",
+    "me time",
+    "free time"
+  ],
+  "ks5": [
+    "leisure activities",
+    "free time activities",
+    "enjoyment",
+    "quality of life",
+    "hobbies",
+    "recreation"
+  ],
+  "ks6": [
+    "parental fairness",
+    "parent-child relationship",
+    "family dynamics",
+    "perceived justice",
+    "parental treatment",
+    "family conflict"
+  ],
+  "ks7": [
+    "peer relationships",
+    "social interaction",
+    "friendship",
+    "social enjoyment",
+    "fun with friends",
+    "social activities"
+  ],
+  "ks8": [
+    "attention",
+    "concentration",
+    "focus",
+    "cognitive function",
+    "academic performance",
+    "attentiveness"
+  ],
+  "ksa1": [
+    "physical health",
+    "well-being",
+    "fitness",
+    "general health",
+    "physical condition",
+    "feeling good"
+  ],
+  "ksa2": [
+    "academic performance",
+    "school adjustment",
+    "work performance",
+    "educational success",
+    "job satisfaction",
+    "school well-being"
+  ],
+  "smwd1": [
+    "gaming",
+    "video games",
+    "console gaming",
+    "computer gaming",
+    "screen time",
+    "digital media use"
+  ],
+  "smwd2": [
+    "mobile gaming",
+    "phone games",
+    "casual gaming",
+    "screen time",
+    "digital media use",
+    "smartphone use"
+  ],
+  "smwd3": [
+    "social media",
+    "instant messaging",
+    "online communication",
+    "snapchat",
+    "whatsapp",
+    "messenger",
+    "social networking"
+  ],
+  "smwd4": [
+    "video streaming",
+    "youtube",
+    "twitch",
+    "online video",
+    "digital media consumption",
+    "screen time"
+  ],
+  "smwd5": [
+    "social media",
+    "tiktok",
+    "instagram",
+    "youtube shorts",
+    "passive scrolling",
+    "digital media consumption",
+    "screen time"
+  ],
+  "smwda1": [
+    "gaming",
+    "video games",
+    "console gaming",
+    "computer gaming",
+    "weekend screen time",
+    "digital media use"
+  ],
+  "smwda2": [
+    "mobile gaming",
+    "phone games",
+    "casual gaming",
+    "weekend screen time",
+    "digital media use",
+    "smartphone use"
+  ],
+  "smwda3": [
+    "social media",
+    "instant messaging",
+    "online communication",
+    "snapchat",
+    "whatsapp",
+    "messenger",
+    "weekend social networking"
+  ],
+  "smwda4": [
+    "video streaming",
+    "youtube",
+    "twitch",
+    "online video",
+    "weekend digital media",
+    "screen time"
+  ],
+  "smwda5": [
+    "social media",
+    "tiktok",
+    "instagram",
+    "youtube shorts",
+    "passive scrolling",
+    "weekend digital media",
+    "screen time"
+  ],
+  "gaming1": [
+    "gaming habits",
+    "video game use",
+    "online gaming",
+    "gaming behavior",
+    "console gaming",
+    "computer gaming"
+  ],
+  "ai1": [
+    "artificial intelligence",
+    "ai use",
+    "chatgpt",
+    "gemini",
+    "replika",
+    "technology adoption",
+    "ai tools"
+  ],
+  "aiuse1": [
+    "ai usage",
+    "artificial intelligence applications",
+    "ai purposes",
+    "technology use",
+    "ai tools",
+    "digital literacy"
+  ],
+  "smpos1": [
+    "social media positive effects",
+    "gaming positive effects",
+    "well-being",
+    "social connection",
+    "motivation",
+    "inspiration",
+    "digital well-being"
+  ],
+  "smneg1": [
+    "social media negative effects",
+    "gaming negative effects",
+    "mental health",
+    "self-esteem",
+    "guilt",
+    "shame",
+    "distressing content",
+    "digital harm"
+  ],
+  "smharm1": [
+    "sleep",
+    "sleep quality",
+    "sleep disturbance",
+    "screen time effects",
+    "digital media harm",
+    "sleep deprivation"
+  ],
+  "smharm2": [
+    "schoolwork",
+    "academic performance",
+    "academic achievement",
+    "screen time effects",
+    "digital media harm",
+    "study habits"
+  ],
+  "smharm3": [
+    "self-esteem",
+    "mental health",
+    "psychological well-being",
+    "screen time effects",
+    "digital media harm",
+    "body image"
+  ],
+  "smharm4": [
+    "peer relationships",
+    "friendship",
+    "social relationships",
+    "screen time effects",
+    "digital media harm",
+    "social connection"
+  ],
+  "smharm5": [
+    "family relationships",
+    "family dynamics",
+    "parent-child relationships",
+    "screen time effects",
+    "digital media harm",
+    "family conflict"
+  ],
+  "smharm6": [
+    "outdoor activities",
+    "physical activity",
+    "sports",
+    "screen time effects",
+    "digital media harm",
+    "sedentary lifestyle"
+  ],
+  "apps1": [
+    "app usage",
+    "social media apps",
+    "digital services",
+    "smartphone apps",
+    "popular apps",
+    "technology use"
+  ],
+  "consent1": [
+    "consent",
+    "participation",
+    "incentive",
+    "gift card",
+    "survey participation",
+    "data collection",
+    "sms code"
+  ],
+  "catsev01": [
+    "natural disaster",
+    "trauma",
+    "stressful event",
+    "environmental trauma",
+    "disaster exposure",
+    "ptsd"
+  ],
+  "catsev02": [
+    "accident",
+    "injury",
+    "trauma",
+    "physical trauma",
+    "car crash",
+    "dog bite",
+    "ptsd"
+  ],
+  "catsev03": [
+    "domestic violence",
+    "child abuse",
+    "family violence",
+    "trauma",
+    "maltreatment",
+    "ptsd"
+  ],
+  "catsev04": [
+    "community violence",
+    "school violence",
+    "bullying",
+    "peer violence",
+    "trauma",
+    "ptsd"
+  ],
+  "catsev05": [
+    "assault",
+    "violence",
+    "robbery",
+    "threat",
+    "trauma",
+    "victimization",
+    "ptsd"
+  ],
+  "catsev06": [
+    "witnessing violence",
+    "domestic violence exposure",
+    "family trauma",
+    "secondary trauma",
+    "ptsd",
+    "vicarious trauma"
+  ],
+  "catsev07": [
+    "witnessing violence",
+    "community violence exposure",
+    "school violence exposure",
+    "secondary trauma",
+    "ptsd",
+    "vicarious trauma"
+  ],
+  "catsev08": [
+    "sexual abuse",
+    "sexual assault",
+    "child sexual abuse",
+    "trauma",
+    "aces",
+    "sexual violence"
+  ],
+  "catsev09": [
+    "sexual coercion",
+    "sexual pressure",
+    "non-consensual sexual acts",
+    "sexual abuse",
+    "trauma",
+    "consent"
+  ],
+  "catsev10": [
+    "online sexual exploitation",
+    "cyber sexual abuse",
+    "sextortion",
+    "online grooming",
+    "social media abuse",
+    "digital sexual violence"
+  ],
+  "catsev11": [
+    "bullying",
+    "in-person bullying",
+    "verbal abuse",
+    "peer victimization",
+    "school bullying",
+    "trauma"
+  ],
+  "catsev12": [
+    "cyberbullying",
+    "online bullying",
+    "digital harassment",
+    "internet bullying",
+    "peer victimization",
+    "social media bullying"
+  ],
+  "catsev13": [
+    "bereavement",
+    "grief",
+    "sudden death",
+    "violent death",
+    "loss",
+    "trauma",
+    "aces"
+  ],
+  "catsev14": [
+    "medical trauma",
+    "traumatic medical experience",
+    "hospitalization trauma",
+    "medical stress",
+    "aces"
+  ],
+  "catsev15": [
+    "war trauma",
+    "combat exposure",
+    "refugee experience",
+    "conflict exposure",
+    "violence exposure",
+    "trauma",
+    "aces"
+  ],
+  "catsev16": [
+    "trauma",
+    "stressful events",
+    "adverse childhood experiences",
+    "aces",
+    "critical life events",
+    "traumatic experiences"
+  ],
+  "catsym01": [
+    "intrusive thoughts",
+    "flashbacks",
+    "re-experiencing",
+    "ptsd symptoms",
+    "trauma symptoms",
+    "cats"
+  ],
+  "catsym02": [
+    "nightmares",
+    "trauma dreams",
+    "ptsd symptoms",
+    "re-experiencing",
+    "cats"
+  ],
+  "catsym03": [
+    "flashbacks",
+    "dissociation",
+    "re-experiencing",
+    "ptsd symptoms",
+    "trauma symptoms",
+    "cats"
+  ],
+  "catsym04": [
+    "emotional distress",
+    "trauma triggers",
+    "ptsd symptoms",
+    "re-experiencing",
+    "emotional reactivity",
+    "cats"
+  ],
+  "catsym05": [
+    "physiological arousal",
+    "somatic symptoms",
+    "ptsd symptoms",
+    "trauma response",
+    "fight-or-flight",
+    "cats"
+  ],
+  "catsym06": [
+    "avoidance",
+    "emotional numbing",
+    "ptsd symptoms",
+    "trauma coping",
+    "thought suppression",
+    "cats"
+  ],
+  "catsym07": [
+    "avoidance",
+    "situational avoidance",
+    "ptsd symptoms",
+    "trauma triggers",
+    "behavioral avoidance",
+    "cats"
+  ],
+  "catsym08": [
+    "dissociative amnesia",
+    "memory loss",
+    "ptsd symptoms",
+    "trauma memory",
+    "repression",
+    "cats"
+  ],
+  "catsym09": [
+    "negative cognitions",
+    "distorted beliefs",
+    "ptsd symptoms",
+    "trauma beliefs",
+    "self-blame",
+    "cats"
+  ],
+  "catsym10": [
+    "self-blame",
+    "guilt",
+    "blame",
+    "ptsd symptoms",
+    "trauma cognitions",
+    "responsibility",
+    "cats"
+  ],
+  "catsym11": [
+    "negative affect",
+    "emotional dysregulation",
+    "ptsd symptoms",
+    "trauma emotions",
+    "mood disturbance",
+    "cats"
+  ],
+  "catsym12": [
+    "anhedonia",
+    "loss of interest",
+    "ptsd symptoms",
+    "social withdrawal",
+    "apathy",
+    "cats"
+  ],
+  "catsym13": [
+    "social isolation",
+    "detachment",
+    "ptsd symptoms",
+    "relationship difficulties",
+    "emotional numbing",
+    "cats"
+  ],
+  "catsym14": [
+    "emotional numbing",
+    "anhedonia",
+    "ptsd symptoms",
+    "positive affect reduction",
+    "cats"
+  ],
+  "catsym15": [
+    "anger outbursts",
+    "irritability",
+    "ptsd symptoms",
+    "aggression",
+    "emotional dysregulation",
+    "cats"
+  ],
+  "catsym16": [
+    "reckless behavior",
+    "self-destructive behavior",
+    "ptsd symptoms",
+    "impulsivity",
+    "risk-taking",
+    "cats"
+  ],
+  "catsym17": [
+    "hypervigilance",
+    "paranoia",
+    "ptsd symptoms",
+    "heightened awareness",
+    "safety seeking",
+    "cats"
+  ],
+  "catsym18": [
+    "exaggerated startle response",
+    "jumpiness",
+    "ptsd symptoms",
+    "hyperarousal",
+    "cats"
+  ],
+  "catsym19": [
+    "concentration difficulties",
+    "attention problems",
+    "ptsd symptoms",
+    "cognitive impairment",
+    "focus issues",
+    "cats"
+  ],
+  "catsym20": [
+    "sleep disturbance",
+    "insomnia",
+    "ptsd symptoms",
+    "sleep problems",
+    "hyperarousal",
+    "cats"
+  ],
+  "smadd1": [
+    "problematic social media use",
+    "social media addiction",
+    "excessive social media use",
+    "sma",
+    "internet addiction",
+    "screen time"
+  ],
+  "smadd2": [
+    "problematic social media use",
+    "social media addiction",
+    "loss of control",
+    "compulsive social media use",
+    "sma",
+    "digital addiction"
+  ],
+  "smadd3": [
+    "problematic social media use",
+    "social media addiction",
+    "neglect of interests",
+    "social withdrawal",
+    "sma",
+    "real-life activities"
+  ],
+  "smadd4": [
+    "problematic social media use",
+    "social media addiction",
+    "neglect of duties",
+    "functional impairment",
+    "sma",
+    "daily responsibilities"
+  ],
+  "smadd5": [
+    "problematic social media use",
+    "social media addiction",
+    "relationship conflict",
+    "interpersonal problems",
+    "sma",
+    "family stress"
+  ],
+  "smadd6": [
+    "problematic social media use",
+    "social media addiction",
+    "academic impairment",
+    "job performance",
+    "school grades",
+    "sma"
+  ],
+  "smadd7": [
+    "problematic social media use",
+    "social media addiction",
+    "self-neglect",
+    "health consequences",
+    "hygiene",
+    "sma",
+    "sleep"
+  ],
+  "smadd8": [
+    "problematic social media use",
+    "social media addiction",
+    "relationship loss",
+    "social isolation",
+    "sma",
+    "interpersonal relationships"
+  ],
+  "smadd9": [
+    "problematic social media use",
+    "social media addiction",
+    "academic failure",
+    "career impact",
+    "school performance",
+    "sma",
+    "job loss"
+  ],
+  "hbepcdlu1": [
+    "problematic social media use",
+    "social media addiction",
+    "duration of problems",
+    "chronic issues",
+    "sma",
+    "long-term impact"
+  ],
+  "hoespppc1": [
+    "problematic social media use",
+    "social media addiction",
+    "frequency of problems",
+    "recurrence",
+    "sma",
+    "episodic problems"
+  ],
+  "lpllwepc1": [
+    "problematic social media use",
+    "social media addiction",
+    "duration of episodes",
+    "problem length",
+    "sma",
+    "time spent"
+  ],
+  "gadd1": [
+    "problematic gaming",
+    "gaming disorder",
+    "excessive gaming",
+    "igd",
+    "internet gaming disorder",
+    "compulsive gaming",
+    "screen time"
+  ],
+  "gadd2": [
+    "problematic gaming",
+    "gaming disorder",
+    "loss of control",
+    "compulsive gaming",
+    "igd",
+    "digital addiction"
+  ],
+  "gadd3": [
+    "problematic gaming",
+    "gaming disorder",
+    "neglect of interests",
+    "social withdrawal",
+    "igd",
+    "real-life activities"
+  ],
+  "gadd4": [
+    "problematic gaming",
+    "gaming disorder",
+    "neglect of duties",
+    "functional impairment",
+    "igd",
+    "daily responsibilities"
+  ],
+  "gadd5": [
+    "problematic gaming",
+    "gaming disorder",
+    "relationship conflict",
+    "interpersonal problems",
+    "igd",
+    "family stress"
+  ],
+  "gadd6": [
+    "problematic gaming",
+    "gaming disorder",
+    "academic impairment",
+    "job performance",
+    "school grades",
+    "igd"
+  ],
+  "gadd7": [
+    "problematic gaming",
+    "gaming disorder",
+    "self-neglect",
+    "health consequences",
+    "hygiene",
+    "igd",
+    "sleep"
+  ],
+  "gadd8": [
+    "problematic gaming",
+    "gaming disorder",
+    "relationship loss",
+    "social isolation",
+    "igd",
+    "interpersonal relationships"
+  ],
+  "gadd9": [
+    "problematic gaming",
+    "gaming disorder",
+    "academic failure",
+    "career impact",
+    "school performance",
+    "igd",
+    "job loss"
+  ],
+  "oespcdds1": [
+    "problematic social media use",
+    "social media addiction",
+    "internet addiction",
+    "digital well-being",
+    "screen time problems",
+    "social media conflict"
+  ],
+  "mhl01": [
+    "mental health literacy",
+    "stress management",
+    "coping skills",
+    "resilience",
+    "mental well-being",
+    "handling stress"
+  ],
+  "mhl02": [
+    "mental health literacy",
+    "health information literacy",
+    "media literacy",
+    "information assessment",
+    "commercial bias",
+    "reliable mental health info"
+  ],
+  "mhl03": [
+    "mental health literacy",
+    "health information literacy",
+    "information accuracy",
+    "critical thinking",
+    "media literacy",
+    "reliable mental health info"
+  ],
+  "mhl04": [
+    "mental health literacy",
+    "help-seeking",
+    "self-assessment",
+    "mental health awareness",
+    "professional help",
+    "when to get help"
+  ],
+  "mhl05": [
+    "mental health literacy",
+    "help-seeking",
+    "access to care",
+    "mental health services",
+    "contacting support",
+    "finding a therapist"
+  ],
+  "mhl06": [
+    "mental health literacy",
+    "help-seeking for others",
+    "social support",
+    "crisis intervention",
+    "peer support",
+    "helping a friend"
+  ],
+  "mhl07": [
+    "mental health literacy",
+    "coping strategies",
+    "problem-solving",
+    "resilience",
+    "stress management",
+    "dealing with difficult situations"
+  ],
+  "mhl08": [
+    "mental health literacy",
+    "workplace well-being",
+    "occupational health",
+    "employee assistance programs",
+    "well-being initiatives",
+    "workplace mental health"
+  ],
+  "mhl09": [
+    "mental health literacy",
+    "help-seeking",
+    "self-assessment",
+    "professional assessment",
+    "early intervention",
+    "signs of mental illness"
+  ],
+  "mhl10": [
+    "mental health literacy",
+    "media literacy",
+    "health information literacy",
+    "information assessment",
+    "critical thinking",
+    "reliable media info"
+  ],
+  "mhl11": [
+    "mental health literacy",
+    "self-efficacy",
+    "well-being",
+    "living conditions",
+    "agency",
+    "social determinants of health"
+  ],
+  "mhl12": [
+    "mental health literacy",
+    "service evaluation",
+    "stress management",
+    "resilience training",
+    "coping skills",
+    "usefulness of services"
+  ],
+  "mhl13": [
+    "mental health literacy",
+    "help-seeking",
+    "symptom recognition",
+    "access to care",
+    "professional help",
+    "finding mental health support"
+  ],
+  "mhl14": [
+    "mental health literacy",
+    "media literacy",
+    "coping strategies",
+    "stress management",
+    "self-help",
+    "using media for coping"
+  ],
+  "mhl15": [
+    "mental health literacy",
+    "mental health promotion",
+    "well-being strategies",
+    "prevention",
+    "health education",
+    "maintaining mental health"
+  ],
+  "mhl16": [
+    "mental health literacy",
+    "well-being",
+    "prosocial behavior",
+    "social connection",
+    "self-care",
+    "positive impact activities"
+  ],
+  "mhl17": [
+    "mental health literacy",
+    "self-awareness",
+    "well-being",
+    "self-care",
+    "emotional regulation",
+    "finding balance"
+  ],
+  "mhl18": [
+    "mental health literacy",
+    "media literacy",
+    "well-being promotion",
+    "health information",
+    "self-improvement",
+    "media and well-being"
+  ],
+  "mhl19": [
+    "mental health literacy",
+    "media literacy",
+    "health information literacy",
+    "comprehension",
+    "understanding mental health media",
+    "information processing"
+  ],
+  "mhl20": [
+    "mental health literacy",
+    "patient-provider communication",
+    "health literacy",
+    "comprehension",
+    "treatment adherence",
+    "understanding medical advice"
+  ],
+  "mhl21": [
+    "mental health literacy",
+    "symptom recognition",
+    "information seeking",
+    "mental health awareness",
+    "mental illness symptoms",
+    "diagnosis"
+  ],
+  "mhl22": [
+    "mental health literacy",
+    "self-awareness",
+    "well-being",
+    "lifestyle factors",
+    "health behaviors",
+    "habits and attitudes"
+  ],
+  "mhl23": [
+    "mental health literacy",
+    "well-being",
+    "lifestyle factors",
+    "health behaviors",
+    "sleep",
+    "diet",
+    "exercise"
+  ],
+  "draw1": [
+    "qualitative data",
+    "open-ended response",
+    "descriptive data",
+    "free text",
+    "description",
+    "survey comments"
+  ],
+  "sibs_1": [
+    "problematic social media use",
+    "social media addiction",
+    "interpersonal conflict",
+    "relationship strain",
+    "digital well-being",
+    "screen time stress"
+  ],
+  "mdginmam1": [
+    "problematic gaming",
+    "gaming disorder",
+    "internet gaming disorder",
+    "igd",
+    "neglect",
+    "self-care",
+    "health behaviors"
+  ],
+  "eddubgpk1": [
+    "problematic gaming",
+    "gaming disorder",
+    "internet gaming disorder",
+    "igd",
+    "duration of problems",
+    "gaming addiction",
+    "chronicity"
+  ],
+  "hdslnpmp1": [
+    "problematic gaming",
+    "gaming disorder",
+    "internet gaming disorder",
+    "igd",
+    "frequency of problems",
+    "recurrence",
+    "gaming addiction"
+  ],
+  "wldespdd1": [
+    "problematic gaming",
+    "gaming disorder",
+    "internet gaming disorder",
+    "igd",
+    "duration of problems",
+    "intensity",
+    "gaming addiction"
+  ],
+  "mhla1": [
+    "mental health literacy",
+    "mhl",
+    "self-efficacy",
+    "perceived difficulty",
+    "mental health knowledge",
+    "attitudes"
+  ]
+}

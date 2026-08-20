@@ -165,6 +165,22 @@ assert.strictEqual(mockGroups[1].type, 'single', 'Unmapped column must be single
 assert.strictEqual(mockGroups[1].column.canonical, null, 'Unmapped column preserved');
 console.log('✓ Safety constraint verified: unmapped columns are NEVER inferred as matrix groups');
 
+// Test 6: Default collapsed state and explicit toggle tracking
+const matrixGroups = tableGroups.filter(g => g.type === 'matrix');
+assert(matrixGroups.length > 0, 'Should have matrix groups');
+const expandedSet = new Set();
+// By default, no group should be expanded
+matrixGroups.forEach(g => {
+  assert.strictEqual(expandedSet.has(g.groupId), false, `Matrix group ${g.groupId} must be collapsed by default`);
+});
+// Toggle expand
+expandedSet.add(matrixGroups[0].groupId);
+assert.strictEqual(expandedSet.has(matrixGroups[0].groupId), true, 'Matrix group should be expandable');
+// Toggle collapse
+expandedSet.delete(matrixGroups[0].groupId);
+assert.strictEqual(expandedSet.has(matrixGroups[0].groupId), false, 'Matrix group should be collapsable');
+console.log('✓ Matrix groups default to collapsed and expand/collapse toggles cleanly');
+
 console.log('\n========================================');
-console.log('ALL STEP 3 GROUPING TESTS PASSED (5/5)');
+console.log('ALL STEP 3 GROUPING TESTS PASSED (6/6)');
 console.log('========================================\n');

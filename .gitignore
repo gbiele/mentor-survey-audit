@@ -9,6 +9,7 @@ __pycache__/
 # Survey data files (confidential / raw exports)
 data/*
 !data/master_dictionary.json
+!data/keyword_cache.json
 docs/data/
 
 # Internal reference pipelines and raw codebook files

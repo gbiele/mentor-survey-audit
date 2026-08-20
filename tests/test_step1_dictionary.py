@@ -98,6 +98,31 @@ class TestMasterDictionary(unittest.TestCase):
         self.assertIn("raia1", by_orig)
         self.assertEqual(by_orig["raia1"], "bcfpi_raia1")
 
+    def test_keyword_enrichment(self):
+        vars_with_keywords = [v for v in self.data["variables"] if isinstance(v.get("keywords"), list) and len(v["keywords"]) > 0]
+        self.assertGreater(len(vars_with_keywords), 200, "Expected >200 variables to have enriched keywords")
+
+        # Spot check specific well-known variables
+        var_by_name = {v["variable"]: v for v in self.data["variables"]}
+        
+        # Mood / Depression items (bcfpi_mood1)
+        mood_var = var_by_name.get("bcfpi_mood1")
+        self.assertIsNotNone(mood_var)
+        self.assertTrue(any("depression" in k or "sadness" in k or "mood" in k for k in mood_var["keywords"]),
+                        f"Expected depression/mood tag in bcfpi_mood1 keywords: {mood_var['keywords']}")
+
+        # Anxiety items (bcfpi_ma1)
+        anxiety_var = var_by_name.get("bcfpi_ma1")
+        self.assertIsNotNone(anxiety_var)
+        self.assertTrue(any("anxiety" in k or "worry" in k for k in anxiety_var["keywords"]),
+                        f"Expected anxiety tag in bcfpi_ma1 keywords: {anxiety_var['keywords']}")
+
+        # Gender / Demographics item (gender1)
+        gender_var = var_by_name.get("gender1")
+        self.assertIsNotNone(gender_var)
+        self.assertTrue(any("gender" in k or "demographics" in k for k in gender_var["keywords"]),
+                        f"Expected gender/demographics tag in gender1 keywords: {gender_var['keywords']}")
+
 
 if __name__ == "__main__":
     unittest.main()
