@@ -128,10 +128,9 @@
       this.byStemKey = new Map();
       this.byItemKey = new Map();
 
-      const vars = this.dictionary.variables || [];
-      for (const v of vars) {
+      this.variables = this.dictionary.variables || [];
+      for (const v of this.variables) {
         if (v.variable) this.byCleanVar.set(v.variable.toLowerCase(), v);
-        if (v.orig_variable) this.byOrigVar.set(v.orig_variable.toLowerCase(), v);
 
         if (v.question_stem) {
           const skey = normKey(v.question_stem);
@@ -192,12 +191,34 @@
         return { candidate: candidates[0], type: baseType };
       };
 
-      // 1. Try match by extracted varId
+      // 1. Try match by extracted varId (exact orig beats country alias)
       if (varId) {
         const vidLow = varId.toLowerCase();
-        if (this.byOrigVar.has(vidLow)) {
-          canonical = this.byOrigVar.get(vidLow);
+        let exactOrig = null;
+        let aliasMatch = null;
+
+        for (const v of this.variables) {
+          if (v.orig_variable && v.orig_variable.toLowerCase() === vidLow) {
+            if (!exactOrig || (v.is_core !== false && exactOrig.is_core === false)) {
+              exactOrig = v;
+            }
+          }
+          for (const alias of Object.values(v.orig_aliases || {})) {
+            if (!alias) continue;
+            if (String(alias).toLowerCase() === vidLow) {
+              if (!aliasMatch || (v.is_core !== false && aliasMatch.is_core === false)) {
+                aliasMatch = v;
+              }
+            }
+          }
+        }
+
+        if (exactOrig) {
+          canonical = exactOrig;
           matchType = 'id_exact';
+        } else if (aliasMatch) {
+          canonical = aliasMatch;
+          matchType = 'country_alias';
         } else if (this.byCleanVar.has(vidLow)) {
           canonical = this.byCleanVar.get(vidLow);
           matchType = 'clean_name_exact';

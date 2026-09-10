@@ -47,14 +47,19 @@ class TestMasterDictionary(unittest.TestCase):
         self.assertEqual(self.data["metadata"]["total_core_variables"], 143)
         self.assertEqual(self.data["metadata"]["total_options"], n_opts)
         self.assertIn("canonical_en", self.data["metadata"].get("sources", []))
-        self.assertIn("germany", self.data["metadata"].get("sources", []))
+        country_sources = {"germany", "spain"}
+        present_countries = {
+            p.name for p in (ROOT / "data").iterdir() if p.is_dir() and not p.name.startswith(".")
+        }
+        for country in present_countries & country_sources:
+            self.assertIn(country, self.data["metadata"].get("sources", []))
 
         for v in core_vars:
             self.assertTrue(v.get("is_core", False), f"Variable {v['variable']} should be marked is_core=True")
 
         for v in non_core_vars:
             self.assertFalse(v.get("is_core", True), f"Variable {v['variable']} should be marked is_core=False")
-            self.assertEqual(v["source"], "germany")
+            self.assertIn(v["source"], present_countries)
 
     def test_variable_metadata_fidelity(self):
         var_by_name = {v["variable"]: v for v in self.data["variables"]}

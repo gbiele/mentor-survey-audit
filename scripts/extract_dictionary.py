@@ -81,6 +81,16 @@ def build_master_dictionary(force_refresh_keywords=False):
         is_core_raw = row.get("is_core")
         is_core = parse_bool_safe(is_core_raw) if is_core_raw is not None and is_core_raw != "" else True
 
+        orig_aliases_raw = row.get("orig_aliases", "")
+        orig_aliases = {}
+        if orig_aliases_raw:
+            try:
+                parsed_aliases = json.loads(orig_aliases_raw)
+                if isinstance(parsed_aliases, dict):
+                    orig_aliases = {str(k): str(v) for k, v in parsed_aliases.items() if v}
+            except json.JSONDecodeError:
+                orig_aliases = {}
+
         var_entry = {
             "variable": var_name,
             "orig_variable": orig_var,
@@ -97,15 +107,40 @@ def build_master_dictionary(force_refresh_keywords=False):
             "options_complete": parse_bool_safe(row.get("options_complete")),
             "scale_confidence": row.get("scale_confidence", ""),
             "notes": row.get("notes", ""),
+            "orig_aliases": orig_aliases,
             "options": opts
         }
 
         variables.append(var_entry)
         by_clean_variable[var_name] = var_entry
         if orig_var:
-            by_orig_variable[orig_var] = var_entry
+            existing = by_orig_variable.get(orig_var)
+            if existing is None:
+                by_orig_variable[orig_var] = var_entry
+            elif existing.get("orig_variable", "").lower() != orig_var.lower():
+                by_orig_variable[orig_var] = var_entry
+            elif is_core and not existing.get("is_core", True):
+                by_orig_variable[orig_var] = var_entry
             if orig_var.startswith("ID"):
-                by_eusurvey_id[orig_var] = var_entry
+                existing_eu = by_eusurvey_id.get(orig_var)
+                if (
+                    existing_eu is None
+                    or existing_eu.get("orig_variable", "").lower() != orig_var.lower()
+                    or (is_core and not existing_eu.get("is_core", True))
+                ):
+                    by_eusurvey_id[orig_var] = var_entry
+
+        for alias in orig_aliases.values():
+            alias_key = alias.strip()
+            if not alias_key:
+                continue
+            existing = by_orig_variable.get(alias_key)
+            if existing and existing.get("orig_variable", "").lower() == alias_key.lower():
+                continue
+            if existing and existing.get("variable") == var_name:
+                continue
+            if existing is None:
+                by_orig_variable[alias_key] = var_entry
 
     # Enrich variables with LLM keywords (cached)
     variables = enrich_variables_with_llm(variables, force_refresh=force_refresh_keywords)

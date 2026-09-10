@@ -1,0 +1,4665 @@
+{
+  "spain:genero1": {
+    "orig_variable": "genero1",
+    "translated_stem": "What gender do you identify as?",
+    "translated_item": "",
+    "translated_options": [
+      "Boy.",
+      "Girl.",
+      "Other gender.",
+      "Prefer not to answer."
+    ],
+    "canonical_id": "gender1",
+    "canonical_stem": "What gender do you identify as?",
+    "canonical_item": "",
+    "canonical_options": [
+      "Boy",
+      "Girl",
+      "Other gender identity",
+      "Prefer not to answer"
+    ]
+  },
+  "spain:genero2": {
+    "orig_variable": "genero2",
+    "translated_stem": "What gender do you identify as?",
+    "translated_item": "",
+    "translated_options": [
+      "Non-binary.",
+      "Transgender.",
+      "Intersex.",
+      "Questioning.",
+      "Not sure.",
+      "Prefer not to answer."
+    ],
+    "canonical_id": "ident1",
+    "canonical_stem": "What do you identify as?",
+    "canonical_item": "",
+    "canonical_options": [
+      "Non-binary",
+      "Transgender",
+      "Intersex",
+      "Questioning",
+      "Unsure",
+      "Prefer not to answer"
+    ]
+  },
+  "spain:grado1": {
+    "orig_variable": "grado1",
+    "translated_stem": "What grade are you currently in?",
+    "translated_item": "",
+    "translated_options": [
+      "3rd year of ESO.",
+      "4th year of ESO.",
+      "1st year of Bachillerato.",
+      "2nd year of Bachillerato.",
+      "Basic Vocational Training.",
+      "Intermediate Vocational Training.",
+      "Higher Vocational Training.",
+      "I have already finished school.",
+      "I dropped out of school before finishing.",
+      "Prefer not to answer."
+    ],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "spain:ID20": {
+    "orig_variable": "ID20",
+    "translated_stem": "What year were you born?",
+    "translated_item": "",
+    "translated_options": [
+      "2000",
+      "2001",
+      "2002",
+      "2003",
+      "2004",
+      "2005",
+      "2006",
+      "2007",
+      "2008",
+      "2009",
+      "2010",
+      "2011"
+    ],
+    "canonical_id": "byear1",
+    "canonical_stem": "What year were you born?",
+    "canonical_item": "",
+    "canonical_options": [
+      "2000",
+      "2001",
+      "2002",
+      "2003",
+      "2004",
+      "2005",
+      "2006",
+      "2007",
+      "2008",
+      "2009",
+      "2010",
+      "2011"
+    ]
+  },
+  "spain:mes1": {
+    "orig_variable": "mes1",
+    "translated_stem": "What month were you born?",
+    "translated_item": "",
+    "translated_options": [
+      "January.",
+      "February.",
+      "March.",
+      "April.",
+      "May.",
+      "June.",
+      "July.",
+      "August.",
+      "September.",
+      "October.",
+      "November.",
+      "December.",
+      "Prefer not to answer."
+    ],
+    "canonical_id": "bmonth1",
+    "canonical_stem": "What month were you born?",
+    "canonical_item": "",
+    "canonical_options": [
+      "January",
+      "February",
+      "March",
+      "April",
+      "May",
+      "June",
+      "July",
+      "August",
+      "September",
+      "October",
+      "November",
+      "December"
+    ]
+  },
+  "spain:pais1": {
+    "orig_variable": "pais1",
+    "translated_stem": "Where were you born?",
+    "translated_item": "",
+    "translated_options": [
+      "Germany",
+      "Austria",
+      "Bulgaria",
+      "Belgium",
+      "Czech Republic",
+      "Cyprus",
+      "Croatia",
+      "Denmark",
+      "Slovakia",
+      "Slovenia",
+      "Spain",
+      "Estonia",
+      "Finland",
+      "France",
+      "Greece",
+      "Hungary",
+      "Ireland",
+      "Italy",
+      "Latvia",
+      "Lithuania",
+      "Luxembourg",
+      "Malta",
+      "Netherlands",
+      "Poland",
+      "Portugal",
+      "Romania",
+      "Sweden",
+      "Albania",
+      "Andorra",
+      "Belarus",
+      "United Kingdom",
+      "Ukraine",
+      "Switzerland",
+      "Serbia",
+      "San Marino",
+      "Russia",
+      "Norway",
+      "Bosnia and Herzegovina",
+      "Asia",
+      "Australia",
+      "Iceland",
+      "Kosovo",
+      "Liechtenstein",
+      "Middle East or North Africa",
+      "Moldova",
+      "Monaco",
+      "Montenegro",
+      "North America",
+      "North Macedonia",
+      "Oceania",
+      "- Other",
+      "- Prefer not to answer",
+      "South or Central America",
+      "Southern Africa"
+    ],
+    "canonical_id": "bplace1",
+    "canonical_stem": "Where were you born?",
+    "canonical_item": "",
+    "canonical_options": [
+      "[COUNTRY]",
+      "Ukraine",
+      "Albania",
+      "Andorra",
+      "Austria",
+      "Belarus",
+      "Belgium",
+      "Bosnia and Herzegovina",
+      "Bulgaria",
+      "Croatia",
+      "Cyprus",
+      "Czech Republic",
+      "Denmark",
+      "Estonia",
+      "Finland",
+      "France",
+      "Germany",
+      "Greece",
+      "Hungary",
+      "Iceland",
+      "Ireland",
+      "Italy",
+      "Kosovo",
+      "Latvia",
+      "Liechtenstein",
+      "Lithuania",
+      "Luxembourg",
+      "Malta",
+      "Moldova",
+      "Monaco",
+      "Montenegro",
+      "Netherlands",
+      "North Macedonia",
+      "Norway",
+      "Poland",
+      "Portugal",
+      "Romania",
+      "Russia",
+      "Serbia",
+      "Slovakia",
+      "Slovenia",
+      "Spain",
+      "Sweden",
+      "Switzerland",
+      "Turkey",
+      "United Kingdom",
+      "Middle East or North Africa",
+      "Sub-Saharan Africa",
+      "Asia",
+      "North America",
+      "South or Central America",
+      "Oseania",
+      "Other"
+    ]
+  },
+  "spain:ID67": {
+    "orig_variable": "ID67",
+    "translated_stem": "Approximately how old were you when you arrived in Spain? Where was your biological mother born?",
+    "translated_item": "",
+    "translated_options": [
+      "Germany",
+      "Austria",
+      "Bulgaria",
+      "Belgium",
+      "Czech Republic",
+      "Cyprus",
+      "Croatia",
+      "Denmark",
+      "Slovakia",
+      "Slovenia",
+      "Spain",
+      "Estonia",
+      "Finland",
+      "France",
+      "Greece",
+      "Hungary",
+      "Ireland",
+      "Italy",
+      "Latvia",
+      "Lithuania",
+      "Luxembourg",
+      "Malta",
+      "Netherlands",
+      "Poland",
+      "Portugal",
+      "Romania",
+      "Sweden",
+      "Albania",
+      "Andorra",
+      "Belarus",
+      "United Kingdom",
+      "Ukraine",
+      "Switzerland",
+      "Serbia",
+      "San Marino",
+      "Russia",
+      "Norway",
+      "Bosnia and Herzegovina",
+      "Asia",
+      "Australia",
+      "Iceland",
+      "Kosovo",
+      "Liechtenstein",
+      "Middle East or North Africa",
+      "Moldova",
+      "Monaco",
+      "Montenegro",
+      "North America",
+      "North Macedonia",
+      "Oceania",
+      "Other",
+      "Prefer not to answer",
+      "South or Central America",
+      "Southern Africa"
+    ],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "spain:ID970": {
+    "orig_variable": "ID970",
+    "translated_stem": "Where was your biological father born?",
+    "translated_item": "",
+    "translated_options": [
+      "Germany",
+      "Austria",
+      "Bulgaria",
+      "Belgium",
+      "Czech Republic",
+      "Cyprus",
+      "Croatia",
+      "Denmark",
+      "Slovakia",
+      "Slovenia",
+      "Spain",
+      "Estonia",
+      "Finland",
+      "France",
+      "Greece",
+      "Hungary",
+      "Ireland",
+      "Italy",
+      "Latvia",
+      "Lithuania",
+      "Luxembourg",
+      "Malta",
+      "Netherlands",
+      "Poland",
+      "Portugal",
+      "Romania",
+      "Sweden",
+      "Albania",
+      "Andorra",
+      "Belarus",
+      "United Kingdom",
+      "Ukraine",
+      "Switzerland",
+      "Serbia",
+      "San Marino",
+      "Russia",
+      "Norway",
+      "Bosnia and Herzegovina",
+      "Asia",
+      "Australia",
+      "Iceland",
+      "Kosovo",
+      "Liechtenstein",
+      "Middle East or North Africa",
+      "Moldova",
+      "Monaco",
+      "Montenegro",
+      "North America",
+      "North Macedonia",
+      "Oceania",
+      "Other",
+      "Prefer not to answer",
+      "South or Central America",
+      "Southern Africa"
+    ],
+    "canonical_id": "bfborn1",
+    "canonical_stem": "Where was your biological father born?",
+    "canonical_item": "",
+    "canonical_options": [
+      "[COUNTRY]",
+      "Ukraine",
+      "Albania",
+      "Andorra",
+      "Austria",
+      "Belarus",
+      "Belgium",
+      "Bosnia and Herzegovina",
+      "Bulgaria",
+      "Croatia",
+      "Cyprus",
+      "Czech Republic",
+      "Denmark",
+      "Estonia",
+      "Finland",
+      "France",
+      "Germany",
+      "Greece",
+      "Hungary",
+      "Iceland",
+      "Ireland",
+      "Italy",
+      "Kosovo",
+      "Latvia",
+      "Liechtenstein",
+      "Lithuania",
+      "Luxembourg",
+      "Malta",
+      "Moldova",
+      "Monaco",
+      "Montenegro",
+      "Netherlands",
+      "North Macedonia",
+      "Norway",
+      "Poland",
+      "Portugal",
+      "Romania",
+      "Russia",
+      "Serbia",
+      "Slovakia",
+      "Slovenia",
+      "Spain",
+      "Sweden",
+      "Switzerland",
+      "Turkey",
+      "United Kingdom",
+      "Middle East or North Africa",
+      "Sub-Saharan Africa",
+      "Asia",
+      "North America",
+      "South or Central America",
+      "Oseania",
+      "Other"
+    ]
+  },
+  "spain:ID137": {
+    "orig_variable": "ID137",
+    "translated_stem": "Thinking about the people you live with, which option best describes your situation?",
+    "translated_item": "",
+    "translated_options": [
+      "I live with both my parents together.",
+      "My parents live apart and I live only with my mother.",
+      "My parents live apart and I live only with my father.",
+      "My parents live apart and I live with both parents.",
+      "I do not live with my parents.",
+      "Prefer not to answer."
+    ],
+    "canonical_id": "live1",
+    "canonical_stem": "Thinking about the people you live with, what best describes your situation?",
+    "canonical_item": "",
+    "canonical_options": [
+      "I live with both my parents together",
+      "My parents live apart, and I live only with my mother",
+      "My parents live apart, and I live only with my father",
+      "My parents live apart, and I live with both parents",
+      "I do not live with my parents"
+    ]
+  },
+  "spain:ID172": {
+    "orig_variable": "ID172",
+    "translated_stem": "Which adults do you live with?",
+    "translated_item": "",
+    "translated_options": [
+      "Relatives (for example, grandparents, uncles/aunts).",
+      "Adoptive parents.",
+      "Foster care centre.",
+      "Others."
+    ],
+    "canonical_id": "livead1",
+    "canonical_stem": "Which adults do you live with?",
+    "canonical_item": "",
+    "canonical_options": [
+      "Relatives (e.g., grandparents, aunt, uncle)",
+      "Foster parents",
+      "Supervised centre/Youth home",
+      "Other"
+    ]
+  },
+  "spain:ID5": {
+    "orig_variable": "ID5",
+    "translated_stem": "Which best describes your situation?",
+    "translated_item": "",
+    "translated_options": [
+      "I live mainly with my mother.",
+      "I live mainly with my father.",
+      "I live equally with my mother and my father."
+    ],
+    "canonical_id": "livesp1",
+    "canonical_stem": "What best describes your situation?",
+    "canonical_item": "",
+    "canonical_options": [
+      "I live mostly with my mother",
+      "I live mostly with my father",
+      "I live equally with my mother and father"
+    ]
+  },
+  "spain:ID31": {
+    "orig_variable": "ID31",
+    "translated_stem": "Does your mother have a new partner?",
+    "translated_item": "",
+    "translated_options": [
+      "Yes.",
+      "No.",
+      "I don't know."
+    ],
+    "canonical_id": "momprt1",
+    "canonical_stem": "Does your mother have a new partner?",
+    "canonical_item": "",
+    "canonical_options": [
+      "Yes",
+      "No",
+      "Don't know"
+    ]
+  },
+  "spain:ID46": {
+    "orig_variable": "ID46",
+    "translated_stem": "Does your father have a new partner?",
+    "translated_item": "",
+    "translated_options": [
+      "Yes.",
+      "No.",
+      "I don't know."
+    ],
+    "canonical_id": "dadprt1",
+    "canonical_stem": "Does your father have a new partner?",
+    "canonical_item": "",
+    "canonical_options": [
+      "Yes",
+      "No",
+      "Don't know"
+    ]
+  },
+  "spain:ID52": {
+    "orig_variable": "ID52",
+    "translated_stem": "How many siblings/half-siblings/step-siblings do you live with? Choose the total number if you live with different siblings in different homes.",
+    "translated_item": "",
+    "translated_options": [
+      "None.",
+      "1.",
+      "2.",
+      "3 or more.",
+      "Prefer not to answer."
+    ],
+    "canonical_id": "sibs1",
+    "canonical_stem": "How many siblings/half-siblings/step-siblings do you live with? Choose the total number if you live with different siblings in different homes.",
+    "canonical_item": "",
+    "canonical_options": [
+      "None",
+      "1",
+      "2",
+      "3 or more"
+    ]
+  },
+  "spain:ID62": {
+    "orig_variable": "ID62",
+    "translated_stem": "What is the highest level of education attained by your mother?",
+    "translated_item": "",
+    "translated_options": [
+      "No education.",
+      "Primary education.",
+      "Compulsory secondary education (ESO) or equivalent.",
+      "Bachillerato.",
+      "Intermediate Vocational Training.",
+      "Higher Vocational Training.",
+      "Incomplete university studies.",
+      "University bachelor's degree or licensure.",
+      "University master's degree.",
+      "Doctorate.",
+      "Prefer not to answer."
+    ],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "spain:ID156": {
+    "orig_variable": "ID156",
+    "translated_stem": "What is the highest level of education attained by your father?",
+    "translated_item": "",
+    "translated_options": [
+      "No education.",
+      "Primary education.",
+      "Compulsory secondary education (ESO) or equivalent.",
+      "Bachillerato.",
+      "Intermediate Vocational Training.",
+      "Higher Vocational Training.",
+      "Incomplete university studies.",
+      "University bachelor's degree or licensure.",
+      "University master's degree.",
+      "Doctorate.",
+      "Prefer not to answer."
+    ],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "spain:ID881": {
+    "orig_variable": "ID881",
+    "translated_stem": "Imagine a ladder that represents how society in Spain is divided. At the top of the ladder are the people who are best off: they are very wealthy, have a high level of education, and have the best jobs. At the bottom are the people who are worst off: they have little or no education, the worst jobs, or no job. Think about your own family and mark where you think your family is on the ladder.",
+    "translated_item": "",
+    "translated_options": [
+      "Worst off",
+      "Best off"
+    ],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "spain:ID158": {
+    "orig_variable": "ID158",
+    "translated_stem": "I feel that my family can usually afford to buy what we need.",
+    "translated_item": "",
+    "translated_options": [
+      "Strongly disagree.",
+      "Somewhat disagree.",
+      "Somewhat agree.",
+      "Strongly agree.",
+      "Prefer not to answer."
+    ],
+    "canonical_id": "afford1",
+    "canonical_stem": "I feel that my family can usually afford to buy what we need",
+    "canonical_item": "",
+    "canonical_options": [
+      "Strongly disagree",
+      "Somewhat disagree",
+      "Somewhat agree",
+      "Strongly agree"
+    ]
+  },
+  "spain:ID233": {
+    "orig_variable": "ID233",
+    "translated_stem": "Regulation of attention, impulsivity, and activity. Over the past six months...",
+    "translated_item": "",
+    "translated_options": [
+      "Never true",
+      "Sometimes true",
+      "Often true",
+      "Prefer not to answer",
+      "You don't finish what you start.",
+      "You are easily distracted or have trouble keeping your attention on an activity.",
+      "You quickly switch from one activity to another.",
+      "You have trouble following directions or instructions.",
+      "You are impulsive or act without thinking.",
+      "You move constantly."
+    ],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "spain:ID260": {
+    "orig_variable": "ID260",
+    "translated_stem": "Cooperation. Over the past six months...",
+    "translated_item": "",
+    "translated_options": [
+      "Never true",
+      "Sometimes true",
+      "Often true",
+      "Prefer not to answer",
+      "You blame others for your own mistakes.",
+      "You are irritable and get angry.",
+      "You lose your temper.",
+      "You are defiant or uncooperative.",
+      "You argue or talk back to adults.",
+      "You are resentful or spiteful."
+    ],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "spain:ID194": {
+    "orig_variable": "ID194",
+    "translated_stem": "Managing anxiety. During the past six months...",
+    "translated_item": "",
+    "translated_options": [
+      "Never true",
+      "Sometimes true",
+      "Often true",
+      "Prefer not to answer",
+      "You feel anxious or nervous about things in general.",
+      "You avoid or delay tasks due to anxiety.",
+      "You worry about being better at what you do.",
+      "You worry about your past behavior.",
+      "You worry about doing something wrong.",
+      "You worry about things in the future.",
+      "You are afraid of making mistakes."
+    ],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "spain:ID289": {
+    "orig_variable": "ID289",
+    "translated_stem": "Regulating social anxiety. During the past six months...",
+    "translated_item": "",
+    "translated_options": [
+      "Never true",
+      "Sometimes true",
+      "Often true",
+      "Prefer not to answer",
+      "You worry or feel very embarrassed in social situations.",
+      "You feel uncomfortable because you think others might notice you are nervous or anxious.",
+      "You have trouble participating in conversations or making eye contact because you feel anxious.",
+      "You want to leave or have left social events early due to anxiety.",
+      "You refuse or avoid attending social or school gatherings due to worry about feeling anxious.",
+      "You worry because your heart beats fast or your hands sweat at social gatherings."
+    ],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "spain:ID347": {
+    "orig_variable": "ID347",
+    "translated_stem": "Managing mood. During the past six months...",
+    "translated_item": "",
+    "translated_options": [
+      "Never true",
+      "Sometimes true",
+      "Often true",
+      "Prefer not to answer",
+      "You feel unhappy, sad, or depressed.",
+      "You don't enjoy the things you used to like or that you think you should enjoy.",
+      "You are not interested in anything or have difficulty caring about anything.",
+      "You feel lonely or lost.",
+      "You are not as happy as other people.",
+      "You feel hopeless."
+    ],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "spain:ID358": {
+    "orig_variable": "ID358",
+    "translated_stem": "Emotion regulation. During the past six months...",
+    "translated_item": "",
+    "translated_options": [
+      "Never true",
+      "Sometimes true",
+      "Often true",
+      "Prefer not to answer",
+      "You have trouble controlling your emotions.",
+      "You find it very difficult to calm down when you get angry.",
+      "You feel like your emotions overwhelm you and you can't do anything about it.",
+      "You try hard not to think about your feelings.",
+      "You believe it is better to control your emotions and not think about them.",
+      "You keep your feelings to yourself."
+    ],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "spain:ID368": {
+    "orig_variable": "ID368",
+    "translated_stem": "Daily activities. Below you will find a series of statements describing some of the feelings and behaviors of people your age. During the past 6 months...",
+    "translated_item": "",
+    "translated_options": [
+      "Never true",
+      "Sometimes true",
+      "Often true",
+      "Prefer not to answer",
+      "You have difficulty maintaining friendships.",
+      "You have trouble getting along with other people your age.",
+      "You have trouble getting along with your family.",
+      "You have trouble getting along with adults, such as family members, teachers, or bosses.",
+      "You have difficulty with activities like sports or lessons.",
+      "You have difficulty with daily routines, such as getting ready in the morning, at mealtime, at bedtime, with household chores, or with work.",
+      "You isolate yourself.",
+      "You spend too much time watching television, playing video games, or browsing the Internet.",
+      "You have trouble getting along with other classmates.",
+      "You have trouble getting along with teachers.",
+      "You have been absent from school.",
+      "You have received bad grades."
+    ],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "spain:ID391": {
+    "orig_variable": "ID391",
+    "translated_stem": "Relationship with parents/guardians During your life up to now...",
+    "translated_item": "",
+    "translated_options": [
+      "Always",
+      "Most of the time",
+      "Sometimes",
+      "Rarely",
+      "Never",
+      "Prefer not to answer",
+      "Did your parents / guardians understand your problems and concerns?",
+      "Did your parents / guardians really know what you did in your free time when you were not at school or work?"
+    ],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "spain:ID392": {
+    "orig_variable": "ID392",
+    "translated_stem": "During your life up to now...",
+    "translated_item": "",
+    "translated_options": [
+      "Many times",
+      "A few times",
+      "Once",
+      "Never",
+      "Prefer not to answer",
+      "How often did your parents / guardians not provide you with enough food, even having the ability to do so?",
+      "How often were your parents / guardians so under the influence of alcohol or other drugs that they could not take proper care of you?",
+      "How often did your parents / guardians not take you to school, even though they could do so?"
+    ],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "spain:ID405": {
+    "orig_variable": "ID405",
+    "translated_stem": "During your life up to now...",
+    "translated_item": "",
+    "translated_options": [
+      "Yes",
+      "No",
+      "Prefer not to answer",
+      "Did you live with any family member who had problems with alcohol or was an alcoholic, or who abused illegal or prescription drugs?",
+      "Did you live with any family member who was depressed, had a mental illness, or exhibited suicidal behavior?",
+      "Did you live with any family member who had been in jail or prison?",
+      "Did your parents ever separate or divorce?",
+      "Did your mother, father, or guardian pass away?"
+    ],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "spain:ID291": {
+    "orig_variable": "ID291",
+    "translated_stem": "Family environment The following questions refer to certain things you may have heard or seen IN YOUR HOME. These are things that may have happened to another family member, but not necessarily to you. During your life up to now...",
+    "translated_item": "",
+    "translated_options": [
+      "Many times",
+      "A few times",
+      "Once",
+      "Never",
+      "Prefer not to answer",
+      "Have you seen or heard one of your parents or household members being yelled at, humiliated, insulted, or treated offensively?",
+      "Have you seen or heard one of your parents or household members being slapped, kicked, punched, or beaten?",
+      "Have you seen or heard one of your parents or another family member in your household being hit or cut with an object, such as a stick (or cane), bottle, club, knife, whip, etc.?"
+    ],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "spain:ID401": {
+    "orig_variable": "ID401",
+    "translated_stem": "The following questions refer to certain things that YOU may have experienced. During your life up to now...",
+    "translated_item": "",
+    "translated_options": [
+      "Many times",
+      "A few times",
+      "Once",
+      "Never",
+      "Prefer not to answer",
+      "Has a parent, guardian, or other family member yelled at, insulted, or humiliated you?",
+      "Has a parent, guardian, or other family member threatened to abandon you or kick you out of the house, or actually done so?",
+      "Has a parent, guardian, or other family member spanked, slapped, kicked, punched, or beaten you?",
+      "Has a parent, guardian, or other family member hit or cut you with an object, such as a stick (or cane), bottle, club, knife, whip, etc.?",
+      "Did someone touch or fondle you in a sexual way when you did not want them to?",
+      "Did someone force you to touch their body in a sexual way when you did not want them to?",
+      "Did someone attempt to have oral, anal, or vaginal sex with you when you did not want them to?",
+      "Did someone have oral, anal, or vaginal sex with you when you did not want them to?"
+    ],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "spain:ID435": {
+    "orig_variable": "ID435",
+    "translated_stem": "Peer violence The following questions are about BULLYING that you experienced during your childhood. Bullying occurs when a young person or a group of young people say or do unpleasant things to another young person. It is also considered bullying when a young person is teased a lot in an unpleasant way or when they are intentionally excluded from activities. It is not considered bullying when two young people of approximately equal strength or power argue or fight, or when teasing is done in a friendly and fun way. During your life up to now...",
+    "translated_item": "",
+    "translated_options": [
+      "Many times",
+      "A few times",
+      "Once",
+      "Never",
+      "Prefer not to answer",
+      "How often were you bullied?"
+    ],
+    "canonical_id": "pvtnqabb1",
+    "canonical_stem": "Peer Violence These next questions are about BEING BULLIED when you were growing up. Bullying is when a young person or group of young people say or do bad and unpleasant things to another young person. It is also bullying when a young person is teased a lot in an unpleasant way or when a young person is left out of things on purpose. It is not bullying when two young people of about the same strength or power argue or fight or when teasing is done in a friendly and fun way. During your life up to this point... How often were you bullied?",
+    "canonical_item": "",
+    "canonical_options": [
+      "Many times",
+      "A few times",
+      "Once",
+      "Never"
+    ]
+  },
+  "spain:ID436": {
+    "orig_variable": "ID436",
+    "translated_stem": "How were you bullied most often?",
+    "translated_item": "",
+    "translated_options": [
+      "I was hit, kicked, pushed, shoved around, or locked indoors.",
+      "I was made fun of because of my race, nationality, or skin color.",
+      "I was made fun of because of my religion.",
+      "I was made fun of with jokes, comments, or gestures of a sexual nature.",
+      "I was left out of activities on purpose or completely ignored.",
+      "I was made fun of because of my physical appearance or my face.",
+      "I was bullied in some other way.",
+      "Prefer not to answer."
+    ],
+    "canonical_id": "bmo1",
+    "canonical_stem": "How were you bullied most often?",
+    "canonical_item": "",
+    "canonical_options": [
+      "I was hit, kicked, pushed, shoved around, or locked indoors.",
+      "I was made fun of because of my race, nationality or colour",
+      "I was made fun of because of my religion",
+      "I was made fun of with sexual jokes, comments, or gestures",
+      "I was left out of activities on purpose or completely ignored",
+      "I was made fun of because of how my body or face looked",
+      "I was bullied in some other way"
+    ]
+  },
+  "spain:ID307": {
+    "orig_variable": "ID307",
+    "translated_stem": "Physical fights The following question is about PHYSICAL FIGHTS. A physical fight occurs when two young people of approximately equal strength or power decide to fight each other. During your life up to now...",
+    "translated_item": "",
+    "translated_options": [
+      "Many times",
+      "A few times",
+      "Once",
+      "Never",
+      "Prefer not to answer",
+      "How often have you been involved in a physical fight?"
+    ],
+    "canonical_id": "nqapfpfo1",
+    "canonical_stem": "This next question is about PHYSICAL FIGHTS. A physical fight occurs when two young people of about the same strength or power choose to fight each other. During your life up to this point... How often were you in a physical fight?",
+    "canonical_item": "",
+    "canonical_options": [
+      "Many times",
+      "A few times",
+      "Once",
+      "Never"
+    ]
+  },
+  "spain:ID379": {
+    "orig_variable": "ID379",
+    "translated_stem": "Witnessing community violence The following questions are about how often, when you were a child, you may have seen or heard certain things in your NEIGHBORHOOD OR COMMUNITY (not in your home or on TV, movies, or the radio). During your life up to now...",
+    "translated_item": "",
+    "translated_options": [
+      "Many times",
+      "A few times",
+      "Once",
+      "Never",
+      "Prefer not to answer",
+      "Have you seen or heard someone being beaten in real life?",
+      "Have you seen or heard someone being stabbed or shot in real life?",
+      "Have you seen or heard someone being threatened with a knife or gun in real life?"
+    ],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "spain:ID438": {
+    "orig_variable": "ID438",
+    "translated_stem": "Exposure to war / collective violence These questions refer to whether or not YOU experienced any of the following events when you were a child. All events are related to collective violence, including wars, terrorism, political or ethnic conflicts, genocide, repression, disappearances, torture, and organized violent crimes, such as gang warfare. During your life up to now...",
+    "translated_item": "",
+    "translated_options": [
+      "Many times",
+      "A few times",
+      "Once",
+      "Never",
+      "Prefer not to answer",
+      "Were you forced to go and live in another place due to any of these events?",
+      "Did you experience the deliberate destruction of your home due to any of these events?",
+      "Were you beaten by soldiers, police, militia, or gangs?",
+      "Was a family member or friend killed or beaten by soldiers, police, militia, or gangs?"
+    ],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "spain:ID472": {
+    "orig_variable": "ID472",
+    "translated_stem": "To what extent do the following statements apply to you?",
+    "translated_item": "",
+    "translated_options": [
+      "Not at all",
+      "A little",
+      "Somewhat",
+      "Quite a bit",
+      "A lot",
+      "Prefer not to answer",
+      "I have people I look up to.",
+      "Getting an education is important to me.",
+      "My parents / guardians know a lot about me.",
+      "I try to finish what I start.",
+      "I solve problems without harming myself or others (without resorting to drugs or violence).",
+      "I know where to go in my community to get help.",
+      "I feel like I belong at my school.",
+      "My family supports me in difficult times.",
+      "My friends support me in difficult times.",
+      "I am treated fairly in my community.",
+      "I have opportunities to develop skills that will be useful to me later on.",
+      "I enjoy my cultural and family traditions."
+    ],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "spain:ks1": {
+    "orig_variable": "ks1",
+    "translated_stem": "Thinking about the past week...",
+    "translated_item": "",
+    "translated_options": [
+      "Never",
+      "Rarely",
+      "Often",
+      "Very often",
+      "Always",
+      "Prefer not to answer",
+      "Have you felt full of energy?",
+      "Have you felt sad?",
+      "Have you felt lonely?",
+      "Have you had enough time for yourself?",
+      "Have you been able to do what you wanted in your free time?",
+      "Have your parents treated you fairly?",
+      "Have you had fun with your friends?",
+      "Have you been able to concentrate or pay attention?"
+    ],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "spain:ks2": {
+    "orig_variable": "ks2",
+    "translated_stem": "Thinking about the past week...",
+    "translated_item": "",
+    "translated_options": [
+      "Not at all",
+      "A little",
+      "Moderately",
+      "A lot",
+      "Extremely",
+      "Prefer not to answer",
+      "Have you felt physically and mentally well?",
+      "Have things gone well for you at school?"
+    ],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "spain:ID490": {
+    "orig_variable": "ID490",
+    "translated_stem": "Think about a normal weekday. How much time do you spend on the following activities?",
+    "translated_item": "",
+    "translated_options": [
+      "Less than 1 hour",
+      "1-2 hours",
+      "3-4 hours",
+      "5-6 hours",
+      "7 hours or more",
+      "Prefer not to answer",
+      "Gaming on console / computer.",
+      "Playing games on your phone.",
+      "Chatting or sending pictures to friends (for example, Snapchat, Messenger, WhatsApp).",
+      "Watching videos or streams (for example, YouTube, Twitch).",
+      "Scrolling through short videos or image posts (for example, on TikTok, Instagram, YouTube)."
+    ],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "spain:ID508": {
+    "orig_variable": "ID508",
+    "translated_stem": "Think about a normal weekend day. How much time do you spend on the following activities?",
+    "translated_item": "",
+    "translated_options": [
+      "Less than 1 hour",
+      "1-2 hours",
+      "3-4 hours",
+      "5-6 hours",
+      "7 hours or more",
+      "Prefer not to answer",
+      "Gaming on console / computer.",
+      "Playing games on your phone.",
+      "Chatting or sending pictures to friends (for example, Snapchat, Messenger, WhatsApp).",
+      "Watching videos or streams (for example, YouTube, Twitch).",
+      "Scrolling through short videos or image posts (for example, on TikTok, Instagram, YouTube)."
+    ],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "spain:ID525": {
+    "orig_variable": "ID525",
+    "translated_stem": "How do you play on your console / computer?:",
+    "translated_item": "",
+    "translated_options": [
+      "You usually play alone.",
+      "You play online with other people.",
+      "You usually play with others while chatting with them.",
+      "Prefer not to respond."
+    ],
+    "canonical_id": "gaming1",
+    "canonical_stem": "When gaming on your console/computer, do you...",
+    "canonical_item": "",
+    "canonical_options": [
+      "Mostly play games alone?",
+      "Mostly play games online with others?",
+      "Mostly play games with others while chatting with them?"
+    ]
+  },
+  "spain:ID377": {
+    "orig_variable": "ID377",
+    "translated_stem": "Do you ever use AI (for example, ChatGPT, Gemini, My AI, Replika)?",
+    "translated_item": "",
+    "translated_options": [
+      "Yes.",
+      "No.",
+      "Prefer not to respond."
+    ],
+    "canonical_id": "ai1",
+    "canonical_stem": "Do you ever use AI (e.g., ChatGPT, Gemini, My AI, Replika)?",
+    "canonical_item": "",
+    "canonical_options": [
+      "Yes",
+      "No"
+    ]
+  },
+  "spain:ID426": {
+    "orig_variable": "ID426",
+    "translated_stem": "Indicate what you usually use AI for:",
+    "translated_item": "",
+    "translated_options": [
+      "For schoolwork.",
+      "For entertainment.",
+      "For social companionship.",
+      "Prefer not to respond."
+    ],
+    "canonical_id": "aiuse1",
+    "canonical_stem": "Please indicate what you usually use AI for:",
+    "canonical_item": "",
+    "canonical_options": [
+      "For schoolwork",
+      "For entertainment",
+      "For social company"
+    ]
+  },
+  "spain:ID489": {
+    "orig_variable": "ID489",
+    "translated_stem": "How often do you feel positive emotions after using your phone or playing video games? (for example, feeling socially connected, motivated or inspired)",
+    "translated_item": "",
+    "translated_options": [
+      "Almost always.",
+      "Often.",
+      "Sometimes.",
+      "Rarely.",
+      "Never.",
+      "Prefer not to respond."
+    ],
+    "canonical_id": "smpos1",
+    "canonical_stem": "How often do you experience positive feelings after having used your phone or played video games? (e.g., feeling socially connected, motivated or inspired)",
+    "canonical_item": "",
+    "canonical_options": [
+      "Nearly all the time",
+      "Often",
+      "Sometimes",
+      "Rarely",
+      "Never"
+    ]
+  },
+  "spain:ID520": {
+    "orig_variable": "ID520",
+    "translated_stem": "How often do you feel negative emotions after using your phone or playing video games? (for example, feeling low self-esteem, guilt or shame, or encountering distressing content)",
+    "translated_item": "",
+    "translated_options": [
+      "Almost always.",
+      "Often.",
+      "Sometimes.",
+      "Rarely.",
+      "Never.",
+      "Prefer not to respond."
+    ],
+    "canonical_id": "smneg1",
+    "canonical_stem": "How often do you experience negative feelings after having used your phone or played video games? (e.g., feeling lower self-esteem, guilty or ashamed, encountering distressing content)",
+    "canonical_item": "",
+    "canonical_options": [
+      "Nearly all the time",
+      "Often",
+      "Sometimes",
+      "Rarely",
+      "Never"
+    ]
+  },
+  "spain:ID541": {
+    "orig_variable": "ID541",
+    "translated_stem": "For each of the following areas of your life, indicate how often using your phone, computer, or video game console has a negative effect:",
+    "translated_item": "",
+    "translated_options": [
+      "Almost always",
+      "Often",
+      "Sometimes",
+      "Rarely",
+      "Never",
+      "Prefer not to respond",
+      "Sleep.",
+      "Schoolwork.",
+      "Self-esteem / Mental health.",
+      "Relationships with friends.",
+      "Relationships with family."
+    ],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "spain:ID552": {
+    "orig_variable": "ID552",
+    "translated_stem": "Select up to three apps or services that you use most often",
+    "translated_item": "",
+    "translated_options": [
+      "Snapchat.",
+      "Instagram.",
+      "Facebook.",
+      "Reddit.",
+      "TikTok.",
+      "Twitch.",
+      "Messenger.",
+      "Telegram.",
+      "WhatsApp.",
+      "YouTube.",
+      "X/ Twitter.",
+      "Pinterest.",
+      "AI (for example, ChatGPT, Gemini, Claude).",
+      "Streaming services (for example, Netflix, Disney+).",
+      "Others.",
+      "Prefer not to respond."
+    ],
+    "canonical_id": "apps1",
+    "canonical_stem": "Please select up to three apps or services you use most often",
+    "canonical_item": "",
+    "canonical_options": [
+      "Snapchat",
+      "Instagram",
+      "Facebook",
+      "Reddit",
+      "TikTok",
+      "Twitch",
+      "Messenger",
+      "Telegram",
+      "WhatsApp",
+      "YouTube",
+      "X/Twitter",
+      "Pinterest",
+      "AI (e.g., ChatGPT, Gemini, Claude)",
+      "Streaming services (e.g., Netflix, Disney+)",
+      "Other"
+    ]
+  },
+  "spain:ID451": {
+    "orig_variable": "ID451",
+    "translated_stem": "Select the option you consider most appropriate for your case.",
+    "translated_item": "",
+    "translated_options": [
+      "Never",
+      "Rarely",
+      "Sometimes",
+      "Often",
+      "Always",
+      "Prefer not to respond",
+      "When I am not in school, I spend a lot of time using my mobile phone.",
+      "I feel the need to spend more time using my mobile phone.",
+      "I feel upset when I cannot use my mobile phone.",
+      "I lie to my parents about the amount of time I spend using my mobile phone.",
+      "Using my mobile phone helps me forget my problems.",
+      "I do not spend time with family members because I prefer to use my mobile phone.",
+      "I spend more and more time with my mobile phone.",
+      "I feel upset when I am asked to stop using my mobile phone.",
+      "My parents try to stop or limit my mobile phone use, but they do not succeed.",
+      "I sleep less because I am using my mobile phone.",
+      "When I don't have my mobile phone, I think about what I do on it (video games, social media, text messages, etc.).",
+      "I feel frustrated when I cannot use my mobile phone.",
+      "I have problems with my parents because of the amount of time I spend using my mobile phone.",
+      "Using my mobile phone is the most important thing in my life.",
+      "Using my mobile phone is more enjoyable than doing other things.",
+      "I lie to my parents about what I do on my mobile phone.",
+      "I am not able to control my mobile phone use.",
+      "I have lost interest in hobbies or other activities because I prefer to use my mobile phone.",
+      "When I stop using my mobile phone, not much time passes before I use it again.",
+      "I look at my mobile phone when I am doing homework or other important things.",
+      "I feel frustrated when I am asked to stop using my mobile phone.",
+      "I argue with my parents when they ask me to stop using my mobile phone.",
+      "I spend too much money on things for my mobile phone.",
+      "Using my mobile phone makes me feel better when I feel bad.",
+      "I continue using my mobile phone even though my grades in school are getting lower."
+    ],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "spain:ID554": {
+    "orig_variable": "ID554",
+    "translated_stem": "How often do you find it difficult to fall asleep at night?",
+    "translated_item": "",
+    "translated_options": [
+      "Never.",
+      "Sometimes.",
+      "1 day a week.",
+      "2-3 days a week.",
+      "4-5 days a week.",
+      "6-7 days a week.",
+      "Prefer not to respond."
+    ],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "spain:ID528": {
+    "orig_variable": "ID528",
+    "translated_stem": "How long have you had difficulties falling asleep at night?",
+    "translated_item": "",
+    "translated_options": [
+      "Less than 1 month.",
+      "1-2 months.",
+      "3-6 months.",
+      "7-11 months.",
+      "1-3 years.",
+      "More than 3 years.",
+      "Prefer not to respond."
+    ],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "spain:ID614": {
+    "orig_variable": "ID614",
+    "translated_stem": "How often do you wake up during the night?",
+    "translated_item": "",
+    "translated_options": [
+      "Never.",
+      "Sometimes.",
+      "1 day a week.",
+      "2-3 days a week.",
+      "4-5 days a week.",
+      "6-7 days a week.",
+      "Prefer not to respond."
+    ],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "spain:ID816": {
+    "orig_variable": "ID816",
+    "translated_stem": "How long have you had nighttime awakenings?",
+    "translated_item": "",
+    "translated_options": [
+      "Less than 1 month.",
+      "1-2 months.",
+      "3-6 months.",
+      "7-11 months.",
+      "1-3 years.",
+      "More than 3 years.",
+      "Prefer not to respond."
+    ],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "spain:ID843": {
+    "orig_variable": "ID843",
+    "translated_stem": "How often do you feel tired or sleepy during the day?",
+    "translated_item": "",
+    "translated_options": [
+      "Never.",
+      "Sometimes.",
+      "1 day a week.",
+      "2-3 days a week.",
+      "4-5 days a week.",
+      "6-7 days a week.",
+      "Prefer not to respond."
+    ],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "spain:ID867": {
+    "orig_variable": "ID867",
+    "translated_stem": "How long have you felt tired or sleepy during the day?",
+    "translated_item": "",
+    "translated_options": [
+      "Less than 1 month.",
+      "1-2 months.",
+      "3-6 months.",
+      "7-11 months.",
+      "1-3 years.",
+      "More than 3 years.",
+      "Prefer not to respond."
+    ],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "spain:ID22": {
+    "orig_variable": "ID22",
+    "translated_stem": "What time do you usually go to bed on weekdays?",
+    "translated_item": "",
+    "translated_options": [
+      "Before 20:00.",
+      "20:00 - 20:29.",
+      "20:30 - 20:59.",
+      "21:00 - 21:29.",
+      "21:30 - 21:59.",
+      "22:00 - 22:29.",
+      "22:30 - 22:59.",
+      "23:00 - 23:29.",
+      "23:30 - 23:59.",
+      "00:00 - 00:29.",
+      "00:30 - 00:59.",
+      "01:00 - 01:29.",
+      "01:30 - 01:59.",
+      "02:00 - 02:29.",
+      "02:30 - 02:59.",
+      "After 03:00."
+    ],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "spain:ID627": {
+    "orig_variable": "ID627",
+    "translated_stem": "How long does it usually take you to fall asleep after going to bed on weekdays?",
+    "translated_item": "",
+    "translated_options": [
+      "Less than 30 minutes.",
+      "Between 30 minutes and 1 hour.",
+      "Between 1 hour and 1.5 hours.",
+      "Between 1.5 hours and 2 hours.",
+      "More than 2 hours."
+    ],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "spain:ID648": {
+    "orig_variable": "ID648",
+    "translated_stem": "How much time do you spend awake at night (after falling asleep for the first time) on weekdays?",
+    "translated_item": "",
+    "translated_options": [
+      "Less than 30 minutes.",
+      "Between 30 minutes and 1 hour.",
+      "Between 1 hour and 1.5 hours.",
+      "Between 1.5 hours and 2 hours.",
+      "More than 2 hours."
+    ],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "spain:ID675": {
+    "orig_variable": "ID675",
+    "translated_stem": "What time do you usually wake up in the morning on weekdays?",
+    "translated_item": "",
+    "translated_options": [
+      "Before 05:00.",
+      "05:00 - 05:29.",
+      "05:30 - 05:59.",
+      "06:00 - 06:29.",
+      "06:30 - 06:59.",
+      "07:00 - 07:29.",
+      "07:30 - 07:59.",
+      "08:00 - 08:29.",
+      "08:30 - 08:59.",
+      "09:00 - 09:29.",
+      "09:30 - 09:59.",
+      "After 10:00."
+    ],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "spain:ID604": {
+    "orig_variable": "ID604",
+    "translated_stem": "How often do you use electronic devices (e.g., mobile phone, tablet, PC/Mac, TV, etc.) in your bedroom during the last hour before going to bed?",
+    "translated_item": "",
+    "translated_options": [
+      "Never.",
+      "Almost never.",
+      "1-2 nights a week.",
+      "3-6 nights a week.",
+      "Every night.",
+      "Prefer not to respond."
+    ],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "spain:ID805": {
+    "orig_variable": "ID805",
+    "translated_stem": "How often do you send or receive messages at night, after going to bed?",
+    "translated_item": "",
+    "translated_options": [
+      "Never.",
+      "Almost never.",
+      "1-2 nights a week.",
+      "3-6 nights a week.",
+      "Every night.",
+      "Prefer not to respond."
+    ],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "spain:ID636": {
+    "orig_variable": "ID636",
+    "translated_stem": "Relationship with parents Please check how often you feel this way in your family.",
+    "translated_item": "",
+    "translated_options": [
+      "Never",
+      "Sometimes",
+      "Often",
+      "Almost always",
+      "Prefer not to answer",
+      "My parents understand me.",
+      "I get along well with my parents.",
+      "My parents like me.",
+      "I like my parents.",
+      "My parents criticize me.",
+      "My parents annoy me.",
+      "My parents hurt my feelings.",
+      "My parents and I argue."
+    ],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "spain:ID656": {
+    "orig_variable": "ID656",
+    "translated_stem": "Relationship with friends To what extent do the following statements apply to you?",
+    "translated_item": "",
+    "translated_options": [
+      "Strongly disagree",
+      "Disagree",
+      "Agree",
+      "Strongly agree",
+      "Prefer not to answer",
+      "I find it quite hard to make friends.",
+      "I have many friends.",
+      "Other young people find it hard to accept me.",
+      "I am popular among other young people.",
+      "I feel that others accept me."
+    ],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "spain:ID661": {
+    "orig_variable": "ID661",
+    "translated_stem": "Do you have a partner?",
+    "translated_item": "",
+    "translated_options": [
+      "Yes.",
+      "No, but I have had one before.",
+      "No.",
+      "I have never had one.",
+      "Prefer not to answer."
+    ],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "spain:ID682": {
+    "orig_variable": "ID682",
+    "translated_stem": "Leisure Outside of school: In a normal week, how many days do you usually do the following?",
+    "translated_item": "",
+    "translated_options": [
+      "Never - Almost never",
+      "1 day",
+      "2-3 days",
+      "4-5 days",
+      "6-7 days",
+      "Prefer not to answer",
+      "Spend time with friends.",
+      "Exercise (for example, soccer, handball, skiing, running, dance, gymnastics).",
+      "Participate in other organized activities (for example, theater, music).",
+      "Stay home the entire afternoon and evening.",
+      "Read books or listen to audiobooks."
+    ],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "spain:ID613": {
+    "orig_variable": "ID613",
+    "translated_stem": "Outside of school: Approximately how many hours a week do you do sports or physical activities (for example, soccer, handball, running, gymnastics, dance, etc.) where you get out of breath or sweat? On a normal weekday, how much time do you spend on the following activities?",
+    "translated_item": "",
+    "translated_options": [
+      "Never - Almost never",
+      "Less than 1 hour",
+      "1-2 hours",
+      "3-4 hours",
+      "5-6 hours",
+      "7 hours or more",
+      "Prefer not to answer",
+      "Watching movies / series / TV.",
+      "Doing homework.",
+      "Playing on a PC, TV, tablet, phone, etc.",
+      "Sitting/lying down with a PC, phone, or tablet (regardless of activity).",
+      "Being active on social media (not just logged in)."
+    ],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "spain:ID745": {
+    "orig_variable": "ID745",
+    "translated_stem": "On a normal weekend day or holiday, how much time do you spend on the following activities?",
+    "translated_item": "",
+    "translated_options": [
+      "Never - Almost never",
+      "Less than 1 hour",
+      "1-2 hours",
+      "3-4 hours",
+      "5-6 hours",
+      "7 hours or more",
+      "Prefer not to answer",
+      "Watching movies / series / TV.",
+      "Doing homework.",
+      "Playing on a PC, TV, tablet, phone, etc.",
+      "Sitting/lying down with a PC, phone, or tablet (regardless of activity).",
+      "Being active on social media (not just logged in)."
+    ],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "spain:ID762": {
+    "orig_variable": "ID762",
+    "translated_stem": "Do you participate in organized training (training through clubs or sports organizations)?",
+    "translated_item": "",
+    "translated_options": [
+      "Yes.",
+      "No, but I used to.",
+      "No.",
+      "Prefer not to answer."
+    ],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "spain:ID768": {
+    "orig_variable": "ID768",
+    "translated_stem": "How old were you when you stopped participating in organized sports? School",
+    "translated_item": "",
+    "translated_options": [
+      "Strongly agree",
+      "Somewhat agree",
+      "Somewhat disagree",
+      "Strongly disagree",
+      "Prefer not to answer",
+      "I like school.",
+      "My teachers care about me.",
+      "I feel that I fit in with other students at school.",
+      "I am bored at school.",
+      "Many people expect me to do well in school.",
+      "I often feel lazy about going to school.",
+      "I often have to spend weekends doing schoolwork.",
+      "There is too much noise and disturbance in class.",
+      "A lot of time is wasted at school.",
+      "We learn many interesting things in school.",
+      "It is important to get good grades."
+    ],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "spain:ID223": {
+    "orig_variable": "ID223",
+    "translated_stem": "School stress",
+    "translated_item": "",
+    "translated_options": [
+      "Never",
+      "Rarely",
+      "Sometimes",
+      "Often",
+      "Very often",
+      "Prefer not to answer",
+      "I feel stressed by schoolwork.",
+      "I feel exhausted by schoolwork.",
+      "I have more schoolwork than I can handle."
+    ],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "spain:ID829": {
+    "orig_variable": "ID829",
+    "translated_stem": "How many times have you attempted suicide?",
+    "translated_item": "",
+    "translated_options": [
+      "Substance abuse",
+      "How often have you used the following tobacco products during the past 30 days?",
+      "Never",
+      "1-2 times",
+      "3-5 times",
+      "6-9 times",
+      "10-19 times",
+      "20-39 times",
+      "40 times or more",
+      "Prefer not to answer",
+      "Cigarettes.",
+      "E-cigarettes (for example, iqos, elf bar, poco).",
+      "Chewing tobacco (snus).",
+      "How often have you used the following tobacco products in your lifetime?",
+      "Never",
+      "1-2 times",
+      "3-5 times",
+      "6-9 times",
+      "10-19 times",
+      "20-39 times",
+      "40 times or more",
+      "Prefer not to answer",
+      "Cigarettes.",
+      "E-cigarettes (for example, iqos, elf bar, poco).",
+      "Chewing tobacco (snus)."
+    ],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "spain:ID182": {
+    "orig_variable": "ID182",
+    "translated_stem": "Indicate your answers based on the following table:",
+    "translated_item": "",
+    "translated_options": [
+      "Never",
+      "1-2 times",
+      "3-5 times",
+      "6-9 times",
+      "10-19 times",
+      "20-39 times",
+      "40 times or more",
+      "Prefer not to answer",
+      "How often have you consumed alcoholic beverages (for example, beer, alcopops/coolers, wine, liquor / shots) during the past 30 days?",
+      "How often have you consumed alcoholic beverages of any type in your lifetime?",
+      "How often have you gotten drunk during the past 30 days?",
+      "How often have you gotten drunk in your lifetime?",
+      "How often have you consumed 5 or more alcoholic drinks (for example, beer, alcopops/coolers, wine, liquor / shots) in an hour or less?",
+      "How often have you used prescription medications that were not prescribed to you (for example, sedatives, tranquilizers, stimulants) in your lifetime?",
+      "How often have you used mind-altering substances that are not considered drugs (for example, inhaling glue, gas, paint, or whippets) in your lifetime?"
+    ],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "spain:ID227": {
+    "orig_variable": "ID227",
+    "translated_stem": "Have you ever used drugs?",
+    "translated_item": "",
+    "translated_options": [
+      "Yes.",
+      "No.",
+      "Prefer not to answer.",
+      "How often have you used drugs in the following ways during the past 30 days?",
+      "Never",
+      "1-2 times",
+      "3-5 times",
+      "6-9 times",
+      "10-19 times",
+      "20-39 times",
+      "40 times or more",
+      "Prefer not to answer",
+      "Using drugs in cigarettes.",
+      "Taking drugs orally.",
+      "Snorting / inhaling drugs through the nose.",
+      "Injecting drugs intravenously.",
+      "How often have you used drugs in the following ways in your lifetime?",
+      "Never",
+      "1-2 times",
+      "3-5 times",
+      "6-9 times",
+      "10-19 times",
+      "20-39 times",
+      "40 times or more",
+      "Prefer not to answer",
+      "Using drugs in cigarettes.",
+      "Taking drugs orally.",
+      "Snorting / inhaling drugs through the nose.",
+      "Injecting drugs intravenously.",
+      "THANK YOU VERY MUCH FOR YOUR COLLABORATION!",
+      "Information on free, anonymous, and specialized psychological support services in case you need to speak with someone: Helpline 024 and 061 (Spain) Helpline for suicidal behavior. ____________________________________________________ ANAR Foundation (Help to Children and Adolescents at Risk) https://www.anar.org/en/que-hacemos/telefono-chat-anar/ Helpline for children and youth: 900 20 20 10 Care, listening, and guidance by a psychologist on all types of problems: bullying, gender violence, abuse, eating disorders, cyberbullying... Helpline for adults and families: 600 50 51 52 Psychological, social, and legal care and advice for adults who need guidance on issues related to children and youth. ____________________________________________________ Youth Information and Guidance Service of FAD - SIOF Experts providing free guidance to youth between 15 and 29 years old experiencing psychological and social distress. Toll-free phone: 900 16 15 15 WhatsApp: 623 22 05 70 Monday to Friday (except holidays) from 9:00 AM to 9:00 PM Topics addressed: Depressive symptoms, anxiety, relationship problems, risky sexual behaviors, sexual diversity, life transitions (change of studies, job, friendships, partner, etc.), body image problems, and risky drug use."
+    ],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "spain:ID63": {
+    "orig_variable": "ID63",
+    "translated_stem": "Where was your biological mother born?",
+    "translated_item": "",
+    "translated_options": [
+      "[COUNTRY]",
+      "Ukraine",
+      "Albania",
+      "Andorra",
+      "Austria",
+      "Belarus",
+      "Belgium",
+      "Bosnia and Herzegovina",
+      "Bulgaria",
+      "Croatia",
+      "Cyprus",
+      "Czech Republic",
+      "Denmark",
+      "Estonia",
+      "Finland",
+      "France",
+      "Germany",
+      "Greece",
+      "Hungary",
+      "Iceland",
+      "Ireland",
+      "Italy",
+      "Kosovo",
+      "Latvia",
+      "Liechtenstein",
+      "Lithuania",
+      "Luxembourg",
+      "Malta",
+      "Moldova",
+      "Monaco",
+      "Montenegro",
+      "Netherlands",
+      "North Macedonia",
+      "Norway",
+      "Poland",
+      "Portugal",
+      "Romania",
+      "Russia",
+      "Serbia",
+      "Slovakia",
+      "Slovenia",
+      "Spain",
+      "Sweden",
+      "Switzerland",
+      "Turkey",
+      "United Kingdom",
+      "Middle East or North Africa",
+      "Sub-Saharan Africa",
+      "Asia",
+      "North America",
+      "South or Central America",
+      "Oseania",
+      "Other"
+    ],
+    "canonical_id": "bmborn1",
+    "canonical_stem": "Where was your biological mother born?",
+    "canonical_item": "",
+    "canonical_options": [
+      "[COUNTRY]",
+      "Ukraine",
+      "Albania",
+      "Andorra",
+      "Austria",
+      "Belarus",
+      "Belgium",
+      "Bosnia and Herzegovina",
+      "Bulgaria",
+      "Croatia",
+      "Cyprus",
+      "Czech Republic",
+      "Denmark",
+      "Estonia",
+      "Finland",
+      "France",
+      "Germany",
+      "Greece",
+      "Hungary",
+      "Iceland",
+      "Ireland",
+      "Italy",
+      "Kosovo",
+      "Latvia",
+      "Liechtenstein",
+      "Lithuania",
+      "Luxembourg",
+      "Malta",
+      "Moldova",
+      "Monaco",
+      "Montenegro",
+      "Netherlands",
+      "North Macedonia",
+      "Norway",
+      "Poland",
+      "Portugal",
+      "Romania",
+      "Russia",
+      "Serbia",
+      "Slovakia",
+      "Slovenia",
+      "Spain",
+      "Sweden",
+      "Switzerland",
+      "Turkey",
+      "United Kingdom",
+      "Middle East or North Africa",
+      "Sub-Saharan Africa",
+      "Asia",
+      "North America",
+      "South or Central America",
+      "Oseania",
+      "Other"
+    ]
+  },
+  "spain:ID234": {
+    "orig_variable": "ID234",
+    "translated_stem": "Regulation of attention, impulsivity, and activity. During the past six months...: You are easily distracted or have trouble paying attention to an activity.",
+    "translated_item": "",
+    "translated_options": [
+      "NEVER true",
+      "SOMETIMES true",
+      "OFTEN true"
+    ],
+    "canonical_id": "bcfpi_raia2",
+    "canonical_stem": "The following are descriptions of emotions and behaviors that young people might experience. Please select the response that best reflects how you have felt or behaved over the past six months. You...",
+    "canonical_item": "are easily distracted or have trouble sticking to an activity",
+    "canonical_options": [
+      "NEVER true",
+      "SOMETIMES true",
+      "OFTEN true"
+    ]
+  },
+  "spain:ID235": {
+    "orig_variable": "ID235",
+    "translated_stem": "Regulation of attention, impulsivity, and activity. During the past six months...: You quickly move from one activity to another.",
+    "translated_item": "",
+    "translated_options": [
+      "NEVER true",
+      "SOMETIMES true",
+      "OFTEN true"
+    ],
+    "canonical_id": "bcfpi_raia3",
+    "canonical_stem": "The following are descriptions of emotions and behaviors that young people might experience. Please select the response that best reflects how you have felt or behaved over the past six months. You...",
+    "canonical_item": "jump from one activity to another",
+    "canonical_options": [
+      "NEVER true",
+      "SOMETIMES true",
+      "OFTEN true"
+    ]
+  },
+  "spain:ID236": {
+    "orig_variable": "ID236",
+    "translated_stem": "Regulation of attention, impulsivity, and activity. During the past six months...: You have trouble following instructions or directions.",
+    "translated_item": "",
+    "translated_options": [
+      "NEVER true",
+      "SOMETIMES true",
+      "OFTEN true"
+    ],
+    "canonical_id": "bcfpi_raia4",
+    "canonical_stem": "The following are descriptions of emotions and behaviors that young people might experience. Please select the response that best reflects how you have felt or behaved over the past six months. You...",
+    "canonical_item": "have difficulty following directions or instructions",
+    "canonical_options": [
+      "NEVER true",
+      "SOMETIMES true",
+      "OFTEN true"
+    ]
+  },
+  "spain:ID251": {
+    "orig_variable": "ID251",
+    "translated_stem": "Regulation of attention, impulsivity, and activity. During the past six months...: You are impulsive or act without thinking.",
+    "translated_item": "",
+    "translated_options": [
+      "NEVER true",
+      "SOMETIMES true",
+      "OFTEN true"
+    ],
+    "canonical_id": "bcfpi_raia5",
+    "canonical_stem": "The following are descriptions of emotions and behaviors that young people might experience. Please select the response that best reflects how you have felt or behaved over the past six months. You...",
+    "canonical_item": "are impulsive or you act without stopping to think",
+    "canonical_options": [
+      "NEVER true",
+      "SOMETIMES true",
+      "OFTEN true"
+    ]
+  },
+  "spain:ID252": {
+    "orig_variable": "ID252",
+    "translated_stem": "Regulation of attention, impulsivity, and activity. During the past six months...: You are constantly moving.",
+    "translated_item": "",
+    "translated_options": [
+      "NEVER true",
+      "SOMETIMES true",
+      "OFTEN true"
+    ],
+    "canonical_id": "bcfpi_raia6",
+    "canonical_stem": "The following are descriptions of emotions and behaviors that young people might experience. Please select the response that best reflects how you have felt or behaved over the past six months. You...",
+    "canonical_item": "fidget",
+    "canonical_options": [
+      "NEVER true",
+      "SOMETIMES true",
+      "OFTEN true"
+    ]
+  },
+  "spain:ID261": {
+    "orig_variable": "ID261",
+    "translated_stem": "Cooperation. During the past six months...: You are irritable and get angry.",
+    "translated_item": "",
+    "translated_options": [
+      "NEVER true",
+      "SOMETIMES true",
+      "OFTEN true"
+    ],
+    "canonical_id": "bcfpi_coop2",
+    "canonical_stem": "Please select the response that best reflects how you have felt or behaved over the past six months. You...",
+    "canonical_item": "are irritable and angry",
+    "canonical_options": [
+      "NEVER true",
+      "SOMETIMES true",
+      "OFTEN true"
+    ]
+  },
+  "spain:ID282": {
+    "orig_variable": "ID282",
+    "translated_stem": "Cooperation. During the past six months...: You lose your temper.",
+    "translated_item": "",
+    "translated_options": [
+      "NEVER true",
+      "SOMETIMES true",
+      "OFTEN true"
+    ],
+    "canonical_id": "bcfpi_coop3",
+    "canonical_stem": "Please select the response that best reflects how you have felt or behaved over the past six months. You...",
+    "canonical_item": "lose your temper",
+    "canonical_options": [
+      "NEVER true",
+      "SOMETIMES true",
+      "OFTEN true"
+    ]
+  },
+  "spain:ID283": {
+    "orig_variable": "ID283",
+    "translated_stem": "Cooperation. During the past six months...: You are defiant or uncooperative.",
+    "translated_item": "",
+    "translated_options": [
+      "NEVER true",
+      "SOMETIMES true",
+      "OFTEN true"
+    ],
+    "canonical_id": "bcfpi_coop4",
+    "canonical_stem": "Please select the response that best reflects how you have felt or behaved over the past six months. You...",
+    "canonical_item": "are defiant or uncooperative",
+    "canonical_options": [
+      "NEVER true",
+      "SOMETIMES true",
+      "OFTEN true"
+    ]
+  },
+  "spain:ID284": {
+    "orig_variable": "ID284",
+    "translated_stem": "Cooperation. During the past six months...: You argue or talk back to adults.",
+    "translated_item": "",
+    "translated_options": [
+      "NEVER true",
+      "SOMETIMES true",
+      "OFTEN true"
+    ],
+    "canonical_id": "bcfpi_coop5",
+    "canonical_stem": "Please select the response that best reflects how you have felt or behaved over the past six months. You...",
+    "canonical_item": "argue or talk back to adults",
+    "canonical_options": [
+      "NEVER true",
+      "SOMETIMES true",
+      "OFTEN true"
+    ]
+  },
+  "spain:ID297": {
+    "orig_variable": "ID297",
+    "translated_stem": "Cooperation. During the past six months...: You are resentful or spiteful.",
+    "translated_item": "",
+    "translated_options": [
+      "NEVER true",
+      "SOMETIMES true",
+      "OFTEN true"
+    ],
+    "canonical_id": "bcfpi_coop6",
+    "canonical_stem": "Please select the response that best reflects how you have felt or behaved over the past six months. You...",
+    "canonical_item": "are resentful or feel spiteful",
+    "canonical_options": [
+      "NEVER true",
+      "SOMETIMES true",
+      "OFTEN true"
+    ]
+  },
+  "spain:ID296": {
+    "orig_variable": "ID296",
+    "translated_stem": "Managing anxiety. During the past six months...: You avoid or delay tasks due to anxiety.",
+    "translated_item": "",
+    "translated_options": [],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "spain:ID298": {
+    "orig_variable": "ID298",
+    "translated_stem": "Managing anxiety. During the past six months...: You worry about doing better at what you do.",
+    "translated_item": "",
+    "translated_options": [
+      "NEVER true",
+      "SOMETIMES true",
+      "OFTEN true"
+    ],
+    "canonical_id": "bcfpi_ma2",
+    "canonical_stem": "Please select the response that best reflects how you have felt or behaved over the past six months. You...",
+    "canonical_item": "worry about doing better at things",
+    "canonical_options": [
+      "NEVER true",
+      "SOMETIMES true",
+      "OFTEN true"
+    ]
+  },
+  "spain:ID299": {
+    "orig_variable": "ID299",
+    "translated_stem": "Managing anxiety. During the past six months...: You worry about your past behavior.",
+    "translated_item": "",
+    "translated_options": [
+      "NEVER true",
+      "SOMETIMES true",
+      "OFTEN true"
+    ],
+    "canonical_id": "bcfpi_ma3",
+    "canonical_stem": "Please select the response that best reflects how you have felt or behaved over the past six months. You...",
+    "canonical_item": "worry about your past behaviour",
+    "canonical_options": [
+      "NEVER true",
+      "SOMETIMES true",
+      "OFTEN true"
+    ]
+  },
+  "spain:ID300": {
+    "orig_variable": "ID300",
+    "translated_stem": "Managing anxiety. During the past six months...: You worry about doing something wrong.",
+    "translated_item": "",
+    "translated_options": [
+      "NEVER true",
+      "SOMETIMES true",
+      "OFTEN true"
+    ],
+    "canonical_id": "bcfpi_ma4",
+    "canonical_stem": "Please select the response that best reflects how you have felt or behaved over the past six months. You...",
+    "canonical_item": "worry about doing the wrong thing",
+    "canonical_options": [
+      "NEVER true",
+      "SOMETIMES true",
+      "OFTEN true"
+    ]
+  },
+  "spain:ID301": {
+    "orig_variable": "ID301",
+    "translated_stem": "Managing anxiety. During the past six months...: You worry about things in the future.",
+    "translated_item": "",
+    "translated_options": [
+      "NEVER true",
+      "SOMETIMES true",
+      "OFTEN true"
+    ],
+    "canonical_id": "bcfpi_ma5",
+    "canonical_stem": "Please select the response that best reflects how you have felt or behaved over the past six months. You...",
+    "canonical_item": "worry about things in the future",
+    "canonical_options": [
+      "NEVER true",
+      "SOMETIMES true",
+      "OFTEN true"
+    ]
+  },
+  "spain:ID302": {
+    "orig_variable": "ID302",
+    "translated_stem": "Managing anxiety. During the past six months...: You are afraid of making mistakes.",
+    "translated_item": "",
+    "translated_options": [
+      "NEVER true",
+      "SOMETIMES true",
+      "OFTEN true"
+    ],
+    "canonical_id": "bcfpi_ma6",
+    "canonical_stem": "Please select the response that best reflects how you have felt or behaved over the past six months. You...",
+    "canonical_item": "are afraid of making mistakes",
+    "canonical_options": [
+      "NEVER true",
+      "SOMETIMES true",
+      "OFTEN true"
+    ]
+  },
+  "spain:ID326": {
+    "orig_variable": "ID326",
+    "translated_stem": "Regulating social anxiety. During the past six months...: You feel uncomfortable because you think others might notice you are nervous or anxious.",
+    "translated_item": "",
+    "translated_options": [
+      "NEVER true",
+      "SOMETIMES true",
+      "OFTEN true"
+    ],
+    "canonical_id": "bcfpi_sa2",
+    "canonical_stem": "Please select the response that best reflects how you have felt or behaved over the past six months. You...",
+    "canonical_item": "feel uncomfortable because you feel that others could see you are nervous or anxious",
+    "canonical_options": [
+      "NEVER true",
+      "SOMETIMES true",
+      "OFTEN true"
+    ]
+  },
+  "spain:ID327": {
+    "orig_variable": "ID327",
+    "translated_stem": "Regulating social anxiety. During the past six months...: You have trouble participating in conversations or making eye contact because you feel anxious.",
+    "translated_item": "",
+    "translated_options": [
+      "NEVER true",
+      "SOMETIMES true",
+      "OFTEN true"
+    ],
+    "canonical_id": "bcfpi_sa3",
+    "canonical_stem": "Please select the response that best reflects how you have felt or behaved over the past six months. You...",
+    "canonical_item": "have problems participating in conversations or making eye contact because you feel anxious",
+    "canonical_options": [
+      "NEVER true",
+      "SOMETIMES true",
+      "OFTEN true"
+    ]
+  },
+  "spain:ID328": {
+    "orig_variable": "ID328",
+    "translated_stem": "Regulating social anxiety. During the past six months...: You want to leave or have left social events early because of anxiety.",
+    "translated_item": "",
+    "translated_options": [
+      "NEVER true",
+      "SOMETIMES true",
+      "OFTEN true"
+    ],
+    "canonical_id": "bcfpi_sa4",
+    "canonical_stem": "Please select the response that best reflects how you have felt or behaved over the past six months. You...",
+    "canonical_item": "want to leave or have left social events early because of anxiety",
+    "canonical_options": [
+      "NEVER true",
+      "SOMETIMES true",
+      "OFTEN true"
+    ]
+  },
+  "spain:ID329": {
+    "orig_variable": "ID329",
+    "translated_stem": "Regulating social anxiety. During the past six months...: You refuse or avoid attending social or school gatherings due to worries about feeling anxious.",
+    "translated_item": "",
+    "translated_options": [
+      "NEVER true",
+      "SOMETIMES true",
+      "OFTEN true"
+    ],
+    "canonical_id": "bcfpi_sa5",
+    "canonical_stem": "Please select the response that best reflects how you have felt or behaved over the past six months. You...",
+    "canonical_item": "refuse/avoid going to social or school gatherings/outings due to worries about feeling anxious",
+    "canonical_options": [
+      "NEVER true",
+      "SOMETIMES true",
+      "OFTEN true"
+    ]
+  },
+  "spain:ID330": {
+    "orig_variable": "ID330",
+    "translated_stem": "Regulating social anxiety. During the past six months...: You worry because your heart beats fast or your palms sweat at social gatherings.",
+    "translated_item": "",
+    "translated_options": [
+      "NEVER true",
+      "SOMETIMES true",
+      "OFTEN true"
+    ],
+    "canonical_id": "bcfpi_sa6",
+    "canonical_stem": "Please select the response that best reflects how you have felt or behaved over the past six months. You...",
+    "canonical_item": "worry because your heart is racing or your palms are sweaty in social gatherings",
+    "canonical_options": [
+      "NEVER true",
+      "SOMETIMES true",
+      "OFTEN true"
+    ]
+  },
+  "spain:ID348": {
+    "orig_variable": "ID348",
+    "translated_stem": "Managing mood. During the past six months...: You do not enjoy things you used to like or that you feel you should enjoy.",
+    "translated_item": "",
+    "translated_options": [
+      "NEVER true",
+      "SOMETIMES true",
+      "OFTEN true"
+    ],
+    "canonical_id": "bcfpi_mood2",
+    "canonical_stem": "Please select the response that best reflects how you have felt or behaved over the past six months. You...",
+    "canonical_item": "don't get pleasure from things you once enjoyed or feel you should enjoy",
+    "canonical_options": [
+      "NEVER true",
+      "SOMETIMES true",
+      "OFTEN true"
+    ]
+  },
+  "spain:ID349": {
+    "orig_variable": "ID349",
+    "translated_stem": "Managing mood. During the past six months...: You are not interested in anything or have difficulty being interested in anything.",
+    "translated_item": "",
+    "translated_options": [
+      "NEVER true",
+      "SOMETIMES true",
+      "OFTEN true"
+    ],
+    "canonical_id": "bcfpi_mood3",
+    "canonical_stem": "Please select the response that best reflects how you have felt or behaved over the past six months. You...",
+    "canonical_item": "are not interested in anything or have trouble caring about anything",
+    "canonical_options": [
+      "NEVER true",
+      "SOMETIMES true",
+      "OFTEN true"
+    ]
+  },
+  "spain:ID350": {
+    "orig_variable": "ID350",
+    "translated_stem": "Managing mood. During the past six months...: You feel lonely or lost.",
+    "translated_item": "",
+    "translated_options": [
+      "NEVER true",
+      "SOMETIMES true",
+      "OFTEN true"
+    ],
+    "canonical_id": "bcfpi_mood4",
+    "canonical_stem": "Please select the response that best reflects how you have felt or behaved over the past six months. You...",
+    "canonical_item": "feel lonely or lost",
+    "canonical_options": [
+      "NEVER true",
+      "SOMETIMES true",
+      "OFTEN true"
+    ]
+  },
+  "spain:ID351": {
+    "orig_variable": "ID351",
+    "translated_stem": "Managing mood. During the past six months...: You are not as happy as other people.",
+    "translated_item": "",
+    "translated_options": [
+      "NEVER true",
+      "SOMETIMES true",
+      "OFTEN true"
+    ],
+    "canonical_id": "bcfpi_mood5",
+    "canonical_stem": "Please select the response that best reflects how you have felt or behaved over the past six months. You...",
+    "canonical_item": "are not as happy as other people",
+    "canonical_options": [
+      "NEVER true",
+      "SOMETIMES true",
+      "OFTEN true"
+    ]
+  },
+  "spain:ID352": {
+    "orig_variable": "ID352",
+    "translated_stem": "Managing mood. During the past six months...: You feel hopeless.",
+    "translated_item": "",
+    "translated_options": [
+      "NEVER true",
+      "SOMETIMES true",
+      "OFTEN true"
+    ],
+    "canonical_id": "bcfpi_mood6",
+    "canonical_stem": "Please select the response that best reflects how you have felt or behaved over the past six months. You...",
+    "canonical_item": "feel hopeless",
+    "canonical_options": [
+      "NEVER true",
+      "SOMETIMES true",
+      "OFTEN true"
+    ]
+  },
+  "spain:ID359": {
+    "orig_variable": "ID359",
+    "translated_stem": "Emotion regulation. During the past six months...: You find it very hard to calm down when you get angry.",
+    "translated_item": "",
+    "translated_options": [
+      "NEVER true",
+      "SOMETIMES true",
+      "OFTEN true"
+    ],
+    "canonical_id": "bcfpi_af2",
+    "canonical_stem": "Please select the response that best reflects how you have felt or behaved over the past six months. You...",
+    "canonical_item": "find it very hard to calm down when you get upset",
+    "canonical_options": [
+      "NEVER true",
+      "SOMETIMES true",
+      "OFTEN true"
+    ]
+  },
+  "spain:ID360": {
+    "orig_variable": "ID360",
+    "translated_stem": "Emotion regulation. Over the past six months...: You feel that your emotions overpower you and you can't do anything about it.",
+    "translated_item": "",
+    "translated_options": [
+      "NEVER true",
+      "SOMETIMES true",
+      "OFTEN true"
+    ],
+    "canonical_id": "bcfpi_af3",
+    "canonical_stem": "Please select the response that best reflects how you have felt or behaved over the past six months. You...",
+    "canonical_item": "find your feelings just taking over and you can't do anything about it",
+    "canonical_options": [
+      "NEVER true",
+      "SOMETIMES true",
+      "OFTEN true"
+    ]
+  },
+  "spain:ID361": {
+    "orig_variable": "ID361",
+    "translated_stem": "Emotion regulation. Over the past six months...: You make an effort not to think about your feelings.",
+    "translated_item": "",
+    "translated_options": [
+      "NEVER true",
+      "SOMETIMES true",
+      "OFTEN true"
+    ],
+    "canonical_id": "bcfpi_af4",
+    "canonical_stem": "Please select the response that best reflects how you have felt or behaved over the past six months. You...",
+    "canonical_item": "try hard not to think about your feelings",
+    "canonical_options": [
+      "NEVER true",
+      "SOMETIMES true",
+      "OFTEN true"
+    ]
+  },
+  "spain:ID362": {
+    "orig_variable": "ID362",
+    "translated_stem": "Emotion regulation. Over the past six months...: You believe it is better to control your emotions and not think about them.",
+    "translated_item": "",
+    "translated_options": [
+      "NEVER true",
+      "SOMETIMES true",
+      "OFTEN true"
+    ],
+    "canonical_id": "bcfpi_af5",
+    "canonical_stem": "Please select the response that best reflects how you have felt or behaved over the past six months. You...",
+    "canonical_item": "believe it is best to keep your feelings in control and not to think about them",
+    "canonical_options": [
+      "NEVER true",
+      "SOMETIMES true",
+      "OFTEN true"
+    ]
+  },
+  "spain:ID363": {
+    "orig_variable": "ID363",
+    "translated_stem": "Emotion regulation. Over the past six months...: You keep your feelings to yourself.",
+    "translated_item": "",
+    "translated_options": [
+      "NEVER true",
+      "SOMETIMES true",
+      "OFTEN true"
+    ],
+    "canonical_id": "bcfpi_af6",
+    "canonical_stem": "Please select the response that best reflects how you have felt or behaved over the past six months. You...",
+    "canonical_item": "keep your feelings to yourself",
+    "canonical_options": [
+      "NEVER true",
+      "SOMETIMES true",
+      "OFTEN true"
+    ]
+  },
+  "spain:ID369": {
+    "orig_variable": "ID369",
+    "translated_stem": "Day-to-day activities. Below you will find a series of statements describing some of the feelings and behaviors of people your age. Over the past 6 months...: You have trouble getting along with other people your age.",
+    "translated_item": "",
+    "translated_options": [
+      "NEVER true",
+      "SOMETIMES true",
+      "OFTEN true"
+    ],
+    "canonical_id": "bcfpi_yf02",
+    "canonical_stem": "Now some questions about your day-to-day activities. Following are statements that describe some of the feelings and behaviours of people your age. Please select the response that best describes you over the last 6 months. You...",
+    "canonical_item": "have trouble getting along with other people your age",
+    "canonical_options": [
+      "NEVER true",
+      "SOMETIMES true",
+      "OFTEN true"
+    ]
+  },
+  "spain:ID370": {
+    "orig_variable": "ID370",
+    "translated_stem": "Day-to-day activities. Below you will find a series of statements describing some of the feelings and behaviors of people your age. Over the past 6 months...: You have trouble getting along with your family.",
+    "translated_item": "",
+    "translated_options": [
+      "NEVER true",
+      "SOMETIMES true",
+      "OFTEN true"
+    ],
+    "canonical_id": "bcfpi_yf03",
+    "canonical_stem": "Now some questions about your day-to-day activities. Following are statements that describe some of the feelings and behaviours of people your age. Please select the response that best describes you over the last 6 months. You...",
+    "canonical_item": "have trouble getting along with your family",
+    "canonical_options": [
+      "NEVER true",
+      "SOMETIMES true",
+      "OFTEN true"
+    ]
+  },
+  "spain:ID371": {
+    "orig_variable": "ID371",
+    "translated_stem": "Day-to-day activities. Below you will find a series of statements describing some of the feelings and behaviors of people your age. Over the past 6 months...: You have trouble getting along with adults, such as family members, teachers, or bosses.",
+    "translated_item": "",
+    "translated_options": [
+      "NEVER true",
+      "SOMETIMES true",
+      "OFTEN true"
+    ],
+    "canonical_id": "bcfpi_yf04",
+    "canonical_stem": "Now some questions about your day-to-day activities. Following are statements that describe some of the feelings and behaviours of people your age. Please select the response that best describes you over the last 6 months. You...",
+    "canonical_item": "have trouble getting along with adults such as relatives, couches, or employers",
+    "canonical_options": [
+      "NEVER true",
+      "SOMETIMES true",
+      "OFTEN true"
+    ]
+  },
+  "spain:ID372": {
+    "orig_variable": "ID372",
+    "translated_stem": "Day-to-day activities. Below you will find a series of statements describing some of the feelings and behaviors of people your age. Over the past 6 months...: You have difficulties with activities such as sports or classes.",
+    "translated_item": "",
+    "translated_options": [
+      "NEVER true",
+      "SOMETIMES true",
+      "OFTEN true"
+    ],
+    "canonical_id": "bcfpi_yf05",
+    "canonical_stem": "Now some questions about your day-to-day activities. Following are statements that describe some of the feelings and behaviours of people your age. Please select the response that best describes you over the last 6 months. You...",
+    "canonical_item": "have difficulty with activities such as sports or lessons",
+    "canonical_options": [
+      "NEVER true",
+      "SOMETIMES true",
+      "OFTEN true"
+    ]
+  },
+  "spain:ID373": {
+    "orig_variable": "ID373",
+    "translated_stem": "Day-to-day activities. Below you will find a series of statements describing some of the feelings and behaviors of people your age. Over the past 6 months...: You have difficulties with daily routines, such as getting ready in the morning, at mealtime, at bedtime, with household chores, or with work.",
+    "translated_item": "",
+    "translated_options": [
+      "NEVER true",
+      "SOMETIMES true",
+      "OFTEN true"
+    ],
+    "canonical_id": "bcfpi_yf06",
+    "canonical_stem": "Now some questions about your day-to-day activities. Following are statements that describe some of the feelings and behaviours of people your age. Please select the response that best describes you over the last 6 months. You...",
+    "canonical_item": "have difficulty with daily routines such as getting ready in the morning, at mealtime, bedtime, chores, or work",
+    "canonical_options": [
+      "NEVER true",
+      "SOMETIMES true",
+      "OFTEN true"
+    ]
+  },
+  "spain:ID384": {
+    "orig_variable": "ID384",
+    "translated_stem": "Day-to-day activities. Below you will find a series of statements describing some of the feelings and behaviors of people your age. Over the past 6 months...: You isolate yourself.",
+    "translated_item": "",
+    "translated_options": [
+      "NEVER true",
+      "SOMETIMES true",
+      "OFTEN true"
+    ],
+    "canonical_id": "bcfpi_yf07",
+    "canonical_stem": "Now some questions about your day-to-day activities. Following are statements that describe some of the feelings and behaviours of people your age. Please select the response that best describes you over the last 6 months. You...",
+    "canonical_item": "isolate yourself",
+    "canonical_options": [
+      "NEVER true",
+      "SOMETIMES true",
+      "OFTEN true"
+    ]
+  },
+  "spain:ID148": {
+    "orig_variable": "ID148",
+    "translated_stem": "Day-to-day activities. Below you will find a series of statements describing some of the feelings and behaviors of people your age. Over the past 6 months...: You spend too much time watching television, playing video games, or browsing the Internet.",
+    "translated_item": "",
+    "translated_options": [
+      "NEVER true",
+      "SOMETIMES true",
+      "OFTEN true"
+    ],
+    "canonical_id": "bcfpi_yf08",
+    "canonical_stem": "Now some questions about your day-to-day activities. Following are statements that describe some of the feelings and behaviours of people your age. Please select the response that best describes you over the last 6 months. You...",
+    "canonical_item": "spend too much time watching TV, playing video games, or on the internet",
+    "canonical_options": [
+      "NEVER true",
+      "SOMETIMES true",
+      "OFTEN true"
+    ]
+  },
+  "spain:ID877": {
+    "orig_variable": "ID877",
+    "translated_stem": "Day-to-day activities. Below you will find a series of statements describing some of the feelings and behaviors of people your age. Over the past 6 months...: You have trouble getting along with other classmates.",
+    "translated_item": "",
+    "translated_options": [
+      "NEVER true",
+      "SOMETIMES true",
+      "OFTEN true"
+    ],
+    "canonical_id": "bcfpi_yf09",
+    "canonical_stem": "Now some questions about your day-to-day activities. Following are statements that describe some of the feelings and behaviours of people your age. Please select the response that best describes you over the last 6 months. You...",
+    "canonical_item": "have trouble getting along with other students",
+    "canonical_options": [
+      "NEVER true",
+      "SOMETIMES true",
+      "OFTEN true"
+    ]
+  },
+  "spain:ID878": {
+    "orig_variable": "ID878",
+    "translated_stem": "Day-to-day activities. Below you will find a series of statements describing some of the feelings and behaviors of people your age. Over the past 6 months...: You have trouble getting along with teachers.",
+    "translated_item": "",
+    "translated_options": [
+      "NEVER true",
+      "SOMETIMES true",
+      "OFTEN true"
+    ],
+    "canonical_id": "bcfpi_yf10",
+    "canonical_stem": "Now some questions about your day-to-day activities. Following are statements that describe some of the feelings and behaviours of people your age. Please select the response that best describes you over the last 6 months. You...",
+    "canonical_item": "have trouble getting along with teachers",
+    "canonical_options": [
+      "NEVER true",
+      "SOMETIMES true",
+      "OFTEN true"
+    ]
+  },
+  "spain:ID879": {
+    "orig_variable": "ID879",
+    "translated_stem": "Day-to-day activities. Below you will find a series of statements describing some of the feelings and behaviors of people your age. Over the past 6 months...: You have been absent from school.",
+    "translated_item": "",
+    "translated_options": [
+      "NEVER true",
+      "SOMETIMES true",
+      "OFTEN true"
+    ],
+    "canonical_id": "bcfpi_yf11",
+    "canonical_stem": "Now some questions about your day-to-day activities. Following are statements that describe some of the feelings and behaviours of people your age. Please select the response that best describes you over the last 6 months. You...",
+    "canonical_item": "have been absent from school",
+    "canonical_options": [
+      "NEVER true",
+      "SOMETIMES true",
+      "OFTEN true"
+    ]
+  },
+  "spain:ID880": {
+    "orig_variable": "ID880",
+    "translated_stem": "Day-to-day activities. Below you will find a series of statements describing some of the feelings and behaviors of people your age. Over the past 6 months...: You have received bad grades.",
+    "translated_item": "",
+    "translated_options": [
+      "NEVER true",
+      "SOMETIMES true",
+      "OFTEN true"
+    ],
+    "canonical_id": "bcfpi_yf12",
+    "canonical_stem": "Now some questions about your day-to-day activities. Following are statements that describe some of the feelings and behaviours of people your age. Please select the response that best describes you over the last 6 months. You...",
+    "canonical_item": "have been given low grades",
+    "canonical_options": [
+      "NEVER true",
+      "SOMETIMES true",
+      "OFTEN true"
+    ]
+  },
+  "spain:ID406": {
+    "orig_variable": "ID406",
+    "translated_stem": "During your life up to now...: How often were your parents / guardians so under the influence of alcohol or other drugs that they could not take proper care of you?",
+    "translated_item": "",
+    "translated_options": [
+      "Many times",
+      "A few times",
+      "Once",
+      "Never"
+    ],
+    "canonical_id": "dlup2",
+    "canonical_stem": "During your life up to this point...",
+    "canonical_item": "Were your parents/guardians too drunk or intoxicated by drugs to take care of you?",
+    "canonical_options": [
+      "Many times",
+      "A few times",
+      "Once",
+      "Never"
+    ]
+  },
+  "spain:ID407": {
+    "orig_variable": "ID407",
+    "translated_stem": "During your life up to now...: How often did your parents / guardians not take you to school, even though they were able to do so?",
+    "translated_item": "",
+    "translated_options": [
+      "Many times",
+      "A few times",
+      "Once",
+      "Never"
+    ],
+    "canonical_id": "dlup3",
+    "canonical_stem": "During your life up to this point...",
+    "canonical_item": "How often did your parents/guardians not send you to school even when it was available?",
+    "canonical_options": [
+      "Many times",
+      "A few times",
+      "Once",
+      "Never"
+    ]
+  },
+  "spain:ID418": {
+    "orig_variable": "ID418",
+    "translated_stem": "During your life up to now...: Did you live with any family member who had problems with alcohol or was an alcoholic, or who abused illegal or prescription drugs?",
+    "translated_item": "",
+    "translated_options": [
+      "Yes",
+      "No"
+    ],
+    "canonical_id": "dlupa1",
+    "canonical_stem": "During your life up to this point...",
+    "canonical_item": "Did you live with a household member who was a problem drinker or alcoholic, or misused street or prescription drugs?",
+    "canonical_options": [
+      "Yes",
+      "No"
+    ]
+  },
+  "spain:ID419": {
+    "orig_variable": "ID419",
+    "translated_stem": "During your life up to now...: Did you live with any family member who was depressed, had a mental illness, or exhibited suicidal behavior?",
+    "translated_item": "",
+    "translated_options": [
+      "Yes",
+      "No"
+    ],
+    "canonical_id": "dlupa2",
+    "canonical_stem": "During your life up to this point...",
+    "canonical_item": "Did you live with a household member who was depressed, mentally ill or suicidal?",
+    "canonical_options": [
+      "Yes",
+      "No"
+    ]
+  },
+  "spain:ID420": {
+    "orig_variable": "ID420",
+    "translated_stem": "During your life up to now...: Did you live with any family member who had been in jail or prison?",
+    "translated_item": "",
+    "translated_options": [
+      "Yes",
+      "No"
+    ],
+    "canonical_id": "dlupa3",
+    "canonical_stem": "During your life up to this point...",
+    "canonical_item": "Did you live with a household member who was ever sent to jail or prison?",
+    "canonical_options": [
+      "Yes",
+      "No"
+    ]
+  },
+  "spain:ID424": {
+    "orig_variable": "ID424",
+    "translated_stem": "During your life up to this point...",
+    "translated_item": "Were your parents ever separated or divorced?",
+    "translated_options": [
+      "Yes",
+      "No"
+    ],
+    "canonical_id": "dlupa4",
+    "canonical_stem": "During your life up to this point...",
+    "canonical_item": "Were your parents ever separated or divorced?",
+    "canonical_options": [
+      "Yes",
+      "No"
+    ]
+  },
+  "spain:ID425": {
+    "orig_variable": "ID425",
+    "translated_stem": "During your life up to this point...",
+    "translated_item": "Did your mother, father or guardian die?",
+    "translated_options": [
+      "Yes",
+      "No"
+    ],
+    "canonical_id": "dlupa5",
+    "canonical_stem": "During your life up to this point...",
+    "canonical_item": "Did your mother, father or guardian die?",
+    "canonical_options": [
+      "Yes",
+      "No"
+    ]
+  },
+  "spain:ID292": {
+    "orig_variable": "ID292",
+    "translated_stem": "Family Environment These next questions are about certain things you may actually have heard or seen IN YOUR HOME. These are things that may have been done to another household member but not necessarily to you. During your life up to this point...",
+    "translated_item": "Did you see or hear a parent or household member in your home being slapped, kicked, punched or beaten up?",
+    "translated_options": [
+      "Many times",
+      "A few times",
+      "Once",
+      "Never"
+    ],
+    "canonical_id": "fetnqact2",
+    "canonical_stem": "Family Environment These next questions are about certain things you may actually have heard or seen IN YOUR HOME. These are things that may have been done to another household member but not necessarily to you. During your life up to this point...",
+    "canonical_item": "Did you see or hear a parent or household member in your home being slapped, kicked, punched or beaten up?",
+    "canonical_options": [
+      "Many times",
+      "A few times",
+      "Once",
+      "Never"
+    ]
+  },
+  "spain:ID323": {
+    "orig_variable": "ID323",
+    "translated_stem": "Family Environment These next questions are about certain things you may actually have heard or seen IN YOUR HOME. These are things that may have been done to another household member but not necessarily to you. During your life up to this point...",
+    "translated_item": "Did you see or hear a parent or household member in your home being hit or cut with an object, such as a stick (or cane), bottle, club, knife, whip etc.?",
+    "translated_options": [
+      "Many times",
+      "A few times",
+      "Once",
+      "Never"
+    ],
+    "canonical_id": "fetnqact3",
+    "canonical_stem": "Family Environment These next questions are about certain things you may actually have heard or seen IN YOUR HOME. These are things that may have been done to another household member but not necessarily to you. During your life up to this point...",
+    "canonical_item": "Did you see or hear a parent or household member in your home being hit or cut with an object, such as a stick (or cane), bottle, club, knife, whip etc.?",
+    "canonical_options": [
+      "Many times",
+      "A few times",
+      "Once",
+      "Never"
+    ]
+  },
+  "spain:ID402": {
+    "orig_variable": "ID402",
+    "translated_stem": "These next questions are about certain things YOU may have experienced. During your life up to this point...",
+    "translated_item": "Did a parent, guardian or other household member threaten to, or actually, abandon you or throw you out of the house?",
+    "translated_options": [
+      "Many times",
+      "A few times",
+      "Once",
+      "Never"
+    ],
+    "canonical_id": "tnqactmh2",
+    "canonical_stem": "These next questions are about certain things YOU may have experienced. During your life up to this point...",
+    "canonical_item": "Did a parent, guardian or other household member threaten to, or actually, abandon you or throw you out of the house?",
+    "canonical_options": [
+      "Many times",
+      "A few times",
+      "Once",
+      "Never"
+    ]
+  },
+  "spain:ID403": {
+    "orig_variable": "ID403",
+    "translated_stem": "These next questions are about certain things YOU may have experienced. During your life up to this point...",
+    "translated_item": "Did a parent, guardian or other household member spank, slap, kick, punch or beat you up?",
+    "translated_options": [
+      "Many times",
+      "A few times",
+      "Once",
+      "Never"
+    ],
+    "canonical_id": "tnqactmh3",
+    "canonical_stem": "These next questions are about certain things YOU may have experienced. During your life up to this point...",
+    "canonical_item": "Did a parent, guardian or other household member spank, slap, kick, punch or beat you up?",
+    "canonical_options": [
+      "Many times",
+      "A few times",
+      "Once",
+      "Never"
+    ]
+  },
+  "spain:ID404": {
+    "orig_variable": "ID404",
+    "translated_stem": "These next questions are about certain things YOU may have experienced. During your life up to this point...",
+    "translated_item": "Did a parent, guardian or other household member hit or cut you with an object, such as a stick (or cane), bottle, club, knife, whip etc.?",
+    "translated_options": [
+      "Many times",
+      "A few times",
+      "Once",
+      "Never"
+    ],
+    "canonical_id": "tnqactmh4",
+    "canonical_stem": "These next questions are about certain things YOU may have experienced. During your life up to this point...",
+    "canonical_item": "Did a parent, guardian or other household member hit or cut you with an object, such as a stick (or cane), bottle, club, knife, whip etc?",
+    "canonical_options": [
+      "Many times",
+      "A few times",
+      "Once",
+      "Never"
+    ]
+  },
+  "spain:ID414": {
+    "orig_variable": "ID414",
+    "translated_stem": "These next questions are about certain things YOU may have experienced. During your life up to this point...",
+    "translated_item": "Did someone touch or fondle you in a sexual way when you did not want them to?",
+    "translated_options": [
+      "Many times",
+      "A few times",
+      "Once",
+      "Never"
+    ],
+    "canonical_id": "tnqactmh5",
+    "canonical_stem": "These next questions are about certain things YOU may have experienced. During your life up to this point...",
+    "canonical_item": "Did someone touch or fondle you in a sexual way when you did not want them to?",
+    "canonical_options": [
+      "Many times",
+      "A few times",
+      "Once",
+      "Never"
+    ]
+  },
+  "spain:ID415": {
+    "orig_variable": "ID415",
+    "translated_stem": "These next questions are about certain things YOU may have experienced. During your life up to this point...",
+    "translated_item": "Did someone make you touch their body in a sexual way when you did not want them to?",
+    "translated_options": [
+      "Many times",
+      "A few times",
+      "Once",
+      "Never"
+    ],
+    "canonical_id": "tnqactmh6",
+    "canonical_stem": "These next questions are about certain things YOU may have experienced. During your life up to this point...",
+    "canonical_item": "Did someone make you touch their body in a sexual way when you did not want them to?",
+    "canonical_options": [
+      "Many times",
+      "A few times",
+      "Once",
+      "Never"
+    ]
+  },
+  "spain:ID416": {
+    "orig_variable": "ID416",
+    "translated_stem": "These next questions are about certain things YOU may have experienced. During your life up to this point...",
+    "translated_item": "Did someone attempt oral, anal, or vaginal intercourse with you when you did not want them to?",
+    "translated_options": [
+      "Many times",
+      "A few times",
+      "Once",
+      "Never"
+    ],
+    "canonical_id": "tnqactmh7",
+    "canonical_stem": "These next questions are about certain things YOU may have experienced. During your life up to this point...",
+    "canonical_item": "Did someone attempt oral, anal, or vaginal intercourse with you when you did not want them to?",
+    "canonical_options": [
+      "Many times",
+      "A few times",
+      "Once",
+      "Never"
+    ]
+  },
+  "spain:ID417": {
+    "orig_variable": "ID417",
+    "translated_stem": "These next questions are about certain things YOU may have experienced. During your life up to this point...",
+    "translated_item": "Did someone actually have oral, anal, or vaginal intercourse with you when you did not want them to?",
+    "translated_options": [
+      "Many times",
+      "A few times",
+      "Once",
+      "Never"
+    ],
+    "canonical_id": "tnqactmh8",
+    "canonical_stem": "These next questions are about certain things YOU may have experienced. During your life up to this point...",
+    "canonical_item": "Did someone actually have oral, anal, or vaginal intercourse with you when you did not want them to?",
+    "canonical_options": [
+      "Many times",
+      "A few times",
+      "Once",
+      "Never"
+    ]
+  },
+  "spain:ID430": {
+    "orig_variable": "ID430",
+    "translated_stem": "Witnessing violence in the community These next questions are about how often, when you were a child, you may have seen or heard certain things in your NEIGHBOURHOOD OR COMMUNITY (not in your home or on TV, movies, or the radio). During your life up to this point...",
+    "translated_item": "Did you see or hear someone being stabbed or shot in real life?",
+    "translated_options": [
+      "Many times",
+      "A few times",
+      "Once",
+      "Never"
+    ],
+    "canonical_id": "tnqaomhs2",
+    "canonical_stem": "These next questions are about how often YOU may have seen or heard certain things in your NEIGHBOURHOOD OR COMMUNITY (not in your home or on TV, movies, or the radio). During you life up to this point...",
+    "canonical_item": "Did you see or hear someone being stabbed or shot in real life?",
+    "canonical_options": [
+      "Many times",
+      "A few times",
+      "Once",
+      "Never"
+    ]
+  },
+  "spain:ID431": {
+    "orig_variable": "ID431",
+    "translated_stem": "Witnessing violence in the community These next questions are about how often, when you were a child, you may have seen or heard certain things in your NEIGHBOURHOOD OR COMMUNITY (not in your home or on TV, movies, or the radio). During your life up to this point...",
+    "translated_item": "Did you see or hear someone being threatened with a knife or gun in real life?",
+    "translated_options": [
+      "Many times",
+      "A few times",
+      "Once",
+      "Never"
+    ],
+    "canonical_id": "tnqaomhs3",
+    "canonical_stem": "These next questions are about how often YOU may have seen or heard certain things in your NEIGHBOURHOOD OR COMMUNITY (not in your home or on TV, movies, or the radio). During you life up to this point...",
+    "canonical_item": "Did you see or hear someone being threatened with a knife or gun in real life?",
+    "canonical_options": [
+      "Many times",
+      "A few times",
+      "Once",
+      "Never"
+    ]
+  },
+  "spain:ID456": {
+    "orig_variable": "ID456",
+    "translated_stem": "Exposure to war / collective violence These questions are about whether YOU did or did not experience any of the following events when you were a child. The events are all to do with collective violence, including wars, terrorism, political or ethnic conflicts, genocide, repression, disappearances, torture and organized violent crime such as gang warfare. During your life up to this point...",
+    "translated_item": "Did you experience the deliberate destruction of your home due to any of these events?",
+    "translated_options": [
+      "Many times",
+      "A few times",
+      "Once",
+      "Never"
+    ],
+    "canonical_id": "ewcvtqaw2",
+    "canonical_stem": "Exposure to War/Collective Violence These questions are about whether YOU did or did not experience any of the following events. The events are all to do with collective violence, including wars, terrorism, political or ethnic conflicts, genocide, repression, disappearances, torture and organized violent crime such as banditry and gang warfare. During your life up to this point...",
+    "canonical_item": "Did you experience the deliberate destruction of your home due to any of these events?",
+    "canonical_options": [
+      "Many times",
+      "A few times",
+      "Once",
+      "Never"
+    ]
+  },
+  "spain:ID457": {
+    "orig_variable": "ID457",
+    "translated_stem": "Exposure to war / collective violence These questions are about whether YOU did or did not experience any of the following events when you were a child. The events are all to do with collective violence, including wars, terrorism, political or ethnic conflicts, genocide, repression, disappearances, torture and organized violent crime such as gang warfare. During your life up to this point...",
+    "translated_item": "Were you beaten up by soldiers, police, militia, or gangs?",
+    "translated_options": [
+      "Many times",
+      "A few times",
+      "Once",
+      "Never"
+    ],
+    "canonical_id": "ewcvtqaw3",
+    "canonical_stem": "Exposure to War/Collective Violence These questions are about whether YOU did or did not experience any of the following events. The events are all to do with collective violence, including wars, terrorism, political or ethnic conflicts, genocide, repression, disappearances, torture and organized violent crime such as banditry and gang warfare. During your life up to this point...",
+    "canonical_item": "Were you beaten up by soldiers, police, militia, or gangs?",
+    "canonical_options": [
+      "Many times",
+      "A few times",
+      "Once",
+      "Never"
+    ]
+  },
+  "spain:ID458": {
+    "orig_variable": "ID458",
+    "translated_stem": "Exposure to war / collective violence These questions are about whether YOU did or did not experience any of the following events when you were a child. The events are all to do with collective violence, including wars, terrorism, political or ethnic conflicts, genocide, repression, disappearances, torture and organized violent crime such as gang warfare. During your life up to this point...",
+    "translated_item": "Was a family member or friend killed or beaten up by soldiers, police, militia, or gangs?",
+    "translated_options": [
+      "Many times",
+      "A few times",
+      "Once",
+      "Never"
+    ],
+    "canonical_id": "ewcvtqaw4",
+    "canonical_stem": "Exposure to War/Collective Violence These questions are about whether YOU did or did not experience any of the following events. The events are all to do with collective violence, including wars, terrorism, political or ethnic conflicts, genocide, repression, disappearances, torture and organized violent crime such as banditry and gang warfare. During your life up to this point...",
+    "canonical_item": "Was a family member or friend killed or beaten up by soldiers, police, militia, or gangs?",
+    "canonical_options": [
+      "Many times",
+      "A few times",
+      "Once",
+      "Never"
+    ]
+  },
+  "spain:ID473": {
+    "orig_variable": "ID473",
+    "translated_stem": "To what extent do the following statements apply to you?",
+    "translated_item": "Getting an education is important to me.",
+    "translated_options": [
+      "Not at all",
+      "A little",
+      "Somewhat",
+      "Quite a bit",
+      "A lot"
+    ],
+    "canonical_id": "cyrm02",
+    "canonical_stem": "To what extent do the following statements apply to you?",
+    "canonical_item": "Getting an education is important to me",
+    "canonical_options": [
+      "Not at all",
+      "A little",
+      "Somewhat",
+      "Quite a bit",
+      "A lot"
+    ]
+  },
+  "spain:ID474": {
+    "orig_variable": "ID474",
+    "translated_stem": "To what extent do the following statements apply to you?",
+    "translated_item": "My parent(s) / caregiver(s) know a lot about me.",
+    "translated_options": [
+      "Not at all",
+      "A little",
+      "Somewhat",
+      "Quite a bit",
+      "A lot"
+    ],
+    "canonical_id": "cyrm03",
+    "canonical_stem": "To what extent do the following statements apply to you?",
+    "canonical_item": "My parent(s)/caregiver(s) know a lot about me",
+    "canonical_options": [
+      "Not at all",
+      "A little",
+      "Somewhat",
+      "Quite a bit",
+      "A lot"
+    ]
+  },
+  "spain:ID475": {
+    "orig_variable": "ID475",
+    "translated_stem": "To what extent do the following statements apply to you?",
+    "translated_item": "I try to finish what I start.",
+    "translated_options": [
+      "Not at all",
+      "A little",
+      "Somewhat",
+      "Quite a bit",
+      "A lot"
+    ],
+    "canonical_id": "cyrm04",
+    "canonical_stem": "To what extent do the following statements apply to you?",
+    "canonical_item": "I try to finish what I start",
+    "canonical_options": [
+      "Not at all",
+      "A little",
+      "Somewhat",
+      "Quite a bit",
+      "A lot"
+    ]
+  },
+  "spain:ID476": {
+    "orig_variable": "ID476",
+    "translated_stem": "To what extent do the following statements apply to you?",
+    "translated_item": "I solve problems without harming myself or others (without using drugs or being violent).",
+    "translated_options": [
+      "Not at all",
+      "A little",
+      "Somewhat",
+      "Quite a bit",
+      "A lot"
+    ],
+    "canonical_id": "cyrm05",
+    "canonical_stem": "To what extent do the following statements apply to you?",
+    "canonical_item": "I solve problems without harming myself or others (by using drugs and/or being violent)",
+    "canonical_options": [
+      "Not at all",
+      "A little",
+      "Somewhat",
+      "Quite a bit",
+      "A lot"
+    ]
+  },
+  "spain:ID477": {
+    "orig_variable": "ID477",
+    "translated_stem": "To what extent do the following statements apply to you?",
+    "translated_item": "I know where to go in my community to get help.",
+    "translated_options": [
+      "Not at all",
+      "A little",
+      "Somewhat",
+      "Quite a bit",
+      "A lot"
+    ],
+    "canonical_id": "cyrm06",
+    "canonical_stem": "To what extent do the following statements apply to you?",
+    "canonical_item": "I know where to go in my community to get help",
+    "canonical_options": [
+      "Not at all",
+      "A little",
+      "Somewhat",
+      "Quite a bit",
+      "A lot"
+    ]
+  },
+  "spain:ID478": {
+    "orig_variable": "ID478",
+    "translated_stem": "To what extent do the following statements apply to you?",
+    "translated_item": "I feel I belong at my school.",
+    "translated_options": [
+      "Not at all",
+      "A little",
+      "Somewhat",
+      "Quite a bit",
+      "A lot"
+    ],
+    "canonical_id": "cyrm07",
+    "canonical_stem": "To what extent do the following statements apply to you?",
+    "canonical_item": "I feel I belong(ed) at my school",
+    "canonical_options": [
+      "Not at all",
+      "A little",
+      "Somewhat",
+      "Quite a bit",
+      "A lot"
+    ]
+  },
+  "spain:ID479": {
+    "orig_variable": "ID479",
+    "translated_stem": "To what extent do the following statements apply to you?",
+    "translated_item": "My family supports me during difficult times.",
+    "translated_options": [
+      "Not at all",
+      "A little",
+      "Somewhat",
+      "Quite a bit",
+      "A lot"
+    ],
+    "canonical_id": "cyrm08",
+    "canonical_stem": "To what extent do the following statements apply to you?",
+    "canonical_item": "My family will stand by me during difficult times",
+    "canonical_options": [
+      "Not at all",
+      "A little",
+      "Somewhat",
+      "Quite a bit",
+      "A lot"
+    ]
+  },
+  "spain:ID480": {
+    "orig_variable": "ID480",
+    "translated_stem": "To what extent do the following statements apply to you?",
+    "translated_item": "My friends support me during difficult times.",
+    "translated_options": [
+      "Not at all",
+      "A little",
+      "Somewhat",
+      "Quite a bit",
+      "A lot"
+    ],
+    "canonical_id": "cyrm09",
+    "canonical_stem": "To what extent do the following statements apply to you?",
+    "canonical_item": "My friends stand by me during difficult times",
+    "canonical_options": [
+      "Not at all",
+      "A little",
+      "Somewhat",
+      "Quite a bit",
+      "A lot"
+    ]
+  },
+  "spain:ID481": {
+    "orig_variable": "ID481",
+    "translated_stem": "To what extent do the following statements apply to you?",
+    "translated_item": "I am treated fairly in my community.",
+    "translated_options": [
+      "Not at all",
+      "A little",
+      "Somewhat",
+      "Quite a bit",
+      "A lot"
+    ],
+    "canonical_id": "cyrm10",
+    "canonical_stem": "To what extent do the following statements apply to you?",
+    "canonical_item": "I am treated fairly in my community",
+    "canonical_options": [
+      "Not at all",
+      "A little",
+      "Somewhat",
+      "Quite a bit",
+      "A lot"
+    ]
+  },
+  "spain:ID482": {
+    "orig_variable": "ID482",
+    "translated_stem": "To what extent do the following statements apply to you?",
+    "translated_item": "I have opportunities to develop skills that will be useful later.",
+    "translated_options": [
+      "Not at all",
+      "A little",
+      "Somewhat",
+      "Quite a bit",
+      "A lot"
+    ],
+    "canonical_id": "cyrm11",
+    "canonical_stem": "To what extent do the following statements apply to you?",
+    "canonical_item": "I have opportunities to develop skills that will be useful later in life",
+    "canonical_options": [
+      "Not at all",
+      "A little",
+      "Somewhat",
+      "Quite a bit",
+      "A lot"
+    ]
+  },
+  "spain:ID483": {
+    "orig_variable": "ID483",
+    "translated_stem": "To what extent do the following statements apply to you?",
+    "translated_item": "I enjoy my cultural and family traditions.",
+    "translated_options": [
+      "Not at all",
+      "A little",
+      "Somewhat",
+      "Quite a bit",
+      "A lot"
+    ],
+    "canonical_id": "cyrm12",
+    "canonical_stem": "To what extent do the following statements apply to you?",
+    "canonical_item": "I enjoy my cultural and family traditions",
+    "canonical_options": [
+      "Not at all",
+      "A little",
+      "Somewhat",
+      "Quite a bit",
+      "A lot"
+    ]
+  },
+  "spain:ks3": {
+    "orig_variable": "ks3",
+    "translated_stem": "Thinking about the past week…",
+    "translated_item": "Have you felt lonely?",
+    "translated_options": [
+      "Never",
+      "Rarely",
+      "Quite often",
+      "Very often",
+      "Always"
+    ],
+    "canonical_id": "ks3",
+    "canonical_stem": "When you think about the past week...",
+    "canonical_item": "Have you felt lonely?",
+    "canonical_options": [
+      "Never",
+      "Rarely",
+      "Quite often",
+      "Very often",
+      "Always"
+    ]
+  },
+  "spain:ks4": {
+    "orig_variable": "ks4",
+    "translated_stem": "Thinking about the past week…",
+    "translated_item": "Have you had enough time for yourself?",
+    "translated_options": [
+      "Never",
+      "Rarely",
+      "Quite often",
+      "Very often",
+      "Always"
+    ],
+    "canonical_id": "ks4",
+    "canonical_stem": "When you think about the past week...",
+    "canonical_item": "Have you had enough time for yourself?",
+    "canonical_options": [
+      "Never",
+      "Rarely",
+      "Quite often",
+      "Very often",
+      "Always"
+    ]
+  },
+  "spain:ks5": {
+    "orig_variable": "ks5",
+    "translated_stem": "Thinking about the past week…",
+    "translated_item": "Have you been able to do what you wanted in your free time?",
+    "translated_options": [
+      "Never",
+      "Rarely",
+      "Quite often",
+      "Very often",
+      "Always"
+    ],
+    "canonical_id": "ks5",
+    "canonical_stem": "When you think about the past week...",
+    "canonical_item": "Have you been able to do the things you want to do in your free time?",
+    "canonical_options": [
+      "Never",
+      "Rarely",
+      "Quite often",
+      "Very often",
+      "Always"
+    ]
+  },
+  "spain:ks6": {
+    "orig_variable": "ks6",
+    "translated_stem": "Thinking about the past week…",
+    "translated_item": "Have your parents treated you fairly?",
+    "translated_options": [
+      "Never",
+      "Rarely",
+      "Quite often",
+      "Very often",
+      "Always"
+    ],
+    "canonical_id": "ks6",
+    "canonical_stem": "When you think about the past week...",
+    "canonical_item": "Have your parent(s) treated you fairly?",
+    "canonical_options": [
+      "Never",
+      "Rarely",
+      "Quite often",
+      "Very often",
+      "Always"
+    ]
+  },
+  "spain:ks7": {
+    "orig_variable": "ks7",
+    "translated_stem": "Thinking about the past week…",
+    "translated_item": "Have you had fun with your friends?",
+    "translated_options": [
+      "Never",
+      "Rarely",
+      "Quite often",
+      "Very often",
+      "Always"
+    ],
+    "canonical_id": "ks7",
+    "canonical_stem": "When you think about the past week...",
+    "canonical_item": "Have you had fun with your friends?",
+    "canonical_options": [
+      "Never",
+      "Rarely",
+      "Quite often",
+      "Very often",
+      "Always"
+    ]
+  },
+  "spain:ks8": {
+    "orig_variable": "ks8",
+    "translated_stem": "Thinking about the past week…",
+    "translated_item": "Have you been able to concentrate or pay attention?",
+    "translated_options": [
+      "Never",
+      "Rarely",
+      "Quite often",
+      "Very often",
+      "Always"
+    ],
+    "canonical_id": "ks8",
+    "canonical_stem": "When you think about the past week...",
+    "canonical_item": "Have you been able to pay attention?",
+    "canonical_options": [
+      "Never",
+      "Rarely",
+      "Quite often",
+      "Very often",
+      "Always"
+    ]
+  },
+  "spain:ks9": {
+    "orig_variable": "ks9",
+    "translated_stem": "Thinking about the past week…",
+    "translated_item": "Have you felt physically and mentally well?",
+    "translated_options": [
+      "Not at all",
+      "A little",
+      "Quite",
+      "Very",
+      "To a great extent"
+    ],
+    "canonical_id": "ksa1",
+    "canonical_stem": "When you think about the past week...",
+    "canonical_item": "Have you felt fit and well?",
+    "canonical_options": [
+      "Not at all",
+      "A little",
+      "Quite",
+      "Very",
+      "To a great extent"
+    ]
+  },
+  "spain:ks10": {
+    "orig_variable": "ks10",
+    "translated_stem": "Thinking about the past week…",
+    "translated_item": "Have things gone well for you at school?",
+    "translated_options": [
+      "Not at all",
+      "A little",
+      "Quite",
+      "Very",
+      "To a great extent"
+    ],
+    "canonical_id": "ksa2",
+    "canonical_stem": "When you think about the past week...",
+    "canonical_item": "Have you got on well at school/university/job?",
+    "canonical_options": [
+      "Not at all",
+      "A little",
+      "Quite",
+      "Very",
+      "To a great extent"
+    ]
+  },
+  "spain:ID491": {
+    "orig_variable": "ID491",
+    "translated_stem": "Think about a normal weekday. How much time do you spend on the following activities?",
+    "translated_item": "Playing games on the phone.",
+    "translated_options": [
+      "Less than 1 hour",
+      "1-2 hours",
+      "3-4 hours",
+      "5-6 hours",
+      "7 hours or more"
+    ],
+    "canonical_id": "smwd2",
+    "canonical_stem": "Think about a normal weekday. How much time do you spend on the following activities?",
+    "canonical_item": "Playing games on your phone",
+    "canonical_options": [
+      "Less than 1 hour",
+      "1-2 hours",
+      "3-4 hours",
+      "5-6 hours",
+      "7 hours or more"
+    ]
+  },
+  "spain:ID492": {
+    "orig_variable": "ID492",
+    "translated_stem": "Think about a normal weekday. How much time do you spend on the following activities?",
+    "translated_item": "Chatting or sending photos to friends (for example, Snapchat, Messenger, WhatsApp).",
+    "translated_options": [
+      "Less than 1 hour",
+      "1-2 hours",
+      "3-4 hours",
+      "5-6 hours",
+      "7 hours or more"
+    ],
+    "canonical_id": "smwd3",
+    "canonical_stem": "Think about a normal weekday. How much time do you spend on the following activities?",
+    "canonical_item": "Chatting or sending pictures to friends (e.g., Snapchat, Messenger, WhatsApp)",
+    "canonical_options": [
+      "Less than 1 hour",
+      "1-2 hours",
+      "3-4 hours",
+      "5-6 hours",
+      "7 hours or more"
+    ]
+  },
+  "spain:ID499": {
+    "orig_variable": "ID499",
+    "translated_stem": "Think about a normal weekday. How much time do you spend on the following activities?",
+    "translated_item": "Watching videos or streams (for example, YouTube, Twitch).",
+    "translated_options": [
+      "Less than 1 hour",
+      "1-2 hours",
+      "3-4 hours",
+      "5-6 hours",
+      "7 hours or more"
+    ],
+    "canonical_id": "smwd4",
+    "canonical_stem": "Think about a normal weekday. How much time do you spend on the following activities?",
+    "canonical_item": "Watching videos or streams (e.g., YouTube, Twitch)",
+    "canonical_options": [
+      "Less than 1 hour",
+      "1-2 hours",
+      "3-4 hours",
+      "5-6 hours",
+      "7 hours or more"
+    ]
+  },
+  "spain:ID500": {
+    "orig_variable": "ID500",
+    "translated_stem": "Think about a normal weekday. How much time do you spend on the following activities?",
+    "translated_item": "Scrolling through short videos or picture posts (for example, on TikTok, Instagram, YouTube).",
+    "translated_options": [
+      "Less than 1 hour",
+      "1-2 hours",
+      "3-4 hours",
+      "5-6 hours",
+      "7 hours or more"
+    ],
+    "canonical_id": "smwd5",
+    "canonical_stem": "Think about a normal weekday. How much time do you spend on the following activities?",
+    "canonical_item": "Scrolling through short videos or image feeds (e.g., on TikTok, Instagram, YouTube shorts)",
+    "canonical_options": [
+      "Less than 1 hour",
+      "1-2 hours",
+      "3-4 hours",
+      "5-6 hours",
+      "7 hours or more"
+    ]
+  },
+  "spain:ID509": {
+    "orig_variable": "ID509",
+    "translated_stem": "Think about a normal weekend day. How much time do you spend on the following activities?",
+    "translated_item": "Playing games on the phone.",
+    "translated_options": [
+      "Less than 1 hour",
+      "1-2 hours",
+      "3-4 hours",
+      "5-6 hours",
+      "7 hours or more"
+    ],
+    "canonical_id": "smwda2",
+    "canonical_stem": "Think about a normal weekend day. How much time do you spend on the following activities?",
+    "canonical_item": "Playing games on your phone",
+    "canonical_options": [
+      "Less than 1 hour",
+      "1-2 hours",
+      "3-4 hours",
+      "5-6 hours",
+      "7 hours or more"
+    ]
+  },
+  "spain:ID510": {
+    "orig_variable": "ID510",
+    "translated_stem": "Think about a normal weekend day. How much time do you spend on the following activities?",
+    "translated_item": "Chatting or sending pictures to friends (e.g., Snapchat, Messenger, WhatsApp).",
+    "translated_options": [
+      "Less than 1 hour",
+      "1-2 hours",
+      "3-4 hours",
+      "5-6 hours",
+      "7 hours or more"
+    ],
+    "canonical_id": "smwda3",
+    "canonical_stem": "Think about a normal weekend day. How much time do you spend on the following activities?",
+    "canonical_item": "Chatting or sending pictures to friends (e.g., Snapchat, Messenger, WhatsApp)",
+    "canonical_options": [
+      "Less than 1 hour",
+      "1-2 hours",
+      "3-4 hours",
+      "5-6 hours",
+      "7 hours or more"
+    ]
+  },
+  "spain:ID511": {
+    "orig_variable": "ID511",
+    "translated_stem": "Think about a normal weekend day. How much time do you spend on the following activities?",
+    "translated_item": "Watching videos or streams (e.g., YouTube, Twitch).",
+    "translated_options": [
+      "Less than 1 hour",
+      "1-2 hours",
+      "3-4 hours",
+      "5-6 hours",
+      "7 hours or more"
+    ],
+    "canonical_id": "smwda4",
+    "canonical_stem": "Think about a normal weekend day. How much time do you spend on the following activities?",
+    "canonical_item": "Watching videos or streams (e.g., YouTube, Twitch)",
+    "canonical_options": [
+      "Less than 1 hour",
+      "1-2 hours",
+      "3-4 hours",
+      "5-6 hours",
+      "7 hours or more"
+    ]
+  },
+  "spain:ID512": {
+    "orig_variable": "ID512",
+    "translated_stem": "Think about a normal weekend day. How much time do you spend on the following activities?",
+    "translated_item": "Scrolling through short videos or image posts (e.g., on TikTok, Instagram, YouTube).",
+    "translated_options": [
+      "Less than 1 hour",
+      "1-2 hours",
+      "3-4 hours",
+      "5-6 hours",
+      "7 hours or more"
+    ],
+    "canonical_id": "smwda5",
+    "canonical_stem": "Think about a normal weekend day. How much time do you spend on the following activities?",
+    "canonical_item": "Scrolling through short videos or image feeds (e.g., on TikTok, Instagram, YouTube shorts)",
+    "canonical_options": [
+      "Less than 1 hour",
+      "1-2 hours",
+      "3-4 hours",
+      "5-6 hours",
+      "7 hours or more"
+    ]
+  },
+  "spain:ID544": {
+    "orig_variable": "ID544",
+    "translated_stem": "For each of the following areas of your life, indicate how often using your phone, computer or games console has a negative effect:",
+    "translated_item": "Schoolwork.",
+    "translated_options": [
+      "Nearly all the time",
+      "Often",
+      "Sometimes",
+      "Rarely",
+      "Never"
+    ],
+    "canonical_id": "smharm2",
+    "canonical_stem": "For each of the following life areas, please indicate how often your use of phone, computer or gaming console has a negative effect",
+    "canonical_item": "Schoolwork",
+    "canonical_options": [
+      "Nearly all the time",
+      "Often",
+      "Sometimes",
+      "Rarely",
+      "Never"
+    ]
+  },
+  "spain:ID545": {
+    "orig_variable": "ID545",
+    "translated_stem": "For each of the following areas of your life, indicate how often using your phone, computer or games console has a negative effect:",
+    "translated_item": "Self-esteem / Mental health.",
+    "translated_options": [
+      "Nearly all the time",
+      "Often",
+      "Sometimes",
+      "Rarely",
+      "Never"
+    ],
+    "canonical_id": "smharm3",
+    "canonical_stem": "For each of the following life areas, please indicate how often your use of phone, computer or gaming console has a negative effect",
+    "canonical_item": "Self-esteem/mental health",
+    "canonical_options": [
+      "Nearly all the time",
+      "Often",
+      "Sometimes",
+      "Rarely",
+      "Never"
+    ]
+  },
+  "spain:ID546": {
+    "orig_variable": "ID546",
+    "translated_stem": "For each of the following areas of your life, indicate how often using your phone, computer or games console has a negative effect:",
+    "translated_item": "Relationships with friends.",
+    "translated_options": [
+      "Nearly all the time",
+      "Often",
+      "Sometimes",
+      "Rarely",
+      "Never"
+    ],
+    "canonical_id": "smharm4",
+    "canonical_stem": "For each of the following life areas, please indicate how often your use of phone, computer or gaming console has a negative effect",
+    "canonical_item": "Relationships with friends",
+    "canonical_options": [
+      "Nearly all the time",
+      "Often",
+      "Sometimes",
+      "Rarely",
+      "Never"
+    ]
+  },
+  "spain:ID580": {
+    "orig_variable": "ID580",
+    "translated_stem": "For each of the following areas of your life, indicate how often using your phone, computer or games console has a negative effect:",
+    "translated_item": "Relationships with family.",
+    "translated_options": [
+      "Nearly all the time",
+      "Often",
+      "Sometimes",
+      "Rarely",
+      "Never"
+    ],
+    "canonical_id": "smharm5",
+    "canonical_stem": "For each of the following life areas, please indicate how often your use of phone, computer or gaming console has a negative effect",
+    "canonical_item": "Relationships with family",
+    "canonical_options": [
+      "Nearly all the time",
+      "Often",
+      "Sometimes",
+      "Rarely",
+      "Never"
+    ]
+  },
+  "spain:ID452": {
+    "orig_variable": "ID452",
+    "translated_stem": "Select the option that you consider most appropriate for your situation:",
+    "translated_item": "I feel the need to spend more time using my mobile phone.",
+    "translated_options": [],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "spain:ID453": {
+    "orig_variable": "ID453",
+    "translated_stem": "Select the option that you consider most appropriate for your situation:",
+    "translated_item": "I feel upset when I cannot use my mobile phone.",
+    "translated_options": [],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "spain:ID454": {
+    "orig_variable": "ID454",
+    "translated_stem": "Select the option that you consider most appropriate for your situation:",
+    "translated_item": "I lie to my parents about the amount of time I spend using my mobile phone.",
+    "translated_options": [],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "spain:ID455": {
+    "orig_variable": "ID455",
+    "translated_stem": "Select the option that you consider most appropriate for your situation:",
+    "translated_item": "Using my mobile phone helps me forget my problems.",
+    "translated_options": [],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "spain:ID462": {
+    "orig_variable": "ID462",
+    "translated_stem": "Select the option that you consider most appropriate for your situation:",
+    "translated_item": "I do not spend time with my family members because I prefer using my mobile phone.",
+    "translated_options": [],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "spain:ID466": {
+    "orig_variable": "ID466",
+    "translated_stem": "Select the option that you consider most appropriate for your situation:",
+    "translated_item": "I spend increasingly more time with my mobile phone.",
+    "translated_options": [],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "spain:ID467": {
+    "orig_variable": "ID467",
+    "translated_stem": "Select the option that you consider most appropriate for your situation:",
+    "translated_item": "I feel annoyed when I am asked to stop using my mobile phone.",
+    "translated_options": [],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "spain:ID468": {
+    "orig_variable": "ID468",
+    "translated_stem": "Select the option that you consider most appropriate for your situation:",
+    "translated_item": "My parents try to stop or limit my mobile phone use, but they do not succeed.",
+    "translated_options": [],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "spain:ID486": {
+    "orig_variable": "ID486",
+    "translated_stem": "Select the option that you consider most appropriate for your situation:",
+    "translated_item": "I sleep less because I am using my mobile phone.",
+    "translated_options": [],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "spain:ID488": {
+    "orig_variable": "ID488",
+    "translated_stem": "Select the option that you consider most appropriate for your situation:",
+    "translated_item": "When I don't have my mobile phone, I think about what I do on it (video games, social media, text messages, etc.).",
+    "translated_options": [],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "spain:ID513": {
+    "orig_variable": "ID513",
+    "translated_stem": "Select the option that you consider most appropriate for your situation:",
+    "translated_item": "I feel frustrated when I cannot use my mobile phone.",
+    "translated_options": [],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "spain:ID514": {
+    "orig_variable": "ID514",
+    "translated_stem": "Select the option that you consider most appropriate for your situation:",
+    "translated_item": "I have problems with my parents because of the amount of time I spend using my mobile phone.",
+    "translated_options": [],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "spain:ID530": {
+    "orig_variable": "ID530",
+    "translated_stem": "Select the option that you consider most appropriate for your situation:",
+    "translated_item": "Using my mobile phone is the most important thing in my life.",
+    "translated_options": [],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "spain:ID531": {
+    "orig_variable": "ID531",
+    "translated_stem": "Select the option that you consider most appropriate for your case.: Using my mobile phone is more enjoyable than doing other things.",
+    "translated_item": "",
+    "translated_options": [],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "spain:ID532": {
+    "orig_variable": "ID532",
+    "translated_stem": "Select the option that you consider most appropriate for your case.: I lie to my parents about what I do on my mobile phone.",
+    "translated_item": "",
+    "translated_options": [],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "spain:ID533": {
+    "orig_variable": "ID533",
+    "translated_stem": "Select the option that you consider most appropriate for your case.: I am not able to control my mobile phone use.",
+    "translated_item": "",
+    "translated_options": [],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "spain:ID534": {
+    "orig_variable": "ID534",
+    "translated_stem": "Select the option that you consider most appropriate for your case.: I have lost interest in hobbies or other activities because I prefer to use my mobile phone.",
+    "translated_item": "",
+    "translated_options": [],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "spain:ID535": {
+    "orig_variable": "ID535",
+    "translated_stem": "Select the option that you consider most appropriate for your case.: When I stop using my mobile phone, not much time passes before I use it again.",
+    "translated_item": "",
+    "translated_options": [],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "spain:ID537": {
+    "orig_variable": "ID537",
+    "translated_stem": "Select the option that you consider most appropriate for your case.: I look at my mobile phone when I am doing homework or other important things.",
+    "translated_item": "",
+    "translated_options": [],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "spain:ID538": {
+    "orig_variable": "ID538",
+    "translated_stem": "Select the option that you consider most appropriate for your case.: I feel frustrated when I am asked to stop using my mobile phone.",
+    "translated_item": "",
+    "translated_options": [],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "spain:ID539": {
+    "orig_variable": "ID539",
+    "translated_stem": "Select the option that you consider most appropriate for your case.: I argue with my parents when they ask me to stop using my mobile phone.",
+    "translated_item": "",
+    "translated_options": [],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "spain:ID540": {
+    "orig_variable": "ID540",
+    "translated_stem": "Select the option that you consider most appropriate for your case.: I spend too much money on things for my mobile phone.",
+    "translated_item": "",
+    "translated_options": [],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "spain:ID542": {
+    "orig_variable": "ID542",
+    "translated_stem": "Select the option that you consider most appropriate for your case.: Using my mobile phone makes me feel better when I feel bad.",
+    "translated_item": "",
+    "translated_options": [],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "spain:ID543": {
+    "orig_variable": "ID543",
+    "translated_stem": "Select the option that you consider most appropriate for your case.: I keep using my mobile phone even though my grades at school are getting lower.",
+    "translated_item": "",
+    "translated_options": [],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "spain:ID637": {
+    "orig_variable": "ID637",
+    "translated_stem": "Relationship with parents Please indicate how often you feel this way in your family.: I get along well with my parents.",
+    "translated_item": "",
+    "translated_options": [],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "spain:ID638": {
+    "orig_variable": "ID638",
+    "translated_stem": "Relationship with parents Please indicate how often you feel this way in your family.: My parents like me.",
+    "translated_item": "",
+    "translated_options": [],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "spain:ID639": {
+    "orig_variable": "ID639",
+    "translated_stem": "Relationship with parents Please indicate how often you feel this way in your family.: I like my parents.",
+    "translated_item": "",
+    "translated_options": [],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "spain:ID640": {
+    "orig_variable": "ID640",
+    "translated_stem": "Relationship with parents Please indicate how often you feel this way in your family.: My parents criticize me.",
+    "translated_item": "",
+    "translated_options": [],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "spain:ID641": {
+    "orig_variable": "ID641",
+    "translated_stem": "Relationship with parents Please indicate how often you feel this way in your family.: My parents bother me.",
+    "translated_item": "",
+    "translated_options": [],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "spain:ID642": {
+    "orig_variable": "ID642",
+    "translated_stem": "Relationship with parents Please indicate how often you feel this way in your family.: My parents hurt my feelings.",
+    "translated_item": "",
+    "translated_options": [],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "spain:ID643": {
+    "orig_variable": "ID643",
+    "translated_stem": "Relationship with parents Please indicate how often you feel this way in your family.: My parents and I argue.",
+    "translated_item": "",
+    "translated_options": [],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "spain:ID657": {
+    "orig_variable": "ID657",
+    "translated_stem": "Relationship with friends To what extent do the following statements apply to you?: I have many friends.",
+    "translated_item": "",
+    "translated_options": [],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "spain:ID658": {
+    "orig_variable": "ID658",
+    "translated_stem": "Relationship with friends To what extent do the following statements apply to you?: Other young people have a hard time accepting me.",
+    "translated_item": "",
+    "translated_options": [],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "spain:ID659": {
+    "orig_variable": "ID659",
+    "translated_stem": "Relationship with friends To what extent do the following statements apply to you?: I am popular among other young people.",
+    "translated_item": "",
+    "translated_options": [],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "spain:ID660": {
+    "orig_variable": "ID660",
+    "translated_stem": "Relationship with friends To what extent do the following statements apply to you?: I feel that others accept me.",
+    "translated_item": "",
+    "translated_options": [],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "spain:ID683": {
+    "orig_variable": "ID683",
+    "translated_stem": "Leisure time outside of school: In a normal week, how many days do you usually do the following?: Exercise (for example, football, handball, skiing, running, dance, gymnastics).",
+    "translated_item": "",
+    "translated_options": [],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "spain:ID684": {
+    "orig_variable": "ID684",
+    "translated_stem": "Leisure time outside of school: In a normal week, how many days do you usually do the following?: Participate in other organized activities (for example, theatre, music).",
+    "translated_item": "",
+    "translated_options": [],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "spain:ID685": {
+    "orig_variable": "ID685",
+    "translated_stem": "Leisure time outside of school: In a normal week, how many days do you usually do the following?: Stay at home all afternoon and evening.",
+    "translated_item": "",
+    "translated_options": [],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "spain:ID686": {
+    "orig_variable": "ID686",
+    "translated_stem": "Leisure time outside of school: In a normal week, how many days do you usually do the following?: Read books or listen to audiobooks.",
+    "translated_item": "",
+    "translated_options": [],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "spain:ID733": {
+    "orig_variable": "ID733",
+    "translated_stem": "On a normal weekday, how much time do you spend on the following activities?: Watching movies / series / TV.",
+    "translated_item": "",
+    "translated_options": [],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "spain:ID734": {
+    "orig_variable": "ID734",
+    "translated_stem": "On a normal weekday, how much time do you spend on the following activities?: Doing homework.",
+    "translated_item": "",
+    "translated_options": [],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "spain:ID735": {
+    "orig_variable": "ID735",
+    "translated_stem": "On a normal weekday, how much time do you spend on the following activities?: Playing games on a PC, TV, tablet, phone, etc.",
+    "translated_item": "",
+    "translated_options": [],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "spain:ID736": {
+    "orig_variable": "ID736",
+    "translated_stem": "On a normal weekday, how much time do you spend on the following activities?: Sitting/lying down with a PC, phone or tablet (regardless of the activity).",
+    "translated_item": "",
+    "translated_options": [],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "spain:ID737": {
+    "orig_variable": "ID737",
+    "translated_stem": "On a normal weekday, how much time do you spend on the following activities?: Being active on social media (not just connected).",
+    "translated_item": "",
+    "translated_options": [],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "spain:ID746": {
+    "orig_variable": "ID746",
+    "translated_stem": "On a normal weekend day or holiday, how much time do you spend on the following activities?: Doing homework.",
+    "translated_item": "",
+    "translated_options": [],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "spain:ID747": {
+    "orig_variable": "ID747",
+    "translated_stem": "On a normal weekend day or holiday, how much time do you spend on the following activities?: Playing games on a PC, TV, tablet, phone, etc.",
+    "translated_item": "",
+    "translated_options": [],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "spain:ID748": {
+    "orig_variable": "ID748",
+    "translated_stem": "On a normal weekend day or holiday, how much time do you spend on the following activities?: Sitting/lying down with a PC, phone or tablet (regardless of the activity).",
+    "translated_item": "",
+    "translated_options": [],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "spain:ID749": {
+    "orig_variable": "ID749",
+    "translated_stem": "On a normal weekend day or holiday, how much time do you spend on the following activities?: Being active on social media (not just connected).",
+    "translated_item": "",
+    "translated_options": [],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "spain:ID197": {
+    "orig_variable": "ID197",
+    "translated_stem": "School: I like school.",
+    "translated_item": "",
+    "translated_options": [],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "spain:ID198": {
+    "orig_variable": "ID198",
+    "translated_stem": "School: My teachers care about me.",
+    "translated_item": "",
+    "translated_options": [],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "spain:ID199": {
+    "orig_variable": "ID199",
+    "translated_stem": "School: I feel that I fit in with the other students at school.",
+    "translated_item": "",
+    "translated_options": [],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "spain:ID200": {
+    "orig_variable": "ID200",
+    "translated_stem": "School: I get bored at school.",
+    "translated_item": "",
+    "translated_options": [],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "spain:ID201": {
+    "orig_variable": "ID201",
+    "translated_stem": "School: Many people expect me to do well at school.",
+    "translated_item": "",
+    "translated_options": [],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "spain:ID202": {
+    "orig_variable": "ID202",
+    "translated_stem": "School: I often feel too lazy to go to school.",
+    "translated_item": "",
+    "translated_options": [],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "spain:ID203": {
+    "orig_variable": "ID203",
+    "translated_stem": "School: I often have to spend weekends doing schoolwork.",
+    "translated_item": "",
+    "translated_options": [],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "spain:ID204": {
+    "orig_variable": "ID204",
+    "translated_stem": "School: There is too much noise and disturbance in class.",
+    "translated_item": "",
+    "translated_options": [],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "spain:ID205": {
+    "orig_variable": "ID205",
+    "translated_stem": "School: A lot of time is wasted at school.",
+    "translated_item": "",
+    "translated_options": [],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "spain:ID206": {
+    "orig_variable": "ID206",
+    "translated_stem": "School: We learn many interesting things in school.",
+    "translated_item": "",
+    "translated_options": [],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "spain:ID207": {
+    "orig_variable": "ID207",
+    "translated_stem": "School: It is important to get good grades.",
+    "translated_item": "",
+    "translated_options": [],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "spain:ID224": {
+    "orig_variable": "ID224",
+    "translated_stem": "School stress: I feel exhausted from schoolwork.",
+    "translated_item": "",
+    "translated_options": [],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "spain:ID225": {
+    "orig_variable": "ID225",
+    "translated_stem": "School stress: I have more schoolwork than I can handle.",
+    "translated_item": "",
+    "translated_options": [],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "spain:ID245": {
+    "orig_variable": "ID245",
+    "translated_stem": "Have you experienced or done any of the following things in the past 30 days or at any time in your life?: Have you ever wished you were dead or wished you could go to sleep and not wake up anymore?",
+    "translated_item": "",
+    "translated_options": [],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "spain:ID246": {
+    "orig_variable": "ID246",
+    "translated_stem": "Have you experienced or done any of the following things in the past 30 days or at any time in your life?: Have you ever had thoughts of killing yourself?",
+    "translated_item": "",
+    "translated_options": [],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "spain:ID247": {
+    "orig_variable": "ID247",
+    "translated_stem": "Have you experienced or done any of the following things in the past 30 days or at any time in your life?: Have you thought about how you might do it?",
+    "translated_item": "",
+    "translated_options": [],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "spain:ID248": {
+    "orig_variable": "ID248",
+    "translated_stem": "Have you experienced or done any of the following things in the past 30 days or at any time in your life?: Have you had any intention of acting on these thoughts of killing yourself, or have you only had the thoughts without intending to do so?",
+    "translated_item": "",
+    "translated_options": [],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "spain:ID249": {
+    "orig_variable": "ID249",
+    "translated_stem": "Have you experienced or done any of the following things in the past 30 days or at any time in your life?: Have you started to plan or planned how to kill yourself and had the intention of carrying out that plan?",
+    "translated_item": "",
+    "translated_options": [],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "spain:ID250": {
+    "orig_variable": "ID250",
+    "translated_stem": "Have you experienced or done any of the following things in the past 30 days or at any time in your life?: Have you attempted suicide?",
+    "translated_item": "",
+    "translated_options": [],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "spain:ID6": {
+    "orig_variable": "ID6",
+    "translated_stem": "How often have you used the following tobacco products during the past 30 days?: Cigarettes.",
+    "translated_item": "",
+    "translated_options": [],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "spain:ID8": {
+    "orig_variable": "ID8",
+    "translated_stem": "How often have you used the following tobacco products during the past 30 days?: Electronic cigarettes (for example, iqos, elf bar, poco).",
+    "translated_item": "",
+    "translated_options": [],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "spain:ID32": {
+    "orig_variable": "ID32",
+    "translated_stem": "How often have you used the following tobacco products during the past 30 days?: Chewing tobacco (snus).",
+    "translated_item": "",
+    "translated_options": [],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "spain:ID91": {
+    "orig_variable": "ID91",
+    "translated_stem": "How often have you used the following tobacco products over your lifetime?: Cigarettes.",
+    "translated_item": "",
+    "translated_options": [],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "spain:ID92": {
+    "orig_variable": "ID92",
+    "translated_stem": "How often have you used the following tobacco products over your lifetime?: Electronic cigarettes (for example, iqos, elf bar, poco).",
+    "translated_item": "",
+    "translated_options": [],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "spain:ID93": {
+    "orig_variable": "ID93",
+    "translated_stem": "How often have you used the following tobacco products over your lifetime?: Chewing tobacco (snus).",
+    "translated_item": "",
+    "translated_options": [],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "spain:ID183": {
+    "orig_variable": "ID183",
+    "translated_stem": "Indicate your answers based on the following table:: How often have you consumed alcoholic beverages of any kind in your lifetime?",
+    "translated_item": "",
+    "translated_options": [],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "spain:ID184": {
+    "orig_variable": "ID184",
+    "translated_stem": "Indicate your answers based on the following table:: How often have you gotten drunk during the past 30 days?",
+    "translated_item": "",
+    "translated_options": [],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "spain:ID214": {
+    "orig_variable": "ID214",
+    "translated_stem": "Indicate your answers based on the following table:: How often have you gotten drunk in your lifetime?",
+    "translated_item": "",
+    "translated_options": [],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "spain:ID215": {
+    "orig_variable": "ID215",
+    "translated_stem": "Indicate your answers based on the following table:: How often have you consumed 5 or more alcoholic drinks (for example, beer, alcopops, wine, spirits / shots) in an hour or less?",
+    "translated_item": "",
+    "translated_options": [],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "spain:ID216": {
+    "orig_variable": "ID216",
+    "translated_stem": "Indicate your answers based on the following table:: How often have you used prescription medications that were not prescribed to you (for example, sedatives, tranquilizers, stimulants) in your lifetime?",
+    "translated_item": "",
+    "translated_options": [],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "spain:ID217": {
+    "orig_variable": "ID217",
+    "translated_stem": "Indicate your answers based on the following table:: How often have you used mind-altering substances that are not considered drugs (for example, inhaling glue, gas, paint or whippets) in your lifetime?",
+    "translated_item": "",
+    "translated_options": [],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "spain:ID279": {
+    "orig_variable": "ID279",
+    "translated_stem": "How often have you used drugs in the following ways during the past 30 days?: Smoking drugs in cigarettes.",
+    "translated_item": "",
+    "translated_options": [],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "spain:ID280": {
+    "orig_variable": "ID280",
+    "translated_stem": "How often have you used drugs in the following ways during the past 30 days?: Taking drugs orally.",
+    "translated_item": "",
+    "translated_options": [],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "spain:ID281": {
+    "orig_variable": "ID281",
+    "translated_stem": "How often have you used drugs in the following ways during the past 30 days?: Snorting / inhaling drugs through your nose.",
+    "translated_item": "",
+    "translated_options": [],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "spain:ID294": {
+    "orig_variable": "ID294",
+    "translated_stem": "How often have you used drugs in the following ways during the past 30 days?: Injecting drugs intravenously.",
+    "translated_item": "",
+    "translated_options": [],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "spain:ID317": {
+    "orig_variable": "ID317",
+    "translated_stem": "How often have you used drugs in the following ways in your lifetime?: Smoking drugs in cigarettes.",
+    "translated_item": "",
+    "translated_options": [],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "spain:ID318": {
+    "orig_variable": "ID318",
+    "translated_stem": "How often have you used drugs in the following ways in your lifetime?: Taking drugs orally.",
+    "translated_item": "",
+    "translated_options": [],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "spain:ID319": {
+    "orig_variable": "ID319",
+    "translated_stem": "How often have you used drugs in the following ways in your lifetime?: Snorting / inhaling drugs through your nose.",
+    "translated_item": "",
+    "translated_options": [],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "spain:ID320": {
+    "orig_variable": "ID320",
+    "translated_stem": "How often have you used drugs in the following ways in your lifetime?: Injecting drugs intravenously.",
+    "translated_item": "",
+    "translated_options": [],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  }
+}

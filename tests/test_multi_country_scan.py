@@ -59,12 +59,13 @@ class TestMultiCountryScan(unittest.TestCase):
             source = v.get("source", "")
             self.assertIn(source, ("canonical_en", "base", "fhi", ""), f"Core variable {v['variable']} has unexpected source: {source}")
 
-        # If country subdirectories are included (e.g. Germany), verify non-core variables
-        ger_dir = DATA_DIR / "germany"
-        if ger_dir.exists() and len(non_core_vars) > 0:
+        # If country subdirectories are included, verify non-core variables
+        country_dirs = [p.name for p in DATA_DIR.iterdir() if p.is_dir() and not p.name.startswith(".")]
+        if country_dirs and len(non_core_vars) > 0:
             for v in non_core_vars:
                 self.assertFalse(str(v.get("is_core", "")).strip().lower() in ("true", "1"))
                 self.assertTrue(len(v.get("source", "")) > 0, f"Non-core variable {v['variable']} must have a source tag")
+                self.assertIn(v.get("source", ""), country_dirs + ["germany", "spain"])
                 self.assertTrue(len(v.get("variable", "")) > 0, "Variable name cannot be empty")
                 self.assertTrue(len(v.get("group_id", "")) > 0, f"Variable {v['variable']} must have a group_id")
 
@@ -100,8 +101,9 @@ class TestMultiCountryScan(unittest.TestCase):
         if "sources" in meta:
             self.assertIsInstance(meta["sources"], list)
             self.assertTrue(any("canonical" in s or "base" in s or "fhi" in s for s in meta["sources"]))
-            if (DATA_DIR / "germany").exists():
-                self.assertIn("germany", meta["sources"])
+            for country in ("germany", "spain"):
+                if (DATA_DIR / country).exists():
+                    self.assertIn(country, meta["sources"])
 
         # Check index integrity
         by_orig = data.get("index_by_orig_variable", {})
