@@ -819,6 +819,100 @@ class TestCountryAlignment(unittest.TestCase):
             byear_item = next(it for q in merged if q.is_core for it in q.items if it.short_name == "byear1")
             self.assertEqual(byear_item.orig_aliases.get("spain"), "ID20")
 
+    def test_review_workbook_maps_one_extra_to_two_core_ids(self):
+        core = _core_fixture()
+        rpg = Question(
+            group_id="rpginsfy",
+            section="Adverse childhood experiences",
+            stem="Relationship with parents/guardians",
+            question_type="matrix",
+            scale="ordinal",
+            scale_confidence="high",
+            multiple=False,
+            options=[Option("Always", 0, 4), Option("Never", 1, 0)],
+            items=[
+                Item("ace01", item_text="understood problems", source="canonical_en", short_name="rpginsfy1"),
+                Item("ace02", item_text="knew free time", source="canonical_en", short_name="rpginsfy2"),
+            ],
+            options_complete="true",
+            source="canonical_en",
+            is_core=True,
+        )
+        core = list(core) + [rpg]
+        spain = [
+            Question(
+                group_id="id391",
+                section="Adverse childhood experiences",
+                stem="Relación con los padres/tutores",
+                question_type="matrix",
+                scale="ordinal",
+                scale_confidence="high",
+                multiple=False,
+                options=[Option("Siempre", 0, 4), Option("Nunca", 1, 0)],
+                items=[Item("ID391", source="spain", is_core=False)],
+                options_complete="true",
+                source="spain",
+                is_core=False,
+            )
+        ]
+        with tempfile.TemporaryDirectory() as tmp:
+            review_path = Path(tmp) / "spain_review.xlsx"
+            write_review_workbook(
+                review_path,
+                [
+                    AlignmentRow(
+                        country_orig_id="ID391",
+                        section="Adverse childhood experiences",
+                        country_stem="Relación con los padres/tutores",
+                        country_item="",
+                        country_options="Siempre | Nunca",
+                        translated_text="",
+                        canonical_variable="rpginsfy1, rpginsfy2",
+                        canonical_stem="",
+                        canonical_item="",
+                        canonical_options="",
+                        status="probable",
+                        notes="Manual review",
+                    )
+                ],
+            )
+            alignment = align_country_to_core(spain, core, review_path, "spain", translations={})
+            mapped = {
+                r.canonical_variable: r.country_orig_id
+                for r in alignment
+                if r.canonical_variable in {"rpginsfy1", "rpginsfy2"}
+            }
+            self.assertEqual(mapped["rpginsfy1"], "ID391")
+            self.assertEqual(mapped["rpginsfy2"], "ID391")
+            wb = load_workbook(review_path)
+            ws = wb.active
+            headers = [c.value for c in ws[1]]
+            status_idx = headers.index("status")
+            canon_idx = headers.index("canonical_variable")
+            missing = {
+                row[canon_idx]
+                for row in ws.iter_rows(min_row=2, values_only=True)
+                if row[status_idx] == "missing_core"
+            }
+            self.assertNotIn("rpginsfy1", missing)
+            self.assertNotIn("rpginsfy2", missing)
+
+            used_gids, used_stems, used_names = _used_sets(core)
+            merged = merge_country_alignment(
+                core,
+                spain,
+                alignment,
+                "spain",
+                _unique_group_id,
+                _assign_short_names,
+                used_gids,
+                used_stems,
+                used_names,
+            )
+            by_name = {it.short_name: it for q in merged for it in q.items}
+            self.assertEqual(by_name["rpginsfy1"].orig_aliases.get("spain"), "ID391")
+            self.assertEqual(by_name["rpginsfy2"].orig_aliases.get("spain"), "ID391")
+
     def test_review_workbook_shows_missing_core_in_red(self):
         core = _core_fixture()
         spain = _spain_fixture()

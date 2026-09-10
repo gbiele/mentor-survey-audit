@@ -9,7 +9,7 @@ import re
 import unicodedata
 from collections import defaultdict
 from copy import deepcopy
-from dataclasses import dataclass, field
+from dataclasses import dataclass, field, replace
 from difflib import SequenceMatcher
 from pathlib import Path
 from typing import Any
@@ -1087,12 +1087,28 @@ def write_review_workbook(
     wb.save(review_path)
 
 
-def load_review_workbook(review_path: Path) -> dict[str, AlignmentRow]:
+def _parse_canonical_variables(raw: str) -> list[str]:
+    return [part.strip() for part in re.split(r"[,;]", raw or "") if part.strip()]
+
+
+def _expand_saved_alignment_rows(saved_rows: list[AlignmentRow]) -> list[AlignmentRow]:
+    expanded: list[AlignmentRow] = []
+    for saved in saved_rows:
+        canons = _parse_canonical_variables(saved.canonical_variable)
+        if len(canons) <= 1:
+            expanded.append(saved)
+            continue
+        for canon in canons:
+            expanded.append(replace(saved, canonical_variable=canon))
+    return expanded
+
+
+def load_review_workbook_grouped(review_path: Path) -> dict[str, list[AlignmentRow]]:
     wb = load_workbook(review_path, data_only=True)
     ws = wb.active
     headers = [str(c.value).strip() if c.value else "" for c in ws[1]]
     idx = {h: i for i, h in enumerate(headers)}
-    rows: dict[str, AlignmentRow] = {}
+    grouped: dict[str, list[AlignmentRow]] = defaultdict(list)
     for row in ws.iter_rows(min_row=2, values_only=True):
         if not row:
             continue
@@ -1108,21 +1124,28 @@ def load_review_workbook(review_path: Path) -> dict[str, AlignmentRow]:
         status = val("status")
         if status == "missing_core" or not orig:
             continue
-        rows[orig] = AlignmentRow(
-            country_orig_id=orig,
-            section=val("section"),
-            country_stem=val("country_stem"),
-            country_item=val("country_item"),
-            country_options=val("country_options"),
-            translated_text=val("translated_text"),
-            canonical_variable=val("canonical_variable"),
-            canonical_stem=val("canonical_stem"),
-            canonical_item=val("canonical_item"),
-            canonical_options=val("canonical_options"),
-            status=val("status") or "extra",
-            notes=val("notes"),
+        grouped[orig].append(
+            AlignmentRow(
+                country_orig_id=orig,
+                section=val("section"),
+                country_stem=val("country_stem"),
+                country_item=val("country_item"),
+                country_options=val("country_options"),
+                translated_text=val("translated_text"),
+                canonical_variable=val("canonical_variable"),
+                canonical_stem=val("canonical_stem"),
+                canonical_item=val("canonical_item"),
+                canonical_options=val("canonical_options"),
+                status=val("status") or "extra",
+                notes=val("notes"),
+            )
         )
-    return rows
+    return grouped
+
+
+def load_review_workbook(review_path: Path) -> dict[str, AlignmentRow]:
+    grouped = load_review_workbook_grouped(review_path)
+    return {orig: rows[-1] for orig, rows in grouped.items()}
 
 
 def align_country_to_core(
@@ -1138,7 +1161,9 @@ def align_country_to_core(
     core_lookup = _core_lookup(core_codebook)
     core_whitelist = build_core_whitelist(core_codebook)
     core_orig_map = _core_orig_to_canonical(core_codebook)
-    existing = {} if force_realign or not review_path.exists() else load_review_workbook(review_path)
+    existing: dict[str, list[AlignmentRow]] = (
+        {} if force_realign or not review_path.exists() else load_review_workbook_grouped(review_path)
+    )
 
     alignment: list[AlignmentRow] = []
     seen: set[str] = set()
@@ -1149,10 +1174,10 @@ def align_country_to_core(
         orig = row["orig_variable"]
         seen.add(orig)
         if orig in existing and not force_realign:
-            saved = existing[orig]
-            if saved.canonical_variable:
-                assigned.add(saved.canonical_variable)
-            alignment.append(saved)
+            for saved in _expand_saved_alignment_rows(existing[orig]):
+                if saved.canonical_variable:
+                    assigned.add(saved.canonical_variable)
+                alignment.append(saved)
             continue
 
         tr = (translations or {}).get(orig)
@@ -1190,9 +1215,9 @@ def align_country_to_core(
             )
         )
 
-    for orig, saved in existing.items():
+    for orig, saved_rows in existing.items():
         if orig not in seen:
-            alignment.append(saved)
+            alignment.extend(_expand_saved_alignment_rows(saved_rows))
 
     infer_scale_first_items(alignment, core_whitelist)
     for row in alignment:

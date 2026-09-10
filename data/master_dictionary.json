@@ -8,9 +8,9 @@
       "germany",
       "spain"
     ],
-    "total_variables": 344,
+    "total_variables": 343,
     "total_core_variables": 143,
-    "total_options": 2007,
+    "total_options": 1990,
     "sections": [
       "Adverse childhood experiences",
       "Background",
@@ -22,7 +22,6 @@
       "Mental health",
       "Other",
       "Quality of life",
-      "Redes sociales / Videojuegos",
       "Resilience",
       "Resiliencia (CYRM12)",
       "Salud mental (BCFPI)",
@@ -55,7 +54,7 @@
       "scale_confidence": "high",
       "notes": "",
       "orig_aliases": {
-        "spain": "genero1"
+        "spain": "gender1"
       },
       "options": [
         {
@@ -172,7 +171,7 @@
       "scale_confidence": "high",
       "notes": "",
       "orig_aliases": {
-        "spain": "genero2"
+        "spain": "gender2"
       },
       "options": [
         {
@@ -333,7 +332,7 @@
       "scale_confidence": "high",
       "notes": "Options 'graduated from school' (code 6) and 'quit school before graduating' (code 7) are terminal non-enrolled statuses; exclude or handle separately when treating grade level as continuous/ordinal.",
       "orig_aliases": {
-        "spain": "grado1"
+        "spain": "grade1"
       },
       "options": [
         {
@@ -349,9 +348,9 @@
         },
         {
           "order": 0,
-          "label": "3o de la ESO.",
+          "label": "2o de la ESO.",
           "label_with_id": "",
-          "alias": "3o de la ESO.",
+          "alias": "2o de la ESO.",
           "eusurvey_answer_id": "",
           "value": 0,
           "scale": "ordinal",
@@ -371,9 +370,9 @@
         },
         {
           "order": 1,
-          "label": "4o de la ESO.",
+          "label": "3o de la ESO.",
           "label_with_id": "",
-          "alias": "4o de la ESO.",
+          "alias": "3o de la ESO.",
           "eusurvey_answer_id": "",
           "value": 1,
           "scale": "ordinal",
@@ -393,9 +392,9 @@
         },
         {
           "order": 2,
-          "label": "1o de Bachillerato.",
+          "label": "4o de la ESO.",
           "label_with_id": "",
-          "alias": "1o de Bachillerato.",
+          "alias": "4o de la ESO.",
           "eusurvey_answer_id": "",
           "value": 2,
           "scale": "ordinal",
@@ -415,9 +414,9 @@
         },
         {
           "order": 3,
-          "label": "2o de Bachillerato.",
+          "label": "1o de Bachillerato.",
           "label_with_id": "",
-          "alias": "2o de Bachillerato.",
+          "alias": "1o de Bachillerato.",
           "eusurvey_answer_id": "",
           "value": 3,
           "scale": "ordinal",
@@ -437,9 +436,9 @@
         },
         {
           "order": 4,
-          "label": "Formación profesional Grado Básico.",
+          "label": "2o de Bachillerato.",
           "label_with_id": "",
-          "alias": "Formación profesional Grado Básico.",
+          "alias": "2o de Bachillerato.",
           "eusurvey_answer_id": "",
           "value": 4,
           "scale": "ordinal",
@@ -459,9 +458,9 @@
         },
         {
           "order": 5,
-          "label": "Formación profesional Grado Medio.",
+          "label": "Formación profesional.",
           "label_with_id": "",
-          "alias": "Formación profesional Grado Medio.",
+          "alias": "Formación profesional.",
           "eusurvey_answer_id": "",
           "value": 5,
           "scale": "ordinal",
@@ -481,9 +480,9 @@
         },
         {
           "order": 6,
-          "label": "Formación profesional Grado Superior.",
+          "label": "Ya terminé la escuela.",
           "label_with_id": "",
-          "alias": "Formación profesional Grado Superior.",
+          "alias": "Ya terminé la escuela.",
           "eusurvey_answer_id": "",
           "value": 6,
           "scale": "ordinal",
@@ -503,9 +502,9 @@
         },
         {
           "order": 7,
-          "label": "Ya terminé la escuela.",
+          "label": "Dejé los estudios antes de finalizar.",
           "label_with_id": "",
-          "alias": "Ya terminé la escuela.",
+          "alias": "Dejé los estudios antes de finalizar.",
           "eusurvey_answer_id": "",
           "value": 7,
           "scale": "ordinal",
@@ -538,7 +537,7 @@
       "scale_confidence": "high",
       "notes": "",
       "orig_aliases": {
-        "spain": "ID20"
+        "spain": "born1"
       },
       "options": [
         {
@@ -699,7 +698,7 @@
       "scale_confidence": "high",
       "notes": "",
       "orig_aliases": {
-        "spain": "mes1"
+        "spain": "born2"
       },
       "options": [
         {
@@ -991,7 +990,7 @@
       "scale_confidence": "high",
       "notes": "",
       "orig_aliases": {
-        "spain": "pais1"
+        "spain": "born3"
       },
       "options": [
         {
@@ -2186,7 +2185,7 @@
       "scale_confidence": "high",
       "notes": "",
       "orig_aliases": {
-        "spain": "ID614"
+        "spain": "training2"
       },
       "options": [
         {
@@ -2202,9 +2201,9 @@
         },
         {
           "order": 0,
-          "label": "Nunca.",
+          "label": "Totalmente de acuerdo",
           "label_with_id": "",
-          "alias": "Nunca.",
+          "alias": "Totalmente de acuerdo",
           "eusurvey_answer_id": "",
           "value": 0,
           "scale": "interval",
@@ -2224,9 +2223,9 @@
         },
         {
           "order": 1,
-          "label": "Algunas veces.",
+          "label": "Algo de acuerdo",
           "label_with_id": "",
-          "alias": "Algunas veces.",
+          "alias": "Algo de acuerdo",
           "eusurvey_answer_id": "",
           "value": 1,
           "scale": "interval",
@@ -2246,9 +2245,9 @@
         },
         {
           "order": 2,
-          "label": "1 día a la semana.",
+          "label": "Algo en desacuerdo",
           "label_with_id": "",
-          "alias": "1 día a la semana.",
+          "alias": "Algo en desacuerdo",
           "eusurvey_answer_id": "",
           "value": 2,
           "scale": "interval",
@@ -2268,9 +2267,9 @@
         },
         {
           "order": 3,
-          "label": "2-3 días a la semana.",
+          "label": "Totalmente en desacuerdo",
           "label_with_id": "",
-          "alias": "2-3 días a la semana.",
+          "alias": "Totalmente en desacuerdo",
           "eusurvey_answer_id": "",
           "value": 3,
           "scale": "interval",
@@ -2290,9 +2289,9 @@
         },
         {
           "order": 4,
-          "label": "4-5 días a la semana.",
+          "label": "Prefiero no responder",
           "label_with_id": "",
-          "alias": "4-5 días a la semana.",
+          "alias": "Prefiero no responder",
           "eusurvey_answer_id": "",
           "value": 4,
           "scale": "interval",
@@ -2312,9 +2311,9 @@
         },
         {
           "order": 5,
-          "label": "6-7 días a la semana.",
+          "label": "Me gusta la escuela.",
           "label_with_id": "",
-          "alias": "6-7 días a la semana.",
+          "alias": "Me gusta la escuela.",
           "eusurvey_answer_id": "",
           "value": 5,
           "scale": "interval",
@@ -2334,9 +2333,9 @@
         },
         {
           "order": 6,
-          "label": "Prefiero no responder.",
+          "label": "Mis profesores se preocupan por mí.",
           "label_with_id": "",
-          "alias": "Prefiero no responder.",
+          "alias": "Mis profesores se preocupan por mí.",
           "eusurvey_answer_id": "",
           "value": 6,
           "scale": "interval",
@@ -2355,10 +2354,32 @@
           "special_type": ""
         },
         {
+          "order": 7,
+          "label": "Siento que encajo con los demás alumnos de la escuela.",
+          "label_with_id": "",
+          "alias": "Siento que encajo con los demás alumnos de la escuela.",
+          "eusurvey_answer_id": "",
+          "value": 7,
+          "scale": "interval",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
           "order": 8,
           "label": "8",
           "label_with_id": "",
           "alias": "",
+          "eusurvey_answer_id": "",
+          "value": 8,
+          "scale": "interval",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
+          "order": 8,
+          "label": "Me aburro en la escuela.",
+          "label_with_id": "",
+          "alias": "Me aburro en la escuela.",
           "eusurvey_answer_id": "",
           "value": 8,
           "scale": "interval",
@@ -2377,10 +2398,32 @@
           "special_type": ""
         },
         {
+          "order": 9,
+          "label": "Mucha gente espera que me vaya bien en la escuela.",
+          "label_with_id": "",
+          "alias": "Mucha gente espera que me vaya bien en la escuela.",
+          "eusurvey_answer_id": "",
+          "value": 9,
+          "scale": "interval",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
           "order": 10,
           "label": "10",
           "label_with_id": "",
           "alias": "",
+          "eusurvey_answer_id": "",
+          "value": 10,
+          "scale": "interval",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
+          "order": 10,
+          "label": "A menudo me da pereza ir a la escuela.",
+          "label_with_id": "",
+          "alias": "A menudo me da pereza ir a la escuela.",
           "eusurvey_answer_id": "",
           "value": 10,
           "scale": "interval",
@@ -2399,10 +2442,32 @@
           "special_type": ""
         },
         {
+          "order": 11,
+          "label": "A menudo tengo que pasar los fines de semana haciendo tareas escolares.",
+          "label_with_id": "",
+          "alias": "A menudo tengo que pasar los fines de semana haciendo tareas escolares.",
+          "eusurvey_answer_id": "",
+          "value": 11,
+          "scale": "interval",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
           "order": 12,
           "label": "12",
           "label_with_id": "",
           "alias": "",
+          "eusurvey_answer_id": "",
+          "value": 12,
+          "scale": "interval",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
+          "order": 12,
+          "label": "Hay demasiado ruido y disturbios en clase.",
+          "label_with_id": "",
+          "alias": "Hay demasiado ruido y disturbios en clase.",
           "eusurvey_answer_id": "",
           "value": 12,
           "scale": "interval",
@@ -2421,6 +2486,17 @@
           "special_type": ""
         },
         {
+          "order": 13,
+          "label": "Se pierde mucho tiempo en la escuela.",
+          "label_with_id": "",
+          "alias": "Se pierde mucho tiempo en la escuela.",
+          "eusurvey_answer_id": "",
+          "value": 13,
+          "scale": "interval",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
           "order": 14,
           "label": "14",
           "label_with_id": "",
@@ -2432,10 +2508,32 @@
           "special_type": ""
         },
         {
+          "order": 14,
+          "label": "Aprendemos muchas cosas interesantes en la escuela.",
+          "label_with_id": "",
+          "alias": "Aprendemos muchas cosas interesantes en la escuela.",
+          "eusurvey_answer_id": "",
+          "value": 14,
+          "scale": "interval",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
           "order": 15,
           "label": "15",
           "label_with_id": "",
           "alias": "",
+          "eusurvey_answer_id": "",
+          "value": 15,
+          "scale": "interval",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
+          "order": 15,
+          "label": "Es importante sacar buenas notas.",
+          "label_with_id": "",
+          "alias": "Es importante sacar buenas notas.",
           "eusurvey_answer_id": "",
           "value": 15,
           "scale": "interval",
@@ -2501,7 +2599,7 @@
       "scale_confidence": "high",
       "notes": "",
       "orig_aliases": {
-        "spain": "ID63"
+        "spain": "born5"
       },
       "options": [
         {
@@ -2509,17 +2607,6 @@
           "label": "[COUNTRY]",
           "label_with_id": "",
           "alias": "",
-          "eusurvey_answer_id": "",
-          "value": 1,
-          "scale": "nominal",
-          "is_special": false,
-          "special_type": ""
-        },
-        {
-          "order": 0,
-          "label": "Antes de las 20:00.",
-          "label_with_id": "",
-          "alias": "Antes de las 20:00.",
           "eusurvey_answer_id": "",
           "value": 1,
           "scale": "nominal",
@@ -2538,32 +2625,10 @@
           "special_type": ""
         },
         {
-          "order": 1,
-          "label": "20:00 - 20:29.",
-          "label_with_id": "",
-          "alias": "20:00 - 20:29.",
-          "eusurvey_answer_id": "",
-          "value": 2,
-          "scale": "nominal",
-          "is_special": false,
-          "special_type": ""
-        },
-        {
           "order": 2,
           "label": "Albania",
           "label_with_id": "",
           "alias": "",
-          "eusurvey_answer_id": "",
-          "value": 3,
-          "scale": "nominal",
-          "is_special": false,
-          "special_type": ""
-        },
-        {
-          "order": 2,
-          "label": "20:30 - 20:59.",
-          "label_with_id": "",
-          "alias": "20:30 - 20:59.",
           "eusurvey_answer_id": "",
           "value": 3,
           "scale": "nominal",
@@ -2582,32 +2647,10 @@
           "special_type": ""
         },
         {
-          "order": 3,
-          "label": "21:00 - 21:29.",
-          "label_with_id": "",
-          "alias": "21:00 - 21:29.",
-          "eusurvey_answer_id": "",
-          "value": 4,
-          "scale": "nominal",
-          "is_special": false,
-          "special_type": ""
-        },
-        {
           "order": 4,
           "label": "Austria",
           "label_with_id": "",
           "alias": "",
-          "eusurvey_answer_id": "",
-          "value": 5,
-          "scale": "nominal",
-          "is_special": false,
-          "special_type": ""
-        },
-        {
-          "order": 4,
-          "label": "21:30 - 21:59.",
-          "label_with_id": "",
-          "alias": "21:30 - 21:59.",
           "eusurvey_answer_id": "",
           "value": 5,
           "scale": "nominal",
@@ -2626,32 +2669,10 @@
           "special_type": ""
         },
         {
-          "order": 5,
-          "label": "22:00 - 22:29.",
-          "label_with_id": "",
-          "alias": "22:00 - 22:29.",
-          "eusurvey_answer_id": "",
-          "value": 6,
-          "scale": "nominal",
-          "is_special": false,
-          "special_type": ""
-        },
-        {
           "order": 6,
           "label": "Belgium",
           "label_with_id": "",
           "alias": "",
-          "eusurvey_answer_id": "",
-          "value": 7,
-          "scale": "nominal",
-          "is_special": false,
-          "special_type": ""
-        },
-        {
-          "order": 6,
-          "label": "22:30 - 22:59.",
-          "label_with_id": "",
-          "alias": "22:30 - 22:59.",
           "eusurvey_answer_id": "",
           "value": 7,
           "scale": "nominal",
@@ -2670,32 +2691,10 @@
           "special_type": ""
         },
         {
-          "order": 7,
-          "label": "23:00 - 23:29.",
-          "label_with_id": "",
-          "alias": "23:00 - 23:29.",
-          "eusurvey_answer_id": "",
-          "value": 8,
-          "scale": "nominal",
-          "is_special": false,
-          "special_type": ""
-        },
-        {
           "order": 8,
           "label": "Bulgaria",
           "label_with_id": "",
           "alias": "",
-          "eusurvey_answer_id": "",
-          "value": 9,
-          "scale": "nominal",
-          "is_special": false,
-          "special_type": ""
-        },
-        {
-          "order": 8,
-          "label": "23:30 - 23:59.",
-          "label_with_id": "",
-          "alias": "23:30 - 23:59.",
           "eusurvey_answer_id": "",
           "value": 9,
           "scale": "nominal",
@@ -2714,32 +2713,10 @@
           "special_type": ""
         },
         {
-          "order": 9,
-          "label": "00:00 - 00:29.",
-          "label_with_id": "",
-          "alias": "00:00 - 00:29.",
-          "eusurvey_answer_id": "",
-          "value": 10,
-          "scale": "nominal",
-          "is_special": false,
-          "special_type": ""
-        },
-        {
           "order": 10,
           "label": "Cyprus",
           "label_with_id": "",
           "alias": "",
-          "eusurvey_answer_id": "",
-          "value": 11,
-          "scale": "nominal",
-          "is_special": false,
-          "special_type": ""
-        },
-        {
-          "order": 10,
-          "label": "00:30 - 00:59.",
-          "label_with_id": "",
-          "alias": "00:30 - 00:59.",
           "eusurvey_answer_id": "",
           "value": 11,
           "scale": "nominal",
@@ -2758,32 +2735,10 @@
           "special_type": ""
         },
         {
-          "order": 11,
-          "label": "01:00 - 01:29.",
-          "label_with_id": "",
-          "alias": "01:00 - 01:29.",
-          "eusurvey_answer_id": "",
-          "value": 12,
-          "scale": "nominal",
-          "is_special": false,
-          "special_type": ""
-        },
-        {
           "order": 12,
           "label": "Denmark",
           "label_with_id": "",
           "alias": "",
-          "eusurvey_answer_id": "",
-          "value": 13,
-          "scale": "nominal",
-          "is_special": false,
-          "special_type": ""
-        },
-        {
-          "order": 12,
-          "label": "01:30 - 01:59.",
-          "label_with_id": "",
-          "alias": "01:30 - 01:59.",
           "eusurvey_answer_id": "",
           "value": 13,
           "scale": "nominal",
@@ -2802,17 +2757,6 @@
           "special_type": ""
         },
         {
-          "order": 13,
-          "label": "02:00 - 02:29.",
-          "label_with_id": "",
-          "alias": "02:00 - 02:29.",
-          "eusurvey_answer_id": "",
-          "value": 14,
-          "scale": "nominal",
-          "is_special": false,
-          "special_type": ""
-        },
-        {
           "order": 14,
           "label": "Finland",
           "label_with_id": "",
@@ -2824,32 +2768,10 @@
           "special_type": ""
         },
         {
-          "order": 14,
-          "label": "02:30 - 02:59.",
-          "label_with_id": "",
-          "alias": "02:30 - 02:59.",
-          "eusurvey_answer_id": "",
-          "value": 15,
-          "scale": "nominal",
-          "is_special": false,
-          "special_type": ""
-        },
-        {
           "order": 15,
           "label": "France",
           "label_with_id": "",
           "alias": "",
-          "eusurvey_answer_id": "",
-          "value": 16,
-          "scale": "nominal",
-          "is_special": false,
-          "special_type": ""
-        },
-        {
-          "order": 15,
-          "label": "Después de las 03:00.",
-          "label_with_id": "",
-          "alias": "Después de las 03:00.",
           "eusurvey_answer_id": "",
           "value": 16,
           "scale": "nominal",
@@ -3289,7 +3211,7 @@
       "scale_confidence": "high",
       "notes": "",
       "orig_aliases": {
-        "spain": "ID970"
+        "spain": "born6"
       },
       "options": [
         {
@@ -4484,7 +4406,7 @@
       "scale_confidence": "high",
       "notes": "",
       "orig_aliases": {
-        "spain": "ID137"
+        "spain": "living1"
       },
       "options": [
         {
@@ -4623,7 +4545,7 @@
       "scale_confidence": "high",
       "notes": "",
       "orig_aliases": {
-        "spain": "ID172"
+        "spain": "living2"
       },
       "options": [
         {
@@ -4834,7 +4756,7 @@
       "scale_confidence": "high",
       "notes": "",
       "orig_aliases": {
-        "spain": "ID31"
+        "spain": "living4"
       },
       "options": [
         {
@@ -4929,7 +4851,7 @@
       "scale_confidence": "high",
       "notes": "",
       "orig_aliases": {
-        "spain": "ID46"
+        "spain": "living5"
       },
       "options": [
         {
@@ -5024,7 +4946,7 @@
       "scale_confidence": "high",
       "notes": "",
       "orig_aliases": {
-        "spain": "ID52"
+        "spain": "siblings1"
       },
       "options": [
         {
@@ -5141,7 +5063,7 @@
       "scale_confidence": "high",
       "notes": "",
       "orig_aliases": {
-        "spain": "ID62"
+        "spain": "sub_abuse14"
       },
       "options": [
         {
@@ -5157,9 +5079,9 @@
         },
         {
           "order": 0,
-          "label": "Sin estudios.",
+          "label": "Sí.",
           "label_with_id": "",
-          "alias": "Sin estudios.",
+          "alias": "Sí.",
           "eusurvey_answer_id": "",
           "value": 0,
           "scale": "ordinal",
@@ -5179,9 +5101,9 @@
         },
         {
           "order": 1,
-          "label": "Educación primaria.",
+          "label": "No.",
           "label_with_id": "",
-          "alias": "Educación primaria.",
+          "alias": "No.",
           "eusurvey_answer_id": "",
           "value": 1,
           "scale": "ordinal",
@@ -5201,9 +5123,9 @@
         },
         {
           "order": 2,
-          "label": "Educación secundaria obligatoria (ESO) o equivalente.",
+          "label": "Prefiero no responder.",
           "label_with_id": "",
-          "alias": "Educación secundaria obligatoria (ESO) o equivalente.",
+          "alias": "Prefiero no responder.",
           "eusurvey_answer_id": "",
           "value": 2,
           "scale": "ordinal",
@@ -5223,9 +5145,9 @@
         },
         {
           "order": 3,
-          "label": "Bachillerato.",
+          "label": "¿Con qué frecuencia has consumido drogas de las siguientes formas durante los últimos 30 días ?",
           "label_with_id": "",
-          "alias": "Bachillerato.",
+          "alias": "¿Con qué frecuencia has consumido drogas de las siguientes formas durante los últimos 30 días ?",
           "eusurvey_answer_id": "",
           "value": 3,
           "scale": "ordinal",
@@ -5245,9 +5167,9 @@
         },
         {
           "order": 4,
-          "label": "Formación Profesional de grado medio.",
+          "label": "Nunca",
           "label_with_id": "",
-          "alias": "Formación Profesional de grado medio.",
+          "alias": "Nunca",
           "eusurvey_answer_id": "",
           "value": 4,
           "scale": "ordinal",
@@ -5267,9 +5189,9 @@
         },
         {
           "order": 5,
-          "label": "Formación Profesional de grado superior.",
+          "label": "1-2 veces",
           "label_with_id": "",
-          "alias": "Formación Profesional de grado superior.",
+          "alias": "1-2 veces",
           "eusurvey_answer_id": "",
           "value": 998,
           "scale": "ordinal",
@@ -5302,7 +5224,7 @@
       "scale_confidence": "high",
       "notes": "",
       "orig_aliases": {
-        "spain": "ID156"
+        "spain": "sleep10"
       },
       "options": [
         {
@@ -5318,9 +5240,9 @@
         },
         {
           "order": 0,
-          "label": "Sin estudios.",
+          "label": "Antes de las 05:00.",
           "label_with_id": "",
-          "alias": "Sin estudios.",
+          "alias": "Antes de las 05:00.",
           "eusurvey_answer_id": "",
           "value": 0,
           "scale": "ordinal",
@@ -5340,9 +5262,9 @@
         },
         {
           "order": 1,
-          "label": "Educación primaria.",
+          "label": "05:00 - 05:29.",
           "label_with_id": "",
-          "alias": "Educación primaria.",
+          "alias": "05:00 - 05:29.",
           "eusurvey_answer_id": "",
           "value": 1,
           "scale": "ordinal",
@@ -5362,9 +5284,9 @@
         },
         {
           "order": 2,
-          "label": "Educación secundaria obligatoria (ESO) o equivalente.",
+          "label": "05:30 - 05:59.",
           "label_with_id": "",
-          "alias": "Educación secundaria obligatoria (ESO) o equivalente.",
+          "alias": "05:30 - 05:59.",
           "eusurvey_answer_id": "",
           "value": 2,
           "scale": "ordinal",
@@ -5384,9 +5306,9 @@
         },
         {
           "order": 3,
-          "label": "Bachillerato.",
+          "label": "06:00 - 06:29.",
           "label_with_id": "",
-          "alias": "Bachillerato.",
+          "alias": "06:00 - 06:29.",
           "eusurvey_answer_id": "",
           "value": 3,
           "scale": "ordinal",
@@ -5406,9 +5328,9 @@
         },
         {
           "order": 4,
-          "label": "Formación Profesional de grado medio.",
+          "label": "06:30 - 06:59.",
           "label_with_id": "",
-          "alias": "Formación Profesional de grado medio.",
+          "alias": "06:30 - 06:59.",
           "eusurvey_answer_id": "",
           "value": 4,
           "scale": "ordinal",
@@ -5428,9 +5350,9 @@
         },
         {
           "order": 5,
-          "label": "Formación Profesional de grado superior.",
+          "label": "07:00 - 07:29.",
           "label_with_id": "",
-          "alias": "Formación Profesional de grado superior.",
+          "alias": "07:00 - 07:29.",
           "eusurvey_answer_id": "",
           "value": 998,
           "scale": "ordinal",
@@ -5463,7 +5385,7 @@
       "scale_confidence": "high",
       "notes": "MacArthur ladder 1 (bottom) to 10 (top).",
       "orig_aliases": {
-        "spain": "ID881"
+        "spain": "soc1"
       },
       "options": [
         {
@@ -5647,7 +5569,7 @@
       "scale_confidence": "high",
       "notes": "",
       "orig_aliases": {
-        "spain": "ID158"
+        "spain": "soc2"
       },
       "options": [
         {
@@ -9761,13 +9683,26 @@
       "options_complete": true,
       "scale_confidence": "high",
       "notes": "",
-      "orig_aliases": {},
+      "orig_aliases": {
+        "spain": "ID391"
+      },
       "options": [
         {
           "order": 0,
           "label": "Always",
           "label_with_id": "",
           "alias": "",
+          "eusurvey_answer_id": "",
+          "value": 4,
+          "scale": "ordinal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
+          "order": 0,
+          "label": "Siempre",
+          "label_with_id": "",
+          "alias": "Siempre",
           "eusurvey_answer_id": "",
           "value": 4,
           "scale": "ordinal",
@@ -9786,10 +9721,32 @@
           "special_type": ""
         },
         {
+          "order": 1,
+          "label": "La mayoría de las veces",
+          "label_with_id": "",
+          "alias": "La mayoría de las veces",
+          "eusurvey_answer_id": "",
+          "value": 3,
+          "scale": "ordinal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
           "order": 2,
           "label": "Sometimes",
           "label_with_id": "",
           "alias": "",
+          "eusurvey_answer_id": "",
+          "value": 2,
+          "scale": "ordinal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
+          "order": 2,
+          "label": "A veces",
+          "label_with_id": "",
+          "alias": "A veces",
           "eusurvey_answer_id": "",
           "value": 2,
           "scale": "ordinal",
@@ -9808,10 +9765,32 @@
           "special_type": ""
         },
         {
+          "order": 3,
+          "label": "Rara vez",
+          "label_with_id": "",
+          "alias": "Rara vez",
+          "eusurvey_answer_id": "",
+          "value": 1,
+          "scale": "ordinal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
           "order": 4,
           "label": "Never",
           "label_with_id": "",
           "alias": "",
+          "eusurvey_answer_id": "",
+          "value": 0,
+          "scale": "ordinal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
+          "order": 4,
+          "label": "Nunca",
+          "label_with_id": "",
+          "alias": "Nunca",
           "eusurvey_answer_id": "",
           "value": 0,
           "scale": "ordinal",
@@ -9843,13 +9822,26 @@
       "options_complete": true,
       "scale_confidence": "high",
       "notes": "",
-      "orig_aliases": {},
+      "orig_aliases": {
+        "spain": "ID391"
+      },
       "options": [
         {
           "order": 0,
           "label": "Always",
           "label_with_id": "",
           "alias": "",
+          "eusurvey_answer_id": "",
+          "value": 4,
+          "scale": "ordinal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
+          "order": 0,
+          "label": "Siempre",
+          "label_with_id": "",
+          "alias": "Siempre",
           "eusurvey_answer_id": "",
           "value": 4,
           "scale": "ordinal",
@@ -9868,10 +9860,32 @@
           "special_type": ""
         },
         {
+          "order": 1,
+          "label": "La mayoría de las veces",
+          "label_with_id": "",
+          "alias": "La mayoría de las veces",
+          "eusurvey_answer_id": "",
+          "value": 3,
+          "scale": "ordinal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
           "order": 2,
           "label": "Sometimes",
           "label_with_id": "",
           "alias": "",
+          "eusurvey_answer_id": "",
+          "value": 2,
+          "scale": "ordinal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
+          "order": 2,
+          "label": "A veces",
+          "label_with_id": "",
+          "alias": "A veces",
           "eusurvey_answer_id": "",
           "value": 2,
           "scale": "ordinal",
@@ -9890,10 +9904,32 @@
           "special_type": ""
         },
         {
+          "order": 3,
+          "label": "Rara vez",
+          "label_with_id": "",
+          "alias": "Rara vez",
+          "eusurvey_answer_id": "",
+          "value": 1,
+          "scale": "ordinal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
           "order": 4,
           "label": "Never",
           "label_with_id": "",
           "alias": "",
+          "eusurvey_answer_id": "",
+          "value": 0,
+          "scale": "ordinal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
+          "order": 4,
+          "label": "Nunca",
+          "label_with_id": "",
+          "alias": "Nunca",
           "eusurvey_answer_id": "",
           "value": 0,
           "scale": "ordinal",
@@ -11939,7 +11975,7 @@
       "scale_confidence": "high",
       "notes": "",
       "orig_aliases": {
-        "spain": "ID436"
+        "spain": "ace23"
       },
       "options": [
         {
@@ -17196,7 +17232,7 @@
       "scale_confidence": "high",
       "notes": "",
       "orig_aliases": {
-        "spain": "ID525"
+        "spain": "gaming1"
       },
       "options": [
         {
@@ -17291,7 +17327,7 @@
       "scale_confidence": "high",
       "notes": "",
       "orig_aliases": {
-        "spain": "ID377"
+        "spain": "ai1"
       },
       "options": [
         {
@@ -17364,7 +17400,7 @@
       "scale_confidence": "high",
       "notes": "",
       "orig_aliases": {
-        "spain": "ID426"
+        "spain": "ai2"
       },
       "options": [
         {
@@ -17460,7 +17496,7 @@
       "scale_confidence": "high",
       "notes": "",
       "orig_aliases": {
-        "spain": "ID489"
+        "spain": "some_feel1"
       },
       "options": [
         {
@@ -17599,7 +17635,7 @@
       "scale_confidence": "high",
       "notes": "",
       "orig_aliases": {
-        "spain": "ID520"
+        "spain": "some_feel2"
       },
       "options": [
         {
@@ -17754,10 +17790,32 @@
           "special_type": ""
         },
         {
+          "order": 0,
+          "label": "Casi siempre",
+          "label_with_id": "",
+          "alias": "Casi siempre",
+          "eusurvey_answer_id": "",
+          "value": 4,
+          "scale": "ordinal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
           "order": 1,
           "label": "Often",
           "label_with_id": "",
           "alias": "",
+          "eusurvey_answer_id": "",
+          "value": 3,
+          "scale": "ordinal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
+          "order": 1,
+          "label": "A menudo",
+          "label_with_id": "",
+          "alias": "A menudo",
           "eusurvey_answer_id": "",
           "value": 3,
           "scale": "ordinal",
@@ -17776,6 +17834,17 @@
           "special_type": ""
         },
         {
+          "order": 2,
+          "label": "A veces",
+          "label_with_id": "",
+          "alias": "A veces",
+          "eusurvey_answer_id": "",
+          "value": 2,
+          "scale": "ordinal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
           "order": 3,
           "label": "Rarely",
           "label_with_id": "",
@@ -17787,10 +17856,32 @@
           "special_type": ""
         },
         {
+          "order": 3,
+          "label": "Rara vez",
+          "label_with_id": "",
+          "alias": "Rara vez",
+          "eusurvey_answer_id": "",
+          "value": 1,
+          "scale": "ordinal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
           "order": 4,
           "label": "Never",
           "label_with_id": "",
           "alias": "",
+          "eusurvey_answer_id": "",
+          "value": 0,
+          "scale": "ordinal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
+          "order": 4,
+          "label": "Nunca",
+          "label_with_id": "",
+          "alias": "Nunca",
           "eusurvey_answer_id": "",
           "value": 0,
           "scale": "ordinal",
@@ -17838,10 +17929,32 @@
           "special_type": ""
         },
         {
+          "order": 0,
+          "label": "Casi siempre",
+          "label_with_id": "",
+          "alias": "Casi siempre",
+          "eusurvey_answer_id": "",
+          "value": 4,
+          "scale": "ordinal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
           "order": 1,
           "label": "Often",
           "label_with_id": "",
           "alias": "",
+          "eusurvey_answer_id": "",
+          "value": 3,
+          "scale": "ordinal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
+          "order": 1,
+          "label": "A menudo",
+          "label_with_id": "",
+          "alias": "A menudo",
           "eusurvey_answer_id": "",
           "value": 3,
           "scale": "ordinal",
@@ -17860,6 +17973,17 @@
           "special_type": ""
         },
         {
+          "order": 2,
+          "label": "A veces",
+          "label_with_id": "",
+          "alias": "A veces",
+          "eusurvey_answer_id": "",
+          "value": 2,
+          "scale": "ordinal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
           "order": 3,
           "label": "Rarely",
           "label_with_id": "",
@@ -17871,10 +17995,32 @@
           "special_type": ""
         },
         {
+          "order": 3,
+          "label": "Rara vez",
+          "label_with_id": "",
+          "alias": "Rara vez",
+          "eusurvey_answer_id": "",
+          "value": 1,
+          "scale": "ordinal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
           "order": 4,
           "label": "Never",
           "label_with_id": "",
           "alias": "",
+          "eusurvey_answer_id": "",
+          "value": 0,
+          "scale": "ordinal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
+          "order": 4,
+          "label": "Nunca",
+          "label_with_id": "",
+          "alias": "Nunca",
           "eusurvey_answer_id": "",
           "value": 0,
           "scale": "ordinal",
@@ -17922,10 +18068,32 @@
           "special_type": ""
         },
         {
+          "order": 0,
+          "label": "Casi siempre",
+          "label_with_id": "",
+          "alias": "Casi siempre",
+          "eusurvey_answer_id": "",
+          "value": 4,
+          "scale": "ordinal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
           "order": 1,
           "label": "Often",
           "label_with_id": "",
           "alias": "",
+          "eusurvey_answer_id": "",
+          "value": 3,
+          "scale": "ordinal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
+          "order": 1,
+          "label": "A menudo",
+          "label_with_id": "",
+          "alias": "A menudo",
           "eusurvey_answer_id": "",
           "value": 3,
           "scale": "ordinal",
@@ -17944,6 +18112,17 @@
           "special_type": ""
         },
         {
+          "order": 2,
+          "label": "A veces",
+          "label_with_id": "",
+          "alias": "A veces",
+          "eusurvey_answer_id": "",
+          "value": 2,
+          "scale": "ordinal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
           "order": 3,
           "label": "Rarely",
           "label_with_id": "",
@@ -17955,10 +18134,32 @@
           "special_type": ""
         },
         {
+          "order": 3,
+          "label": "Rara vez",
+          "label_with_id": "",
+          "alias": "Rara vez",
+          "eusurvey_answer_id": "",
+          "value": 1,
+          "scale": "ordinal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
           "order": 4,
           "label": "Never",
           "label_with_id": "",
           "alias": "",
+          "eusurvey_answer_id": "",
+          "value": 0,
+          "scale": "ordinal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
+          "order": 4,
+          "label": "Nunca",
+          "label_with_id": "",
+          "alias": "Nunca",
           "eusurvey_answer_id": "",
           "value": 0,
           "scale": "ordinal",
@@ -18006,10 +18207,32 @@
           "special_type": ""
         },
         {
+          "order": 0,
+          "label": "Casi siempre",
+          "label_with_id": "",
+          "alias": "Casi siempre",
+          "eusurvey_answer_id": "",
+          "value": 4,
+          "scale": "ordinal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
           "order": 1,
           "label": "Often",
           "label_with_id": "",
           "alias": "",
+          "eusurvey_answer_id": "",
+          "value": 3,
+          "scale": "ordinal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
+          "order": 1,
+          "label": "A menudo",
+          "label_with_id": "",
+          "alias": "A menudo",
           "eusurvey_answer_id": "",
           "value": 3,
           "scale": "ordinal",
@@ -18028,6 +18251,17 @@
           "special_type": ""
         },
         {
+          "order": 2,
+          "label": "A veces",
+          "label_with_id": "",
+          "alias": "A veces",
+          "eusurvey_answer_id": "",
+          "value": 2,
+          "scale": "ordinal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
           "order": 3,
           "label": "Rarely",
           "label_with_id": "",
@@ -18039,10 +18273,32 @@
           "special_type": ""
         },
         {
+          "order": 3,
+          "label": "Rara vez",
+          "label_with_id": "",
+          "alias": "Rara vez",
+          "eusurvey_answer_id": "",
+          "value": 1,
+          "scale": "ordinal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
           "order": 4,
           "label": "Never",
           "label_with_id": "",
           "alias": "",
+          "eusurvey_answer_id": "",
+          "value": 0,
+          "scale": "ordinal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
+          "order": 4,
+          "label": "Nunca",
+          "label_with_id": "",
+          "alias": "Nunca",
           "eusurvey_answer_id": "",
           "value": 0,
           "scale": "ordinal",
@@ -18089,10 +18345,32 @@
           "special_type": ""
         },
         {
+          "order": 0,
+          "label": "Casi siempre",
+          "label_with_id": "",
+          "alias": "Casi siempre",
+          "eusurvey_answer_id": "",
+          "value": 4,
+          "scale": "ordinal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
           "order": 1,
           "label": "Often",
           "label_with_id": "",
           "alias": "",
+          "eusurvey_answer_id": "",
+          "value": 3,
+          "scale": "ordinal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
+          "order": 1,
+          "label": "A menudo",
+          "label_with_id": "",
+          "alias": "A menudo",
           "eusurvey_answer_id": "",
           "value": 3,
           "scale": "ordinal",
@@ -18111,6 +18389,17 @@
           "special_type": ""
         },
         {
+          "order": 2,
+          "label": "A veces",
+          "label_with_id": "",
+          "alias": "A veces",
+          "eusurvey_answer_id": "",
+          "value": 2,
+          "scale": "ordinal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
           "order": 3,
           "label": "Rarely",
           "label_with_id": "",
@@ -18122,10 +18411,32 @@
           "special_type": ""
         },
         {
+          "order": 3,
+          "label": "Rara vez",
+          "label_with_id": "",
+          "alias": "Rara vez",
+          "eusurvey_answer_id": "",
+          "value": 1,
+          "scale": "ordinal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
           "order": 4,
           "label": "Never",
           "label_with_id": "",
           "alias": "",
+          "eusurvey_answer_id": "",
+          "value": 0,
+          "scale": "ordinal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
+          "order": 4,
+          "label": "Nunca",
+          "label_with_id": "",
+          "alias": "Nunca",
           "eusurvey_answer_id": "",
           "value": 0,
           "scale": "ordinal",
@@ -18156,13 +18467,26 @@
       "options_complete": true,
       "scale_confidence": "high",
       "notes": "",
-      "orig_aliases": {},
+      "orig_aliases": {
+        "spain": "ID541"
+      },
       "options": [
         {
           "order": 0,
           "label": "Nearly all the time",
           "label_with_id": "",
           "alias": "",
+          "eusurvey_answer_id": "",
+          "value": 4,
+          "scale": "ordinal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
+          "order": 0,
+          "label": "Casi siempre",
+          "label_with_id": "",
+          "alias": "Casi siempre",
           "eusurvey_answer_id": "",
           "value": 4,
           "scale": "ordinal",
@@ -18181,10 +18505,32 @@
           "special_type": ""
         },
         {
+          "order": 1,
+          "label": "A menudo",
+          "label_with_id": "",
+          "alias": "A menudo",
+          "eusurvey_answer_id": "",
+          "value": 3,
+          "scale": "ordinal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
           "order": 2,
           "label": "Sometimes",
           "label_with_id": "",
           "alias": "",
+          "eusurvey_answer_id": "",
+          "value": 2,
+          "scale": "ordinal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
+          "order": 2,
+          "label": "A veces",
+          "label_with_id": "",
+          "alias": "A veces",
           "eusurvey_answer_id": "",
           "value": 2,
           "scale": "ordinal",
@@ -18203,10 +18549,32 @@
           "special_type": ""
         },
         {
+          "order": 3,
+          "label": "Rara vez",
+          "label_with_id": "",
+          "alias": "Rara vez",
+          "eusurvey_answer_id": "",
+          "value": 1,
+          "scale": "ordinal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
           "order": 4,
           "label": "Never",
           "label_with_id": "",
           "alias": "",
+          "eusurvey_answer_id": "",
+          "value": 0,
+          "scale": "ordinal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
+          "order": 4,
+          "label": "Nunca",
+          "label_with_id": "",
+          "alias": "Nunca",
           "eusurvey_answer_id": "",
           "value": 0,
           "scale": "ordinal",
@@ -18239,7 +18607,7 @@
       "scale_confidence": "high",
       "notes": "",
       "orig_aliases": {
-        "spain": "ID552"
+        "spain": "some_apps1"
       },
       "options": [
         {
@@ -24408,7 +24776,7 @@
     },
     {
       "variable": "aqetacle1",
-      "orig_variable": "ID67",
+      "orig_variable": "born4",
       "group_id": "aproximadamente_qu_edad_ten_as_cuando_llegaste_a",
       "section": "Variables de antecedentes: sobre ti y tu familia",
       "question_stem": "¿Aproximadamente qué edad tenías cuando llegaste a España? ¿Dónde nació tu madre biológica?",
@@ -25028,6 +25396,192 @@
       ]
     },
     {
+      "variable": "cleenems1",
+      "orig_variable": "edu1",
+      "group_id": "cu_l_es_el_nivel_educativo_m_s_alto_alcanzado_po",
+      "section": "Variables de antecedentes: sobre ti y tu familia",
+      "question_stem": "¿Cuál es el nivel educativo más alto alcanzado por tu madre?",
+      "item_text": "",
+      "scale": "nominal",
+      "question_type": "single",
+      "n_options": 6,
+      "multiple": false,
+      "source": "spain",
+      "is_core": false,
+      "options_complete": true,
+      "scale_confidence": "high",
+      "notes": "",
+      "orig_aliases": {},
+      "options": [
+        {
+          "order": 0,
+          "label": "Menos que el bachillerato.",
+          "label_with_id": "",
+          "alias": "",
+          "eusurvey_answer_id": "",
+          "value": 1,
+          "scale": "nominal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
+          "order": 1,
+          "label": "Título de bachillerato o equivalente.",
+          "label_with_id": "",
+          "alias": "",
+          "eusurvey_answer_id": "",
+          "value": 2,
+          "scale": "nominal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
+          "order": 2,
+          "label": "Estudios universitarios parciales, sin título.",
+          "label_with_id": "",
+          "alias": "",
+          "eusurvey_answer_id": "",
+          "value": 3,
+          "scale": "nominal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
+          "order": 3,
+          "label": "Formación Profesional.",
+          "label_with_id": "",
+          "alias": "",
+          "eusurvey_answer_id": "",
+          "value": 4,
+          "scale": "nominal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
+          "order": 4,
+          "label": "Grado.",
+          "label_with_id": "",
+          "alias": "",
+          "eusurvey_answer_id": "",
+          "value": 5,
+          "scale": "nominal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
+          "order": 5,
+          "label": "Máster o título superior.",
+          "label_with_id": "",
+          "alias": "",
+          "eusurvey_answer_id": "",
+          "value": 6,
+          "scale": "nominal",
+          "is_special": false,
+          "special_type": ""
+        }
+      ],
+      "keywords": [
+        "maternal education",
+        "parental education",
+        "socioeconomic status",
+        "ses",
+        "demographics"
+      ]
+    },
+    {
+      "variable": "cleenemsa1",
+      "orig_variable": "edu2",
+      "group_id": "cu_l_es_el_nivel_educativo_m_s_alto_alcanzado_po_2",
+      "section": "Variables de antecedentes: sobre ti y tu familia",
+      "question_stem": "¿Cuál es el nivel educativo más alto alcanzado por tu padre?",
+      "item_text": "",
+      "scale": "nominal",
+      "question_type": "single",
+      "n_options": 6,
+      "multiple": false,
+      "source": "spain",
+      "is_core": false,
+      "options_complete": true,
+      "scale_confidence": "high",
+      "notes": "",
+      "orig_aliases": {},
+      "options": [
+        {
+          "order": 0,
+          "label": "Menos que el bachillerato.",
+          "label_with_id": "",
+          "alias": "",
+          "eusurvey_answer_id": "",
+          "value": 1,
+          "scale": "nominal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
+          "order": 1,
+          "label": "Título de bachillerato o equivalente.",
+          "label_with_id": "",
+          "alias": "",
+          "eusurvey_answer_id": "",
+          "value": 2,
+          "scale": "nominal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
+          "order": 2,
+          "label": "Estudios universitarios parciales, sin título.",
+          "label_with_id": "",
+          "alias": "",
+          "eusurvey_answer_id": "",
+          "value": 3,
+          "scale": "nominal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
+          "order": 3,
+          "label": "Formación Profesional.",
+          "label_with_id": "",
+          "alias": "",
+          "eusurvey_answer_id": "",
+          "value": 4,
+          "scale": "nominal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
+          "order": 4,
+          "label": "Grado.",
+          "label_with_id": "",
+          "alias": "",
+          "eusurvey_answer_id": "",
+          "value": 5,
+          "scale": "nominal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
+          "order": 5,
+          "label": "Máster o título superior.",
+          "label_with_id": "",
+          "alias": "",
+          "eusurvey_answer_id": "",
+          "value": 6,
+          "scale": "nominal",
+          "is_special": false,
+          "special_type": ""
+        }
+      ],
+      "keywords": [
+        "paternal education",
+        "parental education",
+        "socioeconomic status",
+        "ses",
+        "demographics"
+      ]
+    },
+    {
       "variable": "cndllsm1",
       "orig_variable": "ID260",
       "group_id": "cooperaci_n_durante_los_ltimos_seis_meses",
@@ -25173,7 +25727,7 @@
       "item_text": "",
       "scale": "nominal",
       "question_type": "single",
-      "n_options": 11,
+      "n_options": 10,
       "multiple": false,
       "source": "spain",
       "is_core": false,
@@ -25239,7 +25793,7 @@
         },
         {
           "order": 5,
-          "label": "Evitas o retrasas las tareas debido a la ansiedad.",
+          "label": "Te preocupas por ser mejor en lo que haces.",
           "label_with_id": "",
           "alias": "",
           "eusurvey_answer_id": "",
@@ -25250,7 +25804,7 @@
         },
         {
           "order": 6,
-          "label": "Te preocupas por ser mejor en lo que haces.",
+          "label": "Te preocupas por tu comportamiento pasado.",
           "label_with_id": "",
           "alias": "",
           "eusurvey_answer_id": "",
@@ -25261,7 +25815,7 @@
         },
         {
           "order": 7,
-          "label": "Te preocupas por tu comportamiento pasado.",
+          "label": "Te preocupas por hacer algo mal.",
           "label_with_id": "",
           "alias": "",
           "eusurvey_answer_id": "",
@@ -25272,7 +25826,7 @@
         },
         {
           "order": 8,
-          "label": "Te preocupas por hacer algo mal.",
+          "label": "Te preocupas por las cosas en el futuro.",
           "label_with_id": "",
           "alias": "",
           "eusurvey_answer_id": "",
@@ -25283,22 +25837,11 @@
         },
         {
           "order": 9,
-          "label": "Te preocupas por las cosas en el futuro.",
-          "label_with_id": "",
-          "alias": "",
-          "eusurvey_answer_id": "",
-          "value": 10,
-          "scale": "nominal",
-          "is_special": false,
-          "special_type": ""
-        },
-        {
-          "order": 10,
           "label": "Tienes miedo de cometer errores.",
           "label_with_id": "",
           "alias": "",
           "eusurvey_answer_id": "",
-          "value": 11,
+          "value": 10,
           "scale": "nominal",
           "is_special": false,
           "special_type": ""
@@ -25448,121 +25991,6 @@
         "emotional control",
         "affect",
         "emotional distress"
-      ]
-    },
-    {
-      "variable": "rnclptdt1",
-      "orig_variable": "ID391",
-      "group_id": "relaci_n_con_los_padres_tutores_durante_tu_vida_",
-      "section": "Experiencias adversas en la infancia (ACE)",
-      "question_stem": "Relación con los padres/tutores Durante tu vida hasta ahora...",
-      "item_text": "",
-      "scale": "nominal",
-      "question_type": "single",
-      "n_options": 8,
-      "multiple": false,
-      "source": "spain",
-      "is_core": false,
-      "options_complete": true,
-      "scale_confidence": "high",
-      "notes": "",
-      "orig_aliases": {},
-      "options": [
-        {
-          "order": 0,
-          "label": "Siempre",
-          "label_with_id": "",
-          "alias": "",
-          "eusurvey_answer_id": "",
-          "value": 1,
-          "scale": "nominal",
-          "is_special": false,
-          "special_type": ""
-        },
-        {
-          "order": 1,
-          "label": "La mayoría de las veces",
-          "label_with_id": "",
-          "alias": "",
-          "eusurvey_answer_id": "",
-          "value": 2,
-          "scale": "nominal",
-          "is_special": false,
-          "special_type": ""
-        },
-        {
-          "order": 2,
-          "label": "A veces",
-          "label_with_id": "",
-          "alias": "",
-          "eusurvey_answer_id": "",
-          "value": 3,
-          "scale": "nominal",
-          "is_special": false,
-          "special_type": ""
-        },
-        {
-          "order": 3,
-          "label": "Rara vez",
-          "label_with_id": "",
-          "alias": "",
-          "eusurvey_answer_id": "",
-          "value": 4,
-          "scale": "nominal",
-          "is_special": false,
-          "special_type": ""
-        },
-        {
-          "order": 4,
-          "label": "Nunca",
-          "label_with_id": "",
-          "alias": "",
-          "eusurvey_answer_id": "",
-          "value": 5,
-          "scale": "nominal",
-          "is_special": false,
-          "special_type": ""
-        },
-        {
-          "order": 5,
-          "label": "Prefiero no responder",
-          "label_with_id": "",
-          "alias": "",
-          "eusurvey_answer_id": "",
-          "value": 6,
-          "scale": "nominal",
-          "is_special": false,
-          "special_type": ""
-        },
-        {
-          "order": 6,
-          "label": "¿Tus padres / tutores entendían tus problemas y preocupaciones?",
-          "label_with_id": "",
-          "alias": "",
-          "eusurvey_answer_id": "",
-          "value": 7,
-          "scale": "nominal",
-          "is_special": false,
-          "special_type": ""
-        },
-        {
-          "order": 7,
-          "label": "¿Tus padres / tutores sabían realmente lo que hacías en tu tiempo libre cuando no estabas en la escuela o en el trabajo?",
-          "label_with_id": "",
-          "alias": "",
-          "eusurvey_answer_id": "",
-          "value": 8,
-          "scale": "nominal",
-          "is_special": false,
-          "special_type": ""
-        }
-      ],
-      "keywords": [
-        "ace",
-        "childhood trauma",
-        "parent-child relationship",
-        "parental neglect",
-        "adverse childhood experiences"
       ]
     },
     {
@@ -25903,154 +26331,6 @@
         "coping",
         "protective factors",
         "psychological resilience"
-      ]
-    },
-    {
-      "variable": "pcudlsrd1",
-      "orig_variable": "ID541",
-      "group_id": "para_cada_una_de_las_siguientes_reas_de_tu_vida_",
-      "section": "Redes sociales / Videojuegos",
-      "question_stem": "Para cada una de las siguientes áreas de tu vida, indica con qué frecuencia el uso del teléfono, el ordenador o la videoconsola tienen un efecto negativo:",
-      "item_text": "",
-      "scale": "nominal",
-      "question_type": "single",
-      "n_options": 11,
-      "multiple": false,
-      "source": "spain",
-      "is_core": false,
-      "options_complete": true,
-      "scale_confidence": "high",
-      "notes": "",
-      "orig_aliases": {},
-      "options": [
-        {
-          "order": 0,
-          "label": "Casi siempre",
-          "label_with_id": "",
-          "alias": "",
-          "eusurvey_answer_id": "",
-          "value": 1,
-          "scale": "nominal",
-          "is_special": false,
-          "special_type": ""
-        },
-        {
-          "order": 1,
-          "label": "A menudo",
-          "label_with_id": "",
-          "alias": "",
-          "eusurvey_answer_id": "",
-          "value": 2,
-          "scale": "nominal",
-          "is_special": false,
-          "special_type": ""
-        },
-        {
-          "order": 2,
-          "label": "A veces",
-          "label_with_id": "",
-          "alias": "",
-          "eusurvey_answer_id": "",
-          "value": 3,
-          "scale": "nominal",
-          "is_special": false,
-          "special_type": ""
-        },
-        {
-          "order": 3,
-          "label": "Rara vez",
-          "label_with_id": "",
-          "alias": "",
-          "eusurvey_answer_id": "",
-          "value": 4,
-          "scale": "nominal",
-          "is_special": false,
-          "special_type": ""
-        },
-        {
-          "order": 4,
-          "label": "Nunca",
-          "label_with_id": "",
-          "alias": "",
-          "eusurvey_answer_id": "",
-          "value": 5,
-          "scale": "nominal",
-          "is_special": false,
-          "special_type": ""
-        },
-        {
-          "order": 5,
-          "label": "Prefiero no responder",
-          "label_with_id": "",
-          "alias": "",
-          "eusurvey_answer_id": "",
-          "value": 6,
-          "scale": "nominal",
-          "is_special": false,
-          "special_type": ""
-        },
-        {
-          "order": 6,
-          "label": "Dormir.",
-          "label_with_id": "",
-          "alias": "",
-          "eusurvey_answer_id": "",
-          "value": 7,
-          "scale": "nominal",
-          "is_special": false,
-          "special_type": ""
-        },
-        {
-          "order": 7,
-          "label": "Trabajo escolar.",
-          "label_with_id": "",
-          "alias": "",
-          "eusurvey_answer_id": "",
-          "value": 8,
-          "scale": "nominal",
-          "is_special": false,
-          "special_type": ""
-        },
-        {
-          "order": 8,
-          "label": "Autoestima / Salud mental.",
-          "label_with_id": "",
-          "alias": "",
-          "eusurvey_answer_id": "",
-          "value": 9,
-          "scale": "nominal",
-          "is_special": false,
-          "special_type": ""
-        },
-        {
-          "order": 9,
-          "label": "Relaciones con los amigos.",
-          "label_with_id": "",
-          "alias": "",
-          "eusurvey_answer_id": "",
-          "value": 10,
-          "scale": "nominal",
-          "is_special": false,
-          "special_type": ""
-        },
-        {
-          "order": 10,
-          "label": "Relaciones con la familia.",
-          "label_with_id": "",
-          "alias": "",
-          "eusurvey_answer_id": "",
-          "value": 11,
-          "scale": "nominal",
-          "is_special": false,
-          "special_type": ""
-        }
-      ],
-      "keywords": [
-        "problematic media use",
-        "screen time interference",
-        "social media addiction",
-        "technology overuse",
-        "daily disruption"
       ]
     },
     {
@@ -26423,7 +26703,7 @@
     },
     {
       "variable": "cqftrdcc1",
-      "orig_variable": "ID554",
+      "orig_variable": "sleep1",
       "group_id": "con_qu_frecuencia_te_resulta_dif_cil_conciliar_e",
       "section": "Sueño (Del cuestionario MoBa)",
       "question_stem": "¿Con qué frecuencia te resulta difícil conciliar el sueño por la noche?",
@@ -26527,7 +26807,7 @@
     },
     {
       "variable": "dcntdpce1",
-      "orig_variable": "ID528",
+      "orig_variable": "sleep2",
       "group_id": "desde_cu_ndo_tienes_dificultades_para_conciliar_",
       "section": "Sueño (Del cuestionario MoBa)",
       "question_stem": "¿Desde cuándo tienes dificultades para conciliar el sueño por la noche?",
@@ -26630,8 +26910,112 @@
       ]
     },
     {
+      "variable": "cqftddln1",
+      "orig_variable": "sleep3",
+      "group_id": "con_qu_frecuencia_te_despiertas_durante_la_noche",
+      "section": "Sueño (Del cuestionario MoBa)",
+      "question_stem": "¿Con qué frecuencia te despiertas durante la noche?",
+      "item_text": "",
+      "scale": "nominal",
+      "question_type": "single",
+      "n_options": 7,
+      "multiple": false,
+      "source": "spain",
+      "is_core": false,
+      "options_complete": true,
+      "scale_confidence": "high",
+      "notes": "",
+      "orig_aliases": {},
+      "options": [
+        {
+          "order": 0,
+          "label": "Nunca.",
+          "label_with_id": "",
+          "alias": "",
+          "eusurvey_answer_id": "",
+          "value": 1,
+          "scale": "nominal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
+          "order": 1,
+          "label": "Algunas veces.",
+          "label_with_id": "",
+          "alias": "",
+          "eusurvey_answer_id": "",
+          "value": 2,
+          "scale": "nominal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
+          "order": 2,
+          "label": "1 día a la semana.",
+          "label_with_id": "",
+          "alias": "",
+          "eusurvey_answer_id": "",
+          "value": 3,
+          "scale": "nominal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
+          "order": 3,
+          "label": "2-3 días a la semana.",
+          "label_with_id": "",
+          "alias": "",
+          "eusurvey_answer_id": "",
+          "value": 4,
+          "scale": "nominal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
+          "order": 4,
+          "label": "4-5 días a la semana.",
+          "label_with_id": "",
+          "alias": "",
+          "eusurvey_answer_id": "",
+          "value": 5,
+          "scale": "nominal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
+          "order": 5,
+          "label": "6-7 días a la semana.",
+          "label_with_id": "",
+          "alias": "",
+          "eusurvey_answer_id": "",
+          "value": 6,
+          "scale": "nominal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
+          "order": 6,
+          "label": "Prefiero no responder.",
+          "label_with_id": "",
+          "alias": "",
+          "eusurvey_answer_id": "",
+          "value": 7,
+          "scale": "nominal",
+          "is_special": false,
+          "special_type": ""
+        }
+      ],
+      "keywords": [
+        "moba",
+        "nocturnal awakenings",
+        "sleep maintenance",
+        "sleep fragmentation",
+        "night waking"
+      ]
+    },
+    {
       "variable": "dcntdn1",
-      "orig_variable": "ID816",
+      "orig_variable": "sleep4",
       "group_id": "desde_cu_ndo_tienes_despertares_nocturnos",
       "section": "Sueño (Del cuestionario MoBa)",
       "question_stem": "¿Desde cuándo tienes despertares nocturnos?",
@@ -26735,7 +27119,7 @@
     },
     {
       "variable": "cqftscoc1",
-      "orig_variable": "ID843",
+      "orig_variable": "sleep5",
       "group_id": "con_qu_frecuencia_te_sientes_cansado_o_con_sue_o",
       "section": "Sueño (Del cuestionario MoBa)",
       "question_stem": "¿Con qué frecuencia te sientes cansado o con sueño durante el día?",
@@ -26839,7 +27223,7 @@
     },
     {
       "variable": "dcntscoc1",
-      "orig_variable": "ID867",
+      "orig_variable": "sleep6",
       "group_id": "desde_cu_ndo_te_sientes_cansado_o_con_sue_o_dura",
       "section": "Sueño (Del cuestionario MoBa)",
       "question_stem": "¿Desde cuándo te sientes cansado o con sueño durante el día?",
@@ -26942,8 +27326,211 @@
       ]
     },
     {
+      "variable": "qhsaes1",
+      "orig_variable": "sleep7",
+      "group_id": "a_qu_hora_sueles_acostarte_entre_semana",
+      "section": "Sueño (Del cuestionario MoBa)",
+      "question_stem": "¿A qué hora sueles acostarte entre semana?",
+      "item_text": "",
+      "scale": "nominal",
+      "question_type": "single",
+      "n_options": 16,
+      "multiple": false,
+      "source": "spain",
+      "is_core": false,
+      "options_complete": true,
+      "scale_confidence": "high",
+      "notes": "",
+      "orig_aliases": {},
+      "options": [
+        {
+          "order": 0,
+          "label": "Antes de las 20:00.",
+          "label_with_id": "",
+          "alias": "",
+          "eusurvey_answer_id": "",
+          "value": 1,
+          "scale": "nominal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
+          "order": 1,
+          "label": "20:00 - 20:29.",
+          "label_with_id": "",
+          "alias": "",
+          "eusurvey_answer_id": "",
+          "value": 2,
+          "scale": "nominal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
+          "order": 2,
+          "label": "20:30 - 20:59.",
+          "label_with_id": "",
+          "alias": "",
+          "eusurvey_answer_id": "",
+          "value": 3,
+          "scale": "nominal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
+          "order": 3,
+          "label": "21:00 - 21:29.",
+          "label_with_id": "",
+          "alias": "",
+          "eusurvey_answer_id": "",
+          "value": 4,
+          "scale": "nominal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
+          "order": 4,
+          "label": "21:30 - 21:59.",
+          "label_with_id": "",
+          "alias": "",
+          "eusurvey_answer_id": "",
+          "value": 5,
+          "scale": "nominal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
+          "order": 5,
+          "label": "22:00 - 22:29.",
+          "label_with_id": "",
+          "alias": "",
+          "eusurvey_answer_id": "",
+          "value": 6,
+          "scale": "nominal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
+          "order": 6,
+          "label": "22:30 - 22:59.",
+          "label_with_id": "",
+          "alias": "",
+          "eusurvey_answer_id": "",
+          "value": 7,
+          "scale": "nominal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
+          "order": 7,
+          "label": "23:00 - 23:29.",
+          "label_with_id": "",
+          "alias": "",
+          "eusurvey_answer_id": "",
+          "value": 8,
+          "scale": "nominal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
+          "order": 8,
+          "label": "23:30 - 23:59.",
+          "label_with_id": "",
+          "alias": "",
+          "eusurvey_answer_id": "",
+          "value": 9,
+          "scale": "nominal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
+          "order": 9,
+          "label": "00:00 - 00:29.",
+          "label_with_id": "",
+          "alias": "",
+          "eusurvey_answer_id": "",
+          "value": 10,
+          "scale": "nominal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
+          "order": 10,
+          "label": "00:30 - 00:59.",
+          "label_with_id": "",
+          "alias": "",
+          "eusurvey_answer_id": "",
+          "value": 11,
+          "scale": "nominal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
+          "order": 11,
+          "label": "01:00 - 01:29.",
+          "label_with_id": "",
+          "alias": "",
+          "eusurvey_answer_id": "",
+          "value": 12,
+          "scale": "nominal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
+          "order": 12,
+          "label": "01:30 - 01:59.",
+          "label_with_id": "",
+          "alias": "",
+          "eusurvey_answer_id": "",
+          "value": 13,
+          "scale": "nominal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
+          "order": 13,
+          "label": "02:00 - 02:29.",
+          "label_with_id": "",
+          "alias": "",
+          "eusurvey_answer_id": "",
+          "value": 14,
+          "scale": "nominal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
+          "order": 14,
+          "label": "02:30 - 02:59.",
+          "label_with_id": "",
+          "alias": "",
+          "eusurvey_answer_id": "",
+          "value": 15,
+          "scale": "nominal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
+          "order": 15,
+          "label": "Después de las 03:00.",
+          "label_with_id": "",
+          "alias": "",
+          "eusurvey_answer_id": "",
+          "value": 16,
+          "scale": "nominal",
+          "is_special": false,
+          "special_type": ""
+        }
+      ],
+      "keywords": [
+        "moba",
+        "bedtime",
+        "sleep schedule",
+        "sleep timing",
+        "weekday sleep"
+      ]
+    },
+    {
       "variable": "cntstedd1",
-      "orig_variable": "ID627",
+      "orig_variable": "sleep8",
       "group_id": "cu_nto_tiempo_sueles_tardar_en_dormirte_despu_s_",
       "section": "Sueño (Del cuestionario MoBa)",
       "question_stem": "¿Cuánto tiempo sueles tardar en dormirte después de acostarte entre semana?",
@@ -27025,7 +27612,7 @@
     },
     {
       "variable": "cntpdpln1",
-      "orig_variable": "ID648",
+      "orig_variable": "sleep9",
       "group_id": "cu_nto_tiempo_pasas_despierto_por_la_noche_despu",
       "section": "Sueño (Del cuestionario MoBa)",
       "question_stem": "¿Cuánto tiempo pasas despierto por la noche (después de dormirte por primera vez) entre semana?",
@@ -27106,174 +27693,15 @@
       ]
     },
     {
-      "variable": "qhsdplma1",
-      "orig_variable": "ID675",
-      "group_id": "a_qu_hora_sueles_despertarte_por_la_ma_ana_entre",
-      "section": "Sueño (Del cuestionario MoBa)",
-      "question_stem": "¿A qué hora sueles despertarte por la mañana entre semana?",
-      "item_text": "",
-      "scale": "nominal",
-      "question_type": "single",
-      "n_options": 12,
-      "multiple": false,
-      "source": "spain",
-      "is_core": false,
-      "options_complete": true,
-      "scale_confidence": "high",
-      "notes": "",
-      "orig_aliases": {},
-      "options": [
-        {
-          "order": 0,
-          "label": "Antes de las 05:00.",
-          "label_with_id": "",
-          "alias": "",
-          "eusurvey_answer_id": "",
-          "value": 1,
-          "scale": "nominal",
-          "is_special": false,
-          "special_type": ""
-        },
-        {
-          "order": 1,
-          "label": "05:00 - 05:29.",
-          "label_with_id": "",
-          "alias": "",
-          "eusurvey_answer_id": "",
-          "value": 2,
-          "scale": "nominal",
-          "is_special": false,
-          "special_type": ""
-        },
-        {
-          "order": 2,
-          "label": "05:30 - 05:59.",
-          "label_with_id": "",
-          "alias": "",
-          "eusurvey_answer_id": "",
-          "value": 3,
-          "scale": "nominal",
-          "is_special": false,
-          "special_type": ""
-        },
-        {
-          "order": 3,
-          "label": "06:00 - 06:29.",
-          "label_with_id": "",
-          "alias": "",
-          "eusurvey_answer_id": "",
-          "value": 4,
-          "scale": "nominal",
-          "is_special": false,
-          "special_type": ""
-        },
-        {
-          "order": 4,
-          "label": "06:30 - 06:59.",
-          "label_with_id": "",
-          "alias": "",
-          "eusurvey_answer_id": "",
-          "value": 5,
-          "scale": "nominal",
-          "is_special": false,
-          "special_type": ""
-        },
-        {
-          "order": 5,
-          "label": "07:00 - 07:29.",
-          "label_with_id": "",
-          "alias": "",
-          "eusurvey_answer_id": "",
-          "value": 6,
-          "scale": "nominal",
-          "is_special": false,
-          "special_type": ""
-        },
-        {
-          "order": 6,
-          "label": "07:30 - 07:59.",
-          "label_with_id": "",
-          "alias": "",
-          "eusurvey_answer_id": "",
-          "value": 7,
-          "scale": "nominal",
-          "is_special": false,
-          "special_type": ""
-        },
-        {
-          "order": 7,
-          "label": "08:00 - 08:29.",
-          "label_with_id": "",
-          "alias": "",
-          "eusurvey_answer_id": "",
-          "value": 8,
-          "scale": "nominal",
-          "is_special": false,
-          "special_type": ""
-        },
-        {
-          "order": 8,
-          "label": "08:30 - 08:59.",
-          "label_with_id": "",
-          "alias": "",
-          "eusurvey_answer_id": "",
-          "value": 9,
-          "scale": "nominal",
-          "is_special": false,
-          "special_type": ""
-        },
-        {
-          "order": 9,
-          "label": "09:00 - 09:29.",
-          "label_with_id": "",
-          "alias": "",
-          "eusurvey_answer_id": "",
-          "value": 10,
-          "scale": "nominal",
-          "is_special": false,
-          "special_type": ""
-        },
-        {
-          "order": 10,
-          "label": "09:30 - 09:59.",
-          "label_with_id": "",
-          "alias": "",
-          "eusurvey_answer_id": "",
-          "value": 11,
-          "scale": "nominal",
-          "is_special": false,
-          "special_type": ""
-        },
-        {
-          "order": 11,
-          "label": "Después de las 10:00.",
-          "label_with_id": "",
-          "alias": "",
-          "eusurvey_answer_id": "",
-          "value": 12,
-          "scale": "nominal",
-          "is_special": false,
-          "special_type": ""
-        }
-      ],
-      "keywords": [
-        "moba",
-        "wake time",
-        "morning schedule",
-        "sleep duration",
-        "rise time"
-      ]
-    },
-    {
       "variable": "cqfudenp1",
-      "orig_variable": "ID604",
+      "orig_variable": "sleep11",
       "group_id": "con_qu_frecuencia_utilizas_dispositivos_electr_n",
       "section": "Sueño (Del cuestionario MoBa)",
       "question_stem": "¿Con qué frecuencia utilizas dispositivos electrónicos (p. ej., teléfono móvil, tablet, PC/Mac, TV, etc.) en tu dormitorio durante la última hora antes de acostarte?",
       "item_text": "",
       "scale": "nominal",
       "question_type": "single",
-      "n_options": 6,
+      "n_options": 4,
       "multiple": false,
       "source": "spain",
       "is_core": false,
@@ -27284,7 +27712,7 @@
       "options": [
         {
           "order": 0,
-          "label": "Nunca.",
+          "label": "Nunca / Casi nunca.",
           "label_with_id": "",
           "alias": "",
           "eusurvey_answer_id": "",
@@ -27295,7 +27723,7 @@
         },
         {
           "order": 1,
-          "label": "Casi nunca.",
+          "label": "1-2 noches a la semana.",
           "label_with_id": "",
           "alias": "",
           "eusurvey_answer_id": "",
@@ -27306,7 +27734,7 @@
         },
         {
           "order": 2,
-          "label": "1-2 noches a la semana.",
+          "label": "3-6 noches a la semana.",
           "label_with_id": "",
           "alias": "",
           "eusurvey_answer_id": "",
@@ -27317,33 +27745,11 @@
         },
         {
           "order": 3,
-          "label": "3-6 noches a la semana.",
-          "label_with_id": "",
-          "alias": "",
-          "eusurvey_answer_id": "",
-          "value": 4,
-          "scale": "nominal",
-          "is_special": false,
-          "special_type": ""
-        },
-        {
-          "order": 4,
           "label": "Todas las noches.",
           "label_with_id": "",
           "alias": "",
           "eusurvey_answer_id": "",
-          "value": 5,
-          "scale": "nominal",
-          "is_special": false,
-          "special_type": ""
-        },
-        {
-          "order": 5,
-          "label": "Prefiero no responder.",
-          "label_with_id": "",
-          "alias": "",
-          "eusurvey_answer_id": "",
-          "value": 6,
+          "value": 4,
           "scale": "nominal",
           "is_special": false,
           "special_type": ""
@@ -27359,14 +27765,14 @@
     },
     {
       "variable": "cqfeaorm1",
-      "orig_variable": "ID805",
+      "orig_variable": "sleep12",
       "group_id": "con_qu_frecuencia_env_as_o_recibes_mensajes_por_",
       "section": "Sueño (Del cuestionario MoBa)",
       "question_stem": "¿Con qué frecuencia envías o recibes mensajes por la noche, después de acostarte?",
       "item_text": "",
       "scale": "nominal",
       "question_type": "single",
-      "n_options": 6,
+      "n_options": 4,
       "multiple": false,
       "source": "spain",
       "is_core": false,
@@ -27377,7 +27783,7 @@
       "options": [
         {
           "order": 0,
-          "label": "Nunca.",
+          "label": "Nunca / Casi nunca.",
           "label_with_id": "",
           "alias": "",
           "eusurvey_answer_id": "",
@@ -27388,7 +27794,7 @@
         },
         {
           "order": 1,
-          "label": "Casi nunca.",
+          "label": "1-2 noches a la semana.",
           "label_with_id": "",
           "alias": "",
           "eusurvey_answer_id": "",
@@ -27399,7 +27805,7 @@
         },
         {
           "order": 2,
-          "label": "1-2 noches a la semana.",
+          "label": "3-6 noches a la semana.",
           "label_with_id": "",
           "alias": "",
           "eusurvey_answer_id": "",
@@ -27410,33 +27816,11 @@
         },
         {
           "order": 3,
-          "label": "3-6 noches a la semana.",
-          "label_with_id": "",
-          "alias": "",
-          "eusurvey_answer_id": "",
-          "value": 4,
-          "scale": "nominal",
-          "is_special": false,
-          "special_type": ""
-        },
-        {
-          "order": 4,
           "label": "Todas las noches.",
           "label_with_id": "",
           "alias": "",
           "eusurvey_answer_id": "",
-          "value": 5,
-          "scale": "nominal",
-          "is_special": false,
-          "special_type": ""
-        },
-        {
-          "order": 5,
-          "label": "Prefiero no responder.",
-          "label_with_id": "",
-          "alias": "",
-          "eusurvey_answer_id": "",
-          "value": 6,
+          "value": 4,
           "scale": "nominal",
           "is_special": false,
           "special_type": ""
@@ -27759,14 +28143,14 @@
     },
     {
       "variable": "tienes1",
-      "orig_variable": "ID661",
+      "orig_variable": "relationship1",
       "group_id": "tienes_pareja",
       "section": "Sueño (Del cuestionario MoBa)",
       "question_stem": "¿Tienes pareja?",
       "item_text": "",
       "scale": "nominal",
       "question_type": "single",
-      "n_options": 5,
+      "n_options": 4,
       "multiple": false,
       "source": "spain",
       "is_core": false,
@@ -27815,17 +28199,6 @@
           "alias": "",
           "eusurvey_answer_id": "",
           "value": 4,
-          "scale": "nominal",
-          "is_special": false,
-          "special_type": ""
-        },
-        {
-          "order": 4,
-          "label": "Prefiero no responder.",
-          "label_with_id": "",
-          "alias": "",
-          "eusurvey_answer_id": "",
-          "value": 5,
           "scale": "nominal",
           "is_special": false,
           "special_type": ""
@@ -27989,7 +28362,7 @@
     },
     {
       "variable": "fdleacnh1",
-      "orig_variable": "ID613",
+      "orig_variable": "physact1",
       "group_id": "fuera_de_la_escuela_aproximadamente_cu_ntas_hora",
       "section": "Sueño (Del cuestionario MoBa)",
       "question_stem": "Fuera de la escuela: Aproximadamente, ¿cuántas horas a la semana practicas deportes o actividades físicas (por ejemplo, fútbol, balonmano, correr, gimnasia, baile, etc.) en las que te quedas sin aliento o sudas? En un día normal entre semana, ¿cuánto tiempo dedicas a las siguientes actividades?",
@@ -28307,14 +28680,14 @@
     },
     {
       "variable": "peeoetsd1",
-      "orig_variable": "ID762",
+      "orig_variable": "training1",
       "group_id": "participas_en_entrenamientos_organizados_entrena",
       "section": "Sueño (Del cuestionario MoBa)",
       "question_stem": "¿Participas en entrenamientos organizados (entrenamientos a través de clubes u organizaciones deportivas)?",
       "item_text": "",
       "scale": "nominal",
       "question_type": "single",
-      "n_options": 4,
+      "n_options": 3,
       "multiple": false,
       "source": "spain",
       "is_core": false,
@@ -28355,17 +28728,6 @@
           "scale": "nominal",
           "is_special": false,
           "special_type": ""
-        },
-        {
-          "order": 3,
-          "label": "Prefiero no responder.",
-          "label_with_id": "",
-          "alias": "",
-          "eusurvey_answer_id": "",
-          "value": 4,
-          "scale": "nominal",
-          "is_special": false,
-          "special_type": ""
         }
       ],
       "keywords": [
@@ -28374,209 +28736,6 @@
         "club sports",
         "athletic participation",
         "physical activity"
-      ]
-    },
-    {
-      "variable": "qetacddp1",
-      "orig_variable": "ID768",
-      "group_id": "qu_edad_ten_as_cuando_dejaste_de_participar_en_d",
-      "section": "Sueño (Del cuestionario MoBa)",
-      "question_stem": "¿Qué edad tenías cuando dejaste de participar en deportes organizados? Escuela",
-      "item_text": "",
-      "scale": "nominal",
-      "question_type": "single",
-      "n_options": 16,
-      "multiple": false,
-      "source": "spain",
-      "is_core": false,
-      "options_complete": true,
-      "scale_confidence": "high",
-      "notes": "",
-      "orig_aliases": {},
-      "options": [
-        {
-          "order": 0,
-          "label": "Totalmente de acuerdo",
-          "label_with_id": "",
-          "alias": "",
-          "eusurvey_answer_id": "",
-          "value": 1,
-          "scale": "nominal",
-          "is_special": false,
-          "special_type": ""
-        },
-        {
-          "order": 1,
-          "label": "Algo de acuerdo",
-          "label_with_id": "",
-          "alias": "",
-          "eusurvey_answer_id": "",
-          "value": 2,
-          "scale": "nominal",
-          "is_special": false,
-          "special_type": ""
-        },
-        {
-          "order": 2,
-          "label": "Algo en desacuerdo",
-          "label_with_id": "",
-          "alias": "",
-          "eusurvey_answer_id": "",
-          "value": 3,
-          "scale": "nominal",
-          "is_special": false,
-          "special_type": ""
-        },
-        {
-          "order": 3,
-          "label": "Totalmente en desacuerdo",
-          "label_with_id": "",
-          "alias": "",
-          "eusurvey_answer_id": "",
-          "value": 4,
-          "scale": "nominal",
-          "is_special": false,
-          "special_type": ""
-        },
-        {
-          "order": 4,
-          "label": "Prefiero no responder",
-          "label_with_id": "",
-          "alias": "",
-          "eusurvey_answer_id": "",
-          "value": 5,
-          "scale": "nominal",
-          "is_special": false,
-          "special_type": ""
-        },
-        {
-          "order": 5,
-          "label": "Me gusta la escuela.",
-          "label_with_id": "",
-          "alias": "",
-          "eusurvey_answer_id": "",
-          "value": 6,
-          "scale": "nominal",
-          "is_special": false,
-          "special_type": ""
-        },
-        {
-          "order": 6,
-          "label": "Mis profesores se preocupan por mí.",
-          "label_with_id": "",
-          "alias": "",
-          "eusurvey_answer_id": "",
-          "value": 7,
-          "scale": "nominal",
-          "is_special": false,
-          "special_type": ""
-        },
-        {
-          "order": 7,
-          "label": "Siento que encajo con los demás alumnos de la escuela.",
-          "label_with_id": "",
-          "alias": "",
-          "eusurvey_answer_id": "",
-          "value": 8,
-          "scale": "nominal",
-          "is_special": false,
-          "special_type": ""
-        },
-        {
-          "order": 8,
-          "label": "Me aburro en la escuela.",
-          "label_with_id": "",
-          "alias": "",
-          "eusurvey_answer_id": "",
-          "value": 9,
-          "scale": "nominal",
-          "is_special": false,
-          "special_type": ""
-        },
-        {
-          "order": 9,
-          "label": "Mucha gente espera que me vaya bien en la escuela.",
-          "label_with_id": "",
-          "alias": "",
-          "eusurvey_answer_id": "",
-          "value": 10,
-          "scale": "nominal",
-          "is_special": false,
-          "special_type": ""
-        },
-        {
-          "order": 10,
-          "label": "A menudo me da pereza ir a la escuela.",
-          "label_with_id": "",
-          "alias": "",
-          "eusurvey_answer_id": "",
-          "value": 11,
-          "scale": "nominal",
-          "is_special": false,
-          "special_type": ""
-        },
-        {
-          "order": 11,
-          "label": "A menudo tengo que pasar los fines de semana haciendo tareas escolares.",
-          "label_with_id": "",
-          "alias": "",
-          "eusurvey_answer_id": "",
-          "value": 12,
-          "scale": "nominal",
-          "is_special": false,
-          "special_type": ""
-        },
-        {
-          "order": 12,
-          "label": "Hay demasiado ruido y disturbios en clase.",
-          "label_with_id": "",
-          "alias": "",
-          "eusurvey_answer_id": "",
-          "value": 13,
-          "scale": "nominal",
-          "is_special": false,
-          "special_type": ""
-        },
-        {
-          "order": 13,
-          "label": "Se pierde mucho tiempo en la escuela.",
-          "label_with_id": "",
-          "alias": "",
-          "eusurvey_answer_id": "",
-          "value": 14,
-          "scale": "nominal",
-          "is_special": false,
-          "special_type": ""
-        },
-        {
-          "order": 14,
-          "label": "Aprendemos muchas cosas interesantes en la escuela.",
-          "label_with_id": "",
-          "alias": "",
-          "eusurvey_answer_id": "",
-          "value": 15,
-          "scale": "nominal",
-          "is_special": false,
-          "special_type": ""
-        },
-        {
-          "order": 15,
-          "label": "Es importante sacar buenas notas.",
-          "label_with_id": "",
-          "alias": "",
-          "eusurvey_answer_id": "",
-          "value": 16,
-          "scale": "nominal",
-          "is_special": false,
-          "special_type": ""
-        }
-      ],
-      "keywords": [
-        "moba",
-        "sports dropout",
-        "physical activity cessation",
-        "youth athletics",
-        "sports participation"
       ]
     },
     {
@@ -28707,7 +28866,7 @@
     },
     {
       "variable": "cnvhis1",
-      "orig_variable": "ID829",
+      "orig_variable": "suicide6.1",
       "group_id": "cu_ntas_veces_has_intentado_suicidarte",
       "section": "Escala de evaluación de la gravedad del suicidio de Columbia (C-SSRS)",
       "question_stem": "¿Cuántas veces has intentado suicidarte?",
@@ -29197,375 +29356,6 @@
         "suicidality",
         "suicide risk",
         "mental health"
-      ]
-    },
-    {
-      "variable": "hcavd1",
-      "orig_variable": "ID227",
-      "group_id": "has_consumido_alguna_vez_drogas",
-      "section": "Escala de evaluación de la gravedad del suicidio de Columbia (C-SSRS)",
-      "question_stem": "¿Has consumido alguna vez drogas?",
-      "item_text": "",
-      "scale": "nominal",
-      "question_type": "single",
-      "n_options": 31,
-      "multiple": false,
-      "source": "spain",
-      "is_core": false,
-      "options_complete": true,
-      "scale_confidence": "high",
-      "notes": "",
-      "orig_aliases": {},
-      "options": [
-        {
-          "order": 0,
-          "label": "Sí.",
-          "label_with_id": "",
-          "alias": "",
-          "eusurvey_answer_id": "",
-          "value": 1,
-          "scale": "nominal",
-          "is_special": false,
-          "special_type": ""
-        },
-        {
-          "order": 1,
-          "label": "No.",
-          "label_with_id": "",
-          "alias": "",
-          "eusurvey_answer_id": "",
-          "value": 2,
-          "scale": "nominal",
-          "is_special": false,
-          "special_type": ""
-        },
-        {
-          "order": 2,
-          "label": "Prefiero no responder.",
-          "label_with_id": "",
-          "alias": "",
-          "eusurvey_answer_id": "",
-          "value": 3,
-          "scale": "nominal",
-          "is_special": false,
-          "special_type": ""
-        },
-        {
-          "order": 3,
-          "label": "¿Con qué frecuencia has consumido drogas de las siguientes formas durante los últimos 30 días ?",
-          "label_with_id": "",
-          "alias": "",
-          "eusurvey_answer_id": "",
-          "value": 4,
-          "scale": "nominal",
-          "is_special": false,
-          "special_type": ""
-        },
-        {
-          "order": 4,
-          "label": "Nunca",
-          "label_with_id": "",
-          "alias": "",
-          "eusurvey_answer_id": "",
-          "value": 5,
-          "scale": "nominal",
-          "is_special": false,
-          "special_type": ""
-        },
-        {
-          "order": 5,
-          "label": "1-2 veces",
-          "label_with_id": "",
-          "alias": "",
-          "eusurvey_answer_id": "",
-          "value": 6,
-          "scale": "nominal",
-          "is_special": false,
-          "special_type": ""
-        },
-        {
-          "order": 6,
-          "label": "3-5 veces",
-          "label_with_id": "",
-          "alias": "",
-          "eusurvey_answer_id": "",
-          "value": 7,
-          "scale": "nominal",
-          "is_special": false,
-          "special_type": ""
-        },
-        {
-          "order": 7,
-          "label": "6-9 veces",
-          "label_with_id": "",
-          "alias": "",
-          "eusurvey_answer_id": "",
-          "value": 8,
-          "scale": "nominal",
-          "is_special": false,
-          "special_type": ""
-        },
-        {
-          "order": 8,
-          "label": "10-19 veces",
-          "label_with_id": "",
-          "alias": "",
-          "eusurvey_answer_id": "",
-          "value": 9,
-          "scale": "nominal",
-          "is_special": false,
-          "special_type": ""
-        },
-        {
-          "order": 9,
-          "label": "20-39 veces",
-          "label_with_id": "",
-          "alias": "",
-          "eusurvey_answer_id": "",
-          "value": 10,
-          "scale": "nominal",
-          "is_special": false,
-          "special_type": ""
-        },
-        {
-          "order": 10,
-          "label": "40 veces o más",
-          "label_with_id": "",
-          "alias": "",
-          "eusurvey_answer_id": "",
-          "value": 11,
-          "scale": "nominal",
-          "is_special": false,
-          "special_type": ""
-        },
-        {
-          "order": 11,
-          "label": "Prefiero no responder",
-          "label_with_id": "",
-          "alias": "",
-          "eusurvey_answer_id": "",
-          "value": 12,
-          "scale": "nominal",
-          "is_special": false,
-          "special_type": ""
-        },
-        {
-          "order": 12,
-          "label": "Consumir drogas en cigarrillos.",
-          "label_with_id": "",
-          "alias": "",
-          "eusurvey_answer_id": "",
-          "value": 13,
-          "scale": "nominal",
-          "is_special": false,
-          "special_type": ""
-        },
-        {
-          "order": 13,
-          "label": "Tomar drogas por vía oral.",
-          "label_with_id": "",
-          "alias": "",
-          "eusurvey_answer_id": "",
-          "value": 14,
-          "scale": "nominal",
-          "is_special": false,
-          "special_type": ""
-        },
-        {
-          "order": 14,
-          "label": "Esnifar / inhalar drogas por la nariz.",
-          "label_with_id": "",
-          "alias": "",
-          "eusurvey_answer_id": "",
-          "value": 15,
-          "scale": "nominal",
-          "is_special": false,
-          "special_type": ""
-        },
-        {
-          "order": 15,
-          "label": "Inyectarte drogas por vía intravenosa.",
-          "label_with_id": "",
-          "alias": "",
-          "eusurvey_answer_id": "",
-          "value": 16,
-          "scale": "nominal",
-          "is_special": false,
-          "special_type": ""
-        },
-        {
-          "order": 16,
-          "label": "¿Con qué frecuencia has consumido drogas de las siguientes formas a lo largo de tu vida ?",
-          "label_with_id": "",
-          "alias": "",
-          "eusurvey_answer_id": "",
-          "value": 17,
-          "scale": "nominal",
-          "is_special": false,
-          "special_type": ""
-        },
-        {
-          "order": 17,
-          "label": "Nunca",
-          "label_with_id": "",
-          "alias": "",
-          "eusurvey_answer_id": "",
-          "value": 18,
-          "scale": "nominal",
-          "is_special": false,
-          "special_type": ""
-        },
-        {
-          "order": 18,
-          "label": "1-2 veces",
-          "label_with_id": "",
-          "alias": "",
-          "eusurvey_answer_id": "",
-          "value": 19,
-          "scale": "nominal",
-          "is_special": false,
-          "special_type": ""
-        },
-        {
-          "order": 19,
-          "label": "3-5 veces",
-          "label_with_id": "",
-          "alias": "",
-          "eusurvey_answer_id": "",
-          "value": 20,
-          "scale": "nominal",
-          "is_special": false,
-          "special_type": ""
-        },
-        {
-          "order": 20,
-          "label": "6-9 veces",
-          "label_with_id": "",
-          "alias": "",
-          "eusurvey_answer_id": "",
-          "value": 21,
-          "scale": "nominal",
-          "is_special": false,
-          "special_type": ""
-        },
-        {
-          "order": 21,
-          "label": "10-19 veces",
-          "label_with_id": "",
-          "alias": "",
-          "eusurvey_answer_id": "",
-          "value": 22,
-          "scale": "nominal",
-          "is_special": false,
-          "special_type": ""
-        },
-        {
-          "order": 22,
-          "label": "20-39 veces",
-          "label_with_id": "",
-          "alias": "",
-          "eusurvey_answer_id": "",
-          "value": 23,
-          "scale": "nominal",
-          "is_special": false,
-          "special_type": ""
-        },
-        {
-          "order": 23,
-          "label": "40 veces o más",
-          "label_with_id": "",
-          "alias": "",
-          "eusurvey_answer_id": "",
-          "value": 24,
-          "scale": "nominal",
-          "is_special": false,
-          "special_type": ""
-        },
-        {
-          "order": 24,
-          "label": "Prefiero no responder",
-          "label_with_id": "",
-          "alias": "",
-          "eusurvey_answer_id": "",
-          "value": 25,
-          "scale": "nominal",
-          "is_special": false,
-          "special_type": ""
-        },
-        {
-          "order": 25,
-          "label": "Consumir drogas en cigarrillos.",
-          "label_with_id": "",
-          "alias": "",
-          "eusurvey_answer_id": "",
-          "value": 26,
-          "scale": "nominal",
-          "is_special": false,
-          "special_type": ""
-        },
-        {
-          "order": 26,
-          "label": "Tomar drogas por vía oral.",
-          "label_with_id": "",
-          "alias": "",
-          "eusurvey_answer_id": "",
-          "value": 27,
-          "scale": "nominal",
-          "is_special": false,
-          "special_type": ""
-        },
-        {
-          "order": 27,
-          "label": "Esnifar / inhalar drogas por la nariz.",
-          "label_with_id": "",
-          "alias": "",
-          "eusurvey_answer_id": "",
-          "value": 28,
-          "scale": "nominal",
-          "is_special": false,
-          "special_type": ""
-        },
-        {
-          "order": 28,
-          "label": "Inyectarte drogas por vía intravenosa.",
-          "label_with_id": "",
-          "alias": "",
-          "eusurvey_answer_id": "",
-          "value": 29,
-          "scale": "nominal",
-          "is_special": false,
-          "special_type": ""
-        },
-        {
-          "order": 29,
-          "label": "¡MUCHAS GRACIAS POR SU COLABORACIÓN!",
-          "label_with_id": "",
-          "alias": "",
-          "eusurvey_answer_id": "",
-          "value": 30,
-          "scale": "nominal",
-          "is_special": false,
-          "special_type": ""
-        },
-        {
-          "order": 30,
-          "label": "Información sobre servicios gratuitos, anónimos y especializados en apoyo psicológico por si necesitas hablar con alguien Línea 024 y 061 (España) Línea de atención a la conducta suicida. ____________________________________________________ Fundación ANAR (Ayuda a Niños y Adolescentes en Riesgo) https://www.anar.org/en/que-hacemos/telefono-chat-anar/ Teléfono de ayuda a niños y jóvenes: 900 20 20 10 Atención, escucha y orientación por un psicólogo sobre todo tipo de problemas: acoso escolar, violencia de género, maltrato, trastornos de alimentación, ciberbullying... Teléfono del adulto y la familia: 600 50 51 52 Atención y asesoramiento psicológico, social y jurídico para adultos que necesitan ser orientados en temas relacionados con niños/as y jóvenes. ____________________________________________________ Servicio de Información y Orientación Joven de FAD - SIOF Expertos que orientan de manera gratuita a jóvenes entre 15 y 29 años cuando pasan una situación de malestar psicológico y social. Teléfono gratuito: 900 16 15 15 WhatsApp: 623 22 05 70 De lunes a viernes (excepto festivos) de 9:00h a 21:00h Temas que tratan: Síntomas depresivos, ansiedad, problemas de pareja, conductas sexuales de riesgo, diversidad sexual, transiciones vitales (cambio de estudios, trabajo, amistades, pareja, etc.), problemas con la imagen corporal y consumos de drogas de riesgo.",
-          "label_with_id": "",
-          "alias": "",
-          "eusurvey_answer_id": "",
-          "value": 31,
-          "scale": "nominal",
-          "is_special": false,
-          "special_type": ""
-        }
-      ],
-      "keywords": [
-        "c-ssrs",
-        "substance use",
-        "drug use",
-        "substance abuse",
-        "illicit drugs",
-        "risk behaviors"
       ]
     },
     {
@@ -31666,43 +31456,29 @@
   ],
   "index_by_orig_variable": {
     "gender1": "gender1",
-    "genero1": "gender1",
     "gender2": "ident1",
-    "genero2": "ident1",
     "grade1": "grade1",
-    "grado1": "grade1",
     "born1": "byear1",
-    "ID20": "byear1",
     "ID289": "bmonth1",
-    "mes1": "bmonth1",
     "born2": "bplace1",
-    "pais1": "bplace1",
     "born3": "bage1",
-    "ID614": "bage1",
+    "training2": "bage1",
     "born4": "bmborn1",
-    "ID63": "bmborn1",
+    "born5": "bmborn1",
     "born6": "bfborn1",
-    "ID970": "bfborn1",
     "living1": "live1",
-    "ID137": "live1",
     "living2": "livead1",
-    "ID172": "livead1",
     "living3": "livesp1",
     "ID5": "livesp1",
     "living4": "momprt1",
-    "ID31": "momprt1",
     "living5": "dadprt1",
-    "ID46": "dadprt1",
     "siblings1": "sibs1",
-    "ID52": "sibs1",
     "edu1": "edumom1",
-    "ID62": "edumom1",
+    "sub_abuse14": "edumom1",
     "edu2": "edudad1",
-    "ID156": "edudad1",
+    "sleep10": "edudad1",
     "soc1": "ladder1",
-    "ID881": "ladder1",
     "soc2": "afford1",
-    "ID158": "afford1",
     "raia1": "bcfpi_raia1",
     "ID233": "bcfpi_raia1",
     "raia2": "bcfpi_raia2",
@@ -31799,6 +31575,7 @@
     "yf12": "bcfpi_yf12",
     "ID880": "bcfpi_yf12",
     "ace01": "rpginsfy1",
+    "ID391": "gadd2",
     "ace02": "rpginsfy2",
     "ace03": "dlup1",
     "ID392": "dlup1",
@@ -31841,7 +31618,6 @@
     "ace22": "pvtnqabb1",
     "ID435": "pvtnqabb1",
     "ace23": "bmo1",
-    "ID436": "bmo1",
     "ace24": "nqapfpfo1",
     "ID307": "nqapfpfo1",
     "ace25": "tnqaomhs1",
@@ -31922,15 +31698,10 @@
     "some_weekend5": "smwda5",
     "ID512": "smwda5",
     "gaming1": "gaming1",
-    "ID525": "gaming1",
     "ai1": "ai1",
-    "ID377": "ai1",
     "ai2": "aiuse1",
-    "ID426": "mhla1",
     "some_feel1": "smpos1",
-    "ID489": "smpos1",
     "some_feel2": "smneg1",
-    "ID520": "smneg1",
     "some_use1": "smharm1",
     "ID486": "smharm1",
     "some_use2": "smharm2",
@@ -31942,8 +31713,8 @@
     "some_use5": "smharm5",
     "ID580": "smharm5",
     "some_use6": "smharm6",
+    "ID541": "smharm6",
     "some_apps1": "apps1",
-    "ID552": "apps1",
     "ID27": "consent1",
     "ID226": "catsev01",
     "cats02": "catsev02",
@@ -31982,7 +31753,6 @@
     "ID201": "hoespppc1",
     "ID216": "lpllwepc1",
     "ID390": "gadd1",
-    "ID391": "gadd2",
     "ID394": "gadd3",
     "ID395": "gadd4",
     "germany_36_5": "gadd5",
@@ -32014,34 +31784,32 @@
     "ID313": "eddubgpk1",
     "ID342": "hdslnpmp1",
     "ID366": "wldespdd1",
-    "ID67": "aqetacle1",
+    "ID426": "mhla1",
     "ID260": "cndllsm1",
     "ID194": "mdladlls1",
     "ID358": "rndledll1",
     "ID472": "eqmtalsa1",
-    "ID541": "pcudlsrd1",
-    "ID554": "cqftrdcc1",
-    "ID528": "dcntdpce1",
-    "ID816": "dcntdn1",
-    "ID843": "cqftscoc1",
-    "ID867": "dcntscoc1",
-    "ID627": "cntstedd1",
-    "ID648": "cntpdpln1",
-    "ID675": "qhsdplma1",
-    "ID604": "cqfudenp1",
-    "ID805": "cqfeaorm1",
+    "sleep1": "cqftrdcc1",
+    "sleep2": "dcntdpce1",
+    "sleep3": "cqftddln1",
+    "sleep4": "dcntdn1",
+    "sleep5": "cqftscoc1",
+    "sleep6": "dcntscoc1",
+    "sleep7": "qhsaes1",
+    "sleep8": "cntstedd1",
+    "sleep9": "cntpdpln1",
+    "sleep11": "cqfudenp1",
+    "sleep12": "cqfeaorm1",
     "ID636": "rnclppfm1",
     "ID656": "rnclaeqm1",
-    "ID661": "tienes1",
+    "relationship1": "tienes1",
     "ID682": "ofdleeus1",
-    "ID613": "fdleacnh1",
+    "physact1": "fdleacnh1",
     "ID745": "eudndfds1",
-    "ID762": "peeoetsd1",
-    "ID768": "qetacddp1",
+    "training1": "peeoetsd1",
     "ID223": "ese1",
-    "ID829": "cnvhis1",
+    "suicide6.1": "cnvhis1",
     "ID182": "itrbnelt1",
-    "ID227": "hcavd1",
     "ID462": "slonqcmse1",
     "ID466": "slonqcmsf1",
     "ID467": "slonqcmsg1",
@@ -32350,22 +32118,23 @@
     "wldespdd1": "wldespdd1",
     "mhla1": "mhla1",
     "aqetacle1": "aqetacle1",
+    "cleenems1": "cleenems1",
+    "cleenemsa1": "cleenemsa1",
     "cndllsm1": "cndllsm1",
     "mdladlls1": "mdladlls1",
     "rndledll1": "rndledll1",
-    "rnclptdt1": "rnclptdt1",
     "dtvha1": "dtvha1",
     "eqmtalsa1": "eqmtalsa1",
-    "pcudlsrd1": "pcudlsrd1",
     "slonqcms1": "slonqcms1",
     "cqftrdcc1": "cqftrdcc1",
     "dcntdpce1": "dcntdpce1",
+    "cqftddln1": "cqftddln1",
     "dcntdn1": "dcntdn1",
     "cqftscoc1": "cqftscoc1",
     "dcntscoc1": "dcntscoc1",
+    "qhsaes1": "qhsaes1",
     "cntstedd1": "cntstedd1",
     "cntpdpln1": "cntpdpln1",
-    "qhsdplma1": "qhsdplma1",
     "cqfudenp1": "cqfudenp1",
     "cqfeaorm1": "cqfeaorm1",
     "rnclppfm1": "rnclppfm1",
@@ -32375,11 +32144,9 @@
     "fdleacnh1": "fdleacnh1",
     "eudndfds1": "eudndfds1",
     "peeoetsd1": "peeoetsd1",
-    "qetacddp1": "qetacddp1",
     "ese1": "ese1",
     "cnvhis1": "cnvhis1",
     "itrbnelt1": "itrbnelt1",
-    "hcavd1": "hcavd1",
     "slonqcmsa1": "slonqcmsa1",
     "slonqcmsb1": "slonqcmsb1",
     "slonqcmsc1": "slonqcmsc1",
