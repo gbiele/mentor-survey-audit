@@ -10,6 +10,8 @@ __pycache__/
 data/*
 !data/master_dictionary.json
 !data/keyword_cache.json
+!data/country_maps/
+!data/country_maps/**
 docs/data/
 
 # Internal reference pipelines and raw codebook files
