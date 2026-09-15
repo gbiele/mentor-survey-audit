@@ -47,12 +47,14 @@ class TestMasterDictionary(unittest.TestCase):
         self.assertEqual(self.data["metadata"]["total_core_variables"], 143)
         self.assertEqual(self.data["metadata"]["total_options"], n_opts)
         self.assertIn("canonical_en", self.data["metadata"].get("sources", []))
-        country_sources = {"germany", "spain"}
         present_countries = {
-            p.name for p in (ROOT / "data").iterdir() if p.is_dir() and not p.name.startswith(".")
+            p.name
+            for p in (ROOT / "data").iterdir()
+            if p.is_dir() and not p.name.startswith(".") and p.name != "country_maps"
         }
-        for country in present_countries & country_sources:
-            self.assertIn(country, self.data["metadata"].get("sources", []))
+        for country in present_countries:
+            if country in ("germany", "spain", "hungary"):
+                self.assertIn(country, self.data["metadata"].get("sources", []))
 
         for v in core_vars:
             self.assertTrue(v.get("is_core", False), f"Variable {v['variable']} should be marked is_core=True")

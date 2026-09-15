@@ -53,13 +53,60 @@
   /**
    * Parse header string: "Question text (var_id)" or "Question text [var_id]" -> { text, varId }
    */
+  const QUALTRICS_META_HEADERS = new Set([
+    "startdate", "enddate", "status", "ipaddress", "progress",
+    "duration (in seconds)", "finished", "recordeddate", "responseid",
+    "recipientlastname", "recipientfirstname", "recipientemail",
+    "externalreference", "locationlatitude", "locationlongitude",
+    "distributionchannel", "userlanguage", "last seen flow element id",
+    "last seen question ids"
+  ]);
+
+  function looksLikeBareVarId(headerStr) {
+    const raw = norm(headerStr);
+    if (!raw || raw.length > 80) return false;
+    const low = raw.toLowerCase();
+    if (QUALTRICS_META_HEADERS.has(low)) return false;
+    if (/[\(\[\{]/.test(raw)) return false;
+    return /^[A-Za-z][A-Za-z0-9_.:\- ]*$/.test(raw);
+  }
+
   function parseHeader(headerStr) {
     const raw = norm(headerStr);
-    const m = raw.match(/^(.*?)\s*[\(\[\{]([A-Za-z0-9_.-]{1,32})[\)\]\}]\s*$/);
+    const m = raw.match(/^(.*?)\s*[\(\[\{]([A-Za-z0-9_.:\- ]{1,64})[\)\]\}]\s*$/);
     if (m) {
       return { text: norm(m[1]), varId: norm(m[2]) };
     }
+    if (looksLikeBareVarId(raw)) {
+      return { text: raw, varId: raw };
+    }
     return { text: raw, varId: "" };
+  }
+
+  function detectExportLayout(rows) {
+    const row0 = rows[0] || [];
+    let qualtrics = false;
+    for (const cell of row0) {
+      const v = norm(cell).toLowerCase();
+      if (v === "startdate" || v === "responseid" || v === "recordeddate") {
+        qualtrics = true;
+        break;
+      }
+    }
+    if (qualtrics) {
+      return {
+        format: "qualtrics",
+        headerRowIndex: 0,
+        dataStartIndex: 2,
+        metadataRows: 2
+      };
+    }
+    return {
+      format: "eusurvey",
+      headerRowIndex: 3,
+      dataStartIndex: 4,
+      metadataRows: 4
+    };
   }
 
   /**
@@ -279,21 +326,22 @@
      * @param {Array<Array<any>>} rows - 2D array of spreadsheet cell values
      */
     auditSheet(rows) {
-      if (!rows || rows.length < 4) {
+      if (!rows || rows.length < 2) {
         throw new Error("Invalid spreadsheet format: expected at least header and metadata rows.");
       }
 
-      // Metadata in rows 0-2 (e.g. Alias, Export Date)
+      const layout = detectExportLayout(rows);
+
       const metadata = {
         alias: rows[0] && rows[0][1] ? String(rows[0][1]) : "",
         exportDate: rows[1] && rows[1][1] ? String(rows[1][1]) : "",
         totalRows: rows.length,
-        dataRowCount: Math.max(0, rows.length - 4)
+        dataRowCount: Math.max(0, rows.length - layout.dataStartIndex),
+        exportFormat: layout.format
       };
 
-      // Header row is index 3
-      const headerRow = rows[3] || [];
-      const dataRows = rows.slice(4);
+      const headerRow = rows[layout.headerRowIndex] || [];
+      const dataRows = rows.slice(layout.dataStartIndex);
 
       const columns = [];
       const matchedVars = new Set();
@@ -341,10 +389,15 @@
         if (col.extractedId) idTagFound = true;
         if (col.observedValues && col.observedValues.some(v => v.answerId)) idTagFound = true;
       }
-      metadata.detectedFormat = idTagFound ? 'id_tagged' : 'plain_text';
-      metadata.formatLabel = idTagFound
-        ? 'Platform Export with Raw IDs (Automatically Cleaned)'
-        : 'Standard Clean Question Export';
+      if (layout.format === "qualtrics") {
+        metadata.detectedFormat = "qualtrics";
+        metadata.formatLabel = "Qualtrics export (import IDs in header row)";
+      } else {
+        metadata.detectedFormat = idTagFound ? 'id_tagged' : 'plain_text';
+        metadata.formatLabel = idTagFound
+          ? 'Platform Export with Raw IDs (Automatically Cleaned)'
+          : 'Standard Clean Question Export';
+      }
 
       // Compute Core survey coverage metrics
       const dictVars = this.dictionary.variables || [];

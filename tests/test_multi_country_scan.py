@@ -101,7 +101,7 @@ class TestMultiCountryScan(unittest.TestCase):
         if "sources" in meta:
             self.assertIsInstance(meta["sources"], list)
             self.assertTrue(any("canonical" in s or "base" in s or "fhi" in s for s in meta["sources"]))
-            for country in ("germany", "spain"):
+            for country in ("germany", "spain", "hungary"):
                 if (DATA_DIR / country).exists():
                     self.assertIn(country, meta["sources"])
 

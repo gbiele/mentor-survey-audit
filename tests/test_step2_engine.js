@@ -13,6 +13,7 @@ const ROOT = path.resolve(__dirname, '..');
 const DICT_PATH = path.join(ROOT, 'data', 'master_dictionary.json');
 const FHI_EXPORT_PATH = path.join(ROOT, 'data', 'Content_Export_mentor_fhi_variabler_og_id.xlsx');
 const GER_EXPORT_PATH = path.join(ROOT, 'data', 'MENTORMaster_TEST_GER_2.xlsx');
+const HU_QUALTRICS_PATH = path.join(ROOT, 'data', 'hungary', 'variables_ids_a.xlsx');
 
 function loadExcelRows(filePath) {
   const workbook = XLSX.readFile(filePath);
@@ -98,6 +99,20 @@ function runTests() {
     assert.strictEqual(covGer.extraCount, 86, 'German test export has 86 country-specific/unmapped columns');
     assert.strictEqual(covGer.extraPct, '49.4', '86 / 174 = 49.4%');
     console.log('✓ German test export coverage calculation verified (88 covered, 55 missing core, 86 extra/unmapped)');
+  }
+
+  if (fs.existsSync(HU_QUALTRICS_PATH)) {
+    const huRows = loadExcelRows(HU_QUALTRICS_PATH);
+    const huResult = auditor.auditSheet(huRows);
+    assert.strictEqual(huResult.summary.metadata.exportFormat, 'qualtrics');
+    assert.strictEqual(huResult.summary.metadata.detectedFormat, 'qualtrics');
+    const colGender = huResult.columns.find(c => c.extractedId === 'gender1');
+    assert(colGender, 'Qualtrics gender1 column must match');
+    assert.strictEqual(colGender.canonical.variable, 'gender1');
+    const colRaia = huResult.columns.find(c => c.extractedId === 'raia1:6_1');
+    assert(colRaia, 'Qualtrics matrix column raia1:6_1 must match');
+    assert.strictEqual(colRaia.canonical.variable, 'bcfpi_raia1');
+    console.log('✓ Hungary Qualtrics export layout and alias matching verified');
   }
 
   console.log('\n========================================');

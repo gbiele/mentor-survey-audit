@@ -5946,5 +5946,5057 @@
       "Oseania",
       "Other"
     ]
+  },
+  "hungary:taj_elfogadas": {
+    "orig_variable": "taj_elfogadas",
+    "translated_stem": "I have read the Study Information above and understood its contents!",
+    "translated_item": "",
+    "translated_options": [
+      "Show",
+      "If you feel that the questions in the questionnaire were upsetting to you and you would like to discuss their impact on you with someone, please contact them at the following contact details: Blue Line Child Crisis Foundation 116-111 (toll-free, available 24/7) Hungarian Association of Telephone Emergency Services (LESZ) 116-123 (toll-free, available 24/7)",
+      "INFORMED CONSENT STATEMENT",
+      "2",
+      "I have read the Study Information above and understood its contents. I declare that I give my consent to complete the questionnaire voluntarily and without influence, knowing that it can be withdrawn at any time without justification, and completion can be interrupted. I agree that the completed questionnaire will be recorded and managed anonymously (by serial number) by the National Directorate General for Hospitals conducting the study, for statistical and scientific processing purposes."
+    ],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "hungary:beleegyezes": {
+    "orig_variable": "beleegyezes",
+    "translated_stem": "I have read and understood the Study Information and Informed Consent Statement related to the study. I declare that I am participating in the study voluntarily and of my own free will.",
+    "translated_item": "",
+    "translated_options": [
+      "Show",
+      "If you would like to save the above Study Information, you can download it under the Background Documents menu on the right.",
+      "Data about you and your family",
+      "3"
+    ],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "hungary:gender1": {
+    "orig_variable": "gender1",
+    "translated_stem": "What gender do you identify as?",
+    "translated_item": "",
+    "translated_options": [
+      "Boy",
+      "Girl",
+      "Prefer not to answer",
+      "Don't know / Not applicable to me"
+    ],
+    "canonical_id": "gender1",
+    "canonical_stem": "What gender do you identify as?",
+    "canonical_item": "",
+    "canonical_options": [
+      "Boy",
+      "Girl",
+      "Other gender identity",
+      "Prefer not to answer"
+    ]
+  },
+  "hungary:grade1": {
+    "orig_variable": "grade1",
+    "translated_stem": "What grade are you in?",
+    "translated_item": "",
+    "translated_options": [
+      "Grade 9",
+      "Grade 10",
+      "Grade 11",
+      "Grade 12",
+      "Grade 13",
+      "I quit school",
+      "Prefer not to answer",
+      "Don't know / Not applicable to me",
+      "When were you born? Please enter the year and month!",
+      "Year",
+      "2004",
+      "2005",
+      "2006",
+      "2007",
+      "2008",
+      "2009",
+      "2010",
+      "2011",
+      "2012",
+      "Prefer not to answer",
+      "Don't know / Not applicable to me",
+      "Month",
+      "January",
+      "February",
+      "March",
+      "April",
+      "May",
+      "June",
+      "July",
+      "August",
+      "September",
+      "October",
+      "November",
+      "December",
+      "Prefer not to answer",
+      "Don't know / Not applicable to me"
+    ],
+    "canonical_id": "grade1",
+    "canonical_stem": "What grade are you in?",
+    "canonical_item": "",
+    "canonical_options": [
+      "8th",
+      "9th",
+      "10th",
+      "11th",
+      "12th",
+      "13th",
+      "Graduated from school",
+      "Quit school before graduating"
+    ]
+  },
+  "hungary:born3": {
+    "orig_variable": "born3",
+    "translated_stem": "Where were you born?",
+    "translated_item": "",
+    "translated_options": [
+      "Hungary",
+      "Albania",
+      "Andorra",
+      "Austria",
+      "Belgium",
+      "Bosnia and Herzegovina",
+      "Bulgaria",
+      "Czech Republic",
+      "Denmark",
+      "United Kingdom",
+      "North Macedonia",
+      "Estonia",
+      "Belarus",
+      "Finland",
+      "France",
+      "Greece",
+      "Netherlands",
+      "Croatia",
+      "Ireland",
+      "Iceland",
+      "Poland",
+      "Latvia",
+      "Liechtenstein",
+      "Lithuania",
+      "Luxembourg",
+      "Malta",
+      "Moldova",
+      "Monaco",
+      "Montenegro",
+      "Germany",
+      "Norway",
+      "Italy",
+      "Russia",
+      "Portugal",
+      "Romania",
+      "San Marino",
+      "Spain",
+      "Switzerland",
+      "Sweden",
+      "Serbia",
+      "Slovakia",
+      "Slovenia",
+      "Turkey",
+      "Ukraine",
+      "Vatican",
+      "Other European territory",
+      "Middle East or North Africa",
+      "Sub-Saharan Africa",
+      "Asia",
+      "North America",
+      "South or Central America",
+      "Other",
+      "Prefer not to answer",
+      "Don't know / Not applicable to me",
+      "Approximately how old were you when you came/moved to Hungary? If you do not know or do not wish to answer, please type \"Don't know\" or \"Prefer not to answer\" in the box below!"
+    ],
+    "canonical_id": "bplace1",
+    "canonical_stem": "Where were you born?",
+    "canonical_item": "",
+    "canonical_options": [
+      "[COUNTRY]",
+      "Ukraine",
+      "Albania",
+      "Andorra",
+      "Austria",
+      "Belarus",
+      "Belgium",
+      "Bosnia and Herzegovina",
+      "Bulgaria",
+      "Croatia",
+      "Cyprus",
+      "Czech Republic",
+      "Denmark",
+      "Estonia",
+      "Finland",
+      "France",
+      "Germany",
+      "Greece",
+      "Hungary",
+      "Iceland",
+      "Ireland",
+      "Italy",
+      "Kosovo",
+      "Latvia",
+      "Liechtenstein",
+      "Lithuania",
+      "Luxembourg",
+      "Malta",
+      "Moldova",
+      "Monaco",
+      "Montenegro",
+      "Netherlands",
+      "North Macedonia",
+      "Norway",
+      "Poland",
+      "Portugal",
+      "Romania",
+      "Russia",
+      "Serbia",
+      "Slovakia",
+      "Slovenia",
+      "Spain",
+      "Sweden",
+      "Switzerland",
+      "Turkey",
+      "United Kingdom",
+      "Middle East or North Africa",
+      "Sub-Saharan Africa",
+      "Asia",
+      "North America",
+      "South or Central America",
+      "Oseania",
+      "Other"
+    ]
+  },
+  "hungary:born5": {
+    "orig_variable": "born5",
+    "translated_stem": "Where was your biological mother born?",
+    "translated_item": "",
+    "translated_options": [
+      "Hungary",
+      "Albania",
+      "Andorra",
+      "Austria",
+      "Belgium",
+      "Bosnia and Herzegovina",
+      "Bulgaria",
+      "Czech Republic",
+      "Denmark",
+      "United Kingdom",
+      "North Macedonia",
+      "Estonia",
+      "Belarus",
+      "Finland",
+      "France",
+      "Greece",
+      "Netherlands",
+      "Croatia",
+      "Ireland",
+      "Iceland",
+      "Poland",
+      "Latvia",
+      "Liechtenstein",
+      "Lithuania",
+      "Luxembourg",
+      "Malta",
+      "Moldova",
+      "Monaco",
+      "Montenegro",
+      "Germany",
+      "Norway",
+      "Italy",
+      "Russia",
+      "Portugal",
+      "Romania",
+      "San Marino",
+      "Spain",
+      "Switzerland",
+      "Sweden",
+      "Serbia",
+      "Slovakia",
+      "Slovenia",
+      "Turkey",
+      "Ukraine",
+      "Vatican",
+      "Other European territory",
+      "Middle East or North Africa",
+      "Sub-Saharan Africa",
+      "Asia",
+      "North America",
+      "South or Central America",
+      "Other",
+      "Prefer not to answer",
+      "Don't know / Not applicable to me"
+    ],
+    "canonical_id": "bmborn1",
+    "canonical_stem": "Where was your biological mother born?",
+    "canonical_item": "",
+    "canonical_options": [
+      "[COUNTRY]",
+      "Ukraine",
+      "Albania",
+      "Andorra",
+      "Austria",
+      "Belarus",
+      "Belgium",
+      "Bosnia and Herzegovina",
+      "Bulgaria",
+      "Croatia",
+      "Cyprus",
+      "Czech Republic",
+      "Denmark",
+      "Estonia",
+      "Finland",
+      "France",
+      "Germany",
+      "Greece",
+      "Hungary",
+      "Iceland",
+      "Ireland",
+      "Italy",
+      "Kosovo",
+      "Latvia",
+      "Liechtenstein",
+      "Lithuania",
+      "Luxembourg",
+      "Malta",
+      "Moldova",
+      "Monaco",
+      "Montenegro",
+      "Netherlands",
+      "North Macedonia",
+      "Norway",
+      "Poland",
+      "Portugal",
+      "Romania",
+      "Russia",
+      "Serbia",
+      "Slovakia",
+      "Slovenia",
+      "Spain",
+      "Sweden",
+      "Switzerland",
+      "Turkey",
+      "United Kingdom",
+      "Middle East or North Africa",
+      "Sub-Saharan Africa",
+      "Asia",
+      "North America",
+      "South or Central America",
+      "Oseania",
+      "Other"
+    ]
+  },
+  "hungary:born6": {
+    "orig_variable": "born6",
+    "translated_stem": "Where was your biological father born?",
+    "translated_item": "",
+    "translated_options": [
+      "Hungary",
+      "Albania",
+      "Andorra",
+      "Austria",
+      "Belgium",
+      "Bosnia and Herzegovina",
+      "Bulgaria",
+      "Czech Republic",
+      "Denmark",
+      "United Kingdom",
+      "North Macedonia",
+      "Estonia",
+      "Belarus",
+      "Finland",
+      "France",
+      "Greece",
+      "Netherlands",
+      "Croatia",
+      "Ireland",
+      "Iceland",
+      "Poland",
+      "Latvia",
+      "Liechtenstein",
+      "Lithuania",
+      "Luxembourg",
+      "Malta",
+      "Moldova",
+      "Monaco",
+      "Montenegro",
+      "Germany",
+      "Norway",
+      "Italy",
+      "Russia",
+      "Portugal",
+      "Romania",
+      "San Marino",
+      "Spain",
+      "Switzerland",
+      "Sweden",
+      "Serbia",
+      "Slovakia",
+      "Slovenia",
+      "Turkey",
+      "Ukraine",
+      "Vatican",
+      "Other European territory",
+      "Middle East or North Africa",
+      "Sub-Saharan Africa",
+      "Asia",
+      "North America",
+      "South or Central America",
+      "Other",
+      "Prefer not to answer",
+      "Don't know / Not applicable to me"
+    ],
+    "canonical_id": "bfborn1",
+    "canonical_stem": "Where was your biological father born?",
+    "canonical_item": "",
+    "canonical_options": [
+      "[COUNTRY]",
+      "Ukraine",
+      "Albania",
+      "Andorra",
+      "Austria",
+      "Belarus",
+      "Belgium",
+      "Bosnia and Herzegovina",
+      "Bulgaria",
+      "Croatia",
+      "Cyprus",
+      "Czech Republic",
+      "Denmark",
+      "Estonia",
+      "Finland",
+      "France",
+      "Germany",
+      "Greece",
+      "Hungary",
+      "Iceland",
+      "Ireland",
+      "Italy",
+      "Kosovo",
+      "Latvia",
+      "Liechtenstein",
+      "Lithuania",
+      "Luxembourg",
+      "Malta",
+      "Moldova",
+      "Monaco",
+      "Montenegro",
+      "Netherlands",
+      "North Macedonia",
+      "Norway",
+      "Poland",
+      "Portugal",
+      "Romania",
+      "Russia",
+      "Serbia",
+      "Slovakia",
+      "Slovenia",
+      "Spain",
+      "Sweden",
+      "Switzerland",
+      "Turkey",
+      "United Kingdom",
+      "Middle East or North Africa",
+      "Sub-Saharan Africa",
+      "Asia",
+      "North America",
+      "South or Central America",
+      "Oseania",
+      "Other"
+    ]
+  },
+  "hungary:county": {
+    "orig_variable": "county",
+    "translated_stem": "Which county do you live in?",
+    "translated_item": "",
+    "translated_options": [
+      "Baranya County",
+      "Bács-Kiskun County",
+      "Békés County",
+      "Borsod-Abaúj-Zemplén County",
+      "Budapest",
+      "Csongrád-Csanád County",
+      "Fejér County",
+      "Győr-Moson-Sopron County",
+      "Hajdú-Bihar County",
+      "Heves County",
+      "Jász-Nagykun-Szolnok County",
+      "Komárom-Esztergom County",
+      "Nógrád County",
+      "Pest County",
+      "Somogy County",
+      "Szabolcs-Szatmár-Bereg County",
+      "Tolna County",
+      "Vas County",
+      "Veszprém County",
+      "Zala County",
+      "Prefer not to answer",
+      "Don't know / Not applicable to me",
+      "What type of school do you attend?",
+      "State school",
+      "Church school",
+      "Foundation school",
+      "Prefer not to answer",
+      "Don't know / Not applicable to me"
+    ],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "hungary:ethnic1": {
+    "orig_variable": "ethnic1",
+    "translated_stem": "Which ethnic community do you belong to? Please check all that apply! You may select multiple answers!",
+    "translated_item": "",
+    "translated_options": [
+      "Hungarian",
+      "Gypsy/Roma",
+      "German (Swabian)",
+      "Romanian",
+      "Ukrainian",
+      "Jewish",
+      "Other",
+      "Prefer not to answer",
+      "Don't know / Not applicable to me",
+      "Please describe which ethnic community you belong to! If you do not know or do not wish to answer, please type \"Don't know\" or \"Prefer not to answer\" in the box below!"
+    ],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "hungary:living1": {
+    "orig_variable": "living1",
+    "translated_stem": "Thinking about the people you live with, which statement best describes your situation?",
+    "translated_item": "",
+    "translated_options": [
+      "I live with both of my parents",
+      "My parents live apart, I only live with my mother",
+      "My parents live apart, I only live with my father",
+      "My parents live apart, but I live with both of them (alternating)",
+      "I do not live with my parents",
+      "Prefer not to answer",
+      "Don't know / Not applicable to me"
+    ],
+    "canonical_id": "live1",
+    "canonical_stem": "Thinking about the people you live with, what best describes your situation?",
+    "canonical_item": "",
+    "canonical_options": [
+      "I live with both my parents together",
+      "My parents live apart, and I live only with my mother",
+      "My parents live apart, and I live only with my father",
+      "My parents live apart, and I live with both parents",
+      "I do not live with my parents"
+    ]
+  },
+  "hungary:living2": {
+    "orig_variable": "living2",
+    "translated_stem": "Which adults do you live with?",
+    "translated_item": "",
+    "translated_options": [
+      "With relatives (e.g. grandparents, aunt, uncle)",
+      "With foster parents",
+      "I live in a foster home / children's home",
+      "Other",
+      "Prefer not to answer",
+      "Don't know / Not applicable to me"
+    ],
+    "canonical_id": "livead1",
+    "canonical_stem": "Which adults do you live with?",
+    "canonical_item": "",
+    "canonical_options": [
+      "Relatives (e.g., grandparents, aunt, uncle)",
+      "Foster parents",
+      "Supervised centre/Youth home",
+      "Other"
+    ]
+  },
+  "hungary:living3": {
+    "orig_variable": "living3",
+    "translated_stem": "What best describes your situation?",
+    "translated_item": "",
+    "translated_options": [
+      "I live mostly with my mother",
+      "I live mostly with my father",
+      "I live equally with my mother and father",
+      "Prefer not to answer",
+      "Don't know / Not applicable to me"
+    ],
+    "canonical_id": "livesp1",
+    "canonical_stem": "What best describes your situation?",
+    "canonical_item": "",
+    "canonical_options": [
+      "I live mostly with my mother",
+      "I live mostly with my father",
+      "I live equally with my mother and father"
+    ]
+  },
+  "hungary:living4": {
+    "orig_variable": "living4",
+    "translated_stem": "Does your mother have a new partner?",
+    "translated_item": "",
+    "translated_options": [
+      "Yes",
+      "No",
+      "Don't know",
+      "Prefer not to answer",
+      "Don't know / Not applicable to me"
+    ],
+    "canonical_id": "momprt1",
+    "canonical_stem": "Does your mother have a new partner?",
+    "canonical_item": "",
+    "canonical_options": [
+      "Yes",
+      "No",
+      "Don't know"
+    ]
+  },
+  "hungary:living5": {
+    "orig_variable": "living5",
+    "translated_stem": "Does your father have a new partner?",
+    "translated_item": "",
+    "translated_options": [
+      "Yes",
+      "No",
+      "Don't know",
+      "Prefer not to answer",
+      "Don't know / Not applicable to me"
+    ],
+    "canonical_id": "dadprt1",
+    "canonical_stem": "Does your father have a new partner?",
+    "canonical_item": "",
+    "canonical_options": [
+      "Yes",
+      "No",
+      "Don't know"
+    ]
+  },
+  "hungary:siblings1": {
+    "orig_variable": "siblings1",
+    "translated_stem": "How many siblings / half-siblings / step-siblings do you live with? If you live with different siblings in different homes, select the total number! (For example: I have one older brother at my mother's, and two younger stepsisters at my father's, which is 3 in total.)",
+    "translated_item": "",
+    "translated_options": [
+      "None",
+      "1",
+      "2",
+      "3 or more",
+      "Prefer not to answer",
+      "Don't know / Not applicable to me"
+    ],
+    "canonical_id": "sibs1",
+    "canonical_stem": "How many siblings/half-siblings/step-siblings do you live with? Choose the total number if you live with different siblings in different homes.",
+    "canonical_item": "",
+    "canonical_options": [
+      "None",
+      "1",
+      "2",
+      "3 or more"
+    ]
+  },
+  "hungary:edu1": {
+    "orig_variable": "edu1",
+    "translated_stem": "What is your mother's highest level of education?",
+    "translated_item": "",
+    "translated_options": [
+      "No secondary education",
+      "Has a high school diploma (érettségi) or equivalent qualification",
+      "Attended college/university, but did not obtain a degree",
+      "Obtained a college/university degree",
+      "Prefer not to answer",
+      "Don't know / Not applicable to me"
+    ],
+    "canonical_id": "edumom1",
+    "canonical_stem": "What best describes your mother's education?",
+    "canonical_item": "",
+    "canonical_options": [
+      "Less than high school",
+      "High school diploma or equivalent",
+      "Come college, no degree",
+      "Bachelor's degree",
+      "Master's degree or more",
+      "Don't know"
+    ]
+  },
+  "hungary:edu2": {
+    "orig_variable": "edu2",
+    "translated_stem": "What is your father's highest level of education?",
+    "translated_item": "",
+    "translated_options": [
+      "No secondary education",
+      "Has a high school diploma (érettségi) or equivalent qualification",
+      "Attended college/university, but did not obtain a degree",
+      "Obtained a college/university degree",
+      "Prefer not to answer",
+      "Don't know / Not applicable to me",
+      "MacArthur Subjective Social Status Scale"
+    ],
+    "canonical_id": "edudad1",
+    "canonical_stem": "What best describes your father's education?",
+    "canonical_item": "",
+    "canonical_options": [
+      "Less than high school",
+      "High school diploma or equivalent",
+      "Come college, no degree",
+      "Bachelor's degree",
+      "Master's degree or more",
+      "Don't know"
+    ]
+  },
+  "hungary:soc1": {
+    "orig_variable": "soc1",
+    "translated_stem": "Imagine a ladder that represents how Hungarian society is divided. At the top of the ladder are the people who are best off - the very wealthy, highly educated, and those with the best jobs. At the bottom are the worst off - those with little or no education, who have the worst jobs or no job at all. Think about your own family and indicate where you think your family is on the ladder.",
+    "translated_item": "",
+    "translated_options": [
+      "Bottom of the ladder",
+      "Top of the ladder"
+    ],
+    "canonical_id": "ladder1",
+    "canonical_stem": "Imagine a ladder that represents how [Country] society is divided. At the top of the ladder are people who are best off-they are very wealthy, highly educated, and have the best jobs. At the bottom are people who are worst off-they have little or no education, have the worst jobs or no job. Think about your own family and mark where you think your family is on the ladder.",
+    "canonical_item": "",
+    "canonical_options": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "10"
+    ]
+  },
+  "hungary:soc2": {
+    "orig_variable": "soc2",
+    "translated_stem": "I feel that my family can usually afford to buy everything that we need.",
+    "translated_item": "",
+    "translated_options": [
+      "Strongly disagree",
+      "Somewhat disagree",
+      "Somewhat agree",
+      "Strongly agree",
+      "Prefer not to answer",
+      "Don't know / Not applicable to me",
+      "Mental health - BCFPI",
+      "4",
+      "The following statements describe some of the feelings and behaviors of people your age. Please check the answer that is most typical of you over the past 6 months!"
+    ],
+    "canonical_id": "afford1",
+    "canonical_stem": "I feel that my family can usually afford to buy what we need",
+    "canonical_item": "",
+    "canonical_options": [
+      "Strongly disagree",
+      "Somewhat disagree",
+      "Somewhat agree",
+      "Strongly agree"
+    ]
+  },
+  "hungary:raia1:6_1": {
+    "orig_variable": "raia1:6_1",
+    "translated_stem": "Regulation of attention, impulsivity and activity",
+    "translated_item": "",
+    "translated_options": [
+      "NEVER true",
+      "SOMETIMES true",
+      "OFTEN true",
+      "Prefer not to answer",
+      "Don't know / Not applicable to me",
+      "Fail to finish what you start",
+      "Are easily distracted or have trouble sticking to an activity",
+      "Jump from one activity to another",
+      "Have difficulty following directions or instructions",
+      "Are impulsive or act without thinking",
+      "Fidget"
+    ],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "hungary:coop1:6_1": {
+    "orig_variable": "coop1:6_1",
+    "translated_stem": "Cooperation",
+    "translated_item": "",
+    "translated_options": [
+      "NEVER true",
+      "SOMETIMES true",
+      "OFTEN true",
+      "Prefer not to answer",
+      "Don't know / Not applicable to me",
+      "Blaming others for your own mistakes",
+      "You are irritable and angry",
+      "You lose your temper",
+      "You are defiant or uncooperative",
+      "You argue or talk back to adults",
+      "You are resentful or spiteful"
+    ],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "hungary:ma1:6_1": {
+    "orig_variable": "ma1:6_1",
+    "translated_stem": "Managing anxiety",
+    "translated_item": "",
+    "translated_options": [
+      "NEVER true",
+      "SOMETIMES true",
+      "OFTEN true",
+      "Prefer not to answer",
+      "Don't know / Not applicable to me",
+      "You feel anxious or nervous about everyday things",
+      "You worry about needing to do things better",
+      "You worry about your past behavior",
+      "You worry about doing something wrong",
+      "You worry about things in the future",
+      "You are afraid of making mistakes"
+    ],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "hungary:sa1:6_1": {
+    "orig_variable": "sa1:6_1",
+    "translated_stem": "Regulating social anxiety",
+    "translated_item": "",
+    "translated_options": [
+      "NEVER true",
+      "SOMETIMES true",
+      "OFTEN true",
+      "Prefer not to answer",
+      "Don't know / Not applicable to me",
+      "You worry about social situations or feel very embarrassed in such situations",
+      "You feel uncomfortable because you feel others can see you are nervous or anxious",
+      "You have a hard time participating in conversations or making eye contact because you are anxious",
+      "You want to leave or have left social events early because you are anxious",
+      "You refuse/avoid attending social or school gatherings/events because you worry you will be anxious",
+      "You worry because your heart is beating fast or your palms are sweating at social gatherings"
+    ],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "hungary:mood1:6_1": {
+    "orig_variable": "mood1:6_1",
+    "translated_stem": "Regulating mood",
+    "translated_item": "",
+    "translated_options": [
+      "NEVER true",
+      "SOMETIMES true",
+      "OFTEN true",
+      "Prefer not to answer",
+      "Don't know / Not applicable to me",
+      "You are unhappy, sad, or depressed",
+      "You don't enjoy things you previously enjoyed or feel you should enjoy",
+      "You are not interested in anything or find it hard to find anything interesting",
+      "You feel lonely or lost",
+      "You are not as happy as others",
+      "You feel hopelessness"
+    ],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "hungary:af1:6_1": {
+    "orig_variable": "af1:6_1",
+    "translated_stem": "Regulating emotions",
+    "translated_item": "",
+    "translated_options": [
+      "NEVER true",
+      "SOMETIMES true",
+      "OFTEN true",
+      "Prefer not to answer",
+      "Don't know / Not applicable to me",
+      "You have difficulty regulating your feelings",
+      "You find it very hard to calm down when something upsets you",
+      "Your feelings take over and you can't do anything about it",
+      "You try hard not to think about your feelings",
+      "You think it is best to control your feelings and not think about them",
+      "You keep your feelings to yourself"
+    ],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "hungary:yf1:12_1": {
+    "orig_variable": "yf1:12_1",
+    "translated_stem": "Youth functioning Now here are some questions about your everyday activities.",
+    "translated_item": "",
+    "translated_options": [
+      "NEVER true",
+      "SOMETIMES true",
+      "OFTEN true",
+      "Prefer not to answer",
+      "Don't know / Not applicable to me",
+      "You have difficulty keeping friends",
+      "You have trouble getting along with people your age",
+      "You have trouble getting along with your family",
+      "You have trouble getting along with adults, such as relatives, a coach, or a boss",
+      "You have difficulty with activities like sports or lessons",
+      "You have difficulty with daily routine tasks, such as getting ready in the morning, meals, bedtime, chores, or work",
+      "You isolate yourself",
+      "You spend too much time watching TV, playing video games, or on the internet",
+      "You have trouble getting along with other students",
+      "You have trouble getting along with teachers",
+      "You have been absent from school",
+      "You received bad grades",
+      "Adverse Childhood Experiences (ACE)",
+      "5",
+      "RELATIONSHIP WITH YOUR PARENTS/GUARDIANS During your life up to this point..."
+    ],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "hungary:ace01": {
+    "orig_variable": "ace01",
+    "translated_stem": "Did your parents/guardians understand your problems and worries?",
+    "translated_item": "",
+    "translated_options": [
+      "Always",
+      "Most of the time",
+      "Sometimes",
+      "Rarely",
+      "Never",
+      "Prefer not to answer",
+      "Don't know / Not applicable to me"
+    ],
+    "canonical_id": "rpginsfy1",
+    "canonical_stem": "Relationship with parents/guardians If you did not spend the first 18 years of your life with your parents, please refer the questions about parents to the caregiver with whom you spent most of your childhood! During your life up to this point...",
+    "canonical_item": "Did your parents/guardians understand your problems and worries?",
+    "canonical_options": [
+      "Always",
+      "Most of the time",
+      "Sometimes",
+      "Rarely",
+      "Never"
+    ]
+  },
+  "hungary:ace02": {
+    "orig_variable": "ace02",
+    "translated_stem": "Did your parents/guardians really know what you were doing in your free time when you were not at school or work?",
+    "translated_item": "",
+    "translated_options": [
+      "Always",
+      "Most of the time",
+      "Sometimes",
+      "Rarely",
+      "Never",
+      "Prefer not to answer",
+      "Don't know / Not applicable to me"
+    ],
+    "canonical_id": "rpginsfy2",
+    "canonical_stem": "Relationship with parents/guardians If you did not spend the first 18 years of your life with your parents, please refer the questions about parents to the caregiver with whom you spent most of your childhood! During your life up to this point...",
+    "canonical_item": "Did your parents/guardians really know what you were doing with your free time when you were not at school or work?",
+    "canonical_options": [
+      "Always",
+      "Most of the time",
+      "Sometimes",
+      "Rarely",
+      "Never"
+    ]
+  },
+  "hungary:ace03": {
+    "orig_variable": "ace03",
+    "translated_stem": "How often did it happen that your parents/guardians did not give you enough food, even though they could easily have done so?",
+    "translated_item": "",
+    "translated_options": [
+      "Many times",
+      "A few times",
+      "Once",
+      "Never",
+      "Prefer not to answer",
+      "Don't know / Not applicable to me"
+    ],
+    "canonical_id": "dlup1",
+    "canonical_stem": "During your life up to this point...",
+    "canonical_item": "How often did your parents/guardians not give you enough food even when they could easily have done so?",
+    "canonical_options": [
+      "Many times",
+      "A few times",
+      "Once",
+      "Never"
+    ]
+  },
+  "hungary:ace04": {
+    "orig_variable": "ace04",
+    "translated_stem": "Were your parents/guardians drunk or under the influence of drugs to such an extent that they could not take care of you?",
+    "translated_item": "",
+    "translated_options": [
+      "Many times",
+      "A few times",
+      "Once",
+      "Never",
+      "Prefer not to answer",
+      "Don't know / Not applicable to me"
+    ],
+    "canonical_id": "dlup2",
+    "canonical_stem": "During your life up to this point...",
+    "canonical_item": "Were your parents/guardians too drunk or intoxicated by drugs to take care of you?",
+    "canonical_options": [
+      "Many times",
+      "A few times",
+      "Once",
+      "Never"
+    ]
+  },
+  "hungary:ace05": {
+    "orig_variable": "ace05",
+    "translated_stem": "How often did your parents/guardians not send you to school, even though you could have gone?",
+    "translated_item": "",
+    "translated_options": [
+      "Many times",
+      "A few times",
+      "Once",
+      "Never",
+      "Prefer not to answer",
+      "Don't know / Not applicable to me",
+      "FAMILY ENVIRONMENT During your life up to this point..."
+    ],
+    "canonical_id": "dlup3",
+    "canonical_stem": "During your life up to this point...",
+    "canonical_item": "How often did your parents/guardians not send you to school even when it was available?",
+    "canonical_options": [
+      "Many times",
+      "A few times",
+      "Once",
+      "Never"
+    ]
+  },
+  "hungary:ace06": {
+    "orig_variable": "ace06",
+    "translated_stem": "Did you live with a person who drank frequently or was an alcoholic, or perhaps abused street or prescription drugs?",
+    "translated_item": "",
+    "translated_options": [
+      "Yes",
+      "No",
+      "Prefer not to answer",
+      "Don't know / Not applicable to me"
+    ],
+    "canonical_id": "dlupa1",
+    "canonical_stem": "During your life up to this point...",
+    "canonical_item": "Did you live with a household member who was a problem drinker or alcoholic, or misused street or prescription drugs?",
+    "canonical_options": [
+      "Yes",
+      "No"
+    ]
+  },
+  "hungary:ace07": {
+    "orig_variable": "ace07",
+    "translated_stem": "Did you live with a person who suffered from depression or psychiatric illness, or attempted suicide?",
+    "translated_item": "",
+    "translated_options": [
+      "Yes",
+      "No",
+      "Prefer not to answer",
+      "Don't know / Not applicable to me"
+    ],
+    "canonical_id": "dlupa2",
+    "canonical_stem": "During your life up to this point...",
+    "canonical_item": "Did you live with a household member who was depressed, mentally ill or suicidal?",
+    "canonical_options": [
+      "Yes",
+      "No"
+    ]
+  },
+  "hungary:ace08": {
+    "orig_variable": "ace08",
+    "translated_stem": "Did you live with a person who was ever in jail or prison?",
+    "translated_item": "",
+    "translated_options": [
+      "Yes",
+      "No",
+      "Prefer not to answer",
+      "Don't know / Not applicable to me"
+    ],
+    "canonical_id": "dlupa3",
+    "canonical_stem": "During your life up to this point...",
+    "canonical_item": "Did you live with a household member who was ever sent to jail or prison?",
+    "canonical_options": [
+      "Yes",
+      "No"
+    ]
+  },
+  "hungary:ace09": {
+    "orig_variable": "ace09",
+    "translated_stem": "Were your parents ever divorced or living separately?",
+    "translated_item": "",
+    "translated_options": [
+      "Yes",
+      "No",
+      "Prefer not to answer",
+      "Don't know / Not applicable to me"
+    ],
+    "canonical_id": "dlupa4",
+    "canonical_stem": "During your life up to this point...",
+    "canonical_item": "Were your parents ever separated or divorced?",
+    "canonical_options": [
+      "Yes",
+      "No"
+    ]
+  },
+  "hungary:ace10": {
+    "orig_variable": "ace10",
+    "translated_stem": "Did your mother, father, or guardian die?",
+    "translated_item": "",
+    "translated_options": [
+      "Yes",
+      "No",
+      "Prefer not to answer",
+      "Don't know / Not applicable to me",
+      "The following questions relate to certain things you may have seen or heard IN YOUR HOME. These are things that did not necessarily happen to you, but to a person living with you. During your life up to this point..."
+    ],
+    "canonical_id": "dlupa5",
+    "canonical_stem": "During your life up to this point...",
+    "canonical_item": "Did your mother, father or guardian die?",
+    "canonical_options": [
+      "Yes",
+      "No"
+    ]
+  },
+  "hungary:ace11": {
+    "orig_variable": "ace11",
+    "translated_stem": "Did you see or hear your parents or persons living in the same household with you screaming, yelling, swearing at home, or insulting, humiliating each other, or one of them the other?",
+    "translated_item": "",
+    "translated_options": [
+      "Many times",
+      "A few times",
+      "Once",
+      "Never",
+      "Prefer not to answer",
+      "Don't know / Not applicable to me"
+    ],
+    "canonical_id": "fetnqact1",
+    "canonical_stem": "Family Environment These next questions are about certain things you may actually have heard or seen IN YOUR HOME. These are things that may have been done to another household member but not necessarily to you. During your life up to this point...",
+    "canonical_item": "Did you see or hear a parent or household member in your home being yelled at, screamed at, sworn at, insulted or humiliated?",
+    "canonical_options": [
+      "Many times",
+      "A few times",
+      "Once",
+      "Never"
+    ]
+  },
+  "hungary:ace12": {
+    "orig_variable": "ace12",
+    "translated_stem": "Did you see or hear your parents or persons living in the same household with you slapping, kicking, hitting, or beating each other, or one of them the other, at home?",
+    "translated_item": "",
+    "translated_options": [
+      "Many times",
+      "A few times",
+      "Once",
+      "Never",
+      "Prefer not to answer",
+      "Don't know / Not applicable to me"
+    ],
+    "canonical_id": "fetnqact2",
+    "canonical_stem": "Family Environment These next questions are about certain things you may actually have heard or seen IN YOUR HOME. These are things that may have been done to another household member but not necessarily to you. During your life up to this point...",
+    "canonical_item": "Did you see or hear a parent or household member in your home being slapped, kicked, punched or beaten up?",
+    "canonical_options": [
+      "Many times",
+      "A few times",
+      "Once",
+      "Never"
+    ]
+  },
+  "hungary:ace13": {
+    "orig_variable": "ace13",
+    "translated_stem": "Did you see or hear your parents or persons living in the same household with you hitting or cutting each other, or one of them the other, at home with some object such as a stick, bottle, bat, knife, whip, etc.?",
+    "translated_item": "",
+    "translated_options": [
+      "Many times",
+      "A few times",
+      "Once",
+      "Never",
+      "Prefer not to answer",
+      "Don't know / Not applicable to me",
+      "The following questions relate to certain things that you may have experienced. During your life up to this point..."
+    ],
+    "canonical_id": "fetnqact3",
+    "canonical_stem": "Family Environment These next questions are about certain things you may actually have heard or seen IN YOUR HOME. These are things that may have been done to another household member but not necessarily to you. During your life up to this point...",
+    "canonical_item": "Did you see or hear a parent or household member in your home being hit or cut with an object, such as a stick (or cane), bottle, club, knife, whip etc.?",
+    "canonical_options": [
+      "Many times",
+      "A few times",
+      "Once",
+      "Never"
+    ]
+  },
+  "hungary:ace14": {
+    "orig_variable": "ace14",
+    "translated_stem": "Did your parents, guardians, or other person living in the same household with you ever shout, scream, curse at you, or insult or humiliate you?",
+    "translated_item": "",
+    "translated_options": [
+      "Many times",
+      "A few times",
+      "Once",
+      "Never",
+      "Prefer not to answer",
+      "Don't know / Not applicable to me"
+    ],
+    "canonical_id": "tnqactmh1",
+    "canonical_stem": "These next questions are about certain things YOU may have experienced. During your life up to this point...",
+    "canonical_item": "Did a parent, guardian or other household member yell, scream or swear at you, insult or humiliate you?",
+    "canonical_options": [
+      "Many times",
+      "A few times",
+      "Once",
+      "Never"
+    ]
+  },
+  "hungary:ace15": {
+    "orig_variable": "ace15",
+    "translated_stem": "Did your parents, guardians, or other persons living in your household ever threaten to abandon you, or throw you out of the house, or actually do so?",
+    "translated_item": "",
+    "translated_options": [
+      "Many times",
+      "A few times",
+      "Once",
+      "Never",
+      "I prefer not to answer",
+      "Don't know / Not applicable to me"
+    ],
+    "canonical_id": "tnqactmh2",
+    "canonical_stem": "These next questions are about certain things YOU may have experienced. During your life up to this point...",
+    "canonical_item": "Did a parent, guardian or other household member threaten to, or actually, abandon you or throw you out of the house?",
+    "canonical_options": [
+      "Many times",
+      "A few times",
+      "Once",
+      "Never"
+    ]
+  },
+  "hungary:ace16": {
+    "orig_variable": "ace16",
+    "translated_stem": "Did your parents, guardians, or other persons living in your household ever spank, slap, kick, punch, or beat you up?",
+    "translated_item": "",
+    "translated_options": [
+      "Many times",
+      "A few times",
+      "Once",
+      "Never",
+      "I prefer not to answer",
+      "Don't know / Not applicable to me"
+    ],
+    "canonical_id": "tnqactmh3",
+    "canonical_stem": "These next questions are about certain things YOU may have experienced. During your life up to this point...",
+    "canonical_item": "Did a parent, guardian or other household member spank, slap, kick, punch or beat you up?",
+    "canonical_options": [
+      "Many times",
+      "A few times",
+      "Once",
+      "Never"
+    ]
+  },
+  "hungary:ace17": {
+    "orig_variable": "ace17",
+    "translated_stem": "Did your parents, guardians, or other persons living in your household ever hit or cut you with an object, such as a stick, bottle, bat, knife, whip, etc.?",
+    "translated_item": "",
+    "translated_options": [
+      "Many times",
+      "A few times",
+      "Once",
+      "Never",
+      "I prefer not to answer",
+      "Don't know / Not applicable to me"
+    ],
+    "canonical_id": "tnqactmh4",
+    "canonical_stem": "These next questions are about certain things YOU may have experienced. During your life up to this point...",
+    "canonical_item": "Did a parent, guardian or other household member hit or cut you with an object, such as a stick (or cane), bottle, club, knife, whip etc?",
+    "canonical_options": [
+      "Many times",
+      "A few times",
+      "Once",
+      "Never"
+    ]
+  },
+  "hungary:ace18": {
+    "orig_variable": "ace18",
+    "translated_stem": "Did someone touch or fondle you in a sexual way, against your will?",
+    "translated_item": "",
+    "translated_options": [
+      "Many times",
+      "A few times",
+      "Once",
+      "Never",
+      "I prefer not to answer",
+      "Don't know / Not applicable to me"
+    ],
+    "canonical_id": "tnqactmh5",
+    "canonical_stem": "These next questions are about certain things YOU may have experienced. During your life up to this point...",
+    "canonical_item": "Did someone touch or fondle you in a sexual way when you did not want them to?",
+    "canonical_options": [
+      "Many times",
+      "A few times",
+      "Once",
+      "Never"
+    ]
+  },
+  "hungary:ace19": {
+    "orig_variable": "ace19",
+    "translated_stem": "Did someone force you to touch their body in a sexual way, against your will?",
+    "translated_item": "",
+    "translated_options": [
+      "Many times",
+      "A few times",
+      "Once",
+      "Never",
+      "I prefer not to answer",
+      "Don't know / Not applicable to me"
+    ],
+    "canonical_id": "tnqactmh6",
+    "canonical_stem": "These next questions are about certain things YOU may have experienced. During your life up to this point...",
+    "canonical_item": "Did someone make you touch their body in a sexual way when you did not want them to?",
+    "canonical_options": [
+      "Many times",
+      "A few times",
+      "Once",
+      "Never"
+    ]
+  },
+  "hungary:ace20": {
+    "orig_variable": "ace20",
+    "translated_stem": "Did someone try to have oral, anal, or vaginal intercourse with you, against your will?",
+    "translated_item": "",
+    "translated_options": [
+      "Many times",
+      "A few times",
+      "Once",
+      "Never",
+      "I prefer not to answer",
+      "Don't know / Not applicable to me"
+    ],
+    "canonical_id": "tnqactmh7",
+    "canonical_stem": "These next questions are about certain things YOU may have experienced. During your life up to this point...",
+    "canonical_item": "Did someone attempt oral, anal, or vaginal intercourse with you when you did not want them to?",
+    "canonical_options": [
+      "Many times",
+      "A few times",
+      "Once",
+      "Never"
+    ]
+  },
+  "hungary:ace21": {
+    "orig_variable": "ace21",
+    "translated_stem": "Was there someone who actually had oral, anal, or vaginal intercourse with you against your will?",
+    "translated_item": "",
+    "translated_options": [
+      "Many times",
+      "A few times",
+      "Once",
+      "Never",
+      "I prefer not to answer",
+      "Don't know / Not applicable to me",
+      "PEER VIOLENCE The following questions are about CHILDHOOD BULLYING. Childhood bullying is when a young person or group of young people does or says bad and hurtful things to another young person. It also means bullying when a young person is picked on or deliberately left out of things. It is not bullying when two young people of equal power and energy argue or fight, or tease each other in a friendly and joking way. During your life so far..."
+    ],
+    "canonical_id": "tnqactmh8",
+    "canonical_stem": "These next questions are about certain things YOU may have experienced. During your life up to this point...",
+    "canonical_item": "Did someone actually have oral, anal, or vaginal intercourse with you when you did not want them to?",
+    "canonical_options": [
+      "Many times",
+      "A few times",
+      "Once",
+      "Never"
+    ]
+  },
+  "hungary:ace22": {
+    "orig_variable": "ace22",
+    "translated_stem": "How often were you bullied?",
+    "translated_item": "",
+    "translated_options": [
+      "Many times",
+      "A few times",
+      "Once",
+      "Never",
+      "I prefer not to answer",
+      "Don't know / Not applicable to me",
+      "How were you bullied most often?",
+      "I was hit, kicked, pinned down, pushed around, or locked in.",
+      "I was mocked because of my race, nationality, or skin colour.",
+      "I was mocked because of my religion.",
+      "I was mocked with sexual remarks, comments, or gestures.",
+      "I was deliberately left out of activities or ignored.",
+      "I was mocked because of how my body or face looked.",
+      "I was bullied in other ways.",
+      "I prefer not to answer",
+      "Don't know / Not applicable to me",
+      "The following question is about PHYSICAL FIGHTS. A physical fight is when two young people of equal power or energy fight with each other. During your life so far..."
+    ],
+    "canonical_id": "pvtnqabb1",
+    "canonical_stem": "Peer Violence These next questions are about BEING BULLIED when you were growing up. Bullying is when a young person or group of young people say or do bad and unpleasant things to another young person. It is also bullying when a young person is teased a lot in an unpleasant way or when a young person is left out of things on purpose. It is not bullying when two young people of about the same strength or power argue or fight or when teasing is done in a friendly and fun way. During your life up to this point... How often were you bullied?",
+    "canonical_item": "",
+    "canonical_options": [
+      "Many times",
+      "A few times",
+      "Once",
+      "Never"
+    ]
+  },
+  "hungary:ace24": {
+    "orig_variable": "ace24",
+    "translated_stem": "How often have you been involved in a physical fight?",
+    "translated_item": "",
+    "translated_options": [
+      "Many times",
+      "A few times",
+      "Once",
+      "Never",
+      "I prefer not to answer",
+      "Don't know / Not applicable to me",
+      "Witnessing community violence The following questions relate to whether during your life so far you may have seen or heard certain things in your NEIGHBOURHOOD or LOCAL COMMUNITY (not in your home, or on television, movies, or radio). During your life so far..."
+    ],
+    "canonical_id": "nqapfpfo1",
+    "canonical_stem": "This next question is about PHYSICAL FIGHTS. A physical fight occurs when two young people of about the same strength or power choose to fight each other. During your life up to this point... How often were you in a physical fight?",
+    "canonical_item": "",
+    "canonical_options": [
+      "Many times",
+      "A few times",
+      "Once",
+      "Never"
+    ]
+  },
+  "hungary:ace25": {
+    "orig_variable": "ace25",
+    "translated_stem": "Did you personally see or hear someone being beaten up in real life?",
+    "translated_item": "",
+    "translated_options": [
+      "Many times",
+      "A few times",
+      "Once",
+      "Never",
+      "I prefer not to answer",
+      "Don't know / Not applicable to me"
+    ],
+    "canonical_id": "tnqaomhs1",
+    "canonical_stem": "These next questions are about how often YOU may have seen or heard certain things in your NEIGHBOURHOOD OR COMMUNITY (not in your home or on TV, movies, or the radio). During you life up to this point...",
+    "canonical_item": "Did you see or hear someone being beaten up in real life?",
+    "canonical_options": [
+      "Many times",
+      "A few times",
+      "Once",
+      "Never"
+    ]
+  },
+  "hungary:ace26": {
+    "orig_variable": "ace26",
+    "translated_stem": "Did you personally see or hear someone being stabbed or shot in real life?",
+    "translated_item": "",
+    "translated_options": [
+      "Many times",
+      "A few times",
+      "Once",
+      "Never",
+      "I prefer not to answer",
+      "Don't know / Not applicable to me"
+    ],
+    "canonical_id": "tnqaomhs2",
+    "canonical_stem": "These next questions are about how often YOU may have seen or heard certain things in your NEIGHBOURHOOD OR COMMUNITY (not in your home or on TV, movies, or the radio). During you life up to this point...",
+    "canonical_item": "Did you see or hear someone being stabbed or shot in real life?",
+    "canonical_options": [
+      "Many times",
+      "A few times",
+      "Once",
+      "Never"
+    ]
+  },
+  "hungary:ace27": {
+    "orig_variable": "ace27",
+    "translated_stem": "Did you personally see or hear someone being threatened with a knife or gun in real life?",
+    "translated_item": "",
+    "translated_options": [
+      "Many times",
+      "A few times",
+      "Once",
+      "Never",
+      "I prefer not to answer",
+      "Don't know / Not applicable to me",
+      "Experiencing war/collective violence These questions relate to whether you have experienced the following events or not during your life so far. All of these events are collective violence, including war, terrorism, political or ethnic conflicts, genocide, oppression, disappearances, torture, and organized violent crimes, such as: banditry (occupational crime) or gang warfare. During your life so far..."
+    ],
+    "canonical_id": "tnqaomhs3",
+    "canonical_stem": "These next questions are about how often YOU may have seen or heard certain things in your NEIGHBOURHOOD OR COMMUNITY (not in your home or on TV, movies, or the radio). During you life up to this point...",
+    "canonical_item": "Did you see or hear someone being threatened with a knife or gun in real life?",
+    "canonical_options": [
+      "Many times",
+      "A few times",
+      "Once",
+      "Never"
+    ]
+  },
+  "hungary:ace28": {
+    "orig_variable": "ace28",
+    "translated_stem": "Were you forced to move to another place due to any of these events?",
+    "translated_item": "",
+    "translated_options": [
+      "Many times",
+      "A few times",
+      "Once",
+      "Never",
+      "I prefer not to answer",
+      "Don't know / Not applicable to me"
+    ],
+    "canonical_id": "ewcvtqaw1",
+    "canonical_stem": "Exposure to War/Collective Violence These questions are about whether YOU did or did not experience any of the following events. The events are all to do with collective violence, including wars, terrorism, political or ethnic conflicts, genocide, repression, disappearances, torture and organized violent crime such as banditry and gang warfare. During your life up to this point...",
+    "canonical_item": "Were you forced to go and live in another place due to any of these events?",
+    "canonical_options": [
+      "Many times",
+      "A few times",
+      "Once",
+      "Never"
+    ]
+  },
+  "hungary:ace29": {
+    "orig_variable": "ace29",
+    "translated_stem": "Was your home deliberately destroyed due to any of these events?",
+    "translated_item": "",
+    "translated_options": [
+      "Many times",
+      "A few times",
+      "Once",
+      "Never",
+      "I prefer not to answer",
+      "Don't know / Not applicable to me"
+    ],
+    "canonical_id": "ewcvtqaw2",
+    "canonical_stem": "Exposure to War/Collective Violence These questions are about whether YOU did or did not experience any of the following events. The events are all to do with collective violence, including wars, terrorism, political or ethnic conflicts, genocide, repression, disappearances, torture and organized violent crime such as banditry and gang warfare. During your life up to this point...",
+    "canonical_item": "Did you experience the deliberate destruction of your home due to any of these events?",
+    "canonical_options": [
+      "Many times",
+      "A few times",
+      "Once",
+      "Never"
+    ]
+  },
+  "hungary:ace30": {
+    "orig_variable": "ace30",
+    "translated_stem": "Were you beaten up by soldiers, police, militia, or gangs, gang members?",
+    "translated_item": "",
+    "translated_options": [
+      "Many times",
+      "A few times",
+      "Once",
+      "Never",
+      "I prefer not to answer",
+      "Don't know / Not applicable to me"
+    ],
+    "canonical_id": "ewcvtqaw3",
+    "canonical_stem": "Exposure to War/Collective Violence These questions are about whether YOU did or did not experience any of the following events. The events are all to do with collective violence, including wars, terrorism, political or ethnic conflicts, genocide, repression, disappearances, torture and organized violent crime such as banditry and gang warfare. During your life up to this point...",
+    "canonical_item": "Were you beaten up by soldiers, police, militia, or gangs?",
+    "canonical_options": [
+      "Many times",
+      "A few times",
+      "Once",
+      "Never"
+    ]
+  },
+  "hungary:ace31": {
+    "orig_variable": "ace31",
+    "translated_stem": "Did you have a family member or friend who was beaten up or killed by soldiers, police, militia, or gangs, gang members?",
+    "translated_item": "",
+    "translated_options": [
+      "Many times",
+      "A few times",
+      "Once",
+      "Never",
+      "I prefer not to answer",
+      "Don't know / Not applicable to me",
+      "CYRM12",
+      "6"
+    ],
+    "canonical_id": "ewcvtqaw4",
+    "canonical_stem": "Exposure to War/Collective Violence These questions are about whether YOU did or did not experience any of the following events. The events are all to do with collective violence, including wars, terrorism, political or ethnic conflicts, genocide, repression, disappearances, torture and organized violent crime such as banditry and gang warfare. During your life up to this point...",
+    "canonical_item": "Was a family member or friend killed or beaten up by soldiers, police, militia, or gangs?",
+    "canonical_options": [
+      "Many times",
+      "A few times",
+      "Once",
+      "Never"
+    ]
+  },
+  "hungary:cyrm1:12_1": {
+    "orig_variable": "cyrm1:12_1",
+    "translated_stem": "To what extent do the following statements apply to you?",
+    "translated_item": "",
+    "translated_options": [
+      "Not at all",
+      "A little",
+      "Somewhat",
+      "Quite a bit",
+      "A lot",
+      "I prefer not to answer",
+      "Don't know / Not applicable to me",
+      "I have people I look up to",
+      "Getting an education is important to me",
+      "My parents/caregivers know a lot about me",
+      "I try to finish what I start",
+      "I solve problems without harming myself or others (without drug use and/or violence)",
+      "I know where to go in my community to get help",
+      "I feel part of the community at my school",
+      "My family stands by me during difficult times",
+      "My friends stand by me during difficult times",
+      "I am treated fairly in my environment",
+      "I have the opportunity to develop skills that will be useful later in life",
+      "I take joy in cultural and family traditions",
+      "KIDSCREEN-10 (Questionnaire on children's and adolescents' health and well-being)"
+    ],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "hungary:kidscreen 1 and 9_1": {
+    "orig_variable": "kidscreen 1 and 9_1",
+    "translated_stem": "In the past week...",
+    "translated_item": "",
+    "translated_options": [
+      "Not at all",
+      "Slightly",
+      "A little",
+      "Very",
+      "Extremely",
+      "I prefer not to answer",
+      "Don't know / Not applicable to me",
+      "Have you felt well and fit?",
+      "Did you do well at school?",
+      "____",
+      "Never",
+      "Rarely",
+      "Often",
+      "Very often",
+      "Always",
+      "I prefer not to answer",
+      "Don't know / Not applicable to me",
+      "Did you feel full of energy?",
+      "Were you sad?",
+      "Did you feel lonely?",
+      "Did you have enough time for yourself?",
+      "In your free time, could you do what you wanted?",
+      "Did your parents treat you fairly?",
+      "Did you have fun with your friends?",
+      "Were you able to pay attention? (e.g. to the teacher in class)",
+      "Social media/gaming",
+      "7"
+    ],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "hungary:some_week1:5_1": {
+    "orig_variable": "some_week1:5_1",
+    "translated_stem": "Think about a normal weekday. How much time do you spend daily on the following activities?",
+    "translated_item": "",
+    "translated_options": [
+      "Less than 1 hour",
+      "1-2 hours",
+      "3-4 hours",
+      "5-6 hours",
+      "7 hours or more",
+      "I prefer not to answer",
+      "Don't know / Not applicable to me",
+      "Gaming on console/computer",
+      "Playing games on your phone",
+      "Chatting or sending pictures to friends (e.g. Snapchat, Messenger, WhatsApp)",
+      "Chatting with AI apps, chatbots (e.g. ChatGPT)",
+      "Watching videos or streams (e.g. YouTube, Twitch)",
+      "Scrolling through short videos (shorts) or image feeds (e.g. TikTok, Instagram, YouTube shorts)"
+    ],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "hungary:some_weekend1:5_1": {
+    "orig_variable": "some_weekend1:5_1",
+    "translated_stem": "Think about a normal weekend day. How much time do you spend daily on the following activities?",
+    "translated_item": "",
+    "translated_options": [
+      "Less than 1 hour",
+      "1-2 hours",
+      "3-4 hours",
+      "5-6 hours",
+      "7 hours or more",
+      "I prefer not to answer",
+      "Don't know / Not applicable to me",
+      "Gaming on console/computer",
+      "Playing games on your phone",
+      "Chatting or sending pictures to friends (e.g. Snapchat, Messenger, WhatsApp)",
+      "Chatting with AI apps, chatbots (e.g. ChatGPT)",
+      "Watching videos or streams (e.g. YouTube, Twitch)",
+      "Scrolling through short videos (shorts) or image feeds (e.g. TikTok, Instagram, YouTube shorts)"
+    ],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "hungary:gaming1": {
+    "orig_variable": "gaming1",
+    "translated_stem": "When gaming on console/computer, you...",
+    "translated_item": "",
+    "translated_options": [
+      "...mostly play alone",
+      "...mostly play online with others",
+      "...mostly play with others while chatting with them",
+      "Prefer not to answer",
+      "Don't know / Not applicable"
+    ],
+    "canonical_id": "gaming1",
+    "canonical_stem": "When gaming on your console/computer, do you...",
+    "canonical_item": "",
+    "canonical_options": [
+      "Mostly play games alone?",
+      "Mostly play games online with others?",
+      "Mostly play games with others while chatting with them?"
+    ]
+  },
+  "hungary:ai1": {
+    "orig_variable": "ai1",
+    "translated_stem": "Do you use artificial intelligence (e.g. ChatGPT, Gemini, DeepSeek, My AI, Replika)?",
+    "translated_item": "",
+    "translated_options": [
+      "Yes",
+      "No",
+      "Prefer not to answer",
+      "Don't know / Not applicable"
+    ],
+    "canonical_id": "ai1",
+    "canonical_stem": "Do you ever use AI (e.g., ChatGPT, Gemini, My AI, Replika)?",
+    "canonical_item": "",
+    "canonical_options": [
+      "Yes",
+      "No"
+    ]
+  },
+  "hungary:ai2": {
+    "orig_variable": "ai2",
+    "translated_stem": "Please indicate what you usually use artificial intelligence for! You can select multiple answers!",
+    "translated_item": "",
+    "translated_options": [
+      "For school assignments",
+      "For entertainment",
+      "For companionship",
+      "For obtaining information",
+      "Prefer not to answer",
+      "Don't know / Not applicable"
+    ],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "hungary:some_feel1": {
+    "orig_variable": "some_feel1",
+    "translated_stem": "How often do you experience positive feelings during/after using your phone or playing video games? (E.g. feelings of social connection, motivation, or inspiration.)",
+    "translated_item": "",
+    "translated_options": [
+      "Almost always",
+      "Often",
+      "Sometimes",
+      "Rarely",
+      "Never",
+      "Prefer not to answer",
+      "Don't know / Not applicable"
+    ],
+    "canonical_id": "smpos1",
+    "canonical_stem": "How often do you experience positive feelings after having used your phone or played video games? (e.g., feeling socially connected, motivated or inspired)",
+    "canonical_item": "",
+    "canonical_options": [
+      "Nearly all the time",
+      "Often",
+      "Sometimes",
+      "Rarely",
+      "Never"
+    ]
+  },
+  "hungary:some_feel2": {
+    "orig_variable": "some_feel2",
+    "translated_stem": "How often do you experience negative feelings during/after using your phone or playing video games? (E.g. lower self-esteem, feelings of guilt or shame, encountering upsetting content.)",
+    "translated_item": "",
+    "translated_options": [
+      "Almost always",
+      "Often",
+      "Sometimes",
+      "Rarely",
+      "Never",
+      "Prefer not to answer",
+      "Don't know / Not applicable"
+    ],
+    "canonical_id": "smneg1",
+    "canonical_stem": "How often do you experience negative feelings after having used your phone or played video games? (e.g., feeling lower self-esteem, guilty or ashamed, encountering distressing content)",
+    "canonical_item": "",
+    "canonical_options": [
+      "Nearly all the time",
+      "Often",
+      "Sometimes",
+      "Rarely",
+      "Never"
+    ]
+  },
+  "hungary:some_use1:6_1": {
+    "orig_variable": "some_use1:6_1",
+    "translated_stem": "Please indicate for the following areas of life how often the use of phone, computer, or game console has a negative impact on them!",
+    "translated_item": "",
+    "translated_options": [
+      "Almost always",
+      "Often",
+      "Sometimes",
+      "Rarely",
+      "Never",
+      "Prefer not to answer",
+      "Don't know / Not applicable",
+      "Sleep",
+      "School assignments",
+      "Self-esteem/mental health",
+      "Friendships",
+      "Family relationships",
+      "Outdoor activities or sports"
+    ],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "hungary:some_apps1": {
+    "orig_variable": "some_apps1",
+    "translated_stem": "Please select the three apps or services that you use most often!",
+    "translated_item": "",
+    "translated_options": [
+      "Snapchat",
+      "Instagram",
+      "Facebook",
+      "Reddit",
+      "TikTok",
+      "Twitch",
+      "Messenger",
+      "Telegram",
+      "WhatsApp",
+      "YouTube",
+      "X/Twitter",
+      "Pinterest",
+      "AI apps (e.g. ChatGPT, Gemini, Claude)",
+      "Streaming services (e.g. Netflix, Disney+)",
+      "Other",
+      "Prefer not to answer",
+      "Don't know / Not applicable",
+      "Digital Addiction Scale for Children (DASC)"
+    ],
+    "canonical_id": "apps1",
+    "canonical_stem": "Please select up to three apps or services you use most often",
+    "canonical_item": "",
+    "canonical_options": [
+      "Snapchat",
+      "Instagram",
+      "Facebook",
+      "Reddit",
+      "TikTok",
+      "Twitch",
+      "Messenger",
+      "Telegram",
+      "WhatsApp",
+      "YouTube",
+      "X/Twitter",
+      "Pinterest",
+      "AI (e.g., ChatGPT, Gemini, Claude)",
+      "Streaming services (e.g., Netflix, Disney+)",
+      "Other"
+    ]
+  },
+  "hungary:dasc01:25_1": {
+    "orig_variable": "dasc01:25_1",
+    "translated_stem": "When you read the word \"device\" in the sentences below, think of any device that has a screen: PlayStation, Xbox, smartphone, tablet, laptop, computer, handheld console, etc. \"Using my device\" means playing games on it, messaging someone, checking social media sites, watching TikTok or YouTube videos, movies, series, etc. Mark the answer that was true for you during the past week. There are no right or wrong answers!",
+    "translated_item": "",
+    "translated_options": [
+      "Never",
+      "Rarely",
+      "Sometimes",
+      "Often",
+      "Always",
+      "Prefer not to answer",
+      "Don't know / Not applicable",
+      "When I am not at school, I spend a lot of time using my device",
+      "I feel that I need to spend more time using my device",
+      "I get tense if I cannot use my device",
+      "I lie to my parents about how much time I spend using my device",
+      "Using my device helps me forget my problems",
+      "I do not spend time with family members because I prefer to use my device",
+      "I spend more and more time using my device",
+      "I get annoyed when I am asked to stop using my device",
+      "My parents try to prevent or limit my device use, but they fail",
+      "I sleep less because of using my device",
+      "When I don't have my device with me, I think about what I usually do on it (video games, social media, messages, etc.)",
+      "I am tense if I cannot use my device.",
+      "I have conflicts with my parents about how much time I spend using my device",
+      "Using my device is the most important thing in my life",
+      "Using my device is more enjoyable than other things",
+      "I lie to my parents about what I do on my device",
+      "I cannot control my device use",
+      "I have lost interest in hobbies or other activities because I prefer using my device",
+      "When I stop using my device, not long after I start using it again",
+      "I check my device when doing homework or other important things",
+      "I get tense when I am asked to stop using my device",
+      "I argue with my parents when I am asked to stop using my device",
+      "I spend too much money on things related to my device",
+      "When I am in a bad mood, using my device makes me feel better",
+      "I continue to use my device even though my school grades are getting worse",
+      "C-SSRS and substance use",
+      "8",
+      "Columbia-Suicide Severity Rating Scale (C-SSRS)"
+    ],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "hungary:suicide1:5_1": {
+    "orig_variable": "suicide1:5_1",
+    "translated_stem": "Have you experienced or done any of the following in the past 30 days or ever in your life?",
+    "translated_item": "",
+    "translated_options": [
+      "Yes, in the past - once",
+      "Yes, in the past - several times",
+      "Yes, in the past 30 days",
+      "Yes, both in the past and in the past 30 days",
+      "No, never",
+      "Prefer not to answer",
+      "Don't know / Not applicable",
+      "Have you wished you were dead or wished you could go to sleep and not wake up?",
+      "Have you actually had thoughts of killing yourself?",
+      "Have you been thinking about how you might kill yourself?",
+      "Have you started to work out or actually worked out the details of how to kill yourself, and did you have some intention to carry out this plan?",
+      "Have you ever attempted suicide?",
+      "If you have ever attempted suicide, how many times? If you don't know or do not wish to answer, please type \"Don't know\" or \"Prefer not to answer\" into the cell below!",
+      "Substance use",
+      "How often have you used the following tobacco products during the past 30 days?",
+      "Never",
+      "1-2 times",
+      "3-5 times",
+      "6-9 times",
+      "10-19 times",
+      "20-39 times",
+      "40 or more times",
+      "Prefer not to answer",
+      "Don't know / Not applicable",
+      "Cigarettes",
+      "E-cigarettes (e.g. IQOS, Elf Bar, Poco)",
+      "Oral tobacco (snus)",
+      "How often have you used the following tobacco products during your lifetime?",
+      "Never",
+      "1-2 times",
+      "3-5 times",
+      "6-9 times",
+      "10-19 times",
+      "20-39 times",
+      "40 or more times",
+      "Prefer not to answer",
+      "Don't know / Not applicable",
+      "Cigarettes",
+      "E-cigarettes (e.g. IQOS, Elf Bar, Poco)",
+      "Oral tobacco (snus)",
+      "Please mark your answers based on the following:",
+      "Never",
+      "1-2 times",
+      "3-5 times",
+      "6-9 times",
+      "10-19 times",
+      "20-39 times",
+      "40 or more times",
+      "Prefer not to answer",
+      "Don't know / Not applicable",
+      "How often did you consume alcoholic beverages (e.g. beer, alcopops/cider, wine, spirits/shots) during the past 30 days?"
+    ],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "hungary:sub_abuse8": {
+    "orig_variable": "sub_abuse8",
+    "translated_stem": "How often have you drunk any alcohol during your lifetime?",
+    "translated_item": "",
+    "translated_options": [
+      "How often did you get drunk during the past 30 days?",
+      "How often did you get drunk during your lifetime?"
+    ],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "hungary:sub_abuse11": {
+    "orig_variable": "sub_abuse11",
+    "translated_stem": "If ever, how often did you drink 5 or more alcoholic drinks (e.g. beer, alcopops/cider, wine, spirits/shots) in an hour or less? How often in your lifetime have you used prescription medication that was not prescribed to you (e.g. sedatives, stimulants)? How often in your lifetime have you used mind-altering substances that are not considered drugs (such as glue, gas, paint, or whippets)? Have you ever used any drugs?",
+    "translated_item": "",
+    "translated_options": [
+      "Yes",
+      "No",
+      "Prefer not to answer",
+      "Don't know / Not applicable",
+      "How often have you used the following drugs during the past 30 days?",
+      "Never",
+      "1-2 times",
+      "3-5 times",
+      "6-9 times",
+      "10-19 times",
+      "20-39 times",
+      "40 or more times",
+      "Prefer not to answer",
+      "Don't know / Not applicable",
+      "Drugs smoked in a cigarette",
+      "Drugs taken orally",
+      "Drugs snorted through the nose",
+      "Drugs injected intravenously (into a vein)",
+      "How often have you used the following drugs during your lifetime?",
+      "Never",
+      "1-2 times",
+      "3-5 times",
+      "6-9 times",
+      "10-19 times",
+      "20-39 times",
+      "40 or more times",
+      "Prefer not to answer",
+      "Don't know / Not applicable",
+      "Drugs smoked in a cigarette",
+      "Drugs taken orally",
+      "Drugs snorted through the nose",
+      "Drugs injected intravenously (into a vein)",
+      "Sleep, relationships and leisure",
+      "9",
+      "Sleep"
+    ],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "hungary:sleep1": {
+    "orig_variable": "sleep1",
+    "translated_stem": "How often do you have difficulty falling asleep at night?",
+    "translated_item": "",
+    "translated_options": [
+      "Never",
+      "A few times",
+      "1 day a week",
+      "2-3 days a week",
+      "4-5 days a week",
+      "6-7 days a week",
+      "Prefer not to answer",
+      "Don't know / Not applicable"
+    ],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "hungary:sleep2": {
+    "orig_variable": "sleep2",
+    "translated_stem": "How long have you been having difficulty falling asleep at night?",
+    "translated_item": "",
+    "translated_options": [
+      "Less than 1 month",
+      "1-2 months",
+      "3-6 months",
+      "7-11 months",
+      "1-3 years",
+      "More than 3 years",
+      "Prefer not to answer",
+      "Don't know / Not applicable"
+    ],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "hungary:sleep3": {
+    "orig_variable": "sleep3",
+    "translated_stem": "How often do you wake up during the night?",
+    "translated_item": "",
+    "translated_options": [
+      "Never",
+      "A few times",
+      "1 day a week",
+      "2-3 days a week",
+      "4-5 days a week",
+      "6-7 days a week",
+      "Prefer not to answer",
+      "Don't know / Not applicable"
+    ],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "hungary:sleep4": {
+    "orig_variable": "sleep4",
+    "translated_stem": "How long have you had nighttime awakenings?",
+    "translated_item": "",
+    "translated_options": [
+      "Less than 1 month",
+      "1-2 months",
+      "3-6 months",
+      "7-11 months",
+      "1-3 years",
+      "More than 3 years",
+      "Prefer not to answer",
+      "Don't know / Not applicable"
+    ],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "hungary:sleep5": {
+    "orig_variable": "sleep5",
+    "translated_stem": "How often are you tired or sleepy during the day?",
+    "translated_item": "",
+    "translated_options": [
+      "Never",
+      "A few times",
+      "1 day a week",
+      "2-3 days a week",
+      "4-5 days a week",
+      "6-7 days a week",
+      "Prefer not to answer",
+      "Don't know / Not applicable"
+    ],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "hungary:sleep6": {
+    "orig_variable": "sleep6",
+    "translated_stem": "How long have you felt tired or sleepy during the day?",
+    "translated_item": "",
+    "translated_options": [
+      "Less than 1 month",
+      "1-2 months",
+      "3-6 months",
+      "7-11 months",
+      "1-3 years",
+      "More than 3 years",
+      "Prefer not to answer",
+      "Don't know / Not applicable"
+    ],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "hungary:sleep7": {
+    "orig_variable": "sleep7",
+    "translated_stem": "On weekdays, what time do you usually go to bed to sleep?",
+    "translated_item": "",
+    "translated_options": [
+      "Before 20:00",
+      "Between 20:00 and 20:29",
+      "Between 20:30 and 20:59",
+      "Between 21:00 and 21:29",
+      "Between 21:30 and 21:59",
+      "Between 22:00 and 22:29",
+      "Between 22:30 and 22:59",
+      "Between 23:00 and 23:29",
+      "Between 23:30 and 23:59",
+      "Between 00:00 and 00:29",
+      "Between 00:30 and 00:59",
+      "Between 01:00 and 01:29",
+      "Between 01:30 and 01:59",
+      "Between 02:00 and 02:29",
+      "Between 02:30 and 02:59",
+      "After 03:00",
+      "Prefer not to answer",
+      "Don't know / Not applicable"
+    ],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "hungary:sleep8": {
+    "orig_variable": "sleep8",
+    "translated_stem": "On an average weekday, how long does it take you to fall asleep after going to bed?",
+    "translated_item": "",
+    "translated_options": [
+      "Less than 30 minutes",
+      "Between 30 minutes and 1 hour",
+      "Between 1 and 1.5 hours",
+      "Between 1.5 and 2 hours",
+      "More than 2 hours",
+      "Prefer not to answer",
+      "Don't know / Not applicable"
+    ],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "hungary:sleep9": {
+    "orig_variable": "sleep9",
+    "translated_stem": "On weekdays, how long are you awake at night (after first falling asleep)?",
+    "translated_item": "",
+    "translated_options": [
+      "Less than 30 minutes",
+      "Between 30 minutes and 1 hour",
+      "Between 1 and 1.5 hours",
+      "Between 1.5 and 2 hours",
+      "More than 2 hours",
+      "Prefer not to answer",
+      "Don't know / Not applicable"
+    ],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "hungary:sleep10": {
+    "orig_variable": "sleep10",
+    "translated_stem": "On weekdays, what time do you usually wake up in the morning?",
+    "translated_item": "",
+    "translated_options": [
+      "Before 05:00",
+      "Between 05:00 and 05:29",
+      "Between 05:30 and 05:59",
+      "Between 06:00 and 06:29",
+      "Between 06:30 and 06:59",
+      "Between 07:00 and 07:29",
+      "Between 07:30 and 07:59",
+      "Between 08:00 and 08:29",
+      "Between 08:30 and 08:59",
+      "Between 09:00 and 09:29",
+      "Between 09:30 and 09:59",
+      "After 10:00",
+      "Prefer not to answer",
+      "Don't know / Not applicable to me"
+    ],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "hungary:sleep11": {
+    "orig_variable": "sleep11",
+    "translated_stem": "How often do you use electronic devices (e.g., mobile phone, tablet, PC/Mac, TV, etc.) in your bedroom during the last hour before going to sleep?",
+    "translated_item": "",
+    "translated_options": [
+      "Never/rarely",
+      "1-2 nights a week",
+      "3-6 nights a week",
+      "Every night",
+      "Prefer not to answer",
+      "Don't know / Not applicable to me"
+    ],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "hungary:sleep12": {
+    "orig_variable": "sleep12",
+    "translated_stem": "How often do you send or receive messages in the evening after going to bed?",
+    "translated_item": "",
+    "translated_options": [
+      "Never/rarely",
+      "1-2 nights a week",
+      "3-6 nights a week",
+      "Every night",
+      "Prefer not to answer",
+      "Don't know / Not applicable to me",
+      "Relationship with parents"
+    ],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "hungary:repa1:8_1": {
+    "orig_variable": "repa1:8_1",
+    "translated_stem": "Below are some statements about how young people communicate with their parents. Please indicate how often you feel the following in your family.",
+    "translated_item": "",
+    "translated_options": [
+      "Never",
+      "Sometimes",
+      "Often",
+      "Almost always",
+      "Prefer not to answer",
+      "Don't know / Not applicable to me",
+      "My parents understand me",
+      "I get along well with my parents",
+      "My parents like me",
+      "I like my parents",
+      "My parents criticize me",
+      "My parents annoy me",
+      "My parents hurt me",
+      "We argue with my parents",
+      "Relationship with friends"
+    ],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "hungary:refr1:5_1": {
+    "orig_variable": "refr1:5_1",
+    "translated_stem": "To what extent do the following statements apply to you?",
+    "translated_item": "",
+    "translated_options": [
+      "Strongly disagree",
+      "Disagree",
+      "Agree",
+      "Strongly agree",
+      "Prefer not to answer",
+      "Don't know / Not applicable to me",
+      "I find it quite difficult to make friends",
+      "I have a lot of friends",
+      "Other young people find it hard to like me",
+      "I am popular among other young people",
+      "I feel accepted by others"
+    ],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "hungary:relationship1": {
+    "orig_variable": "relationship1",
+    "translated_stem": "Do you have a boyfriend or girlfriend, are you dating someone?",
+    "translated_item": "",
+    "translated_options": [
+      "Yes",
+      "No, but have had before",
+      "No, and have never had",
+      "Prefer not to answer",
+      "Don't know / Not applicable to me",
+      "Leisure time"
+    ],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "hungary:leisure1:5_1": {
+    "orig_variable": "leisure1:5_1",
+    "translated_stem": "Outside of school: On how many days in an average week do you usually do the following?",
+    "translated_item": "",
+    "translated_options": [
+      "Never/rarely",
+      "1 day",
+      "2-3 days",
+      "4-5 days",
+      "6-7 days",
+      "Prefer not to answer",
+      "Don't know / Not applicable to me",
+      "Spend time with your friends",
+      "Exercise (e.g., football, handball, skiing, running, dancing, gymnastics)",
+      "Participate in other organized activities (e.g., theater, music, scouting)",
+      "Stay at home all afternoon and evening",
+      "Read books or listen to audiobooks",
+      "Outside of school: Approximately how many hours per week do you play sports or do physical activity (e.g., football, handball, running, gymnastics, dancing, etc.) that makes you breathe hard or sweat? If you do not know or do not wish to answer, please enter \"Don't know\" or \"Prefer not to answer\" in the cell below!"
+    ],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "hungary:activity_week1:5_1": {
+    "orig_variable": "activity_week1:5_1",
+    "translated_stem": "On an average weekday, how much time do you spend on the following activities?",
+    "translated_item": "",
+    "translated_options": [
+      "Never/rarely",
+      "Less than 1 hour",
+      "1-2 hours",
+      "3-4 hours",
+      "5-6 hours",
+      "7 or more hours",
+      "Prefer not to answer",
+      "Don't know / Not applicable to me",
+      "Watching movies/series/TV",
+      "Doing homework",
+      "Gaming on PC (desktop computer), TV, tablet, phone, etc.",
+      "Sitting in front of the computer, or sitting/lying down with a phone or tablet (regardless of activity)",
+      "Actively using social media (not just being logged in)"
+    ],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "hungary:activity_weekend1:5_1": {
+    "orig_variable": "activity_weekend1:5_1",
+    "translated_stem": "On an average weekend day or holiday, how much time do you spend on the following activities?",
+    "translated_item": "",
+    "translated_options": [
+      "Never/rarely",
+      "Less than 1 hour",
+      "1-2 hours",
+      "3-4 hours",
+      "5-6 hours",
+      "7 or more hours",
+      "Prefer not to answer",
+      "Don't know / Not applicable to me",
+      "Watching movies/series/TV",
+      "Doing homework",
+      "Gaming on PC (desktop computer), TV, tablet, phone, etc.",
+      "Sitting in front of the computer, or sitting/lying down with a phone or tablet (regardless of activity)",
+      "Actively using social media (not just being logged in)"
+    ],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "hungary:training1": {
+    "orig_variable": "training1",
+    "translated_stem": "Do you participate in organized training (through sports clubs or organizations)?",
+    "translated_item": "",
+    "translated_options": [
+      "Yes",
+      "No, but participated before",
+      "No",
+      "Prefer not to answer",
+      "Don't know / Not applicable to me",
+      "At what age did you stop participating in organized sports? If you do not know or do not wish to answer, please enter \"Don't know\" or \"Prefer not to answer\" in the cell below!",
+      "Supplementary questions",
+      "10",
+      "School"
+    ],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "hungary:school1:11_1": {
+    "orig_variable": "school1:11_1",
+    "translated_stem": "Please indicate how much you agree with the following statements!",
+    "translated_item": "",
+    "translated_options": [
+      "Strongly agree",
+      "Somewhat agree",
+      "Somewhat disagree",
+      "Strongly disagree",
+      "Prefer not to answer",
+      "Don't know / Not applicable to me",
+      "I enjoy school.",
+      "My teachers care about me.",
+      "I feel like I fit in among the students at school.",
+      "I am bored at school.",
+      "Many people expect me to perform well at school.",
+      "I often dread going to school.",
+      "I often have to spend weekends doing schoolwork.",
+      "There is too much noise and disruption in classes.",
+      "A lot of time is wasted at school.",
+      "We learn many interesting things at school.",
+      "Getting good grades is important."
+    ],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "hungary:school_stress1:3_1": {
+    "orig_variable": "school_stress1:3_1",
+    "translated_stem": "School stress",
+    "translated_item": "",
+    "translated_options": [
+      "Never",
+      "Rarely",
+      "Sometimes",
+      "Often",
+      "Very often",
+      "Prefer not to answer",
+      "Don't know / Not applicable to me",
+      "I get stressed from schoolwork",
+      "I feel exhausted because of schoolwork.",
+      "I have more schoolwork than I can handle.",
+      "Thank you for completing the questionnaire!",
+      "If you feel that the questions in the survey were upsetting to you and you would like to discuss their impact on you with someone, please contact them at the following: Kék Vonal Child Crisis Foundation 116-111 (toll-free, available 24/7) Hungarian Mental First Aid Telephone Services Association (LESZ) 116-123 (toll-free, available 24/7)"
+    ],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "hungary:born1": {
+    "orig_variable": "born1",
+    "translated_stem": "When were you born? – Year",
+    "translated_item": "",
+    "translated_options": [
+      "2000",
+      "2001",
+      "2002",
+      "2003",
+      "2004",
+      "2005",
+      "2006",
+      "2007",
+      "2008",
+      "2009",
+      "2010",
+      "2011"
+    ],
+    "canonical_id": "byear1",
+    "canonical_stem": "What year were you born?",
+    "canonical_item": "",
+    "canonical_options": [
+      "2000",
+      "2001",
+      "2002",
+      "2003",
+      "2004",
+      "2005",
+      "2006",
+      "2007",
+      "2008",
+      "2009",
+      "2010",
+      "2011"
+    ]
+  },
+  "hungary:born2": {
+    "orig_variable": "born2",
+    "translated_stem": "When were you born? – Month",
+    "translated_item": "",
+    "translated_options": [
+      "January",
+      "February",
+      "March",
+      "April",
+      "May",
+      "June",
+      "July",
+      "August",
+      "September",
+      "October",
+      "November",
+      "December"
+    ],
+    "canonical_id": "bmonth1",
+    "canonical_stem": "What month were you born?",
+    "canonical_item": "",
+    "canonical_options": [
+      "January",
+      "February",
+      "March",
+      "April",
+      "May",
+      "June",
+      "July",
+      "August",
+      "September",
+      "October",
+      "November",
+      "December"
+    ]
+  },
+  "hungary:born4": {
+    "orig_variable": "born4",
+    "translated_stem": "Approximately how old were you when you came/moved to Hungary? - Selected Choice",
+    "translated_item": "",
+    "translated_options": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "10",
+      "11",
+      "12",
+      "13",
+      "14",
+      "15",
+      "16",
+      "17",
+      "18"
+    ],
+    "canonical_id": "bage1",
+    "canonical_stem": "Approximately how old were you when you came/moved to [country]?",
+    "canonical_item": "",
+    "canonical_options": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "10",
+      "11",
+      "12",
+      "13",
+      "14",
+      "15",
+      "16",
+      "17",
+      "18"
+    ]
+  },
+  "hungary:born4_1_TEXT": {
+    "orig_variable": "born4_1_TEXT",
+    "translated_stem": "Approximately how old were you when you came/moved to Hungary? - Age: - Text",
+    "translated_item": "",
+    "translated_options": [],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "hungary:schooltype": {
+    "orig_variable": "schooltype",
+    "translated_stem": "Which higher education institution and what major do you attend? - Selected Choice",
+    "translated_item": "",
+    "translated_options": [],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "hungary:ethnic1_7_TEXT": {
+    "orig_variable": "ethnic1_7_TEXT",
+    "translated_stem": "Which ethnic community do you belong to? Please select all that apply! You may select multiple answers! - Other: - Text",
+    "translated_item": "",
+    "translated_options": [],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "hungary:raia1:6_2": {
+    "orig_variable": "raia1:6_2",
+    "translated_stem": "Regulation of attention, impulsivity and activity - You are easily distracted or have trouble sticking to an activity",
+    "translated_item": "",
+    "translated_options": [
+      "NEVER true",
+      "SOMETIMES true",
+      "OFTEN true"
+    ],
+    "canonical_id": "bcfpi_raia2",
+    "canonical_stem": "The following are descriptions of emotions and behaviors that young people might experience. Please select the response that best reflects how you have felt or behaved over the past six months. You...",
+    "canonical_item": "are easily distracted or have trouble sticking to an activity",
+    "canonical_options": [
+      "NEVER true",
+      "SOMETIMES true",
+      "OFTEN true"
+    ]
+  },
+  "hungary:raia1:6_3": {
+    "orig_variable": "raia1:6_3",
+    "translated_stem": "Regulation of attention, impulsivity and activity - You jump from one activity to another",
+    "translated_item": "",
+    "translated_options": [
+      "NEVER true",
+      "SOMETIMES true",
+      "OFTEN true"
+    ],
+    "canonical_id": "bcfpi_raia3",
+    "canonical_stem": "The following are descriptions of emotions and behaviors that young people might experience. Please select the response that best reflects how you have felt or behaved over the past six months. You...",
+    "canonical_item": "jump from one activity to another",
+    "canonical_options": [
+      "NEVER true",
+      "SOMETIMES true",
+      "OFTEN true"
+    ]
+  },
+  "hungary:raia1:6_4": {
+    "orig_variable": "raia1:6_4",
+    "translated_stem": "Regulation of attention, impulsivity and activity - You have difficulty following instructions",
+    "translated_item": "",
+    "translated_options": [
+      "NEVER true",
+      "SOMETIMES true",
+      "OFTEN true"
+    ],
+    "canonical_id": "bcfpi_raia4",
+    "canonical_stem": "The following are descriptions of emotions and behaviors that young people might experience. Please select the response that best reflects how you have felt or behaved over the past six months. You...",
+    "canonical_item": "have difficulty following directions or instructions",
+    "canonical_options": [
+      "NEVER true",
+      "SOMETIMES true",
+      "OFTEN true"
+    ]
+  },
+  "hungary:raia1:6_5": {
+    "orig_variable": "raia1:6_5",
+    "translated_stem": "Regulation of attention, impulsivity and activity - You are impulsive or act without thinking",
+    "translated_item": "",
+    "translated_options": [
+      "NEVER true",
+      "SOMETIMES true",
+      "OFTEN true"
+    ],
+    "canonical_id": "bcfpi_raia5",
+    "canonical_stem": "The following are descriptions of emotions and behaviors that young people might experience. Please select the response that best reflects how you have felt or behaved over the past six months. You...",
+    "canonical_item": "are impulsive or you act without stopping to think",
+    "canonical_options": [
+      "NEVER true",
+      "SOMETIMES true",
+      "OFTEN true"
+    ]
+  },
+  "hungary:raia1:6_6": {
+    "orig_variable": "raia1:6_6",
+    "translated_stem": "Regulation of attention, impulsivity and activity - You fidget",
+    "translated_item": "",
+    "translated_options": [
+      "NEVER true",
+      "SOMETIMES true",
+      "OFTEN true"
+    ],
+    "canonical_id": "bcfpi_raia6",
+    "canonical_stem": "The following are descriptions of emotions and behaviors that young people might experience. Please select the response that best reflects how you have felt or behaved over the past six months. You...",
+    "canonical_item": "fidget",
+    "canonical_options": [
+      "NEVER true",
+      "SOMETIMES true",
+      "OFTEN true"
+    ]
+  },
+  "hungary:coop1:6_2": {
+    "orig_variable": "coop1:6_2",
+    "translated_stem": "Cooperation - You are irritable and angry",
+    "translated_item": "",
+    "translated_options": [
+      "NEVER true",
+      "SOMETIMES true",
+      "OFTEN true"
+    ],
+    "canonical_id": "bcfpi_coop2",
+    "canonical_stem": "Please select the response that best reflects how you have felt or behaved over the past six months. You...",
+    "canonical_item": "are irritable and angry",
+    "canonical_options": [
+      "NEVER true",
+      "SOMETIMES true",
+      "OFTEN true"
+    ]
+  },
+  "hungary:coop1:6_3": {
+    "orig_variable": "coop1:6_3",
+    "translated_stem": "Cooperation - You lose your temper",
+    "translated_item": "",
+    "translated_options": [
+      "NEVER true",
+      "SOMETIMES true",
+      "OFTEN true"
+    ],
+    "canonical_id": "bcfpi_coop3",
+    "canonical_stem": "Please select the response that best reflects how you have felt or behaved over the past six months. You...",
+    "canonical_item": "lose your temper",
+    "canonical_options": [
+      "NEVER true",
+      "SOMETIMES true",
+      "OFTEN true"
+    ]
+  },
+  "hungary:coop1:6_4": {
+    "orig_variable": "coop1:6_4",
+    "translated_stem": "Cooperation - You are defiant or uncooperative",
+    "translated_item": "",
+    "translated_options": [
+      "NEVER true",
+      "SOMETIMES true",
+      "OFTEN true"
+    ],
+    "canonical_id": "bcfpi_coop4",
+    "canonical_stem": "Please select the response that best reflects how you have felt or behaved over the past six months. You...",
+    "canonical_item": "are defiant or uncooperative",
+    "canonical_options": [
+      "NEVER true",
+      "SOMETIMES true",
+      "OFTEN true"
+    ]
+  },
+  "hungary:coop1:6_5": {
+    "orig_variable": "coop1:6_5",
+    "translated_stem": "Cooperation - You argue or talk back to adults",
+    "translated_item": "",
+    "translated_options": [
+      "NEVER true",
+      "SOMETIMES true",
+      "OFTEN true"
+    ],
+    "canonical_id": "bcfpi_coop5",
+    "canonical_stem": "Please select the response that best reflects how you have felt or behaved over the past six months. You...",
+    "canonical_item": "argue or talk back to adults",
+    "canonical_options": [
+      "NEVER true",
+      "SOMETIMES true",
+      "OFTEN true"
+    ]
+  },
+  "hungary:coop1:6_6": {
+    "orig_variable": "coop1:6_6",
+    "translated_stem": "Cooperation - You are resentful or spiteful",
+    "translated_item": "",
+    "translated_options": [
+      "NEVER true",
+      "SOMETIMES true",
+      "OFTEN true"
+    ],
+    "canonical_id": "bcfpi_coop6",
+    "canonical_stem": "Please select the response that best reflects how you have felt or behaved over the past six months. You...",
+    "canonical_item": "are resentful or feel spiteful",
+    "canonical_options": [
+      "NEVER true",
+      "SOMETIMES true",
+      "OFTEN true"
+    ]
+  },
+  "hungary:ma1:6_2": {
+    "orig_variable": "ma1:6_2",
+    "translated_stem": "Managing anxiety - You worry about doing better at things",
+    "translated_item": "",
+    "translated_options": [
+      "NEVER true",
+      "SOMETIMES true",
+      "OFTEN true"
+    ],
+    "canonical_id": "bcfpi_ma2",
+    "canonical_stem": "Please select the response that best reflects how you have felt or behaved over the past six months. You...",
+    "canonical_item": "worry about doing better at things",
+    "canonical_options": [
+      "NEVER true",
+      "SOMETIMES true",
+      "OFTEN true"
+    ]
+  },
+  "hungary:ma1:6_3": {
+    "orig_variable": "ma1:6_3",
+    "translated_stem": "Managing anxiety - You worry about your past behaviour",
+    "translated_item": "",
+    "translated_options": [
+      "NEVER true",
+      "SOMETIMES true",
+      "OFTEN true"
+    ],
+    "canonical_id": "bcfpi_ma3",
+    "canonical_stem": "Please select the response that best reflects how you have felt or behaved over the past six months. You...",
+    "canonical_item": "worry about your past behaviour",
+    "canonical_options": [
+      "NEVER true",
+      "SOMETIMES true",
+      "OFTEN true"
+    ]
+  },
+  "hungary:ma1:6_4": {
+    "orig_variable": "ma1:6_4",
+    "translated_stem": "Managing anxiety - You worry about doing something wrong",
+    "translated_item": "",
+    "translated_options": [
+      "NEVER true",
+      "SOMETIMES true",
+      "OFTEN true"
+    ],
+    "canonical_id": "bcfpi_ma4",
+    "canonical_stem": "Please select the response that best reflects how you have felt or behaved over the past six months. You...",
+    "canonical_item": "worry about doing the wrong thing",
+    "canonical_options": [
+      "NEVER true",
+      "SOMETIMES true",
+      "OFTEN true"
+    ]
+  },
+  "hungary:ma1:6_5": {
+    "orig_variable": "ma1:6_5",
+    "translated_stem": "Managing anxiety - You worry about things in the future",
+    "translated_item": "",
+    "translated_options": [
+      "NEVER true",
+      "SOMETIMES true",
+      "OFTEN true"
+    ],
+    "canonical_id": "bcfpi_ma5",
+    "canonical_stem": "Please select the response that best reflects how you have felt or behaved over the past six months. You...",
+    "canonical_item": "worry about things in the future",
+    "canonical_options": [
+      "NEVER true",
+      "SOMETIMES true",
+      "OFTEN true"
+    ]
+  },
+  "hungary:ma1:6_6": {
+    "orig_variable": "ma1:6_6",
+    "translated_stem": "Managing anxiety - You are afraid of making mistakes",
+    "translated_item": "",
+    "translated_options": [
+      "NEVER true",
+      "SOMETIMES true",
+      "OFTEN true"
+    ],
+    "canonical_id": "bcfpi_ma6",
+    "canonical_stem": "Please select the response that best reflects how you have felt or behaved over the past six months. You...",
+    "canonical_item": "are afraid of making mistakes",
+    "canonical_options": [
+      "NEVER true",
+      "SOMETIMES true",
+      "OFTEN true"
+    ]
+  },
+  "hungary:sa1:6_2": {
+    "orig_variable": "sa1:6_2",
+    "translated_stem": "Managing social anxiety - You feel uncomfortable because you feel that others can see you are nervous or anxious",
+    "translated_item": "",
+    "translated_options": [
+      "NEVER true",
+      "SOMETIMES true",
+      "OFTEN true"
+    ],
+    "canonical_id": "bcfpi_sa2",
+    "canonical_stem": "Please select the response that best reflects how you have felt or behaved over the past six months. You...",
+    "canonical_item": "feel uncomfortable because you feel that others could see you are nervous or anxious",
+    "canonical_options": [
+      "NEVER true",
+      "SOMETIMES true",
+      "OFTEN true"
+    ]
+  },
+  "hungary:sa1:6_3": {
+    "orig_variable": "sa1:6_3",
+    "translated_stem": "Managing social anxiety - You have problems participating in conversations or making eye contact because you feel anxious",
+    "translated_item": "",
+    "translated_options": [
+      "NEVER true",
+      "SOMETIMES true",
+      "OFTEN true"
+    ],
+    "canonical_id": "bcfpi_sa3",
+    "canonical_stem": "Please select the response that best reflects how you have felt or behaved over the past six months. You...",
+    "canonical_item": "have problems participating in conversations or making eye contact because you feel anxious",
+    "canonical_options": [
+      "NEVER true",
+      "SOMETIMES true",
+      "OFTEN true"
+    ]
+  },
+  "hungary:sa1:6_4": {
+    "orig_variable": "sa1:6_4",
+    "translated_stem": "Managing social anxiety - You want to leave or have left social events early because you are anxious",
+    "translated_item": "",
+    "translated_options": [
+      "NEVER true",
+      "SOMETIMES true",
+      "OFTEN true"
+    ],
+    "canonical_id": "bcfpi_sa4",
+    "canonical_stem": "Please select the response that best reflects how you have felt or behaved over the past six months. You...",
+    "canonical_item": "want to leave or have left social events early because of anxiety",
+    "canonical_options": [
+      "NEVER true",
+      "SOMETIMES true",
+      "OFTEN true"
+    ]
+  },
+  "hungary:sa1:6_5": {
+    "orig_variable": "sa1:6_5",
+    "translated_stem": "Managing social anxiety - You refuse/avoid going to social or school gatherings/events because you worry that you will be anxious",
+    "translated_item": "",
+    "translated_options": [
+      "NEVER true",
+      "SOMETIMES true",
+      "OFTEN true"
+    ],
+    "canonical_id": "bcfpi_sa5",
+    "canonical_stem": "Please select the response that best reflects how you have felt or behaved over the past six months. You...",
+    "canonical_item": "refuse/avoid going to social or school gatherings/outings due to worries about feeling anxious",
+    "canonical_options": [
+      "NEVER true",
+      "SOMETIMES true",
+      "OFTEN true"
+    ]
+  },
+  "hungary:sa1:6_6": {
+    "orig_variable": "sa1:6_6",
+    "translated_stem": "Managing social anxiety - You worry because your heart is beating fast or your palms are sweating at social gatherings",
+    "translated_item": "",
+    "translated_options": [
+      "NEVER true",
+      "SOMETIMES true",
+      "OFTEN true"
+    ],
+    "canonical_id": "bcfpi_sa6",
+    "canonical_stem": "Please select the response that best reflects how you have felt or behaved over the past six months. You...",
+    "canonical_item": "worry because your heart is racing or your palms are sweaty in social gatherings",
+    "canonical_options": [
+      "NEVER true",
+      "SOMETIMES true",
+      "OFTEN true"
+    ]
+  },
+  "hungary:mood1:6_2": {
+    "orig_variable": "mood1:6_2",
+    "translated_stem": "Regulating mood - You don't enjoy things that you previously enjoyed, or feel that you should enjoy",
+    "translated_item": "",
+    "translated_options": [
+      "NEVER true",
+      "SOMETIMES true",
+      "OFTEN true"
+    ],
+    "canonical_id": "bcfpi_mood2",
+    "canonical_stem": "Please select the response that best reflects how you have felt or behaved over the past six months. You...",
+    "canonical_item": "don't get pleasure from things you once enjoyed or feel you should enjoy",
+    "canonical_options": [
+      "NEVER true",
+      "SOMETIMES true",
+      "OFTEN true"
+    ]
+  },
+  "hungary:mood1:6_3": {
+    "orig_variable": "mood1:6_3",
+    "translated_stem": "Regulating mood - You are not interested in anything, or have trouble finding anything interesting",
+    "translated_item": "",
+    "translated_options": [
+      "NEVER true",
+      "SOMETIMES true",
+      "OFTEN true"
+    ],
+    "canonical_id": "bcfpi_mood3",
+    "canonical_stem": "Please select the response that best reflects how you have felt or behaved over the past six months. You...",
+    "canonical_item": "are not interested in anything or have trouble caring about anything",
+    "canonical_options": [
+      "NEVER true",
+      "SOMETIMES true",
+      "OFTEN true"
+    ]
+  },
+  "hungary:mood1:6_4": {
+    "orig_variable": "mood1:6_4",
+    "translated_stem": "Mood regulation - You feel lonely or lost",
+    "translated_item": "",
+    "translated_options": [
+      "NEVER true",
+      "SOMETIMES true",
+      "OFTEN true"
+    ],
+    "canonical_id": "bcfpi_mood4",
+    "canonical_stem": "Please select the response that best reflects how you have felt or behaved over the past six months. You...",
+    "canonical_item": "feel lonely or lost",
+    "canonical_options": [
+      "NEVER true",
+      "SOMETIMES true",
+      "OFTEN true"
+    ]
+  },
+  "hungary:mood1:6_5": {
+    "orig_variable": "mood1:6_5",
+    "translated_stem": "Mood regulation - You are not as happy as others",
+    "translated_item": "",
+    "translated_options": [
+      "NEVER true",
+      "SOMETIMES true",
+      "OFTEN true"
+    ],
+    "canonical_id": "bcfpi_mood5",
+    "canonical_stem": "Please select the response that best reflects how you have felt or behaved over the past six months. You...",
+    "canonical_item": "are not as happy as other people",
+    "canonical_options": [
+      "NEVER true",
+      "SOMETIMES true",
+      "OFTEN true"
+    ]
+  },
+  "hungary:mood1:6_6": {
+    "orig_variable": "mood1:6_6",
+    "translated_stem": "Mood regulation - You feel hopeless",
+    "translated_item": "",
+    "translated_options": [
+      "NEVER true",
+      "SOMETIMES true",
+      "OFTEN true"
+    ],
+    "canonical_id": "bcfpi_mood6",
+    "canonical_stem": "Please select the response that best reflects how you have felt or behaved over the past six months. You...",
+    "canonical_item": "feel hopeless",
+    "canonical_options": [
+      "NEVER true",
+      "SOMETIMES true",
+      "OFTEN true"
+    ]
+  },
+  "hungary:af1:6_2": {
+    "orig_variable": "af1:6_2",
+    "translated_stem": "Emotion regulation - You find it very hard to calm down when something upsets you",
+    "translated_item": "",
+    "translated_options": [
+      "NEVER true",
+      "SOMETIMES true",
+      "OFTEN true"
+    ],
+    "canonical_id": "bcfpi_af2",
+    "canonical_stem": "Please select the response that best reflects how you have felt or behaved over the past six months. You...",
+    "canonical_item": "find it very hard to calm down when you get upset",
+    "canonical_options": [
+      "NEVER true",
+      "SOMETIMES true",
+      "OFTEN true"
+    ]
+  },
+  "hungary:af1:6_3": {
+    "orig_variable": "af1:6_3",
+    "translated_stem": "Emotion regulation - Your feelings take over you, and you cannot do anything about it",
+    "translated_item": "",
+    "translated_options": [
+      "NEVER true",
+      "SOMETIMES true",
+      "OFTEN true"
+    ],
+    "canonical_id": "bcfpi_af3",
+    "canonical_stem": "Please select the response that best reflects how you have felt or behaved over the past six months. You...",
+    "canonical_item": "find your feelings just taking over and you can't do anything about it",
+    "canonical_options": [
+      "NEVER true",
+      "SOMETIMES true",
+      "OFTEN true"
+    ]
+  },
+  "hungary:af1:6_4": {
+    "orig_variable": "af1:6_4",
+    "translated_stem": "Emotion regulation - You try not to think about your feelings",
+    "translated_item": "",
+    "translated_options": [
+      "NEVER true",
+      "SOMETIMES true",
+      "OFTEN true"
+    ],
+    "canonical_id": "bcfpi_af4",
+    "canonical_stem": "Please select the response that best reflects how you have felt or behaved over the past six months. You...",
+    "canonical_item": "try hard not to think about your feelings",
+    "canonical_options": [
+      "NEVER true",
+      "SOMETIMES true",
+      "OFTEN true"
+    ]
+  },
+  "hungary:af1:6_5": {
+    "orig_variable": "af1:6_5",
+    "translated_stem": "Emotion regulation - You think that it is best to control your feelings and not think about them",
+    "translated_item": "",
+    "translated_options": [
+      "NEVER true",
+      "SOMETIMES true",
+      "OFTEN true"
+    ],
+    "canonical_id": "bcfpi_af5",
+    "canonical_stem": "Please select the response that best reflects how you have felt or behaved over the past six months. You...",
+    "canonical_item": "believe it is best to keep your feelings in control and not to think about them",
+    "canonical_options": [
+      "NEVER true",
+      "SOMETIMES true",
+      "OFTEN true"
+    ]
+  },
+  "hungary:af1:6_6": {
+    "orig_variable": "af1:6_6",
+    "translated_stem": "Emotion regulation - You keep your feelings to yourself",
+    "translated_item": "",
+    "translated_options": [
+      "NEVER true",
+      "SOMETIMES true",
+      "OFTEN true"
+    ],
+    "canonical_id": "bcfpi_af6",
+    "canonical_stem": "Please select the response that best reflects how you have felt or behaved over the past six months. You...",
+    "canonical_item": "keep your feelings to yourself",
+    "canonical_options": [
+      "NEVER true",
+      "SOMETIMES true",
+      "OFTEN true"
+    ]
+  },
+  "hungary:yf1:12_2": {
+    "orig_variable": "yf1:12_2",
+    "translated_stem": "Youth functioning  Now some questions about your daily activities. - You have trouble getting along with people your age",
+    "translated_item": "",
+    "translated_options": [
+      "NEVER true",
+      "SOMETIMES true",
+      "OFTEN true"
+    ],
+    "canonical_id": "bcfpi_yf02",
+    "canonical_stem": "Now some questions about your day-to-day activities. Following are statements that describe some of the feelings and behaviours of people your age. Please select the response that best describes you over the last 6 months. You...",
+    "canonical_item": "have trouble getting along with other people your age",
+    "canonical_options": [
+      "NEVER true",
+      "SOMETIMES true",
+      "OFTEN true"
+    ]
+  },
+  "hungary:yf1:12_3": {
+    "orig_variable": "yf1:12_3",
+    "translated_stem": "Youth functioning  Now some questions about your daily activities. - You have trouble getting along with your family",
+    "translated_item": "",
+    "translated_options": [
+      "NEVER true",
+      "SOMETIMES true",
+      "OFTEN true"
+    ],
+    "canonical_id": "bcfpi_yf03",
+    "canonical_stem": "Now some questions about your day-to-day activities. Following are statements that describe some of the feelings and behaviours of people your age. Please select the response that best describes you over the last 6 months. You...",
+    "canonical_item": "have trouble getting along with your family",
+    "canonical_options": [
+      "NEVER true",
+      "SOMETIMES true",
+      "OFTEN true"
+    ]
+  },
+  "hungary:yf1:12_4": {
+    "orig_variable": "yf1:12_4",
+    "translated_stem": "Youth functioning  Now some questions about your daily activities. - You have trouble getting along with adults, such as relatives, coaches, or the boss",
+    "translated_item": "",
+    "translated_options": [
+      "NEVER true",
+      "SOMETIMES true",
+      "OFTEN true"
+    ],
+    "canonical_id": "bcfpi_yf04",
+    "canonical_stem": "Now some questions about your day-to-day activities. Following are statements that describe some of the feelings and behaviours of people your age. Please select the response that best describes you over the last 6 months. You...",
+    "canonical_item": "have trouble getting along with adults such as relatives, couches, or employers",
+    "canonical_options": [
+      "NEVER true",
+      "SOMETIMES true",
+      "OFTEN true"
+    ]
+  },
+  "hungary:yf1:12_5": {
+    "orig_variable": "yf1:12_5",
+    "translated_stem": "Youth functioning  Now some questions about your daily activities. - You have difficulty with activities such as sports or classes",
+    "translated_item": "",
+    "translated_options": [
+      "NEVER true",
+      "SOMETIMES true",
+      "OFTEN true"
+    ],
+    "canonical_id": "bcfpi_yf05",
+    "canonical_stem": "Now some questions about your day-to-day activities. Following are statements that describe some of the feelings and behaviours of people your age. Please select the response that best describes you over the last 6 months. You...",
+    "canonical_item": "have difficulty with activities such as sports or lessons",
+    "canonical_options": [
+      "NEVER true",
+      "SOMETIMES true",
+      "OFTEN true"
+    ]
+  },
+  "hungary:yf1:12_6": {
+    "orig_variable": "yf1:12_6",
+    "translated_stem": "Youth functioning  Now some questions about your daily activities. - You have difficulty with daily routine tasks, such as getting ready in the morning, meals, bedtime, chores, or work",
+    "translated_item": "",
+    "translated_options": [
+      "NEVER true",
+      "SOMETIMES true",
+      "OFTEN true"
+    ],
+    "canonical_id": "bcfpi_yf06",
+    "canonical_stem": "Now some questions about your day-to-day activities. Following are statements that describe some of the feelings and behaviours of people your age. Please select the response that best describes you over the last 6 months. You...",
+    "canonical_item": "have difficulty with daily routines such as getting ready in the morning, at mealtime, bedtime, chores, or work",
+    "canonical_options": [
+      "NEVER true",
+      "SOMETIMES true",
+      "OFTEN true"
+    ]
+  },
+  "hungary:yf1:12_7": {
+    "orig_variable": "yf1:12_7",
+    "translated_stem": "Youth functioning  Now some questions about your daily activities. - You isolate yourself",
+    "translated_item": "",
+    "translated_options": [
+      "NEVER true",
+      "SOMETIMES true",
+      "OFTEN true"
+    ],
+    "canonical_id": "bcfpi_yf07",
+    "canonical_stem": "Now some questions about your day-to-day activities. Following are statements that describe some of the feelings and behaviours of people your age. Please select the response that best describes you over the last 6 months. You...",
+    "canonical_item": "isolate yourself",
+    "canonical_options": [
+      "NEVER true",
+      "SOMETIMES true",
+      "OFTEN true"
+    ]
+  },
+  "hungary:yf1:12_8": {
+    "orig_variable": "yf1:12_8",
+    "translated_stem": "Youth functioning  Now some questions about your daily activities. - You spend too much time watching TV, playing video games, or on the internet",
+    "translated_item": "",
+    "translated_options": [
+      "NEVER true",
+      "SOMETIMES true",
+      "OFTEN true"
+    ],
+    "canonical_id": "bcfpi_yf08",
+    "canonical_stem": "Now some questions about your day-to-day activities. Following are statements that describe some of the feelings and behaviours of people your age. Please select the response that best describes you over the last 6 months. You...",
+    "canonical_item": "spend too much time watching TV, playing video games, or on the internet",
+    "canonical_options": [
+      "NEVER true",
+      "SOMETIMES true",
+      "OFTEN true"
+    ]
+  },
+  "hungary:yf1:12_9": {
+    "orig_variable": "yf1:12_9",
+    "translated_stem": "Youth functioning  Now some questions about your daily activities. - You have trouble getting along with other students",
+    "translated_item": "",
+    "translated_options": [
+      "NEVER true",
+      "SOMETIMES true",
+      "OFTEN true"
+    ],
+    "canonical_id": "bcfpi_yf09",
+    "canonical_stem": "Now some questions about your day-to-day activities. Following are statements that describe some of the feelings and behaviours of people your age. Please select the response that best describes you over the last 6 months. You...",
+    "canonical_item": "have trouble getting along with other students",
+    "canonical_options": [
+      "NEVER true",
+      "SOMETIMES true",
+      "OFTEN true"
+    ]
+  },
+  "hungary:yf1:12_10": {
+    "orig_variable": "yf1:12_10",
+    "translated_stem": "Youth functioning  Now some questions about your daily activities. - You have trouble getting along with teachers",
+    "translated_item": "",
+    "translated_options": [
+      "NEVER true",
+      "SOMETIMES true",
+      "OFTEN true"
+    ],
+    "canonical_id": "bcfpi_yf10",
+    "canonical_stem": "Now some questions about your day-to-day activities. Following are statements that describe some of the feelings and behaviours of people your age. Please select the response that best describes you over the last 6 months. You...",
+    "canonical_item": "have trouble getting along with teachers",
+    "canonical_options": [
+      "NEVER true",
+      "SOMETIMES true",
+      "OFTEN true"
+    ]
+  },
+  "hungary:yf1:12_11": {
+    "orig_variable": "yf1:12_11",
+    "translated_stem": "Youth functioning  Now some questions about your daily activities. - You have been absent from school",
+    "translated_item": "",
+    "translated_options": [
+      "NEVER true",
+      "SOMETIMES true",
+      "OFTEN true"
+    ],
+    "canonical_id": "bcfpi_yf11",
+    "canonical_stem": "Now some questions about your day-to-day activities. Following are statements that describe some of the feelings and behaviours of people your age. Please select the response that best describes you over the last 6 months. You...",
+    "canonical_item": "have been absent from school",
+    "canonical_options": [
+      "NEVER true",
+      "SOMETIMES true",
+      "OFTEN true"
+    ]
+  },
+  "hungary:yf1:12_12": {
+    "orig_variable": "yf1:12_12",
+    "translated_stem": "Youth functioning  Now some questions about your daily activities. - You got bad grades",
+    "translated_item": "",
+    "translated_options": [
+      "NEVER true",
+      "SOMETIMES true",
+      "OFTEN true"
+    ],
+    "canonical_id": "bcfpi_yf12",
+    "canonical_stem": "Now some questions about your day-to-day activities. Following are statements that describe some of the feelings and behaviours of people your age. Please select the response that best describes you over the last 6 months. You...",
+    "canonical_item": "have been given low grades",
+    "canonical_options": [
+      "NEVER true",
+      "SOMETIMES true",
+      "OFTEN true"
+    ]
+  },
+  "hungary:ace23": {
+    "orig_variable": "ace23",
+    "translated_stem": "How were you treated cruelly most often?",
+    "translated_item": "",
+    "translated_options": [
+      "I was hit, kicked, pushed, shoved around, or locked indoors.",
+      "I was made fun of because of my race, nationality or colour",
+      "I was made fun of because of my religion",
+      "I was made fun of with sexual jokes, comments, or gestures",
+      "I was left out of activities on purpose or completely ignored",
+      "I was made fun of because of how my body or face looked",
+      "I was bullied in some other way"
+    ],
+    "canonical_id": "bmo1",
+    "canonical_stem": "How were you bullied most often?",
+    "canonical_item": "",
+    "canonical_options": [
+      "I was hit, kicked, pushed, shoved around, or locked indoors.",
+      "I was made fun of because of my race, nationality or colour",
+      "I was made fun of because of my religion",
+      "I was made fun of with sexual jokes, comments, or gestures",
+      "I was left out of activities on purpose or completely ignored",
+      "I was made fun of because of how my body or face looked",
+      "I was bullied in some other way"
+    ]
+  },
+  "hungary:cyrm1:12_2": {
+    "orig_variable": "cyrm1:12_2",
+    "translated_stem": "To what extent do the following statements apply to you?",
+    "translated_item": "Getting an education is important to me",
+    "translated_options": [
+      "Not at all",
+      "A little",
+      "Somewhat",
+      "Quite a bit",
+      "A lot"
+    ],
+    "canonical_id": "cyrm02",
+    "canonical_stem": "To what extent do the following statements apply to you?",
+    "canonical_item": "Getting an education is important to me",
+    "canonical_options": [
+      "Not at all",
+      "A little",
+      "Somewhat",
+      "Quite a bit",
+      "A lot"
+    ]
+  },
+  "hungary:cyrm1:12_3": {
+    "orig_variable": "cyrm1:12_3",
+    "translated_stem": "To what extent do the following statements apply to you?",
+    "translated_item": "My parents/caregivers know a lot about me",
+    "translated_options": [
+      "Not at all",
+      "A little",
+      "Somewhat",
+      "Quite a bit",
+      "A lot"
+    ],
+    "canonical_id": "cyrm03",
+    "canonical_stem": "To what extent do the following statements apply to you?",
+    "canonical_item": "My parent(s)/caregiver(s) know a lot about me",
+    "canonical_options": [
+      "Not at all",
+      "A little",
+      "Somewhat",
+      "Quite a bit",
+      "A lot"
+    ]
+  },
+  "hungary:cyrm1:12_4": {
+    "orig_variable": "cyrm1:12_4",
+    "translated_stem": "To what extent do the following statements apply to you?",
+    "translated_item": "I try to finish what I start",
+    "translated_options": [
+      "Not at all",
+      "A little",
+      "Somewhat",
+      "Quite a bit",
+      "A lot"
+    ],
+    "canonical_id": "cyrm04",
+    "canonical_stem": "To what extent do the following statements apply to you?",
+    "canonical_item": "I try to finish what I start",
+    "canonical_options": [
+      "Not at all",
+      "A little",
+      "Somewhat",
+      "Quite a bit",
+      "A lot"
+    ]
+  },
+  "hungary:cyrm1:12_5": {
+    "orig_variable": "cyrm1:12_5",
+    "translated_stem": "To what extent do the following statements apply to you?",
+    "translated_item": "I solve problems without harming myself or others (without drug use and/or violence)",
+    "translated_options": [
+      "Not at all",
+      "A little",
+      "Somewhat",
+      "Quite a bit",
+      "A lot"
+    ],
+    "canonical_id": "cyrm05",
+    "canonical_stem": "To what extent do the following statements apply to you?",
+    "canonical_item": "I solve problems without harming myself or others (by using drugs and/or being violent)",
+    "canonical_options": [
+      "Not at all",
+      "A little",
+      "Somewhat",
+      "Quite a bit",
+      "A lot"
+    ]
+  },
+  "hungary:cyrm1:12_6": {
+    "orig_variable": "cyrm1:12_6",
+    "translated_stem": "To what extent do the following statements apply to you?",
+    "translated_item": "I know where to go for help in my community",
+    "translated_options": [
+      "Not at all",
+      "A little",
+      "Somewhat",
+      "Quite a bit",
+      "A lot"
+    ],
+    "canonical_id": "cyrm06",
+    "canonical_stem": "To what extent do the following statements apply to you?",
+    "canonical_item": "I know where to go in my community to get help",
+    "canonical_options": [
+      "Not at all",
+      "A little",
+      "Somewhat",
+      "Quite a bit",
+      "A lot"
+    ]
+  },
+  "hungary:cyrm1:12_7": {
+    "orig_variable": "cyrm1:12_7",
+    "translated_stem": "To what extent do the following statements apply to you?",
+    "translated_item": "I feel part of the community at my school",
+    "translated_options": [
+      "Not at all",
+      "A little",
+      "Somewhat",
+      "Quite a bit",
+      "A lot"
+    ],
+    "canonical_id": "cyrm07",
+    "canonical_stem": "To what extent do the following statements apply to you?",
+    "canonical_item": "I feel I belong(ed) at my school",
+    "canonical_options": [
+      "Not at all",
+      "A little",
+      "Somewhat",
+      "Quite a bit",
+      "A lot"
+    ]
+  },
+  "hungary:cyrm1:12_8": {
+    "orig_variable": "cyrm1:12_8",
+    "translated_stem": "To what extent do the following statements apply to you?",
+    "translated_item": "My family stands by me in difficult times",
+    "translated_options": [
+      "Not at all",
+      "A little",
+      "Somewhat",
+      "Quite a bit",
+      "A lot"
+    ],
+    "canonical_id": "cyrm08",
+    "canonical_stem": "To what extent do the following statements apply to you?",
+    "canonical_item": "My family will stand by me during difficult times",
+    "canonical_options": [
+      "Not at all",
+      "A little",
+      "Somewhat",
+      "Quite a bit",
+      "A lot"
+    ]
+  },
+  "hungary:cyrm1:12_9": {
+    "orig_variable": "cyrm1:12_9",
+    "translated_stem": "To what extent do the following statements apply to you?",
+    "translated_item": "My friends stand by me in difficult times",
+    "translated_options": [
+      "Not at all",
+      "A little",
+      "Somewhat",
+      "Quite a bit",
+      "A lot"
+    ],
+    "canonical_id": "cyrm09",
+    "canonical_stem": "To what extent do the following statements apply to you?",
+    "canonical_item": "My friends stand by me during difficult times",
+    "canonical_options": [
+      "Not at all",
+      "A little",
+      "Somewhat",
+      "Quite a bit",
+      "A lot"
+    ]
+  },
+  "hungary:cyrm1:12_10": {
+    "orig_variable": "cyrm1:12_10",
+    "translated_stem": "To what extent do the following statements apply to you?",
+    "translated_item": "I am treated fairly in my community",
+    "translated_options": [
+      "Not at all",
+      "A little",
+      "Somewhat",
+      "Quite a bit",
+      "A lot"
+    ],
+    "canonical_id": "cyrm10",
+    "canonical_stem": "To what extent do the following statements apply to you?",
+    "canonical_item": "I am treated fairly in my community",
+    "canonical_options": [
+      "Not at all",
+      "A little",
+      "Somewhat",
+      "Quite a bit",
+      "A lot"
+    ]
+  },
+  "hungary:cyrm1:12_11": {
+    "orig_variable": "cyrm1:12_11",
+    "translated_stem": "To what extent do the following statements apply to you?",
+    "translated_item": "I have the opportunity to develop skills that will be useful later in life",
+    "translated_options": [
+      "Not at all",
+      "A little",
+      "Somewhat",
+      "Quite a bit",
+      "A lot"
+    ],
+    "canonical_id": "cyrm11",
+    "canonical_stem": "To what extent do the following statements apply to you?",
+    "canonical_item": "I have opportunities to develop skills that will be useful later in life",
+    "canonical_options": [
+      "Not at all",
+      "A little",
+      "Somewhat",
+      "Quite a bit",
+      "A lot"
+    ]
+  },
+  "hungary:cyrm1:12_12": {
+    "orig_variable": "cyrm1:12_12",
+    "translated_stem": "To what extent do the following statements apply to you?",
+    "translated_item": "I take pleasure in cultural and family traditions",
+    "translated_options": [
+      "Not at all",
+      "A little",
+      "Somewhat",
+      "Quite a bit",
+      "A lot"
+    ],
+    "canonical_id": "cyrm12",
+    "canonical_stem": "To what extent do the following statements apply to you?",
+    "canonical_item": "I enjoy my cultural and family traditions",
+    "canonical_options": [
+      "Not at all",
+      "A little",
+      "Somewhat",
+      "Quite a bit",
+      "A lot"
+    ]
+  },
+  "hungary:kidscreen 1 and 9_2": {
+    "orig_variable": "kidscreen 1 and 9_2",
+    "translated_stem": "In the past week...",
+    "translated_item": "Did you get on well at school?",
+    "translated_options": [
+      "Not at all",
+      "A little",
+      "Quite",
+      "Very",
+      "To a great extent"
+    ],
+    "canonical_id": "ksa2",
+    "canonical_stem": "When you think about the past week...",
+    "canonical_item": "Have you got on well at school/university/job?",
+    "canonical_options": [
+      "Not at all",
+      "A little",
+      "Quite",
+      "Very",
+      "To a great extent"
+    ]
+  },
+  "hungary:kidscreen 2-8 and 10_1": {
+    "orig_variable": "kidscreen 2-8 and 10_1",
+    "translated_stem": "In the past week...",
+    "translated_item": "Did you feel that you were full of energy?",
+    "translated_options": [
+      "Never",
+      "Rarely",
+      "Quite often",
+      "Very often",
+      "Always"
+    ],
+    "canonical_id": "ks1",
+    "canonical_stem": "When you think about the past week...",
+    "canonical_item": "Have you felt full of energy?",
+    "canonical_options": [
+      "Never",
+      "Rarely",
+      "Quite often",
+      "Very often",
+      "Always"
+    ]
+  },
+  "hungary:kidscreen 2-8 and 10_2": {
+    "orig_variable": "kidscreen 2-8 and 10_2",
+    "translated_stem": "In the past week...",
+    "translated_item": "Were you sad?",
+    "translated_options": [
+      "Never",
+      "Rarely",
+      "Quite often",
+      "Very often",
+      "Always"
+    ],
+    "canonical_id": "ks2",
+    "canonical_stem": "When you think about the past week...",
+    "canonical_item": "Have you felt sad?",
+    "canonical_options": [
+      "Never",
+      "Rarely",
+      "Quite often",
+      "Very often",
+      "Always"
+    ]
+  },
+  "hungary:kidscreen 2-8 and 10_3": {
+    "orig_variable": "kidscreen 2-8 and 10_3",
+    "translated_stem": "In the past week...",
+    "translated_item": "Did you feel lonely?",
+    "translated_options": [
+      "Never",
+      "Rarely",
+      "Quite often",
+      "Very often",
+      "Always"
+    ],
+    "canonical_id": "ks3",
+    "canonical_stem": "When you think about the past week...",
+    "canonical_item": "Have you felt lonely?",
+    "canonical_options": [
+      "Never",
+      "Rarely",
+      "Quite often",
+      "Very often",
+      "Always"
+    ]
+  },
+  "hungary:kidscreen 2-8 and 10_4": {
+    "orig_variable": "kidscreen 2-8 and 10_4",
+    "translated_stem": "In the past week...",
+    "translated_item": "Did you have enough time for yourself?",
+    "translated_options": [
+      "Never",
+      "Rarely",
+      "Quite often",
+      "Very often",
+      "Always"
+    ],
+    "canonical_id": "ks4",
+    "canonical_stem": "When you think about the past week...",
+    "canonical_item": "Have you had enough time for yourself?",
+    "canonical_options": [
+      "Never",
+      "Rarely",
+      "Quite often",
+      "Very often",
+      "Always"
+    ]
+  },
+  "hungary:kidscreen 2-8 and 10_5": {
+    "orig_variable": "kidscreen 2-8 and 10_5",
+    "translated_stem": "In the past week...",
+    "translated_item": "Could you do what you wanted in your free time?",
+    "translated_options": [
+      "Never",
+      "Rarely",
+      "Quite often",
+      "Very often",
+      "Always"
+    ],
+    "canonical_id": "ks5",
+    "canonical_stem": "When you think about the past week...",
+    "canonical_item": "Have you been able to do the things you want to do in your free time?",
+    "canonical_options": [
+      "Never",
+      "Rarely",
+      "Quite often",
+      "Very often",
+      "Always"
+    ]
+  },
+  "hungary:kidscreen 2-8 and 10_6": {
+    "orig_variable": "kidscreen 2-8 and 10_6",
+    "translated_stem": "In the past week...",
+    "translated_item": "Did your parents treat you fairly?",
+    "translated_options": [
+      "Never",
+      "Rarely",
+      "Quite often",
+      "Very often",
+      "Always"
+    ],
+    "canonical_id": "ks6",
+    "canonical_stem": "When you think about the past week...",
+    "canonical_item": "Have your parent(s) treated you fairly?",
+    "canonical_options": [
+      "Never",
+      "Rarely",
+      "Quite often",
+      "Very often",
+      "Always"
+    ]
+  },
+  "hungary:kidscreen 2-8 and 10_7": {
+    "orig_variable": "kidscreen 2-8 and 10_7",
+    "translated_stem": "In the past week...",
+    "translated_item": "Did you have a good time with your friends?",
+    "translated_options": [
+      "Never",
+      "Rarely",
+      "Quite often",
+      "Very often",
+      "Always"
+    ],
+    "canonical_id": "ks7",
+    "canonical_stem": "When you think about the past week...",
+    "canonical_item": "Have you had fun with your friends?",
+    "canonical_options": [
+      "Never",
+      "Rarely",
+      "Quite often",
+      "Very often",
+      "Always"
+    ]
+  },
+  "hungary:kidscreen 2-8 and 10_8": {
+    "orig_variable": "kidscreen 2-8 and 10_8",
+    "translated_stem": "In the past week...",
+    "translated_item": "Were you able to pay attention? (E.g., to the teacher in class.)",
+    "translated_options": [
+      "Never",
+      "Rarely",
+      "Quite often",
+      "Very often",
+      "Always"
+    ],
+    "canonical_id": "ks8",
+    "canonical_stem": "When you think about the past week...",
+    "canonical_item": "Have you been able to pay attention?",
+    "canonical_options": [
+      "Never",
+      "Rarely",
+      "Quite often",
+      "Very often",
+      "Always"
+    ]
+  },
+  "hungary:some_week1:5_2": {
+    "orig_variable": "some_week1:5_2",
+    "translated_stem": "Think about a normal weekday. How much time do you spend on the following activities per day?",
+    "translated_item": "Playing games on your phone",
+    "translated_options": [
+      "Less than 1 hour",
+      "1-2 hours",
+      "3-4 hours",
+      "5-6 hours",
+      "7 hours or more"
+    ],
+    "canonical_id": "smwd2",
+    "canonical_stem": "Think about a normal weekday. How much time do you spend on the following activities?",
+    "canonical_item": "Playing games on your phone",
+    "canonical_options": [
+      "Less than 1 hour",
+      "1-2 hours",
+      "3-4 hours",
+      "5-6 hours",
+      "7 hours or more"
+    ]
+  },
+  "hungary:some_week1:5_3": {
+    "orig_variable": "some_week1:5_3",
+    "translated_stem": "Think about a normal weekday. How much time do you spend on the following activities per day?",
+    "translated_item": "Chatting or sending pictures to friends (e.g., Snapchat, Messenger, WhatsApp)",
+    "translated_options": [
+      "Less than 1 hour",
+      "1-2 hours",
+      "3-4 hours",
+      "5-6 hours",
+      "7 hours or more"
+    ],
+    "canonical_id": "smwd3",
+    "canonical_stem": "Think about a normal weekday. How much time do you spend on the following activities?",
+    "canonical_item": "Chatting or sending pictures to friends (e.g., Snapchat, Messenger, WhatsApp)",
+    "canonical_options": [
+      "Less than 1 hour",
+      "1-2 hours",
+      "3-4 hours",
+      "5-6 hours",
+      "7 hours or more"
+    ]
+  },
+  "hungary:some_week1:5_4": {
+    "orig_variable": "some_week1:5_4",
+    "translated_stem": "Think about a normal weekday. How much time do you spend on the following activities per day?",
+    "translated_item": "Chatting with AI apps, chatbots (e.g., ChatGPT)",
+    "translated_options": [],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "hungary:some_week1:5_5": {
+    "orig_variable": "some_week1:5_5",
+    "translated_stem": "Think about a normal weekday. How much time do you spend on the following activities per day?",
+    "translated_item": "Watching videos or streams (e.g., YouTube, Twitch)",
+    "translated_options": [
+      "Less than 1 hour",
+      "1-2 hours",
+      "3-4 hours",
+      "5-6 hours",
+      "7 hours or more"
+    ],
+    "canonical_id": "smwd4",
+    "canonical_stem": "Think about a normal weekday. How much time do you spend on the following activities?",
+    "canonical_item": "Watching videos or streams (e.g., YouTube, Twitch)",
+    "canonical_options": [
+      "Less than 1 hour",
+      "1-2 hours",
+      "3-4 hours",
+      "5-6 hours",
+      "7 hours or more"
+    ]
+  },
+  "hungary:some_week1:5_6": {
+    "orig_variable": "some_week1:5_6",
+    "translated_stem": "Think about a normal weekday. How much time do you spend on the following activities per day?",
+    "translated_item": "Scrolling through short videos (shorts) or image feeds (e.g., TikTok, Instagram, YouTube shorts)",
+    "translated_options": [
+      "Less than 1 hour",
+      "1-2 hours",
+      "3-4 hours",
+      "5-6 hours",
+      "7 hours or more"
+    ],
+    "canonical_id": "smwd5",
+    "canonical_stem": "Think about a normal weekday. How much time do you spend on the following activities?",
+    "canonical_item": "Scrolling through short videos or image feeds (e.g., on TikTok, Instagram, YouTube shorts)",
+    "canonical_options": [
+      "Less than 1 hour",
+      "1-2 hours",
+      "3-4 hours",
+      "5-6 hours",
+      "7 hours or more"
+    ]
+  },
+  "hungary:some_weekend1:5_2": {
+    "orig_variable": "some_weekend1:5_2",
+    "translated_stem": "Think about a normal weekend day. How much time do you spend on the following activities per day?",
+    "translated_item": "Playing games on your phone",
+    "translated_options": [
+      "Less than 1 hour",
+      "1-2 hours",
+      "3-4 hours",
+      "5-6 hours",
+      "7 hours or more"
+    ],
+    "canonical_id": "smwda2",
+    "canonical_stem": "Think about a normal weekend day. How much time do you spend on the following activities?",
+    "canonical_item": "Playing games on your phone",
+    "canonical_options": [
+      "Less than 1 hour",
+      "1-2 hours",
+      "3-4 hours",
+      "5-6 hours",
+      "7 hours or more"
+    ]
+  },
+  "hungary:some_weekend1:5_3": {
+    "orig_variable": "some_weekend1:5_3",
+    "translated_stem": "Think about a normal weekend day. How much time do you spend on the following activities per day?",
+    "translated_item": "Chatting or sending pictures to friends (e.g., Snapchat, Messenger, WhatsApp)",
+    "translated_options": [
+      "Less than 1 hour",
+      "1-2 hours",
+      "3-4 hours",
+      "5-6 hours",
+      "7 hours or more"
+    ],
+    "canonical_id": "smwda3",
+    "canonical_stem": "Think about a normal weekend day. How much time do you spend on the following activities?",
+    "canonical_item": "Chatting or sending pictures to friends (e.g., Snapchat, Messenger, WhatsApp)",
+    "canonical_options": [
+      "Less than 1 hour",
+      "1-2 hours",
+      "3-4 hours",
+      "5-6 hours",
+      "7 hours or more"
+    ]
+  },
+  "hungary:some_weekend1:5_4": {
+    "orig_variable": "some_weekend1:5_4",
+    "translated_stem": "Think about a normal weekend day. How much time do you spend on the following activities per day?",
+    "translated_item": "Chatting with AI apps, chatbots (e.g., ChatGPT)",
+    "translated_options": [],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "hungary:some_weekend1:5_5": {
+    "orig_variable": "some_weekend1:5_5",
+    "translated_stem": "Think about a normal weekend day. How much time do you spend on the following activities per day?",
+    "translated_item": "Watching videos or streams (e.g., YouTube, Twitch)",
+    "translated_options": [
+      "Less than 1 hour",
+      "1-2 hours",
+      "3-4 hours",
+      "5-6 hours",
+      "7 hours or more"
+    ],
+    "canonical_id": "smwda4",
+    "canonical_stem": "Think about a normal weekend day. How much time do you spend on the following activities?",
+    "canonical_item": "Watching videos or streams (e.g., YouTube, Twitch)",
+    "canonical_options": [
+      "Less than 1 hour",
+      "1-2 hours",
+      "3-4 hours",
+      "5-6 hours",
+      "7 hours or more"
+    ]
+  },
+  "hungary:some_weekend1:5_6": {
+    "orig_variable": "some_weekend1:5_6",
+    "translated_stem": "Think about a normal weekend day. How much time do you spend on the following activities per day?",
+    "translated_item": "Scrolling through short videos (shorts) or image feeds (e.g., TikTok, Instagram, YouTube shorts)",
+    "translated_options": [
+      "Less than 1 hour",
+      "1-2 hours",
+      "3-4 hours",
+      "5-6 hours",
+      "7 hours or more"
+    ],
+    "canonical_id": "smwda5",
+    "canonical_stem": "Think about a normal weekend day. How much time do you spend on the following activities?",
+    "canonical_item": "Scrolling through short videos or image feeds (e.g., on TikTok, Instagram, YouTube shorts)",
+    "canonical_options": [
+      "Less than 1 hour",
+      "1-2 hours",
+      "3-4 hours",
+      "5-6 hours",
+      "7 hours or more"
+    ]
+  },
+  "hungary:some_use1:6_2": {
+    "orig_variable": "some_use1:6_2",
+    "translated_stem": "For each of the following life areas, please indicate how often your use of phone, computer or gaming console has a negative effect on them!",
+    "translated_item": "Schoolwork",
+    "translated_options": [
+      "Nearly all the time",
+      "Often",
+      "Sometimes",
+      "Rarely",
+      "Never"
+    ],
+    "canonical_id": "smharm2",
+    "canonical_stem": "For each of the following life areas, please indicate how often your use of phone, computer or gaming console has a negative effect",
+    "canonical_item": "Schoolwork",
+    "canonical_options": [
+      "Nearly all the time",
+      "Often",
+      "Sometimes",
+      "Rarely",
+      "Never"
+    ]
+  },
+  "hungary:some_use1:6_3": {
+    "orig_variable": "some_use1:6_3",
+    "translated_stem": "For each of the following life areas, please indicate how often your use of phone, computer or gaming console has a negative effect on them!",
+    "translated_item": "Self-esteem/mental health",
+    "translated_options": [
+      "Nearly all the time",
+      "Often",
+      "Sometimes",
+      "Rarely",
+      "Never"
+    ],
+    "canonical_id": "smharm3",
+    "canonical_stem": "For each of the following life areas, please indicate how often your use of phone, computer or gaming console has a negative effect",
+    "canonical_item": "Self-esteem/mental health",
+    "canonical_options": [
+      "Nearly all the time",
+      "Often",
+      "Sometimes",
+      "Rarely",
+      "Never"
+    ]
+  },
+  "hungary:some_use1:6_4": {
+    "orig_variable": "some_use1:6_4",
+    "translated_stem": "For each of the following life areas, please indicate how often your use of phone, computer or gaming console has a negative effect on them!",
+    "translated_item": "Friendships / relationships with friends",
+    "translated_options": [
+      "Nearly all the time",
+      "Often",
+      "Sometimes",
+      "Rarely",
+      "Never"
+    ],
+    "canonical_id": "smharm4",
+    "canonical_stem": "For each of the following life areas, please indicate how often your use of phone, computer or gaming console has a negative effect",
+    "canonical_item": "Relationships with friends",
+    "canonical_options": [
+      "Nearly all the time",
+      "Often",
+      "Sometimes",
+      "Rarely",
+      "Never"
+    ]
+  },
+  "hungary:some_use1:6_5": {
+    "orig_variable": "some_use1:6_5",
+    "translated_stem": "For each of the following life areas, please indicate how often your use of phone, computer or gaming console has a negative effect on them!",
+    "translated_item": "Family relationships / relationships with family",
+    "translated_options": [
+      "Nearly all the time",
+      "Often",
+      "Sometimes",
+      "Rarely",
+      "Never"
+    ],
+    "canonical_id": "smharm5",
+    "canonical_stem": "For each of the following life areas, please indicate how often your use of phone, computer or gaming console has a negative effect",
+    "canonical_item": "Relationships with family",
+    "canonical_options": [
+      "Nearly all the time",
+      "Often",
+      "Sometimes",
+      "Rarely",
+      "Never"
+    ]
+  },
+  "hungary:some_use1:6_6": {
+    "orig_variable": "some_use1:6_6",
+    "translated_stem": "For each of the following life areas, please indicate how often your use of phone, computer or gaming console has a negative effect on them!",
+    "translated_item": "Outdoor activities or sports",
+    "translated_options": [
+      "Nearly all the time",
+      "Often",
+      "Sometimes",
+      "Rarely",
+      "Never"
+    ],
+    "canonical_id": "smharm6",
+    "canonical_stem": "For each of the following life areas, please indicate how often your use of phone, computer or gaming console has a negative effect",
+    "canonical_item": "Doing outdoor activities or sports",
+    "canonical_options": [
+      "Nearly all the time",
+      "Often",
+      "Sometimes",
+      "Rarely",
+      "Never"
+    ]
+  },
+  "hungary:some_apps1_15_TEXT": {
+    "orig_variable": "some_apps1_15_TEXT",
+    "translated_stem": "Please select the three apps or services that you use most often! - Other: - Text",
+    "translated_item": "",
+    "translated_options": [],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "hungary:dasc01:25_2": {
+    "orig_variable": "dasc01:25_2",
+    "translated_stem": "When you read the word 'device' in the sentences below, think of any device that has a screen: PlayStation, Xbox, smartphone, tablet, laptop, computer, handheld console, etc. 'Using my device' means playing games on it, messaging someone, checking social media sites, watching TikTok or YouTube videos, movies, series, etc. Select the answer that was true for you during the past week. There are no right or wrong answers! - I feel that I need to spend more time using my device",
+    "translated_item": "",
+    "translated_options": [],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "hungary:dasc01:25_3": {
+    "orig_variable": "dasc01:25_3",
+    "translated_stem": "When you read the word 'device' in the sentences below, think of any device that has a screen: PlayStation, Xbox, smartphone, tablet, laptop, computer, handheld console, etc. 'Using my device' means playing games on it, messaging someone, checking social media sites, watching TikTok or YouTube videos, movies, series, etc. Select the answer that was true for you during the past week. There are no right or wrong answers! - I become tense if I cannot use my device",
+    "translated_item": "",
+    "translated_options": [],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "hungary:dasc01:25_4": {
+    "orig_variable": "dasc01:25_4",
+    "translated_stem": "When you read the word 'device' in the sentences below, think of any device that has a screen: PlayStation, Xbox, smartphone, tablet, laptop, computer, handheld console, etc. 'Using my device' means playing games on it, messaging someone, checking social media sites, watching TikTok or YouTube videos, movies, series, etc. Select the answer that was true for you during the past week. There are no right or wrong answers! - I lie to my parents about how much time I spend using my device",
+    "translated_item": "",
+    "translated_options": [],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "hungary:dasc01:25_5": {
+    "orig_variable": "dasc01:25_5",
+    "translated_stem": "When you read the word 'device' in the sentences below, think of any device that has a screen: PlayStation, Xbox, smartphone, tablet, laptop, computer, handheld console, etc. 'Using my device' means playing games on it, messaging someone, checking social media sites, watching TikTok or YouTube videos, movies, series, etc. Select the answer that was true for you during the past week. There are no right or wrong answers! - Using my device helps me forget about my problems",
+    "translated_item": "",
+    "translated_options": [],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "hungary:dasc01:25_6": {
+    "orig_variable": "dasc01:25_6",
+    "translated_stem": "When you read the word 'device' in the sentences below, think of any device that has a screen: PlayStation, Xbox, smartphone, tablet, laptop, computer, handheld console, etc. 'Using my device' means playing games on it, messaging someone, checking social media sites, watching TikTok or YouTube videos, movies, series, etc. Mark the answer that was true for you in the past week. There are no right or wrong answers! - I do not spend time with my family members because I prefer using my device",
+    "translated_item": "",
+    "translated_options": [],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "hungary:dasc01:25_7": {
+    "orig_variable": "dasc01:25_7",
+    "translated_stem": "When you read the word 'device' in the sentences below, think of any device that has a screen: PlayStation, Xbox, smartphone, tablet, laptop, computer, handheld console, etc. 'Using my device' means playing games on it, messaging someone, checking social media sites, watching TikTok or YouTube videos, movies, series, etc. Mark the answer that was true for you in the past week. There are no right or wrong answers! - I spend more and more time using my device",
+    "translated_item": "",
+    "translated_options": [],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "hungary:dasc01:25_8": {
+    "orig_variable": "dasc01:25_8",
+    "translated_stem": "When you read the word 'device' in the sentences below, think of any device that has a screen: PlayStation, Xbox, smartphone, tablet, laptop, computer, handheld console, etc. 'Using my device' means playing games on it, messaging someone, checking social media sites, watching TikTok or YouTube videos, movies, series, etc. Mark the answer that was true for you in the past week. There are no right or wrong answers! - I get annoyed when I am asked to stop using my device",
+    "translated_item": "",
+    "translated_options": [],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "hungary:dasc01:25_9": {
+    "orig_variable": "dasc01:25_9",
+    "translated_stem": "When you read the word 'device' in the sentences below, think of any device that has a screen: PlayStation, Xbox, smartphone, tablet, laptop, computer, handheld console, etc. 'Using my device' means playing games on it, messaging someone, checking social media sites, watching TikTok or YouTube videos, movies, series, etc. Mark the answer that was true for you in the past week. There are no right or wrong answers! - My parents try to prevent or limit my device use, but they do not succeed",
+    "translated_item": "",
+    "translated_options": [],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "hungary:dasc01:25_10": {
+    "orig_variable": "dasc01:25_10",
+    "translated_stem": "When you read the word 'device' in the sentences below, think of any device that has a screen: PlayStation, Xbox, smartphone, tablet, laptop, computer, handheld console, etc. 'Using my device' means playing games on it, messaging someone, checking social media sites, watching TikTok or YouTube videos, movies, series, etc. Mark the answer that was true for you in the past week. There are no right or wrong answers! - I sleep less because of using my device",
+    "translated_item": "",
+    "translated_options": [],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "hungary:dasc01:25_11": {
+    "orig_variable": "dasc01:25_11",
+    "translated_stem": "When you read the word 'device' in the sentences below, think of any device that has a screen: PlayStation, Xbox, smartphone, tablet, laptop, computer, handheld console, etc. 'Using my device' means playing games on it, messaging someone, checking social media sites, watching TikTok or YouTube videos, movies, series, etc. Mark the answer that was true for you in the past week. There are no right or wrong answers! - When I don't have my device with me, I think about what I usually do on it (video games, social media, messaging, etc.)",
+    "translated_item": "",
+    "translated_options": [],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "hungary:dasc01:25_12": {
+    "orig_variable": "dasc01:25_12",
+    "translated_stem": "When you read the word 'device' in the sentences below, think of any device that has a screen: PlayStation, Xbox, smartphone, tablet, laptop, computer, handheld console, etc. 'Using my device' means playing games on it, messaging someone, checking social media sites, watching TikTok or YouTube videos, movies, series, etc. Mark the answer that was true for you in the past week. There are no right or wrong answers! - I feel tense if I cannot use my device.",
+    "translated_item": "",
+    "translated_options": [],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "hungary:dasc01:25_13": {
+    "orig_variable": "dasc01:25_13",
+    "translated_stem": "When you read the word 'device' in the sentences below, think of any device that has a screen: PlayStation, Xbox, smartphone, tablet, laptop, computer, handheld console, etc. 'Using my device' means playing games on it, messaging someone, checking social media sites, watching TikTok or YouTube videos, movies, series, etc. Mark the answer that was true for you in the past week. There are no right or wrong answers! - I have conflicts with my parents regarding how much time I spend using my device",
+    "translated_item": "",
+    "translated_options": [],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "hungary:dasc01:25_14": {
+    "orig_variable": "dasc01:25_14",
+    "translated_stem": "When you read the word 'device' in the sentences below, think of any device that has a screen: PlayStation, Xbox, smartphone, tablet, laptop, computer, handheld console, etc. 'Using my device' means playing games on it, messaging someone, checking social media sites, watching TikTok or YouTube videos, movies, series, etc. Mark the answer that was true for you in the past week. There are no right or wrong answers! - Using my device is the most important thing in my life",
+    "translated_item": "",
+    "translated_options": [],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "hungary:dasc01:25_15": {
+    "orig_variable": "dasc01:25_15",
+    "translated_stem": "When you read the word 'device' in the sentences below, think of any device that has a screen: PlayStation, Xbox, smartphone, tablet, laptop, computer, handheld console, etc. 'Using my device' means playing games on it, messaging someone, checking social media sites, watching TikTok or YouTube videos, movies, series, etc. Mark the answer that was true for you in the past week. There are no right or wrong answers! - Using my device is more enjoyable than other things",
+    "translated_item": "",
+    "translated_options": [],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "hungary:dasc01:25_16": {
+    "orig_variable": "dasc01:25_16",
+    "translated_stem": "When you read the word 'device' in the sentences below, think of any device that has a screen: PlayStation, Xbox, smartphone, tablet, laptop, computer, handheld console, etc. 'Using my device' means playing games on it, messaging someone, checking social media sites, watching TikTok or YouTube videos, movies, series, etc. Mark the answer that was true for you in the past week. There are no right or wrong answers! - I lie to my parents about what I do on my device",
+    "translated_item": "",
+    "translated_options": [],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "hungary:dasc01:25_17": {
+    "orig_variable": "dasc01:25_17",
+    "translated_stem": "When you read the word 'device' in the sentences below, think of any device that has a screen: PlayStation, Xbox, smartphone, tablet, laptop, computer, handheld console, etc. 'Using my device' means playing games on it, messaging someone, checking social media sites, watching TikTok or YouTube videos, movies, series, etc. Mark the answer that was true for you in the past week. There are no right or wrong answers! - I cannot control my device use",
+    "translated_item": "",
+    "translated_options": [],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "hungary:dasc01:25_18": {
+    "orig_variable": "dasc01:25_18",
+    "translated_stem": "When you read the word 'device' in the sentences below, think of any device that has a screen: PlayStation, Xbox, smartphone, tablet, laptop, computer, handheld console, etc. 'Using my device' means playing games on it, messaging someone, checking social media sites, watching TikTok or YouTube videos, movies, series, etc. Mark the answer that was true for you in the past week. There are no right or wrong answers! - I have lost interest in hobbies or other activities because I prefer using my device",
+    "translated_item": "",
+    "translated_options": [],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "hungary:dasc01:25_19": {
+    "orig_variable": "dasc01:25_19",
+    "translated_stem": "When you read the word 'device' in the sentences below, think of any device that has a screen: PlayStation, Xbox, smartphone, tablet, laptop, computer, handheld console, etc. 'Using my device' means playing games on it, messaging someone, checking social media sites, watching TikTok or YouTube videos, movies, series, etc. Mark the answer that was true for you in the past week. There are no right or wrong answers! - When I stop using my device, shortly after I start using it again",
+    "translated_item": "",
+    "translated_options": [],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "hungary:dasc01:25_20": {
+    "orig_variable": "dasc01:25_20",
+    "translated_stem": "When you read the word 'device' in the sentences below, think of any device that has a screen: PlayStation, Xbox, smartphone, tablet, laptop, computer, handheld console, etc. 'Using my device' means playing games on it, messaging someone, checking social media sites, watching TikTok or YouTube videos, movies, series, etc. Mark the answer that was true for you in the past week. There are no right or wrong answers! - I check my device when doing homework or other important things",
+    "translated_item": "",
+    "translated_options": [],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "hungary:dasc01:25_21": {
+    "orig_variable": "dasc01:25_21",
+    "translated_stem": "When you read the word 'device' in the sentences below, think of any device that has a screen: PlayStation, Xbox, smartphone, tablet, laptop, computer, handheld console, etc. 'Using my device' means playing games on it, messaging someone, checking social media sites, watching TikTok or YouTube videos, movies, series, etc. Mark the answer that was true for you in the past week. There are no right or wrong answers! - I get tense when I am asked to stop using my device",
+    "translated_item": "",
+    "translated_options": [],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "hungary:dasc01:25_22": {
+    "orig_variable": "dasc01:25_22",
+    "translated_stem": "When you read the word 'device' in the sentences below, think of any device that has a screen: PlayStation, Xbox, smartphone, tablet, laptop, computer, handheld console, etc. 'Using my device' means playing games on it, messaging someone, checking social media sites, watching TikTok or YouTube videos, movies, series, etc. Mark the answer that was true for you in the past week. There are no right or wrong answers! - I get into arguments with my parents when they ask me to stop using my device",
+    "translated_item": "",
+    "translated_options": [],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "hungary:dasc01:25_23": {
+    "orig_variable": "dasc01:25_23",
+    "translated_stem": "When you read the word 'device' in the sentences below, think of any device that has a screen: PlayStation, Xbox, smartphone, tablet, laptop, computer, handheld console, etc. 'Using my device' means playing games on it, messaging someone, checking social media sites, watching TikTok or YouTube videos, movies, series, etc. Mark the answer that was true for you in the past week. There are no right or wrong answers! - I spend too much money on things related to my device",
+    "translated_item": "",
+    "translated_options": [],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "hungary:dasc01:25_24": {
+    "orig_variable": "dasc01:25_24",
+    "translated_stem": "When you read the word 'device' in the sentences below, think of any device that has a screen: PlayStation, Xbox, smartphone, tablet, laptop, computer, handheld console, etc. 'Using my device' means playing games on it, messaging someone, checking social media sites, watching TikTok or YouTube videos, movies, series, etc. Mark the answer that was true for you in the past week. There are no right or wrong answers! - When I am in a bad mood, using my device puts me in a better mood",
+    "translated_item": "",
+    "translated_options": [],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "hungary:dasc01:25_25": {
+    "orig_variable": "dasc01:25_25",
+    "translated_stem": "When you read the word 'device' in the sentences below, think of any device that has a screen: PlayStation, Xbox, smartphone, tablet, laptop, computer, handheld console, etc. 'Using my device' means playing games on it, messaging someone, checking social media sites, watching TikTok or YouTube videos, movies, series, etc. Mark the answer that was true for you in the past week. There are no right or wrong answers! - I continue to use my device even though my grades at school are getting worse",
+    "translated_item": "",
+    "translated_options": [],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "hungary:suicide1:5_2": {
+    "orig_variable": "suicide1:5_2",
+    "translated_stem": "Have you experienced or done any of the following in the past 30 days or ever in your life? - Have you actually had thoughts of killing yourself?",
+    "translated_item": "",
+    "translated_options": [],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "hungary:suicide1:5_3": {
+    "orig_variable": "suicide1:5_3",
+    "translated_stem": "Have you experienced or done any of the following in the past 30 days or ever in your life? - Have you thought about how you could kill yourself?",
+    "translated_item": "",
+    "translated_options": [],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "hungary:suicide1:5_4": {
+    "orig_variable": "suicide1:5_4",
+    "translated_stem": "Have you experienced or done any of the following in the past 30 days or ever in your life? - Have you started working out or actually worked out details on how to kill yourself, and did you intend to carry out this plan?",
+    "translated_item": "",
+    "translated_options": [],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "hungary:suicide1:5_5": {
+    "orig_variable": "suicide1:5_5",
+    "translated_stem": "Have you experienced or done any of the following in the past 30 days or ever in your life? - Have you ever attempted suicide?",
+    "translated_item": "",
+    "translated_options": [],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "hungary:suicide6": {
+    "orig_variable": "suicide6",
+    "translated_stem": "If you have ever attempted suicide, how many times? - Selected Choice",
+    "translated_item": "",
+    "translated_options": [],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "hungary:suicide6_1_TEXT": {
+    "orig_variable": "suicide6_1_TEXT",
+    "translated_stem": "If you have ever attempted suicide, how many times? - This many times: - Text",
+    "translated_item": "",
+    "translated_options": [],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "hungary:sub_abuse1:3_1": {
+    "orig_variable": "sub_abuse1:3_1",
+    "translated_stem": "How often did you use the following tobacco products in the past 30 days? - Cigarettes",
+    "translated_item": "",
+    "translated_options": [],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "hungary:sub_abuse1:3_2": {
+    "orig_variable": "sub_abuse1:3_2",
+    "translated_stem": "How often did you use the following tobacco products in the past 30 days? - E-cigarettes (e.g. iqos, elfbar, poco)",
+    "translated_item": "",
+    "translated_options": [],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "hungary:sub_abuse1:3_3": {
+    "orig_variable": "sub_abuse1:3_3",
+    "translated_stem": "How often did you use the following tobacco products in the past 30 days? - Oral tobacco (snus)",
+    "translated_item": "",
+    "translated_options": [],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "hungary:sub_abuse4:6_1": {
+    "orig_variable": "sub_abuse4:6_1",
+    "translated_stem": "How often did you use the following tobacco products in your lifetime? - Cigarettes",
+    "translated_item": "",
+    "translated_options": [],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "hungary:sub_abuse4:6_2": {
+    "orig_variable": "sub_abuse4:6_2",
+    "translated_stem": "How often did you use the following tobacco products in your lifetime? - E-cigarettes (e.g. iqos, elfbar, poco)",
+    "translated_item": "",
+    "translated_options": [],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "hungary:sub_abuse4:6_3": {
+    "orig_variable": "sub_abuse4:6_3",
+    "translated_stem": "How often did you use the following tobacco products in your lifetime? - Oral tobacco (snus)",
+    "translated_item": "",
+    "translated_options": [],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "hungary:sub_abuse7": {
+    "orig_variable": "sub_abuse7",
+    "translated_stem": "How often did you consume alcoholic beverages (e.g. beer, alcopops, wine, spirits/shots) in the past 30 days?",
+    "translated_item": "",
+    "translated_options": [],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "hungary:sub_abuse9": {
+    "orig_variable": "sub_abuse9",
+    "translated_stem": "How often did you get drunk in the past 30 days?",
+    "translated_item": "",
+    "translated_options": [],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "hungary:sub_abuse10": {
+    "orig_variable": "sub_abuse10",
+    "translated_stem": "How often did you get drunk in your lifetime?",
+    "translated_item": "",
+    "translated_options": [],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "hungary:sub_abuse12": {
+    "orig_variable": "sub_abuse12",
+    "translated_stem": "How often in your lifetime have you used prescription medication that was not prescribed to you (e.g. sedatives, stimulants)?",
+    "translated_item": "",
+    "translated_options": [],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "hungary:sub_abuse13": {
+    "orig_variable": "sub_abuse13",
+    "translated_stem": "How often in your lifetime have you used a mind-altering substance not considered a drug (such as glue, gas, paint, or cartridges)?",
+    "translated_item": "",
+    "translated_options": [],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "hungary:sub_abuse14": {
+    "orig_variable": "sub_abuse14",
+    "translated_stem": "Have you ever used any drugs?",
+    "translated_item": "",
+    "translated_options": [],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "hungary:sub_abuse15:18_1": {
+    "orig_variable": "sub_abuse15:18_1",
+    "translated_stem": "How often did you use the following drugs in the past 30 days? - Drugs smoked in a cigarette",
+    "translated_item": "",
+    "translated_options": [],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "hungary:sub_abuse15:18_2": {
+    "orig_variable": "sub_abuse15:18_2",
+    "translated_stem": "How often did you use the following drugs in the past 30 days? - Drugs taken orally",
+    "translated_item": "",
+    "translated_options": [],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "hungary:sub_abuse15:18_3": {
+    "orig_variable": "sub_abuse15:18_3",
+    "translated_stem": "How often have you used the following drugs during the past 30 days? - Drugs snorted through the nose",
+    "translated_item": "",
+    "translated_options": [],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "hungary:sub_abuse15:18_4": {
+    "orig_variable": "sub_abuse15:18_4",
+    "translated_stem": "How often have you used the following drugs during the past 30 days? - Drugs injected intravenously (into a vein)",
+    "translated_item": "",
+    "translated_options": [],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "hungary:sub_abuse19:22_1": {
+    "orig_variable": "sub_abuse19:22_1",
+    "translated_stem": "How often have you used the following drugs during your lifetime? - Drugs smoked in a cigarette",
+    "translated_item": "",
+    "translated_options": [],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "hungary:sub_abuse19:22_2": {
+    "orig_variable": "sub_abuse19:22_2",
+    "translated_stem": "How often have you used the following drugs during your lifetime? - Drugs taken orally",
+    "translated_item": "",
+    "translated_options": [],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "hungary:sub_abuse19:22_3": {
+    "orig_variable": "sub_abuse19:22_3",
+    "translated_stem": "How often have you used the following drugs during your lifetime? - Drugs snorted through the nose",
+    "translated_item": "",
+    "translated_options": [],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "hungary:sub_abuse19:22_4": {
+    "orig_variable": "sub_abuse19:22_4",
+    "translated_stem": "How often have you used the following drugs during your lifetime? - Drugs injected intravenously (into a vein)",
+    "translated_item": "",
+    "translated_options": [],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "hungary:repa1:8_2": {
+    "orig_variable": "repa1:8_2",
+    "translated_stem": "Below are some statements about how young people communicate with their parents. Please indicate how often you feel the following in your family. - I get along well with my parents",
+    "translated_item": "",
+    "translated_options": [],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "hungary:repa1:8_3": {
+    "orig_variable": "repa1:8_3",
+    "translated_stem": "Below are some statements about how young people communicate with their parents. Please indicate how often you feel the following in your family. - My parents like me",
+    "translated_item": "",
+    "translated_options": [],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "hungary:repa1:8_4": {
+    "orig_variable": "repa1:8_4",
+    "translated_stem": "Below are some statements about how young people communicate with their parents. Please indicate how often you feel the following in your family. - I like my parents",
+    "translated_item": "",
+    "translated_options": [],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "hungary:repa1:8_5": {
+    "orig_variable": "repa1:8_5",
+    "translated_stem": "Below are some statements about how young people communicate with their parents. Please indicate how often you feel the following in your family. - My parents criticize me",
+    "translated_item": "",
+    "translated_options": [],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "hungary:repa1:8_6": {
+    "orig_variable": "repa1:8_6",
+    "translated_stem": "Below are some statements about how young people communicate with their parents. Please indicate how often you feel the following in your family. - My parents annoy me",
+    "translated_item": "",
+    "translated_options": [],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "hungary:repa1:8_7": {
+    "orig_variable": "repa1:8_7",
+    "translated_stem": "Below are some statements about how young people communicate with their parents. Please indicate how often you feel the following in your family. - My parents hurt my feelings",
+    "translated_item": "",
+    "translated_options": [],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "hungary:repa1:8_8": {
+    "orig_variable": "repa1:8_8",
+    "translated_stem": "Below are some statements about how young people communicate with their parents. Please indicate how often you feel the following in your family. - We argue with my parents",
+    "translated_item": "",
+    "translated_options": [],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "hungary:refr1:5_2": {
+    "orig_variable": "refr1:5_2",
+    "translated_stem": "To what extent do the following statements apply to you? - I have many friends",
+    "translated_item": "",
+    "translated_options": [],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "hungary:refr1:5_3": {
+    "orig_variable": "refr1:5_3",
+    "translated_stem": "To what extent do the following statements apply to you? - Other young people find it difficult to like me",
+    "translated_item": "",
+    "translated_options": [],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "hungary:refr1:5_4": {
+    "orig_variable": "refr1:5_4",
+    "translated_stem": "To what extent do the following statements apply to you? - I am popular among other young people",
+    "translated_item": "",
+    "translated_options": [],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "hungary:refr1:5_5": {
+    "orig_variable": "refr1:5_5",
+    "translated_stem": "To what extent do the following statements apply to you? - I feel accepted by others",
+    "translated_item": "",
+    "translated_options": [],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "hungary:leisure1:5_2": {
+    "orig_variable": "leisure1:5_2",
+    "translated_stem": "Outside of school: In an average week, on how many days do you usually do the following? - Work out / exercise (e.g., football, handball, skiing, running, dance, gymnastics)",
+    "translated_item": "",
+    "translated_options": [],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "hungary:leisure1:5_3": {
+    "orig_variable": "leisure1:5_3",
+    "translated_stem": "Outside of school: In an average week, on how many days do you usually do the following? - Participate in other organized activities (e.g., theater, music, scouting)",
+    "translated_item": "",
+    "translated_options": [],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "hungary:leisure1:5_4": {
+    "orig_variable": "leisure1:5_4",
+    "translated_stem": "Outside of school: In an average week, on how many days do you usually do the following? - Stay at home the whole afternoon and evening",
+    "translated_item": "",
+    "translated_options": [],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "hungary:leisure1:5_5": {
+    "orig_variable": "leisure1:5_5",
+    "translated_stem": "Outside of school: On an average week, how many days do you do the following?",
+    "translated_item": "Reading books or listening to audiobooks",
+    "translated_options": [],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "hungary:physact1": {
+    "orig_variable": "physact1",
+    "translated_stem": "Outside of school: Approximately how many hours a week do you do sports or engage in physical activity (e.g., soccer, handball, running, gymnastics, dance, etc.) that makes you out of breath or sweat? - Selected Choice",
+    "translated_item": "",
+    "translated_options": [],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "hungary:physact1_1_TEXT": {
+    "orig_variable": "physact1_1_TEXT",
+    "translated_stem": "Outside of school: Approximately how many hours a week do you do sports or engage in physical activity (e.g., soccer, handball, running, gymnastics, dance, etc.) that makes you out of breath or sweat? - This many hours: - Text",
+    "translated_item": "",
+    "translated_options": [],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "hungary:activity_week1:5_2": {
+    "orig_variable": "activity_week1:5_2",
+    "translated_stem": "On an average weekday, how much time do you spend on the following activities?",
+    "translated_item": "Doing homework",
+    "translated_options": [],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "hungary:activity_week1:5_3": {
+    "orig_variable": "activity_week1:5_3",
+    "translated_stem": "On an average weekday, how much time do you spend on the following activities?",
+    "translated_item": "Playing games on PC (desktop computer), TV, tablet, phone, etc.",
+    "translated_options": [],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "hungary:activity_week1:5_4": {
+    "orig_variable": "activity_week1:5_4",
+    "translated_stem": "On an average weekday, how much time do you spend on the following activities?",
+    "translated_item": "Sitting in front of the computer, or sitting/lying down with a phone or tablet (regardless of activity)",
+    "translated_options": [],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "hungary:activity_week1:5_5": {
+    "orig_variable": "activity_week1:5_5",
+    "translated_stem": "On an average weekday, how much time do you spend on the following activities?",
+    "translated_item": "Active use of social media (not just being logged in)",
+    "translated_options": [],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "hungary:activity_weekend1:5_2": {
+    "orig_variable": "activity_weekend1:5_2",
+    "translated_stem": "On an average weekend day or holiday, how much time do you spend on the following activities?",
+    "translated_item": "Doing homework",
+    "translated_options": [],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "hungary:activity_weekend1:5_3": {
+    "orig_variable": "activity_weekend1:5_3",
+    "translated_stem": "On an average weekend day or holiday, how much time do you spend on the following activities?",
+    "translated_item": "Playing games on PC (desktop computer), TV, tablet, phone, etc.",
+    "translated_options": [],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "hungary:activity_weekend1:5_4": {
+    "orig_variable": "activity_weekend1:5_4",
+    "translated_stem": "On an average weekend day or holiday, how much time do you spend on the following activities?",
+    "translated_item": "Sitting in front of the computer, or sitting/lying down with a phone or tablet (regardless of activity)",
+    "translated_options": [],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "hungary:activity_weekend1:5_5": {
+    "orig_variable": "activity_weekend1:5_5",
+    "translated_stem": "On an average weekend day or holiday, how much time do you spend on the following activities?",
+    "translated_item": "Active use of social media (not just being logged in)",
+    "translated_options": [],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "hungary:training2": {
+    "orig_variable": "training2",
+    "translated_stem": "At what age did you quit organized sports? - Selected Choice",
+    "translated_item": "",
+    "translated_options": [],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "hungary:training2_1_TEXT": {
+    "orig_variable": "training2_1_TEXT",
+    "translated_stem": "At what age did you quit organized sports? - At this age: - Text",
+    "translated_item": "",
+    "translated_options": [],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "hungary:school1:11_2": {
+    "orig_variable": "school1:11_2",
+    "translated_stem": "Please indicate how much you agree with the following statements! - My teachers care about me.",
+    "translated_item": "",
+    "translated_options": [],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "hungary:school1:11_3": {
+    "orig_variable": "school1:11_3",
+    "translated_stem": "Please indicate how much you agree with the following statements! - I feel that I fit in among the students at school.",
+    "translated_item": "",
+    "translated_options": [],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "hungary:school1:11_4": {
+    "orig_variable": "school1:11_4",
+    "translated_stem": "Please indicate how much you agree with the following statements! - I am bored at school.",
+    "translated_item": "",
+    "translated_options": [],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "hungary:school1:11_5": {
+    "orig_variable": "school1:11_5",
+    "translated_stem": "Please indicate how much you agree with the following statements! - Many people expect me to do well at school.",
+    "translated_item": "",
+    "translated_options": [],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "hungary:school1:11_6": {
+    "orig_variable": "school1:11_6",
+    "translated_stem": "Please indicate how much you agree with the following statements! - I often dread going to school.",
+    "translated_item": "",
+    "translated_options": [],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "hungary:school1:11_7": {
+    "orig_variable": "school1:11_7",
+    "translated_stem": "Please indicate how much you agree with the following statements! - I often have to spend weekends doing schoolwork.",
+    "translated_item": "",
+    "translated_options": [],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "hungary:school1:11_8": {
+    "orig_variable": "school1:11_8",
+    "translated_stem": "Please indicate how much you agree with the following statements! - There is too much noise and disruption during classes.",
+    "translated_item": "",
+    "translated_options": [],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "hungary:school1:11_9": {
+    "orig_variable": "school1:11_9",
+    "translated_stem": "Please indicate how much you agree with the following statements! - A lot of time is wasted at school.",
+    "translated_item": "",
+    "translated_options": [],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "hungary:school1:11_10": {
+    "orig_variable": "school1:11_10",
+    "translated_stem": "Please indicate how much you agree with the following statements! - We learn many interesting things at school.",
+    "translated_item": "",
+    "translated_options": [],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "hungary:school1:11_11": {
+    "orig_variable": "school1:11_11",
+    "translated_stem": "Please indicate how much you agree with the following statements! - Getting good grades is important.",
+    "translated_item": "",
+    "translated_options": [],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "hungary:school_stress1:3_2": {
+    "orig_variable": "school_stress1:3_2",
+    "translated_stem": "School stress - I feel exhausted because of school tasks.",
+    "translated_item": "",
+    "translated_options": [],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "hungary:school_stress1:3_3": {
+    "orig_variable": "school_stress1:3_3",
+    "translated_stem": "School stress - I have more school tasks than I can handle.",
+    "translated_item": "",
+    "translated_options": [],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
+  },
+  "hungary:schooltype_1_TEXT": {
+    "orig_variable": "schooltype_1_TEXT",
+    "translated_stem": "Which higher education institution and which program do you attend? - I attend the following institution and program: - Text",
+    "translated_item": "",
+    "translated_options": [],
+    "canonical_id": null,
+    "canonical_stem": "",
+    "canonical_item": "",
+    "canonical_options": []
   }
 }

@@ -52,7 +52,20 @@ SOURCE_LANG = {
     "germany": "en",
     "france": "fr",
     "italy": "it",
+    "hungary": "hu",
 }
+
+QUALTRICS_MATRIX_RE = re.compile(r"^(.+?):\d+_(\d+)$", re.I)
+QUALTRICS_KS19_RE = re.compile(r"^kidscreen 1 and 9_(\d+)$", re.I)
+QUALTRICS_KS28_RE = re.compile(r"^kidscreen 2-8 and 10_(\d+)$", re.I)
+HU_BORN_FALSE_ORIG = frozenset({"born2", "born3", "born4"})
+# Shared Qualtrics import IDs aligned to core orig_variable (ace01, etc.)
+QUALTRICS_PARALLEL_ORIG_RE = re.compile(
+    r"^(ace\d+|fetnqact\d+|tnqactmh\d+|tnqaomhs\d+|ewcvtqaw\d+|pvtnqabb\d+|bmo\d+)$",
+    re.I,
+)
+SHARED_ORIG_TRANSLATION_THRESHOLD = 0.40
+SHARED_ORIG_STEM_ONLY_THRESHOLD = EXACT_NAME_STEM_THRESHOLD * 0.5
 
 REVIEW_COLUMNS = [
     "country_orig_id",
@@ -438,11 +451,185 @@ def _parent_education_hint(stem: str, item: str, translation: TranslationResult 
     if translation:
         parts.extend([translation.translated_stem, translation.translated_item])
     text = _normalize_text(" ".join(p for p in parts if p))
-    if re.search(r"\b(mother|madre|mom|mama)\b", text):
+    if re.search(r"\b(mother|madre|mom|mama|any[aá]|édesany)\b", text, re.I):
         return "edumom1"
-    if re.search(r"\b(father|padre|dad|papa)\b", text):
+    if re.search(r"\b(father|padre|dad|papa|ap[aá]|édesap)\b", text, re.I):
         return "edudad1"
     return None
+
+
+def _hungary_born_canonical(orig: str, stem: str, item: str) -> str | None:
+    """Remap Qualtrics born* IDs (false friends vs EU Survey orig_variable names)."""
+    blob = _normalize_text(f"{stem} {item}")
+    if orig == "born1":
+        return "byear1"
+    if orig == "born2":
+        if re.search(r"h[oó]nap|month", blob, re.I):
+            return "bmonth1"
+        return None
+    if orig == "born3":
+        if re.search(r"hol sz|where were you born|place|orsz[aá]g", blob, re.I):
+            return "bplace1"
+        if re.search(r"éves|age|arriv|j[oö]tt|k[oö]lt", blob, re.I):
+            return "bage1"
+        return "bplace1"
+    if orig == "born4":
+        if re.search(r"éves|age|arriv|j[oö]tt|k[oö]lt", blob, re.I):
+            return "bage1"
+        if re.search(r"any[aá]|mother|édesany", blob, re.I):
+            return "bmborn1"
+        return "bage1"
+    if orig == "born5":
+        return "bmborn1"
+    if orig == "born6":
+        return "bfborn1"
+    return None
+
+
+def _qualtrics_matrix_canonical(
+    orig: str,
+    core_whitelist: list[dict[str, Any]],
+    assigned: set[str],
+) -> str | None:
+    m = QUALTRICS_MATRIX_RE.match(orig)
+    if not m:
+        return None
+    base, idx_s = m.group(1), m.group(2)
+    idx = int(idx_s)
+    m_base = re.match(r"^([a-z_]+)(\d+)$", base, re.I)
+    if not m_base:
+        return None
+    prefix, _ = m_base.group(1).lower(), m_base.group(2)
+    if prefix == "cyrm1" or prefix.startswith("cyrm"):
+        cand_orig = f"cyrm{idx:02d}"
+        cand_var = f"cyrm{idx:02d}"
+    elif prefix in {"raia", "coop", "ma", "sa", "mood", "af", "yf"}:
+        cand_orig = f"{prefix}{idx}"
+        cand_var = f"bcfpi_{prefix}{idx}"
+    else:
+        cand_orig = f"{prefix}{idx}"
+        cand_var = cand_orig
+    for core_entry in core_whitelist:
+        var = core_entry["variable"]
+        if var in assigned:
+            continue
+        if var.lower() == cand_var.lower():
+            return var
+    return None
+
+
+def _qualtrics_kidscreen_canonical(
+    orig: str,
+    core_whitelist: list[dict[str, Any]],
+    assigned: set[str],
+) -> str | None:
+    m19 = QUALTRICS_KS19_RE.match(orig)
+    if m19:
+        idx = int(m19.group(1))
+        targets = {1: "ksa1", 2: "ksa2"}
+        target = targets.get(idx)
+        if target and target not in assigned:
+            return target
+    m28 = QUALTRICS_KS28_RE.match(orig)
+    if m28:
+        idx = int(m28.group(1))
+        target = f"ks{idx}"
+        if target not in assigned:
+            for c in core_whitelist:
+                if c["variable"] == target:
+                    return target
+    return None
+
+
+def _qualtrics_shared_orig_match(
+    orig: str,
+    row: dict[str, Any],
+    core_whitelist: list[dict[str, Any]],
+    core_orig_map: dict[str, str],
+    assigned: set[str],
+    translation: TranslationResult | None,
+) -> tuple[str, str]:
+    """Match country import IDs that equal core orig_variable (e.g. ace01 -> rpginsfy1)."""
+    if orig not in core_orig_map:
+        return "", ""
+    canon = core_orig_map[orig]
+    if not canon or canon in assigned:
+        return "", ""
+    core_entry = next((c for c in core_whitelist if c["variable"] == canon), None)
+    if not core_entry:
+        return "", ""
+
+    stem = row.get("country_stem", "")
+    item = row.get("country_item", "")
+    opts = row.get("country_options") or []
+    stem_score, item_score = _stem_and_item_scores(
+        translation,
+        stem,
+        item,
+        core_entry.get("question_stem", ""),
+        core_entry.get("item_text", ""),
+    )
+    text_best = max(stem_score, item_score)
+
+    if translation and (translation.translated_stem or translation.translated_item):
+        match_score = _match_score(translation, stem, item, opts, core_entry)
+        text_best = max(text_best, match_score)
+        if text_best >= SHARED_ORIG_TRANSLATION_THRESHOLD:
+            return canon, f"Qualtrics shared orig id + translation ({text_best:.2f})"
+
+    if text_best >= SHARED_ORIG_STEM_ONLY_THRESHOLD:
+        return canon, f"Qualtrics shared orig id ({text_best:.2f})"
+
+    if translation and QUALTRICS_PARALLEL_ORIG_RE.match(orig):
+        match_score = _match_score(translation, stem, item, opts, core_entry)
+        if match_score >= SHARED_ORIG_TRANSLATION_THRESHOLD:
+            return canon, f"Qualtrics parallel id + translation ({match_score:.2f})"
+
+    # Hungary/EU parallel blocks (ace01, fetnqact1, …): import ID equals core orig_variable.
+    if QUALTRICS_PARALLEL_ORIG_RE.match(orig):
+        return canon, "Qualtrics parallel import id"
+
+    return "", ""
+
+
+def _qualtrics_deterministic_match(
+    orig: str,
+    row: dict[str, Any],
+    core_whitelist: list[dict[str, Any]],
+    core_orig_map: dict[str, str],
+    assigned: set[str],
+    translation: TranslationResult | None = None,
+) -> tuple[str, str]:
+    stem = row.get("country_stem", "")
+    item = row.get("country_item", "")
+
+    born = _hungary_born_canonical(orig, stem, item)
+    if born and born not in assigned:
+        return born, "Hungary Qualtrics born* remap"
+
+    ks = _qualtrics_kidscreen_canonical(orig, core_whitelist, assigned)
+    if ks:
+        return ks, "Qualtrics Kidscreen ID"
+
+    mx = _qualtrics_matrix_canonical(orig, core_whitelist, assigned)
+    if mx:
+        return mx, "Qualtrics matrix ID"
+
+    if orig in HU_BORN_FALSE_ORIG:
+        return "", ""
+
+    shared, shared_note = _qualtrics_shared_orig_match(
+        orig, row, core_whitelist, core_orig_map, assigned, translation
+    )
+    if shared:
+        return shared, shared_note
+
+    for core_entry in core_whitelist:
+        var = core_entry["variable"]
+        if var.lower() == orig.lower() and var not in assigned:
+            return var, "Qualtrics exact clean name"
+
+    return "", ""
 
 
 def _ladder_question_hint(
@@ -649,6 +836,12 @@ def fallback_match_canonical(
     orig: str,
 ) -> tuple[str, str]:
     """Deterministic match when LLM leaves canonical_id empty."""
+    q_match, q_note = _qualtrics_deterministic_match(
+        orig, row, core_whitelist, core_orig_map, assigned, translation
+    )
+    if q_match:
+        return q_match, q_note
+
     exact_var, exact_note = _exact_variable_name_match(
         orig, translation, row, core_whitelist, assigned
     )

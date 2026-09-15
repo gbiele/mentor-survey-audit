@@ -28,6 +28,7 @@ from country_alignment import (  # noqa: E402
     write_review_workbook,
     build_core_whitelist,
     _match_score,
+    _qualtrics_deterministic_match,
 )
 
 
@@ -581,7 +582,7 @@ class TestCountryAlignment(unittest.TestCase):
         )
         var, note = fallback_match_canonical(tr, row, whitelist, set(), {}, "ks2")
         self.assertEqual(var, "ks2")
-        self.assertIn("Exact variable name", note)
+        self.assertTrue("Exact variable name" in note or "Qualtrics exact clean name" in note)
 
     def test_bage1_preferred_over_bmborn1_for_combo_question(self):
         core_whitelist = [
@@ -965,6 +966,101 @@ class TestCountryAlignment(unittest.TestCase):
             used_names,
         )
         self.assertEqual(len(merged), len(core))
+
+    def test_qualtrics_born2_maps_to_bmonth_not_bplace(self):
+        core = _core_fixture()
+        whitelist = build_core_whitelist(core)
+        from country_alignment import _core_orig_to_canonical  # noqa: WPS433
+
+        core_orig_map = _core_orig_to_canonical(core)
+        row = {
+            "country_stem": "Mikor születtél? – Hónap",
+            "country_item": "",
+            "country_options": [],
+        }
+        var, note = _qualtrics_deterministic_match(
+            "born2", row, whitelist, core_orig_map, set()
+        )
+        self.assertEqual(var, "bmonth1")
+        self.assertIn("born", note.lower())
+
+    def test_qualtrics_ace01_matches_parallel_import_id_without_translation(self):
+        whitelist = [
+            {
+                "variable": "rpginsfy1",
+                "section": "Adverse childhood experiences",
+                "question_stem": "Relationship with parents/guardians",
+                "item_text": "Did your parents/guardians understand your problems and worries?",
+                "options": ["Always", "Never"],
+            }
+        ]
+        row = {
+            "country_stem": "A szüleid/gyámjaid megértették-e a problémáidat?",
+            "country_item": "",
+            "country_options": [],
+        }
+        var, note = _qualtrics_deterministic_match(
+            "ace01", row, whitelist, {"ace01": "rpginsfy1"}, set(), None
+        )
+        self.assertEqual(var, "rpginsfy1")
+        self.assertTrue(
+            "parallel" in note.lower() or "shared orig id" in note.lower()
+        )
+
+    def test_qualtrics_ace01_matches_via_translation_not_hungarian_stem(self):
+        core = _core_fixture()
+        whitelist = build_core_whitelist(core)
+        from country_alignment import _core_orig_to_canonical  # noqa: WPS433
+
+        core_orig_map = _core_orig_to_canonical(core)
+        # Extend whitelist with ACE items like full core would have
+        ace_entry = {
+            "variable": "rpginsfy1",
+            "section": "Adverse childhood experiences",
+            "question_stem": "Relationship with parents/guardians",
+            "item_text": "Did your parents/guardians understand your problems and worries?",
+            "options": ["Always", "Never"],
+        }
+        whitelist = list(whitelist) + [ace_entry]
+        core_orig_map = dict(core_orig_map)
+        core_orig_map["ace01"] = "rpginsfy1"
+        row = {
+            "country_stem": "A szüleid/gyámjaid megértették-e a problémáidat?",
+            "country_item": "",
+            "country_options": ["Mindig", "Soha"],
+        }
+        tr = TranslationResult(
+            "ace01",
+            translated_stem="Relationship with parents/guardians",
+            translated_item="Did your parents/guardians understand your problems and worries?",
+            translated_options=["Always", "Never"],
+            canonical_id=None,
+        )
+        var, note = _qualtrics_deterministic_match(
+            "ace01", row, whitelist, core_orig_map, set(), tr
+        )
+        self.assertEqual(var, "rpginsfy1")
+        self.assertIn("translation", note.lower())
+
+    def test_qualtrics_matrix_raia_maps_to_bcfpi(self):
+        whitelist = [
+            {
+                "variable": "bcfpi_raia1",
+                "section": "Mental health",
+                "question_stem": "Regulation of attention...",
+                "item_text": "fail to finish what you start",
+                "options": ["NEVER true", "SOMETIMES true", "OFTEN true"],
+            }
+        ]
+        row = {
+            "country_stem": "BCFPI",
+            "country_item": "fail to finish",
+            "country_options": [],
+        }
+        var, _ = _qualtrics_deterministic_match(
+            "raia1:6_1", row, whitelist, {}, set()
+        )
+        self.assertEqual(var, "bcfpi_raia1")
 
 
 if __name__ == "__main__":

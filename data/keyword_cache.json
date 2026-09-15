@@ -2660,5 +2660,976 @@
     "intravenous use",
     "route of administration",
     "substance use"
+  ],
+  "fvltjkte1": [
+    "informed consent",
+    "study information",
+    "research ethics",
+    "participant consent"
+  ],
+  "vlkdvltj1": [
+    "informed consent",
+    "voluntary participation",
+    "consent form",
+    "research ethics"
+  ],
+  "mekzsgtk1": [
+    "ethnicity",
+    "demographics",
+    "ethnic identity",
+    "minority status"
+  ],
+  "kpeeltta1": [
+    "macarthur ladder",
+    "subjective socioeconomic status",
+    "family wealth",
+    "social status",
+    "perceived ses"
+  ],
+  "slgmmrke1": [
+    "parental support",
+    "emotional support",
+    "parental understanding",
+    "family relationship"
+  ],
+  "slgmtntk1": [
+    "parental monitoring",
+    "parental supervision",
+    "parental knowledge",
+    "family functioning"
+  ],
+  "mgemhslg1": [
+    "ace",
+    "child neglect",
+    "physical neglect",
+    "food deprivation",
+    "adverse childhood experiences"
+  ],
+  "veslgmom1": [
+    "ace",
+    "parental substance use",
+    "parental alcoholism",
+    "child neglect",
+    "household dysfunction"
+  ],
+  "lletosla1": [
+    "ace",
+    "household substance use",
+    "alcoholism in family",
+    "substance abuse",
+    "household dysfunction"
+  ],
+  "lletoslaa1": [
+    "ace",
+    "household mental illness",
+    "parental depression",
+    "suicide attempt in family",
+    "household dysfunction"
+  ],
+  "lletoslab1": [
+    "ace",
+    "incarcerated household member",
+    "family incarceration",
+    "household dysfunction"
+  ],
+  "ltvheslv1": [
+    "ace",
+    "domestic violence",
+    "interparental conflict",
+    "verbal abuse",
+    "witnessing abuse"
+  ],
+  "ltvheslva1": [
+    "ace",
+    "domestic violence",
+    "witnessing physical violence",
+    "interparental violence",
+    "intimate partner violence"
+  ],
+  "ltvheslvb1": [
+    "ace",
+    "domestic violence",
+    "weapon violence",
+    "physical abuse",
+    "household dysfunction"
+  ],
+  "slgmvmsv1": [
+    "ace",
+    "emotional abuse",
+    "verbal abuse",
+    "psychological abuse",
+    "child maltreatment"
+  ],
+  "slgmvmsva1": [
+    "ace",
+    "physical abuse",
+    "corporal punishment",
+    "child maltreatment",
+    "violence against children"
+  ],
+  "slgmvmsvb1": [
+    "ace",
+    "severe physical abuse",
+    "weapon assault",
+    "child abuse",
+    "maltreatment"
+  ],
+  "mgvlrsfh1": [
+    "physical fighting",
+    "aggression",
+    "violent behavior",
+    "youth violence"
+  ],
+  "slltvheh1": [
+    "community violence",
+    "witnessing violence",
+    "trauma exposure",
+    "violent crime"
+  ],
+  "slltvhea1": [
+    "community violence",
+    "weapon threat",
+    "witnessing threat",
+    "trauma exposure"
+  ],
+  "knvlemsh1": [
+    "forced relocation",
+    "displacement",
+    "trauma impact",
+    "community violence outcome"
+  ],
+  "osnkmtke1": [
+    "property destruction",
+    "home destruction",
+    "trauma exposure",
+    "community violence"
+  ],
+  "veocdvbt1": [
+    "gang violence",
+    "police violence",
+    "violent loss",
+    "bereavement",
+    "trauma"
+  ],
+  "smwd_1": [
+    "screen time",
+    "weekday media use",
+    "digital media",
+    "time use"
+  ],
+  "smwda_1": [
+    "screen time",
+    "weekend media use",
+    "digital media",
+    "leisure screen time"
+  ],
+  "aiuse_1": [
+    "artificial intelligence",
+    "ai usage",
+    "generative ai",
+    "chatgpt",
+    "digital technology"
+  ],
+  "smharm_1": [
+    "problematic screen use",
+    "device interference",
+    "digital media harm",
+    "technology impact"
+  ],
+  "almezsto1": [
+    "problematic device use",
+    "screen addiction",
+    "digital habits",
+    "media consumption"
+  ],
+  "tvteaabk1": [
+    "risk behavior",
+    "substance use screening",
+    "behavioral problems",
+    "adolescent risk"
+  ],
+  "mgillsnb1": [
+    "alcohol consumption",
+    "drinking frequency",
+    "substance use",
+    "lifetime alcohol use"
+  ],
+  "hvvimgil1": [
+    "binge drinking",
+    "prescription drug misuse",
+    "substance abuse",
+    "illicit drug use",
+    "inhalant use"
+  ],
+  "mgosmnzg1": [
+    "sleep onset insomnia",
+    "difficulty falling asleep",
+    "sleep disturbance",
+    "sleep problems"
+  ],
+  "mtosmnzg1": [
+    "chronic insomnia",
+    "sleep onset latency duration",
+    "sleep disorder chronicity",
+    "sleep disturbance"
+  ],
+  "mtvjmbs1": [
+    "sleep maintenance insomnia",
+    "night waking",
+    "sleep disruption",
+    "chronic sleep problems"
+  ],
+  "mgvfrvln1": [
+    "daytime sleepiness",
+    "daytime fatigue",
+    "tiredness",
+    "hypersomnolence"
+  ],
+  "mtrmfrvl1": [
+    "chronic fatigue",
+    "daytime sleepiness chronicity",
+    "sleep debt",
+    "tiredness duration"
+  ],
+  "htzlbmfl1": [
+    "bedtime",
+    "weekday sleep schedule",
+    "sleep hygiene",
+    "sleep timing"
+  ],
+  "ethtzmib1": [
+    "sleep onset latency",
+    "time to fall asleep",
+    "sleep latency",
+    "insomnia"
+  ],
+  "htzmivbj1": [
+    "wake after sleep onset",
+    "waso",
+    "nocturnal awakening",
+    "sleep fragmentation"
+  ],
+  "htzlbmbr1": [
+    "wake time",
+    "morning rise time",
+    "sleep schedule",
+    "weekday wake-up"
+  ],
+  "mghleezk1": [
+    "bedtime screen use",
+    "pre-sleep technology",
+    "blue light exposure",
+    "sleep hygiene"
+  ],
+  "mgklvfze1": [
+    "nighttime texting",
+    "bedtime smartphone use",
+    "sleep disruption",
+    "digital habits"
+  ],
+  "abtlnhnl1": [
+    "parent-child communication",
+    "family communication",
+    "family relations",
+    "parental bonding"
+  ],
+  "mrnrdaab1": [
+    "self-concept",
+    "self-assessment",
+    "psychological traits",
+    "general well-being"
+  ],
+  "vbtvbtdj1": [
+    "romantic relationship",
+    "dating status",
+    "romantic partner",
+    "adolescent relationships"
+  ],
+  "ainkvlet1": [
+    "extracurricular activities",
+    "after-school habits",
+    "leisure activities",
+    "daily routine"
+  ],
+  "ethtzmit1": [
+    "weekday time use",
+    "daily activities",
+    "time allocation",
+    "daily habits"
+  ],
+  "ethtgnvn1": [
+    "weekend time use",
+    "holiday activities",
+    "leisure time",
+    "recreational habits"
+  ],
+  "rsvsessv1": [
+    "organized sports",
+    "physical activity",
+    "sports participation",
+    "athletic involvement"
+  ],
+  "krkjlbmr1": [
+    "attitude scale",
+    "self-assessment",
+    "psychological state",
+    "agreement rating"
+  ],
+  "iskolai1": [
+    "school stress",
+    "academic pressure",
+    "education",
+    "stress",
+    "grades"
+  ],
+  "krllhnvv1": [
+    "migration age",
+    "immigration",
+    "acculturation",
+    "demographics",
+    "relocation"
+  ],
+  "mfosizns1": [
+    "higher education",
+    "university",
+    "academic major",
+    "college",
+    "demographics"
+  ],
+  "mekzsgtka1": [
+    "ethnicity",
+    "ethnic identity",
+    "minority background",
+    "cultural identity",
+    "demographics"
+  ],
+  "apps_1": [
+    "social media",
+    "app usage",
+    "screen time",
+    "smartphone",
+    "digital media"
+  ],
+  "almezstoa1": [
+    "problematic media use",
+    "tolerance",
+    "screen time",
+    "device addiction",
+    "pmum"
+  ],
+  "almezstob1": [
+    "withdrawal",
+    "anxiety",
+    "screen time",
+    "problematic screen use",
+    "device dependence"
+  ],
+  "almezstoc1": [
+    "deception",
+    "lying",
+    "parental conflict",
+    "screen time",
+    "problematic media use"
+  ],
+  "almezstod1": [
+    "escapism",
+    "mood modification",
+    "coping",
+    "screen time",
+    "device addiction"
+  ],
+  "almezstoe1": [
+    "social displacement",
+    "family withdrawal",
+    "screen time",
+    "problematic screen use",
+    "relationship conflict"
+  ],
+  "almezstof1": [
+    "tolerance",
+    "excessive use",
+    "screen time",
+    "device addiction",
+    "escalation"
+  ],
+  "almezstog1": [
+    "emotional reactivity",
+    "irritability",
+    "withdrawal",
+    "screen time",
+    "parental limits"
+  ],
+  "almezstoh1": [
+    "loss of control",
+    "parental mediation",
+    "screen time",
+    "device regulation",
+    "problematic media use"
+  ],
+  "almezstoi1": [
+    "preoccupation",
+    "craving",
+    "screen time",
+    "device addiction",
+    "obsessive thoughts"
+  ],
+  "almezstoj1": [
+    "withdrawal",
+    "anxiety",
+    "tension",
+    "problematic screen use",
+    "screen time"
+  ],
+  "almezstok1": [
+    "parent-child conflict",
+    "family arguments",
+    "screen time",
+    "problematic media use",
+    "device rules"
+  ],
+  "almezstol1": [
+    "salience",
+    "behavioral addiction",
+    "screen time",
+    "priority",
+    "problematic screen use"
+  ],
+  "almezstom1": [
+    "salience",
+    "anhedonia",
+    "screen time",
+    "reward sensitivity",
+    "device dependence"
+  ],
+  "almezston1": [
+    "deception",
+    "lying",
+    "parental monitoring",
+    "screen time",
+    "problematic media use"
+  ],
+  "almezstoo1": [
+    "loss of control",
+    "self-regulation",
+    "compulsive use",
+    "screen time",
+    "device addiction"
+  ],
+  "almezstop1": [
+    "displacement",
+    "loss of interests",
+    "hobbies",
+    "screen time",
+    "problematic screen use"
+  ],
+  "almezstoq1": [
+    "relapse",
+    "compulsive behavior",
+    "loss of control",
+    "screen time",
+    "device addiction"
+  ],
+  "almezstor1": [
+    "distraction",
+    "multitasking",
+    "homework",
+    "screen time",
+    "academic impairment"
+  ],
+  "almezstos1": [
+    "irritability",
+    "withdrawal",
+    "screen time limits",
+    "emotional reactivity",
+    "problematic screen use"
+  ],
+  "almezstot1": [
+    "family conflict",
+    "arguments",
+    "screen time",
+    "parental rules",
+    "behavioral problems"
+  ],
+  "almezstou1": [
+    "in-app purchases",
+    "financial spending",
+    "microtransactions",
+    "impulsivity",
+    "gaming"
+  ],
+  "almezstov1": [
+    "mood regulation",
+    "coping",
+    "escapism",
+    "screen time",
+    "affect regulation"
+  ],
+  "almezstow1": [
+    "academic impairment",
+    "poor grades",
+    "negative consequences",
+    "screen time",
+    "problematic media use"
+  ],
+  "tvteaabka1": [
+    "suicidal ideation",
+    "suicidality",
+    "c-ssrs",
+    "depression",
+    "crisis"
+  ],
+  "tvteaabkb1": [
+    "suicidal ideation",
+    "suicide method",
+    "suicidality",
+    "c-ssrs",
+    "crisis"
+  ],
+  "tvteaabkc1": [
+    "suicide plan",
+    "suicide intent",
+    "suicidality",
+    "c-ssrs",
+    "crisis"
+  ],
+  "tvteaabkd1": [
+    "suicide attempt",
+    "suicidality",
+    "self-harm",
+    "c-ssrs",
+    "crisis"
+  ],
+  "aksrlmrm1": [
+    "suicide attempt frequency",
+    "suicidality",
+    "self-harm",
+    "c-ssrs",
+    "crisis"
+  ],
+  "aksrlmrma1": [
+    "suicide attempt count",
+    "suicidality",
+    "self-harm",
+    "c-ssrs",
+    "crisis"
+  ],
+  "mghlaabd1": [
+    "smoking",
+    "cigarettes",
+    "tobacco use",
+    "nicotine",
+    "substance use"
+  ],
+  "mghlaabda1": [
+    "vaping",
+    "e-cigarettes",
+    "nicotine",
+    "tobacco use",
+    "substance use"
+  ],
+  "mghlaabdb1": [
+    "snus",
+    "smokeless tobacco",
+    "nicotine",
+    "tobacco use",
+    "substance use"
+  ],
+  "mghlaabdc1": [
+    "lifetime smoking",
+    "cigarettes",
+    "tobacco use",
+    "nicotine",
+    "substance use"
+  ],
+  "mghlaabdd1": [
+    "lifetime vaping",
+    "e-cigarettes",
+    "nicotine",
+    "tobacco use",
+    "substance use"
+  ],
+  "mghlaabde1": [
+    "lifetime snus",
+    "smokeless tobacco",
+    "nicotine",
+    "tobacco use",
+    "substance use"
+  ],
+  "mgflaips1": [
+    "alcohol use",
+    "drinking frequency",
+    "alcohol consumption",
+    "substance use",
+    "espad"
+  ],
+  "mgrglbae1": [
+    "drunkenness",
+    "binge drinking",
+    "alcohol intoxication",
+    "alcohol abuse",
+    "substance use"
+  ],
+  "mgrglbls1": [
+    "lifetime drunkenness",
+    "alcohol intoxication",
+    "binge drinking",
+    "substance use",
+    "alcohol abuse"
+  ],
+  "mghlllsn1": [
+    "prescription drug misuse",
+    "sedatives",
+    "stimulants",
+    "non-medical drug use",
+    "substance use"
+  ],
+  "mghlllsna1": [
+    "inhalants",
+    "volatile substances",
+    "solvent abuse",
+    "glue sniffing",
+    "substance use"
+  ],
+  "hllvvd1": [
+    "illicit drug use",
+    "lifetime drug use",
+    "substance use",
+    "narcotics",
+    "addiction"
+  ],
+  "mghlaabk1": [
+    "cannabis",
+    "marijuana",
+    "smoked drugs",
+    "illicit drug use",
+    "substance use"
+  ],
+  "mghlaabka1": [
+    "oral drug use",
+    "pills",
+    "illicit drug use",
+    "substance use",
+    "narcotics"
+  ],
+  "mghlaabkb1": [
+    "intranasal drug use",
+    "snorted drugs",
+    "cocaine",
+    "illicit drug use",
+    "substance use"
+  ],
+  "mghlaabkc1": [
+    "intravenous drug use",
+    "iv drug use",
+    "injecting drugs",
+    "substance use",
+    "harm reduction"
+  ],
+  "mghlaabkd1": [
+    "substance use",
+    "drug use",
+    "smoking drugs",
+    "illicit drugs",
+    "lifetime drug use"
+  ],
+  "mghlaabke1": [
+    "substance use",
+    "drug use",
+    "oral drug use",
+    "pills",
+    "illicit drugs"
+  ],
+  "mghlaabkf1": [
+    "substance use",
+    "drug use",
+    "snorting drugs",
+    "illicit drugs",
+    "lifetime drug use"
+  ],
+  "mghlaabkg1": [
+    "substance use",
+    "drug use",
+    "intravenous drug use",
+    "injection drug use",
+    "illicit drugs"
+  ],
+  "abtlnhnla1": [
+    "parent-child relationship",
+    "family communication",
+    "family support",
+    "parental warmth",
+    "family relations"
+  ],
+  "abtlnhnlb1": [
+    "parental acceptance",
+    "parent-child relationship",
+    "family relations",
+    "parental warmth",
+    "emotional support"
+  ],
+  "abtlnhnlc1": [
+    "parent-child relationship",
+    "family attachment",
+    "family relations",
+    "parental bonding"
+  ],
+  "abtlnhnld1": [
+    "parental criticism",
+    "parent-child conflict",
+    "family conflict",
+    "negative parenting",
+    "family relations"
+  ],
+  "abtlnhnle1": [
+    "parent-child conflict",
+    "family conflict",
+    "parental irritation",
+    "family relations",
+    "adolescent friction"
+  ],
+  "abtlnhnlf1": [
+    "parental rejection",
+    "parent-child conflict",
+    "emotional hurt",
+    "family relations",
+    "family conflict"
+  ],
+  "abtlnhnlg1": [
+    "parent-child conflict",
+    "family conflict",
+    "arguing with parents",
+    "family disputes",
+    "family relations"
+  ],
+  "mrnrdaaba1": [
+    "peer relations",
+    "friendships",
+    "social support",
+    "popularity",
+    "social connectedness"
+  ],
+  "mrnrdaabb1": [
+    "peer rejection",
+    "peer relations",
+    "social exclusion",
+    "social difficulties",
+    "loneliness"
+  ],
+  "mrnrdaabc1": [
+    "peer popularity",
+    "social status",
+    "peer relations",
+    "social acceptance",
+    "friendships"
+  ],
+  "mrnrdaabd1": [
+    "social acceptance",
+    "peer belonging",
+    "peer relations",
+    "social inclusion",
+    "sense of belonging"
+  ],
+  "ainkvleta1": [
+    "physical activity",
+    "sports",
+    "exercise",
+    "physical fitness",
+    "extracurricular activities"
+  ],
+  "ainkvletb1": [
+    "extracurricular activities",
+    "organized leisure",
+    "arts and clubs",
+    "hobbies",
+    "youth engagement"
+  ],
+  "ainkvletc1": [
+    "sedentary behavior",
+    "home leisure",
+    "leisure time",
+    "staying home",
+    "youth lifestyle"
+  ],
+  "ainkvletd1": [
+    "reading",
+    "leisure activities",
+    "cognitive leisure",
+    "books",
+    "audiobooks"
+  ],
+  "ainkvlhk1": [
+    "physical activity",
+    "vigorous exercise",
+    "sports participation",
+    "exercise duration",
+    "physical fitness"
+  ],
+  "ainkvlhka1": [
+    "physical activity",
+    "vigorous exercise",
+    "exercise duration",
+    "sports participation",
+    "physical fitness"
+  ],
+  "ethtzmita1": [
+    "homework",
+    "study habits",
+    "academic effort",
+    "weekday routine",
+    "time use"
+  ],
+  "ethtzmitb1": [
+    "video games",
+    "gaming",
+    "screen time",
+    "weekday screen time",
+    "digital media"
+  ],
+  "ethtzmitc1": [
+    "screen time",
+    "sedentary behavior",
+    "smartphone use",
+    "computer use",
+    "digital media"
+  ],
+  "ethtzmitd1": [
+    "social media",
+    "active social media use",
+    "screen time",
+    "digital communication",
+    "online behavior"
+  ],
+  "ethtgnvna1": [
+    "homework",
+    "study habits",
+    "academic effort",
+    "weekend routine",
+    "time use"
+  ],
+  "ethtgnvnb1": [
+    "video games",
+    "gaming",
+    "screen time",
+    "weekend screen time",
+    "digital media"
+  ],
+  "ethtgnvnc1": [
+    "screen time",
+    "sedentary behavior",
+    "smartphone use",
+    "computer use",
+    "weekend routine"
+  ],
+  "ethtgnvnd1": [
+    "social media",
+    "active social media use",
+    "screen time",
+    "digital communication",
+    "weekend routine"
+  ],
+  "hnvhasss1": [
+    "sports dropout",
+    "sports participation",
+    "physical activity",
+    "organized sports",
+    "youth athletics"
+  ],
+  "hnvhasssa1": [
+    "sports dropout",
+    "sports participation",
+    "physical activity",
+    "organized sports",
+    "youth athletics"
+  ],
+  "krkjlbmra1": [
+    "teacher support",
+    "school climate",
+    "teacher-student relationship",
+    "academic environment",
+    "school connectedness"
+  ],
+  "krkjlbmrb1": [
+    "school belonging",
+    "peer acceptance",
+    "school climate",
+    "social inclusion",
+    "school adjustment"
+  ],
+  "krkjlbmrc1": [
+    "academic boredom",
+    "school engagement",
+    "student disengagement",
+    "school satisfaction",
+    "academic motivation"
+  ],
+  "krkjlbmrd1": [
+    "academic pressure",
+    "expectations",
+    "school stress",
+    "academic expectations",
+    "parental expectations"
+  ],
+  "krkjlbmre1": [
+    "school dread",
+    "school anxiety",
+    "school refusal",
+    "academic distress",
+    "school aversion"
+  ],
+  "krkjlbmrf1": [
+    "academic workload",
+    "homework burden",
+    "school stress",
+    "academic pressure",
+    "work-life balance"
+  ],
+  "krkjlbmrg1": [
+    "classroom environment",
+    "classroom disruption",
+    "school climate",
+    "learning environment",
+    "classroom management"
+  ],
+  "krkjlbmrh1": [
+    "school dissatisfaction",
+    "instructional efficiency",
+    "learning environment",
+    "school attitude",
+    "academic engagement"
+  ],
+  "krkjlbmri1": [
+    "academic interest",
+    "intrinsic motivation",
+    "learning engagement",
+    "school satisfaction",
+    "curiosity"
+  ],
+  "krkjlbmrj1": [
+    "academic achievement",
+    "grade importance",
+    "achievement motivation",
+    "school values",
+    "academic goals"
+  ],
+  "isklrmai1": [
+    "academic burnout",
+    "school stress",
+    "emotional exhaustion",
+    "academic fatigue",
+    "school workload"
+  ],
+  "istbifvm1": [
+    "academic stress",
+    "school overload",
+    "perceived stress",
+    "academic pressure",
+    "coping"
+  ],
+  "mfosiznsa1": [
+    "demographics",
+    "higher education",
+    "university major",
+    "college enrollment",
+    "academic status"
   ]
 }
