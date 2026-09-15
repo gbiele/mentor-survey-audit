@@ -3631,5 +3631,13 @@
     "university major",
     "college enrollment",
     "academic status"
+  ],
+  "almezstox1": [
+    "screen time",
+    "problematic media use",
+    "device addiction",
+    "academic performance",
+    "grades",
+    "internet addiction"
   ]
 }

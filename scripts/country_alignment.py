@@ -901,6 +901,8 @@ def fallback_match_canonical(
         and best_score >= threshold
         and (best_score - second_score) >= gap
     ):
+        if best_var.startswith("smharm") and re.match(r"^dasc\d", orig, re.I):
+            return "", ""
         return best_var, f"Fallback text match ({best_score:.2f})"
     return "", ""
 

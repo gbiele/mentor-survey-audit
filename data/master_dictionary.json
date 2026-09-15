@@ -9,9 +9,9 @@
       "hungary",
       "spain"
     ],
-    "total_variables": 467,
+    "total_variables": 466,
     "total_core_variables": 143,
-    "total_options": 2923,
+    "total_options": 2940,
     "sections": [
       "Adverse childhood experiences",
       "Background",
@@ -379,7 +379,7 @@
       "scale_confidence": "high",
       "notes": "Options 'graduated from school' (code 6) and 'quit school before graduating' (code 7) are terminal non-enrolled statuses; exclude or handle separately when treating grade level as continuous/ordinal.",
       "orig_aliases": {
-        "hungary": "grade1",
+        "hungary": "schooltype",
         "spain": "grade1"
       },
       "options": [
@@ -24223,7 +24223,7 @@
       "scale_confidence": "high",
       "notes": "",
       "orig_aliases": {
-        "hungary": "dasc01:25_10",
+        "hungary": "some_use1:6_1",
         "spain": "ID486"
       },
       "options": [
@@ -24232,6 +24232,17 @@
           "label": "Nearly all the time",
           "label_with_id": "",
           "alias": "",
+          "eusurvey_answer_id": "",
+          "value": 4,
+          "scale": "ordinal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
+          "order": 0,
+          "label": "Szinte mindig",
+          "label_with_id": "",
+          "alias": "Szinte mindig",
           "eusurvey_answer_id": "",
           "value": 4,
           "scale": "ordinal",
@@ -24250,10 +24261,32 @@
           "special_type": ""
         },
         {
+          "order": 1,
+          "label": "Gyakran",
+          "label_with_id": "",
+          "alias": "Gyakran",
+          "eusurvey_answer_id": "",
+          "value": 3,
+          "scale": "ordinal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
           "order": 2,
           "label": "Sometimes",
           "label_with_id": "",
           "alias": "",
+          "eusurvey_answer_id": "",
+          "value": 2,
+          "scale": "ordinal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
+          "order": 2,
+          "label": "Néha",
+          "label_with_id": "",
+          "alias": "Néha",
           "eusurvey_answer_id": "",
           "value": 2,
           "scale": "ordinal",
@@ -24272,10 +24305,32 @@
           "special_type": ""
         },
         {
+          "order": 3,
+          "label": "Ritkán",
+          "label_with_id": "",
+          "alias": "Ritkán",
+          "eusurvey_answer_id": "",
+          "value": 1,
+          "scale": "ordinal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
           "order": 4,
           "label": "Never",
           "label_with_id": "",
           "alias": "",
+          "eusurvey_answer_id": "",
+          "value": 0,
+          "scale": "ordinal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
+          "order": 4,
+          "label": "Soha",
+          "label_with_id": "",
+          "alias": "Soha",
           "eusurvey_answer_id": "",
           "value": 0,
           "scale": "ordinal",
@@ -24324,10 +24379,32 @@
           "special_type": ""
         },
         {
+          "order": 0,
+          "label": "Szinte mindig",
+          "label_with_id": "",
+          "alias": "Szinte mindig",
+          "eusurvey_answer_id": "",
+          "value": 4,
+          "scale": "ordinal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
           "order": 1,
           "label": "Often",
           "label_with_id": "",
           "alias": "",
+          "eusurvey_answer_id": "",
+          "value": 3,
+          "scale": "ordinal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
+          "order": 1,
+          "label": "Gyakran",
+          "label_with_id": "",
+          "alias": "Gyakran",
           "eusurvey_answer_id": "",
           "value": 3,
           "scale": "ordinal",
@@ -24346,6 +24423,17 @@
           "special_type": ""
         },
         {
+          "order": 2,
+          "label": "Néha",
+          "label_with_id": "",
+          "alias": "Néha",
+          "eusurvey_answer_id": "",
+          "value": 2,
+          "scale": "ordinal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
           "order": 3,
           "label": "Rarely",
           "label_with_id": "",
@@ -24357,10 +24445,32 @@
           "special_type": ""
         },
         {
+          "order": 3,
+          "label": "Ritkán",
+          "label_with_id": "",
+          "alias": "Ritkán",
+          "eusurvey_answer_id": "",
+          "value": 1,
+          "scale": "ordinal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
           "order": 4,
           "label": "Never",
           "label_with_id": "",
           "alias": "",
+          "eusurvey_answer_id": "",
+          "value": 0,
+          "scale": "ordinal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
+          "order": 4,
+          "label": "Soha",
+          "label_with_id": "",
+          "alias": "Soha",
           "eusurvey_answer_id": "",
           "value": 0,
           "scale": "ordinal",
@@ -24409,10 +24519,32 @@
           "special_type": ""
         },
         {
+          "order": 0,
+          "label": "Szinte mindig",
+          "label_with_id": "",
+          "alias": "Szinte mindig",
+          "eusurvey_answer_id": "",
+          "value": 4,
+          "scale": "ordinal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
           "order": 1,
           "label": "Often",
           "label_with_id": "",
           "alias": "",
+          "eusurvey_answer_id": "",
+          "value": 3,
+          "scale": "ordinal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
+          "order": 1,
+          "label": "Gyakran",
+          "label_with_id": "",
+          "alias": "Gyakran",
           "eusurvey_answer_id": "",
           "value": 3,
           "scale": "ordinal",
@@ -24431,6 +24563,17 @@
           "special_type": ""
         },
         {
+          "order": 2,
+          "label": "Néha",
+          "label_with_id": "",
+          "alias": "Néha",
+          "eusurvey_answer_id": "",
+          "value": 2,
+          "scale": "ordinal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
           "order": 3,
           "label": "Rarely",
           "label_with_id": "",
@@ -24442,10 +24585,32 @@
           "special_type": ""
         },
         {
+          "order": 3,
+          "label": "Ritkán",
+          "label_with_id": "",
+          "alias": "Ritkán",
+          "eusurvey_answer_id": "",
+          "value": 1,
+          "scale": "ordinal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
           "order": 4,
           "label": "Never",
           "label_with_id": "",
           "alias": "",
+          "eusurvey_answer_id": "",
+          "value": 0,
+          "scale": "ordinal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
+          "order": 4,
+          "label": "Soha",
+          "label_with_id": "",
+          "alias": "Soha",
           "eusurvey_answer_id": "",
           "value": 0,
           "scale": "ordinal",
@@ -24494,10 +24659,32 @@
           "special_type": ""
         },
         {
+          "order": 0,
+          "label": "Szinte mindig",
+          "label_with_id": "",
+          "alias": "Szinte mindig",
+          "eusurvey_answer_id": "",
+          "value": 4,
+          "scale": "ordinal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
           "order": 1,
           "label": "Often",
           "label_with_id": "",
           "alias": "",
+          "eusurvey_answer_id": "",
+          "value": 3,
+          "scale": "ordinal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
+          "order": 1,
+          "label": "Gyakran",
+          "label_with_id": "",
+          "alias": "Gyakran",
           "eusurvey_answer_id": "",
           "value": 3,
           "scale": "ordinal",
@@ -24516,6 +24703,17 @@
           "special_type": ""
         },
         {
+          "order": 2,
+          "label": "Néha",
+          "label_with_id": "",
+          "alias": "Néha",
+          "eusurvey_answer_id": "",
+          "value": 2,
+          "scale": "ordinal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
           "order": 3,
           "label": "Rarely",
           "label_with_id": "",
@@ -24527,10 +24725,32 @@
           "special_type": ""
         },
         {
+          "order": 3,
+          "label": "Ritkán",
+          "label_with_id": "",
+          "alias": "Ritkán",
+          "eusurvey_answer_id": "",
+          "value": 1,
+          "scale": "ordinal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
           "order": 4,
           "label": "Never",
           "label_with_id": "",
           "alias": "",
+          "eusurvey_answer_id": "",
+          "value": 0,
+          "scale": "ordinal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
+          "order": 4,
+          "label": "Soha",
+          "label_with_id": "",
+          "alias": "Soha",
           "eusurvey_answer_id": "",
           "value": 0,
           "scale": "ordinal",
@@ -24578,10 +24798,32 @@
           "special_type": ""
         },
         {
+          "order": 0,
+          "label": "Szinte mindig",
+          "label_with_id": "",
+          "alias": "Szinte mindig",
+          "eusurvey_answer_id": "",
+          "value": 4,
+          "scale": "ordinal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
           "order": 1,
           "label": "Often",
           "label_with_id": "",
           "alias": "",
+          "eusurvey_answer_id": "",
+          "value": 3,
+          "scale": "ordinal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
+          "order": 1,
+          "label": "Gyakran",
+          "label_with_id": "",
+          "alias": "Gyakran",
           "eusurvey_answer_id": "",
           "value": 3,
           "scale": "ordinal",
@@ -24600,6 +24842,17 @@
           "special_type": ""
         },
         {
+          "order": 2,
+          "label": "Néha",
+          "label_with_id": "",
+          "alias": "Néha",
+          "eusurvey_answer_id": "",
+          "value": 2,
+          "scale": "ordinal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
           "order": 3,
           "label": "Rarely",
           "label_with_id": "",
@@ -24611,10 +24864,32 @@
           "special_type": ""
         },
         {
+          "order": 3,
+          "label": "Ritkán",
+          "label_with_id": "",
+          "alias": "Ritkán",
+          "eusurvey_answer_id": "",
+          "value": 1,
+          "scale": "ordinal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
           "order": 4,
           "label": "Never",
           "label_with_id": "",
           "alias": "",
+          "eusurvey_answer_id": "",
+          "value": 0,
+          "scale": "ordinal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
+          "order": 4,
+          "label": "Soha",
+          "label_with_id": "",
+          "alias": "Soha",
           "eusurvey_answer_id": "",
           "value": 0,
           "scale": "ordinal",
@@ -24661,10 +24936,32 @@
           "special_type": ""
         },
         {
+          "order": 0,
+          "label": "Szinte mindig",
+          "label_with_id": "",
+          "alias": "Szinte mindig",
+          "eusurvey_answer_id": "",
+          "value": 4,
+          "scale": "ordinal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
           "order": 1,
           "label": "Often",
           "label_with_id": "",
           "alias": "",
+          "eusurvey_answer_id": "",
+          "value": 3,
+          "scale": "ordinal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
+          "order": 1,
+          "label": "Gyakran",
+          "label_with_id": "",
+          "alias": "Gyakran",
           "eusurvey_answer_id": "",
           "value": 3,
           "scale": "ordinal",
@@ -24683,6 +24980,17 @@
           "special_type": ""
         },
         {
+          "order": 2,
+          "label": "Néha",
+          "label_with_id": "",
+          "alias": "Néha",
+          "eusurvey_answer_id": "",
+          "value": 2,
+          "scale": "ordinal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
           "order": 3,
           "label": "Rarely",
           "label_with_id": "",
@@ -24694,10 +25002,32 @@
           "special_type": ""
         },
         {
+          "order": 3,
+          "label": "Ritkán",
+          "label_with_id": "",
+          "alias": "Ritkán",
+          "eusurvey_answer_id": "",
+          "value": 1,
+          "scale": "ordinal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
           "order": 4,
           "label": "Never",
           "label_with_id": "",
           "alias": "",
+          "eusurvey_answer_id": "",
+          "value": 0,
+          "scale": "ordinal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
+          "order": 4,
+          "label": "Soha",
+          "label_with_id": "",
+          "alias": "Soha",
           "eusurvey_answer_id": "",
           "value": 0,
           "scale": "ordinal",
@@ -31557,175 +31887,6 @@
       ]
     },
     {
-      "variable": "smharm_1",
-      "orig_variable": "some_use1:6_1",
-      "group_id": "k_rj_k_jel_ld_meg_az_al_bbi_letter_letekn_l_hogy",
-      "section": "MENTOR kérdőív",
-      "question_stem": "Kérjük, jelöld meg az alábbi életterületeknél, hogy milyen gyakran van rájuk negatív hatással a telefon, a számítógép vagy a játékkonzol használata!",
-      "item_text": "",
-      "scale": "nominal",
-      "question_type": "single",
-      "n_options": 13,
-      "multiple": false,
-      "source": "hungary",
-      "is_core": false,
-      "options_complete": true,
-      "scale_confidence": "high",
-      "notes": "",
-      "orig_aliases": {},
-      "options": [
-        {
-          "order": 0,
-          "label": "Szinte mindig",
-          "label_with_id": "",
-          "alias": "",
-          "eusurvey_answer_id": "",
-          "value": 1,
-          "scale": "nominal",
-          "is_special": false,
-          "special_type": ""
-        },
-        {
-          "order": 1,
-          "label": "Gyakran",
-          "label_with_id": "",
-          "alias": "",
-          "eusurvey_answer_id": "",
-          "value": 2,
-          "scale": "nominal",
-          "is_special": false,
-          "special_type": ""
-        },
-        {
-          "order": 2,
-          "label": "Néha",
-          "label_with_id": "",
-          "alias": "",
-          "eusurvey_answer_id": "",
-          "value": 3,
-          "scale": "nominal",
-          "is_special": false,
-          "special_type": ""
-        },
-        {
-          "order": 3,
-          "label": "Ritkán",
-          "label_with_id": "",
-          "alias": "",
-          "eusurvey_answer_id": "",
-          "value": 4,
-          "scale": "nominal",
-          "is_special": false,
-          "special_type": ""
-        },
-        {
-          "order": 4,
-          "label": "Soha",
-          "label_with_id": "",
-          "alias": "",
-          "eusurvey_answer_id": "",
-          "value": 5,
-          "scale": "nominal",
-          "is_special": false,
-          "special_type": ""
-        },
-        {
-          "order": 5,
-          "label": "Nem szeretnék válaszolni",
-          "label_with_id": "",
-          "alias": "",
-          "eusurvey_answer_id": "",
-          "value": 999,
-          "scale": "nominal",
-          "is_special": true,
-          "special_type": "Prefer not to answer"
-        },
-        {
-          "order": 6,
-          "label": "Nem tudom / Nem vonatkozik rám",
-          "label_with_id": "",
-          "alias": "",
-          "eusurvey_answer_id": "",
-          "value": 6,
-          "scale": "nominal",
-          "is_special": false,
-          "special_type": ""
-        },
-        {
-          "order": 7,
-          "label": "Alvás",
-          "label_with_id": "",
-          "alias": "",
-          "eusurvey_answer_id": "",
-          "value": 7,
-          "scale": "nominal",
-          "is_special": false,
-          "special_type": ""
-        },
-        {
-          "order": 8,
-          "label": "Iskolai feladatok",
-          "label_with_id": "",
-          "alias": "",
-          "eusurvey_answer_id": "",
-          "value": 8,
-          "scale": "nominal",
-          "is_special": false,
-          "special_type": ""
-        },
-        {
-          "order": 9,
-          "label": "Önbecsülés/mentális egészség",
-          "label_with_id": "",
-          "alias": "",
-          "eusurvey_answer_id": "",
-          "value": 9,
-          "scale": "nominal",
-          "is_special": false,
-          "special_type": ""
-        },
-        {
-          "order": 10,
-          "label": "Baráti kapcsolatok",
-          "label_with_id": "",
-          "alias": "",
-          "eusurvey_answer_id": "",
-          "value": 10,
-          "scale": "nominal",
-          "is_special": false,
-          "special_type": ""
-        },
-        {
-          "order": 11,
-          "label": "Családi kapcsolatok",
-          "label_with_id": "",
-          "alias": "",
-          "eusurvey_answer_id": "",
-          "value": 11,
-          "scale": "nominal",
-          "is_special": false,
-          "special_type": ""
-        },
-        {
-          "order": 12,
-          "label": "Szabadtéri tevékenységek vagy sportolás",
-          "label_with_id": "",
-          "alias": "",
-          "eusurvey_answer_id": "",
-          "value": 12,
-          "scale": "nominal",
-          "is_special": false,
-          "special_type": ""
-        }
-      ],
-      "keywords": [
-        "problematic screen use",
-        "device interference",
-        "digital media harm",
-        "technology impact"
-      ]
-    },
-    {
       "variable": "almezsto1",
       "orig_variable": "dasc01:25_1",
       "group_id": "amikor_a_lenti_mondatokban_eszk_z_sz_t_olvasol_g",
@@ -36019,32 +36180,6 @@
       ]
     },
     {
-      "variable": "mfosizns1",
-      "orig_variable": "schooltype",
-      "group_id": "melyik_fels_oktat_si_int_zm_nybe_s_milyen_szakra",
-      "section": "Other",
-      "question_stem": "Melyik felsőoktatási intézménybe, és milyen szakra jársz? - Selected Choice",
-      "item_text": "",
-      "scale": "text",
-      "question_type": "text",
-      "n_options": 0,
-      "multiple": false,
-      "source": "hungary",
-      "is_core": false,
-      "options_complete": true,
-      "scale_confidence": "high",
-      "notes": "Free text response / unmapped export variable",
-      "orig_aliases": {},
-      "options": [],
-      "keywords": [
-        "higher education",
-        "university",
-        "academic major",
-        "college",
-        "demographics"
-      ]
-    },
-    {
       "variable": "mekzsgtka1",
       "orig_variable": "ethnic1_7_TEXT",
       "group_id": "melyik_etnikai_k_z_ss_ghez_tartozol_k_rj_k_jel_l_2",
@@ -36306,10 +36441,10 @@
     },
     {
       "variable": "almezstoi1",
-      "orig_variable": "dasc01:25_11",
+      "orig_variable": "dasc01:25_10",
       "group_id": "amikor_a_lenti_mondatokban_eszk_z_sz_t_olvasol_g_10",
       "section": "Other",
-      "question_stem": "Amikor a lenti mondatokban „eszköz” szót olvasol, gondolj minden olyan készülékre, aminek képernyője van: PlayStation, Xbox, okostelefon, tablet, laptop, számítógép, kézi konzol stb. Az „eszközöm használata” azt jelenti, hogy játszol rajta, üzengetsz valakivel, közösségi média oldalakat nézel meg, TikTok vagy YouTube videókat, filmet, sorozatot nézel, stb.  Jelöld be azt a választ, amelyik igaz volt rád az elmúlt héten. Nincsenek jó vagy rossz válaszok! - Amikor nincs nálam az eszközöm, arra gondolok, amit azon szoktam csinálni (videojátékok, közösségi média, üzenetek stb.)",
+      "question_stem": "Amikor a lenti mondatokban „eszköz” szót olvasol, gondolj minden olyan készülékre, aminek képernyője van: PlayStation, Xbox, okostelefon, tablet, laptop, számítógép, kézi konzol stb. Az „eszközöm használata” azt jelenti, hogy játszol rajta, üzengetsz valakivel, közösségi média oldalakat nézel meg, TikTok vagy YouTube videókat, filmet, sorozatot nézel, stb.  Jelöld be azt a választ, amelyik igaz volt rád az elmúlt héten. Nincsenek jó vagy rossz válaszok! - Kevesebbet alszom az eszközöm használata miatt",
       "item_text": "",
       "scale": "text",
       "question_type": "text",
@@ -36332,10 +36467,10 @@
     },
     {
       "variable": "almezstoj1",
-      "orig_variable": "dasc01:25_12",
+      "orig_variable": "dasc01:25_11",
       "group_id": "amikor_a_lenti_mondatokban_eszk_z_sz_t_olvasol_g_11",
       "section": "Other",
-      "question_stem": "Amikor a lenti mondatokban „eszköz” szót olvasol, gondolj minden olyan készülékre, aminek képernyője van: PlayStation, Xbox, okostelefon, tablet, laptop, számítógép, kézi konzol stb. Az „eszközöm használata” azt jelenti, hogy játszol rajta, üzengetsz valakivel, közösségi média oldalakat nézel meg, TikTok vagy YouTube videókat, filmet, sorozatot nézel, stb.  Jelöld be azt a választ, amelyik igaz volt rád az elmúlt héten. Nincsenek jó vagy rossz válaszok! - Feszült vagyok, ha nem tudom használni az eszközömet.",
+      "question_stem": "Amikor a lenti mondatokban „eszköz” szót olvasol, gondolj minden olyan készülékre, aminek képernyője van: PlayStation, Xbox, okostelefon, tablet, laptop, számítógép, kézi konzol stb. Az „eszközöm használata” azt jelenti, hogy játszol rajta, üzengetsz valakivel, közösségi média oldalakat nézel meg, TikTok vagy YouTube videókat, filmet, sorozatot nézel, stb.  Jelöld be azt a választ, amelyik igaz volt rád az elmúlt héten. Nincsenek jó vagy rossz válaszok! - Amikor nincs nálam az eszközöm, arra gondolok, amit azon szoktam csinálni (videojátékok, közösségi média, üzenetek stb.)",
       "item_text": "",
       "scale": "text",
       "question_type": "text",
@@ -36358,10 +36493,10 @@
     },
     {
       "variable": "almezstok1",
-      "orig_variable": "dasc01:25_13",
+      "orig_variable": "dasc01:25_12",
       "group_id": "amikor_a_lenti_mondatokban_eszk_z_sz_t_olvasol_g_12",
       "section": "Other",
-      "question_stem": "Amikor a lenti mondatokban „eszköz” szót olvasol, gondolj minden olyan készülékre, aminek képernyője van: PlayStation, Xbox, okostelefon, tablet, laptop, számítógép, kézi konzol stb. Az „eszközöm használata” azt jelenti, hogy játszol rajta, üzengetsz valakivel, közösségi média oldalakat nézel meg, TikTok vagy YouTube videókat, filmet, sorozatot nézel, stb.  Jelöld be azt a választ, amelyik igaz volt rád az elmúlt héten. Nincsenek jó vagy rossz válaszok! - Konfliktusaim vannak a szüleimmel azzal kapcsolatban, hogy mennyi időt töltök az eszközöm használatával",
+      "question_stem": "Amikor a lenti mondatokban „eszköz” szót olvasol, gondolj minden olyan készülékre, aminek képernyője van: PlayStation, Xbox, okostelefon, tablet, laptop, számítógép, kézi konzol stb. Az „eszközöm használata” azt jelenti, hogy játszol rajta, üzengetsz valakivel, közösségi média oldalakat nézel meg, TikTok vagy YouTube videókat, filmet, sorozatot nézel, stb.  Jelöld be azt a választ, amelyik igaz volt rád az elmúlt héten. Nincsenek jó vagy rossz válaszok! - Feszült vagyok, ha nem tudom használni az eszközömet.",
       "item_text": "",
       "scale": "text",
       "question_type": "text",
@@ -36384,10 +36519,10 @@
     },
     {
       "variable": "almezstol1",
-      "orig_variable": "dasc01:25_14",
+      "orig_variable": "dasc01:25_13",
       "group_id": "amikor_a_lenti_mondatokban_eszk_z_sz_t_olvasol_g_13",
       "section": "Other",
-      "question_stem": "Amikor a lenti mondatokban „eszköz” szót olvasol, gondolj minden olyan készülékre, aminek képernyője van: PlayStation, Xbox, okostelefon, tablet, laptop, számítógép, kézi konzol stb. Az „eszközöm használata” azt jelenti, hogy játszol rajta, üzengetsz valakivel, közösségi média oldalakat nézel meg, TikTok vagy YouTube videókat, filmet, sorozatot nézel, stb.  Jelöld be azt a választ, amelyik igaz volt rád az elmúlt héten. Nincsenek jó vagy rossz válaszok! - Az eszközöm használata a legfontosabb dolog az életemben",
+      "question_stem": "Amikor a lenti mondatokban „eszköz” szót olvasol, gondolj minden olyan készülékre, aminek képernyője van: PlayStation, Xbox, okostelefon, tablet, laptop, számítógép, kézi konzol stb. Az „eszközöm használata” azt jelenti, hogy játszol rajta, üzengetsz valakivel, közösségi média oldalakat nézel meg, TikTok vagy YouTube videókat, filmet, sorozatot nézel, stb.  Jelöld be azt a választ, amelyik igaz volt rád az elmúlt héten. Nincsenek jó vagy rossz válaszok! - Konfliktusaim vannak a szüleimmel azzal kapcsolatban, hogy mennyi időt töltök az eszközöm használatával",
       "item_text": "",
       "scale": "text",
       "question_type": "text",
@@ -36410,10 +36545,10 @@
     },
     {
       "variable": "almezstom1",
-      "orig_variable": "dasc01:25_15",
+      "orig_variable": "dasc01:25_14",
       "group_id": "amikor_a_lenti_mondatokban_eszk_z_sz_t_olvasol_g_14",
       "section": "Other",
-      "question_stem": "Amikor a lenti mondatokban „eszköz” szót olvasol, gondolj minden olyan készülékre, aminek képernyője van: PlayStation, Xbox, okostelefon, tablet, laptop, számítógép, kézi konzol stb. Az „eszközöm használata” azt jelenti, hogy játszol rajta, üzengetsz valakivel, közösségi média oldalakat nézel meg, TikTok vagy YouTube videókat, filmet, sorozatot nézel, stb.  Jelöld be azt a választ, amelyik igaz volt rád az elmúlt héten. Nincsenek jó vagy rossz válaszok! - Az eszközöm használata élvezetesebb, mint más dolgok",
+      "question_stem": "Amikor a lenti mondatokban „eszköz” szót olvasol, gondolj minden olyan készülékre, aminek képernyője van: PlayStation, Xbox, okostelefon, tablet, laptop, számítógép, kézi konzol stb. Az „eszközöm használata” azt jelenti, hogy játszol rajta, üzengetsz valakivel, közösségi média oldalakat nézel meg, TikTok vagy YouTube videókat, filmet, sorozatot nézel, stb.  Jelöld be azt a választ, amelyik igaz volt rád az elmúlt héten. Nincsenek jó vagy rossz válaszok! - Az eszközöm használata a legfontosabb dolog az életemben",
       "item_text": "",
       "scale": "text",
       "question_type": "text",
@@ -36436,10 +36571,10 @@
     },
     {
       "variable": "almezston1",
-      "orig_variable": "dasc01:25_16",
+      "orig_variable": "dasc01:25_15",
       "group_id": "amikor_a_lenti_mondatokban_eszk_z_sz_t_olvasol_g_15",
       "section": "Other",
-      "question_stem": "Amikor a lenti mondatokban „eszköz” szót olvasol, gondolj minden olyan készülékre, aminek képernyője van: PlayStation, Xbox, okostelefon, tablet, laptop, számítógép, kézi konzol stb. Az „eszközöm használata” azt jelenti, hogy játszol rajta, üzengetsz valakivel, közösségi média oldalakat nézel meg, TikTok vagy YouTube videókat, filmet, sorozatot nézel, stb.  Jelöld be azt a választ, amelyik igaz volt rád az elmúlt héten. Nincsenek jó vagy rossz válaszok! - Hazudok a szüleimnek arról, hogy mit csinálok az eszközömön",
+      "question_stem": "Amikor a lenti mondatokban „eszköz” szót olvasol, gondolj minden olyan készülékre, aminek képernyője van: PlayStation, Xbox, okostelefon, tablet, laptop, számítógép, kézi konzol stb. Az „eszközöm használata” azt jelenti, hogy játszol rajta, üzengetsz valakivel, közösségi média oldalakat nézel meg, TikTok vagy YouTube videókat, filmet, sorozatot nézel, stb.  Jelöld be azt a választ, amelyik igaz volt rád az elmúlt héten. Nincsenek jó vagy rossz válaszok! - Az eszközöm használata élvezetesebb, mint más dolgok",
       "item_text": "",
       "scale": "text",
       "question_type": "text",
@@ -36462,10 +36597,10 @@
     },
     {
       "variable": "almezstoo1",
-      "orig_variable": "dasc01:25_17",
+      "orig_variable": "dasc01:25_16",
       "group_id": "amikor_a_lenti_mondatokban_eszk_z_sz_t_olvasol_g_16",
       "section": "Other",
-      "question_stem": "Amikor a lenti mondatokban „eszköz” szót olvasol, gondolj minden olyan készülékre, aminek képernyője van: PlayStation, Xbox, okostelefon, tablet, laptop, számítógép, kézi konzol stb. Az „eszközöm használata” azt jelenti, hogy játszol rajta, üzengetsz valakivel, közösségi média oldalakat nézel meg, TikTok vagy YouTube videókat, filmet, sorozatot nézel, stb.  Jelöld be azt a választ, amelyik igaz volt rád az elmúlt héten. Nincsenek jó vagy rossz válaszok! - Nem tudom uralni az eszközöm használatát",
+      "question_stem": "Amikor a lenti mondatokban „eszköz” szót olvasol, gondolj minden olyan készülékre, aminek képernyője van: PlayStation, Xbox, okostelefon, tablet, laptop, számítógép, kézi konzol stb. Az „eszközöm használata” azt jelenti, hogy játszol rajta, üzengetsz valakivel, közösségi média oldalakat nézel meg, TikTok vagy YouTube videókat, filmet, sorozatot nézel, stb.  Jelöld be azt a választ, amelyik igaz volt rád az elmúlt héten. Nincsenek jó vagy rossz válaszok! - Hazudok a szüleimnek arról, hogy mit csinálok az eszközömön",
       "item_text": "",
       "scale": "text",
       "question_type": "text",
@@ -36488,10 +36623,10 @@
     },
     {
       "variable": "almezstop1",
-      "orig_variable": "dasc01:25_18",
+      "orig_variable": "dasc01:25_17",
       "group_id": "amikor_a_lenti_mondatokban_eszk_z_sz_t_olvasol_g_17",
       "section": "Other",
-      "question_stem": "Amikor a lenti mondatokban „eszköz” szót olvasol, gondolj minden olyan készülékre, aminek képernyője van: PlayStation, Xbox, okostelefon, tablet, laptop, számítógép, kézi konzol stb. Az „eszközöm használata” azt jelenti, hogy játszol rajta, üzengetsz valakivel, közösségi média oldalakat nézel meg, TikTok vagy YouTube videókat, filmet, sorozatot nézel, stb.  Jelöld be azt a választ, amelyik igaz volt rád az elmúlt héten. Nincsenek jó vagy rossz válaszok! - Elvesztettem érdeklődésemet hobbik vagy más tevékenységek iránt, mert inkább az eszközömet használom",
+      "question_stem": "Amikor a lenti mondatokban „eszköz” szót olvasol, gondolj minden olyan készülékre, aminek képernyője van: PlayStation, Xbox, okostelefon, tablet, laptop, számítógép, kézi konzol stb. Az „eszközöm használata” azt jelenti, hogy játszol rajta, üzengetsz valakivel, közösségi média oldalakat nézel meg, TikTok vagy YouTube videókat, filmet, sorozatot nézel, stb.  Jelöld be azt a választ, amelyik igaz volt rád az elmúlt héten. Nincsenek jó vagy rossz válaszok! - Nem tudom uralni az eszközöm használatát",
       "item_text": "",
       "scale": "text",
       "question_type": "text",
@@ -36514,10 +36649,10 @@
     },
     {
       "variable": "almezstoq1",
-      "orig_variable": "dasc01:25_19",
+      "orig_variable": "dasc01:25_18",
       "group_id": "amikor_a_lenti_mondatokban_eszk_z_sz_t_olvasol_g_18",
       "section": "Other",
-      "question_stem": "Amikor a lenti mondatokban „eszköz” szót olvasol, gondolj minden olyan készülékre, aminek képernyője van: PlayStation, Xbox, okostelefon, tablet, laptop, számítógép, kézi konzol stb. Az „eszközöm használata” azt jelenti, hogy játszol rajta, üzengetsz valakivel, közösségi média oldalakat nézel meg, TikTok vagy YouTube videókat, filmet, sorozatot nézel, stb.  Jelöld be azt a választ, amelyik igaz volt rád az elmúlt héten. Nincsenek jó vagy rossz válaszok! - Amikor abbahagyom az eszközöm használatát, nem sokkal később újra elkezdem használni",
+      "question_stem": "Amikor a lenti mondatokban „eszköz” szót olvasol, gondolj minden olyan készülékre, aminek képernyője van: PlayStation, Xbox, okostelefon, tablet, laptop, számítógép, kézi konzol stb. Az „eszközöm használata” azt jelenti, hogy játszol rajta, üzengetsz valakivel, közösségi média oldalakat nézel meg, TikTok vagy YouTube videókat, filmet, sorozatot nézel, stb.  Jelöld be azt a választ, amelyik igaz volt rád az elmúlt héten. Nincsenek jó vagy rossz válaszok! - Elvesztettem érdeklődésemet hobbik vagy más tevékenységek iránt, mert inkább az eszközömet használom",
       "item_text": "",
       "scale": "text",
       "question_type": "text",
@@ -36540,10 +36675,10 @@
     },
     {
       "variable": "almezstor1",
-      "orig_variable": "dasc01:25_20",
+      "orig_variable": "dasc01:25_19",
       "group_id": "amikor_a_lenti_mondatokban_eszk_z_sz_t_olvasol_g_19",
       "section": "Other",
-      "question_stem": "Amikor a lenti mondatokban „eszköz” szót olvasol, gondolj minden olyan készülékre, aminek képernyője van: PlayStation, Xbox, okostelefon, tablet, laptop, számítógép, kézi konzol stb. Az „eszközöm használata” azt jelenti, hogy játszol rajta, üzengetsz valakivel, közösségi média oldalakat nézel meg, TikTok vagy YouTube videókat, filmet, sorozatot nézel, stb.  Jelöld be azt a választ, amelyik igaz volt rád az elmúlt héten. Nincsenek jó vagy rossz válaszok! - Megnézem az eszközöm, amikor házi feladatot vagy más fontos dolgot csinálok",
+      "question_stem": "Amikor a lenti mondatokban „eszköz” szót olvasol, gondolj minden olyan készülékre, aminek képernyője van: PlayStation, Xbox, okostelefon, tablet, laptop, számítógép, kézi konzol stb. Az „eszközöm használata” azt jelenti, hogy játszol rajta, üzengetsz valakivel, közösségi média oldalakat nézel meg, TikTok vagy YouTube videókat, filmet, sorozatot nézel, stb.  Jelöld be azt a választ, amelyik igaz volt rád az elmúlt héten. Nincsenek jó vagy rossz válaszok! - Amikor abbahagyom az eszközöm használatát, nem sokkal később újra elkezdem használni",
       "item_text": "",
       "scale": "text",
       "question_type": "text",
@@ -36566,10 +36701,10 @@
     },
     {
       "variable": "almezstos1",
-      "orig_variable": "dasc01:25_21",
+      "orig_variable": "dasc01:25_20",
       "group_id": "amikor_a_lenti_mondatokban_eszk_z_sz_t_olvasol_g_20",
       "section": "Other",
-      "question_stem": "Amikor a lenti mondatokban „eszköz” szót olvasol, gondolj minden olyan készülékre, aminek képernyője van: PlayStation, Xbox, okostelefon, tablet, laptop, számítógép, kézi konzol stb. Az „eszközöm használata” azt jelenti, hogy játszol rajta, üzengetsz valakivel, közösségi média oldalakat nézel meg, TikTok vagy YouTube videókat, filmet, sorozatot nézel, stb.  Jelöld be azt a választ, amelyik igaz volt rád az elmúlt héten. Nincsenek jó vagy rossz válaszok! - Feszült leszek, amikor arra kérnek, hogy hagyjam abba az eszközöm használatát",
+      "question_stem": "Amikor a lenti mondatokban „eszköz” szót olvasol, gondolj minden olyan készülékre, aminek képernyője van: PlayStation, Xbox, okostelefon, tablet, laptop, számítógép, kézi konzol stb. Az „eszközöm használata” azt jelenti, hogy játszol rajta, üzengetsz valakivel, közösségi média oldalakat nézel meg, TikTok vagy YouTube videókat, filmet, sorozatot nézel, stb.  Jelöld be azt a választ, amelyik igaz volt rád az elmúlt héten. Nincsenek jó vagy rossz válaszok! - Megnézem az eszközöm, amikor házi feladatot vagy más fontos dolgot csinálok",
       "item_text": "",
       "scale": "text",
       "question_type": "text",
@@ -36592,10 +36727,10 @@
     },
     {
       "variable": "almezstot1",
-      "orig_variable": "dasc01:25_22",
+      "orig_variable": "dasc01:25_21",
       "group_id": "amikor_a_lenti_mondatokban_eszk_z_sz_t_olvasol_g_21",
       "section": "Other",
-      "question_stem": "Amikor a lenti mondatokban „eszköz” szót olvasol, gondolj minden olyan készülékre, aminek képernyője van: PlayStation, Xbox, okostelefon, tablet, laptop, számítógép, kézi konzol stb. Az „eszközöm használata” azt jelenti, hogy játszol rajta, üzengetsz valakivel, közösségi média oldalakat nézel meg, TikTok vagy YouTube videókat, filmet, sorozatot nézel, stb.  Jelöld be azt a választ, amelyik igaz volt rád az elmúlt héten. Nincsenek jó vagy rossz válaszok! - Összeveszek a szüleimmel, amikor arra kérnek, hogy hagyjam abba az eszközöm használatát",
+      "question_stem": "Amikor a lenti mondatokban „eszköz” szót olvasol, gondolj minden olyan készülékre, aminek képernyője van: PlayStation, Xbox, okostelefon, tablet, laptop, számítógép, kézi konzol stb. Az „eszközöm használata” azt jelenti, hogy játszol rajta, üzengetsz valakivel, közösségi média oldalakat nézel meg, TikTok vagy YouTube videókat, filmet, sorozatot nézel, stb.  Jelöld be azt a választ, amelyik igaz volt rád az elmúlt héten. Nincsenek jó vagy rossz válaszok! - Feszült leszek, amikor arra kérnek, hogy hagyjam abba az eszközöm használatát",
       "item_text": "",
       "scale": "text",
       "question_type": "text",
@@ -36618,10 +36753,10 @@
     },
     {
       "variable": "almezstou1",
-      "orig_variable": "dasc01:25_23",
+      "orig_variable": "dasc01:25_22",
       "group_id": "amikor_a_lenti_mondatokban_eszk_z_sz_t_olvasol_g_22",
       "section": "Other",
-      "question_stem": "Amikor a lenti mondatokban „eszköz” szót olvasol, gondolj minden olyan készülékre, aminek képernyője van: PlayStation, Xbox, okostelefon, tablet, laptop, számítógép, kézi konzol stb. Az „eszközöm használata” azt jelenti, hogy játszol rajta, üzengetsz valakivel, közösségi média oldalakat nézel meg, TikTok vagy YouTube videókat, filmet, sorozatot nézel, stb.  Jelöld be azt a választ, amelyik igaz volt rád az elmúlt héten. Nincsenek jó vagy rossz válaszok! - Túl sok pénzt költök az eszközömhöz kapcsolódó dolgokra",
+      "question_stem": "Amikor a lenti mondatokban „eszköz” szót olvasol, gondolj minden olyan készülékre, aminek képernyője van: PlayStation, Xbox, okostelefon, tablet, laptop, számítógép, kézi konzol stb. Az „eszközöm használata” azt jelenti, hogy játszol rajta, üzengetsz valakivel, közösségi média oldalakat nézel meg, TikTok vagy YouTube videókat, filmet, sorozatot nézel, stb.  Jelöld be azt a választ, amelyik igaz volt rád az elmúlt héten. Nincsenek jó vagy rossz válaszok! - Összeveszek a szüleimmel, amikor arra kérnek, hogy hagyjam abba az eszközöm használatát",
       "item_text": "",
       "scale": "text",
       "question_type": "text",
@@ -36644,10 +36779,10 @@
     },
     {
       "variable": "almezstov1",
-      "orig_variable": "dasc01:25_24",
+      "orig_variable": "dasc01:25_23",
       "group_id": "amikor_a_lenti_mondatokban_eszk_z_sz_t_olvasol_g_23",
       "section": "Other",
-      "question_stem": "Amikor a lenti mondatokban „eszköz” szót olvasol, gondolj minden olyan készülékre, aminek képernyője van: PlayStation, Xbox, okostelefon, tablet, laptop, számítógép, kézi konzol stb. Az „eszközöm használata” azt jelenti, hogy játszol rajta, üzengetsz valakivel, közösségi média oldalakat nézel meg, TikTok vagy YouTube videókat, filmet, sorozatot nézel, stb.  Jelöld be azt a választ, amelyik igaz volt rád az elmúlt héten. Nincsenek jó vagy rossz válaszok! - Amikor rosszkedvű vagyok, az eszközöm használatától jobb kedvem lesz",
+      "question_stem": "Amikor a lenti mondatokban „eszköz” szót olvasol, gondolj minden olyan készülékre, aminek képernyője van: PlayStation, Xbox, okostelefon, tablet, laptop, számítógép, kézi konzol stb. Az „eszközöm használata” azt jelenti, hogy játszol rajta, üzengetsz valakivel, közösségi média oldalakat nézel meg, TikTok vagy YouTube videókat, filmet, sorozatot nézel, stb.  Jelöld be azt a választ, amelyik igaz volt rád az elmúlt héten. Nincsenek jó vagy rossz válaszok! - Túl sok pénzt költök az eszközömhöz kapcsolódó dolgokra",
       "item_text": "",
       "scale": "text",
       "question_type": "text",
@@ -36670,10 +36805,10 @@
     },
     {
       "variable": "almezstow1",
-      "orig_variable": "dasc01:25_25",
+      "orig_variable": "dasc01:25_24",
       "group_id": "amikor_a_lenti_mondatokban_eszk_z_sz_t_olvasol_g_24",
       "section": "Other",
-      "question_stem": "Amikor a lenti mondatokban „eszköz” szót olvasol, gondolj minden olyan készülékre, aminek képernyője van: PlayStation, Xbox, okostelefon, tablet, laptop, számítógép, kézi konzol stb. Az „eszközöm használata” azt jelenti, hogy játszol rajta, üzengetsz valakivel, közösségi média oldalakat nézel meg, TikTok vagy YouTube videókat, filmet, sorozatot nézel, stb.  Jelöld be azt a választ, amelyik igaz volt rád az elmúlt héten. Nincsenek jó vagy rossz válaszok! - Továbbra is használom az eszközöm annak ellenére, hogy az iskolai jegyeim egyre rosszabbak",
+      "question_stem": "Amikor a lenti mondatokban „eszköz” szót olvasol, gondolj minden olyan készülékre, aminek képernyője van: PlayStation, Xbox, okostelefon, tablet, laptop, számítógép, kézi konzol stb. Az „eszközöm használata” azt jelenti, hogy játszol rajta, üzengetsz valakivel, közösségi média oldalakat nézel meg, TikTok vagy YouTube videókat, filmet, sorozatot nézel, stb.  Jelöld be azt a választ, amelyik igaz volt rád az elmúlt héten. Nincsenek jó vagy rossz válaszok! - Amikor rosszkedvű vagyok, az eszközöm használatától jobb kedvem lesz",
       "item_text": "",
       "scale": "text",
       "question_type": "text",
@@ -36692,6 +36827,33 @@
         "negative consequences",
         "screen time",
         "problematic media use"
+      ]
+    },
+    {
+      "variable": "almezstox1",
+      "orig_variable": "dasc01:25_25",
+      "group_id": "amikor_a_lenti_mondatokban_eszk_z_sz_t_olvasol_g_25",
+      "section": "Other",
+      "question_stem": "Amikor a lenti mondatokban „eszköz” szót olvasol, gondolj minden olyan készülékre, aminek képernyője van: PlayStation, Xbox, okostelefon, tablet, laptop, számítógép, kézi konzol stb. Az „eszközöm használata” azt jelenti, hogy játszol rajta, üzengetsz valakivel, közösségi média oldalakat nézel meg, TikTok vagy YouTube videókat, filmet, sorozatot nézel, stb.  Jelöld be azt a választ, amelyik igaz volt rád az elmúlt héten. Nincsenek jó vagy rossz válaszok! - Továbbra is használom az eszközöm annak ellenére, hogy az iskolai jegyeim egyre rosszabbak",
+      "item_text": "",
+      "scale": "text",
+      "question_type": "text",
+      "n_options": 0,
+      "multiple": false,
+      "source": "hungary",
+      "is_core": false,
+      "options_complete": true,
+      "scale_confidence": "high",
+      "notes": "Free text response / unmapped export variable",
+      "orig_aliases": {},
+      "options": [],
+      "keywords": [
+        "screen time",
+        "problematic media use",
+        "device addiction",
+        "academic performance",
+        "grades",
+        "internet addiction"
       ]
     },
     {
@@ -38384,9 +38546,9 @@
       ]
     },
     {
-      "variable": "mfosiznsa1",
+      "variable": "mfosizns1",
       "orig_variable": "schooltype_1_TEXT",
-      "group_id": "melyik_fels_oktat_si_int_zm_nybe_s_milyen_szakra_2",
+      "group_id": "melyik_fels_oktat_si_int_zm_nybe_s_milyen_szakra",
       "section": "Other",
       "question_stem": "Melyik felsőoktatási intézménybe, és milyen szakra jársz? - Az alábbi intézménybe és szakra járok: - Text",
       "item_text": "",
@@ -38402,11 +38564,11 @@
       "orig_aliases": {},
       "options": [],
       "keywords": [
-        "demographics",
         "higher education",
-        "university major",
-        "college enrollment",
-        "academic status"
+        "university",
+        "academic major",
+        "college",
+        "demographics"
       ]
     },
     {
@@ -45088,6 +45250,7 @@
     "gender1": "gender1",
     "gender2": "ident1",
     "grade1": "grade1",
+    "schooltype": "grade1",
     "born1": "byear1",
     "ID289": "bmonth1",
     "born2": "bplace1",
@@ -45410,7 +45573,7 @@
     "some_feel1": "smpos1",
     "some_feel2": "smneg1",
     "some_use1": "smharm1",
-    "dasc01:25_10": "smharm1",
+    "some_use1:6_1": "smharm1",
     "ID486": "smharm1",
     "some_use2": "smharm2",
     "some_use1:6_2": "smharm2",
@@ -45503,7 +45666,6 @@
     "ethnic1": "mekzsgtk1",
     "some_week1:5_1": "smwd_1",
     "some_weekend1:5_1": "smwda_1",
-    "some_use1:6_1": "smharm_1",
     "dasc01:25_1": "almezsto1",
     "suicide1:5_1": "tvteaabk1",
     "sub_abuse8": "mgillsnb1",
@@ -45529,7 +45691,6 @@
     "school1:11_1": "krkjlbmr1",
     "school_stress1:3_1": "iskolai1",
     "born4_1_TEXT": "krllhnvv1",
-    "schooltype": "mfosizns1",
     "ethnic1_7_TEXT": "mekzsgtka1",
     "some_apps1_15_TEXT": "apps_1",
     "dasc01:25_2": "almezstoa1",
@@ -45540,21 +45701,22 @@
     "dasc01:25_7": "almezstof1",
     "dasc01:25_8": "almezstog1",
     "dasc01:25_9": "almezstoh1",
-    "dasc01:25_11": "almezstoi1",
-    "dasc01:25_12": "almezstoj1",
-    "dasc01:25_13": "almezstok1",
-    "dasc01:25_14": "almezstol1",
-    "dasc01:25_15": "almezstom1",
-    "dasc01:25_16": "almezston1",
-    "dasc01:25_17": "almezstoo1",
-    "dasc01:25_18": "almezstop1",
-    "dasc01:25_19": "almezstoq1",
-    "dasc01:25_20": "almezstor1",
-    "dasc01:25_21": "almezstos1",
-    "dasc01:25_22": "almezstot1",
-    "dasc01:25_23": "almezstou1",
-    "dasc01:25_24": "almezstov1",
-    "dasc01:25_25": "almezstow1",
+    "dasc01:25_10": "almezstoi1",
+    "dasc01:25_11": "almezstoj1",
+    "dasc01:25_12": "almezstok1",
+    "dasc01:25_13": "almezstol1",
+    "dasc01:25_14": "almezstom1",
+    "dasc01:25_15": "almezston1",
+    "dasc01:25_16": "almezstoo1",
+    "dasc01:25_17": "almezstop1",
+    "dasc01:25_18": "almezstoq1",
+    "dasc01:25_19": "almezstor1",
+    "dasc01:25_20": "almezstos1",
+    "dasc01:25_21": "almezstot1",
+    "dasc01:25_22": "almezstou1",
+    "dasc01:25_23": "almezstov1",
+    "dasc01:25_24": "almezstow1",
+    "dasc01:25_25": "almezstox1",
     "suicide1:5_2": "tvteaabka1",
     "suicide1:5_3": "tvteaabkb1",
     "suicide1:5_4": "tvteaabkc1",
@@ -45620,7 +45782,7 @@
     "school1:11_11": "krkjlbmrj1",
     "school_stress1:3_2": "isklrmai1",
     "school_stress1:3_3": "istbifvm1",
-    "schooltype_1_TEXT": "mfosiznsa1",
+    "schooltype_1_TEXT": "mfosizns1",
     "ID260": "cndllsm1",
     "ID194": "mdladlls1",
     "ID358": "rndledll1",
@@ -45946,7 +46108,6 @@
     "mekzsgtk1": "mekzsgtk1",
     "smwd_1": "smwd_1",
     "smwda_1": "smwda_1",
-    "smharm_1": "smharm_1",
     "almezsto1": "almezsto1",
     "tvteaabk1": "tvteaabk1",
     "mgillsnb1": "mgillsnb1",
@@ -45972,7 +46133,6 @@
     "krkjlbmr1": "krkjlbmr1",
     "iskolai1": "iskolai1",
     "krllhnvv1": "krllhnvv1",
-    "mfosizns1": "mfosizns1",
     "mekzsgtka1": "mekzsgtka1",
     "apps_1": "apps_1",
     "almezstoa1": "almezstoa1",
@@ -45998,6 +46158,7 @@
     "almezstou1": "almezstou1",
     "almezstov1": "almezstov1",
     "almezstow1": "almezstow1",
+    "almezstox1": "almezstox1",
     "tvteaabka1": "tvteaabka1",
     "tvteaabkb1": "tvteaabkb1",
     "tvteaabkc1": "tvteaabkc1",
@@ -46063,7 +46224,7 @@
     "krkjlbmrj1": "krkjlbmrj1",
     "isklrmai1": "isklrmai1",
     "istbifvm1": "istbifvm1",
-    "mfosiznsa1": "mfosiznsa1",
+    "mfosizns1": "mfosizns1",
     "cndllsm1": "cndllsm1",
     "mdladlls1": "mdladlls1",
     "rndledll1": "rndledll1",
