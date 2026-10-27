@@ -75,12 +75,12 @@
     const raw = norm(headerStr);
     const m = raw.match(/^(.*?)\s*[\(\[\{]([A-Za-z0-9_.:\- ]{1,64})[\)\]\}]\s*$/);
     if (m) {
-      return { text: norm(m[1]), varId: norm(m[2]) };
+      return { text: norm(m[1]), varId: norm(m[2]), hadTag: true };
     }
     if (looksLikeBareVarId(raw)) {
-      return { text: raw, varId: raw };
+      return { text: raw, varId: raw, hadTag: false };
     }
-    return { text: raw, varId: "" };
+    return { text: raw, varId: "", hadTag: false };
   }
 
   function detectExportLayout(rows) {
@@ -145,6 +145,55 @@
       return { label: norm(m[1]), answerId: m[2], raw: s };
     }
     return { label: s, answerId: null, raw: s };
+  }
+
+  /**
+   * Header cell for the cleaned download. Tagged headers keep the question
+   * text from parseHeader; every other header stays as stored.
+   */
+  function cleanHeaderCell(value) {
+    if (value == null || value === "") return value;
+    const parsed = parseHeader(value);
+    if (!parsed.hadTag) return value;
+    return parsed.text;
+  }
+
+  /**
+   * Respondent cell for the cleaned download. A trailing answer tag is
+   * replaced with its label. Numbers, blanks, and untagged text stay as stored.
+   */
+  function cleanAnswerCell(value) {
+    if (value == null || value === "") return value;
+    const parsed = parseAnswer(value);
+    if (!parsed.answerId) return value;
+    return parsed.label;
+  }
+
+  /**
+   * One header row plus one respondent row, with preamble omitted and
+   * trailing ID tags removed. Does not recode labels to numeric codes.
+   */
+  function cleanExportRows(rows) {
+    if (!Array.isArray(rows) || rows.length === 0) return [];
+    const layout = detectExportLayout(rows);
+    const header = rows[layout.headerRowIndex] || [];
+    const dataRows = rows.slice(layout.dataStartIndex);
+    const width = header.length;
+    const cleanedHeader = [];
+    for (let i = 0; i < width; i++) {
+      cleanedHeader.push(cleanHeaderCell(header[i]));
+    }
+    const cleanedData = dataRows.map(row => {
+      const src = row || [];
+      const n = Math.max(width, src.length);
+      const out = [];
+      for (let i = 0; i < n; i++) {
+        const cell = i < src.length ? src[i] : null;
+        out.push(cleanAnswerCell(cell));
+      }
+      return out;
+    });
+    return [cleanedHeader, ...cleanedData];
   }
 
   /**
@@ -675,6 +724,8 @@
       };
     }
   }
+
+  SurveyAuditor.cleanExportRows = cleanExportRows;
 
   return SurveyAuditor;
 }));

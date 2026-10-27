@@ -55,6 +55,9 @@ format:
       <button type="button" id="btn-export-issues" class="btn btn-export" onclick="window.exportAuditIssuesCSV()">
         📥 Export Audit Issues (CSV)
       </button>
+      <button type="button" id="btn-export-cleaned" class="btn btn-export" onclick="window.exportCleanedData()">
+        Export cleaned data
+      </button>
       <button type="button" id="btn-load-sample" class="btn btn-subtle btn-sm" onclick="window.loadBundledSample()" title="Load bundled 100-respondent example data for demonstration purposes">
         Load sample data
       </button>
