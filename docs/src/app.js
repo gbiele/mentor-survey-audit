@@ -6,6 +6,7 @@
 (function () {
   let auditor = null;
   let currentAuditResult = null;
+  let currentSheetRows = null;
   let activeFilter = 'all';
   let searchQuery = '';
   let expandedRows = new Set();
@@ -110,6 +111,7 @@
       const result = auditor.auditSheet(rows);
       currentAuditResult = result;
       currentAuditResult.filename = filename || 'Survey_Export.xlsx';
+      currentSheetRows = rows;
       window.__LAST_AUDIT_RESULT__ = result;
 
       renderDashboard(result);
@@ -917,6 +919,20 @@
 
     return html;
   }
+
+  window.exportCleanedData = function() {
+    if (!currentSheetRows || !currentSheetRows.length) {
+      alert('Please upload or load a survey export before exporting cleaned data.');
+      return;
+    }
+    const cleaned = SurveyAuditor.cleanExportRows(currentSheetRows);
+    const worksheet = XLSX.utils.aoa_to_sheet(cleaned);
+    const workbook = XLSX.utils.book_new();
+    XLSX.utils.book_append_sheet(workbook, worksheet, 'Cleaned');
+    const base = (currentAuditResult && currentAuditResult.filename) || 'Survey_Export.xlsx';
+    const downloadName = String(base).replace(/\.[^/.]+$/, '') + '_cleaned.xlsx';
+    XLSX.writeFile(workbook, downloadName);
+  };
 
   // Expose global methods for demo loader & export buttons
   window.SurveyApp = {
