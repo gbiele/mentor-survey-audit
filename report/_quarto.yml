@@ -1,0 +1,42 @@
+project:
+  type: website
+  output-dir: _output
+
+website:
+  title: "MENTOR survey description"
+  navbar:
+    background: light
+    left:
+      - text: Overview
+        href: index.qmd
+      - text: Biography
+        href: pages/biography.qmd
+      - text: Living situation
+        href: pages/living.qmd
+      - text: Socioeconomic
+        href: pages/socioeconomic.qmd
+      - text: BCFPI attention
+        href: pages/bcfpi-adhd.qmd
+      - text: BCFPI functioning
+        href: pages/bcfpi-functioning.qmd
+      - text: ACE-IQ
+        href: pages/ace-iq.qmd
+      - text: KIDSCREEN
+        href: pages/kidscreen.qmd
+      - text: Social media problems
+        href: pages/smadd.qmd
+      - text: Social media time
+        href: pages/social-media-use.qmd
+
+execute:
+  echo: false
+  warning: false
+  message: false
+  dir: project
+
+format:
+  html:
+    theme: cosmo
+    toc: true
+    embed-resources: true
+    smooth-scroll: true

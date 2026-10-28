@@ -1,0 +1,12 @@
+---
+title: "BCFPI functioning"
+---
+
+```{r}
+#| results: asis
+#| fig-width: 8
+#| fig-height: 5.4
+setup_path <- if (file.exists("R/setup.R")) "R/setup.R" else "../R/setup.R"
+source(setup_path)
+render_scale(survey, "functioning")
+```

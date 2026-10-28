@@ -1,10 +1,18 @@
 node_modules/
+.issues/
 package-lock.json
 __pycache__/
 *.pyc
 
 /.quarto/
 **/*.quarto_ipynb
+
+report/_output/
+report/.quarto/
+describe/vfs/
+describe/vendor/
+describe/.quarto/
+tmp-preview/
 
 # Survey data files (confidential / raw exports)
 data/*

@@ -4,6 +4,8 @@ An interactive, client-side quality assurance and harmonization tool for the **J
 
 **Live Application:** [https://gbiele.github.io/mentor-survey-audit/](https://gbiele.github.io/mentor-survey-audit/)
 
+**Survey description:** [https://gbiele.github.io/mentor-survey-audit/describe/](https://gbiele.github.io/mentor-survey-audit/describe/). Choose a cleaned workbook in the browser. WebR runs the report there, so R does not need to be installed. Publish with `render_site.ps1`: it renders the auditor first, then this page, because an auditor render clears `docs/`.
+
 ---
 
 ## Harmonization Objective

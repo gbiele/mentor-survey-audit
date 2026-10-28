@@ -1,0 +1,54 @@
+---
+title: "Socioeconomic information"
+---
+
+```{r}
+setup_path <- if (file.exists("R/setup.R")) "R/setup.R" else "../R/setup.R"
+source(setup_path)
+```
+
+Where the family sits on the social ladder, parents' education, and whether the family can usually afford what it needs. "Don't know" on parental education stays as its own category.
+
+```{r}
+ladder <- survey$code$ladder1
+ladder_ci <- mean_ci(ladder)
+n_ladder_zero <- sum(survey$status$ladder1 == "unmatched")
+```
+
+## Social ladder
+
+The ladder runs from 1 to 10 in the survey dictionary. `r n_ladder_zero` answers of 0 are outside that list: they are shown in the chart and left out of the mean. The mean of the 1–10 answers is `r sprintf("%.2f", ladder_ci$mean)` (95% CI `r sprintf("%.2f", ladder_ci$lo)` to `r sprintf("%.2f", ladder_ci$hi)`; n = `r ladder_ci$n`).
+
+```{r}
+#| results: asis
+#| fig-width: 8
+#| fig-height: 4.4
+show_dist(survey, "ladder1", title = "Where is your family on the social ladder?")
+```
+
+## Mother's education
+
+```{r}
+#| results: asis
+#| fig-width: 8
+#| fig-height: 5.8
+show_dist(survey, "edumom1", title = "What best describes your mother's education?")
+```
+
+## Father's education
+
+```{r}
+#| results: asis
+#| fig-width: 8
+#| fig-height: 5.8
+show_dist(survey, "edudad1", title = "What best describes your father's education?")
+```
+
+## Family can afford what it needs
+
+```{r}
+#| results: asis
+#| fig-width: 8
+#| fig-height: 5.2
+show_dist(survey, "afford1", title = "I feel that my family can usually afford to buy what we need")
+```
