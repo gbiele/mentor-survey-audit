@@ -1,0 +1,215 @@
+---
+title: "Survey description"
+format:
+  live-html:
+    toc: true
+    toc-depth: 2
+    theme: cosmo
+engine: knitr
+webr:
+  channel-type: post-message
+  packages:
+    - ggplot2
+    - dplyr
+    - tidyr
+    - jsonlite
+    - readxl
+    - htmltools
+    - knitr
+  resources:
+    - vfs/report
+    - vfs/data
+  cell-options:
+    echo: false
+    edit: false
+    warning: true
+    error: true
+    timelimit: 300
+---
+
+{{< include ./_extensions/r-wasm/live/_knitr.qmd >}}
+
+<script src="vendor/xlsx.full.min.js"></script>
+
+<style>
+.observablehq--inspect { display: none; }
+</style>
+
+This page describes a cleaned JA-MENTOR youth survey. It uses the same scoring as the local report: Likert sums are prorated when at least 80% of the items are answered, and ACE-IQ follows the World Health Organization category rules.
+
+The workbook stays in this browser. Nothing is uploaded and nothing is stored on the server.
+
+```{ojs}
+//| echo: false
+loaded = false
+```
+
+```{ojs}
+//| echo: false
+viewof workbook = {
+  const input = Inputs.file({
+    label: "Cleaned workbook (.xlsx)",
+    accept: ".xlsx,.xls",
+    multiple: false
+  });
+  input.id = "workbook-file";
+  return input;
+}
+```
+
+```{ojs}
+//| echo: false
+workbook_name = {
+  const chosen = workbook;
+  const input = document.querySelector("#workbook-file");
+  const file = input && input.files && input.files[0];
+  return file ? file.name : (chosen && chosen.name) || "";
+}
+```
+
+```{ojs}
+//| echo: false
+uploaded = {
+  const chosen = workbook;
+  const input = document.querySelector("#workbook-file");
+  const file = input && input.files && input.files[0];
+  if (!file) return false;
+  const webR = await webROjs.webRPromise;
+  const bytes = new Uint8Array(await file.arrayBuffer());
+  await webR.FS.writeFile("upload.xlsx", bytes);
+  if (window.XLSX) {
+    const book = XLSX.read(bytes, { type: "array" });
+    const sheetName = book.SheetNames.includes("Cleaned") ? "Cleaned" : book.SheetNames[0];
+    const csv = XLSX.utils.sheet_to_csv(book.Sheets[sheetName]);
+    await webR.FS.writeFile("upload.csv", new TextEncoder().encode(csv));
+  }
+  return true;
+}
+```
+
+```{webr}
+#| input:
+#|   - uploaded
+#|   - workbook_name
+#| define: loaded
+#| envir: global
+options(mentor.webr = TRUE)
+root <- "vfs/report/R"
+for (file in c(
+  "load_survey.R", "scores.R", "plots.R", "scales.R", "scale_page.R", "sections.R"
+)) {
+  source(file.path(root, file), local = FALSE)
+}
+if (!isTRUE(uploaded)) {
+  loaded <- FALSE
+  htmltools::browsable(htmltools::tags$p(
+    "Choose a cleaned workbook. The report is built in this browser after the file is read."
+  ))
+} else {
+  survey <- tryCatch(
+    load_survey("upload.xlsx", report_dir = "vfs/report"),
+    error = function(e) {
+      if (!file.exists("upload.csv")) stop(conditionMessage(e))
+      load_survey("upload.csv", report_dir = "vfs/report")
+    }
+  )
+  if (is.character(workbook_name) && length(workbook_name) == 1 && nzchar(workbook_name)) {
+    survey$file <- basename(workbook_name)
+  }
+  loaded <- TRUE
+  htmltools::browsable(htmltools::tags$p(paste0(
+    "Loaded ", survey$file, ". ", survey$n_file, " rows were read, and ",
+    survey$n_declined, " people who did not agree to take part are excluded. ",
+    "The charts use the remaining ", survey$n, " young people."
+  )))
+}
+```
+
+## Biography
+
+```{webr}
+#| input:
+#|   - loaded
+#| envir: global
+if (isTRUE(loaded)) render_biography(survey)
+```
+
+## Living situation
+
+```{webr}
+#| input:
+#|   - loaded
+#| envir: global
+if (isTRUE(loaded)) render_living(survey)
+```
+
+## Socioeconomic
+
+```{webr}
+#| input:
+#|   - loaded
+#| envir: global
+if (isTRUE(loaded)) render_socioeconomic(survey)
+```
+
+## BCFPI attention
+
+```{webr}
+#| input:
+#|   - loaded
+#| envir: global
+if (isTRUE(loaded)) render_scale(survey, "attention")
+```
+
+## BCFPI functioning
+
+```{webr}
+#| input:
+#|   - loaded
+#| envir: global
+if (isTRUE(loaded)) render_scale(survey, "functioning")
+```
+
+## ACE-IQ
+
+```{webr}
+#| input:
+#|   - loaded
+#| envir: global
+if (isTRUE(loaded)) render_scale(survey, "ace", parts = "summary")
+```
+
+```{webr}
+#| input:
+#|   - loaded
+#| envir: global
+#| timelimit: 420
+if (isTRUE(loaded)) render_scale(survey, "ace", parts = "items")
+```
+
+## KIDSCREEN
+
+```{webr}
+#| input:
+#|   - loaded
+#| envir: global
+if (isTRUE(loaded)) render_scale(survey, "kidscreen")
+```
+
+## Social media time
+
+```{webr}
+#| input:
+#|   - loaded
+#| envir: global
+if (isTRUE(loaded)) render_scale(survey, "social_media_use")
+```
+
+## Social media problems
+
+```{webr}
+#| input:
+#|   - loaded
+#| envir: global
+if (isTRUE(loaded)) render_scale(survey, "smadd")
+```

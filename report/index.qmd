@@ -1,0 +1,24 @@
+---
+title: "Survey description"
+---
+
+```{r}
+setup_path <- if (file.exists("R/setup.R")) "R/setup.R" else "../R/setup.R"
+source(setup_path)
+```
+
+Descriptive pages for the cleaned MENTOR youth survey. The workbook is `r survey$file`. `r survey$n_file` rows were read, and `r survey$n_declined` people who did not agree to take part are excluded. Every page uses the remaining `r survey$n` young people.
+
+The pages describe the sample. They do not fit models.
+
+- [Biographical information](pages/biography.qmd): gender, grade, age, and migration background.
+- [Living situation](pages/living.qmd): household, and the follow-up questions among the people who were asked them.
+- [Socioeconomic information](pages/socioeconomic.qmd): social ladder, parental education, and whether the family can afford what it needs.
+- [BCFPI attention](pages/bcfpi-adhd.qmd): six-item sum for attention, impulsivity, and activity, then each item.
+- [BCFPI functioning](pages/bcfpi-functioning.qmd): three day-to-day functioning sums (relationships, social participation, and school), then each item.
+- [ACE-IQ](pages/ace-iq.qmd): binary and frequency totals for 13 adversity categories, then each item.
+- [KIDSCREEN](pages/kidscreen.qmd): ten-item health-related quality of life sum, then each item.
+- [Social media problems](pages/smadd.qmd): nine-item sum about difficulty limiting social media. These questions are not in the current cleaned file.
+- [Social media time](pages/social-media-use.qmd): weekday and weekend time, and feelings after phone use or gaming. These questions are not summed.
+
+A BCFPI sum, the KIDSCREEN-10 sum, and the social media problem sum are calculated when at least 80% of that score's items are answered, then rounded to the nearest whole number. Attention can be prorated from five of six items. Each functioning domain has four items, so its sum needs all four. KIDSCREEN-10 can be prorated from eight of ten items, after reversing felt sad and felt lonely. The social media problem sum can be prorated from eight of nine items. The ACE totals follow the World Health Organization category rules and are not prorated.
