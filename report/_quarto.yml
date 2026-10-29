@@ -8,6 +8,8 @@ website:
     background: light
     left:
       - text: Overview
+        href: pages/overview.qmd
+      - text: Contents
         href: index.qmd
       - text: Biography
         href: pages/biography.qmd
