@@ -1,5 +1,5 @@
 ---
-title: "Survey description"
+title: "Survey results"
 format:
   live-html:
     toc: true
@@ -35,9 +35,18 @@ webr:
 .observablehq--inspect { display: none; }
 </style>
 
-This page describes a cleaned JA-MENTOR youth survey. It uses the same scoring as the local report: Likert sums are prorated when at least 80% of the items are answered, and ACE-IQ follows the World Health Organization category rules.
+This page shows results for a cleaned JA-MENTOR youth survey. It uses the same scoring as the local report: Likert sums are prorated when at least 80% of the items are answered, and ACE-IQ follows the World Health Organization category rules.
+
+Upload the country survey export on the [survey auditor](https://gbiele.github.io/mentor-survey-audit/). From there, download the cleaned workbook with **Export cleaned data**, and choose that file here.
 
 The workbook stays in this browser. Nothing is uploaded and nothing is stored on the server.
+
+::: {.callout-important}
+## Two steps take a while
+
+1. **Downloading R and the packages.** The first time this page is opened, the browser downloads them before a report can be built. Opening the page again in the same browser is quicker.
+2. **Producing the plots.** After you press **Build the report**, drawing the charts takes about a minute. A line with the number of young people appears first, and the figures follow.
+:::
 
 ```{ojs}
 //| echo: false
@@ -75,7 +84,7 @@ viewof build_clicks = {
     } else if (+wrap.value < 1) {
       note.textContent = chosen.name + " is selected. Press Build the report.";
     } else {
-      note.textContent = "Building the report from " + chosen.name + ". The first time, R downloads before the charts appear.";
+      note.textContent = "Building the report from " + chosen.name + ". Downloading R and drawing the charts both take a while.";
     }
   };
   file.addEventListener("input", refreshNote);

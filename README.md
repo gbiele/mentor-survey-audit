@@ -4,7 +4,7 @@ An interactive, client-side quality assurance and harmonization tool for the **J
 
 **Live Application:** [https://gbiele.github.io/mentor-survey-audit/](https://gbiele.github.io/mentor-survey-audit/)
 
-**Survey description:** [https://gbiele.github.io/mentor-survey-audit/describe/](https://gbiele.github.io/mentor-survey-audit/describe/). Choose a cleaned workbook in the browser. WebR runs the report there, so R does not need to be installed. Publish with `render_site.ps1`: it renders the auditor first, then this page, because an auditor render clears `docs/`.
+**Survey results:** [https://gbiele.github.io/mentor-survey-audit/describe/](https://gbiele.github.io/mentor-survey-audit/describe/). Upload a survey export on the auditor, download the cleaned workbook, and choose that file here. WebR runs the report in the browser, so R does not need to be installed. The first visit downloads R and the packages, and drawing the charts takes about a minute. Publish with `render_site.ps1`: it renders the auditor first, then this page, because an auditor render clears `docs/`.
 
 ---
 
