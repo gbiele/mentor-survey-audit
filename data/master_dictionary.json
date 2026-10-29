@@ -11,7 +11,7 @@
     ],
     "total_variables": 466,
     "total_core_variables": 143,
-    "total_options": 2940,
+    "total_options": 3152,
     "sections": [
       "Adverse childhood experiences",
       "Background",
@@ -542,6 +542,17 @@
           "label": "2o de Bachillerato.",
           "label_with_id": "",
           "alias": "2o de Bachillerato.",
+          "eusurvey_answer_id": "",
+          "value": 4,
+          "scale": "ordinal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
+          "order": 4,
+          "label": "2º de Bachillerato.",
+          "label_with_id": "",
+          "alias": "2º de Bachillerato.",
           "eusurvey_answer_id": "",
           "value": 4,
           "scale": "ordinal",
@@ -1120,7 +1131,7 @@
       "item_text": "",
       "scale": "nominal",
       "question_type": "single",
-      "n_options": 53,
+      "n_options": 54,
       "multiple": false,
       "source": "canonical_en",
       "is_core": true,
@@ -1156,9 +1167,9 @@
         },
         {
           "order": 0,
-          "label": "Alemania",
+          "label": "España",
           "label_with_id": "",
-          "alias": "Alemania",
+          "alias": "España",
           "eusurvey_answer_id": "",
           "value": 1,
           "scale": "nominal",
@@ -1485,17 +1496,6 @@
           "special_type": ""
         },
         {
-          "order": 10,
-          "label": "España",
-          "label_with_id": "",
-          "alias": "España",
-          "eusurvey_answer_id": "",
-          "value": 11,
-          "scale": "nominal",
-          "is_special": false,
-          "special_type": ""
-        },
-        {
           "order": 11,
           "label": "Czech Republic",
           "label_with_id": "",
@@ -1584,17 +1584,6 @@
           "special_type": ""
         },
         {
-          "order": 13,
-          "label": "Francia",
-          "label_with_id": "",
-          "alias": "Francia",
-          "eusurvey_answer_id": "",
-          "value": 14,
-          "scale": "nominal",
-          "is_special": false,
-          "special_type": ""
-        },
-        {
           "order": 14,
           "label": "Finland",
           "label_with_id": "",
@@ -1661,6 +1650,17 @@
           "special_type": ""
         },
         {
+          "order": 15,
+          "label": "Francia",
+          "label_with_id": "",
+          "alias": "Francia",
+          "eusurvey_answer_id": "",
+          "value": 16,
+          "scale": "nominal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
           "order": 16,
           "label": "Germany",
           "label_with_id": "",
@@ -1687,6 +1687,17 @@
           "label": "Irlanda",
           "label_with_id": "",
           "alias": "Irlanda",
+          "eusurvey_answer_id": "",
+          "value": 17,
+          "scale": "nominal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
+          "order": 16,
+          "label": "Alemania",
+          "label_with_id": "",
+          "alias": "Alemania",
           "eusurvey_answer_id": "",
           "value": 17,
           "scale": "nominal",
@@ -1775,17 +1786,6 @@
           "label": "Izland",
           "label_with_id": "",
           "alias": "Izland",
-          "eusurvey_answer_id": "",
-          "value": 20,
-          "scale": "nominal",
-          "is_special": false,
-          "special_type": ""
-        },
-        {
-          "order": 19,
-          "label": "Lituania",
-          "label_with_id": "",
-          "alias": "Lituania",
           "eusurvey_answer_id": "",
           "value": 20,
           "scale": "nominal",
@@ -1914,17 +1914,6 @@
           "special_type": ""
         },
         {
-          "order": 23,
-          "label": "Polonia",
-          "label_with_id": "",
-          "alias": "Polonia",
-          "eusurvey_answer_id": "",
-          "value": 24,
-          "scale": "nominal",
-          "is_special": false,
-          "special_type": ""
-        },
-        {
           "order": 24,
           "label": "Liechtenstein",
           "label_with_id": "",
@@ -1981,9 +1970,9 @@
         },
         {
           "order": 25,
-          "label": "Rumanía",
+          "label": "Lituania",
           "label_with_id": "",
-          "alias": "Rumanía",
+          "alias": "Lituania",
           "eusurvey_answer_id": "",
           "value": 26,
           "scale": "nominal",
@@ -2145,17 +2134,6 @@
           "special_type": ""
         },
         {
-          "order": 30,
-          "label": "Reino Unido",
-          "label_with_id": "",
-          "alias": "Reino Unido",
-          "eusurvey_answer_id": "",
-          "value": 31,
-          "scale": "nominal",
-          "is_special": false,
-          "special_type": ""
-        },
-        {
           "order": 31,
           "label": "Netherlands",
           "label_with_id": "",
@@ -2288,6 +2266,17 @@
           "special_type": ""
         },
         {
+          "order": 34,
+          "label": "Polonia",
+          "label_with_id": "",
+          "alias": "Polonia",
+          "eusurvey_answer_id": "",
+          "value": 35,
+          "scale": "nominal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
           "order": 35,
           "label": "Portugal",
           "label_with_id": "",
@@ -2347,6 +2336,17 @@
           "label": "Noruega",
           "label_with_id": "",
           "alias": "Noruega",
+          "eusurvey_answer_id": "",
+          "value": 37,
+          "scale": "nominal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
+          "order": 36,
+          "label": "Rumanía",
+          "label_with_id": "",
+          "alias": "Rumanía",
           "eusurvey_answer_id": "",
           "value": 37,
           "scale": "nominal",
@@ -2651,6 +2651,17 @@
           "special_type": ""
         },
         {
+          "order": 45,
+          "label": "Reino Unido",
+          "label_with_id": "",
+          "alias": "Reino Unido",
+          "eusurvey_answer_id": "",
+          "value": 46,
+          "scale": "nominal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
           "order": 46,
           "label": "Middle East or North Africa",
           "label_with_id": "",
@@ -2816,6 +2827,17 @@
           "special_type": ""
         },
         {
+          "order": 50,
+          "label": "América del Sur o Central",
+          "label_with_id": "",
+          "alias": "América del Sur o Central",
+          "eusurvey_answer_id": "",
+          "value": 51,
+          "scale": "nominal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
           "order": 51,
           "label": "Oseania",
           "label_with_id": "",
@@ -2831,17 +2853,6 @@
           "label": "Egyéb",
           "label_with_id": "",
           "alias": "Egyéb",
-          "eusurvey_answer_id": "",
-          "value": 52,
-          "scale": "nominal",
-          "is_special": false,
-          "special_type": ""
-        },
-        {
-          "order": 51,
-          "label": "- Prefiero no responder",
-          "label_with_id": "",
-          "alias": "- Prefiero no responder",
           "eusurvey_answer_id": "",
           "value": 52,
           "scale": "nominal",
@@ -2872,14 +2883,25 @@
         },
         {
           "order": 52,
-          "label": "América del Sur o Central",
+          "label": "Otro",
           "label_with_id": "",
-          "alias": "América del Sur o Central",
+          "alias": "Otro",
           "eusurvey_answer_id": "",
           "value": 53,
           "scale": "nominal",
           "is_special": false,
           "special_type": ""
+        },
+        {
+          "order": 53,
+          "label": "Prefer not to answer",
+          "label_with_id": "",
+          "alias": "",
+          "eusurvey_answer_id": "",
+          "value": 999,
+          "scale": "nominal",
+          "is_special": true,
+          "special_type": "Prefer not to answer"
         }
       ],
       "keywords": [
@@ -2934,17 +2956,6 @@
           "special_type": ""
         },
         {
-          "order": 0,
-          "label": "Alemania",
-          "label_with_id": "",
-          "alias": "Alemania",
-          "eusurvey_answer_id": "",
-          "value": 0,
-          "scale": "interval",
-          "is_special": false,
-          "special_type": ""
-        },
-        {
           "order": 1,
           "label": "1",
           "label_with_id": "",
@@ -2960,17 +2971,6 @@
           "label": "Néhányszor",
           "label_with_id": "",
           "alias": "Néhányszor",
-          "eusurvey_answer_id": "",
-          "value": 1,
-          "scale": "interval",
-          "is_special": false,
-          "special_type": ""
-        },
-        {
-          "order": 1,
-          "label": "Austria",
-          "label_with_id": "",
-          "alias": "Austria",
           "eusurvey_answer_id": "",
           "value": 1,
           "scale": "interval",
@@ -3000,17 +3000,6 @@
           "special_type": ""
         },
         {
-          "order": 2,
-          "label": "Bulgaria",
-          "label_with_id": "",
-          "alias": "Bulgaria",
-          "eusurvey_answer_id": "",
-          "value": 2,
-          "scale": "interval",
-          "is_special": false,
-          "special_type": ""
-        },
-        {
           "order": 3,
           "label": "3",
           "label_with_id": "",
@@ -3026,17 +3015,6 @@
           "label": "Heti 2-3 nap",
           "label_with_id": "",
           "alias": "Heti 2-3 nap",
-          "eusurvey_answer_id": "",
-          "value": 3,
-          "scale": "interval",
-          "is_special": false,
-          "special_type": ""
-        },
-        {
-          "order": 3,
-          "label": "Bélgica",
-          "label_with_id": "",
-          "alias": "Bélgica",
           "eusurvey_answer_id": "",
           "value": 3,
           "scale": "interval",
@@ -3066,17 +3044,6 @@
           "special_type": ""
         },
         {
-          "order": 4,
-          "label": "República Checa",
-          "label_with_id": "",
-          "alias": "República Checa",
-          "eusurvey_answer_id": "",
-          "value": 4,
-          "scale": "interval",
-          "is_special": false,
-          "special_type": ""
-        },
-        {
           "order": 5,
           "label": "5",
           "label_with_id": "",
@@ -3092,17 +3059,6 @@
           "label": "Heti 6-7 nap",
           "label_with_id": "",
           "alias": "Heti 6-7 nap",
-          "eusurvey_answer_id": "",
-          "value": 5,
-          "scale": "interval",
-          "is_special": false,
-          "special_type": ""
-        },
-        {
-          "order": 5,
-          "label": "Chipre",
-          "label_with_id": "",
-          "alias": "Chipre",
           "eusurvey_answer_id": "",
           "value": 5,
           "scale": "interval",
@@ -3132,17 +3088,6 @@
           "special_type": ""
         },
         {
-          "order": 6,
-          "label": "Croacia",
-          "label_with_id": "",
-          "alias": "Croacia",
-          "eusurvey_answer_id": "",
-          "value": 6,
-          "scale": "interval",
-          "is_special": false,
-          "special_type": ""
-        },
-        {
           "order": 7,
           "label": "7",
           "label_with_id": "",
@@ -3165,32 +3110,10 @@
           "special_type": ""
         },
         {
-          "order": 7,
-          "label": "Dinamarca",
-          "label_with_id": "",
-          "alias": "Dinamarca",
-          "eusurvey_answer_id": "",
-          "value": 7,
-          "scale": "interval",
-          "is_special": false,
-          "special_type": ""
-        },
-        {
           "order": 8,
           "label": "8",
           "label_with_id": "",
           "alias": "",
-          "eusurvey_answer_id": "",
-          "value": 8,
-          "scale": "interval",
-          "is_special": false,
-          "special_type": ""
-        },
-        {
-          "order": 8,
-          "label": "Eslovaquia",
-          "label_with_id": "",
-          "alias": "Eslovaquia",
           "eusurvey_answer_id": "",
           "value": 8,
           "scale": "interval",
@@ -3209,32 +3132,10 @@
           "special_type": ""
         },
         {
-          "order": 9,
-          "label": "Eslovenia",
-          "label_with_id": "",
-          "alias": "Eslovenia",
-          "eusurvey_answer_id": "",
-          "value": 9,
-          "scale": "interval",
-          "is_special": false,
-          "special_type": ""
-        },
-        {
           "order": 10,
           "label": "10",
           "label_with_id": "",
           "alias": "",
-          "eusurvey_answer_id": "",
-          "value": 10,
-          "scale": "interval",
-          "is_special": false,
-          "special_type": ""
-        },
-        {
-          "order": 10,
-          "label": "España",
-          "label_with_id": "",
-          "alias": "España",
           "eusurvey_answer_id": "",
           "value": 10,
           "scale": "interval",
@@ -3253,32 +3154,10 @@
           "special_type": ""
         },
         {
-          "order": 11,
-          "label": "Estonia",
-          "label_with_id": "",
-          "alias": "Estonia",
-          "eusurvey_answer_id": "",
-          "value": 11,
-          "scale": "interval",
-          "is_special": false,
-          "special_type": ""
-        },
-        {
           "order": 12,
           "label": "12",
           "label_with_id": "",
           "alias": "",
-          "eusurvey_answer_id": "",
-          "value": 12,
-          "scale": "interval",
-          "is_special": false,
-          "special_type": ""
-        },
-        {
-          "order": 12,
-          "label": "Finlandia",
-          "label_with_id": "",
-          "alias": "Finlandia",
           "eusurvey_answer_id": "",
           "value": 12,
           "scale": "interval",
@@ -3298,9 +3177,9 @@
         },
         {
           "order": 13,
-          "label": "Francia",
+          "label": "13 años",
           "label_with_id": "",
-          "alias": "Francia",
+          "alias": "13 años",
           "eusurvey_answer_id": "",
           "value": 13,
           "scale": "interval",
@@ -3319,32 +3198,10 @@
           "special_type": ""
         },
         {
-          "order": 14,
-          "label": "Grecia",
-          "label_with_id": "",
-          "alias": "Grecia",
-          "eusurvey_answer_id": "",
-          "value": 14,
-          "scale": "interval",
-          "is_special": false,
-          "special_type": ""
-        },
-        {
           "order": 15,
           "label": "15",
           "label_with_id": "",
           "alias": "",
-          "eusurvey_answer_id": "",
-          "value": 15,
-          "scale": "interval",
-          "is_special": false,
-          "special_type": ""
-        },
-        {
-          "order": 15,
-          "label": "Hungría",
-          "label_with_id": "",
-          "alias": "Hungría",
           "eusurvey_answer_id": "",
           "value": 15,
           "scale": "interval",
@@ -3363,17 +3220,6 @@
           "special_type": ""
         },
         {
-          "order": 16,
-          "label": "Irlanda",
-          "label_with_id": "",
-          "alias": "Irlanda",
-          "eusurvey_answer_id": "",
-          "value": 16,
-          "scale": "interval",
-          "is_special": false,
-          "special_type": ""
-        },
-        {
           "order": 17,
           "label": "17",
           "label_with_id": "",
@@ -3385,32 +3231,10 @@
           "special_type": ""
         },
         {
-          "order": 17,
-          "label": "Italia",
-          "label_with_id": "",
-          "alias": "Italia",
-          "eusurvey_answer_id": "",
-          "value": 17,
-          "scale": "interval",
-          "is_special": false,
-          "special_type": ""
-        },
-        {
           "order": 18,
           "label": "18",
           "label_with_id": "",
           "alias": "",
-          "eusurvey_answer_id": "",
-          "value": 18,
-          "scale": "interval",
-          "is_special": false,
-          "special_type": ""
-        },
-        {
-          "order": 18,
-          "label": "Letonia",
-          "label_with_id": "",
-          "alias": "Letonia",
           "eusurvey_answer_id": "",
           "value": 18,
           "scale": "interval",
@@ -3435,7 +3259,7 @@
       "item_text": "",
       "scale": "nominal",
       "question_type": "single",
-      "n_options": 53,
+      "n_options": 54,
       "multiple": false,
       "source": "canonical_en",
       "is_core": true,
@@ -3471,9 +3295,9 @@
         },
         {
           "order": 0,
-          "label": "Antes de las 20:00.",
+          "label": "España",
           "label_with_id": "",
-          "alias": "Antes de las 20:00.",
+          "alias": "España",
           "eusurvey_answer_id": "",
           "value": 1,
           "scale": "nominal",
@@ -3966,9 +3790,9 @@
         },
         {
           "order": 15,
-          "label": "Después de las 03:00.",
+          "label": "Francia",
           "label_with_id": "",
-          "alias": "Después de las 03:00.",
+          "alias": "Francia",
           "eusurvey_answer_id": "",
           "value": 16,
           "scale": "nominal",
@@ -3991,6 +3815,17 @@
           "label": "Hollandia",
           "label_with_id": "",
           "alias": "Hollandia",
+          "eusurvey_answer_id": "",
+          "value": 17,
+          "scale": "nominal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
+          "order": 16,
+          "label": "Alemania",
+          "label_with_id": "",
+          "alias": "Alemania",
           "eusurvey_answer_id": "",
           "value": 17,
           "scale": "nominal",
@@ -4196,6 +4031,17 @@
           "special_type": ""
         },
         {
+          "order": 25,
+          "label": "Lituania",
+          "label_with_id": "",
+          "alias": "Lituania",
+          "eusurvey_answer_id": "",
+          "value": 26,
+          "scale": "nominal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
           "order": 26,
           "label": "Luxembourg",
           "label_with_id": "",
@@ -4394,6 +4240,17 @@
           "special_type": ""
         },
         {
+          "order": 34,
+          "label": "Polonia",
+          "label_with_id": "",
+          "alias": "Polonia",
+          "eusurvey_answer_id": "",
+          "value": 35,
+          "scale": "nominal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
           "order": 35,
           "label": "Portugal",
           "label_with_id": "",
@@ -4431,6 +4288,17 @@
           "label": "Spanyolország",
           "label_with_id": "",
           "alias": "Spanyolország",
+          "eusurvey_answer_id": "",
+          "value": 37,
+          "scale": "nominal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
+          "order": 36,
+          "label": "Rumanía",
+          "label_with_id": "",
+          "alias": "Rumanía",
           "eusurvey_answer_id": "",
           "value": 37,
           "scale": "nominal",
@@ -4636,6 +4504,17 @@
           "special_type": ""
         },
         {
+          "order": 45,
+          "label": "Reino Unido",
+          "label_with_id": "",
+          "alias": "Reino Unido",
+          "eusurvey_answer_id": "",
+          "value": 46,
+          "scale": "nominal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
           "order": 46,
           "label": "Middle East or North Africa",
           "label_with_id": "",
@@ -4746,6 +4625,17 @@
           "special_type": ""
         },
         {
+          "order": 50,
+          "label": "América del Sur o Central",
+          "label_with_id": "",
+          "alias": "América del Sur o Central",
+          "eusurvey_answer_id": "",
+          "value": 51,
+          "scale": "nominal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
           "order": 51,
           "label": "Oseania",
           "label_with_id": "",
@@ -4788,6 +4678,28 @@
           "scale": "nominal",
           "is_special": false,
           "special_type": ""
+        },
+        {
+          "order": 52,
+          "label": "Otro",
+          "label_with_id": "",
+          "alias": "Otro",
+          "eusurvey_answer_id": "",
+          "value": 53,
+          "scale": "nominal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
+          "order": 53,
+          "label": "Prefer not to answer",
+          "label_with_id": "",
+          "alias": "",
+          "eusurvey_answer_id": "",
+          "value": 999,
+          "scale": "nominal",
+          "is_special": true,
+          "special_type": "Prefer not to answer"
         }
       ],
       "keywords": [
@@ -4807,7 +4719,7 @@
       "item_text": "",
       "scale": "nominal",
       "question_type": "single",
-      "n_options": 53,
+      "n_options": 54,
       "multiple": false,
       "source": "canonical_en",
       "is_core": true,
@@ -4843,9 +4755,9 @@
         },
         {
           "order": 0,
-          "label": "Alemania",
+          "label": "España",
           "label_with_id": "",
-          "alias": "Alemania",
+          "alias": "España",
           "eusurvey_answer_id": "",
           "value": 1,
           "scale": "nominal",
@@ -5172,17 +5084,6 @@
           "special_type": ""
         },
         {
-          "order": 10,
-          "label": "España",
-          "label_with_id": "",
-          "alias": "España",
-          "eusurvey_answer_id": "",
-          "value": 11,
-          "scale": "nominal",
-          "is_special": false,
-          "special_type": ""
-        },
-        {
           "order": 11,
           "label": "Czech Republic",
           "label_with_id": "",
@@ -5271,17 +5172,6 @@
           "special_type": ""
         },
         {
-          "order": 13,
-          "label": "Francia",
-          "label_with_id": "",
-          "alias": "Francia",
-          "eusurvey_answer_id": "",
-          "value": 14,
-          "scale": "nominal",
-          "is_special": false,
-          "special_type": ""
-        },
-        {
           "order": 14,
           "label": "Finland",
           "label_with_id": "",
@@ -5348,6 +5238,17 @@
           "special_type": ""
         },
         {
+          "order": 15,
+          "label": "Francia",
+          "label_with_id": "",
+          "alias": "Francia",
+          "eusurvey_answer_id": "",
+          "value": 16,
+          "scale": "nominal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
           "order": 16,
           "label": "Germany",
           "label_with_id": "",
@@ -5374,6 +5275,17 @@
           "label": "Irlanda",
           "label_with_id": "",
           "alias": "Irlanda",
+          "eusurvey_answer_id": "",
+          "value": 17,
+          "scale": "nominal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
+          "order": 16,
+          "label": "Alemania",
+          "label_with_id": "",
+          "alias": "Alemania",
           "eusurvey_answer_id": "",
           "value": 17,
           "scale": "nominal",
@@ -5462,17 +5374,6 @@
           "label": "Izland",
           "label_with_id": "",
           "alias": "Izland",
-          "eusurvey_answer_id": "",
-          "value": 20,
-          "scale": "nominal",
-          "is_special": false,
-          "special_type": ""
-        },
-        {
-          "order": 19,
-          "label": "Lituania",
-          "label_with_id": "",
-          "alias": "Lituania",
           "eusurvey_answer_id": "",
           "value": 20,
           "scale": "nominal",
@@ -5601,17 +5502,6 @@
           "special_type": ""
         },
         {
-          "order": 23,
-          "label": "Polonia",
-          "label_with_id": "",
-          "alias": "Polonia",
-          "eusurvey_answer_id": "",
-          "value": 24,
-          "scale": "nominal",
-          "is_special": false,
-          "special_type": ""
-        },
-        {
           "order": 24,
           "label": "Liechtenstein",
           "label_with_id": "",
@@ -5668,9 +5558,9 @@
         },
         {
           "order": 25,
-          "label": "Rumanía",
+          "label": "Lituania",
           "label_with_id": "",
-          "alias": "Rumanía",
+          "alias": "Lituania",
           "eusurvey_answer_id": "",
           "value": 26,
           "scale": "nominal",
@@ -5832,17 +5722,6 @@
           "special_type": ""
         },
         {
-          "order": 30,
-          "label": "Reino Unido",
-          "label_with_id": "",
-          "alias": "Reino Unido",
-          "eusurvey_answer_id": "",
-          "value": 31,
-          "scale": "nominal",
-          "is_special": false,
-          "special_type": ""
-        },
-        {
           "order": 31,
           "label": "Netherlands",
           "label_with_id": "",
@@ -5975,6 +5854,17 @@
           "special_type": ""
         },
         {
+          "order": 34,
+          "label": "Polonia",
+          "label_with_id": "",
+          "alias": "Polonia",
+          "eusurvey_answer_id": "",
+          "value": 35,
+          "scale": "nominal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
           "order": 35,
           "label": "Portugal",
           "label_with_id": "",
@@ -6034,6 +5924,17 @@
           "label": "Noruega",
           "label_with_id": "",
           "alias": "Noruega",
+          "eusurvey_answer_id": "",
+          "value": 37,
+          "scale": "nominal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
+          "order": 36,
+          "label": "Rumanía",
+          "label_with_id": "",
+          "alias": "Rumanía",
           "eusurvey_answer_id": "",
           "value": 37,
           "scale": "nominal",
@@ -6338,6 +6239,17 @@
           "special_type": ""
         },
         {
+          "order": 45,
+          "label": "Reino Unido",
+          "label_with_id": "",
+          "alias": "Reino Unido",
+          "eusurvey_answer_id": "",
+          "value": 46,
+          "scale": "nominal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
           "order": 46,
           "label": "Middle East or North Africa",
           "label_with_id": "",
@@ -6493,9 +6405,9 @@
         },
         {
           "order": 50,
-          "label": "Otro",
+          "label": "América del Sur o Central",
           "label_with_id": "",
-          "alias": "Otro",
+          "alias": "América del Sur o Central",
           "eusurvey_answer_id": "",
           "value": 51,
           "scale": "nominal",
@@ -6518,17 +6430,6 @@
           "label": "Egyéb",
           "label_with_id": "",
           "alias": "Egyéb",
-          "eusurvey_answer_id": "",
-          "value": 52,
-          "scale": "nominal",
-          "is_special": false,
-          "special_type": ""
-        },
-        {
-          "order": 51,
-          "label": "Prefiero no responder",
-          "label_with_id": "",
-          "alias": "Prefiero no responder",
           "eusurvey_answer_id": "",
           "value": 52,
           "scale": "nominal",
@@ -6559,14 +6460,25 @@
         },
         {
           "order": 52,
-          "label": "América del Sur o Central",
+          "label": "Otro",
           "label_with_id": "",
-          "alias": "América del Sur o Central",
+          "alias": "Otro",
           "eusurvey_answer_id": "",
           "value": 53,
           "scale": "nominal",
           "is_special": false,
           "special_type": ""
+        },
+        {
+          "order": 53,
+          "label": "Prefer not to answer",
+          "label_with_id": "",
+          "alias": "",
+          "eusurvey_answer_id": "",
+          "value": 999,
+          "scale": "nominal",
+          "is_special": true,
+          "special_type": "Prefer not to answer"
         }
       ],
       "keywords": [
@@ -6996,7 +6908,7 @@
       "notes": "",
       "orig_aliases": {
         "hungary": "living3",
-        "spain": "ID5"
+        "spain": "living3"
       },
       "options": [
         {
@@ -9118,7 +9030,7 @@
       "item_text": "blame others for your own mistakes",
       "scale": "ordinal",
       "question_type": "matrix",
-      "n_options": 3,
+      "n_options": 4,
       "multiple": false,
       "source": "canonical_en",
       "is_core": true,
@@ -9127,7 +9039,7 @@
       "notes": "",
       "orig_aliases": {
         "hungary": "coop1:6_1",
-        "spain": "ID198"
+        "spain": "ID260"
       },
       "options": [
         {
@@ -9146,6 +9058,17 @@
           "label": "SOHA nem igaz",
           "label_with_id": "",
           "alias": "SOHA nem igaz",
+          "eusurvey_answer_id": "",
+          "value": 0,
+          "scale": "ordinal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
+          "order": 0,
+          "label": "Nunca es cierto",
+          "label_with_id": "",
+          "alias": "Nunca es cierto",
           "eusurvey_answer_id": "",
           "value": 0,
           "scale": "ordinal",
@@ -9175,6 +9098,17 @@
           "special_type": ""
         },
         {
+          "order": 1,
+          "label": "A veces es cierto",
+          "label_with_id": "",
+          "alias": "A veces es cierto",
+          "eusurvey_answer_id": "",
+          "value": 1,
+          "scale": "ordinal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
           "order": 2,
           "label": "OFTEN true",
           "label_with_id": "",
@@ -9195,6 +9129,28 @@
           "scale": "ordinal",
           "is_special": false,
           "special_type": ""
+        },
+        {
+          "order": 2,
+          "label": "A menudo es cierto",
+          "label_with_id": "",
+          "alias": "A menudo es cierto",
+          "eusurvey_answer_id": "",
+          "value": 2,
+          "scale": "ordinal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
+          "order": 3,
+          "label": "Prefer not to answer",
+          "label_with_id": "",
+          "alias": "",
+          "eusurvey_answer_id": "",
+          "value": 999,
+          "scale": "ordinal",
+          "is_special": true,
+          "special_type": "Prefer not to answer"
         }
       ],
       "keywords": [
@@ -9215,7 +9171,7 @@
       "item_text": "are irritable and angry",
       "scale": "ordinal",
       "question_type": "matrix",
-      "n_options": 3,
+      "n_options": 4,
       "multiple": false,
       "source": "canonical_en",
       "is_core": true,
@@ -9250,6 +9206,17 @@
           "special_type": ""
         },
         {
+          "order": 0,
+          "label": "Nunca es cierto",
+          "label_with_id": "",
+          "alias": "Nunca es cierto",
+          "eusurvey_answer_id": "",
+          "value": 0,
+          "scale": "ordinal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
           "order": 1,
           "label": "SOMETIMES true",
           "label_with_id": "",
@@ -9265,6 +9232,17 @@
           "label": "NÉHA igaz",
           "label_with_id": "",
           "alias": "NÉHA igaz",
+          "eusurvey_answer_id": "",
+          "value": 1,
+          "scale": "ordinal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
+          "order": 1,
+          "label": "A veces es cierto",
+          "label_with_id": "",
+          "alias": "A veces es cierto",
           "eusurvey_answer_id": "",
           "value": 1,
           "scale": "ordinal",
@@ -9292,6 +9270,28 @@
           "scale": "ordinal",
           "is_special": false,
           "special_type": ""
+        },
+        {
+          "order": 2,
+          "label": "A menudo es cierto",
+          "label_with_id": "",
+          "alias": "A menudo es cierto",
+          "eusurvey_answer_id": "",
+          "value": 2,
+          "scale": "ordinal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
+          "order": 3,
+          "label": "Prefer not to answer",
+          "label_with_id": "",
+          "alias": "",
+          "eusurvey_answer_id": "",
+          "value": 999,
+          "scale": "ordinal",
+          "is_special": true,
+          "special_type": "Prefer not to answer"
         }
       ],
       "keywords": [
@@ -9312,7 +9312,7 @@
       "item_text": "lose your temper",
       "scale": "ordinal",
       "question_type": "matrix",
-      "n_options": 3,
+      "n_options": 4,
       "multiple": false,
       "source": "canonical_en",
       "is_core": true,
@@ -9347,6 +9347,17 @@
           "special_type": ""
         },
         {
+          "order": 0,
+          "label": "Nunca es cierto",
+          "label_with_id": "",
+          "alias": "Nunca es cierto",
+          "eusurvey_answer_id": "",
+          "value": 0,
+          "scale": "ordinal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
           "order": 1,
           "label": "SOMETIMES true",
           "label_with_id": "",
@@ -9362,6 +9373,17 @@
           "label": "NÉHA igaz",
           "label_with_id": "",
           "alias": "NÉHA igaz",
+          "eusurvey_answer_id": "",
+          "value": 1,
+          "scale": "ordinal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
+          "order": 1,
+          "label": "A veces es cierto",
+          "label_with_id": "",
+          "alias": "A veces es cierto",
           "eusurvey_answer_id": "",
           "value": 1,
           "scale": "ordinal",
@@ -9389,6 +9411,28 @@
           "scale": "ordinal",
           "is_special": false,
           "special_type": ""
+        },
+        {
+          "order": 2,
+          "label": "A menudo es cierto",
+          "label_with_id": "",
+          "alias": "A menudo es cierto",
+          "eusurvey_answer_id": "",
+          "value": 2,
+          "scale": "ordinal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
+          "order": 3,
+          "label": "Prefer not to answer",
+          "label_with_id": "",
+          "alias": "",
+          "eusurvey_answer_id": "",
+          "value": 999,
+          "scale": "ordinal",
+          "is_special": true,
+          "special_type": "Prefer not to answer"
         }
       ],
       "keywords": [
@@ -9409,7 +9453,7 @@
       "item_text": "are defiant or uncooperative",
       "scale": "ordinal",
       "question_type": "matrix",
-      "n_options": 3,
+      "n_options": 4,
       "multiple": false,
       "source": "canonical_en",
       "is_core": true,
@@ -9444,6 +9488,17 @@
           "special_type": ""
         },
         {
+          "order": 0,
+          "label": "Nunca es cierto",
+          "label_with_id": "",
+          "alias": "Nunca es cierto",
+          "eusurvey_answer_id": "",
+          "value": 0,
+          "scale": "ordinal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
           "order": 1,
           "label": "SOMETIMES true",
           "label_with_id": "",
@@ -9459,6 +9514,17 @@
           "label": "NÉHA igaz",
           "label_with_id": "",
           "alias": "NÉHA igaz",
+          "eusurvey_answer_id": "",
+          "value": 1,
+          "scale": "ordinal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
+          "order": 1,
+          "label": "A veces es cierto",
+          "label_with_id": "",
+          "alias": "A veces es cierto",
           "eusurvey_answer_id": "",
           "value": 1,
           "scale": "ordinal",
@@ -9486,6 +9552,28 @@
           "scale": "ordinal",
           "is_special": false,
           "special_type": ""
+        },
+        {
+          "order": 2,
+          "label": "A menudo es cierto",
+          "label_with_id": "",
+          "alias": "A menudo es cierto",
+          "eusurvey_answer_id": "",
+          "value": 2,
+          "scale": "ordinal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
+          "order": 3,
+          "label": "Prefer not to answer",
+          "label_with_id": "",
+          "alias": "",
+          "eusurvey_answer_id": "",
+          "value": 999,
+          "scale": "ordinal",
+          "is_special": true,
+          "special_type": "Prefer not to answer"
         }
       ],
       "keywords": [
@@ -9506,7 +9594,7 @@
       "item_text": "argue or talk back to adults",
       "scale": "ordinal",
       "question_type": "matrix",
-      "n_options": 3,
+      "n_options": 4,
       "multiple": false,
       "source": "canonical_en",
       "is_core": true,
@@ -9541,6 +9629,17 @@
           "special_type": ""
         },
         {
+          "order": 0,
+          "label": "Nunca es cierto",
+          "label_with_id": "",
+          "alias": "Nunca es cierto",
+          "eusurvey_answer_id": "",
+          "value": 0,
+          "scale": "ordinal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
           "order": 1,
           "label": "SOMETIMES true",
           "label_with_id": "",
@@ -9556,6 +9655,17 @@
           "label": "NÉHA igaz",
           "label_with_id": "",
           "alias": "NÉHA igaz",
+          "eusurvey_answer_id": "",
+          "value": 1,
+          "scale": "ordinal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
+          "order": 1,
+          "label": "A veces es cierto",
+          "label_with_id": "",
+          "alias": "A veces es cierto",
           "eusurvey_answer_id": "",
           "value": 1,
           "scale": "ordinal",
@@ -9583,6 +9693,28 @@
           "scale": "ordinal",
           "is_special": false,
           "special_type": ""
+        },
+        {
+          "order": 2,
+          "label": "A menudo es cierto",
+          "label_with_id": "",
+          "alias": "A menudo es cierto",
+          "eusurvey_answer_id": "",
+          "value": 2,
+          "scale": "ordinal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
+          "order": 3,
+          "label": "Prefer not to answer",
+          "label_with_id": "",
+          "alias": "",
+          "eusurvey_answer_id": "",
+          "value": 999,
+          "scale": "ordinal",
+          "is_special": true,
+          "special_type": "Prefer not to answer"
         }
       ],
       "keywords": [
@@ -9603,7 +9735,7 @@
       "item_text": "are resentful or feel spiteful",
       "scale": "ordinal",
       "question_type": "matrix",
-      "n_options": 3,
+      "n_options": 4,
       "multiple": false,
       "source": "canonical_en",
       "is_core": true,
@@ -9638,6 +9770,17 @@
           "special_type": ""
         },
         {
+          "order": 0,
+          "label": "Nunca es cierto",
+          "label_with_id": "",
+          "alias": "Nunca es cierto",
+          "eusurvey_answer_id": "",
+          "value": 0,
+          "scale": "ordinal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
           "order": 1,
           "label": "SOMETIMES true",
           "label_with_id": "",
@@ -9653,6 +9796,17 @@
           "label": "NÉHA igaz",
           "label_with_id": "",
           "alias": "NÉHA igaz",
+          "eusurvey_answer_id": "",
+          "value": 1,
+          "scale": "ordinal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
+          "order": 1,
+          "label": "A veces es cierto",
+          "label_with_id": "",
+          "alias": "A veces es cierto",
           "eusurvey_answer_id": "",
           "value": 1,
           "scale": "ordinal",
@@ -9680,6 +9834,28 @@
           "scale": "ordinal",
           "is_special": false,
           "special_type": ""
+        },
+        {
+          "order": 2,
+          "label": "A menudo es cierto",
+          "label_with_id": "",
+          "alias": "A menudo es cierto",
+          "eusurvey_answer_id": "",
+          "value": 2,
+          "scale": "ordinal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
+          "order": 3,
+          "label": "Prefer not to answer",
+          "label_with_id": "",
+          "alias": "",
+          "eusurvey_answer_id": "",
+          "value": 999,
+          "scale": "ordinal",
+          "is_special": true,
+          "special_type": "Prefer not to answer"
         }
       ],
       "keywords": [
@@ -9700,7 +9876,7 @@
       "item_text": "feel anxious or nervous about things in general",
       "scale": "ordinal",
       "question_type": "matrix",
-      "n_options": 3,
+      "n_options": 4,
       "multiple": false,
       "source": "canonical_en",
       "is_core": true,
@@ -9709,7 +9885,7 @@
       "notes": "",
       "orig_aliases": {
         "hungary": "ma1:6_1",
-        "spain": "ID206"
+        "spain": "ID194"
       },
       "options": [
         {
@@ -9735,6 +9911,17 @@
           "special_type": ""
         },
         {
+          "order": 0,
+          "label": "Nunca es cierto",
+          "label_with_id": "",
+          "alias": "Nunca es cierto",
+          "eusurvey_answer_id": "",
+          "value": 0,
+          "scale": "ordinal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
           "order": 1,
           "label": "SOMETIMES true",
           "label_with_id": "",
@@ -9750,6 +9937,17 @@
           "label": "NÉHA igaz",
           "label_with_id": "",
           "alias": "NÉHA igaz",
+          "eusurvey_answer_id": "",
+          "value": 1,
+          "scale": "ordinal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
+          "order": 1,
+          "label": "A veces es cierto",
+          "label_with_id": "",
+          "alias": "A veces es cierto",
           "eusurvey_answer_id": "",
           "value": 1,
           "scale": "ordinal",
@@ -9777,6 +9975,28 @@
           "scale": "ordinal",
           "is_special": false,
           "special_type": ""
+        },
+        {
+          "order": 2,
+          "label": "A menudo es cierto",
+          "label_with_id": "",
+          "alias": "A menudo es cierto",
+          "eusurvey_answer_id": "",
+          "value": 2,
+          "scale": "ordinal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
+          "order": 3,
+          "label": "Prefer not to answer",
+          "label_with_id": "",
+          "alias": "",
+          "eusurvey_answer_id": "",
+          "value": 999,
+          "scale": "ordinal",
+          "is_special": true,
+          "special_type": "Prefer not to answer"
         }
       ],
       "keywords": [
@@ -9797,7 +10017,7 @@
       "item_text": "worry about doing better at things",
       "scale": "ordinal",
       "question_type": "matrix",
-      "n_options": 3,
+      "n_options": 4,
       "multiple": false,
       "source": "canonical_en",
       "is_core": true,
@@ -9832,6 +10052,17 @@
           "special_type": ""
         },
         {
+          "order": 0,
+          "label": "Nunca es cierto",
+          "label_with_id": "",
+          "alias": "Nunca es cierto",
+          "eusurvey_answer_id": "",
+          "value": 0,
+          "scale": "ordinal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
           "order": 1,
           "label": "SOMETIMES true",
           "label_with_id": "",
@@ -9847,6 +10078,17 @@
           "label": "NÉHA igaz",
           "label_with_id": "",
           "alias": "NÉHA igaz",
+          "eusurvey_answer_id": "",
+          "value": 1,
+          "scale": "ordinal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
+          "order": 1,
+          "label": "A veces es cierto",
+          "label_with_id": "",
+          "alias": "A veces es cierto",
           "eusurvey_answer_id": "",
           "value": 1,
           "scale": "ordinal",
@@ -9874,6 +10116,28 @@
           "scale": "ordinal",
           "is_special": false,
           "special_type": ""
+        },
+        {
+          "order": 2,
+          "label": "A menudo es cierto",
+          "label_with_id": "",
+          "alias": "A menudo es cierto",
+          "eusurvey_answer_id": "",
+          "value": 2,
+          "scale": "ordinal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
+          "order": 3,
+          "label": "Prefer not to answer",
+          "label_with_id": "",
+          "alias": "",
+          "eusurvey_answer_id": "",
+          "value": 999,
+          "scale": "ordinal",
+          "is_special": true,
+          "special_type": "Prefer not to answer"
         }
       ],
       "keywords": [
@@ -9894,7 +10158,7 @@
       "item_text": "worry about your past behaviour",
       "scale": "ordinal",
       "question_type": "matrix",
-      "n_options": 3,
+      "n_options": 4,
       "multiple": false,
       "source": "canonical_en",
       "is_core": true,
@@ -9929,6 +10193,17 @@
           "special_type": ""
         },
         {
+          "order": 0,
+          "label": "Nunca es cierto",
+          "label_with_id": "",
+          "alias": "Nunca es cierto",
+          "eusurvey_answer_id": "",
+          "value": 0,
+          "scale": "ordinal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
           "order": 1,
           "label": "SOMETIMES true",
           "label_with_id": "",
@@ -9944,6 +10219,17 @@
           "label": "NÉHA igaz",
           "label_with_id": "",
           "alias": "NÉHA igaz",
+          "eusurvey_answer_id": "",
+          "value": 1,
+          "scale": "ordinal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
+          "order": 1,
+          "label": "A veces es cierto",
+          "label_with_id": "",
+          "alias": "A veces es cierto",
           "eusurvey_answer_id": "",
           "value": 1,
           "scale": "ordinal",
@@ -9971,6 +10257,28 @@
           "scale": "ordinal",
           "is_special": false,
           "special_type": ""
+        },
+        {
+          "order": 2,
+          "label": "A menudo es cierto",
+          "label_with_id": "",
+          "alias": "A menudo es cierto",
+          "eusurvey_answer_id": "",
+          "value": 2,
+          "scale": "ordinal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
+          "order": 3,
+          "label": "Prefer not to answer",
+          "label_with_id": "",
+          "alias": "",
+          "eusurvey_answer_id": "",
+          "value": 999,
+          "scale": "ordinal",
+          "is_special": true,
+          "special_type": "Prefer not to answer"
         }
       ],
       "keywords": [
@@ -9991,7 +10299,7 @@
       "item_text": "worry about doing the wrong thing",
       "scale": "ordinal",
       "question_type": "matrix",
-      "n_options": 3,
+      "n_options": 4,
       "multiple": false,
       "source": "canonical_en",
       "is_core": true,
@@ -10026,6 +10334,17 @@
           "special_type": ""
         },
         {
+          "order": 0,
+          "label": "Nunca es cierto",
+          "label_with_id": "",
+          "alias": "Nunca es cierto",
+          "eusurvey_answer_id": "",
+          "value": 0,
+          "scale": "ordinal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
           "order": 1,
           "label": "SOMETIMES true",
           "label_with_id": "",
@@ -10041,6 +10360,17 @@
           "label": "NÉHA igaz",
           "label_with_id": "",
           "alias": "NÉHA igaz",
+          "eusurvey_answer_id": "",
+          "value": 1,
+          "scale": "ordinal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
+          "order": 1,
+          "label": "A veces es cierto",
+          "label_with_id": "",
+          "alias": "A veces es cierto",
           "eusurvey_answer_id": "",
           "value": 1,
           "scale": "ordinal",
@@ -10068,6 +10398,28 @@
           "scale": "ordinal",
           "is_special": false,
           "special_type": ""
+        },
+        {
+          "order": 2,
+          "label": "A menudo es cierto",
+          "label_with_id": "",
+          "alias": "A menudo es cierto",
+          "eusurvey_answer_id": "",
+          "value": 2,
+          "scale": "ordinal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
+          "order": 3,
+          "label": "Prefer not to answer",
+          "label_with_id": "",
+          "alias": "",
+          "eusurvey_answer_id": "",
+          "value": 999,
+          "scale": "ordinal",
+          "is_special": true,
+          "special_type": "Prefer not to answer"
         }
       ],
       "keywords": [
@@ -10088,7 +10440,7 @@
       "item_text": "worry about things in the future",
       "scale": "ordinal",
       "question_type": "matrix",
-      "n_options": 3,
+      "n_options": 4,
       "multiple": false,
       "source": "canonical_en",
       "is_core": true,
@@ -10123,6 +10475,17 @@
           "special_type": ""
         },
         {
+          "order": 0,
+          "label": "Nunca es cierto",
+          "label_with_id": "",
+          "alias": "Nunca es cierto",
+          "eusurvey_answer_id": "",
+          "value": 0,
+          "scale": "ordinal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
           "order": 1,
           "label": "SOMETIMES true",
           "label_with_id": "",
@@ -10138,6 +10501,17 @@
           "label": "NÉHA igaz",
           "label_with_id": "",
           "alias": "NÉHA igaz",
+          "eusurvey_answer_id": "",
+          "value": 1,
+          "scale": "ordinal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
+          "order": 1,
+          "label": "A veces es cierto",
+          "label_with_id": "",
+          "alias": "A veces es cierto",
           "eusurvey_answer_id": "",
           "value": 1,
           "scale": "ordinal",
@@ -10165,6 +10539,28 @@
           "scale": "ordinal",
           "is_special": false,
           "special_type": ""
+        },
+        {
+          "order": 2,
+          "label": "A menudo es cierto",
+          "label_with_id": "",
+          "alias": "A menudo es cierto",
+          "eusurvey_answer_id": "",
+          "value": 2,
+          "scale": "ordinal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
+          "order": 3,
+          "label": "Prefer not to answer",
+          "label_with_id": "",
+          "alias": "",
+          "eusurvey_answer_id": "",
+          "value": 999,
+          "scale": "ordinal",
+          "is_special": true,
+          "special_type": "Prefer not to answer"
         }
       ],
       "keywords": [
@@ -10185,7 +10581,7 @@
       "item_text": "are afraid of making mistakes",
       "scale": "ordinal",
       "question_type": "matrix",
-      "n_options": 3,
+      "n_options": 4,
       "multiple": false,
       "source": "canonical_en",
       "is_core": true,
@@ -10220,6 +10616,17 @@
           "special_type": ""
         },
         {
+          "order": 0,
+          "label": "Nunca es cierto",
+          "label_with_id": "",
+          "alias": "Nunca es cierto",
+          "eusurvey_answer_id": "",
+          "value": 0,
+          "scale": "ordinal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
           "order": 1,
           "label": "SOMETIMES true",
           "label_with_id": "",
@@ -10235,6 +10642,17 @@
           "label": "NÉHA igaz",
           "label_with_id": "",
           "alias": "NÉHA igaz",
+          "eusurvey_answer_id": "",
+          "value": 1,
+          "scale": "ordinal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
+          "order": 1,
+          "label": "A veces es cierto",
+          "label_with_id": "",
+          "alias": "A veces es cierto",
           "eusurvey_answer_id": "",
           "value": 1,
           "scale": "ordinal",
@@ -10262,6 +10680,28 @@
           "scale": "ordinal",
           "is_special": false,
           "special_type": ""
+        },
+        {
+          "order": 2,
+          "label": "A menudo es cierto",
+          "label_with_id": "",
+          "alias": "A menudo es cierto",
+          "eusurvey_answer_id": "",
+          "value": 2,
+          "scale": "ordinal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
+          "order": 3,
+          "label": "Prefer not to answer",
+          "label_with_id": "",
+          "alias": "",
+          "eusurvey_answer_id": "",
+          "value": 999,
+          "scale": "ordinal",
+          "is_special": true,
+          "special_type": "Prefer not to answer"
         }
       ],
       "keywords": [
@@ -11842,7 +12282,7 @@
       "item_text": "have a hard time controlling your feelings",
       "scale": "ordinal",
       "question_type": "matrix",
-      "n_options": 3,
+      "n_options": 4,
       "multiple": false,
       "source": "canonical_en",
       "is_core": true,
@@ -11851,7 +12291,7 @@
       "notes": "",
       "orig_aliases": {
         "hungary": "af1:6_1",
-        "spain": "ID642"
+        "spain": "ID358"
       },
       "options": [
         {
@@ -11870,6 +12310,17 @@
           "label": "SOHA nem igaz",
           "label_with_id": "",
           "alias": "SOHA nem igaz",
+          "eusurvey_answer_id": "",
+          "value": 0,
+          "scale": "ordinal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
+          "order": 0,
+          "label": "Nunca es cierto",
+          "label_with_id": "",
+          "alias": "Nunca es cierto",
           "eusurvey_answer_id": "",
           "value": 0,
           "scale": "ordinal",
@@ -11899,6 +12350,17 @@
           "special_type": ""
         },
         {
+          "order": 1,
+          "label": "A veces es cierto",
+          "label_with_id": "",
+          "alias": "A veces es cierto",
+          "eusurvey_answer_id": "",
+          "value": 1,
+          "scale": "ordinal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
           "order": 2,
           "label": "OFTEN true",
           "label_with_id": "",
@@ -11919,6 +12381,28 @@
           "scale": "ordinal",
           "is_special": false,
           "special_type": ""
+        },
+        {
+          "order": 2,
+          "label": "A menudo es cierto",
+          "label_with_id": "",
+          "alias": "A menudo es cierto",
+          "eusurvey_answer_id": "",
+          "value": 2,
+          "scale": "ordinal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
+          "order": 3,
+          "label": "Prefer not to answer",
+          "label_with_id": "",
+          "alias": "",
+          "eusurvey_answer_id": "",
+          "value": 999,
+          "scale": "ordinal",
+          "is_special": true,
+          "special_type": "Prefer not to answer"
         }
       ],
       "keywords": [
@@ -11939,7 +12423,7 @@
       "item_text": "find it very hard to calm down when you get upset",
       "scale": "ordinal",
       "question_type": "matrix",
-      "n_options": 3,
+      "n_options": 4,
       "multiple": false,
       "source": "canonical_en",
       "is_core": true,
@@ -11974,6 +12458,17 @@
           "special_type": ""
         },
         {
+          "order": 0,
+          "label": "Nunca es cierto",
+          "label_with_id": "",
+          "alias": "Nunca es cierto",
+          "eusurvey_answer_id": "",
+          "value": 0,
+          "scale": "ordinal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
           "order": 1,
           "label": "SOMETIMES true",
           "label_with_id": "",
@@ -11989,6 +12484,17 @@
           "label": "NÉHA igaz",
           "label_with_id": "",
           "alias": "NÉHA igaz",
+          "eusurvey_answer_id": "",
+          "value": 1,
+          "scale": "ordinal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
+          "order": 1,
+          "label": "A veces es cierto",
+          "label_with_id": "",
+          "alias": "A veces es cierto",
           "eusurvey_answer_id": "",
           "value": 1,
           "scale": "ordinal",
@@ -12016,6 +12522,28 @@
           "scale": "ordinal",
           "is_special": false,
           "special_type": ""
+        },
+        {
+          "order": 2,
+          "label": "A menudo es cierto",
+          "label_with_id": "",
+          "alias": "A menudo es cierto",
+          "eusurvey_answer_id": "",
+          "value": 2,
+          "scale": "ordinal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
+          "order": 3,
+          "label": "Prefer not to answer",
+          "label_with_id": "",
+          "alias": "",
+          "eusurvey_answer_id": "",
+          "value": 999,
+          "scale": "ordinal",
+          "is_special": true,
+          "special_type": "Prefer not to answer"
         }
       ],
       "keywords": [
@@ -12035,7 +12563,7 @@
       "item_text": "find your feelings just taking over and you can't do anything about it",
       "scale": "ordinal",
       "question_type": "matrix",
-      "n_options": 3,
+      "n_options": 4,
       "multiple": false,
       "source": "canonical_en",
       "is_core": true,
@@ -12070,6 +12598,17 @@
           "special_type": ""
         },
         {
+          "order": 0,
+          "label": "Nunca es cierto",
+          "label_with_id": "",
+          "alias": "Nunca es cierto",
+          "eusurvey_answer_id": "",
+          "value": 0,
+          "scale": "ordinal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
           "order": 1,
           "label": "SOMETIMES true",
           "label_with_id": "",
@@ -12085,6 +12624,17 @@
           "label": "NÉHA igaz",
           "label_with_id": "",
           "alias": "NÉHA igaz",
+          "eusurvey_answer_id": "",
+          "value": 1,
+          "scale": "ordinal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
+          "order": 1,
+          "label": "A veces es cierto",
+          "label_with_id": "",
+          "alias": "A veces es cierto",
           "eusurvey_answer_id": "",
           "value": 1,
           "scale": "ordinal",
@@ -12112,6 +12662,28 @@
           "scale": "ordinal",
           "is_special": false,
           "special_type": ""
+        },
+        {
+          "order": 2,
+          "label": "A menudo es cierto",
+          "label_with_id": "",
+          "alias": "A menudo es cierto",
+          "eusurvey_answer_id": "",
+          "value": 2,
+          "scale": "ordinal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
+          "order": 3,
+          "label": "Prefer not to answer",
+          "label_with_id": "",
+          "alias": "",
+          "eusurvey_answer_id": "",
+          "value": 999,
+          "scale": "ordinal",
+          "is_special": true,
+          "special_type": "Prefer not to answer"
         }
       ],
       "keywords": [
@@ -12131,7 +12703,7 @@
       "item_text": "try hard not to think about your feelings",
       "scale": "ordinal",
       "question_type": "matrix",
-      "n_options": 3,
+      "n_options": 4,
       "multiple": false,
       "source": "canonical_en",
       "is_core": true,
@@ -12166,6 +12738,17 @@
           "special_type": ""
         },
         {
+          "order": 0,
+          "label": "Nunca es cierto",
+          "label_with_id": "",
+          "alias": "Nunca es cierto",
+          "eusurvey_answer_id": "",
+          "value": 0,
+          "scale": "ordinal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
           "order": 1,
           "label": "SOMETIMES true",
           "label_with_id": "",
@@ -12181,6 +12764,17 @@
           "label": "NÉHA igaz",
           "label_with_id": "",
           "alias": "NÉHA igaz",
+          "eusurvey_answer_id": "",
+          "value": 1,
+          "scale": "ordinal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
+          "order": 1,
+          "label": "A veces es cierto",
+          "label_with_id": "",
+          "alias": "A veces es cierto",
           "eusurvey_answer_id": "",
           "value": 1,
           "scale": "ordinal",
@@ -12208,6 +12802,28 @@
           "scale": "ordinal",
           "is_special": false,
           "special_type": ""
+        },
+        {
+          "order": 2,
+          "label": "A menudo es cierto",
+          "label_with_id": "",
+          "alias": "A menudo es cierto",
+          "eusurvey_answer_id": "",
+          "value": 2,
+          "scale": "ordinal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
+          "order": 3,
+          "label": "Prefer not to answer",
+          "label_with_id": "",
+          "alias": "",
+          "eusurvey_answer_id": "",
+          "value": 999,
+          "scale": "ordinal",
+          "is_special": true,
+          "special_type": "Prefer not to answer"
         }
       ],
       "keywords": [
@@ -12227,7 +12843,7 @@
       "item_text": "believe it is best to keep your feelings in control and not to think about them",
       "scale": "ordinal",
       "question_type": "matrix",
-      "n_options": 3,
+      "n_options": 4,
       "multiple": false,
       "source": "canonical_en",
       "is_core": true,
@@ -12262,6 +12878,17 @@
           "special_type": ""
         },
         {
+          "order": 0,
+          "label": "Nunca es cierto",
+          "label_with_id": "",
+          "alias": "Nunca es cierto",
+          "eusurvey_answer_id": "",
+          "value": 0,
+          "scale": "ordinal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
           "order": 1,
           "label": "SOMETIMES true",
           "label_with_id": "",
@@ -12277,6 +12904,17 @@
           "label": "NÉHA igaz",
           "label_with_id": "",
           "alias": "NÉHA igaz",
+          "eusurvey_answer_id": "",
+          "value": 1,
+          "scale": "ordinal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
+          "order": 1,
+          "label": "A veces es cierto",
+          "label_with_id": "",
+          "alias": "A veces es cierto",
           "eusurvey_answer_id": "",
           "value": 1,
           "scale": "ordinal",
@@ -12304,6 +12942,28 @@
           "scale": "ordinal",
           "is_special": false,
           "special_type": ""
+        },
+        {
+          "order": 2,
+          "label": "A menudo es cierto",
+          "label_with_id": "",
+          "alias": "A menudo es cierto",
+          "eusurvey_answer_id": "",
+          "value": 2,
+          "scale": "ordinal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
+          "order": 3,
+          "label": "Prefer not to answer",
+          "label_with_id": "",
+          "alias": "",
+          "eusurvey_answer_id": "",
+          "value": 999,
+          "scale": "ordinal",
+          "is_special": true,
+          "special_type": "Prefer not to answer"
         }
       ],
       "keywords": [
@@ -12323,7 +12983,7 @@
       "item_text": "keep your feelings to yourself",
       "scale": "ordinal",
       "question_type": "matrix",
-      "n_options": 3,
+      "n_options": 4,
       "multiple": false,
       "source": "canonical_en",
       "is_core": true,
@@ -12358,6 +13018,17 @@
           "special_type": ""
         },
         {
+          "order": 0,
+          "label": "Nunca es cierto",
+          "label_with_id": "",
+          "alias": "Nunca es cierto",
+          "eusurvey_answer_id": "",
+          "value": 0,
+          "scale": "ordinal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
           "order": 1,
           "label": "SOMETIMES true",
           "label_with_id": "",
@@ -12373,6 +13044,17 @@
           "label": "NÉHA igaz",
           "label_with_id": "",
           "alias": "NÉHA igaz",
+          "eusurvey_answer_id": "",
+          "value": 1,
+          "scale": "ordinal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
+          "order": 1,
+          "label": "A veces es cierto",
+          "label_with_id": "",
+          "alias": "A veces es cierto",
           "eusurvey_answer_id": "",
           "value": 1,
           "scale": "ordinal",
@@ -12400,6 +13082,28 @@
           "scale": "ordinal",
           "is_special": false,
           "special_type": ""
+        },
+        {
+          "order": 2,
+          "label": "A menudo es cierto",
+          "label_with_id": "",
+          "alias": "A menudo es cierto",
+          "eusurvey_answer_id": "",
+          "value": 2,
+          "scale": "ordinal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
+          "order": 3,
+          "label": "Prefer not to answer",
+          "label_with_id": "",
+          "alias": "",
+          "eusurvey_answer_id": "",
+          "value": 999,
+          "scale": "ordinal",
+          "is_special": true,
+          "special_type": "Prefer not to answer"
         }
       ],
       "keywords": [
@@ -13968,7 +14672,7 @@
       "item_text": "Did your parents/guardians understand your problems and worries?",
       "scale": "ordinal",
       "question_type": "matrix",
-      "n_options": 5,
+      "n_options": 6,
       "multiple": false,
       "source": "canonical_en",
       "is_core": true,
@@ -13976,7 +14680,8 @@
       "scale_confidence": "high",
       "notes": "",
       "orig_aliases": {
-        "hungary": "ace01"
+        "hungary": "ace01",
+        "spain": "ID391"
       },
       "options": [
         {
@@ -13995,6 +14700,17 @@
           "label": "Mindig",
           "label_with_id": "",
           "alias": "Mindig",
+          "eusurvey_answer_id": "",
+          "value": 4,
+          "scale": "ordinal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
+          "order": 0,
+          "label": "Siempre",
+          "label_with_id": "",
+          "alias": "Siempre",
           "eusurvey_answer_id": "",
           "value": 4,
           "scale": "ordinal",
@@ -14024,6 +14740,17 @@
           "special_type": ""
         },
         {
+          "order": 1,
+          "label": "La mayoría de las veces",
+          "label_with_id": "",
+          "alias": "La mayoría de las veces",
+          "eusurvey_answer_id": "",
+          "value": 3,
+          "scale": "ordinal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
           "order": 2,
           "label": "Sometimes",
           "label_with_id": "",
@@ -14039,6 +14766,17 @@
           "label": "Néha",
           "label_with_id": "",
           "alias": "Néha",
+          "eusurvey_answer_id": "",
+          "value": 2,
+          "scale": "ordinal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
+          "order": 2,
+          "label": "A veces",
+          "label_with_id": "",
+          "alias": "A veces",
           "eusurvey_answer_id": "",
           "value": 2,
           "scale": "ordinal",
@@ -14068,6 +14806,17 @@
           "special_type": ""
         },
         {
+          "order": 3,
+          "label": "Rara vez",
+          "label_with_id": "",
+          "alias": "Rara vez",
+          "eusurvey_answer_id": "",
+          "value": 1,
+          "scale": "ordinal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
           "order": 4,
           "label": "Never",
           "label_with_id": "",
@@ -14088,6 +14837,28 @@
           "scale": "ordinal",
           "is_special": false,
           "special_type": ""
+        },
+        {
+          "order": 4,
+          "label": "Nunca",
+          "label_with_id": "",
+          "alias": "Nunca",
+          "eusurvey_answer_id": "",
+          "value": 0,
+          "scale": "ordinal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
+          "order": 5,
+          "label": "Prefer not to answer",
+          "label_with_id": "",
+          "alias": "",
+          "eusurvey_answer_id": "",
+          "value": 999,
+          "scale": "ordinal",
+          "is_special": true,
+          "special_type": "Prefer not to answer"
         }
       ],
       "keywords": [
@@ -14107,7 +14878,7 @@
       "item_text": "Did your parents/guardians really know what you were doing with your free time when you were not at school or work?",
       "scale": "ordinal",
       "question_type": "matrix",
-      "n_options": 5,
+      "n_options": 6,
       "multiple": false,
       "source": "canonical_en",
       "is_core": true,
@@ -14115,7 +14886,8 @@
       "scale_confidence": "high",
       "notes": "",
       "orig_aliases": {
-        "hungary": "ace02"
+        "hungary": "ace02",
+        "spain": "ID392"
       },
       "options": [
         {
@@ -14134,6 +14906,17 @@
           "label": "Mindig",
           "label_with_id": "",
           "alias": "Mindig",
+          "eusurvey_answer_id": "",
+          "value": 4,
+          "scale": "ordinal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
+          "order": 0,
+          "label": "Siempre",
+          "label_with_id": "",
+          "alias": "Siempre",
           "eusurvey_answer_id": "",
           "value": 4,
           "scale": "ordinal",
@@ -14163,6 +14946,17 @@
           "special_type": ""
         },
         {
+          "order": 1,
+          "label": "La mayoría de las veces",
+          "label_with_id": "",
+          "alias": "La mayoría de las veces",
+          "eusurvey_answer_id": "",
+          "value": 3,
+          "scale": "ordinal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
           "order": 2,
           "label": "Sometimes",
           "label_with_id": "",
@@ -14178,6 +14972,17 @@
           "label": "Néha",
           "label_with_id": "",
           "alias": "Néha",
+          "eusurvey_answer_id": "",
+          "value": 2,
+          "scale": "ordinal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
+          "order": 2,
+          "label": "A veces",
+          "label_with_id": "",
+          "alias": "A veces",
           "eusurvey_answer_id": "",
           "value": 2,
           "scale": "ordinal",
@@ -14207,6 +15012,17 @@
           "special_type": ""
         },
         {
+          "order": 3,
+          "label": "Rara vez",
+          "label_with_id": "",
+          "alias": "Rara vez",
+          "eusurvey_answer_id": "",
+          "value": 1,
+          "scale": "ordinal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
           "order": 4,
           "label": "Never",
           "label_with_id": "",
@@ -14227,6 +15043,28 @@
           "scale": "ordinal",
           "is_special": false,
           "special_type": ""
+        },
+        {
+          "order": 4,
+          "label": "Nunca",
+          "label_with_id": "",
+          "alias": "Nunca",
+          "eusurvey_answer_id": "",
+          "value": 0,
+          "scale": "ordinal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
+          "order": 5,
+          "label": "Prefer not to answer",
+          "label_with_id": "",
+          "alias": "",
+          "eusurvey_answer_id": "",
+          "value": 999,
+          "scale": "ordinal",
+          "is_special": true,
+          "special_type": "Prefer not to answer"
         }
       ],
       "keywords": [
@@ -14246,7 +15084,7 @@
       "item_text": "How often did your parents/guardians not give you enough food even when they could easily have done so?",
       "scale": "ordinal",
       "question_type": "matrix",
-      "n_options": 4,
+      "n_options": 5,
       "multiple": false,
       "source": "canonical_en",
       "is_core": true,
@@ -14255,7 +15093,7 @@
       "notes": "",
       "orig_aliases": {
         "hungary": "ace03",
-        "spain": "ID392"
+        "spain": "ID405"
       },
       "options": [
         {
@@ -14389,6 +15227,17 @@
           "scale": "ordinal",
           "is_special": false,
           "special_type": ""
+        },
+        {
+          "order": 4,
+          "label": "Prefer not to answer",
+          "label_with_id": "",
+          "alias": "",
+          "eusurvey_answer_id": "",
+          "value": 999,
+          "scale": "ordinal",
+          "is_special": true,
+          "special_type": "Prefer not to answer"
         }
       ],
       "keywords": [
@@ -14732,7 +15581,7 @@
       "item_text": "Did you live with a household member who was a problem drinker or alcoholic, or misused street or prescription drugs?",
       "scale": "nominal",
       "question_type": "matrix",
-      "n_options": 2,
+      "n_options": 3,
       "multiple": false,
       "source": "canonical_en",
       "is_core": true,
@@ -14767,6 +15616,17 @@
           "special_type": ""
         },
         {
+          "order": 0,
+          "label": "Sí",
+          "label_with_id": "",
+          "alias": "Sí",
+          "eusurvey_answer_id": "",
+          "value": 1,
+          "scale": "nominal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
           "order": 1,
           "label": "No",
           "label_with_id": "",
@@ -14787,6 +15647,28 @@
           "scale": "nominal",
           "is_special": false,
           "special_type": ""
+        },
+        {
+          "order": 1,
+          "label": "No",
+          "label_with_id": "",
+          "alias": "No",
+          "eusurvey_answer_id": "",
+          "value": 0,
+          "scale": "nominal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
+          "order": 2,
+          "label": "Prefer not to answer",
+          "label_with_id": "",
+          "alias": "",
+          "eusurvey_answer_id": "",
+          "value": 999,
+          "scale": "nominal",
+          "is_special": true,
+          "special_type": "Prefer not to answer"
         }
       ],
       "keywords": [
@@ -14807,7 +15689,7 @@
       "item_text": "Did you live with a household member who was depressed, mentally ill or suicidal?",
       "scale": "nominal",
       "question_type": "matrix",
-      "n_options": 2,
+      "n_options": 3,
       "multiple": false,
       "source": "canonical_en",
       "is_core": true,
@@ -14842,6 +15724,17 @@
           "special_type": ""
         },
         {
+          "order": 0,
+          "label": "Sí",
+          "label_with_id": "",
+          "alias": "Sí",
+          "eusurvey_answer_id": "",
+          "value": 1,
+          "scale": "nominal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
           "order": 1,
           "label": "No",
           "label_with_id": "",
@@ -14862,6 +15755,28 @@
           "scale": "nominal",
           "is_special": false,
           "special_type": ""
+        },
+        {
+          "order": 1,
+          "label": "No",
+          "label_with_id": "",
+          "alias": "No",
+          "eusurvey_answer_id": "",
+          "value": 0,
+          "scale": "nominal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
+          "order": 2,
+          "label": "Prefer not to answer",
+          "label_with_id": "",
+          "alias": "",
+          "eusurvey_answer_id": "",
+          "value": 999,
+          "scale": "nominal",
+          "is_special": true,
+          "special_type": "Prefer not to answer"
         }
       ],
       "keywords": [
@@ -14881,7 +15796,7 @@
       "item_text": "Did you live with a household member who was ever sent to jail or prison?",
       "scale": "nominal",
       "question_type": "matrix",
-      "n_options": 2,
+      "n_options": 3,
       "multiple": false,
       "source": "canonical_en",
       "is_core": true,
@@ -14916,6 +15831,17 @@
           "special_type": ""
         },
         {
+          "order": 0,
+          "label": "Sí",
+          "label_with_id": "",
+          "alias": "Sí",
+          "eusurvey_answer_id": "",
+          "value": 1,
+          "scale": "nominal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
           "order": 1,
           "label": "No",
           "label_with_id": "",
@@ -14936,6 +15862,28 @@
           "scale": "nominal",
           "is_special": false,
           "special_type": ""
+        },
+        {
+          "order": 1,
+          "label": "No",
+          "label_with_id": "",
+          "alias": "No",
+          "eusurvey_answer_id": "",
+          "value": 0,
+          "scale": "nominal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
+          "order": 2,
+          "label": "Prefer not to answer",
+          "label_with_id": "",
+          "alias": "",
+          "eusurvey_answer_id": "",
+          "value": 999,
+          "scale": "nominal",
+          "is_special": true,
+          "special_type": "Prefer not to answer"
         }
       ],
       "keywords": [
@@ -14955,7 +15903,7 @@
       "item_text": "Were your parents ever separated or divorced?",
       "scale": "nominal",
       "question_type": "matrix",
-      "n_options": 2,
+      "n_options": 3,
       "multiple": false,
       "source": "canonical_en",
       "is_core": true,
@@ -14990,6 +15938,17 @@
           "special_type": ""
         },
         {
+          "order": 0,
+          "label": "Sí",
+          "label_with_id": "",
+          "alias": "Sí",
+          "eusurvey_answer_id": "",
+          "value": 1,
+          "scale": "nominal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
           "order": 1,
           "label": "No",
           "label_with_id": "",
@@ -15010,6 +15969,28 @@
           "scale": "nominal",
           "is_special": false,
           "special_type": ""
+        },
+        {
+          "order": 1,
+          "label": "No",
+          "label_with_id": "",
+          "alias": "No",
+          "eusurvey_answer_id": "",
+          "value": 0,
+          "scale": "nominal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
+          "order": 2,
+          "label": "Prefer not to answer",
+          "label_with_id": "",
+          "alias": "",
+          "eusurvey_answer_id": "",
+          "value": 999,
+          "scale": "nominal",
+          "is_special": true,
+          "special_type": "Prefer not to answer"
         }
       ],
       "keywords": [
@@ -15029,7 +16010,7 @@
       "item_text": "Did your mother, father or guardian die?",
       "scale": "nominal",
       "question_type": "matrix",
-      "n_options": 2,
+      "n_options": 3,
       "multiple": false,
       "source": "canonical_en",
       "is_core": true,
@@ -15064,6 +16045,17 @@
           "special_type": ""
         },
         {
+          "order": 0,
+          "label": "Sí",
+          "label_with_id": "",
+          "alias": "Sí",
+          "eusurvey_answer_id": "",
+          "value": 1,
+          "scale": "nominal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
           "order": 1,
           "label": "No",
           "label_with_id": "",
@@ -15084,6 +16076,28 @@
           "scale": "nominal",
           "is_special": false,
           "special_type": ""
+        },
+        {
+          "order": 1,
+          "label": "No",
+          "label_with_id": "",
+          "alias": "No",
+          "eusurvey_answer_id": "",
+          "value": 0,
+          "scale": "nominal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
+          "order": 2,
+          "label": "Prefer not to answer",
+          "label_with_id": "",
+          "alias": "",
+          "eusurvey_answer_id": "",
+          "value": 999,
+          "scale": "nominal",
+          "is_special": true,
+          "special_type": "Prefer not to answer"
         }
       ],
       "keywords": [
@@ -18531,7 +19545,7 @@
       "item_text": "I have people I look up to",
       "scale": "ordinal",
       "question_type": "matrix",
-      "n_options": 5,
+      "n_options": 6,
       "multiple": false,
       "source": "canonical_en",
       "is_core": true,
@@ -18540,7 +19554,7 @@
       "notes": "",
       "orig_aliases": {
         "hungary": "cyrm1:12_1",
-        "spain": "ID657"
+        "spain": "ID472"
       },
       "options": [
         {
@@ -18559,6 +19573,17 @@
           "label": "Egyáltalán nem",
           "label_with_id": "",
           "alias": "Egyáltalán nem",
+          "eusurvey_answer_id": "",
+          "value": 0,
+          "scale": "ordinal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
+          "order": 0,
+          "label": "En absoluto",
+          "label_with_id": "",
+          "alias": "En absoluto",
           "eusurvey_answer_id": "",
           "value": 0,
           "scale": "ordinal",
@@ -18588,6 +19613,17 @@
           "special_type": ""
         },
         {
+          "order": 1,
+          "label": "Un poco",
+          "label_with_id": "",
+          "alias": "Un poco",
+          "eusurvey_answer_id": "",
+          "value": 1,
+          "scale": "ordinal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
           "order": 2,
           "label": "Somewhat",
           "label_with_id": "",
@@ -18603,6 +19639,17 @@
           "label": "Valamennyire",
           "label_with_id": "",
           "alias": "Valamennyire",
+          "eusurvey_answer_id": "",
+          "value": 2,
+          "scale": "ordinal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
+          "order": 2,
+          "label": "Algo",
+          "label_with_id": "",
+          "alias": "Algo",
           "eusurvey_answer_id": "",
           "value": 2,
           "scale": "ordinal",
@@ -18632,6 +19679,17 @@
           "special_type": ""
         },
         {
+          "order": 3,
+          "label": "Bastante",
+          "label_with_id": "",
+          "alias": "Bastante",
+          "eusurvey_answer_id": "",
+          "value": 3,
+          "scale": "ordinal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
           "order": 4,
           "label": "A lot",
           "label_with_id": "",
@@ -18652,6 +19710,28 @@
           "scale": "ordinal",
           "is_special": false,
           "special_type": ""
+        },
+        {
+          "order": 4,
+          "label": "Mucho",
+          "label_with_id": "",
+          "alias": "Mucho",
+          "eusurvey_answer_id": "",
+          "value": 4,
+          "scale": "ordinal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
+          "order": 5,
+          "label": "Prefer not to answer",
+          "label_with_id": "",
+          "alias": "",
+          "eusurvey_answer_id": "",
+          "value": 999,
+          "scale": "ordinal",
+          "is_special": true,
+          "special_type": "Prefer not to answer"
         }
       ],
       "keywords": [
@@ -18671,7 +19751,7 @@
       "item_text": "Getting an education is important to me",
       "scale": "ordinal",
       "question_type": "matrix",
-      "n_options": 5,
+      "n_options": 6,
       "multiple": false,
       "source": "canonical_en",
       "is_core": true,
@@ -18706,6 +19786,17 @@
           "special_type": ""
         },
         {
+          "order": 0,
+          "label": "En absoluto",
+          "label_with_id": "",
+          "alias": "En absoluto",
+          "eusurvey_answer_id": "",
+          "value": 0,
+          "scale": "ordinal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
           "order": 1,
           "label": "A little",
           "label_with_id": "",
@@ -18721,6 +19812,17 @@
           "label": "Egy kicsit",
           "label_with_id": "",
           "alias": "Egy kicsit",
+          "eusurvey_answer_id": "",
+          "value": 1,
+          "scale": "ordinal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
+          "order": 1,
+          "label": "Un poco",
+          "label_with_id": "",
+          "alias": "Un poco",
           "eusurvey_answer_id": "",
           "value": 1,
           "scale": "ordinal",
@@ -18750,6 +19852,17 @@
           "special_type": ""
         },
         {
+          "order": 2,
+          "label": "Algo",
+          "label_with_id": "",
+          "alias": "Algo",
+          "eusurvey_answer_id": "",
+          "value": 2,
+          "scale": "ordinal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
           "order": 3,
           "label": "Quite a bit",
           "label_with_id": "",
@@ -18765,6 +19878,17 @@
           "label": "Eléggé",
           "label_with_id": "",
           "alias": "Eléggé",
+          "eusurvey_answer_id": "",
+          "value": 3,
+          "scale": "ordinal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
+          "order": 3,
+          "label": "Bastante",
+          "label_with_id": "",
+          "alias": "Bastante",
           "eusurvey_answer_id": "",
           "value": 3,
           "scale": "ordinal",
@@ -18792,6 +19916,28 @@
           "scale": "ordinal",
           "is_special": false,
           "special_type": ""
+        },
+        {
+          "order": 4,
+          "label": "Mucho",
+          "label_with_id": "",
+          "alias": "Mucho",
+          "eusurvey_answer_id": "",
+          "value": 4,
+          "scale": "ordinal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
+          "order": 5,
+          "label": "Prefer not to answer",
+          "label_with_id": "",
+          "alias": "",
+          "eusurvey_answer_id": "",
+          "value": 999,
+          "scale": "ordinal",
+          "is_special": true,
+          "special_type": "Prefer not to answer"
         }
       ],
       "keywords": [
@@ -18811,7 +19957,7 @@
       "item_text": "My parent(s)/caregiver(s) know a lot about me",
       "scale": "ordinal",
       "question_type": "matrix",
-      "n_options": 5,
+      "n_options": 6,
       "multiple": false,
       "source": "canonical_en",
       "is_core": true,
@@ -18846,6 +19992,17 @@
           "special_type": ""
         },
         {
+          "order": 0,
+          "label": "En absoluto",
+          "label_with_id": "",
+          "alias": "En absoluto",
+          "eusurvey_answer_id": "",
+          "value": 0,
+          "scale": "ordinal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
           "order": 1,
           "label": "A little",
           "label_with_id": "",
@@ -18861,6 +20018,17 @@
           "label": "Egy kicsit",
           "label_with_id": "",
           "alias": "Egy kicsit",
+          "eusurvey_answer_id": "",
+          "value": 1,
+          "scale": "ordinal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
+          "order": 1,
+          "label": "Un poco",
+          "label_with_id": "",
+          "alias": "Un poco",
           "eusurvey_answer_id": "",
           "value": 1,
           "scale": "ordinal",
@@ -18890,6 +20058,17 @@
           "special_type": ""
         },
         {
+          "order": 2,
+          "label": "Algo",
+          "label_with_id": "",
+          "alias": "Algo",
+          "eusurvey_answer_id": "",
+          "value": 2,
+          "scale": "ordinal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
           "order": 3,
           "label": "Quite a bit",
           "label_with_id": "",
@@ -18905,6 +20084,17 @@
           "label": "Eléggé",
           "label_with_id": "",
           "alias": "Eléggé",
+          "eusurvey_answer_id": "",
+          "value": 3,
+          "scale": "ordinal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
+          "order": 3,
+          "label": "Bastante",
+          "label_with_id": "",
+          "alias": "Bastante",
           "eusurvey_answer_id": "",
           "value": 3,
           "scale": "ordinal",
@@ -18932,6 +20122,28 @@
           "scale": "ordinal",
           "is_special": false,
           "special_type": ""
+        },
+        {
+          "order": 4,
+          "label": "Mucho",
+          "label_with_id": "",
+          "alias": "Mucho",
+          "eusurvey_answer_id": "",
+          "value": 4,
+          "scale": "ordinal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
+          "order": 5,
+          "label": "Prefer not to answer",
+          "label_with_id": "",
+          "alias": "",
+          "eusurvey_answer_id": "",
+          "value": 999,
+          "scale": "ordinal",
+          "is_special": true,
+          "special_type": "Prefer not to answer"
         }
       ],
       "keywords": [
@@ -18951,7 +20163,7 @@
       "item_text": "I try to finish what I start",
       "scale": "ordinal",
       "question_type": "matrix",
-      "n_options": 5,
+      "n_options": 6,
       "multiple": false,
       "source": "canonical_en",
       "is_core": true,
@@ -18986,6 +20198,17 @@
           "special_type": ""
         },
         {
+          "order": 0,
+          "label": "En absoluto",
+          "label_with_id": "",
+          "alias": "En absoluto",
+          "eusurvey_answer_id": "",
+          "value": 0,
+          "scale": "ordinal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
           "order": 1,
           "label": "A little",
           "label_with_id": "",
@@ -19001,6 +20224,17 @@
           "label": "Egy kicsit",
           "label_with_id": "",
           "alias": "Egy kicsit",
+          "eusurvey_answer_id": "",
+          "value": 1,
+          "scale": "ordinal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
+          "order": 1,
+          "label": "Un poco",
+          "label_with_id": "",
+          "alias": "Un poco",
           "eusurvey_answer_id": "",
           "value": 1,
           "scale": "ordinal",
@@ -19030,6 +20264,17 @@
           "special_type": ""
         },
         {
+          "order": 2,
+          "label": "Algo",
+          "label_with_id": "",
+          "alias": "Algo",
+          "eusurvey_answer_id": "",
+          "value": 2,
+          "scale": "ordinal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
           "order": 3,
           "label": "Quite a bit",
           "label_with_id": "",
@@ -19045,6 +20290,17 @@
           "label": "Eléggé",
           "label_with_id": "",
           "alias": "Eléggé",
+          "eusurvey_answer_id": "",
+          "value": 3,
+          "scale": "ordinal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
+          "order": 3,
+          "label": "Bastante",
+          "label_with_id": "",
+          "alias": "Bastante",
           "eusurvey_answer_id": "",
           "value": 3,
           "scale": "ordinal",
@@ -19072,6 +20328,28 @@
           "scale": "ordinal",
           "is_special": false,
           "special_type": ""
+        },
+        {
+          "order": 4,
+          "label": "Mucho",
+          "label_with_id": "",
+          "alias": "Mucho",
+          "eusurvey_answer_id": "",
+          "value": 4,
+          "scale": "ordinal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
+          "order": 5,
+          "label": "Prefer not to answer",
+          "label_with_id": "",
+          "alias": "",
+          "eusurvey_answer_id": "",
+          "value": 999,
+          "scale": "ordinal",
+          "is_special": true,
+          "special_type": "Prefer not to answer"
         }
       ],
       "keywords": [
@@ -19092,7 +20370,7 @@
       "item_text": "I solve problems without harming myself or others (by using drugs and/or being violent)",
       "scale": "ordinal",
       "question_type": "matrix",
-      "n_options": 5,
+      "n_options": 6,
       "multiple": false,
       "source": "canonical_en",
       "is_core": true,
@@ -19127,6 +20405,17 @@
           "special_type": ""
         },
         {
+          "order": 0,
+          "label": "En absoluto",
+          "label_with_id": "",
+          "alias": "En absoluto",
+          "eusurvey_answer_id": "",
+          "value": 0,
+          "scale": "ordinal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
           "order": 1,
           "label": "A little",
           "label_with_id": "",
@@ -19142,6 +20431,17 @@
           "label": "Egy kicsit",
           "label_with_id": "",
           "alias": "Egy kicsit",
+          "eusurvey_answer_id": "",
+          "value": 1,
+          "scale": "ordinal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
+          "order": 1,
+          "label": "Un poco",
+          "label_with_id": "",
+          "alias": "Un poco",
           "eusurvey_answer_id": "",
           "value": 1,
           "scale": "ordinal",
@@ -19171,6 +20471,17 @@
           "special_type": ""
         },
         {
+          "order": 2,
+          "label": "Algo",
+          "label_with_id": "",
+          "alias": "Algo",
+          "eusurvey_answer_id": "",
+          "value": 2,
+          "scale": "ordinal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
           "order": 3,
           "label": "Quite a bit",
           "label_with_id": "",
@@ -19186,6 +20497,17 @@
           "label": "Eléggé",
           "label_with_id": "",
           "alias": "Eléggé",
+          "eusurvey_answer_id": "",
+          "value": 3,
+          "scale": "ordinal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
+          "order": 3,
+          "label": "Bastante",
+          "label_with_id": "",
+          "alias": "Bastante",
           "eusurvey_answer_id": "",
           "value": 3,
           "scale": "ordinal",
@@ -19213,6 +20535,28 @@
           "scale": "ordinal",
           "is_special": false,
           "special_type": ""
+        },
+        {
+          "order": 4,
+          "label": "Mucho",
+          "label_with_id": "",
+          "alias": "Mucho",
+          "eusurvey_answer_id": "",
+          "value": 4,
+          "scale": "ordinal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
+          "order": 5,
+          "label": "Prefer not to answer",
+          "label_with_id": "",
+          "alias": "",
+          "eusurvey_answer_id": "",
+          "value": 999,
+          "scale": "ordinal",
+          "is_special": true,
+          "special_type": "Prefer not to answer"
         }
       ],
       "keywords": [
@@ -19233,7 +20577,7 @@
       "item_text": "I know where to go in my community to get help",
       "scale": "ordinal",
       "question_type": "matrix",
-      "n_options": 5,
+      "n_options": 6,
       "multiple": false,
       "source": "canonical_en",
       "is_core": true,
@@ -19268,6 +20612,17 @@
           "special_type": ""
         },
         {
+          "order": 0,
+          "label": "En absoluto",
+          "label_with_id": "",
+          "alias": "En absoluto",
+          "eusurvey_answer_id": "",
+          "value": 0,
+          "scale": "ordinal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
           "order": 1,
           "label": "A little",
           "label_with_id": "",
@@ -19283,6 +20638,17 @@
           "label": "Egy kicsit",
           "label_with_id": "",
           "alias": "Egy kicsit",
+          "eusurvey_answer_id": "",
+          "value": 1,
+          "scale": "ordinal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
+          "order": 1,
+          "label": "Un poco",
+          "label_with_id": "",
+          "alias": "Un poco",
           "eusurvey_answer_id": "",
           "value": 1,
           "scale": "ordinal",
@@ -19312,6 +20678,17 @@
           "special_type": ""
         },
         {
+          "order": 2,
+          "label": "Algo",
+          "label_with_id": "",
+          "alias": "Algo",
+          "eusurvey_answer_id": "",
+          "value": 2,
+          "scale": "ordinal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
           "order": 3,
           "label": "Quite a bit",
           "label_with_id": "",
@@ -19327,6 +20704,17 @@
           "label": "Eléggé",
           "label_with_id": "",
           "alias": "Eléggé",
+          "eusurvey_answer_id": "",
+          "value": 3,
+          "scale": "ordinal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
+          "order": 3,
+          "label": "Bastante",
+          "label_with_id": "",
+          "alias": "Bastante",
           "eusurvey_answer_id": "",
           "value": 3,
           "scale": "ordinal",
@@ -19354,6 +20742,28 @@
           "scale": "ordinal",
           "is_special": false,
           "special_type": ""
+        },
+        {
+          "order": 4,
+          "label": "Mucho",
+          "label_with_id": "",
+          "alias": "Mucho",
+          "eusurvey_answer_id": "",
+          "value": 4,
+          "scale": "ordinal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
+          "order": 5,
+          "label": "Prefer not to answer",
+          "label_with_id": "",
+          "alias": "",
+          "eusurvey_answer_id": "",
+          "value": 999,
+          "scale": "ordinal",
+          "is_special": true,
+          "special_type": "Prefer not to answer"
         }
       ],
       "keywords": [
@@ -19373,7 +20783,7 @@
       "item_text": "I feel I belong(ed) at my school",
       "scale": "ordinal",
       "question_type": "matrix",
-      "n_options": 5,
+      "n_options": 6,
       "multiple": false,
       "source": "canonical_en",
       "is_core": true,
@@ -19408,6 +20818,17 @@
           "special_type": ""
         },
         {
+          "order": 0,
+          "label": "En absoluto",
+          "label_with_id": "",
+          "alias": "En absoluto",
+          "eusurvey_answer_id": "",
+          "value": 0,
+          "scale": "ordinal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
           "order": 1,
           "label": "A little",
           "label_with_id": "",
@@ -19423,6 +20844,17 @@
           "label": "Egy kicsit",
           "label_with_id": "",
           "alias": "Egy kicsit",
+          "eusurvey_answer_id": "",
+          "value": 1,
+          "scale": "ordinal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
+          "order": 1,
+          "label": "Un poco",
+          "label_with_id": "",
+          "alias": "Un poco",
           "eusurvey_answer_id": "",
           "value": 1,
           "scale": "ordinal",
@@ -19452,6 +20884,17 @@
           "special_type": ""
         },
         {
+          "order": 2,
+          "label": "Algo",
+          "label_with_id": "",
+          "alias": "Algo",
+          "eusurvey_answer_id": "",
+          "value": 2,
+          "scale": "ordinal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
           "order": 3,
           "label": "Quite a bit",
           "label_with_id": "",
@@ -19467,6 +20910,17 @@
           "label": "Eléggé",
           "label_with_id": "",
           "alias": "Eléggé",
+          "eusurvey_answer_id": "",
+          "value": 3,
+          "scale": "ordinal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
+          "order": 3,
+          "label": "Bastante",
+          "label_with_id": "",
+          "alias": "Bastante",
           "eusurvey_answer_id": "",
           "value": 3,
           "scale": "ordinal",
@@ -19494,6 +20948,28 @@
           "scale": "ordinal",
           "is_special": false,
           "special_type": ""
+        },
+        {
+          "order": 4,
+          "label": "Mucho",
+          "label_with_id": "",
+          "alias": "Mucho",
+          "eusurvey_answer_id": "",
+          "value": 4,
+          "scale": "ordinal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
+          "order": 5,
+          "label": "Prefer not to answer",
+          "label_with_id": "",
+          "alias": "",
+          "eusurvey_answer_id": "",
+          "value": 999,
+          "scale": "ordinal",
+          "is_special": true,
+          "special_type": "Prefer not to answer"
         }
       ],
       "keywords": [
@@ -19513,7 +20989,7 @@
       "item_text": "My family will stand by me during difficult times",
       "scale": "ordinal",
       "question_type": "matrix",
-      "n_options": 5,
+      "n_options": 6,
       "multiple": false,
       "source": "canonical_en",
       "is_core": true,
@@ -19548,6 +21024,17 @@
           "special_type": ""
         },
         {
+          "order": 0,
+          "label": "En absoluto",
+          "label_with_id": "",
+          "alias": "En absoluto",
+          "eusurvey_answer_id": "",
+          "value": 0,
+          "scale": "ordinal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
           "order": 1,
           "label": "A little",
           "label_with_id": "",
@@ -19563,6 +21050,17 @@
           "label": "Egy kicsit",
           "label_with_id": "",
           "alias": "Egy kicsit",
+          "eusurvey_answer_id": "",
+          "value": 1,
+          "scale": "ordinal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
+          "order": 1,
+          "label": "Un poco",
+          "label_with_id": "",
+          "alias": "Un poco",
           "eusurvey_answer_id": "",
           "value": 1,
           "scale": "ordinal",
@@ -19592,6 +21090,17 @@
           "special_type": ""
         },
         {
+          "order": 2,
+          "label": "Algo",
+          "label_with_id": "",
+          "alias": "Algo",
+          "eusurvey_answer_id": "",
+          "value": 2,
+          "scale": "ordinal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
           "order": 3,
           "label": "Quite a bit",
           "label_with_id": "",
@@ -19607,6 +21116,17 @@
           "label": "Eléggé",
           "label_with_id": "",
           "alias": "Eléggé",
+          "eusurvey_answer_id": "",
+          "value": 3,
+          "scale": "ordinal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
+          "order": 3,
+          "label": "Bastante",
+          "label_with_id": "",
+          "alias": "Bastante",
           "eusurvey_answer_id": "",
           "value": 3,
           "scale": "ordinal",
@@ -19634,6 +21154,28 @@
           "scale": "ordinal",
           "is_special": false,
           "special_type": ""
+        },
+        {
+          "order": 4,
+          "label": "Mucho",
+          "label_with_id": "",
+          "alias": "Mucho",
+          "eusurvey_answer_id": "",
+          "value": 4,
+          "scale": "ordinal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
+          "order": 5,
+          "label": "Prefer not to answer",
+          "label_with_id": "",
+          "alias": "",
+          "eusurvey_answer_id": "",
+          "value": 999,
+          "scale": "ordinal",
+          "is_special": true,
+          "special_type": "Prefer not to answer"
         }
       ],
       "keywords": [
@@ -19653,7 +21195,7 @@
       "item_text": "My friends stand by me during difficult times",
       "scale": "ordinal",
       "question_type": "matrix",
-      "n_options": 5,
+      "n_options": 6,
       "multiple": false,
       "source": "canonical_en",
       "is_core": true,
@@ -19688,6 +21230,17 @@
           "special_type": ""
         },
         {
+          "order": 0,
+          "label": "En absoluto",
+          "label_with_id": "",
+          "alias": "En absoluto",
+          "eusurvey_answer_id": "",
+          "value": 0,
+          "scale": "ordinal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
           "order": 1,
           "label": "A little",
           "label_with_id": "",
@@ -19703,6 +21256,17 @@
           "label": "Egy kicsit",
           "label_with_id": "",
           "alias": "Egy kicsit",
+          "eusurvey_answer_id": "",
+          "value": 1,
+          "scale": "ordinal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
+          "order": 1,
+          "label": "Un poco",
+          "label_with_id": "",
+          "alias": "Un poco",
           "eusurvey_answer_id": "",
           "value": 1,
           "scale": "ordinal",
@@ -19732,6 +21296,17 @@
           "special_type": ""
         },
         {
+          "order": 2,
+          "label": "Algo",
+          "label_with_id": "",
+          "alias": "Algo",
+          "eusurvey_answer_id": "",
+          "value": 2,
+          "scale": "ordinal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
           "order": 3,
           "label": "Quite a bit",
           "label_with_id": "",
@@ -19747,6 +21322,17 @@
           "label": "Eléggé",
           "label_with_id": "",
           "alias": "Eléggé",
+          "eusurvey_answer_id": "",
+          "value": 3,
+          "scale": "ordinal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
+          "order": 3,
+          "label": "Bastante",
+          "label_with_id": "",
+          "alias": "Bastante",
           "eusurvey_answer_id": "",
           "value": 3,
           "scale": "ordinal",
@@ -19774,6 +21360,28 @@
           "scale": "ordinal",
           "is_special": false,
           "special_type": ""
+        },
+        {
+          "order": 4,
+          "label": "Mucho",
+          "label_with_id": "",
+          "alias": "Mucho",
+          "eusurvey_answer_id": "",
+          "value": 4,
+          "scale": "ordinal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
+          "order": 5,
+          "label": "Prefer not to answer",
+          "label_with_id": "",
+          "alias": "",
+          "eusurvey_answer_id": "",
+          "value": 999,
+          "scale": "ordinal",
+          "is_special": true,
+          "special_type": "Prefer not to answer"
         }
       ],
       "keywords": [
@@ -19793,7 +21401,7 @@
       "item_text": "I am treated fairly in my community",
       "scale": "ordinal",
       "question_type": "matrix",
-      "n_options": 5,
+      "n_options": 6,
       "multiple": false,
       "source": "canonical_en",
       "is_core": true,
@@ -19828,6 +21436,17 @@
           "special_type": ""
         },
         {
+          "order": 0,
+          "label": "En absoluto",
+          "label_with_id": "",
+          "alias": "En absoluto",
+          "eusurvey_answer_id": "",
+          "value": 0,
+          "scale": "ordinal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
           "order": 1,
           "label": "A little",
           "label_with_id": "",
@@ -19843,6 +21462,17 @@
           "label": "Egy kicsit",
           "label_with_id": "",
           "alias": "Egy kicsit",
+          "eusurvey_answer_id": "",
+          "value": 1,
+          "scale": "ordinal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
+          "order": 1,
+          "label": "Un poco",
+          "label_with_id": "",
+          "alias": "Un poco",
           "eusurvey_answer_id": "",
           "value": 1,
           "scale": "ordinal",
@@ -19872,6 +21502,17 @@
           "special_type": ""
         },
         {
+          "order": 2,
+          "label": "Algo",
+          "label_with_id": "",
+          "alias": "Algo",
+          "eusurvey_answer_id": "",
+          "value": 2,
+          "scale": "ordinal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
           "order": 3,
           "label": "Quite a bit",
           "label_with_id": "",
@@ -19887,6 +21528,17 @@
           "label": "Eléggé",
           "label_with_id": "",
           "alias": "Eléggé",
+          "eusurvey_answer_id": "",
+          "value": 3,
+          "scale": "ordinal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
+          "order": 3,
+          "label": "Bastante",
+          "label_with_id": "",
+          "alias": "Bastante",
           "eusurvey_answer_id": "",
           "value": 3,
           "scale": "ordinal",
@@ -19914,6 +21566,28 @@
           "scale": "ordinal",
           "is_special": false,
           "special_type": ""
+        },
+        {
+          "order": 4,
+          "label": "Mucho",
+          "label_with_id": "",
+          "alias": "Mucho",
+          "eusurvey_answer_id": "",
+          "value": 4,
+          "scale": "ordinal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
+          "order": 5,
+          "label": "Prefer not to answer",
+          "label_with_id": "",
+          "alias": "",
+          "eusurvey_answer_id": "",
+          "value": 999,
+          "scale": "ordinal",
+          "is_special": true,
+          "special_type": "Prefer not to answer"
         }
       ],
       "keywords": [
@@ -19934,7 +21608,7 @@
       "item_text": "I have opportunities to develop skills that will be useful later in life",
       "scale": "ordinal",
       "question_type": "matrix",
-      "n_options": 5,
+      "n_options": 6,
       "multiple": false,
       "source": "canonical_en",
       "is_core": true,
@@ -19969,6 +21643,17 @@
           "special_type": ""
         },
         {
+          "order": 0,
+          "label": "En absoluto",
+          "label_with_id": "",
+          "alias": "En absoluto",
+          "eusurvey_answer_id": "",
+          "value": 0,
+          "scale": "ordinal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
           "order": 1,
           "label": "A little",
           "label_with_id": "",
@@ -19984,6 +21669,17 @@
           "label": "Egy kicsit",
           "label_with_id": "",
           "alias": "Egy kicsit",
+          "eusurvey_answer_id": "",
+          "value": 1,
+          "scale": "ordinal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
+          "order": 1,
+          "label": "Un poco",
+          "label_with_id": "",
+          "alias": "Un poco",
           "eusurvey_answer_id": "",
           "value": 1,
           "scale": "ordinal",
@@ -20013,6 +21709,17 @@
           "special_type": ""
         },
         {
+          "order": 2,
+          "label": "Algo",
+          "label_with_id": "",
+          "alias": "Algo",
+          "eusurvey_answer_id": "",
+          "value": 2,
+          "scale": "ordinal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
           "order": 3,
           "label": "Quite a bit",
           "label_with_id": "",
@@ -20028,6 +21735,17 @@
           "label": "Eléggé",
           "label_with_id": "",
           "alias": "Eléggé",
+          "eusurvey_answer_id": "",
+          "value": 3,
+          "scale": "ordinal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
+          "order": 3,
+          "label": "Bastante",
+          "label_with_id": "",
+          "alias": "Bastante",
           "eusurvey_answer_id": "",
           "value": 3,
           "scale": "ordinal",
@@ -20055,6 +21773,28 @@
           "scale": "ordinal",
           "is_special": false,
           "special_type": ""
+        },
+        {
+          "order": 4,
+          "label": "Mucho",
+          "label_with_id": "",
+          "alias": "Mucho",
+          "eusurvey_answer_id": "",
+          "value": 4,
+          "scale": "ordinal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
+          "order": 5,
+          "label": "Prefer not to answer",
+          "label_with_id": "",
+          "alias": "",
+          "eusurvey_answer_id": "",
+          "value": 999,
+          "scale": "ordinal",
+          "is_special": true,
+          "special_type": "Prefer not to answer"
         }
       ],
       "keywords": [
@@ -20075,7 +21815,7 @@
       "item_text": "I enjoy my cultural and family traditions",
       "scale": "ordinal",
       "question_type": "matrix",
-      "n_options": 5,
+      "n_options": 6,
       "multiple": false,
       "source": "canonical_en",
       "is_core": true,
@@ -20110,6 +21850,17 @@
           "special_type": ""
         },
         {
+          "order": 0,
+          "label": "En absoluto",
+          "label_with_id": "",
+          "alias": "En absoluto",
+          "eusurvey_answer_id": "",
+          "value": 0,
+          "scale": "ordinal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
           "order": 1,
           "label": "A little",
           "label_with_id": "",
@@ -20125,6 +21876,17 @@
           "label": "Egy kicsit",
           "label_with_id": "",
           "alias": "Egy kicsit",
+          "eusurvey_answer_id": "",
+          "value": 1,
+          "scale": "ordinal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
+          "order": 1,
+          "label": "Un poco",
+          "label_with_id": "",
+          "alias": "Un poco",
           "eusurvey_answer_id": "",
           "value": 1,
           "scale": "ordinal",
@@ -20154,6 +21916,17 @@
           "special_type": ""
         },
         {
+          "order": 2,
+          "label": "Algo",
+          "label_with_id": "",
+          "alias": "Algo",
+          "eusurvey_answer_id": "",
+          "value": 2,
+          "scale": "ordinal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
           "order": 3,
           "label": "Quite a bit",
           "label_with_id": "",
@@ -20169,6 +21942,17 @@
           "label": "Eléggé",
           "label_with_id": "",
           "alias": "Eléggé",
+          "eusurvey_answer_id": "",
+          "value": 3,
+          "scale": "ordinal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
+          "order": 3,
+          "label": "Bastante",
+          "label_with_id": "",
+          "alias": "Bastante",
           "eusurvey_answer_id": "",
           "value": 3,
           "scale": "ordinal",
@@ -20196,6 +21980,28 @@
           "scale": "ordinal",
           "is_special": false,
           "special_type": ""
+        },
+        {
+          "order": 4,
+          "label": "Mucho",
+          "label_with_id": "",
+          "alias": "Mucho",
+          "eusurvey_answer_id": "",
+          "value": 4,
+          "scale": "ordinal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
+          "order": 5,
+          "label": "Prefer not to answer",
+          "label_with_id": "",
+          "alias": "",
+          "eusurvey_answer_id": "",
+          "value": 999,
+          "scale": "ordinal",
+          "is_special": true,
+          "special_type": "Prefer not to answer"
         }
       ],
       "keywords": [
@@ -21782,7 +23588,7 @@
       "item_text": "Have you felt fit and well?",
       "scale": "ordinal",
       "question_type": "matrix",
-      "n_options": 5,
+      "n_options": 6,
       "multiple": false,
       "source": "canonical_en",
       "is_core": true,
@@ -21817,6 +23623,17 @@
           "special_type": ""
         },
         {
+          "order": 0,
+          "label": "Nada",
+          "label_with_id": "",
+          "alias": "Nada",
+          "eusurvey_answer_id": "",
+          "value": 0,
+          "scale": "ordinal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
           "order": 1,
           "label": "A little",
           "label_with_id": "",
@@ -21832,6 +23649,17 @@
           "label": "Alig",
           "label_with_id": "",
           "alias": "Alig",
+          "eusurvey_answer_id": "",
+          "value": 1,
+          "scale": "ordinal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
+          "order": 1,
+          "label": "Un poco",
+          "label_with_id": "",
+          "alias": "Un poco",
           "eusurvey_answer_id": "",
           "value": 1,
           "scale": "ordinal",
@@ -21861,6 +23689,17 @@
           "special_type": ""
         },
         {
+          "order": 2,
+          "label": "Moderadamente",
+          "label_with_id": "",
+          "alias": "Moderadamente",
+          "eusurvey_answer_id": "",
+          "value": 2,
+          "scale": "ordinal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
           "order": 3,
           "label": "Very",
           "label_with_id": "",
@@ -21876,6 +23715,17 @@
           "label": "Nagyon",
           "label_with_id": "",
           "alias": "Nagyon",
+          "eusurvey_answer_id": "",
+          "value": 3,
+          "scale": "ordinal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
+          "order": 3,
+          "label": "Mucho",
+          "label_with_id": "",
+          "alias": "Mucho",
           "eusurvey_answer_id": "",
           "value": 3,
           "scale": "ordinal",
@@ -21903,6 +23753,28 @@
           "scale": "ordinal",
           "is_special": false,
           "special_type": ""
+        },
+        {
+          "order": 4,
+          "label": "Extremadamente",
+          "label_with_id": "",
+          "alias": "Extremadamente",
+          "eusurvey_answer_id": "",
+          "value": 4,
+          "scale": "ordinal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
+          "order": 5,
+          "label": "Prefer not to answer",
+          "label_with_id": "",
+          "alias": "",
+          "eusurvey_answer_id": "",
+          "value": 999,
+          "scale": "ordinal",
+          "is_special": true,
+          "special_type": "Prefer not to answer"
         }
       ],
       "keywords": [
@@ -21923,7 +23795,7 @@
       "item_text": "Have you got on well at school/university/job?",
       "scale": "ordinal",
       "question_type": "matrix",
-      "n_options": 5,
+      "n_options": 6,
       "multiple": false,
       "source": "canonical_en",
       "is_core": true,
@@ -21958,6 +23830,17 @@
           "special_type": ""
         },
         {
+          "order": 0,
+          "label": "Nada",
+          "label_with_id": "",
+          "alias": "Nada",
+          "eusurvey_answer_id": "",
+          "value": 0,
+          "scale": "ordinal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
           "order": 1,
           "label": "A little",
           "label_with_id": "",
@@ -21973,6 +23856,17 @@
           "label": "Alig",
           "label_with_id": "",
           "alias": "Alig",
+          "eusurvey_answer_id": "",
+          "value": 1,
+          "scale": "ordinal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
+          "order": 1,
+          "label": "Un poco",
+          "label_with_id": "",
+          "alias": "Un poco",
           "eusurvey_answer_id": "",
           "value": 1,
           "scale": "ordinal",
@@ -22002,6 +23896,17 @@
           "special_type": ""
         },
         {
+          "order": 2,
+          "label": "Moderadamente",
+          "label_with_id": "",
+          "alias": "Moderadamente",
+          "eusurvey_answer_id": "",
+          "value": 2,
+          "scale": "ordinal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
           "order": 3,
           "label": "Very",
           "label_with_id": "",
@@ -22017,6 +23922,17 @@
           "label": "Nagyon",
           "label_with_id": "",
           "alias": "Nagyon",
+          "eusurvey_answer_id": "",
+          "value": 3,
+          "scale": "ordinal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
+          "order": 3,
+          "label": "Mucho",
+          "label_with_id": "",
+          "alias": "Mucho",
           "eusurvey_answer_id": "",
           "value": 3,
           "scale": "ordinal",
@@ -22044,6 +23960,28 @@
           "scale": "ordinal",
           "is_special": false,
           "special_type": ""
+        },
+        {
+          "order": 4,
+          "label": "Extremadamente",
+          "label_with_id": "",
+          "alias": "Extremadamente",
+          "eusurvey_answer_id": "",
+          "value": 4,
+          "scale": "ordinal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
+          "order": 5,
+          "label": "Prefer not to answer",
+          "label_with_id": "",
+          "alias": "",
+          "eusurvey_answer_id": "",
+          "value": 999,
+          "scale": "ordinal",
+          "is_special": true,
+          "special_type": "Prefer not to answer"
         }
       ],
       "keywords": [
@@ -24215,7 +26153,7 @@
       "item_text": "Sleep",
       "scale": "ordinal",
       "question_type": "matrix",
-      "n_options": 5,
+      "n_options": 6,
       "multiple": false,
       "source": "canonical_en",
       "is_core": true,
@@ -24224,7 +26162,7 @@
       "notes": "",
       "orig_aliases": {
         "hungary": "some_use1:6_1",
-        "spain": "ID486"
+        "spain": "ID541"
       },
       "options": [
         {
@@ -24243,6 +26181,17 @@
           "label": "Szinte mindig",
           "label_with_id": "",
           "alias": "Szinte mindig",
+          "eusurvey_answer_id": "",
+          "value": 4,
+          "scale": "ordinal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
+          "order": 0,
+          "label": "Casi siempre",
+          "label_with_id": "",
+          "alias": "Casi siempre",
           "eusurvey_answer_id": "",
           "value": 4,
           "scale": "ordinal",
@@ -24272,6 +26221,17 @@
           "special_type": ""
         },
         {
+          "order": 1,
+          "label": "A menudo",
+          "label_with_id": "",
+          "alias": "A menudo",
+          "eusurvey_answer_id": "",
+          "value": 3,
+          "scale": "ordinal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
           "order": 2,
           "label": "Sometimes",
           "label_with_id": "",
@@ -24287,6 +26247,17 @@
           "label": "Néha",
           "label_with_id": "",
           "alias": "Néha",
+          "eusurvey_answer_id": "",
+          "value": 2,
+          "scale": "ordinal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
+          "order": 2,
+          "label": "A veces",
+          "label_with_id": "",
+          "alias": "A veces",
           "eusurvey_answer_id": "",
           "value": 2,
           "scale": "ordinal",
@@ -24316,6 +26287,17 @@
           "special_type": ""
         },
         {
+          "order": 3,
+          "label": "Rara vez",
+          "label_with_id": "",
+          "alias": "Rara vez",
+          "eusurvey_answer_id": "",
+          "value": 1,
+          "scale": "ordinal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
           "order": 4,
           "label": "Never",
           "label_with_id": "",
@@ -24336,6 +26318,28 @@
           "scale": "ordinal",
           "is_special": false,
           "special_type": ""
+        },
+        {
+          "order": 4,
+          "label": "Nunca",
+          "label_with_id": "",
+          "alias": "Nunca",
+          "eusurvey_answer_id": "",
+          "value": 0,
+          "scale": "ordinal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
+          "order": 5,
+          "label": "Prefer not to answer",
+          "label_with_id": "",
+          "alias": "",
+          "eusurvey_answer_id": "",
+          "value": 999,
+          "scale": "ordinal",
+          "is_special": true,
+          "special_type": "Prefer not to answer"
         }
       ],
       "keywords": [
@@ -24355,7 +26359,7 @@
       "item_text": "Schoolwork",
       "scale": "ordinal",
       "question_type": "matrix",
-      "n_options": 5,
+      "n_options": 6,
       "multiple": false,
       "source": "canonical_en",
       "is_core": true,
@@ -24390,6 +26394,17 @@
           "special_type": ""
         },
         {
+          "order": 0,
+          "label": "Casi siempre",
+          "label_with_id": "",
+          "alias": "Casi siempre",
+          "eusurvey_answer_id": "",
+          "value": 4,
+          "scale": "ordinal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
           "order": 1,
           "label": "Often",
           "label_with_id": "",
@@ -24405,6 +26420,17 @@
           "label": "Gyakran",
           "label_with_id": "",
           "alias": "Gyakran",
+          "eusurvey_answer_id": "",
+          "value": 3,
+          "scale": "ordinal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
+          "order": 1,
+          "label": "A menudo",
+          "label_with_id": "",
+          "alias": "A menudo",
           "eusurvey_answer_id": "",
           "value": 3,
           "scale": "ordinal",
@@ -24434,6 +26460,17 @@
           "special_type": ""
         },
         {
+          "order": 2,
+          "label": "A veces",
+          "label_with_id": "",
+          "alias": "A veces",
+          "eusurvey_answer_id": "",
+          "value": 2,
+          "scale": "ordinal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
           "order": 3,
           "label": "Rarely",
           "label_with_id": "",
@@ -24449,6 +26486,17 @@
           "label": "Ritkán",
           "label_with_id": "",
           "alias": "Ritkán",
+          "eusurvey_answer_id": "",
+          "value": 1,
+          "scale": "ordinal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
+          "order": 3,
+          "label": "Rara vez",
+          "label_with_id": "",
+          "alias": "Rara vez",
           "eusurvey_answer_id": "",
           "value": 1,
           "scale": "ordinal",
@@ -24476,6 +26524,28 @@
           "scale": "ordinal",
           "is_special": false,
           "special_type": ""
+        },
+        {
+          "order": 4,
+          "label": "Nunca",
+          "label_with_id": "",
+          "alias": "Nunca",
+          "eusurvey_answer_id": "",
+          "value": 0,
+          "scale": "ordinal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
+          "order": 5,
+          "label": "Prefer not to answer",
+          "label_with_id": "",
+          "alias": "",
+          "eusurvey_answer_id": "",
+          "value": 999,
+          "scale": "ordinal",
+          "is_special": true,
+          "special_type": "Prefer not to answer"
         }
       ],
       "keywords": [
@@ -24495,7 +26565,7 @@
       "item_text": "Self-esteem/mental health",
       "scale": "ordinal",
       "question_type": "matrix",
-      "n_options": 5,
+      "n_options": 6,
       "multiple": false,
       "source": "canonical_en",
       "is_core": true,
@@ -24530,6 +26600,17 @@
           "special_type": ""
         },
         {
+          "order": 0,
+          "label": "Casi siempre",
+          "label_with_id": "",
+          "alias": "Casi siempre",
+          "eusurvey_answer_id": "",
+          "value": 4,
+          "scale": "ordinal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
           "order": 1,
           "label": "Often",
           "label_with_id": "",
@@ -24545,6 +26626,17 @@
           "label": "Gyakran",
           "label_with_id": "",
           "alias": "Gyakran",
+          "eusurvey_answer_id": "",
+          "value": 3,
+          "scale": "ordinal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
+          "order": 1,
+          "label": "A menudo",
+          "label_with_id": "",
+          "alias": "A menudo",
           "eusurvey_answer_id": "",
           "value": 3,
           "scale": "ordinal",
@@ -24574,6 +26666,17 @@
           "special_type": ""
         },
         {
+          "order": 2,
+          "label": "A veces",
+          "label_with_id": "",
+          "alias": "A veces",
+          "eusurvey_answer_id": "",
+          "value": 2,
+          "scale": "ordinal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
           "order": 3,
           "label": "Rarely",
           "label_with_id": "",
@@ -24589,6 +26692,17 @@
           "label": "Ritkán",
           "label_with_id": "",
           "alias": "Ritkán",
+          "eusurvey_answer_id": "",
+          "value": 1,
+          "scale": "ordinal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
+          "order": 3,
+          "label": "Rara vez",
+          "label_with_id": "",
+          "alias": "Rara vez",
           "eusurvey_answer_id": "",
           "value": 1,
           "scale": "ordinal",
@@ -24616,6 +26730,28 @@
           "scale": "ordinal",
           "is_special": false,
           "special_type": ""
+        },
+        {
+          "order": 4,
+          "label": "Nunca",
+          "label_with_id": "",
+          "alias": "Nunca",
+          "eusurvey_answer_id": "",
+          "value": 0,
+          "scale": "ordinal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
+          "order": 5,
+          "label": "Prefer not to answer",
+          "label_with_id": "",
+          "alias": "",
+          "eusurvey_answer_id": "",
+          "value": 999,
+          "scale": "ordinal",
+          "is_special": true,
+          "special_type": "Prefer not to answer"
         }
       ],
       "keywords": [
@@ -24635,7 +26771,7 @@
       "item_text": "Relationships with friends",
       "scale": "ordinal",
       "question_type": "matrix",
-      "n_options": 5,
+      "n_options": 6,
       "multiple": false,
       "source": "canonical_en",
       "is_core": true,
@@ -24670,6 +26806,17 @@
           "special_type": ""
         },
         {
+          "order": 0,
+          "label": "Casi siempre",
+          "label_with_id": "",
+          "alias": "Casi siempre",
+          "eusurvey_answer_id": "",
+          "value": 4,
+          "scale": "ordinal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
           "order": 1,
           "label": "Often",
           "label_with_id": "",
@@ -24685,6 +26832,17 @@
           "label": "Gyakran",
           "label_with_id": "",
           "alias": "Gyakran",
+          "eusurvey_answer_id": "",
+          "value": 3,
+          "scale": "ordinal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
+          "order": 1,
+          "label": "A menudo",
+          "label_with_id": "",
+          "alias": "A menudo",
           "eusurvey_answer_id": "",
           "value": 3,
           "scale": "ordinal",
@@ -24714,6 +26872,17 @@
           "special_type": ""
         },
         {
+          "order": 2,
+          "label": "A veces",
+          "label_with_id": "",
+          "alias": "A veces",
+          "eusurvey_answer_id": "",
+          "value": 2,
+          "scale": "ordinal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
           "order": 3,
           "label": "Rarely",
           "label_with_id": "",
@@ -24729,6 +26898,17 @@
           "label": "Ritkán",
           "label_with_id": "",
           "alias": "Ritkán",
+          "eusurvey_answer_id": "",
+          "value": 1,
+          "scale": "ordinal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
+          "order": 3,
+          "label": "Rara vez",
+          "label_with_id": "",
+          "alias": "Rara vez",
           "eusurvey_answer_id": "",
           "value": 1,
           "scale": "ordinal",
@@ -24756,6 +26936,28 @@
           "scale": "ordinal",
           "is_special": false,
           "special_type": ""
+        },
+        {
+          "order": 4,
+          "label": "Nunca",
+          "label_with_id": "",
+          "alias": "Nunca",
+          "eusurvey_answer_id": "",
+          "value": 0,
+          "scale": "ordinal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
+          "order": 5,
+          "label": "Prefer not to answer",
+          "label_with_id": "",
+          "alias": "",
+          "eusurvey_answer_id": "",
+          "value": 999,
+          "scale": "ordinal",
+          "is_special": true,
+          "special_type": "Prefer not to answer"
         }
       ],
       "keywords": [
@@ -24774,7 +26976,7 @@
       "item_text": "Relationships with family",
       "scale": "ordinal",
       "question_type": "matrix",
-      "n_options": 5,
+      "n_options": 6,
       "multiple": false,
       "source": "canonical_en",
       "is_core": true,
@@ -24809,6 +27011,17 @@
           "special_type": ""
         },
         {
+          "order": 0,
+          "label": "Casi siempre",
+          "label_with_id": "",
+          "alias": "Casi siempre",
+          "eusurvey_answer_id": "",
+          "value": 4,
+          "scale": "ordinal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
           "order": 1,
           "label": "Often",
           "label_with_id": "",
@@ -24824,6 +27037,17 @@
           "label": "Gyakran",
           "label_with_id": "",
           "alias": "Gyakran",
+          "eusurvey_answer_id": "",
+          "value": 3,
+          "scale": "ordinal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
+          "order": 1,
+          "label": "A menudo",
+          "label_with_id": "",
+          "alias": "A menudo",
           "eusurvey_answer_id": "",
           "value": 3,
           "scale": "ordinal",
@@ -24853,6 +27077,17 @@
           "special_type": ""
         },
         {
+          "order": 2,
+          "label": "A veces",
+          "label_with_id": "",
+          "alias": "A veces",
+          "eusurvey_answer_id": "",
+          "value": 2,
+          "scale": "ordinal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
           "order": 3,
           "label": "Rarely",
           "label_with_id": "",
@@ -24868,6 +27103,17 @@
           "label": "Ritkán",
           "label_with_id": "",
           "alias": "Ritkán",
+          "eusurvey_answer_id": "",
+          "value": 1,
+          "scale": "ordinal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
+          "order": 3,
+          "label": "Rara vez",
+          "label_with_id": "",
+          "alias": "Rara vez",
           "eusurvey_answer_id": "",
           "value": 1,
           "scale": "ordinal",
@@ -24895,6 +27141,28 @@
           "scale": "ordinal",
           "is_special": false,
           "special_type": ""
+        },
+        {
+          "order": 4,
+          "label": "Nunca",
+          "label_with_id": "",
+          "alias": "Nunca",
+          "eusurvey_answer_id": "",
+          "value": 0,
+          "scale": "ordinal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
+          "order": 5,
+          "label": "Prefer not to answer",
+          "label_with_id": "",
+          "alias": "",
+          "eusurvey_answer_id": "",
+          "value": 999,
+          "scale": "ordinal",
+          "is_special": true,
+          "special_type": "Prefer not to answer"
         }
       ],
       "keywords": [
@@ -24913,7 +27181,7 @@
       "item_text": "Doing outdoor activities or sports",
       "scale": "ordinal",
       "question_type": "matrix",
-      "n_options": 5,
+      "n_options": 6,
       "multiple": false,
       "source": "canonical_en",
       "is_core": true,
@@ -24921,7 +27189,8 @@
       "scale_confidence": "high",
       "notes": "",
       "orig_aliases": {
-        "hungary": "some_use1:6_6"
+        "hungary": "some_use1:6_6",
+        "spain": "ID5"
       },
       "options": [
         {
@@ -24947,6 +27216,17 @@
           "special_type": ""
         },
         {
+          "order": 0,
+          "label": "Casi siempre",
+          "label_with_id": "",
+          "alias": "Casi siempre",
+          "eusurvey_answer_id": "",
+          "value": 4,
+          "scale": "ordinal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
           "order": 1,
           "label": "Often",
           "label_with_id": "",
@@ -24962,6 +27242,17 @@
           "label": "Gyakran",
           "label_with_id": "",
           "alias": "Gyakran",
+          "eusurvey_answer_id": "",
+          "value": 3,
+          "scale": "ordinal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
+          "order": 1,
+          "label": "A menudo",
+          "label_with_id": "",
+          "alias": "A menudo",
           "eusurvey_answer_id": "",
           "value": 3,
           "scale": "ordinal",
@@ -24991,6 +27282,17 @@
           "special_type": ""
         },
         {
+          "order": 2,
+          "label": "A veces",
+          "label_with_id": "",
+          "alias": "A veces",
+          "eusurvey_answer_id": "",
+          "value": 2,
+          "scale": "ordinal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
           "order": 3,
           "label": "Rarely",
           "label_with_id": "",
@@ -25006,6 +27308,17 @@
           "label": "Ritkán",
           "label_with_id": "",
           "alias": "Ritkán",
+          "eusurvey_answer_id": "",
+          "value": 1,
+          "scale": "ordinal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
+          "order": 3,
+          "label": "Rara vez",
+          "label_with_id": "",
+          "alias": "Rara vez",
           "eusurvey_answer_id": "",
           "value": 1,
           "scale": "ordinal",
@@ -25033,6 +27346,28 @@
           "scale": "ordinal",
           "is_special": false,
           "special_type": ""
+        },
+        {
+          "order": 4,
+          "label": "Nunca",
+          "label_with_id": "",
+          "alias": "Nunca",
+          "eusurvey_answer_id": "",
+          "value": 0,
+          "scale": "ordinal",
+          "is_special": false,
+          "special_type": ""
+        },
+        {
+          "order": 5,
+          "label": "Prefer not to answer",
+          "label_with_id": "",
+          "alias": "",
+          "eusurvey_answer_id": "",
+          "value": 999,
+          "scale": "ordinal",
+          "is_special": true,
+          "special_type": "Prefer not to answer"
         }
       ],
       "keywords": [

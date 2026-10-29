@@ -1062,6 +1062,92 @@ class TestCountryAlignment(unittest.TestCase):
         )
         self.assertEqual(var, "bcfpi_raia1")
 
+    def test_spain_birth_country_espana_aliases_country_not_cyprus(self):
+        """España on a birth-country item lands on value 1 ([COUNTRY]), not value 11 (Cyprus).
+
+        Expected placement is the issue-8 contract. España is intentionally not already
+        in the value-1 slot: it sits at the same list index as Cyprus, which is the
+        named wrong answer.
+        """
+        core = [
+            Question(
+                group_id="birth",
+                section="Background",
+                stem="Where were you born?",
+                question_type="single",
+                scale="nominal",
+                scale_confidence="high",
+                multiple=False,
+                options=[
+                    Option("[COUNTRY]", 0, 1),
+                    Option("Cyprus", 1, 11),
+                ],
+                items=[Item("born2", source="canonical_en", short_name="bplace1", is_core=True)],
+                options_complete="true",
+                source="canonical_en",
+                is_core=True,
+            )
+        ]
+        spain = [
+            Question(
+                group_id="nacimiento",
+                section="Background",
+                stem="¿Dónde naciste?",
+                question_type="single",
+                scale="nominal",
+                scale_confidence="high",
+                multiple=False,
+                options=[
+                    Option("Otro país", 0),
+                    Option("España", 1),
+                ],
+                items=[Item("born3", source="spain", is_core=False)],
+                options_complete="true",
+                source="spain",
+                is_core=False,
+            )
+        ]
+        alignment = [
+            AlignmentRow(
+                country_orig_id="born3",
+                section="Background",
+                country_stem="¿Dónde naciste?",
+                country_item="",
+                country_options="Otro país | España",
+                translated_text="",
+                canonical_variable="bplace1",
+                canonical_stem="Where were you born?",
+                canonical_item="",
+                canonical_options="[COUNTRY] | Cyprus",
+                status="matched",
+            )
+        ]
+        used_gids, used_stems, used_names = _used_sets(core)
+        merged = merge_country_alignment(
+            core,
+            spain,
+            alignment,
+            "spain",
+            _unique_group_id,
+            _assign_short_names,
+            used_gids,
+            used_stems,
+            used_names,
+        )
+        question = next(q for q in merged if any(it.short_name == "bplace1" for it in q.items))
+
+        def texts_for(value):
+            found = []
+            for opt in question.options:
+                if opt.value != value:
+                    continue
+                found.append(opt.label)
+                found.extend(opt.aliases)
+            return found
+
+        self.assertNotIn("España", texts_for(11))
+        self.assertIn("España", texts_for(1))
+
 
 if __name__ == "__main__":
     unittest.main()

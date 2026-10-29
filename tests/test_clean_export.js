@@ -215,7 +215,7 @@ function runTests() {
       'Refusal',
       'Uncertainty'
     ],
-    ['Girl', 14, 'free text', null, 'ok', '', 'Prefer not to answer', "Don't know"],
+    ['Girl', 14, 'free text', null, 'ok', '[COUNTRY]', 'Prefer not to answer', "Don't know"],
     ['Boy', null, '', 'Oslo', 'x', 'Germany', 'No', 'Yes'],
     ['', 12.5, 'Girl (ID3) extra', '   ', 'y', 'Spain', 'No', 'Yes'],
     ['Only', null, null, null, null, null, null, null]
