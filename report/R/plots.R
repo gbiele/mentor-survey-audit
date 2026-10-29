@@ -105,7 +105,12 @@ mentor_plot <- function(p) {
   if (!is.null(p$theme$axis.text.x)) angle <- p$theme$axis.text.x$angle
   if (is.null(angle) || length(angle) != 1 || is.na(angle)) angle <- 0
   width <- getOption("mentor.fig.width", 8)
-  height <- if (angle > 0) 7 else getOption("mentor.fig.height", 4.8)
+  # Angled labels need a little more room. Wrapped labels stay short.
+  height <- if (angle > 0) {
+    getOption("mentor.fig.height.angled", 4.6)
+  } else {
+    getOption("mentor.fig.height", 3.4)
+  }
   file <- tempfile(fileext = ".png")
   without_plot_hooks(
     ggplot2::ggsave(
@@ -156,18 +161,40 @@ theme_mentor <- function(angle = 0) {
       axis.text.x = ggplot2::element_text(
         angle = angle,
         hjust = if (angle > 0) 1 else 0.5,
-        vjust = if (angle > 0) 1 else 0.5
+        vjust = 1,
+        lineheight = 0.95
       ),
       legend.position = "top"
     )
 }
 
-tick_angle <- function(labels) {
+wrap_ticks <- function(width) {
+  function(labels) {
+    labels <- as.character(labels)
+    vapply(labels, function(s) {
+      if (is.na(s) || !nzchar(s) || nchar(s) <= width) return(s)
+      paste(strwrap(s, width = width), collapse = "\n")
+    }, character(1), USE.NAMES = FALSE)
+  }
+}
+
+# Horizontal line breaks when each category has room for them. A long list,
+# such as country of birth, stays at an angle so neighbouring labels do not collide.
+axis_ticks <- function(labels) {
   labels <- as.character(labels)
   labels <- labels[!is.na(labels)]
-  if (!length(labels)) return(0)
-  longest <- max(nchar(labels))
-  if (longest > 16) 45 else 0
+  n <- length(labels)
+  fit <- floor(90 / max(n, 1))
+  longest <- if (!n) 0 else max(nchar(labels))
+  words <- unlist(strsplit(labels, "[^[:alnum:]']+"))
+  longest_word <- if (!length(words)) 0 else max(nchar(words))
+  if (longest > fit && fit >= 8 && longest_word <= fit) {
+    list(angle = 0, labels = wrap_ticks(fit))
+  } else if (longest > fit) {
+    list(angle = 45, labels = ggplot2::waiver())
+  } else {
+    list(angle = 0, labels = ggplot2::waiver())
+  }
 }
 
 gender_colours <- c(Boy = "#2C7FB8", Girl = "#E07A3D")
@@ -245,11 +272,12 @@ kable_counts <- function(df) {
 
 dist_plot <- function(df, xlab) {
   plot_df <- df
-  angle <- tick_angle(plot_df$response)
+  ticks <- axis_ticks(plot_df$response)
   ggplot2::ggplot(plot_df, ggplot2::aes(x = factor(response, levels = response), y = n)) +
     ggplot2::geom_col(fill = "#2C7FB8", width = 0.72) +
+    ggplot2::scale_x_discrete(labels = ticks$labels) +
     ggplot2::labs(x = NULL, y = "Number of young people", title = wrap_title(xlab)) +
-    theme_mentor(angle)
+    theme_mentor(ticks$angle)
 }
 
 show_dist <- function(survey, variable, among_asked = FALSE, title = NULL) {
@@ -339,7 +367,7 @@ item_count_plot <- function(survey, variable, title = NULL, unscored = FALSE) {
     pct = if (sum(n) == 0) rep(0, dplyr::n()) else 100 * n / sum(n)
   )
   df <- dplyr::ungroup(df)
-  angle <- tick_angle(levels(df$response))
+  ticks <- axis_ticks(levels(df$response))
   heading <- if (is.null(title)) survey$meta[[variable]]$plot_label else title
   if (unscored) heading <- paste0("Not part of the ACE total. ", heading)
   n_miss <- sum(survey$status[[variable]] == "missing")
@@ -351,8 +379,9 @@ item_count_plot <- function(survey, variable, title = NULL, unscored = FALSE) {
     ggplot2::geom_col(position = ggplot2::position_dodge(width = 0.75), width = 0.7) +
     ggplot2::scale_fill_manual(values = gender_colours, name = NULL) +
     ggplot2::scale_y_continuous(labels = function(x) paste0(x, "%")) +
+    ggplot2::scale_x_discrete(labels = ticks$labels) +
     ggplot2::labs(x = NULL, y = "Percent within gender", title = wrap_title(heading), subtitle = subtitle) +
-    theme_mentor(angle)
+    theme_mentor(ticks$angle)
 }
 
 score_mean_plot <- function(df, ylab) {
@@ -363,8 +392,11 @@ score_mean_plot <- function(df, ylab) {
     df$score_name <- df$gender
   } else {
     labs <- unique(as.character(df$score_name))
-    wrapped <- vapply(labs, function(s) paste(strwrap(s, width = 22), collapse = "\n"), "")
-    df$score_name <- factor(as.character(df$score_name), levels = labs, labels = wrapped)
+    df$score_name <- factor(
+      as.character(df$score_name),
+      levels = labs,
+      labels = wrap_ticks(max(10, floor(78 / max(length(labs), 1))))(labs)
+    )
   }
   ggplot2::ggplot(df, ggplot2::aes(x = score_name, y = mean, fill = gender)) +
     ggplot2::geom_col(position = dodge, width = 0.7) +

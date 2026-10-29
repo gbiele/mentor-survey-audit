@@ -13,8 +13,6 @@ Who the young person lives with. Follow-up questions are limited to the people w
 
 ```{r}
 #| results: asis
-#| fig-width: 8
-#| fig-height: 7
 show_dist(survey, "live1", title = "Thinking about the people you live with, what best describes your situation?")
 ```
 
@@ -24,8 +22,6 @@ Asked only of young people who do not live with their parents.
 
 ```{r}
 #| results: asis
-#| fig-width: 8
-#| fig-height: 6
 show_dist(survey, "livead1", among_asked = TRUE, title = "Which adults do you live with?")
 ```
 
@@ -35,8 +31,6 @@ Asked only of young people whose parents live apart and who live with both paren
 
 ```{r}
 #| results: asis
-#| fig-width: 8
-#| fig-height: 5.6
 show_dist(survey, "livesp1", among_asked = TRUE, title = "What best describes your situation?")
 ```
 
@@ -46,8 +40,6 @@ Asked when the young person lives only with their mother, or lives with both par
 
 ```{r}
 #| results: asis
-#| fig-width: 8
-#| fig-height: 3.8
 show_dist(survey, "momprt1", among_asked = TRUE, title = "Does your mother have a new partner?")
 ```
 
@@ -57,8 +49,6 @@ Asked when the young person lives only with their father, or lives with both par
 
 ```{r}
 #| results: asis
-#| fig-width: 8
-#| fig-height: 3.8
 show_dist(survey, "dadprt1", among_asked = TRUE, title = "Does your father have a new partner?")
 ```
 
@@ -66,7 +56,5 @@ show_dist(survey, "dadprt1", among_asked = TRUE, title = "Does your father have 
 
 ```{r}
 #| results: asis
-#| fig-width: 8
-#| fig-height: 4
 show_dist(survey, "sibs1", title = "How many siblings, half-siblings, or step-siblings do you live with?")
 ```

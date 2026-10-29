@@ -40,3 +40,5 @@ format:
     toc: true
     embed-resources: true
     smooth-scroll: true
+    fig-width: 8
+    fig-height: 3.6

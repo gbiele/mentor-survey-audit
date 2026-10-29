@@ -13,8 +13,6 @@ Age, gender, and migration background for the `r survey$n` young people who agre
 
 ```{r}
 #| results: asis
-#| fig-width: 8
-#| fig-height: 4
 show_dist(survey, "gender1", title = "What gender do you identify as?")
 ```
 
@@ -24,8 +22,6 @@ This question is asked only when the answer to gender is "Other gender identity"
 
 ```{r}
 #| results: asis
-#| fig-width: 8
-#| fig-height: 4
 show_dist(survey, "ident1", among_asked = TRUE, title = "What do you identify as?")
 ```
 
@@ -33,8 +29,6 @@ show_dist(survey, "ident1", among_asked = TRUE, title = "What do you identify as
 
 ```{r}
 #| results: asis
-#| fig-width: 8
-#| fig-height: 5.6
 show_dist(survey, "grade1", title = "What grade are you in?")
 ```
 
@@ -44,8 +38,6 @@ Age is completed years on 1 July 2026. The file has no interview date. A birthda
 
 ```{r}
 #| results: asis
-#| fig-width: 8
-#| fig-height: 4
 age_label <- ifelse(is.na(survey$age), NA_character_, as.character(survey$age))
 age_levels <- as.character(sort(unique(survey$age[!is.na(survey$age)])))
 show_vector(age_label, "Age on 1 July 2026", age_levels)
@@ -57,8 +49,6 @@ Born in `r survey$country` means the birthplace answer is `r survey$country`. Th
 
 ```{r}
 #| results: asis
-#| fig-width: 8
-#| fig-height: 7
 mig_levels <- c(
   paste0("Born in ", survey$country, ", both parents born in ", survey$country),
   paste0("Born in ", survey$country, ", one or both parents born abroad"),
@@ -74,7 +64,5 @@ Countries with no respondents are left off this list. Everyone who gave a countr
 
 ```{r}
 #| results: asis
-#| fig-width: 8
-#| fig-height: 6
 show_dist(survey, "bplace1", title = "Where were you born?")
 ```
