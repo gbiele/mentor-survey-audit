@@ -87,4 +87,21 @@ expect_equal(blanked$bin_bullying, NA_integer_, "blank bullying category")
 expect_equal(blanked$ace_binary, NA_integer_, "blank bullying drops binary total")
 expect_equal(blanked$ace_frequency, NA_integer_, "blank bullying drops frequency total")
 
+# Highest parental education. Don't know (998) is turned into missing before the call.
+mom <- c(2, 998, 998, NA)
+dad <- c(4, 1, 998, 3)
+mom[mom == 998] <- NA
+dad[dad == 998] <- NA
+expect_equal(
+  higher_known(mom, dad),
+  c(4, 1, NA, 3),
+  "highest parental education, with don't know already missing"
+)
+
+expect_equal(
+  media_hours(c(0, 1, 2, 3, 4, NA)),
+  c(0.5, 1.5, 3.5, 5.5, 8, NA),
+  "social media hours"
+)
+
 message("score checks passed")

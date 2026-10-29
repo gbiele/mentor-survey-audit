@@ -3,7 +3,19 @@
 
 attention_items <- function() paste0("bcfpi_raia", 1:6)
 
+cooperativeness_items <- function() paste0("bcfpi_coop", 1:6)
+
+managing_anxiety_items <- function() paste0("bcfpi_ma", 1:6)
+
+social_anxiety_items <- function() paste0("bcfpi_sa", 1:6)
+
+mood_items <- function() paste0("bcfpi_mood", 1:6)
+
+emotion_regulation_items <- function() paste0("bcfpi_af", 1:6)
+
 functioning_items <- function() sprintf("bcfpi_yf%02d", 1:12)
+
+cyrm_items <- function() sprintf("cyrm%02d", 1:12)
 
 kidscreen_items <- function() c(paste0("ks", 1:8), "ksa1", "ksa2")
 
@@ -30,6 +42,29 @@ functioning_domains <- function() {
       name = "School participation and achievement",
       items = sprintf("bcfpi_yf%02d", 9:12)
     )
+  )
+}
+
+bcfpi_symptom <- function(id, items, score_name, measures) {
+  list(
+    id = id,
+    type = "likert",
+    items = items,
+    score_name = score_name,
+    ylab = "Mean sum (0-12)",
+    measures = measures,
+    how = bcfpi_six_how()
+  )
+}
+
+bcfpi_six_how <- function() {
+  paste(
+    "Never is scored 0, sometimes 1, and often 2. The items are added, so the sum runs",
+    "from 0 to 12. When at least 5 of the 6 items are answered, a missing item is filled",
+    "with the mean of the answered items, the total is scaled back up to 6 items, and",
+    "the result is rounded to the nearest whole number. A fractional part of exactly .5",
+    "rounds up. When fewer than 5 items are answered, there is no sum. A blank cell is",
+    "not an answer. The bars use Boy and Girl only."
   )
 }
 
@@ -62,13 +97,70 @@ scale_specs <- function() {
         "of these difficulties. The score is not an ADHD diagnosis, and it is not converted",
         "to a normed T-score."
       ),
-      how = paste(
-        "Never is scored 0, sometimes 1, and often 2. The items are added, so the sum runs",
-        "from 0 to 12. When at least 5 of the 6 items are answered, a missing item is filled",
-        "with the mean of the answered items, the total is scaled back up to 6 items, and",
-        "the result is rounded to the nearest whole number. A fractional part of exactly .5",
-        "rounds up. When fewer than 5 items are answered, there is no sum. A blank cell is",
-        "not an answer. The bars use Boy and Girl only."
+      how = bcfpi_six_how()
+    ),
+    cooperativeness = bcfpi_symptom(
+      "cooperativeness",
+      cooperativeness_items(),
+      "Cooperativeness (0-12)",
+      paste(
+        "Over the past six months, how often does the young person blame others for their",
+        "mistakes, feel irritable, lose their temper, stay defiant, argue with adults, or",
+        "feel resentful? These six items are the cooperativeness scale from the Brief Child",
+        "and Family Phone Interview. A higher score means more of these difficulties. The",
+        "score is not a diagnosis, and it is not converted to a normed T-score."
+      )
+    ),
+    managing_anxiety = bcfpi_symptom(
+      "managing_anxiety",
+      managing_anxiety_items(),
+      "Managing anxiety (0-12)",
+      paste(
+        "Over the past six months, how often does the young person feel anxious, worry about",
+        "doing better, worry about past behaviour, worry about doing the wrong thing, worry",
+        "about the future, or fear making mistakes? These six items are the managing-anxiety",
+        "scale from the Brief Child and Family Phone Interview. A higher score means more of",
+        "these difficulties. The score is not a diagnosis, and it is not converted to a",
+        "normed T-score."
+      )
+    ),
+    social_anxiety = bcfpi_symptom(
+      "social_anxiety",
+      social_anxiety_items(),
+      "Social anxiety (0-12)",
+      paste(
+        "Over the past six months, how often does the young person feel embarrassed in social",
+        "situations, worry that others can see they are nervous, struggle to talk or make eye",
+        "contact, leave events early, avoid gatherings, or notice a racing heart or sweaty",
+        "palms in company? These six items are the social-anxiety scale from the Brief Child",
+        "and Family Phone Interview. A higher score means more of these difficulties. The",
+        "score is not a diagnosis, and it is not converted to a normed T-score."
+      )
+    ),
+    mood = bcfpi_symptom(
+      "mood",
+      mood_items(),
+      "Mood (0-12)",
+      paste(
+        "Over the past six months, how often does the young person feel unhappy, take little",
+        "pleasure in things, feel uninterested, feel lonely, feel less happy than other",
+        "people, or feel hopeless? These six items are the mood scale from the Brief Child",
+        "and Family Phone Interview. A higher score means more of these difficulties. The",
+        "score is not a diagnosis, and it is not converted to a normed T-score."
+      )
+    ),
+    emotion_regulation = bcfpi_symptom(
+      "emotion_regulation",
+      emotion_regulation_items(),
+      "Emotion regulation (0-12)",
+      paste(
+        "Over the past six months, how often are feelings hard to control or hard to calm,",
+        "and how often does the young person try not to think about feelings, believe they",
+        "should stay under control, or keep them private? These six items are summed as",
+        "answered. A higher score means the statements were endorsed more often. The first",
+        "three are about feelings taking over. The last three are about keeping feelings in,",
+        "and they are not reversed. The score is not a diagnosis, and it is not converted",
+        "to a normed T-score."
       )
     ),
     functioning = list(
@@ -171,6 +263,29 @@ scale_specs <- function() {
         "of the answered items and the result is rounded to the nearest whole number, with .5",
         "rounded up. When fewer than 8 items are answered, there is no sum. A blank cell is",
         "not an answer. The bars use Boy and Girl only."
+      )
+    ),
+    cyrm = list(
+      id = "cyrm",
+      type = "likert",
+      items = cyrm_items(),
+      score_name = "CYRM-12 (0-48)",
+      ylab = "Mean sum (0-48)",
+      measures = paste(
+        "These 12 items are the Child and Youth Resilience Measure. They ask whether the",
+        "young person has people to look up to, cares about education, is known by caregivers,",
+        "finishes what they start, solves problems without harm, knows where to get help,",
+        "belongs at school, is backed by family and friends, is treated fairly, can develop",
+        "useful skills, and enjoys cultural and family traditions. A higher sum means more of",
+        "these resources. The sum is not converted to a T-score."
+      ),
+      how = paste(
+        "Not at all is scored 0 and a lot is scored 4. None of the items is reversed. The",
+        "twelve scores are added, and the sum runs from 0 to 48. When at least 10 of the 12",
+        "items are answered, missing items are filled with the mean of the answered items and",
+        "the result is rounded to the nearest whole number, with .5 rounded up. When fewer",
+        "than 10 items are answered, there is no sum. A blank cell is not an answer. The bars",
+        "use Boy and Girl only."
       )
     ),
     smadd = list(
