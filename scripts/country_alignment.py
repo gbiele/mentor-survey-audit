@@ -1443,6 +1443,176 @@ def _alias_is_safe(alias: str, core_orig_ids_set: set[str], existing_index: dict
     return True
 
 
+def _numbered_names(prefix: str, start: int, end: int, pad: int = 0) -> list[str]:
+    names = []
+    for i in range(start, end + 1):
+        if pad:
+            names.append(f"{prefix}{i:0{pad}d}")
+        else:
+            names.append(f"{prefix}{i}")
+    return names
+
+
+def _spain_contract_label_table() -> dict[str, dict[str, int]]:
+    """Spanish answer text → canonical value. Applied only for country_source spain."""
+    birth = {
+        "España": 1,
+        "Alemania": 17,
+        "Francia": 16,
+        "Lituania": 26,
+        "Polonia": 35,
+        "Reino Unido": 46,
+        "Rumanía": 37,
+        "América del Sur o Central": 51,
+        "Otro": 53,
+    }
+    bcfpi = {
+        "Nunca es cierto": 0,
+        "A veces es cierto": 1,
+        "A menudo es cierto": 2,
+    }
+    rpg = {
+        "Siempre": 4,
+        "La mayoría de las veces": 3,
+        "A veces": 2,
+        "Rara vez": 1,
+        "Nunca": 0,
+    }
+    dlup = {
+        "Nunca": 0,
+        "Algunas veces": 2,
+    }
+    dlupa = {
+        "Sí": 1,
+        "No": 0,
+    }
+    cyrm = {
+        "En absoluto": 0,
+        "Un poco": 1,
+        "Algo": 2,
+        "Bastante": 3,
+        "Mucho": 4,
+    }
+    ksa = {
+        "Nada": 0,
+        "Un poco": 1,
+        "Moderadamente": 2,
+        "Mucho": 3,
+        "Extremadamente": 4,
+    }
+    smharm = {
+        "Casi siempre": 4,
+        "A menudo": 3,
+        "A veces": 2,
+        "Rara vez": 1,
+        "Nunca": 0,
+    }
+    bmo = {
+        "Me pegaban, me daban patadas, me empujaban, me zarandeaban o me encerraban en casa.": 1,
+        "Se burlaban de mí por mi raza, nacionalidad o color de piel.": 2,
+        "Se burlaban de mí por mi religión.": 3,
+        "Se burlaban de mí con bromas, comentarios o gestos de carácter sexual.": 4,
+        "Me dejaban fuera de las actividades a propósito o me ignoraban por completo.": 5,
+        "Se burlaban de mí por mi aspecto físico o mi cara.": 6,
+        "Me acosaban de alguna otra forma.": 7,
+    }
+    aiuse = {
+        "Para tareas escolares.": 1,
+        "Para entretenimiento.": 2,
+        "Para compañía social.": 3,
+    }
+    apps = {
+        "Snapchat.": 1,
+        "Instagram.": 2,
+        "Reddit.": 4,
+        "TikTok.": 5,
+        "Twitch.": 6,
+        "WhatsApp.": 9,
+        "YouTube.": 10,
+        "X/ Twitter.": 11,
+        "Pinterest.": 12,
+        "IA (por ejemplo, ChatGPT, Gemini, Claude).": 13,
+        "Servicios de streaming (por ejemplo, Netflix, Disney+).": 14,
+    }
+    table: dict[str, dict[str, int]] = {}
+    for name in ("bplace1", "bmborn1", "bfborn1"):
+        table[name] = birth
+    for name in (
+        _numbered_names("bcfpi_coop", 1, 6)
+        + _numbered_names("bcfpi_ma", 1, 6)
+        + _numbered_names("bcfpi_af", 1, 6)
+    ):
+        table[name] = bcfpi
+    for name in ("rpginsfy1", "rpginsfy2"):
+        table[name] = rpg
+    table["dlup1"] = dlup
+    for name in _numbered_names("dlupa", 1, 5):
+        table[name] = dlupa
+    for name in _numbered_names("cyrm", 1, 12, 2):
+        table[name] = cyrm
+    for name in ("ksa1", "ksa2"):
+        table[name] = ksa
+    for name in _numbered_names("smharm", 1, 6):
+        table[name] = smharm
+    table["bmo1"] = bmo
+    table["aiuse1"] = aiuse
+    table["apps1"] = apps
+    table["grade1"] = {"2º de Bachillerato.": 4}
+    table["bage1"] = {"13 años": 13}
+    return table
+
+
+SPAIN_CONTRACT_LABELS = _spain_contract_label_table()
+_SPAIN_BEDTIME = ("Antes de las 20:00.", "Después de las 03:00.")
+
+
+def _apply_spain_contract_labels(question: Any, variable_name: str) -> None:
+    """Place contract Spanish labels on their canonical values.
+
+    Positional zip runs first. A label is taken off a different value only when
+    an option with the contract value exists, so it can be reattached there.
+    España is not left on value 11 (Cyprus). Bedtime strings are removed from
+    bmborn1. Other countries keep the positional aliases.
+    """
+    options = getattr(question, "options", None) or []
+    if variable_name == "bmborn1":
+        kept = []
+        for opt in options:
+            if getattr(opt, "label", None) in _SPAIN_BEDTIME:
+                continue
+            aliases = getattr(opt, "aliases", None)
+            if aliases:
+                opt.aliases[:] = [alias for alias in aliases if alias not in _SPAIN_BEDTIME]
+            kept.append(opt)
+        if len(kept) != len(options):
+            options[:] = kept
+    label_table = SPAIN_CONTRACT_LABELS.get(variable_name)
+    if not label_table:
+        return
+    present_values = {opt.value for opt in options}
+    for opt in options:
+        aliases = getattr(opt, "aliases", None)
+        if not aliases:
+            continue
+        kept_aliases = []
+        for alias in aliases:
+            target = label_table.get(alias)
+            if target is not None and opt.value != target and target in present_values:
+                continue
+            if alias == "España" and opt.value == 11 and 1 in present_values:
+                continue
+            kept_aliases.append(alias)
+        opt.aliases[:] = kept_aliases
+    for label, value in label_table.items():
+        if value not in present_values:
+            continue
+        target = next(opt for opt in options if opt.value == value)
+        if getattr(target, "aliases", None) is None:
+            target.aliases = []
+        if label != getattr(target, "label", None) and label not in target.aliases:
+            target.aliases.append(label)
+
+
 def merge_country_alignment(
     core_codebook: list[Any],
     country_codebook: list[Any],
@@ -1483,6 +1653,8 @@ def merge_country_alignment(
                     label = country_opts[idx]
                     if label and label not in opt.aliases and label != opt.label:
                         opt.aliases.append(label)
+            if country_source == "spain":
+                _apply_spain_contract_labels(cq, canon)
 
     extras: list[Any] = []
     for q in country_codebook:

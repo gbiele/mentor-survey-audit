@@ -23,10 +23,13 @@
   const SPECIAL_LABEL_PATTERNS = [
     { code: 997, regex: /^(not applicable|n\/?a|n\. ?a\.?|does not apply|not relevant|nicht zutreffend|trifft nicht zu)\.?$/i },
     { code: 998, regex: /^(i )?((don't|dont|do not) know|dk|weiß nicht|weiss nicht|weiß es nicht)\.?$/i },
-    { code: 999, regex: /(prefer not to (answer|say|respond|tell)|would rather not (answer|say)|keine angabe)/i }
+    { code: 999, regex: /(prefer not to (answer|say|respond|tell)|would rather not (answer|say)|keine angabe)/i },
+    { code: 999, regex: /^(?:- )?prefiero no responder\.?$/i }
   ];
 
   const MATRIX_TITLE_VARS = new Set(["ID426"]);
+  const BIRTH_COUNTRY_VARS = new Set(["bplace1", "bmborn1", "bfborn1"]);
+  const MULTI_SELECT_HEADER_IDS = new Set(["ace23", "ai2", "some_apps1"]);
 
   /**
    * Normalize string for reliable matching
@@ -48,6 +51,33 @@
 
   function normKey(str) {
     return norm(str).toLowerCase();
+  }
+
+  /**
+   * Whole Alias cell, after normKey, names the EU Survey country.
+   * Accents stay. The cell is not split and is not matched as a substring.
+   */
+  function countryFromAliasCell(cell) {
+    const key = normKey(cell);
+    if (key === "spain" || key === "españa" || key === "es") return "spain";
+    if (key === "hungary" || key === "hu") return "hungary";
+    if (key === "germany" || key === "de" || key === "deutschland") return "germany";
+    return null;
+  }
+
+  /**
+   * Birth-country match key: normKey, then one leading "- ", then one
+   * trailing " (xx)" of two ASCII letters. Does not strip an ID tag.
+   */
+  function birthMatchKey(str) {
+    let s = normKey(str);
+    if (s.startsWith("- ")) s = s.slice(2);
+    s = s.replace(/ \([a-z]{2}\)$/, "");
+    return s;
+  }
+
+  function isMultiSelectHeader(varId) {
+    return MULTI_SELECT_HEADER_IDS.has(String(varId || "").toLowerCase());
   }
 
   /**
@@ -134,17 +164,54 @@
   }
 
   /**
-   * Parse cell answer: "Girl (ID3)" or "Girl [ID3]" -> { label: "Girl", answerId: "ID3" }
+   * Parse cell answer: "Girl (ID3)" or "Girl [ID3]" -> { label: "Girl", answerId: "ID3" }.
+   * A trailing tag is ID plus digits inside (), [], or {}. (ES) and (LT) stay.
    */
   function parseAnswer(cellVal) {
     if (cellVal == null) return { label: "", answerId: null, raw: "" };
     const s = norm(cellVal);
     if (!s) return { label: "", answerId: null, raw: "" };
-    const m = s.match(/^(.*?)\s*[\(\[\{](ID\d+|[A-Za-z0-9_.-]+)[\)\]\}]\s*$/);
+    const m = s.match(/^(.*?)\s*[\(\[\{](ID\d+)[\)\]\}]\s*$/);
     if (m) {
       return { label: norm(m[1]), answerId: m[2], raw: s };
     }
     return { label: s, answerId: null, raw: s };
+  }
+
+  /**
+   * Split a respondent cell on semicolons. A segment is rewritten only when
+   * that segment itself ends with an ID tag. Other segments stay as stored.
+   */
+  function answerSegments(value) {
+    const pieces = String(value).split(";");
+    return pieces.map(part => {
+      const parsed = parseAnswer(part);
+      if (parsed.answerId) {
+        return { part, label: parsed.label, answerId: parsed.answerId, hadId: true, raw: parsed.raw };
+      }
+      return { part, label: parsed.label, answerId: null, hadId: false, raw: parsed.raw };
+    });
+  }
+
+  function labelsFromCell(value, splitMulti) {
+    if (value == null || value === "") return [];
+    const segments = answerSegments(value);
+    const anyId = segments.some(seg => seg.hadId);
+    if (splitMulti) {
+      const out = [];
+      for (const seg of segments) {
+        if (!seg.label && !seg.answerId) continue;
+        out.push({ key: seg.label || seg.raw, answerId: seg.answerId });
+      }
+      return out;
+    }
+    if (segments.length === 1 || !anyId) {
+      const whole = parseAnswer(value);
+      if (!whole.label && !whole.answerId) return [];
+      return [{ key: whole.label || whole.raw, answerId: whole.answerId }];
+    }
+    const joined = segments.map(seg => (seg.hadId ? seg.label : seg.part)).join(";");
+    return [{ key: joined, answerId: null }];
   }
 
   /**
@@ -164,9 +231,13 @@
    */
   function cleanAnswerCell(value) {
     if (value == null || value === "") return value;
-    const parsed = parseAnswer(value);
-    if (!parsed.answerId) return value;
-    return parsed.label;
+    const segments = answerSegments(value);
+    if (segments.length === 1) {
+      if (!segments[0].hadId) return value;
+      return segments[0].label;
+    }
+    if (!segments.some(seg => seg.hadId)) return value;
+    return segments.map(seg => (seg.hadId ? seg.label : seg.part)).join(";");
   }
 
   /**
@@ -287,37 +358,58 @@
         return { candidate: candidates[0], type: baseType };
       };
 
-      // 1. Try match by extracted varId (exact orig beats country alias)
+      // 1. When the export country is known, that country's alias beats orig_variable.
+      //    Otherwise orig_variable beats every orig_aliases value. Core beats non-core.
       if (varId) {
         const vidLow = varId.toLowerCase();
-        let exactOrig = null;
-        let aliasMatch = null;
+        const country = context && context.country ? String(context.country).toLowerCase() : "";
 
-        for (const v of this.variables) {
-          if (v.orig_variable && v.orig_variable.toLowerCase() === vidLow) {
-            if (!exactOrig || (v.is_core !== false && exactOrig.is_core === false)) {
-              exactOrig = v;
+        if (country) {
+          let countryHit = null;
+          for (const v of this.variables) {
+            const alias = v.orig_aliases && v.orig_aliases[country];
+            if (alias == null || alias === "") continue;
+            if (String(alias).toLowerCase() !== vidLow) continue;
+            if (!countryHit || (v.is_core !== false && countryHit.is_core === false)) {
+              countryHit = v;
             }
           }
-          for (const alias of Object.values(v.orig_aliases || {})) {
-            if (!alias) continue;
-            if (String(alias).toLowerCase() === vidLow) {
-              if (!aliasMatch || (v.is_core !== false && aliasMatch.is_core === false)) {
-                aliasMatch = v;
-              }
-            }
+          if (countryHit) {
+            canonical = countryHit;
+            matchType = 'country_alias';
           }
         }
 
-        if (exactOrig) {
-          canonical = exactOrig;
-          matchType = 'id_exact';
-        } else if (aliasMatch) {
-          canonical = aliasMatch;
-          matchType = 'country_alias';
-        } else if (this.byCleanVar.has(vidLow)) {
-          canonical = this.byCleanVar.get(vidLow);
-          matchType = 'clean_name_exact';
+        if (!canonical) {
+          let exactOrig = null;
+          let aliasMatch = null;
+
+          for (const v of this.variables) {
+            if (v.orig_variable && v.orig_variable.toLowerCase() === vidLow) {
+              if (!exactOrig || (v.is_core !== false && exactOrig.is_core === false)) {
+                exactOrig = v;
+              }
+            }
+            for (const alias of Object.values(v.orig_aliases || {})) {
+              if (!alias) continue;
+              if (String(alias).toLowerCase() === vidLow) {
+                if (!aliasMatch || (v.is_core !== false && aliasMatch.is_core === false)) {
+                  aliasMatch = v;
+                }
+              }
+            }
+          }
+
+          if (exactOrig) {
+            canonical = exactOrig;
+            matchType = 'id_exact';
+          } else if (aliasMatch) {
+            canonical = aliasMatch;
+            matchType = 'country_alias';
+          } else if (this.byCleanVar.has(vidLow)) {
+            canonical = this.byCleanVar.get(vidLow);
+            matchType = 'clean_name_exact';
+          }
         }
       }
 
@@ -380,6 +472,9 @@
       }
 
       const layout = detectExportLayout(rows);
+      const country = layout.format === "eusurvey"
+        ? countryFromAliasCell(rows[0] && rows[0][1])
+        : null;
 
       const metadata = {
         alias: rows[0] && rows[0][1] ? String(rows[0][1]) : "",
@@ -402,7 +497,7 @@
           continue; // Skip trailing empty columns
         }
 
-        const context = { matchedVars, prevCanonical };
+        const context = { matchedVars, prevCanonical, country };
         const headerInfo = this.matchVariable(rawHeader, colIdx, context);
 
         if (headerInfo.canonical && headerInfo.canonical.variable) {
@@ -415,17 +510,16 @@
         const observedIds = new Map();
         let nonNullCount = 0;
 
+        const splitMulti = isMultiSelectHeader(headerInfo.extractedId);
         for (const row of dataRows) {
           const val = row ? row[colIdx] : null;
-          if (val == null) continue;
-          const { label, answerId, raw } = parseAnswer(val);
-          if (!label && !answerId) continue;
-
-          nonNullCount++;
-          const key = label || raw;
-          observedCounts.set(key, (observedCounts.get(key) || 0) + 1);
-          if (answerId) {
-            observedIds.set(key, answerId);
+          if (val == null || val === "") continue;
+          for (const observed of labelsFromCell(val, splitMulti)) {
+            nonNullCount++;
+            observedCounts.set(observed.key, (observedCounts.get(observed.key) || 0) + 1);
+            if (observed.answerId) {
+              observedIds.set(observed.key, observed.answerId);
+            }
           }
         }
 
@@ -618,18 +712,20 @@
       const canById = new Map();
       const canByAlias = new Map();
 
+      const matchKey = BIRTH_COUNTRY_VARS.has(canonical.variable) ? birthMatchKey : normKey;
+
       for (const opt of canonicalOpts) {
-        if (opt.label) canByLabel.set(normKey(opt.label), opt);
+        if (opt.label) canByLabel.set(matchKey(opt.label), opt);
         if (opt.value != null) canByLabel.set(String(opt.value), opt);
         if (opt.eusurvey_answer_id) canById.set(opt.eusurvey_answer_id, opt);
-        if (opt.alias) canByAlias.set(normKey(opt.alias), opt);
-        if (opt.label_with_id) canByLabel.set(normKey(opt.label_with_id), opt);
+        if (opt.alias) canByAlias.set(matchKey(opt.alias), opt);
+        if (opt.label_with_id) canByLabel.set(matchKey(opt.label_with_id), opt);
       }
 
       // Check observed responses
       for (const [obsLabel, count] of observedCounts.entries()) {
         const obsId = observedIds.get(obsLabel);
-        const obsKey = normKey(obsLabel);
+        const obsKey = matchKey(obsLabel);
 
         let matchedOpt = null;
         let matchReason = null;
