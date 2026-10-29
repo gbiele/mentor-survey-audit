@@ -21,8 +21,6 @@ The ladder runs from 1 to 10 in the survey dictionary. `r n_ladder_zero` answers
 
 ```{r}
 #| results: asis
-#| fig-width: 8
-#| fig-height: 4.4
 show_dist(survey, "ladder1", title = "Where is your family on the social ladder?")
 ```
 
@@ -30,8 +28,6 @@ show_dist(survey, "ladder1", title = "Where is your family on the social ladder?
 
 ```{r}
 #| results: asis
-#| fig-width: 8
-#| fig-height: 5.8
 show_dist(survey, "edumom1", title = "What best describes your mother's education?")
 ```
 
@@ -39,8 +35,6 @@ show_dist(survey, "edumom1", title = "What best describes your mother's educatio
 
 ```{r}
 #| results: asis
-#| fig-width: 8
-#| fig-height: 5.8
 show_dist(survey, "edudad1", title = "What best describes your father's education?")
 ```
 
@@ -48,7 +42,5 @@ show_dist(survey, "edudad1", title = "What best describes your father's educatio
 
 ```{r}
 #| results: asis
-#| fig-width: 8
-#| fig-height: 5.2
 show_dist(survey, "afford1", title = "I feel that my family can usually afford to buy what we need")
 ```
