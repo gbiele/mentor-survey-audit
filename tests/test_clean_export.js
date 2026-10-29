@@ -22,6 +22,152 @@ function assertCleanedExportButton(relativePath) {
   assert.ok(button.includes('Export cleaned data'), `${relativePath} button label`);
   assert.ok(button.includes('window.exportCleanedData'), `${relativePath} click handler`);
   assert.ok(button.includes('btn-export'), `${relativePath} uses the export button style`);
+
+  const scrambledAt = source.indexOf('id="btn-export-scrambled"');
+  const scrambledCleanedAt = source.indexOf('id="btn-export-scrambled-cleaned"');
+  assert.notStrictEqual(scrambledAt, -1, `${relativePath} contains the scrambled original download`);
+  assert.notStrictEqual(scrambledCleanedAt, -1, `${relativePath} contains the scrambled cleaned download`);
+  assert.ok(scrambledAt > cleanedAt, `${relativePath}: scrambled sample follows cleaned export`);
+  assert.ok(scrambledCleanedAt > scrambledAt, `${relativePath}: scrambled cleaned sample follows scrambled sample`);
+  assert.ok(sampleAt > scrambledCleanedAt, `${relativePath}: scrambled downloads precede Load sample data`);
+
+  const scrambledButton = source.slice(scrambledAt, source.indexOf('</button>', scrambledAt));
+  const scrambledCleanedButton = source.slice(scrambledCleanedAt, source.indexOf('</button>', scrambledCleanedAt));
+  assert.ok(scrambledButton.includes('window.exportScrambledSample'), `${relativePath} scrambled click handler`);
+  assert.ok(scrambledCleanedButton.includes('window.exportScrambledCleanedSample'), `${relativePath} scrambled cleaned click handler`);
+  assert.ok(scrambledButton.includes('btn-sm'), `${relativePath} scrambled sample uses btn-sm`);
+  assert.ok(scrambledCleanedButton.includes('btn-sm'), `${relativePath} scrambled cleaned sample uses btn-sm`);
+  assert.ok(scrambledButton.includes('Scrambled sample'), `${relativePath} scrambled sample label`);
+  assert.ok(scrambledCleanedButton.includes('Scrambled cleaned sample'), `${relativePath} scrambled cleaned label`);
+}
+
+// Output position reads source (n - 1 - out + column). Column 0 is a
+// reversal, so a value past row 50 can land in the kept sample and a
+// value from the original first 50 can be cut. Later columns shift, so
+// one respondent's answers do not stay on the same row.
+function fixedPermutation(n, columnIndex) {
+  const order = new Array(n);
+  for (let out = 0; out < n; out++) {
+    order[out] = (n - 1 - out + columnIndex) % n;
+  }
+  return order;
+}
+
+function withoutRandom(fn) {
+  const original = Math.random;
+  Math.random = function () {
+    throw new Error('scramble result depended on Math.random');
+  };
+  try {
+    return fn();
+  } finally {
+    Math.random = original;
+  }
+}
+
+function buildSheet(responseCount, format) {
+  const columnCount = 3;
+  const responses = [];
+  for (let r = 0; r < responseCount; r++) {
+    responses.push([
+      `r${r}c0`,
+      `Choice ${r} (ID${r + 1})`,
+      `r${r}c2`
+    ]);
+  }
+  if (format === 'qualtrics') {
+    return [
+      ['StartDate', 'What is your gender? (gender1)', `Notes ${columnCount}`],
+      ['Start Date', 'question text', 'notes text'],
+      ...responses
+    ];
+  }
+  return [
+    ['Alias', 'DEMO'],
+    ['Export Date', '2026-01-01'],
+    ['Preamble', 'keep me'],
+    ['What gender do you identify as? (gender1)', 'City (city1)', 'Notes'],
+    ...responses
+  ];
+}
+
+function assertScrambledSample(actual, sourceRows, layout, label) {
+  const dataStart = layout.dataStartIndex;
+  const responses = sourceRows.slice(dataStart);
+  const kept = Math.min(50, responses.length);
+  assert.strictEqual(actual.length, dataStart + kept, `${label} keeps the prefix and the sample only`);
+  for (let i = 0; i < dataStart; i++) {
+    assert.deepStrictEqual(actual[i], sourceRows[i], `${label} leaves prefix row ${i} unchanged`);
+  }
+  assert.deepStrictEqual(
+    actual[layout.headerRowIndex],
+    sourceRows[layout.headerRowIndex],
+    `${label} leaves the header unchanged`
+  );
+
+  const width = sourceRows[layout.headerRowIndex].length;
+  const actualResponses = actual.slice(dataStart);
+  for (let c = 0; c < width; c++) {
+    const order = fixedPermutation(responses.length, c);
+    for (let out = 0; out < kept; out++) {
+      assert.strictEqual(
+        actualResponses[out][c],
+        responses[order[out]][c],
+        `${label} permutes column ${c} before keeping row ${out}`
+      );
+    }
+    if (responses.length > 50) {
+      const dropped = responses[order[50]][c];
+      const keptValues = actualResponses.map(row => row[c]);
+      assert.ok(
+        !keptValues.includes(dropped),
+        `${label} drops the column value that the full permutation places past row 50`
+      );
+      assert.ok(
+        keptValues.includes(responses[responses.length - 1][c]) || order.indexOf(responses.length - 1) >= 50,
+        `${label} can keep a response from past the first 50 rows`
+      );
+    }
+  }
+
+  if (responses.length >= 2 && width >= 2) {
+    const originalRows = new Set(responses.map(row => JSON.stringify(row)));
+    for (const row of actualResponses) {
+      assert.ok(
+        !originalRows.has(JSON.stringify(row)),
+        `${label}: values from one respondent do not stay on the same row`
+      );
+    }
+  }
+}
+
+function assertUploadedAndCleaned(format, responseCount) {
+  const uploaded = buildSheet(responseCount, format);
+  const uploadedLayout = format === 'qualtrics'
+    ? { headerRowIndex: 0, dataStartIndex: 2 }
+    : { headerRowIndex: 3, dataStartIndex: 4 };
+  const cleanedLayout = { headerRowIndex: 0, dataStartIndex: 1 };
+  const label = `${format} ${responseCount} responses`;
+
+  const uploadedSample = withoutRandom(() => SurveyAuditor.scrambleExportSample(uploaded, {
+    permutation: fixedPermutation
+  }));
+  assertScrambledSample(uploadedSample, uploaded, uploadedLayout, `${label} uploaded`);
+
+  const cleaned = SurveyAuditor.cleanExportRows(uploaded);
+  const cleanedSample = withoutRandom(() => SurveyAuditor.scrambleExportSample(cleaned, {
+    permutation: fixedPermutation,
+    layout: cleanedLayout
+  }));
+  assertScrambledSample(cleanedSample, cleaned, cleanedLayout, `${label} cleaned`);
+
+  const flatCleaned = cleanedSample.flat();
+  assert.ok(!flatCleaned.includes('Alias'), `${label} cleaned sample has no EU Survey preamble`);
+  assert.ok(!flatCleaned.includes('Start Date'), `${label} cleaned sample has no Qualtrics question-text row`);
+  assert.ok(!flatCleaned.some(value => typeof value === 'string' && /\(ID\d+\)/.test(value)),
+    `${label} cleaned sample is scrambled after tags are stripped`);
+  assert.ok(uploadedSample.flat().some(value => typeof value === 'string' && /\(ID\d+\)/.test(value)),
+    `${label} uploaded sample keeps answer tags`);
 }
 
 function runTests() {
@@ -95,6 +241,18 @@ function runTests() {
     ['2020-01-01', 'Girl', 7]
   ]);
   console.log('✓ Qualtrics metadata row dropped; header and answer tags stripped');
+
+  assert.strictEqual(
+    typeof SurveyAuditor.scrambleExportSample,
+    'function',
+    'SurveyAuditor.scrambleExportSample must be exported'
+  );
+  for (const format of ['eusurvey', 'qualtrics']) {
+    for (const responseCount of [4, 60]) {
+      assertUploadedAndCleaned(format, responseCount);
+    }
+  }
+  console.log('✓ Scrambled samples permute each response column, then keep at most 50 rows');
 
   console.log('All cleaned-export tests passed.');
 }

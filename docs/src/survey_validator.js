@@ -267,6 +267,112 @@
     return [cleanedHeader, ...cleanedData];
   }
 
+  const SCRAMBLED_SAMPLE_SIZE = 50;
+
+  /**
+   * Source index for each output position. Math.random is used only when
+   * the caller does not inject a permutation.
+   */
+  function randomResponseOrder(count) {
+    const order = [];
+    for (let i = 0; i < count; i++) order.push(i);
+    for (let i = count - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      const swap = order[i];
+      order[i] = order[j];
+      order[j] = swap;
+    }
+    return order;
+  }
+
+  function responseOrder(count, columnIndex, permutation) {
+    if (typeof permutation !== 'function') return randomResponseOrder(count);
+    const order = permutation(count, columnIndex);
+    if (!Array.isArray(order) || order.length !== count) {
+      throw new Error('Scramble permutation must list one source index per response row');
+    }
+    return order;
+  }
+
+  function copyRow(row) {
+    return Array.isArray(row) ? row.slice() : [];
+  }
+
+  function responseCell(row, columnIndex) {
+    if (!Array.isArray(row) || columnIndex >= row.length) return null;
+    return row[columnIndex];
+  }
+
+  /**
+   * Permute each response column on its own, then keep the first 50
+   * response rows. Rows before the response block — the preamble, the
+   * header, and a Qualtrics question-text row — stay put and are not
+   * shuffled. Fewer than 50 responses are kept in full, and nothing
+   * after that sample is written.
+   *
+   * Pass a permutation(responseCount, columnIndex) that returns the
+   * source response index for every output position. Omit it to shuffle
+   * each column independently. For rows already returned by
+   * cleanExportRows, pass layout { headerRowIndex: 0, dataStartIndex: 1 }.
+   * Otherwise the layout is detected from the sheet.
+   */
+  function scrambleExportSample(rows, options) {
+    if (!Array.isArray(rows) || rows.length === 0) return [];
+
+    let permutation = null;
+    let layoutOverride = null;
+    if (typeof options === 'function') {
+      permutation = options;
+    } else if (options) {
+      if (typeof options.permutation === 'function') permutation = options.permutation;
+      if (options.layout) layoutOverride = options.layout;
+    }
+
+    const detected = detectExportLayout(rows);
+    const headerRowIndex = layoutOverride && Number.isInteger(layoutOverride.headerRowIndex)
+      ? layoutOverride.headerRowIndex
+      : detected.headerRowIndex;
+    const dataStartIndex = layoutOverride && Number.isInteger(layoutOverride.dataStartIndex)
+      ? layoutOverride.dataStartIndex
+      : detected.dataStartIndex;
+
+    const prefixCount = Math.min(Math.max(dataStartIndex, 0), rows.length);
+    const prefix = [];
+    for (let i = 0; i < prefixCount; i++) prefix.push(copyRow(rows[i]));
+
+    const responseRows = rows.slice(Math.max(dataStartIndex, 0));
+    const responseCount = responseRows.length;
+    if (responseCount === 0) return prefix;
+
+    let width = 0;
+    const header = rows[headerRowIndex];
+    if (Array.isArray(header)) width = header.length;
+    for (let r = 0; r < responseCount; r++) {
+      if (Array.isArray(responseRows[r]) && responseRows[r].length > width) {
+        width = responseRows[r].length;
+      }
+    }
+
+    const permutedColumns = [];
+    for (let c = 0; c < width; c++) {
+      const column = [];
+      for (let r = 0; r < responseCount; r++) column.push(responseCell(responseRows[r], c));
+      const order = responseOrder(responseCount, c, permutation);
+      const permuted = [];
+      for (let out = 0; out < responseCount; out++) permuted.push(column[order[out]]);
+      permutedColumns.push(permuted);
+    }
+
+    const kept = Math.min(SCRAMBLED_SAMPLE_SIZE, responseCount);
+    const sampled = [];
+    for (let r = 0; r < kept; r++) {
+      const row = [];
+      for (let c = 0; c < width; c++) row.push(permutedColumns[c][r]);
+      sampled.push(row);
+    }
+    return prefix.concat(sampled);
+  }
+
   /**
    * Detect special code from label
    */
@@ -822,6 +928,7 @@
   }
 
   SurveyAuditor.cleanExportRows = cleanExportRows;
+  SurveyAuditor.scrambleExportSample = scrambleExportSample;
 
   return SurveyAuditor;
 }));

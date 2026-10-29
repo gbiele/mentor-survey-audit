@@ -11,6 +11,7 @@ Descriptive pages for the cleaned MENTOR youth survey. The workbook is `r survey
 
 The pages describe the sample. They do not fit models.
 
+- [Overview](pages/overview.qmd): sex, migration, household, highest parental education, the social ladder, whether the family can afford what it needs, BCFPI and functioning sums, ACE-IQ totals and category percentages, the KIDSCREEN-10 sum, the CYRM-12 sum, and mean social media hours.
 - [Biographical information](pages/biography.qmd): gender, grade, age, and migration background.
 - [Living situation](pages/living.qmd): household, and the follow-up questions among the people who were asked them.
 - [Socioeconomic information](pages/socioeconomic.qmd): social ladder, parental education, and whether the family can afford what it needs.
@@ -21,4 +22,4 @@ The pages describe the sample. They do not fit models.
 - [Social media problems](pages/smadd.qmd): nine-item sum about difficulty limiting social media. These questions are not in the current cleaned file.
 - [Social media time](pages/social-media-use.qmd): weekday and weekend time, and feelings after phone use or gaming. These questions are not summed.
 
-A BCFPI sum, the KIDSCREEN-10 sum, and the social media problem sum are calculated when at least 80% of that score's items are answered, then rounded to the nearest whole number. Attention can be prorated from five of six items. Each functioning domain has four items, so its sum needs all four. KIDSCREEN-10 can be prorated from eight of ten items, after reversing felt sad and felt lonely. The social media problem sum can be prorated from eight of nine items. The ACE totals follow the World Health Organization category rules and are not prorated.
+A BCFPI sum, the KIDSCREEN-10 sum, and the social media problem sum are calculated when at least 80% of that score's items are answered, then rounded to the nearest whole number. Attention can be prorated from five of six items. Each functioning domain has four items, so its sum needs all four. KIDSCREEN-10 can be prorated from eight of ten items, after reversing felt sad and felt lonely. The social media problem sum can be prorated from eight of nine items. The ACE totals follow the World Health Organization category rules and are not prorated. The overview uses the same 5-of-6 rule for cooperativeness, managing anxiety, social anxiety, mood, and emotion regulation, and the same 80% rule for the CYRM-12, which can be prorated from 10 of 12 items. Social media time on the overview is the mean of hours assigned to each answer: 0.5, 1.5, 3.5, 5.5, and 8.

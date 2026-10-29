@@ -216,3 +216,29 @@ ace_no_exposure <- function() {
   x["rpginsfy2"] <- 4
   x
 }
+
+# Higher of two ordered codes, such as mother's and father's education.
+# NA on one side is ignored. NA when both are missing.
+# A special code such as Don't know (998) is not a level: turn it into NA first.
+higher_known <- function(a, b) {
+  a <- as.numeric(a)
+  b <- as.numeric(b)
+  if (length(a) != length(b)) stop("higher_known needs two vectors of the same length")
+  out <- a
+  use_b <- is.na(a) | (!is.na(b) & b > a)
+  out[use_b] <- b[use_b]
+  out[is.na(a) & is.na(b)] <- NA_real_
+  out
+}
+
+# Hours for one social-media time item. Codes are the dictionary values:
+# 0 less than 1 hour, 1 is 1-2 hours, 2 is 3-4, 3 is 5-6, 4 is 7 hours or more.
+# Anything else, including a blank, stays missing.
+media_hours <- function(code) {
+  code <- as.numeric(code)
+  hours <- c(0.5, 1.5, 3.5, 5.5, 8)
+  out <- rep(NA_real_, length(code))
+  ok <- !is.na(code) & code %in% 0:4
+  out[ok] <- hours[code[ok] + 1]
+  out
+}

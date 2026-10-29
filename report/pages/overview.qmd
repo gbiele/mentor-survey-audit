@@ -1,0 +1,80 @@
+---
+title: "Overview"
+---
+
+```{r}
+setup_path <- if (file.exists("R/setup.R")) "R/setup.R" else "../R/setup.R"
+source(setup_path)
+```
+
+Selected background items and scale sums for the `r survey$n` young people who agreed to take part. `r survey$n_declined` people in `r survey$file` declined and are not included. Item charts stay on the other pages.
+
+## Biography
+
+```{r}
+#| results: asis
+#| fig-width: 8
+#| fig-height: 3.4
+render_overview_biography(survey)
+```
+
+## Socioeconomic position
+
+```{r}
+#| results: asis
+#| fig-width: 8
+#| fig-height: 3.4
+render_overview_ses(survey)
+```
+
+## BCFPI
+
+```{r}
+#| results: asis
+#| fig-width: 9
+#| fig-height: 3.6
+render_overview_symptoms(survey)
+```
+
+```{r}
+#| results: asis
+#| fig-width: 8
+#| fig-height: 3.4
+render_overview_functioning(survey)
+```
+
+## ACE-IQ
+
+```{r}
+#| results: asis
+#| fig-width: 8
+#| fig-height: 3.2
+render_overview_ace(survey)
+```
+
+## Quality of life
+
+```{r}
+#| results: asis
+#| fig-width: 8
+#| fig-height: 3.2
+render_overview_kidscreen(survey)
+```
+
+## Resilience
+
+```{r}
+#| results: asis
+#| fig-width: 8
+#| fig-height: 3.2
+render_overview_cyrm(survey)
+```
+
+## Social media time
+
+```{r}
+#| results: asis
+#| fig-width: 9
+#| fig-height: 3.4
+render_overview_media(survey)
+```

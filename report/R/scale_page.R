@@ -87,7 +87,9 @@ render_likert <- function(survey, spec) {
   invisible(scored)
 }
 
-ace_prevalence_table <- function(ace, gender) {
+ace_prevalence_table <- function(ace, gender, version = c("binary", "frequency")) {
+  version <- match.arg(version)
+  prefix <- if (version == "binary") "bin_" else "frq_"
   cats <- ace_category_spec()
   groups <- list(
     Boy = !is.na(gender) & gender == "Boy",
@@ -95,7 +97,7 @@ ace_prevalence_table <- function(ace, gender) {
     All = rep(TRUE, length(gender))
   )
   rows <- lapply(cats, function(cat) {
-    flag <- ace[[paste0("bin_", cat$id)]]
+    flag <- ace[[paste0(prefix, cat$id)]]
     cells <- lapply(groups, function(in_group) {
       known <- in_group & !is.na(flag)
       n <- sum(known)

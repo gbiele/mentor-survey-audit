@@ -920,18 +920,45 @@
     return html;
   }
 
+  function writeExportWorkbook(rows, sheetName, suffix) {
+    const worksheet = XLSX.utils.aoa_to_sheet(rows);
+    const workbook = XLSX.utils.book_new();
+    XLSX.utils.book_append_sheet(workbook, worksheet, sheetName);
+    const base = (currentAuditResult && currentAuditResult.filename) || 'Survey_Export.xlsx';
+    const downloadName = String(base).replace(/\.[^/.]+$/, '') + suffix;
+    XLSX.writeFile(workbook, downloadName);
+  }
+
   window.exportCleanedData = function() {
     if (!currentSheetRows || !currentSheetRows.length) {
       alert('Please upload or load a survey export before exporting cleaned data.');
       return;
     }
     const cleaned = SurveyAuditor.cleanExportRows(currentSheetRows);
-    const worksheet = XLSX.utils.aoa_to_sheet(cleaned);
-    const workbook = XLSX.utils.book_new();
-    XLSX.utils.book_append_sheet(workbook, worksheet, 'Cleaned');
-    const base = (currentAuditResult && currentAuditResult.filename) || 'Survey_Export.xlsx';
-    const downloadName = String(base).replace(/\.[^/.]+$/, '') + '_cleaned.xlsx';
-    XLSX.writeFile(workbook, downloadName);
+    writeExportWorkbook(cleaned, 'Cleaned', '_cleaned.xlsx');
+  };
+
+  // Cleaned sheets are header + responses. detectExportLayout would still
+  // look for an EU Survey preamble or a Qualtrics question-text row.
+  const CLEANED_SAMPLE_LAYOUT = { headerRowIndex: 0, dataStartIndex: 1 };
+
+  window.exportScrambledSample = function() {
+    if (!currentSheetRows || !currentSheetRows.length) {
+      alert('Please upload or load a survey export before downloading a scrambled sample.');
+      return;
+    }
+    const sample = SurveyAuditor.scrambleExportSample(currentSheetRows);
+    writeExportWorkbook(sample, 'Scrambled', '_scrambled_sample.xlsx');
+  };
+
+  window.exportScrambledCleanedSample = function() {
+    if (!currentSheetRows || !currentSheetRows.length) {
+      alert('Please upload or load a survey export before downloading a scrambled sample.');
+      return;
+    }
+    const cleaned = SurveyAuditor.cleanExportRows(currentSheetRows);
+    const sample = SurveyAuditor.scrambleExportSample(cleaned, { layout: CLEANED_SAMPLE_LAYOUT });
+    writeExportWorkbook(sample, 'Scrambled', '_cleaned_scrambled_sample.xlsx');
   };
 
   // Expose global methods for demo loader & export buttons
