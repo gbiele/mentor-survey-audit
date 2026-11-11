@@ -109,7 +109,7 @@ match_headers <- function(headers, meta) {
   roles <- rep("variable", length(headers))
   for (i in seq_along(headers)) {
     hk <- squash_text(headers[[i]])
-    if (hk == "do you wish to participate in mentor" || startsWith(hk, "do you wish to participate")) {
+    if (startsWith(hk, "do you wish to participate in mentor")) {
       roles[[i]] <- "consent"
       next
     }
@@ -129,11 +129,7 @@ match_headers <- function(headers, meta) {
       assignments[[i]] <- suffix
       next
     }
-    stop(
-      "No dictionary variable matches this column: ",
-      headers[[i]],
-      "\nSquashed key: ", hk
-    )
+    roles[[i]] <- "ignored"
   }
   dup <- assignments[!is.na(assignments)]
   if (any(duplicated(dup))) {
@@ -170,31 +166,38 @@ apply_skip_rules <- function(survey) {
   lab <- survey$label
   status <- survey$status
   mark <- function(variable, not_asked) {
+    if (!variable %in% names(status)) return(invisible())
     hit <- not_asked & status[[variable]] == "missing"
     status[[variable]][hit] <<- "not_asked"
   }
-  gender <- lab$gender1
-  mark("ident1", !is.na(gender) & gender != "Other gender identity")
+  if ("gender1" %in% names(status)) {
+    gender <- lab$gender1
+    mark("ident1", !is.na(gender) & gender != "Other gender identity")
+  }
 
-  country <- survey$country
-  born <- lab$bplace1
-  born_here <- !is.na(born) & squash_text(born) == squash_text(country)
-  mark("bage1", born_here)
+  if ("bplace1" %in% names(status)) {
+    country <- survey$country
+    born <- lab$bplace1
+    born_here <- !is.na(born) & squash_text(born) == squash_text(country)
+    mark("bage1", born_here)
+  }
 
-  live <- lab$live1
-  live_known <- !is.na(live)
-  mark("livead1", live_known & live != "I do not live with my parents")
-  mark("livesp1", live_known & live != "My parents live apart, and I live with both parents")
-  mother_partner_asked <- live %in% c(
-    "My parents live apart, and I live only with my mother",
-    "My parents live apart, and I live with both parents"
-  )
-  father_partner_asked <- live %in% c(
-    "My parents live apart, and I live only with my father",
-    "My parents live apart, and I live with both parents"
-  )
-  mark("momprt1", live_known & !mother_partner_asked)
-  mark("dadprt1", live_known & !father_partner_asked)
+  if ("live1" %in% names(status)) {
+    live <- lab$live1
+    live_known <- !is.na(live)
+    mark("livead1", live_known & live != "I do not live with my parents")
+    mark("livesp1", live_known & live != "My parents live apart, and I live with both parents")
+    mother_partner_asked <- live %in% c(
+      "My parents live apart, and I live only with my mother",
+      "My parents live apart, and I live with both parents"
+    )
+    father_partner_asked <- live %in% c(
+      "My parents live apart, and I live only with my father",
+      "My parents live apart, and I live with both parents"
+    )
+    mark("momprt1", live_known & !mother_partner_asked)
+    mark("dadprt1", live_known & !father_partner_asked)
+  }
   survey$status <- status
   survey
 }
@@ -253,15 +256,23 @@ load_survey <- function(xlsx = NULL, report_dir = NULL) {
   raw <- read_cleaned_sheet(xlsx)
   headers <- names(raw)
   matched <- match_headers(headers, meta)
+  for (v in c("gender1", "bage1")) {
+    if (!v %in% matched$variable) stop("The file has no ", v, " column, which the report needs.")
+  }
   consent_col <- which(matched$role == "consent")
-  if (length(consent_col) != 1) stop("Expected one participation column")
-  consent <- trimws(raw[[consent_col]])
-  keep <- !is.na(consent) & tolower(consent) == "yes"
+  if (length(consent_col) > 1) stop("Expected at most one participation column")
+  has_consent <- length(consent_col) == 1
+  if (has_consent) {
+    consent <- trimws(raw[[consent_col]])
+    keep <- !is.na(consent) & tolower(consent) == "yes"
+  } else {
+    keep <- rep(TRUE, nrow(raw))
+  }
   raw <- raw[keep, , drop = FALSE]
-  n_declined <- sum(!keep)
+  n_declined <- as.integer(sum(!keep))
+  ignored_columns <- headers[matched$role == "ignored"]
 
   age_idx <- which(matched$variable == "bage1")
-  if (length(age_idx) != 1) stop("The age-at-move column was not matched")
   age_header <- headers[[age_idx]]
   country <- survey_country_from_header(age_header)
 
@@ -282,6 +293,8 @@ load_survey <- function(xlsx = NULL, report_dir = NULL) {
     file = basename(xlsx),
     n_file = length(keep),
     n_declined = n_declined,
+    has_consent = has_consent,
+    ignored_columns = ignored_columns,
     n = nrow(raw),
     country = country,
     meta = meta,
@@ -290,10 +303,18 @@ load_survey <- function(xlsx = NULL, report_dir = NULL) {
     status = as.data.frame(status, stringsAsFactors = FALSE)
   )
   survey <- apply_skip_rules(survey)
-  survey$age <- completed_age(survey$code$byear1, survey$code$bmonth1)
-  survey$migration <- migration_group(
-    survey$label$bplace1, survey$label$bmborn1, survey$label$bfborn1, country
-  )
+  survey$age <- if (all(c("byear1", "bmonth1") %in% names(survey$code))) {
+    completed_age(survey$code$byear1, survey$code$bmonth1)
+  } else {
+    rep(NA_integer_, survey$n)
+  }
+  survey$migration <- if (all(c("bplace1", "bmborn1", "bfborn1") %in% names(survey$code))) {
+    migration_group(
+      survey$label$bplace1, survey$label$bmborn1, survey$label$bfborn1, country
+    )
+  } else {
+    rep(NA_character_, survey$n)
+  }
   survey
 }
 
