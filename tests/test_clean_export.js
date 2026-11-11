@@ -609,6 +609,110 @@ function testRealSpainCoreHeaders() {
   }
 }
 
+// ---------------------------------------------------------------------------
+// Issue #15: round trip auditor export -> R load_survey().
+// Synthetic workbooks only. Answers are English labels or Hungarian aliases
+// taken from data/master_dictionary.json.
+// ---------------------------------------------------------------------------
+
+const BAGE_STEM_15 = DICT.variables.find(v => v.variable === 'bage1').question_stem;
+
+function rscriptRoundTrip(rows, country, label) {
+  const os = require('os');
+  const { spawnSync } = require('child_process');
+  const XLSX = require('xlsx');
+  const options = { dictionary: DICT };
+  if (country) options.country = country;
+  const cleaned = SurveyAuditor.cleanExportRows(rows, options);
+  const dir = fs.mkdtempSync(path.join(os.tmpdir(), 'issue15-'));
+  const file = path.join(dir, `${label}_cleaned.xlsx`);
+  const wb = XLSX.utils.book_new();
+  XLSX.utils.book_append_sheet(wb, XLSX.utils.aoa_to_sheet(cleaned), 'Cleaned');
+  XLSX.writeFile(wb, file);
+
+  const fwd = p => p.replace(/\\/g, '/');
+  const script = path.join(dir, 'load.R');
+  fs.writeFileSync(script, [
+    'args <- commandArgs(trailingOnly = TRUE)',
+    'source(file.path(args[[2]], "report", "R", "load_survey.R"))',
+    'res <- tryCatch({',
+    '  s <- load_survey(args[[1]], report_dir = file.path(args[[2]], "report"))',
+    '  list(ok = TRUE, country = s$country, n = s$n, matched = names(s$code))',
+    '}, error = function(e) list(ok = FALSE, error = conditionMessage(e)))',
+    'cat("JSON:", jsonlite::toJSON(res, auto_unbox = TRUE), "\\n", sep = "")'
+  ].join('\n'), 'utf8');
+
+  const run = spawnSync('Rscript', [fwd(script), fwd(file), fwd(ROOT)], { encoding: 'utf8', timeout: 300000 });
+  if (run.error && run.error.code === 'ENOENT') {
+    if (process.env.SKIP_R === '1') {
+      console.log(`  SKIPPED ${label}: Rscript not found and SKIP_R=1`);
+      return null;
+    }
+    throw new Error('Rscript was not found on PATH. Install R (with readxl and jsonlite) or set SKIP_R=1 to skip the round-trip test.');
+  }
+  if (run.error) throw run.error;
+  const line = (run.stdout || '').split(/\r?\n/).find(l => l.startsWith('JSON:'));
+  assert.ok(line, `${label}: Rscript gave no result. stderr: ${(run.stderr || '').slice(0, 500)}`);
+  const res = JSON.parse(line.slice(5));
+  assert.ok(res.ok, `${label}: load_survey failed: ${res.error}`);
+  res.cleanedRowCount = cleaned.length;
+  return res;
+}
+
+function testRoundTripHungaryQualtricsOneHeaderRow() {
+  const N = 5;
+  const header = ['StartDate', 'EndDate', 'ResponseId', 'gender1', 'born2', 'born3', 'born4', 'born5',
+    'schooltype', 'grade1', 'cyrm1:12_12', 'CYRM12'];
+  const rows = [header];
+  for (let i = 0; i < N; i++) {
+    rows.push([`2020-03-0${i + 1}`, `2020-03-0${i + 1}`, `R_${i + 1}`, i % 2 ? 'Lány' : 'Fiú', 'March',
+      i === 2 ? 'Ukraine' : 'Magyarország', i === 2 ? '5' : null, 'Magyarország', '9. évfolyam', 'x', 'Nagyon', 'y']);
+  }
+  const res = rscriptRoundTrip(rows, 'Hungary', 'hungary_qualtrics');
+  if (!res) return;
+  assert.strictEqual(res.country, 'Hungary');
+  assert.strictEqual(res.n, N, `all ${N} respondents load (not ${N - 1})`);
+  for (const v of ['gender1', 'bage1', 'bplace1', 'bmonth1', 'bmborn1', 'grade1', 'cyrm12']) {
+    assert.ok(res.matched.includes(v), `${v} matched; matched: ${res.matched.join(', ')}`);
+  }
+}
+
+function testRoundTripCyprusPlainEu() {
+  const N = 4;
+  const header = [
+    'What gender do you identify as? (gender1)',
+    'Where were you born? (born2)',
+    'Approximately how old were you when you came/moved to [country]? (born3)'
+  ];
+  const rows = [header];
+  for (let i = 0; i < N; i++) rows.push([i % 2 ? 'Girl' : 'Boy', i === 1 ? 'Ukraine' : '[COUNTRY]', i === 1 ? '5' : null]);
+  const res = rscriptRoundTrip(rows, 'Cyprus', 'cyprus_plain');
+  if (!res) return;
+  assert.strictEqual(res.country, 'Cyprus');
+  assert.notStrictEqual(res.country, '[country]');
+  assert.strictEqual(res.n, N, `all ${N} respondents load (not ${N - 3})`);
+  for (const v of ['gender1', 'bage1']) assert.ok(res.matched.includes(v), `${v} matched`);
+}
+
+function testRoundTripNorwayAliasDetected() {
+  const N = 3;
+  const rows = [
+    ['Alias', 'mentor_fhi'],
+    ['Export Date', '2026-01-01'],
+    [],
+    [
+      'What gender do you identify as? (gender1)',
+      'Where were you born? (born2)',
+      `${BAGE_STEM_15.replace('[country]', 'Norway')} (born3)`
+    ]
+  ];
+  for (let i = 0; i < N; i++) rows.push([i % 2 ? 'Girl' : 'Boy', i === 0 ? 'Ukraine' : '[COUNTRY]', i === 0 ? '7' : null]);
+  const res = rscriptRoundTrip(rows, null, 'norway_eu');
+  if (!res) return;
+  assert.strictEqual(res.country, 'Norway', 'country read from the header, not [country]');
+  assert.strictEqual(res.n, N);
+}
+
 const TESTS = [
   testExportButtons,
   testNoDictionaryExport,
@@ -631,7 +735,10 @@ const TESTS = [
   testHandDictionaryEdgeCases,
   testMultiSegmentTrailingAnswerId,
   testAppSourceWiring,
-  testRealSpainCoreHeaders
+  testRealSpainCoreHeaders,
+  testRoundTripHungaryQualtricsOneHeaderRow,
+  testRoundTripCyprusPlainEu,
+  testRoundTripNorwayAliasDetected
 ];
 
 // Optional CLI arguments: run only the named tests.

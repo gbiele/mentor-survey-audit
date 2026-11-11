@@ -264,6 +264,23 @@ body {
   color: var(--text-muted);
 }
 
+.country-picker {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  font-size: 0.85rem;
+  color: #253368;
+}
+
+.country-picker label {
+  font-weight: 600;
+}
+
+.country-source {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
 .action-buttons {
   display: flex;
   flex-direction: column;

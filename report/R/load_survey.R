@@ -139,6 +139,10 @@ match_headers <- function(headers, meta) {
 }
 
 survey_country_from_header <- function(header) {
+  if (grepl("\\[country\\]", header, ignore.case = TRUE)) {
+    stop("The survey country is missing: the header still says [country] (", header,
+         "). Export the file again from the auditor and choose the country.", call. = FALSE)
+  }
   m <- regexec("came/moved to ([^?]+)", header, ignore.case = TRUE)
   hit <- regmatches(header, m)[[1]]
   if (length(hit) < 2) stop("Could not read the survey country from: ", header)

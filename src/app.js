@@ -7,6 +7,8 @@
   let auditor = null;
   let currentAuditResult = null;
   let currentSheetRows = null;
+  let currentCountry = null;
+  let currentCountrySource = null;
   let activeFilter = 'all';
   let searchQuery = '';
   let expandedRows = new Set();
@@ -40,6 +42,7 @@
 
       // 2. Attach Event Handlers
       setupUploadHandlers();
+      setupCountryHandlers();
       setupFilterHandlers();
       setupSearchHandler();
 
@@ -105,15 +108,92 @@
     reader.readAsArrayBuffer(file);
   }
 
+  const KNOWN_COUNTRIES = ['Cyprus', 'Germany', 'Hungary', 'Norway', 'Spain'];
+  const COUNTRY_SOURCE_LABELS = {
+    alias: 'Alias',
+    header: 'file header',
+    filename: 'file name',
+    selected: 'chosen'
+  };
+
+  function showCountrySource() {
+    const label = document.getElementById('country-source');
+    if (label) label.textContent = currentCountry ? COUNTRY_SOURCE_LABELS[currentCountrySource] : 'not detected — choose';
+  }
+
+  // Setting the select programmatically fires no change event, so the
+  // state variables are set by the caller and by the change handlers.
+  function showCountry() {
+    const select = document.getElementById('country-select');
+    const other = document.getElementById('country-other');
+    const isOther = !!currentCountry && !KNOWN_COUNTRIES.includes(currentCountry);
+    if (select) {
+      select.disabled = false;
+      select.value = isOther ? 'other' : (currentCountry || '');
+    }
+    if (other) {
+      other.style.display = isOther ? '' : 'none';
+      other.value = isOther ? currentCountry : '';
+    }
+    showCountrySource();
+  }
+
+  function setupCountryHandlers() {
+    const select = document.getElementById('country-select');
+    const other = document.getElementById('country-other');
+    if (!select || !other) return;
+
+    select.addEventListener('change', () => {
+      if (select.value === 'other') {
+        other.style.display = '';
+        currentCountry = other.value.trim() || null;
+      } else {
+        other.style.display = 'none';
+        currentCountry = select.value || null;
+      }
+      currentCountrySource = currentCountry ? 'selected' : null;
+      showCountrySource();
+      runAudit();
+    });
+
+    other.addEventListener('input', () => {
+      currentCountry = other.value.trim() || null;
+      currentCountrySource = currentCountry ? 'selected' : null;
+      showCountrySource();
+      runAudit();
+    });
+  }
+
   function processAudit(rows, filename) {
     if (!auditor) return;
     try {
-      const result = auditor.auditSheet(rows);
-      currentAuditResult = result;
-      currentAuditResult.filename = filename || 'Survey_Export.xlsx';
+      const detected = SurveyAuditor.detectSurveyCountry(rows, filename);
+      currentCountry = detected.name;
+      currentCountrySource = detected.source;
       currentSheetRows = rows;
+      currentAuditResult = null;
+      showCountry();
+      runAudit(filename || 'Survey_Export.xlsx');
+    } catch (err) {
+      alert('Error during audit processing: ' + err.message);
+      console.error(err);
+    }
+  }
+
+  // Audit the current rows with the current country: the country changes the column mapping.
+  function runAudit(filename) {
+    if (!auditor || !currentSheetRows) return;
+    try {
+      const name = filename || (currentAuditResult && currentAuditResult.filename) || 'Survey_Export.xlsx';
+      const result = auditor.auditSheet(currentSheetRows, { country: currentCountry });
+      currentAuditResult = result;
+      currentAuditResult.filename = name;
       window.__LAST_AUDIT_RESULT__ = result;
 
+      for (const id of ['btn-export-cleaned', 'btn-export-cleaned-core', 'btn-export-scrambled-cleaned']) {
+        const btn = document.getElementById(id);
+        if (btn) btn.disabled = !currentCountry;
+      }
       renderDashboard(result);
     } catch (err) {
       alert('Error during audit processing: ' + err.message);
@@ -934,7 +1014,11 @@
       alert('Please upload or load a survey export before exporting cleaned data.');
       return;
     }
-    const cleaned = SurveyAuditor.cleanExportRows(currentSheetRows, { dictionary: auditor.dictionary });
+    if (!currentCountry) {
+      alert('Please choose the survey country before exporting cleaned data.');
+      return;
+    }
+    const cleaned = SurveyAuditor.cleanExportRows(currentSheetRows, { dictionary: auditor.dictionary, country: currentCountry });
     writeExportWorkbook(cleaned, 'Cleaned', '_cleaned.xlsx');
   };
 
@@ -943,7 +1027,11 @@
       alert('Please upload or load a survey export before exporting cleaned data.');
       return;
     }
-    const cleaned = SurveyAuditor.cleanExportRows(currentSheetRows, { dictionary: auditor.dictionary, coreOnly: true });
+    if (!currentCountry) {
+      alert('Please choose the survey country before exporting cleaned data.');
+      return;
+    }
+    const cleaned = SurveyAuditor.cleanExportRows(currentSheetRows, { dictionary: auditor.dictionary, country: currentCountry, coreOnly: true });
     writeExportWorkbook(cleaned, 'Cleaned', '_cleaned_core.xlsx');
   };
 
@@ -965,7 +1053,11 @@
       alert('Please upload or load a survey export before downloading a scrambled sample.');
       return;
     }
-    const cleaned = SurveyAuditor.cleanExportRows(currentSheetRows);
+    if (!currentCountry) {
+      alert('Please choose the survey country before downloading a scrambled cleaned sample.');
+      return;
+    }
+    const cleaned = SurveyAuditor.cleanExportRows(currentSheetRows, { dictionary: auditor.dictionary, country: currentCountry });
     const sample = SurveyAuditor.scrambleExportSample(cleaned, { layout: CLEANED_SAMPLE_LAYOUT });
     writeExportWorkbook(sample, 'Scrambled', '_cleaned_scrambled_sample.xlsx');
   };
