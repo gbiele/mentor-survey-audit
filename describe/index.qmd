@@ -33,6 +33,13 @@ webr:
 
 <style>
 .observablehq--inspect { display: none; }
+#build-status { margin: 0.5rem 0 0; }
+#build-status:not([data-state="busy"]) .spinner-border { display: none; }
+#build-status .spinner-border { margin-right: 0.5rem; vertical-align: -0.125em; }
+#build-status[data-state="failed"] { color: #b02a37; }
+.chart-placeholder { color: #6c757d; font-style: italic; }
+section.level2:not(.chart-drawn):not(.chart-failed):not(.chart-broken) .exercise-cell { display: none; }
+section.chart-drawn .chart-placeholder, section.chart-failed .chart-placeholder { display: none; }
 </style>
 
 This page shows results for a cleaned JA-MENTOR youth survey. It uses the same scoring as the local report: Likert sums are prorated when at least 80% of the items are answered, and ACE-IQ follows the World Health Organization category rules.
@@ -45,12 +52,62 @@ The workbook stays in this browser. Nothing is uploaded and nothing is stored on
 ## Two steps take a while
 
 1. **Downloading R and the packages.** The first time this page is opened, the browser downloads them before a report can be built. Opening the page again in the same browser is quicker.
-2. **Producing the plots.** After you press **Build the report**, drawing the charts takes about a minute. A line with the number of young people appears first, and the figures follow.
+2. **Producing the plots.** After you press **Build the report**, drawing the charts takes about a minute. The line under the button shows the current step and says when the report is complete.
 :::
 
 ```{ojs}
 //| echo: false
-loaded = false
+load_status = null
+```
+
+```{ojs}
+//| echo: false
+section_1 = null
+```
+
+```{ojs}
+//| echo: false
+section_2 = null
+```
+
+```{ojs}
+//| echo: false
+section_3 = null
+```
+
+```{ojs}
+//| echo: false
+section_4 = null
+```
+
+```{ojs}
+//| echo: false
+section_5 = null
+```
+
+```{ojs}
+//| echo: false
+section_6 = null
+```
+
+```{ojs}
+//| echo: false
+section_7 = null
+```
+
+```{ojs}
+//| echo: false
+section_8 = null
+```
+
+```{ojs}
+//| echo: false
+section_9 = null
+```
+
+```{ojs}
+//| echo: false
+section_10 = null
 ```
 
 ```{ojs}
@@ -63,14 +120,24 @@ viewof build_clicks = {
   });
   file.id = "workbook-file";
   const button = document.createElement("button");
+  button.id = "build-report";
   button.type = "button";
   button.className = "btn btn-primary";
   button.textContent = "Build the report";
   button.style.marginTop = "0.75rem";
-  const note = document.createElement("p");
-  note.style.margin = "0.5rem 0 0";
+  const status = document.createElement("div");
+  status.id = "build-status";
+  status.setAttribute("data-state", "idle");
+  status.setAttribute("role", "status");
+  status.setAttribute("aria-live", "polite");
+  const spinner = document.createElement("span");
+  spinner.className = "spinner-border spinner-border-sm";
+  spinner.setAttribute("aria-hidden", "true");
+  const message = document.createElement("span");
+  message.className = "build-status-text";
+  status.append(spinner, message);
   const wrap = document.createElement("div");
-  wrap.append(file, button, note);
+  wrap.append(file, button, status);
   wrap.value = 0;
   const fileInput = () => file.querySelector('input[type="file"]');
   const selected = () => {
@@ -78,24 +145,34 @@ viewof build_clicks = {
     return input && input.files && input.files[0];
   };
   const refreshNote = () => {
+    if (status.getAttribute("data-state") === "busy") return;
+    status.setAttribute("data-state", "idle");
     const chosen = selected();
     if (!chosen) {
-      note.textContent = "Choose a cleaned workbook, then press Build the report.";
-    } else if (+wrap.value < 1) {
-      note.textContent = chosen.name + " is selected. Press Build the report.";
+      message.textContent = "Choose a cleaned workbook, then press Build the report.";
     } else {
-      note.textContent = "Building the report from " + chosen.name + ". Downloading R and drawing the charts both take a while.";
+      message.textContent = chosen.name + " is selected. Press Build the report.";
     }
   };
-  file.addEventListener("input", refreshNote);
+  file.addEventListener("input", (event) => {
+    // Choosing a file only updates the note; it must not count as a click.
+    event.stopPropagation();
+    refreshNote();
+  });
   file.addEventListener("change", refreshNote);
   button.addEventListener("click", () => {
-    if (!selected()) {
+    if (status.getAttribute("data-state") === "busy") return;
+    const chosen = selected();
+    if (!chosen) {
       refreshNote();
       return;
     }
+    // Show the busy state at once; the progress cell takes over from here.
+    status.setAttribute("data-state", "busy");
+    message.textContent = "Building the report from " + chosen.name + "…";
+    button.disabled = true;
+    button.textContent = "Building the report…";
     wrap.value = +wrap.value + 1;
-    refreshNote();
     wrap.dispatchEvent(new Event("input", { bubbles: true }));
   });
   refreshNote();
@@ -116,149 +193,448 @@ workbook_name = {
 
 ```{ojs}
 //| echo: false
-uploaded = {
+upload_result = {
   const clicks = +build_clicks || 0;
-  if (clicks < 1) return 0;
+  if (clicks < 1) return { clicks: 0, error: "" };
   const input = document.querySelector('#workbook-file input[type="file"]');
   const file = input && input.files && input.files[0];
-  if (!file) return 0;
-  const webR = await webROjs.webRPromise;
-  const bytes = new Uint8Array(await file.arrayBuffer());
-  await webR.FS.writeFile("upload.xlsx", bytes);
-  if (window.XLSX) {
-    const book = XLSX.read(bytes, { type: "array" });
-    const sheetName = book.SheetNames.includes("Cleaned") ? "Cleaned" : book.SheetNames[0];
-    const csv = XLSX.utils.sheet_to_csv(book.Sheets[sheetName]);
-    await webR.FS.writeFile("upload.csv", new TextEncoder().encode(csv));
+  if (!file) return { clicks: 0, error: "" };
+  try {
+    const webR = await webROjs.webRPromise;
+    const bytes = new Uint8Array(await file.arrayBuffer());
+    await webR.FS.writeFile("upload.xlsx", bytes);
+    if (window.XLSX) {
+      const book = XLSX.read(bytes, { type: "array" });
+      const sheetName = book.SheetNames.includes("Cleaned") ? "Cleaned" : book.SheetNames[0];
+      const csv = XLSX.utils.sheet_to_csv(book.Sheets[sheetName]);
+      await webR.FS.writeFile("upload.csv", new TextEncoder().encode(csv));
+    }
+    return { clicks, error: "" };
+  } catch (error) {
+    return { clicks, error: error && error.message ? error.message : String(error) };
   }
-  return clicks;
 }
+```
+
+```{ojs}
+//| echo: false
+uploaded = upload_result.clicks
+```
+
+```{ojs}
+//| echo: false
+upload_error = upload_result.error
 ```
 
 ```{webr}
 #| input:
 #|   - uploaded
+#|   - upload_error
 #|   - workbook_name
-#| define: loaded
+#| define: load_status
 #| envir: global
 options(mentor.webr = TRUE)
+loaded <- FALSE
+current_build <- uploaded
 root <- "vfs/report/R"
 for (file in c(
   "load_survey.R", "scores.R", "plots.R", "scales.R", "scale_page.R", "sections.R"
 )) {
   source(file.path(root, file), local = FALSE)
 }
+# Draws one section. `previous` is the status of the cell before it in the chain.
+# A run whose `previous` is not from the current build (the first run of every cell
+# when the page opens, or a run left over from an earlier build) draws nothing,
+# so that the sections are drawn one after the other.
+# A section that stops with an error does not stop the build:
+# its status says so, and its output is a message.
+draw_section <- function(expr, previous) {
+  if (!(is.list(previous) && length(previous$build) == 1 &&
+        isTRUE(as.numeric(previous$build) == current_build))) {
+    return(list(
+      status = list(build = NA_real_, ok = FALSE, skipped = TRUE, message = ""),
+      output = htmltools::browsable(htmltools::tagList())
+    ))
+  }
+  if (!isTRUE(loaded)) {
+    return(list(
+      status = list(build = current_build, ok = FALSE, skipped = TRUE, message = ""),
+      output = htmltools::browsable(htmltools::tagList())
+    ))
+  }
+  result <- tryCatch(
+    list(ok = TRUE, out = force(expr)),
+    error = function(e) list(ok = FALSE, message = conditionMessage(e))
+  )
+  if (result$ok) {
+    list(
+      status = list(build = current_build, ok = TRUE, skipped = FALSE, message = ""),
+      output = result$out
+    )
+  } else {
+    list(
+      status = list(build = current_build, ok = FALSE, skipped = FALSE, message = result$message),
+      output = htmltools::browsable(htmltools::tags$p(
+        class = "text-danger",
+        paste0("This section could not be drawn: ", result$message)
+      ))
+    )
+  }
+}
 start <- is.numeric(uploaded) && length(uploaded) == 1 && !is.na(uploaded) && uploaded > 0
 if (!isTRUE(start)) {
-  loaded <- FALSE
+  load_status <- list(build = 0, ok = FALSE, message = "")
   htmltools::browsable(htmltools::tags$p(
     "Choose a cleaned workbook, then press Build the report."
   ))
 } else {
-  survey <- tryCatch(
-    load_survey("upload.xlsx", report_dir = "vfs/report"),
-    error = function(e) {
-      if (!file.exists("upload.csv")) stop(conditionMessage(e))
-      load_survey("upload.csv", report_dir = "vfs/report")
+  problem <- tryCatch({
+    if (is.character(upload_error) && length(upload_error) == 1 && nzchar(upload_error)) {
+      stop(upload_error)
     }
-  )
-  if (is.character(workbook_name) && length(workbook_name) == 1 && nzchar(workbook_name)) {
-    survey$file <- basename(workbook_name)
+    survey <- tryCatch(
+      load_survey("upload.xlsx", report_dir = "vfs/report"),
+      error = function(e) {
+        if (!file.exists("upload.csv")) stop(conditionMessage(e))
+        load_survey("upload.csv", report_dir = "vfs/report")
+      }
+    )
+    if (is.character(workbook_name) && length(workbook_name) == 1 && nzchar(workbook_name)) {
+      survey$file <- basename(workbook_name)
+    }
+    loaded <- TRUE
+    ""
+  }, error = function(e) conditionMessage(e))
+  if (isTRUE(loaded)) {
+    load_status <- list(build = current_build, ok = TRUE, message = "")
+    htmltools::browsable(htmltools::tags$p(paste0(
+      "Loaded ", survey$file, ". ", survey$n_file, " rows were read, and ",
+      survey$n_declined, " people who did not agree to take part are excluded. ",
+      "The charts use the remaining ", survey$n, " young people."
+    )))
+  } else {
+    load_status <- list(build = current_build, ok = FALSE, message = problem)
+    htmltools::browsable(htmltools::tags$p(paste0(
+      "The workbook could not be read: ", problem
+    )))
   }
-  loaded <- TRUE
-  htmltools::browsable(htmltools::tags$p(paste0(
-    "Loaded ", survey$file, ". ", survey$n_file, " rows were read, and ",
-    survey$n_declined, " people who did not agree to take part are excluded. ",
-    "The charts use the remaining ", survey$n, " young people."
-  )))
 }
 ```
 
 ## Biography
 
+::: {.chart-placeholder}
+This chart is drawn after you build the report.
+:::
+
 ```{webr}
 #| input:
-#|   - loaded
+#|   - load_status
+#| define: section_1
 #| envir: global
-if (isTRUE(loaded)) render_biography(survey)
+.drawn <- draw_section(render_biography(survey), load_status)
+section_1 <- .drawn$status
+.drawn$output
 ```
 
 ## Living situation
 
+::: {.chart-placeholder}
+This chart is drawn after you build the report.
+:::
+
 ```{webr}
 #| input:
-#|   - loaded
+#|   - section_1
+#| define: section_2
 #| envir: global
-if (isTRUE(loaded)) render_living(survey)
+.drawn <- draw_section(render_living(survey), section_1)
+section_2 <- .drawn$status
+.drawn$output
 ```
 
 ## Socioeconomic
 
+::: {.chart-placeholder}
+This chart is drawn after you build the report.
+:::
+
 ```{webr}
 #| input:
-#|   - loaded
+#|   - section_2
+#| define: section_3
 #| envir: global
-if (isTRUE(loaded)) render_socioeconomic(survey)
+.drawn <- draw_section(render_socioeconomic(survey), section_2)
+section_3 <- .drawn$status
+.drawn$output
 ```
 
 ## BCFPI attention
 
+::: {.chart-placeholder}
+This chart is drawn after you build the report.
+:::
+
 ```{webr}
 #| input:
-#|   - loaded
+#|   - section_3
+#| define: section_4
 #| envir: global
-if (isTRUE(loaded)) render_scale(survey, "attention")
+.drawn <- draw_section(render_scale(survey, "attention"), section_3)
+section_4 <- .drawn$status
+.drawn$output
 ```
 
 ## BCFPI functioning
 
+::: {.chart-placeholder}
+This chart is drawn after you build the report.
+:::
+
 ```{webr}
 #| input:
-#|   - loaded
+#|   - section_4
+#| define: section_5
 #| envir: global
-if (isTRUE(loaded)) render_scale(survey, "functioning")
+.drawn <- draw_section(render_scale(survey, "functioning"), section_4)
+section_5 <- .drawn$status
+.drawn$output
 ```
 
 ## ACE-IQ
 
+::: {.chart-placeholder}
+This chart is drawn after you build the report.
+:::
+
 ```{webr}
 #| input:
-#|   - loaded
+#|   - section_5
+#| define: section_6
 #| envir: global
-if (isTRUE(loaded)) render_scale(survey, "ace", parts = "summary")
+.drawn <- draw_section(render_scale(survey, "ace", parts = "summary"), section_5)
+section_6 <- .drawn$status
+.drawn$output
 ```
 
 ```{webr}
 #| input:
-#|   - loaded
+#|   - section_6
+#| define: section_7
 #| envir: global
 #| timelimit: 420
-if (isTRUE(loaded)) render_scale(survey, "ace", parts = "items")
+.drawn <- draw_section(render_scale(survey, "ace", parts = "items"), section_6)
+section_7 <- .drawn$status
+.drawn$output
 ```
 
 ## KIDSCREEN
 
+::: {.chart-placeholder}
+This chart is drawn after you build the report.
+:::
+
 ```{webr}
 #| input:
-#|   - loaded
+#|   - section_7
+#| define: section_8
 #| envir: global
-if (isTRUE(loaded)) render_scale(survey, "kidscreen")
+.drawn <- draw_section(render_scale(survey, "kidscreen"), section_7)
+section_8 <- .drawn$status
+.drawn$output
 ```
 
 ## Social media time
 
+::: {.chart-placeholder}
+This chart is drawn after you build the report.
+:::
+
 ```{webr}
 #| input:
-#|   - loaded
+#|   - section_8
+#| define: section_9
 #| envir: global
-if (isTRUE(loaded)) render_scale(survey, "social_media_use")
+.drawn <- draw_section(render_scale(survey, "social_media_use"), section_8)
+section_9 <- .drawn$status
+.drawn$output
 ```
 
 ## Social media problems
 
+::: {.chart-placeholder}
+This chart is drawn after you build the report.
+:::
+
 ```{webr}
 #| input:
-#|   - loaded
+#|   - section_9
+#| define: section_10
 #| envir: global
-if (isTRUE(loaded)) render_scale(survey, "smadd")
+.drawn <- draw_section(render_scale(survey, "smadd"), section_9)
+section_10 <- .drawn$status
+.drawn$output
+```
+
+```{ojs}
+//| echo: false
+webr_state = {
+  const state = { status: "pending", message: "", clicks: 0, failed: {}, last: "", listeners: new Set() };
+  const notify = () => state.listeners.forEach((update) => update());
+  webROjs.webRPromise.then(
+    () => {
+      state.status = "ready";
+      notify();
+    },
+    (error) => {
+      state.status = "error";
+      state.message = error && error.message ? error.message : String(error);
+      notify();
+    }
+  );
+  // A section cell that fails in the runtime (worker died) shows an OJS error
+  // instead of reporting a status.
+  const scan = () => {
+    let changed = false;
+    document.querySelectorAll("section.level2 .exercise-cell").forEach((cell, index) => {
+      const broken = cell.matches(".observablehq--error") || cell.querySelector(".observablehq--error");
+      if (broken && state.failed[index] !== state.clicks) {
+        state.failed[index] = state.clicks;
+        changed = true;
+      }
+    });
+    if (changed) notify();
+  };
+  new MutationObserver(scan).observe(document.body, {
+    subtree: true, childList: true, attributes: true, attributeFilter: ["class"]
+  });
+  return state;
+}
+```
+
+```{ojs}
+//| echo: false
+//| output: false
+build_progress = {
+  const first = (value) => Array.isArray(value) ? value[0] : value;
+  const clicks = +build_clicks || 0;
+  const statuses = [
+    section_1, section_2, section_3, section_4, section_5,
+    section_6, section_7, section_8, section_9, section_10
+  ];
+  // [section id, name, number of cells]; the cells are numbered in page order.
+  const layout = [
+    ["biography", "Biography", 1],
+    ["living-situation", "Living situation", 1],
+    ["socioeconomic", "Socioeconomic", 1],
+    ["bcfpi-attention", "BCFPI attention", 1],
+    ["bcfpi-functioning", "BCFPI functioning", 1],
+    ["ace-iq", "ACE-IQ", 2],
+    ["kidscreen", "KIDSCREEN", 1],
+    ["social-media-time", "Social media time", 1],
+    ["social-media-problems", "Social media problems", 1]
+  ];
+  const state = webr_state;
+  state.clicks = clicks;
+  const own = (status) => !!status && first(status.build) === clicks;
+  const update = () => {
+    const status = document.getElementById("build-status");
+    const button = document.getElementById("build-report");
+    const message = status.querySelector(".build-status-text");
+    const classes = ["chart-waiting", "chart-drawn", "chart-failed", "chart-broken", "chart-notdrawn"];
+    const paint = (index, kind, text) => {
+      const section = document.getElementById(layout[index][0]);
+      section.classList.remove(...classes);
+      if (kind) section.classList.add("chart-" + kind);
+      section.querySelector(".chart-placeholder").textContent = text;
+    };
+    const paintAll = (kind, text) => layout.forEach((_, index) => paint(index, kind, text));
+    const show = (value, text) => {
+      const key = clicks + "|" + value + "|" + text;
+      if (state.last === key) return;
+      state.last = key;
+      status.setAttribute("data-state", value);
+      message.textContent = text;
+      const busy = value === "busy";
+      button.disabled = busy;
+      button.textContent = busy ? "Building the report…" : "Build the report";
+    };
+    const waiting = "Waiting for this chart…";
+    if (clicks < 1) {
+      paintAll(null, "This chart is drawn after you build the report.");
+      return;
+    }
+    if (state.status === "error") {
+      paintAll("notdrawn", "Not drawn: R could not be started.");
+      show("failed", "R could not be started: " + state.message);
+      return;
+    }
+    if (state.status === "pending") {
+      const loading = document.getElementById("exercise-loading-status");
+      const step = loading ? loading.textContent.trim() : "";
+      paintAll("waiting", waiting);
+      show("busy", "Downloading R and the packages" + (step ? " (" + step + ")" : "") + "…");
+      return;
+    }
+    if (!load_status || first(load_status.build) !== clicks) {
+      paintAll("waiting", waiting);
+      show("busy", "Reading " + (workbook_name || "the workbook") + "…");
+      return;
+    }
+    if (!first(load_status.ok)) {
+      paintAll("notdrawn", "Not drawn: the workbook could not be read.");
+      show("failed", "The workbook could not be read: " + first(load_status.message));
+      return;
+    }
+    let offset = 0;
+    const sections = layout.map(([id, name, count]) => {
+      const cells = statuses.slice(offset, offset + count);
+      const broken = cells.some((_, i) => state.failed[offset + i] === clicks);
+      offset += count;
+      const finished = cells.every(own);
+      const failed = cells.some((s) => own(s) && !first(s.ok) && !first(s.skipped));
+      return { name, finished, failed, broken: broken && !finished };
+    });
+    // A runtime failure stops the chain: later sections never get a status.
+    const stopped = sections.findIndex((s) => s.broken);
+    let done = 0;
+    sections.forEach((s, index) => {
+      if (stopped >= 0 && index > stopped) {
+        paint(index, "notdrawn", "Not drawn.");
+      } else if (index === stopped) {
+        paint(index, "broken", "This section could not be drawn.");
+      } else if (s.finished) {
+        paint(index, s.failed ? "failed" : "drawn", "");
+        done += 1;
+      } else {
+        paint(index, "waiting", waiting);
+      }
+    });
+    if (stopped >= 0) {
+      show("failed", "The report stopped early: " + sections[stopped].name +
+        " could not be drawn, so the sections after it were not drawn.");
+      return;
+    }
+    if (done < sections.length) {
+      show("busy", "Drawing the charts: " + done + " of " + sections.length + " sections done.");
+      return;
+    }
+    const failedNames = sections.filter((s) => s.failed).map((s) => s.name);
+    if (failedNames.length) {
+      show("failed", "The report is finished, but these sections could not be drawn: " +
+        failedNames.join(", ") + ".");
+    } else {
+      show("done", "The report is complete.");
+    }
+  };
+  state.listeners.add(update);
+  const loading = document.getElementById("exercise-loading-status");
+  const observer = new MutationObserver(update);
+  if (loading) observer.observe(loading, { subtree: true, childList: true, characterData: true });
+  invalidation.then(() => {
+    state.listeners.delete(update);
+    observer.disconnect();
+  });
+  update();
+}
 ```
