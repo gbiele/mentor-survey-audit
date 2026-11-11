@@ -527,7 +527,10 @@ const tests = {
       'hu',
       'Germany',
       'DE',
-      'deutschland'
+      'deutschland',
+      // Issue #15: whole-word matching recognises these too.
+      'survey for spain',
+      'Spain–'
     ];
     const failures = [];
     for (const alias of recognized) {
@@ -548,9 +551,7 @@ const tests = {
       'MENTORMasterGER1',
       'DEMO',
       '',
-      'survey for spain',
-      'Espana',
-      'Spain\u2013'
+      'Espana'
     ];
     const failures = [];
     for (const alias of unrecognized) {

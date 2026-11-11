@@ -53,16 +53,65 @@
     return norm(str).toLowerCase();
   }
 
+  const COUNTRIES = [
+    { key: "cyprus", name: "Cyprus", names: ["cyprus"], iso: "CY" },
+    { key: "germany", name: "Germany", names: ["germany", "deutschland"], iso: "DE" },
+    { key: "hungary", name: "Hungary", names: ["hungary"], iso: "HU" },
+    { key: "norway", name: "Norway", names: ["norway", "norge"], iso: "NO" },
+    { key: "spain", name: "Spain", names: ["spain", "españa"], iso: "ES" }
+  ];
+
   /**
-   * Whole Alias cell, after normKey, names the EU Survey country.
-   * Accents stay. The cell is not split and is not matched as a substring.
+   * Words of a text: split at letter/digit changes, lower-to-upper case
+   * changes and any separator. "MentorCY2026" -> Mentor, CY, 2026.
+   */
+  function countryWords(text) {
+    return norm(text)
+      .replace(/(\p{Ll})(\p{Lu})/gu, "$1 $2")
+      .replace(/(\p{L})(\p{N})/gu, "$1 $2")
+      .replace(/(\p{N})(\p{L})/gu, "$1 $2")
+      .split(/[^\p{L}\p{N}]+/u)
+      .filter(Boolean);
+  }
+
+  /** Whole word is a country name in any case, or its ISO code in upper case when allowIso. */
+  function countryFromWord(word, allowIso) {
+    const low = word.toLowerCase();
+    return COUNTRIES.find(c => c.names.includes(low) || (allowIso && word === c.iso)) || null;
+  }
+
+  /** The one country the words name; null for none or for two different countries. */
+  function uniqueCountry(words, allowIso) {
+    const found = new Set();
+    for (const word of words) {
+      const c = countryFromWord(word, allowIso);
+      if (c) found.add(c);
+    }
+    return found.size === 1 ? [...found][0] : null;
+  }
+
+  /**
+   * Country from the EU Survey Alias cell. A whole cell of es, hu or de
+   * counts; otherwise the words of the cell are matched whole.
    */
   function countryFromAliasCell(cell) {
     const key = normKey(cell);
-    if (key === "spain" || key === "españa" || key === "es") return "spain";
-    if (key === "hungary" || key === "hu") return "hungary";
-    if (key === "germany" || key === "de" || key === "deutschland") return "germany";
-    return null;
+    if (["es", "hu", "de"].includes(key)) return COUNTRIES.find(c => c.iso.toLowerCase() === key);
+    return uniqueCountry(countryWords(cell), true);
+  }
+
+  /** English name for a known country or local spelling; other text stays as given (trimmed). */
+  function normalizeCountryName(text) {
+    const t = norm(text);
+    if (!t) return null;
+    const c = COUNTRIES.find(x => x.names.includes(t.toLowerCase()));
+    return c ? c.name : t;
+  }
+
+  /** Lower-case key used in orig_aliases. */
+  function countryKey(name) {
+    const c = COUNTRIES.find(x => x.name === name);
+    return c ? c.key : String(name).toLowerCase();
   }
 
   /**
@@ -113,30 +162,104 @@
     return { text: raw, varId: "", hadTag: false };
   }
 
+  const QUALTRICS_HEADER_ROW_CELLS = new Set([
+    "start date", "end date", "response id", "recorded date",
+    "startdate", "enddate", "responseid", "recordeddate"
+  ]);
+
+  /** Row r is an extra Qualtrics header row when its cell under column m is a question-text or ImportId cell. */
+  function isQualtricsHeaderRow(rows, r, m) {
+    const cell = (rows[r] || [])[m];
+    if (typeof cell !== "string") return false;
+    const key = normKey(cell);
+    return QUALTRICS_HEADER_ROW_CELLS.has(key) || key.startsWith('{"importid"');
+  }
+
+  function nonEmptyCount(row) {
+    return (row || []).filter(c => c != null && String(c).trim() !== "").length;
+  }
+
+  /** The Alias value: B1 when A1 is the "Alias" label, else A1 (unlabelled preamble). */
+  function aliasCell(rows) {
+    const row0 = rows[0] || [];
+    return normKey(row0[0]) === "alias" ? row0[1] : row0[0];
+  }
+
+  /**
+   * Layout of an export. Qualtrics: header in row 0, then up to two extra
+   * header rows (question text, ImportId). EU Survey: Alias and Export Date
+   * rows (labelled, or unlabelled with a short row 0 above a wider header
+   * in row 3), then the header in row 3. Otherwise no preamble: header in row 0.
+   */
   function detectExportLayout(rows) {
     const row0 = rows[0] || [];
-    let qualtrics = false;
-    for (const cell of row0) {
+    const marker = row0.findIndex(cell => {
       const v = norm(cell).toLowerCase();
-      if (v === "startdate" || v === "responseid" || v === "recordeddate") {
-        qualtrics = true;
-        break;
-      }
-    }
-    if (qualtrics) {
+      return v === "startdate" || v === "responseid" || v === "recordeddate";
+    });
+    if (marker !== -1) {
+      let extra = 0;
+      while (extra < 2 && 1 + extra < rows.length && isQualtricsHeaderRow(rows, 1 + extra, marker)) extra++;
       return {
         format: "qualtrics",
         headerRowIndex: 0,
-        dataStartIndex: 2,
-        metadataRows: 2
+        dataStartIndex: 1 + extra,
+        metadataRows: 1 + extra
+      };
+    }
+    if (normKey(row0[0]) === "alias" || normKey((rows[1] || [])[0]) === "export date" ||
+        (nonEmptyCount(row0) <= 2 && nonEmptyCount(rows[3]) > nonEmptyCount(row0))) {
+      return {
+        format: "eusurvey",
+        headerRowIndex: 3,
+        dataStartIndex: 4,
+        metadataRows: 4
       };
     }
     return {
-      format: "eusurvey",
-      headerRowIndex: 3,
-      dataStartIndex: 4,
-      metadataRows: 4
+      format: "plain",
+      headerRowIndex: 0,
+      dataStartIndex: 1,
+      metadataRows: 1
     };
+  }
+
+  /** Country named by "came/moved to <X>?" in a header row, unless X is the [country] placeholder. */
+  function countryFromHeaderRow(headerRow) {
+    const found = new Set();
+    for (const cell of headerRow || []) {
+      const m = norm(cell).match(/came\/moved to\s+(.+?)\s*\?/i);
+      if (!m || m[1].trim().toLowerCase() === "[country]") continue;
+      found.add(normalizeCountryName(m[1]));
+    }
+    return found.size === 1 ? [...found][0] : null;
+  }
+
+  /**
+   * Survey country from the Alias cell (EU Survey), then the file's own
+   * age-at-arrival header, then the file name. First source with exactly
+   * one country wins.
+   */
+  function detectSurveyCountry(rows, fileName) {
+    const layout = detectExportLayout(rows);
+    if (layout.format === "eusurvey") {
+      const c = countryFromAliasCell(aliasCell(rows));
+      if (c) return { name: c.name, source: "alias" };
+    }
+    const fromHeader = countryFromHeaderRow(rows[layout.headerRowIndex]);
+    if (fromHeader) return { name: fromHeader, source: "header" };
+    if (fileName) {
+      const c = uniqueCountry(countryWords(String(fileName).replace(/\.[^.]*$/, "")), false);
+      if (c) return { name: c.name, source: "filename" };
+    }
+    return { name: null, source: null };
+  }
+
+  /** options.country (trimmed, non-empty) replaces detection from the sheet. */
+  function resolveCountry(rows, options) {
+    const given = options && options.country != null ? String(options.country).trim() : "";
+    if (given) return { name: normalizeCountryName(given), source: "selected" };
+    return detectSurveyCountry(rows);
   }
 
   /**
@@ -214,17 +337,8 @@
     return [{ key: joined, answerId: null }];
   }
 
-  const COUNTRY_NAMES = { spain: "Spain", hungary: "Hungary", germany: "Germany" };
-
-  /** English country name from the EU Survey alias cell; null for Qualtrics or unknown. */
-  function surveyCountryName(rows) {
-    return detectExportLayout(rows).format === "eusurvey"
-      ? COUNTRY_NAMES[countryFromAliasCell(rows[0] && rows[0][1])] || null
-      : null;
-  }
-
   function replaceCountry(text, name) {
-    return name ? String(text).replace(/\[country\]/gi, name) : text;
+    return name ? String(text).replace(/\[country\]/gi, () => name) : text;
   }
 
   /**
@@ -271,9 +385,9 @@
     const layout = detectExportLayout(rows);
     const dataRows = rows.slice(layout.dataStartIndex);
     const width = (rows[layout.headerRowIndex] || []).length;
-    const audit = new SurveyAuditor(opts.dictionary).auditSheet(rows);
+    const audit = new SurveyAuditor(opts.dictionary).auditSheet(rows, { country: opts.country });
     const byCol = new Map(audit.columns.map(c => [c.colIndex, c]));
-    const countryName = surveyCountryName(rows);
+    const countryName = resolveCountry(rows, opts).name;
 
     const keep = [];
     for (let i = 0; i < width; i++) {
@@ -555,6 +669,26 @@
     }
 
     /**
+     * Header texts a cleaned export writes for variables whose stem or item
+     * names [country], with the country filled in. Built once per country name.
+     */
+    countryTextIndex(name) {
+      if (!this.countryTextIndexes) this.countryTextIndexes = new Map();
+      if (!this.countryTextIndexes.has(name)) {
+        const index = new Map();
+        for (const v of this.variables) {
+          if (!/\[country\]/i.test(`${v.question_stem || ""} ${v.item_text || ""}`)) continue;
+          const full = v.item_text ? `${v.question_stem}: ${v.item_text}` : v.question_stem;
+          const key = normKey(replaceCountry(full, name));
+          if (!index.has(key)) index.set(key, []);
+          index.get(key).push(v);
+        }
+        this.countryTextIndexes.set(name, index);
+      }
+      return this.countryTextIndexes.get(name);
+    }
+
+    /**
      * Match a column header to a canonical variable definition
      */
     matchVariable(headerStr, colIndex, context) {
@@ -625,7 +759,15 @@
           let exactOrig = null;
           let aliasMatch = null;
 
+          // With a country known, a variable whose alias for that country is another ID
+          // does not match this ID through orig_variable, its clean name or another country's alias.
+          const blocked = v => {
+            const own = country && v.orig_aliases && v.orig_aliases[country];
+            return own != null && own !== "" && String(own).toLowerCase() !== vidLow;
+          };
+
           for (const v of this.variables) {
+            if (blocked(v)) continue;
             if (v.orig_variable && v.orig_variable.toLowerCase() === vidLow) {
               if (!exactOrig || (v.is_core !== false && exactOrig.is_core === false)) {
                 exactOrig = v;
@@ -647,10 +789,20 @@
           } else if (aliasMatch) {
             canonical = aliasMatch;
             matchType = 'country_alias';
-          } else if (this.byCleanVar.has(vidLow)) {
+          } else if (this.byCleanVar.has(vidLow) && !blocked(this.byCleanVar.get(vidLow))) {
             canonical = this.byCleanVar.get(vidLow);
             matchType = 'clean_name_exact';
           }
+        }
+      }
+
+      // 2a. A header whose own text (stem: item) is a dictionary stem beats a match on the part
+      //     before the last colon. A cleaned export writes the stem of such variables this way.
+      if (!canonical && text && normKey(text) !== normKey(stem) && this.byStemKey.has(normKey(text))) {
+        const res = selectCandidate(this.byStemKey.get(normKey(text)), 'question_text_exact');
+        if (res) {
+          canonical = res.candidate;
+          matchType = res.type;
         }
       }
 
@@ -690,6 +842,16 @@
         }
       }
 
+      // 5. A cleaned export writes the stem with [country] replaced by the survey country.
+      if (!canonical && context && context.countryName && text) {
+        const hits = this.countryTextIndex(context.countryName).get(normKey(text));
+        const res = selectCandidate(hits, 'country_text_exact');
+        if (res) {
+          canonical = res.candidate;
+          matchType = res.type;
+        }
+      }
+
       return {
         colIndex,
         rawHeader: headerStr,
@@ -706,20 +868,23 @@
     /**
      * Audit raw sheet rows from SheetJS
      * @param {Array<Array<any>>} rows - 2D array of spreadsheet cell values
+     * @param {{country?: string}} [options] - country replaces detection from the sheet
      */
-    auditSheet(rows) {
+    auditSheet(rows, options) {
       if (!rows || rows.length < 2) {
         throw new Error("Invalid spreadsheet format: expected at least header and metadata rows.");
       }
 
       const layout = detectExportLayout(rows);
-      const country = layout.format === "eusurvey"
-        ? countryFromAliasCell(rows[0] && rows[0][1])
-        : null;
+      const surveyCountry = resolveCountry(rows, options);
+      const country = surveyCountry.name ? countryKey(surveyCountry.name) : null;
+      const isEu = layout.format === "eusurvey";
 
       const metadata = {
-        alias: rows[0] && rows[0][1] ? String(rows[0][1]) : "",
-        exportDate: rows[1] && rows[1][1] ? String(rows[1][1]) : "",
+        alias: isEu && aliasCell(rows) ? String(aliasCell(rows)) : "",
+        exportDate: isEu && rows[1] && rows[1][1] ? String(rows[1][1]) : "",
+        country: surveyCountry.name || null,
+        countrySource: surveyCountry.source || null,
         totalRows: rows.length,
         dataRowCount: Math.max(0, rows.length - layout.dataStartIndex),
         exportFormat: layout.format
@@ -738,7 +903,7 @@
           continue; // Skip trailing empty columns
         }
 
-        const context = { matchedVars, prevCanonical, country };
+        const context = { matchedVars, prevCanonical, country, countryName: surveyCountry.name };
         const headerInfo = this.matchVariable(rawHeader, colIdx, context);
 
         if (headerInfo.canonical && headerInfo.canonical.variable) {
@@ -1032,6 +1197,8 @@
   }
 
   SurveyAuditor.cleanExportRows = cleanExportRows;
+  SurveyAuditor.detectExportLayout = detectExportLayout;
+  SurveyAuditor.detectSurveyCountry = detectSurveyCountry;
   SurveyAuditor.scrambleExportSample = scrambleExportSample;
 
   return SurveyAuditor;

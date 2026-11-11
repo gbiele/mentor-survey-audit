@@ -55,20 +55,34 @@ format:
       <div class="drop-zone-hint">or click to browse local files (.xlsx, .xls)</div>
       <input type="file" id="file-input" accept=".xlsx, .xls" style="display: none;" />
     </div>
+    <div class="country-picker">
+      <label for="country-select">Survey country</label>
+      <select id="country-select" disabled>
+        <option value="">not detected — choose</option>
+        <option value="Cyprus">Cyprus</option>
+        <option value="Germany">Germany</option>
+        <option value="Hungary">Hungary</option>
+        <option value="Norway">Norway</option>
+        <option value="Spain">Spain</option>
+        <option value="other">Other…</option>
+      </select>
+      <input type="text" id="country-other" placeholder="Country name" style="display:none;" />
+      <span id="country-source" class="country-source"></span>
+    </div>
     <div class="action-buttons">
       <button type="button" id="btn-export-issues" class="btn btn-export" onclick="window.exportAuditIssuesCSV()">
         📥 Export Audit Issues (CSV)
       </button>
-      <button type="button" id="btn-export-cleaned" class="btn btn-export" onclick="window.exportCleanedData()">
+      <button type="button" id="btn-export-cleaned" class="btn btn-export" disabled onclick="window.exportCleanedData()">
         Export cleaned data (all columns)
       </button>
-      <button type="button" id="btn-export-cleaned-core" class="btn btn-export" onclick="window.exportCleanedCoreData()" title="Core questions only, with English headers and answers, for cross-country analysis and the Survey results page">
+      <button type="button" id="btn-export-cleaned-core" class="btn btn-export" disabled onclick="window.exportCleanedCoreData()" title="Core questions only, with English headers and answers, for cross-country analysis and the Survey results page">
         Export cleaned data (core questions)
       </button>
       <button type="button" id="btn-export-scrambled" class="btn btn-export btn-sm" onclick="window.exportScrambledSample()" title="Download a 50-row column-scrambled sample of the uploaded file for debugging">
         Scrambled sample
       </button>
-      <button type="button" id="btn-export-scrambled-cleaned" class="btn btn-export btn-sm" onclick="window.exportScrambledCleanedSample()" title="Download a 50-row column-scrambled sample of the cleaned file for debugging">
+      <button type="button" id="btn-export-scrambled-cleaned" class="btn btn-export btn-sm" disabled onclick="window.exportScrambledCleanedSample()" title="Download a 50-row column-scrambled sample of the cleaned file for debugging">
         Scrambled cleaned sample
       </button>
       <button type="button" id="btn-load-sample" class="btn btn-subtle btn-sm" onclick="window.loadBundledSample()" title="Load bundled 100-respondent example data for demonstration purposes">
