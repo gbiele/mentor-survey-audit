@@ -11,6 +11,12 @@ excluded_gender_note <- function(survey) {
   )
 }
 
+missing_items_note <- function(missing) {
+  if (length(missing)) {
+    mentor_emit("These items are not in this file: ", paste(missing, collapse = ", "), ".\n\n", sep = "")
+  }
+}
+
 likert_blocks <- function(spec) {
   if (is.null(spec$domains)) {
     return(list(list(
@@ -40,14 +46,33 @@ apply_reverse <- function(survey, m, reverse) {
   m
 }
 
-render_likert <- function(survey, spec) {
+render_likert <- function(survey, spec, missing = character()) {
   mentor_emit("\n\n## What the scale measures\n\n", spec$measures, "\n\n", sep = "")
   mentor_emit(excluded_gender_note(survey), "\n\n", sep = "")
+  missing_items_note(missing)
   blocks <- likert_blocks(spec)
   frames <- vector("list", length(blocks))
   scored <- vector("list", length(blocks))
   for (i in seq_along(blocks)) {
     block <- blocks[[i]]
+    block_missing <- intersect(block$items, missing)
+    if (length(block_missing)) {
+      # An absent item is not an unanswered item: no sum over a reduced item set.
+      if (is.null(block$name)) {
+        mentor_emit(
+          "There is no sum, because ", length(block_missing),
+          " of the items are not in this file.\n\n",
+          sep = ""
+        )
+      } else {
+        mentor_emit(
+          block$name, ": no sum, because ", length(block_missing),
+          " of its items are not in this file.\n\n",
+          sep = ""
+        )
+      }
+      next
+    }
     one <- likert_scores(apply_reverse(
       survey,
       substantive_matrix(survey, block$items),
@@ -66,18 +91,20 @@ render_likert <- function(survey, spec) {
     )
     frames[[i]] <- gender_mean_frame(one$score, survey$label$gender1, block$score_name)
   }
-  means <- do.call(rbind, frames)
-  mentor_plot(score_mean_plot(means, spec$ylab))
+  if (!all(vapply(frames, is.null, logical(1)))) {
+    means <- do.call(rbind, frames)
+    mentor_plot(score_mean_plot(means, spec$ylab))
+  }
   mentor_emit("\n\n## Responses to each item\n\n")
   if (is.null(spec$domains)) {
-    for (variable in spec$items) {
+    for (variable in setdiff(spec$items, missing)) {
       mentor_plot(item_count_plot(survey, variable))
       mentor_emit("\n\n")
     }
   } else {
     for (domain in spec$domains) {
       mentor_emit("\n\n### ", domain$name, "\n\n", sep = "")
-      for (variable in domain$items) {
+      for (variable in setdiff(domain$items, missing)) {
         mentor_plot(item_count_plot(survey, variable))
         mentor_emit("\n\n")
       }
@@ -116,35 +143,45 @@ ace_prevalence_table <- function(ace, gender, version = c("binary", "frequency")
   do.call(rbind, rows)
 }
 
-render_ace <- function(survey, spec, parts = c("summary", "items")) {
+render_ace <- function(survey, spec, parts = c("summary", "items"), missing = character()) {
   parts <- match.arg(parts, c("summary", "items"), several.ok = TRUE)
   ace <- NULL
   if ("summary" %in% parts) {
     mentor_emit("\n\n## What the scale measures\n\n", spec$measures, "\n\n", sep = "")
     mentor_emit(excluded_gender_note(survey), "\n\n", sep = "")
-    codes <- as.data.frame(substantive_matrix(survey, ace_scored_items()), stringsAsFactors = FALSE)
-    ace <- score_ace(codes)
-    n_score <- sum(!is.na(ace$ace_binary))
-    n_missing <- survey$n - n_score
-    mentor_emit(
-      "ACE totals: ", n_score, " of ", survey$n,
-      " have both the binary and the frequency total. ",
-      n_missing, " are missing because at least one of the 13 categories had no answered item.\n\n",
-      sep = ""
-    )
-    means <- rbind(
-      gender_mean_frame(ace$ace_binary, survey$label$gender1, "Binary (0-13)"),
-      gender_mean_frame(ace$ace_frequency, survey$label$gender1, "Frequency (0-13)")
-    )
-    mentor_plot(score_mean_plot(means, "Mean number of categories (0-13)"))
-    mentor_emit("\n\n## Percent in each category\n\n")
-    mentor_emit("Binary version. Each cell is the percent positive, then the number positive over the number with a non-missing category.\n\n")
-    tab <- ace_prevalence_table(ace, survey$label$gender1)
-    mentor_emit(paste(knitr::kable(tab, format = "html", table.attr = "class=\"table table-sm\""), collapse = "\n"))
+    scored_missing <- intersect(ace_scored_items(), missing)
+    if (length(scored_missing)) {
+      mentor_emit(
+        "The ACE totals are not calculated, because these scored items are not in this file: ",
+        paste(scored_missing, collapse = ", "), ".\n\n",
+        sep = ""
+      )
+    } else {
+      codes <- as.data.frame(substantive_matrix(survey, ace_scored_items()), stringsAsFactors = FALSE)
+      ace <- score_ace(codes)
+      n_score <- sum(!is.na(ace$ace_binary))
+      n_missing <- survey$n - n_score
+      mentor_emit(
+        "ACE totals: ", n_score, " of ", survey$n,
+        " have both the binary and the frequency total. ",
+        n_missing, " are missing because at least one of the 13 categories had no answered item.\n\n",
+        sep = ""
+      )
+      means <- rbind(
+        gender_mean_frame(ace$ace_binary, survey$label$gender1, "Binary (0-13)"),
+        gender_mean_frame(ace$ace_frequency, survey$label$gender1, "Frequency (0-13)")
+      )
+      mentor_plot(score_mean_plot(means, "Mean number of categories (0-13)"))
+      mentor_emit("\n\n## Percent in each category\n\n")
+      mentor_emit("Binary version. Each cell is the percent positive, then the number positive over the number with a non-missing category.\n\n")
+      tab <- ace_prevalence_table(ace, survey$label$gender1)
+      mentor_emit(paste(knitr::kable(tab, format = "html", table.attr = "class=\"table table-sm\""), collapse = "\n"))
+    }
   }
   if ("items" %in% parts) {
     mentor_emit("\n\n## Responses to each item\n\n")
-    for (variable in spec$items) {
+    missing_items_note(intersect(spec$items, missing))
+    for (variable in setdiff(spec$items, missing)) {
       mentor_plot(item_count_plot(
         survey, variable,
         unscored = variable %in% spec$unscored
@@ -158,12 +195,13 @@ render_ace <- function(survey, spec, parts = c("summary", "items")) {
   invisible(ace)
 }
 
-render_items <- function(survey, spec) {
+render_items <- function(survey, spec, missing = character()) {
   mentor_emit("\n\n## What these questions ask\n\n", spec$measures, "\n\n", sep = "")
   mentor_emit(excluded_gender_note(survey), "\n\n", sep = "")
+  missing_items_note(missing)
   for (group in spec$groups) {
     mentor_emit("\n\n### ", group$name, "\n\n", sep = "")
-    for (variable in group$items) {
+    for (variable in setdiff(group$items, missing)) {
       mentor_plot(item_count_plot(survey, variable))
       mentor_emit("\n\n")
     }
@@ -177,18 +215,16 @@ render_scale <- function(survey, id, parts = c("summary", "items")) {
   if (is.null(spec)) stop("Unknown scale: ", id)
   mentor_collect({
     missing <- setdiff(spec$items, names(survey$code))
-    if (length(missing) && isTRUE(spec$allow_absent)) {
+    if (length(missing) == length(spec$items) && isTRUE(spec$allow_absent)) {
       mentor_emit("\n\n## What the scale measures\n\n", spec$measures, "\n\n", sep = "")
       mentor_emit(spec$absent, "\n\n", sep = "")
       mentor_emit("\n\n## How the score is calculated\n\n", spec$how, "\n\n", sep = "")
-    } else if (length(missing)) {
-      stop("Scale items are not in the file: ", paste(missing, collapse = ", "))
     } else if (spec$type == "likert") {
-      render_likert(survey, spec)
+      render_likert(survey, spec, missing)
     } else if (spec$type == "ace") {
-      render_ace(survey, spec, parts)
+      render_ace(survey, spec, parts, missing)
     } else if (spec$type == "items") {
-      render_items(survey, spec)
+      render_items(survey, spec, missing)
     } else {
       stop("Unknown scale type: ", spec$type)
     }
