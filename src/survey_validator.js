@@ -214,6 +214,19 @@
     return [{ key: joined, answerId: null }];
   }
 
+  const COUNTRY_NAMES = { spain: "Spain", hungary: "Hungary", germany: "Germany" };
+
+  /** English country name from the EU Survey alias cell; null for Qualtrics or unknown. */
+  function surveyCountryName(rows) {
+    return detectExportLayout(rows).format === "eusurvey"
+      ? COUNTRY_NAMES[countryFromAliasCell(rows[0] && rows[0][1])] || null
+      : null;
+  }
+
+  function replaceCountry(text, name) {
+    return name ? String(text).replace(/\[country\]/gi, name) : text;
+  }
+
   /**
    * Header cell for the cleaned download. Tagged headers keep the question
    * text from parseHeader; every other header stays as stored.
@@ -244,7 +257,46 @@
    * One header row plus one respondent row, with preamble omitted and
    * trailing ID tags removed. Does not recode labels to numeric codes.
    */
-  function cleanExportRows(rows) {
+  function cleanExportRows(rows, options) {
+    const opts = options || {};
+    if (opts.coreOnly && !opts.dictionary) {
+      throw new Error("cleanExportRows: coreOnly needs a dictionary");
+    }
+    const base = cleanExportBase(rows);
+    if (!opts.dictionary || base.length === 0) return base;
+    if (rows.length < 2) {
+      return opts.coreOnly ? base.map(() => []) : base;
+    }
+
+    const layout = detectExportLayout(rows);
+    const dataRows = rows.slice(layout.dataStartIndex);
+    const width = (rows[layout.headerRowIndex] || []).length;
+    const audit = new SurveyAuditor(opts.dictionary).auditSheet(rows);
+    const byCol = new Map(audit.columns.map(c => [c.colIndex, c]));
+    const countryName = surveyCountryName(rows);
+
+    const keep = [];
+    for (let i = 0; i < width; i++) {
+      const v = byCol.get(i) && byCol.get(i).canonical;
+      if (!v) continue;
+      base[0][i] = replaceCountry(
+        v.item_text ? `${v.question_stem}: ${v.item_text}` : v.question_stem,
+        countryName
+      );
+      const matcher = v.options && v.options.length ? buildOptionMatcher(v) : null;
+      for (let r = 0; r < dataRows.length; r++) {
+        const src = dataRows[r] || [];
+        const cell = i < src.length ? src[i] : null;
+        base[r + 1][i] = translateAnswerCell(cell, matcher, v, countryName);
+      }
+      if (v.is_core === true && v.source === "canonical_en") keep.push(i);
+    }
+
+    if (opts.coreOnly) return base.map(row => keep.map(i => row[i]));
+    return base;
+  }
+
+  function cleanExportBase(rows) {
     if (!Array.isArray(rows) || rows.length === 0) return [];
     const layout = detectExportLayout(rows);
     const header = rows[layout.headerRowIndex] || [];
@@ -384,6 +436,89 @@
       }
     }
     return null;
+  }
+
+  /**
+   * Option lookup shared by the column audit and the cleaned export.
+   * Precedence: answer ID, label (also option value and label_with_id),
+   * alias, then special-code pattern. match() returns { option, reason } or null.
+   */
+  function buildOptionMatcher(canonical) {
+    const canonicalOpts = canonical.options || [];
+    const canByLabel = new Map();
+    const canById = new Map();
+    const canByAlias = new Map();
+
+    const matchKey = BIRTH_COUNTRY_VARS.has(canonical.variable) ? birthMatchKey : normKey;
+
+    for (const opt of canonicalOpts) {
+      if (opt.label) canByLabel.set(matchKey(opt.label), opt);
+      if (opt.value != null) canByLabel.set(String(opt.value), opt);
+      if (opt.eusurvey_answer_id) canById.set(opt.eusurvey_answer_id, opt);
+      if (opt.alias) canByAlias.set(matchKey(opt.alias), opt);
+      if (opt.label_with_id) canByLabel.set(matchKey(opt.label_with_id), opt);
+    }
+
+    return {
+      match(label, answerId) {
+        const key = matchKey(label);
+        if (answerId && canById.has(answerId)) {
+          return { option: canById.get(answerId), reason: 'answer_id' };
+        }
+        if (canByLabel.has(key)) {
+          return { option: canByLabel.get(key), reason: 'label_exact' };
+        }
+        if (canByAlias.has(key)) {
+          return { option: canByAlias.get(key), reason: 'alias' };
+        }
+        const spCode = detectSpecialCode(label);
+        if (spCode) {
+          const option = canonicalOpts.find(o => o.value === spCode);
+          if (option) return { option, reason: 'special_code' };
+        }
+        return null;
+      }
+    };
+  }
+
+  /**
+   * Canonical English label for a matched option: the option itself when it
+   * is not an alias, else the one non-alias option with the same value.
+   * Returns null when that choice is not unique.
+   */
+  function canonicalLabel(canonical, opt) {
+    if (!opt.alias) return opt.label;
+    const c = (canonical.options || []).filter(o => !o.alias && o.value === opt.value);
+    return c.length === 1 ? c[0].label : null;
+  }
+
+  /**
+   * Respondent cell for the cleaned download with a dictionary: the canonical
+   * English option label when the cell, or each semicolon segment of a cell
+   * that does not map as a whole, maps to an option. Other text is cleaned as
+   * in the download without a dictionary.
+   */
+  function translateAnswerCell(value, matcher, canonical, countryName) {
+    if (value == null || value === "" || typeof value === "number" || !matcher) {
+      return cleanAnswerCell(value);
+    }
+    if (typeof value === "string" && !value.trim()) return cleanAnswerCell(value);
+
+    const observed = labelsFromCell(value, false)[0];
+    const whole = matcher.match(observed.key, observed.answerId);
+    if (whole) {
+      const label = canonicalLabel(canonical, whole.option);
+      return label == null ? cleanAnswerCell(value) : replaceCountry(label, countryName);
+    }
+    if (String(value).includes(";")) {
+      return answerSegments(value).map(seg => {
+        const found = matcher.match(seg.label || seg.raw, seg.answerId);
+        const label = found ? canonicalLabel(canonical, found.option) : null;
+        if (label != null) return replaceCountry(label, countryName);
+        return seg.hadId ? seg.label : seg.part;
+      }).join(";");
+    }
+    return cleanAnswerCell(value);
   }
 
   /**
@@ -813,46 +948,15 @@
       const observedMatchedSet = new Set();
       const issues = [];
 
-      // Build canonical lookup tables
-      const canByLabel = new Map();
-      const canById = new Map();
-      const canByAlias = new Map();
-
-      const matchKey = BIRTH_COUNTRY_VARS.has(canonical.variable) ? birthMatchKey : normKey;
-
-      for (const opt of canonicalOpts) {
-        if (opt.label) canByLabel.set(matchKey(opt.label), opt);
-        if (opt.value != null) canByLabel.set(String(opt.value), opt);
-        if (opt.eusurvey_answer_id) canById.set(opt.eusurvey_answer_id, opt);
-        if (opt.alias) canByAlias.set(matchKey(opt.alias), opt);
-        if (opt.label_with_id) canByLabel.set(matchKey(opt.label_with_id), opt);
-      }
+      const matcher = buildOptionMatcher(canonical);
 
       // Check observed responses
       for (const [obsLabel, count] of observedCounts.entries()) {
         const obsId = observedIds.get(obsLabel);
-        const obsKey = matchKey(obsLabel);
 
-        let matchedOpt = null;
-        let matchReason = null;
-
-        if (obsId && canById.has(obsId)) {
-          matchedOpt = canById.get(obsId);
-          matchReason = 'answer_id';
-        } else if (canByLabel.has(obsKey)) {
-          matchedOpt = canByLabel.get(obsKey);
-          matchReason = 'label_exact';
-        } else if (canByAlias.has(obsKey)) {
-          matchedOpt = canByAlias.get(obsKey);
-          matchReason = 'alias';
-        } else {
-          // Check special code
-          const spCode = detectSpecialCode(obsLabel);
-          if (spCode) {
-            matchedOpt = canonicalOpts.find(o => o.value === spCode);
-            if (matchedOpt) matchReason = 'special_code';
-          }
-        }
+        const found = matcher.match(obsLabel, obsId);
+        const matchedOpt = found ? found.option : null;
+        const matchReason = found ? found.reason : null;
 
         if (matchedOpt) {
           observedMatchedSet.add(matchedOpt);

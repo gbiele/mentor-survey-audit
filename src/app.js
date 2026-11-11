@@ -930,12 +930,21 @@
   }
 
   window.exportCleanedData = function() {
-    if (!currentSheetRows || !currentSheetRows.length) {
+    if (!auditor || !currentSheetRows || !currentSheetRows.length) {
       alert('Please upload or load a survey export before exporting cleaned data.');
       return;
     }
-    const cleaned = SurveyAuditor.cleanExportRows(currentSheetRows);
+    const cleaned = SurveyAuditor.cleanExportRows(currentSheetRows, { dictionary: auditor.dictionary });
     writeExportWorkbook(cleaned, 'Cleaned', '_cleaned.xlsx');
+  };
+
+  window.exportCleanedCoreData = function() {
+    if (!auditor || !currentSheetRows || !currentSheetRows.length) {
+      alert('Please upload or load a survey export before exporting cleaned data.');
+      return;
+    }
+    const cleaned = SurveyAuditor.cleanExportRows(currentSheetRows, { dictionary: auditor.dictionary, coreOnly: true });
+    writeExportWorkbook(cleaned, 'Cleaned', '_cleaned_core.xlsx');
   };
 
   // Cleaned sheets are header + responses. detectExportLayout would still

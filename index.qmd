@@ -38,7 +38,7 @@ format:
         Your survey data remains strictly confidential and never leaves your computer. All files are analyzed entirely within your web browser session. No participant data or survey responses are uploaded to external servers or stored online.
       </div>
       <p style="margin: 0.75rem 0 0 0;">
-        Results for a cleaned workbook, with the same scores and charts, can be built in the browser without installing R:
+        Results for a cleaned workbook, with the same scores and charts, can be built in the browser without installing R. Use the <strong>Export cleaned data (core questions)</strong> download, with English headers and answers:
         <a href="describe/">Survey results</a>.
       </p>
     </div>
@@ -60,7 +60,10 @@ format:
         📥 Export Audit Issues (CSV)
       </button>
       <button type="button" id="btn-export-cleaned" class="btn btn-export" onclick="window.exportCleanedData()">
-        Export cleaned data
+        Export cleaned data (all columns)
+      </button>
+      <button type="button" id="btn-export-cleaned-core" class="btn btn-export" onclick="window.exportCleanedCoreData()" title="Core questions only, with English headers and answers, for cross-country analysis and the Survey results page">
+        Export cleaned data (core questions)
       </button>
       <button type="button" id="btn-export-scrambled" class="btn btn-export btn-sm" onclick="window.exportScrambledSample()" title="Download a 50-row column-scrambled sample of the uploaded file for debugging">
         Scrambled sample
