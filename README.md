@@ -41,6 +41,9 @@ The application comes pre-configured with the authoritative **Core Master Survey
 5. **Discrepancy Export (CSV)**:
    - Export an actionable spreadsheet of all flagged variables and harmonization discrepancies to share directly with survey programmers and field teams.
 
+6. **German-language exports**:
+   - Exports without ID tags, with German headers and answers, are matched through `data/country_maps/germany_headers.csv` and `germany_answers.csv`. Regenerate the headers from a tagged and an untagged export with `node scripts/build_country_headers.js <tagged.xlsx> <untagged.xlsx> data/country_maps/germany_headers.csv`, then apply both files to the dictionary copies with `python scripts/country_text_keys.py`.
+
 ---
 
 ## Data Privacy & Security

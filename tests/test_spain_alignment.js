@@ -548,7 +548,7 @@ const tests = {
     const dict = tinyDict({ hungary: 'born2', germany: 'born2' });
     const unrecognized = [
       'mentor_fhi',
-      'MENTORMasterGER1',
+      'MENTORMaster1',
       'DEMO',
       '',
       'Espana'
