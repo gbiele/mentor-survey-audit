@@ -259,7 +259,7 @@ const ALIAS_TABLE = [
   ['NORWAY', 'Norway'], ['norge', 'Norway'], ['NO', 'Norway'], ['mentor_NO', 'Norway'],
   ['cyprus_test', 'Cyprus'], ['Spain2026', 'Spain'],
   ['survey for spain', 'Spain'], ['Spain–', 'Spain'],
-  ['mentor_fhi', null], ['MENTORMasterGER1', null], ['DEMO', null], ['', null], ['Espana', null],
+  ['mentor_fhi', null], ['MENTORMasterGER1', 'Germany'], ['DEMO', null], ['', null], ['Espana', null],
   ['no', null], ['Cy', null], ['Hungarian', null], ['Hungarycy', null],
   ['SpainHU', null], ['Spain_Norway', null],
   ['Spain_ES', 'Spain']
@@ -286,6 +286,43 @@ function testAuditSheetMetadataCountryFromAlias() {
     const meta = audit(euPre(alias, NEUTRAL_HEADER, [['Boy', 'x']])).summary.metadata;
     if (meta.country !== name || meta.countrySource !== (name ? 'alias' : null)) {
       return `Alias ${JSON.stringify(alias)}: metadata country ${JSON.stringify(meta.country)} / ${JSON.stringify(meta.countrySource)}, expected ${JSON.stringify(name)}`;
+    }
+    return null;
+  });
+}
+
+// Issue #23: three-letter country codes in the Alias cell (ISO alpha-3 for
+// all five countries plus GER for Germany; whole word, upper case only).
+// Expected values are the issue #23 contract table, section 1.
+const ALIAS_TABLE_23 = [
+  ['MENTORMasterGER1', 'Germany'],
+  ['MentorDEU2026', 'Germany'],
+  ['MentorESP1', 'Spain'],
+  ['MentorHUN1', 'Hungary'],
+  ['MentorCYP1', 'Cyprus'],
+  ['MentorNOR1', 'Norway'],
+  // Existing behaviour, unchanged.
+  ['MentorDE1', 'Germany'],
+  ['MentorCY2026', 'Cyprus'],
+  ['es', 'Spain'],
+  ['hu', 'Hungary'],
+  ['de', 'Germany'],
+  // Lower-case code is not a code; two countries give none.
+  ['Mentorger1', null],
+  ['MentorGER-ESP', null]
+];
+
+function testDetectSurveyCountryThreeLetterCodes() {
+  collectFailures(ALIAS_TABLE_23, ([alias, name]) => {
+    const rows = euPre(alias, NEUTRAL_HEADER, [['Boy', 'x']]);
+    const got = SurveyAuditor.detectSurveyCountry(rows, 'export.xlsx');
+    const want = { name, source: name ? 'alias' : null };
+    if (got.name !== want.name || got.source !== want.source) {
+      return `Alias ${JSON.stringify(alias)}: got ${JSON.stringify(got)}, expected ${JSON.stringify(want)}`;
+    }
+    const meta = audit(rows).summary.metadata;
+    if (meta.country !== name || meta.countrySource !== want.source) {
+      return `Alias ${JSON.stringify(alias)}: metadata ${JSON.stringify(meta.country)} / ${JSON.stringify(meta.countrySource)}, expected ${JSON.stringify(name)}`;
     }
     return null;
   });
@@ -718,6 +755,7 @@ const TESTS = [
   testIdempotentPlainEu,
   testDetectSurveyCountryAliasTable,
   testAuditSheetMetadataCountryFromAlias,
+  testDetectSurveyCountryThreeLetterCodes,
   testDetectCountryFromSourceHeaderNorway,
   testDetectCountryFromCleanedExportHeader,
   testHeaderCountryNormalisedAndPlaceholderIgnored,

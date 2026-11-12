@@ -54,11 +54,11 @@
   }
 
   const COUNTRIES = [
-    { key: "cyprus", name: "Cyprus", names: ["cyprus"], iso: "CY" },
-    { key: "germany", name: "Germany", names: ["germany", "deutschland"], iso: "DE" },
-    { key: "hungary", name: "Hungary", names: ["hungary"], iso: "HU" },
-    { key: "norway", name: "Norway", names: ["norway", "norge"], iso: "NO" },
-    { key: "spain", name: "Spain", names: ["spain", "españa"], iso: "ES" }
+    { key: "cyprus", name: "Cyprus", names: ["cyprus"], iso: "CY", codes: ["CY", "CYP"] },
+    { key: "germany", name: "Germany", names: ["germany", "deutschland"], iso: "DE", codes: ["DE", "DEU", "GER"] },
+    { key: "hungary", name: "Hungary", names: ["hungary"], iso: "HU", codes: ["HU", "HUN"] },
+    { key: "norway", name: "Norway", names: ["norway", "norge"], iso: "NO", codes: ["NO", "NOR"] },
+    { key: "spain", name: "Spain", names: ["spain", "españa"], iso: "ES", codes: ["ES", "ESP"] }
   ];
 
   /**
@@ -74,10 +74,10 @@
       .filter(Boolean);
   }
 
-  /** Whole word is a country name in any case, or its ISO code in upper case when allowIso. */
+  /** Whole word is a country name in any case, or one of its codes (ISO alpha-2/3, GER) in upper case when allowIso. */
   function countryFromWord(word, allowIso) {
     const low = word.toLowerCase();
-    return COUNTRIES.find(c => c.names.includes(low) || (allowIso && word === c.iso)) || null;
+    return COUNTRIES.find(c => c.names.includes(low) || (allowIso && c.codes.includes(word))) || null;
   }
 
   /** The one country the words name; null for none or for two different countries. */
@@ -649,6 +649,7 @@
       this.byOrigVar = new Map();
       this.byStemKey = new Map();
       this.byItemKey = new Map();
+      this.byHeaderAlias = new Map();
 
       this.variables = this.dictionary.variables || [];
       for (const v of this.variables) {
@@ -664,6 +665,16 @@
           const ikey = normKey(v.item_text);
           if (!this.byItemKey.has(ikey)) this.byItemKey.set(ikey, []);
           this.byItemKey.get(ikey).push(v);
+        }
+
+        // Header texts of country-language exports (data/country_maps/<country>_headers.csv).
+        for (const texts of Object.values(v.header_aliases || {})) {
+          for (const t of texts) {
+            const hkey = normKey(t);
+            if (!this.byHeaderAlias.has(hkey)) this.byHeaderAlias.set(hkey, []);
+            const list = this.byHeaderAlias.get(hkey);
+            if (!list.includes(v)) list.push(v);
+          }
         }
       }
     }
@@ -792,6 +803,18 @@
           } else if (this.byCleanVar.has(vidLow) && !blocked(this.byCleanVar.get(vidLow))) {
             canonical = this.byCleanVar.get(vidLow);
             matchType = 'clean_name_exact';
+          }
+        }
+      }
+
+      // 1b. A country-language header (no ID tag) matched by its full text.
+      if (!canonical) {
+        const hkey = normKey(headerStr);
+        if (this.byHeaderAlias.has(hkey)) {
+          const res = selectCandidate(this.byHeaderAlias.get(hkey), 'country_header');
+          if (res) {
+            canonical = res.candidate;
+            matchType = res.type;
           }
         }
       }
