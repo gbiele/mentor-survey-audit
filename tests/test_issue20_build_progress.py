@@ -37,7 +37,17 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 
+# Issue #22 (contract B2): 16 sections in page order. The first seven are in the
+# Overview tab; the other nine are each the whole content of their own tab.
+# Sections are found by id, whatever their tag.
 SECTIONS = [
+    ("overview-biography", "Overview: Biography"),
+    ("overview-socioeconomic-position", "Overview: Socioeconomic position"),
+    ("overview-bcfpi", "Overview: BCFPI"),
+    ("overview-ace-iq", "Overview: ACE-IQ"),
+    ("overview-quality-of-life", "Overview: Quality of life"),
+    ("overview-resilience", "Overview: Resilience"),
+    ("overview-social-media-time", "Overview: Social media time"),
     ("biography", "Biography"),
     ("living-situation", "Living situation"),
     ("socioeconomic", "Socioeconomic"),
@@ -50,8 +60,8 @@ SECTIONS = [
 ]
 SECTION_IDS = [s for s, _ in SECTIONS]
 SECTION_NAMES = dict(SECTIONS)
-# Contract item 6: these eight sections show at least one figure; Social media
-# problems draws text only with the fixture.
+# Contract item 6 (issue #22: plus the seven Overview sections): these sections
+# show at least one figure; Social media problems draws text only with the fixture.
 FIGURE_SECTIONS = SECTION_IDS[:-1]
 
 FILE_INPUT = "#workbook-file input[type=file]"
@@ -154,8 +164,11 @@ def tmpdir(prefix):
     return d
 
 
-def render_page(break_living=False):
-    """Render describe/ as render_site.ps1 does, into a temp dir; return the output dir."""
+def render_page(break_living=False, append=None):
+    """Render describe/ as render_site.ps1 does, into a temp dir; return the output dir.
+
+    `append` maps a file name in vfs/report/R to R code appended to that file
+    (e.g. an override of a render function)."""
     tmp = tmpdir("issue20_site_")
     desc = tmp / "describe"
     shutil.copytree(ROOT / "describe", desc,
@@ -172,6 +185,9 @@ def render_page(break_living=False):
     if break_living:
         with open(vfs_r / "sections.R", "a", encoding="utf-8") as fh:
             fh.write(BROKEN_LIVING)
+    for name, code in (append or {}).items():
+        with open(vfs_r / name, "a", encoding="utf-8") as fh:
+            fh.write("\n" + code + "\n")
     quarto = shutil.which("quarto")
     if not quarto:
         raise RuntimeError("quarto not found")
@@ -216,26 +232,73 @@ def serve(directory):
 INIT_JS = r'''
 (() => {
   const IDS = %s;
-  const vis = el => {
+  // Issue #22: "visible" means visible when the element's tab is open. A closed
+  // tab pane (.tab-pane with display none) is ignored; the page's own CSS
+  // (display / visibility of the element and its other ancestors) decides.
+  const isPane = n => !!(n.classList && n.classList.contains('tab-pane'));
+  const cssShown = el => {
     if (!el || !el.isConnected) return false;
-    const r = el.getBoundingClientRect();
-    if (r.width <= 0 || r.height <= 0) return false;
-    return getComputedStyle(el).visibility !== 'hidden';
+    if (getComputedStyle(el).visibility === 'hidden') return false;
+    for (let n = el; n && n.nodeType === 1; n = n.parentElement) {
+      if (isPane(n)) continue;
+      if (getComputedStyle(n).display === 'none') return false;
+    }
+    return true;
   };
+  const inClosedTab = el => {
+    for (let n = el; n && n.nodeType === 1; n = n.parentElement) {
+      if (isPane(n) && getComputedStyle(n).display === 'none') return true;
+    }
+    return false;
+  };
+  // In an open tab (or outside tabs): rendered with a size > 0, as before.
+  // In a closed tab: shown by the page's CSS and not empty.
+  const vis = el => {
+    if (!cssShown(el)) return false;
+    if (inClosedTab(el)) {
+      if (el.tagName === 'IMG') return true;
+      return el.textContent.trim().length > 0 || !!el.querySelector('img, svg, canvas');
+    }
+    const r = el.getBoundingClientRect();
+    return r.width > 0 && r.height > 0;
+  };
+  // Text of the parts of `root` that are shown (closed tab panes count as
+  // open); elements matching the selector `skip` are left out.
+  const visText = (root, skip) => {
+    if (!root || !cssShown(root)) return '';
+    const parts = [];
+    const walk = n => {
+      for (const c of n.childNodes) {
+        if (c.nodeType === 3) { parts.push(c.data); continue; }
+        if (c.nodeType !== 1) continue;
+        if (skip && c.matches(skip)) continue;
+        if (/^(SCRIPT|STYLE|TEMPLATE|NOSCRIPT)$/.test(c.tagName)) continue;
+        const cs = getComputedStyle(c);
+        if (cs.display === 'none' && !isPane(c)) continue;
+        if (cs.visibility === 'hidden') continue;
+        const block = !cs.display.startsWith('inline');
+        if (block) parts.push('\n');
+        walk(c);
+        if (block) parts.push('\n');
+      }
+    };
+    walk(root);
+    return parts.join('').replace(/[ \t\r\f\v ]+/g, ' ').replace(/ *\n\s*/g, '\n').trim();
+  };
+  const precedes = (a, b) => !!(a && b && (a.compareDocumentPosition(b) & Node.DOCUMENT_POSITION_FOLLOWING));
   const sec = (id, full) => {
-    const s = document.querySelector('section#' + id);
+    const s = document.getElementById(id);
     if (!s) return {exists: false, ph: false, phCount: 0, phVis: false, phText: '', imgs: 0,
                     out: '', outLen: 0, waiting: false, couldNot: false, text: ''};
     const ph = s.querySelector('.chart-placeholder');
     const phVis = vis(ph);
-    const text = vis(s) ? s.innerText : '';
-    const out = [...s.children]
-      .filter(c => !c.matches('h2, .chart-placeholder') && vis(c))
-      .map(c => c.innerText).join('\n').trim();
+    const shown = vis(s);
+    const text = shown ? visText(s) : '';
+    const out = shown ? visText(s, 'h1, h2, h3, h4, h5, h6, .chart-placeholder') : '';
     const lim = full ? 100000 : 160;
     return {
       exists: true, ph: !!ph, phCount: s.querySelectorAll('.chart-placeholder').length,
-      phVis, phText: phVis ? ph.innerText.slice(0, 300) : '',
+      phVis, phText: phVis ? visText(ph).slice(0, 300) : '',
       imgs: [...s.querySelectorAll('img')].filter(vis).length,
       out: out.slice(0, lim), outLen: out.length,
       waiting: text.includes('Waiting for this chart'),
@@ -259,12 +322,14 @@ INIT_JS = r'''
       secs: Object.fromEntries(IDS.map(id => [id, sec(id, full)])),
     };
   };
+  // Issue #22: the Loaded line comes before the tab strip (and so before the
+  // first section, overview-biography).
   const loadedLines = () => {
-    const bio = document.querySelector('section#biography');
+    const strip = document.querySelector('.nav-tabs');
+    const first = document.getElementById(IDS[0]);
     return [...document.querySelectorAll('p')]
       .filter(p => vis(p) && p.innerText.includes('The charts use the remaining'))
-      .map(p => ({text: p.innerText,
-                  before: !!(bio && (p.compareDocumentPosition(bio) & Node.DOCUMENT_POSITION_FOLLOWING))}));
+      .map(p => ({text: p.innerText, before: precedes(p, strip) && precedes(p, first)}));
   };
   const start = () => {
     if (window.__i20rec) return;
@@ -284,7 +349,7 @@ INIT_JS = r'''
     }).observe(document.documentElement,
                {subtree: true, childList: true, attributes: true, characterData: true});
   };
-  window.__i20 = {snap, start, loadedLines};
+  window.__i20 = {snap, start, loadedLines, vis, visText, cssShown, inClosedTab, precedes};
 })();
 ''' % (str(SECTION_IDS).replace("'", '"'))
 
@@ -512,7 +577,8 @@ def tearDownModule():
 # ---------------------------------------------------------------------------
 
 def drawn(s, sid):
-    return not s["secs"][sid]["phVis"]
+    # Issue #22: a section that is not on the page does not count as drawn.
+    return s["secs"][sid]["exists"] and not s["secs"][sid]["phVis"]
 
 
 def n_drawn(s):
@@ -560,7 +626,7 @@ class _Base(unittest.TestCase):
         """Index of the first snapshot (from the all-waiting snapshot on) in which
         each section's placeholder is no longer visible."""
         start = self.first_all_waiting(build)
-        self.assertIsNotNone(start, "no snapshot during the build in which all nine sections "
+        self.assertIsNotNone(start, "no snapshot during the build in which all 16 sections "
                                     "show a visible placeholder with 'Waiting for this chart'")
         log = build["log"]
         times = {}
@@ -672,8 +738,8 @@ class TestGoodBuild(_Base):
             # Skip snapshots taken while a section is changing (the count differs
             # in the neighbouring snapshots), to avoid a race between two updates.
             if 0 < i < len(log) - 1 and n_drawn(log[i - 1]) == k == n_drawn(log[i + 1]):
-                self.assertLess(k, 9, "status says drawing while all nine sections are drawn")
-                self.assertIn(f"{k} of 9", s["text"], f"{k} sections drawn")
+                self.assertLess(k, 16, "status says drawing while all 16 sections are drawn")
+                self.assertIn(f"{k} of 16", s["text"], f"{k} sections drawn")
                 checked += 1
         self.assertGreater(checked, 0)
 
@@ -681,7 +747,7 @@ class TestGoodBuild(_Base):
         b = self.b
         self.assertPlaceholders(b["final"], "after the build")
         self.assertIsNotNone(self.first_all_waiting(b),
-                             "no snapshot in which all nine sections wait with a visible placeholder")
+                             "no snapshot in which all 16 sections wait with a visible placeholder")
         for s in b["log"]:
             if s["state"] != "busy":
                 continue
@@ -696,12 +762,13 @@ class TestGoodBuild(_Base):
                     self.assertIn(WAITING, sec["phText"], f"{sid}: placeholder text during the build")
 
     def test_biography_drawn_before_social_media_problems(self):
+        # Issue #22 (B3.3): the first section is now overview-biography.
         times = self.drawn_times(self.b)
-        self.assertIn("biography", times, "Biography was never drawn")
-        s = self.b["log"][times["biography"]]
+        self.assertIn("overview-biography", times, "Overview: Biography was never drawn")
+        s = self.b["log"][times["overview-biography"]]
         smp = s["secs"]["social-media-problems"]
         self.assertTrue(smp["phVis"] and WAITING in smp["phText"],
-                        "when Biography is drawn, Social media problems no longer waits "
+                        "when Overview: Biography is drawn, Social media problems no longer waits "
                         "(all sections appear at the same moment)")
 
     def test_sections_drawn_in_page_order(self):
@@ -737,7 +804,7 @@ class TestGoodBuild(_Base):
         done = [s for s in self.b["log"] if s["state"] == "done"]
         self.assertTrue(done, "state never became done")
         for s in done:
-            self.assertEqual(n_drawn(s), 9, "state done while sections are still waiting")
+            self.assertEqual(n_drawn(s), 16, "state done while sections are still waiting")
 
 
 class TestLoadedLineUnchanged(_Base):
@@ -755,7 +822,7 @@ class TestLoadedLineUnchanged(_Base):
         line = lines[0]
         self.assertIn(f"Loaded {GOOD_NAME}.", line["text"])
         self.assertIn("The charts use the remaining 4 young people.", line["text"])
-        self.assertTrue(line["before"], "the 'Loaded' line is not above the sections")
+        self.assertTrue(line["before"], "the 'Loaded' line is not before the tab strip and overview-biography")
 
 
 # ---------------------------------------------------------------------------
@@ -798,6 +865,7 @@ class TestUnreadableAfterGood(_Base):
     def test_unreadable_no_waiting_and_no_figures(self):
         f = self.b["final"]
         for sid in SECTION_IDS:
+            self.assertTrue(f["secs"][sid]["exists"], f"no element with id {sid}")
             self.assertFalse(f["secs"][sid]["waiting"], f"{sid} still shows 'Waiting for this chart'")
             self.assertEqual(f["secs"][sid]["imgs"], 0, f"{sid} shows a figure of the earlier workbook")
 
@@ -825,6 +893,7 @@ class TestSectionFailure(_Base):
         for sid in SECTION_IDS:
             if sid == "living-situation":
                 continue
+            self.assertTrue(f["secs"][sid]["exists"], f"no element with id {sid}")
             self.assertFalse(f["secs"][sid]["waiting"], f"{sid} still shows 'Waiting for this chart'")
             self.assertFalse(f["secs"][sid]["couldNot"], f"{sid} says 'could not be drawn'")
         for sid in ("biography", "kidscreen"):

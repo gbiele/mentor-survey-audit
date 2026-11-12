@@ -85,6 +85,7 @@ class TestHeldOut(h._Base):
         self.assertNoSpinner(f, "after the failed load")
         self.assertIdleButton(f, "after the failed load")
         for sid in h.SECTION_IDS:
+            self.assertTrue(f["secs"][sid]["exists"], f"no element with id {sid}")
             self.assertFalse(f["secs"][sid]["waiting"], f"{sid} still shows 'Waiting for this chart'")
             self.assertEqual(f["secs"][sid]["imgs"], 0, f"{sid} shows a figure after a failed load")
 
@@ -104,7 +105,7 @@ class TestHeldOut(h._Base):
             self.assertGreaterEqual(f["secs"][sid]["imgs"], 1, f"{sid} shows no visible figure")
         for s in b["log"]:
             if s["state"] == "done":
-                self.assertEqual(h.n_drawn(s), 9, "state done while sections are still waiting")
+                self.assertEqual(h.n_drawn(s), 16, "state done while sections are still waiting")
 
     def test_remaining_count_and_draw_order_with_declined_row(self):
         b = self.r["good"]
@@ -112,14 +113,14 @@ class TestHeldOut(h._Base):
         self.assertTrue(lines, "no 'Loaded ...' line")
         self.assertIn(f"Loaded {GOOD_NAME}.", lines[0]["text"])
         self.assertIn("The charts use the remaining 5 young people.", lines[0]["text"])
-        self.assertTrue(lines[0]["before"], "the 'Loaded' line is not above the sections")
+        self.assertTrue(lines[0]["before"], "the 'Loaded' line is not before the tab strip and overview-biography")
         times = self.drawn_times(b)
         self.assertEqual(sorted(times), sorted(h.SECTION_IDS), "not every section was drawn during the build")
         order = [times[sid] for sid in h.SECTION_IDS]
         self.assertEqual(order, sorted(order), f"draw order (snapshot index per section): {order}")
-        smp = b["log"][times["biography"]]["secs"]["social-media-problems"]
+        smp = b["log"][times["overview-biography"]]["secs"]["social-media-problems"]
         self.assertTrue(smp["phVis"] and h.WAITING in smp["phText"],
-                        "when Biography is drawn, Social media problems no longer waits")
+                        "when Overview: Biography is drawn, Social media problems no longer waits")
 
 
 if __name__ == "__main__":

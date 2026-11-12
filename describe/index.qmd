@@ -2,8 +2,7 @@
 title: "Survey results"
 format:
   live-html:
-    toc: true
-    toc-depth: 2
+    toc: false
     theme: cosmo
 engine: knitr
 webr:
@@ -38,8 +37,8 @@ webr:
 #build-status .spinner-border { margin-right: 0.5rem; vertical-align: -0.125em; }
 #build-status[data-state="failed"] { color: #b02a37; }
 .chart-placeholder { color: #6c757d; font-style: italic; }
-section.level2:not(.chart-drawn):not(.chart-failed):not(.chart-broken) .exercise-cell { display: none; }
-section.chart-drawn .chart-placeholder, section.chart-failed .chart-placeholder { display: none; }
+.report-section:not(.chart-drawn):not(.chart-failed):not(.chart-broken) .exercise-cell { display: none; }
+.report-section.chart-drawn .chart-placeholder, .report-section.chart-failed .chart-placeholder { display: none; }
 </style>
 
 This page shows results for a cleaned JA-MENTOR youth survey. It uses the same scoring as the local report: Likert sums are prorated when at least 80% of the items are answered, and ACE-IQ follows the World Health Organization category rules.
@@ -108,6 +107,46 @@ section_9 = null
 ```{ojs}
 //| echo: false
 section_10 = null
+```
+
+```{ojs}
+//| echo: false
+section_11 = null
+```
+
+```{ojs}
+//| echo: false
+section_12 = null
+```
+
+```{ojs}
+//| echo: false
+section_13 = null
+```
+
+```{ojs}
+//| echo: false
+section_14 = null
+```
+
+```{ojs}
+//| echo: false
+section_15 = null
+```
+
+```{ojs}
+//| echo: false
+section_16 = null
+```
+
+```{ojs}
+//| echo: false
+section_17 = null
+```
+
+```{ojs}
+//| echo: false
+section_18 = null
 ```
 
 ```{ojs}
@@ -238,7 +277,8 @@ loaded <- FALSE
 current_build <- uploaded
 root <- "vfs/report/R"
 for (file in c(
-  "load_survey.R", "scores.R", "plots.R", "scales.R", "scale_page.R", "sections.R"
+  "load_survey.R", "scores.R", "plots.R", "scales.R", "scale_page.R", "sections.R",
+  "overview.R"
 )) {
   source(file.path(root, file), local = FALSE)
 }
@@ -281,6 +321,13 @@ draw_section <- function(expr, previous) {
     )
   }
 }
+# Runs `expr` with the figure size (inches) that the Overview page of the local
+# report sets per chunk. The options are restored afterwards, also on error.
+with_fig_size <- function(width, height, expr) {
+  old <- options(mentor.fig.width = width, mentor.fig.height = height)
+  on.exit(options(old), add = TRUE)
+  force(expr)
+}
 start <- is.numeric(uploaded) && length(uploaded) == 1 && !is.na(uploaded) && uploaded > 0
 if (!isTRUE(start)) {
   load_status <- list(build = 0, ok = FALSE, message = "")
@@ -321,7 +368,13 @@ if (!isTRUE(start)) {
 }
 ```
 
-## Biography
+::: {.panel-tabset}
+
+# Overview
+
+Selected background items and scale sums. Item charts are on the other tabs.
+
+## Biography {#overview-biography .report-section}
 
 ::: {.chart-placeholder}
 This chart is drawn after you build the report.
@@ -332,12 +385,12 @@ This chart is drawn after you build the report.
 #|   - load_status
 #| define: section_1
 #| envir: global
-.drawn <- draw_section(render_biography(survey), load_status)
+.drawn <- draw_section(with_fig_size(8, 3.4, render_overview_biography(survey)), load_status)
 section_1 <- .drawn$status
 .drawn$output
 ```
 
-## Living situation
+## Socioeconomic position {#overview-socioeconomic-position .report-section}
 
 ::: {.chart-placeholder}
 This chart is drawn after you build the report.
@@ -348,12 +401,12 @@ This chart is drawn after you build the report.
 #|   - section_1
 #| define: section_2
 #| envir: global
-.drawn <- draw_section(render_living(survey), section_1)
+.drawn <- draw_section(with_fig_size(8, 3.4, render_overview_ses(survey)), section_1)
 section_2 <- .drawn$status
 .drawn$output
 ```
 
-## Socioeconomic
+## BCFPI {#overview-bcfpi .report-section}
 
 ::: {.chart-placeholder}
 This chart is drawn after you build the report.
@@ -364,28 +417,22 @@ This chart is drawn after you build the report.
 #|   - section_2
 #| define: section_3
 #| envir: global
-.drawn <- draw_section(render_socioeconomic(survey), section_2)
+.drawn <- draw_section(with_fig_size(9, 3.6, render_overview_symptoms(survey)), section_2)
 section_3 <- .drawn$status
 .drawn$output
 ```
-
-## BCFPI attention
-
-::: {.chart-placeholder}
-This chart is drawn after you build the report.
-:::
 
 ```{webr}
 #| input:
 #|   - section_3
 #| define: section_4
 #| envir: global
-.drawn <- draw_section(render_scale(survey, "attention"), section_3)
+.drawn <- draw_section(with_fig_size(8, 3.4, render_overview_functioning(survey)), section_3)
 section_4 <- .drawn$status
 .drawn$output
 ```
 
-## BCFPI functioning
+## ACE-IQ {#overview-ace-iq .report-section}
 
 ::: {.chart-placeholder}
 This chart is drawn after you build the report.
@@ -396,12 +443,12 @@ This chart is drawn after you build the report.
 #|   - section_4
 #| define: section_5
 #| envir: global
-.drawn <- draw_section(render_scale(survey, "functioning"), section_4)
+.drawn <- draw_section(with_fig_size(8, 3.2, render_overview_ace(survey)), section_4)
 section_5 <- .drawn$status
 .drawn$output
 ```
 
-## ACE-IQ
+## Quality of life {#overview-quality-of-life .report-section}
 
 ::: {.chart-placeholder}
 This chart is drawn after you build the report.
@@ -412,23 +459,28 @@ This chart is drawn after you build the report.
 #|   - section_5
 #| define: section_6
 #| envir: global
-.drawn <- draw_section(render_scale(survey, "ace", parts = "summary"), section_5)
+.drawn <- draw_section(with_fig_size(8, 3.2, render_overview_kidscreen(survey)), section_5)
 section_6 <- .drawn$status
 .drawn$output
 ```
+
+## Resilience {#overview-resilience .report-section}
+
+::: {.chart-placeholder}
+This chart is drawn after you build the report.
+:::
 
 ```{webr}
 #| input:
 #|   - section_6
 #| define: section_7
 #| envir: global
-#| timelimit: 420
-.drawn <- draw_section(render_scale(survey, "ace", parts = "items"), section_6)
+.drawn <- draw_section(with_fig_size(8, 3.2, render_overview_cyrm(survey)), section_6)
 section_7 <- .drawn$status
 .drawn$output
 ```
 
-## KIDSCREEN
+## Social media time {#overview-social-media-time .report-section}
 
 ::: {.chart-placeholder}
 This chart is drawn after you build the report.
@@ -439,12 +491,14 @@ This chart is drawn after you build the report.
 #|   - section_7
 #| define: section_8
 #| envir: global
-.drawn <- draw_section(render_scale(survey, "kidscreen"), section_7)
+.drawn <- draw_section(with_fig_size(9, 3.4, render_overview_media(survey)), section_7)
 section_8 <- .drawn$status
 .drawn$output
 ```
 
-## Social media time
+# Biography
+
+::: {#biography .report-section}
 
 ::: {.chart-placeholder}
 This chart is drawn after you build the report.
@@ -455,12 +509,16 @@ This chart is drawn after you build the report.
 #|   - section_8
 #| define: section_9
 #| envir: global
-.drawn <- draw_section(render_scale(survey, "social_media_use"), section_8)
+.drawn <- draw_section(render_biography(survey), section_8)
 section_9 <- .drawn$status
 .drawn$output
 ```
 
-## Social media problems
+:::
+
+# Living situation
+
+::: {#living-situation .report-section}
 
 ::: {.chart-placeholder}
 This chart is drawn after you build the report.
@@ -471,10 +529,165 @@ This chart is drawn after you build the report.
 #|   - section_9
 #| define: section_10
 #| envir: global
-.drawn <- draw_section(render_scale(survey, "smadd"), section_9)
+.drawn <- draw_section(render_living(survey), section_9)
 section_10 <- .drawn$status
 .drawn$output
 ```
+
+:::
+
+# Socioeconomic
+
+::: {#socioeconomic .report-section}
+
+::: {.chart-placeholder}
+This chart is drawn after you build the report.
+:::
+
+```{webr}
+#| input:
+#|   - section_10
+#| define: section_11
+#| envir: global
+.drawn <- draw_section(render_socioeconomic(survey), section_10)
+section_11 <- .drawn$status
+.drawn$output
+```
+
+:::
+
+# BCFPI attention
+
+::: {#bcfpi-attention .report-section}
+
+::: {.chart-placeholder}
+This chart is drawn after you build the report.
+:::
+
+```{webr}
+#| input:
+#|   - section_11
+#| define: section_12
+#| envir: global
+.drawn <- draw_section(render_scale(survey, "attention"), section_11)
+section_12 <- .drawn$status
+.drawn$output
+```
+
+:::
+
+# BCFPI functioning
+
+::: {#bcfpi-functioning .report-section}
+
+::: {.chart-placeholder}
+This chart is drawn after you build the report.
+:::
+
+```{webr}
+#| input:
+#|   - section_12
+#| define: section_13
+#| envir: global
+.drawn <- draw_section(render_scale(survey, "functioning"), section_12)
+section_13 <- .drawn$status
+.drawn$output
+```
+
+:::
+
+# ACE-IQ
+
+::: {#ace-iq .report-section}
+
+::: {.chart-placeholder}
+This chart is drawn after you build the report.
+:::
+
+```{webr}
+#| input:
+#|   - section_13
+#| define: section_14
+#| envir: global
+.drawn <- draw_section(render_scale(survey, "ace", parts = "summary"), section_13)
+section_14 <- .drawn$status
+.drawn$output
+```
+
+```{webr}
+#| input:
+#|   - section_14
+#| define: section_15
+#| envir: global
+#| timelimit: 420
+.drawn <- draw_section(render_scale(survey, "ace", parts = "items"), section_14)
+section_15 <- .drawn$status
+.drawn$output
+```
+
+:::
+
+# KIDSCREEN
+
+::: {#kidscreen .report-section}
+
+::: {.chart-placeholder}
+This chart is drawn after you build the report.
+:::
+
+```{webr}
+#| input:
+#|   - section_15
+#| define: section_16
+#| envir: global
+.drawn <- draw_section(render_scale(survey, "kidscreen"), section_15)
+section_16 <- .drawn$status
+.drawn$output
+```
+
+:::
+
+# Social media time
+
+::: {#social-media-time .report-section}
+
+::: {.chart-placeholder}
+This chart is drawn after you build the report.
+:::
+
+```{webr}
+#| input:
+#|   - section_16
+#| define: section_17
+#| envir: global
+.drawn <- draw_section(render_scale(survey, "social_media_use"), section_16)
+section_17 <- .drawn$status
+.drawn$output
+```
+
+:::
+
+# Social media problems
+
+::: {#social-media-problems .report-section}
+
+::: {.chart-placeholder}
+This chart is drawn after you build the report.
+:::
+
+```{webr}
+#| input:
+#|   - section_17
+#| define: section_18
+#| envir: global
+.drawn <- draw_section(render_scale(survey, "smadd"), section_17)
+section_18 <- .drawn$status
+.drawn$output
+```
+
+:::
+
+:::
 
 ```{ojs}
 //| echo: false
@@ -496,7 +709,7 @@ webr_state = {
   // instead of reporting a status.
   const scan = () => {
     let changed = false;
-    document.querySelectorAll("section.level2 .exercise-cell").forEach((cell, index) => {
+    document.querySelectorAll(".report-section .exercise-cell").forEach((cell, index) => {
       const broken = cell.matches(".observablehq--error") || cell.querySelector(".observablehq--error");
       if (broken && state.failed[index] !== state.clicks) {
         state.failed[index] = state.clicks;
@@ -519,11 +732,19 @@ build_progress = {
   const first = (value) => Array.isArray(value) ? value[0] : value;
   const clicks = +build_clicks || 0;
   const statuses = [
-    section_1, section_2, section_3, section_4, section_5,
-    section_6, section_7, section_8, section_9, section_10
+    section_1, section_2, section_3, section_4, section_5, section_6,
+    section_7, section_8, section_9, section_10, section_11, section_12,
+    section_13, section_14, section_15, section_16, section_17, section_18
   ];
   // [section id, name, number of cells]; the cells are numbered in page order.
   const layout = [
+    ["overview-biography", "Overview: Biography", 1],
+    ["overview-socioeconomic-position", "Overview: Socioeconomic position", 1],
+    ["overview-bcfpi", "Overview: BCFPI", 2],
+    ["overview-ace-iq", "Overview: ACE-IQ", 1],
+    ["overview-quality-of-life", "Overview: Quality of life", 1],
+    ["overview-resilience", "Overview: Resilience", 1],
+    ["overview-social-media-time", "Overview: Social media time", 1],
     ["biography", "Biography", 1],
     ["living-situation", "Living situation", 1],
     ["socioeconomic", "Socioeconomic", 1],
