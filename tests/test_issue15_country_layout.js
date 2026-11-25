@@ -457,15 +457,15 @@ function testCountryWithoutOrigAliasesMatchesAsNoCountry() {
 }
 
 function testExplicitCountryBeatsAliasDetection() {
-  // Alias says Spain; country Hungary uses Hungary's aliases (grade1: 'schooltype', cyrm12: 'cyrm1:12_12').
-  assert.strictEqual(dictVar('grade1').orig_aliases.hungary, 'schooltype');
+  // Alias says Spain; country Hungary uses Hungary's aliases (grade1: 'grade1' since issue #28, cyrm12: 'cyrm1:12_12').
+  assert.strictEqual(dictVar('grade1').orig_aliases.hungary, 'grade1');
   const header = ['School type (schooltype)', 'Grade (grade1)', 'Age at arrival (born4)'];
   const rows = euPre('Spain', header, [['9. évfolyam', 'x', '5']]);
   const result = audit(rows, { country: 'Hungary' });
   assert.strictEqual(result.summary.metadata.country, 'Hungary');
   assert.strictEqual(result.summary.metadata.countrySource, 'selected');
-  assert.strictEqual(colVar(result, 0), 'grade1', 'schooltype is Hungary\'s grade1');
-  assert.notStrictEqual(colVar(result, 1), 'grade1', 'grade1 header is not Hungary\'s grade1');
+  assert.notStrictEqual(colVar(result, 0), 'grade1', 'schooltype is not Hungary\'s grade1');
+  assert.strictEqual(colVar(result, 1), 'grade1', 'grade1 header is Hungary\'s grade1');
   const out = SurveyAuditor.cleanExportRows(rows, { dictionary: DICT, country: 'Hungary' });
   assert.strictEqual(out[0][2], bageHeaderFor('Hungary'));
 }
@@ -477,8 +477,8 @@ const HU_EXPECTED = [
   ['born3', 'bplace1', 'bage1'],
   ['born4', 'bage1', 'bmborn1'],
   ['born5', 'bmborn1', null],
-  ['schooltype', 'grade1', null],
-  ['grade1', undefined, 'grade1'],
+  ['schooltype', undefined, 'grade1'],
+  ['grade1', 'grade1', null],
   ['cyrm1:12_12', 'cyrm12', null],
   ['CYRM12', undefined, 'cyrm12']
 ];

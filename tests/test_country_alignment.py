@@ -1063,11 +1063,10 @@ class TestCountryAlignment(unittest.TestCase):
         self.assertEqual(var, "bcfpi_raia1")
 
     def test_spain_birth_country_espana_aliases_country_not_cyprus(self):
-        """España on a birth-country item lands on value 1 ([COUNTRY]), not value 11 (Cyprus).
-
-        Expected placement is the issue-8 contract. España is intentionally not already
-        in the value-1 slot: it sits at the same list index as Cyprus, which is the
-        named wrong answer.
+        """merge_country_alignment adds no option aliases (issue #28, section 6), so
+        España lands neither on value 1 ([COUNTRY]) nor on value 11 (Cyprus) here.
+        That España maps to value 1 on the birth-country variables is checked on the
+        committed dictionary (test_committed_dictionary_espana_is_value_1).
         """
         core = [
             Question(
@@ -1146,7 +1145,87 @@ class TestCountryAlignment(unittest.TestCase):
             return found
 
         self.assertNotIn("España", texts_for(11))
-        self.assertIn("España", texts_for(1))
+        self.assertNotIn("España", texts_for(1))
+
+    def test_committed_dictionary_espana_is_value_1(self):
+        """Issue #28 contract: España is value 1 ([COUNTRY]) on the birth-country
+        variables of the committed dictionary, not 11 (Cyprus) and not 42 (Spain)."""
+        import json
+
+        d = json.loads((ROOT / "data" / "master_dictionary.json").read_text(encoding="utf-8"))
+        by_name = {v["variable"]: v for v in d["variables"]}
+        for name in ("bplace1", "bmborn1", "bfborn1"):
+            values = {
+                float(o["value"])
+                for o in by_name[name]["options"]
+                if (o.get("alias") or o.get("label") or "").strip() == "España"
+            }
+            self.assertEqual(values, {1.0}, f"{name}: España values {values}")
+
+    def test_merge_adds_no_option_aliases_for_any_country(self):
+        """Issue #28, section 6: merge_country_alignment records orig_aliases but adds no
+        option aliases. The Hungarian list here has another order and length than the
+        core list, so a positional alias would put Albánia on Ukraine."""
+        for country in ("hungary", "spain", "germany"):
+            core = [
+                Question(
+                    group_id="birth",
+                    section="Background",
+                    stem="Where were you born?",
+                    question_type="single",
+                    scale="nominal",
+                    scale_confidence="high",
+                    multiple=False,
+                    options=[Option("[COUNTRY]", 0, 1), Option("Ukraine", 1, 2), Option("Albania", 2, 3)],
+                    items=[Item("born2", source="canonical_en", short_name="bplace1", is_core=True)],
+                    options_complete="true",
+                    source="canonical_en",
+                    is_core=True,
+                )
+            ]
+            country_q = [
+                Question(
+                    group_id="szuletes",
+                    section="Background",
+                    stem="Hol születtél?",
+                    question_type="single",
+                    scale="nominal",
+                    scale_confidence="high",
+                    multiple=False,
+                    options=[Option("Magyarország", 0), Option("Albánia", 1), Option("Andorra", 2), Option("Egyéb", 3)],
+                    items=[Item("born3", source=country, is_core=False)],
+                    options_complete="true",
+                    source=country,
+                    is_core=False,
+                )
+            ]
+            alignment = [
+                AlignmentRow(
+                    country_orig_id="born3",
+                    section="Background",
+                    country_stem="Hol születtél?",
+                    country_item="",
+                    country_options="Magyarország | Albánia | Andorra | Egyéb",
+                    translated_text="",
+                    canonical_variable="bplace1",
+                    canonical_stem="Where were you born?",
+                    canonical_item="",
+                    canonical_options="[COUNTRY] | Ukraine | Albania",
+                    status="matched",
+                )
+            ]
+            used_gids, used_stems, used_names = _used_sets(core)
+            merged = merge_country_alignment(
+                core, country_q, alignment, country,
+                _unique_group_id, _assign_short_names, used_gids, used_stems, used_names,
+            )
+            question = next(q for q in merged if any(it.short_name == "bplace1" for it in q.items))
+            item = next(it for it in question.items if it.short_name == "bplace1")
+            self.assertEqual(item.orig_aliases.get(country), "born3", f"{country}: orig_aliases recorded")
+            self.assertEqual([o.label for o in question.options], ["[COUNTRY]", "Ukraine", "Albania"],
+                             f"{country}: no option added")
+            for o in question.options:
+                self.assertEqual(list(o.aliases), [], f"{country}: no alias on {o.label}")
 
 
 if __name__ == "__main__":

@@ -232,5 +232,146 @@ class CountryTextKeysTest(unittest.TestCase):
         self.assertIn("apply_country_text_keys(", source, "extract_dictionary.py calls apply_country_text_keys")
 
 
+LADDER_EXCEPTIONS = {("ladder1", "Bottom of the ladder"), ("ladder1", "Top of the ladder")}
+
+# Issue #28, section 5: canonical options that the questionnaire-derived
+# codebook does not contain (variable, label, value).
+NEW_CANONICAL = [
+    ("edumom1", "College or university degree", 5), ("edumom1", "Vocational training", 6),
+    ("edudad1", "College or university degree", 5), ("edudad1", "Vocational training", 6),
+    ("grade1", "Vocational training", 8), ("byear1", "2012", 2012), ("aiuse1", "For getting information", 4),
+]
+
+
+def committed_dictionary():
+    import json
+    return json.loads((ROOT / "data" / "master_dictionary.json").read_text(encoding="utf-8"))
+
+
+def core_option_set(d):
+    out = set()
+    for v in d["variables"]:
+        if v.get("is_core") is not True:
+            continue
+        for o in v.get("options") or []:
+            out.add((v["variable"], o.get("label"), float(o["value"])))
+    return out
+
+
+def strip_core_aliases(d, drop_new_canonical=False):
+    """Copy of d without the alias options of core variables (except the two
+    English ladder end labels); optionally without the issue #28 canonical additions."""
+    d = copy.deepcopy(d)
+    drop = {(n, lab, float(val)) for n, lab, val in NEW_CANONICAL} if drop_new_canonical else set()
+    for v in d["variables"]:
+        if v.get("is_core") is not True:
+            continue
+        kept = []
+        for o in v.get("options") or []:
+            if o.get("alias") and (v["variable"], o.get("label")) not in LADDER_EXCEPTIONS:
+                continue
+            if not o.get("alias") and (v["variable"], o.get("label"), float(o["value"])) in drop:
+                continue
+            kept.append(o)
+        v["options"] = kept
+    return d
+
+
+class Issue28CommittedKeyFilesTest(unittest.TestCase):
+    """Issue #28, section 6: the committed key files rebuild every core alias."""
+
+    MAPS = ROOT / "data" / "country_maps"
+
+    def apply(self, d):
+        mod = load_module(self)
+        return mod.apply_country_text_keys(d, self.MAPS)
+
+    def test_key_files_exist_with_answer_layout(self):
+        for name in ("hungary_answers.csv", "spain_answers.csv", "hungary_headers.csv", "canonical_additions.csv"):
+            self.assertTrue((self.MAPS / name).is_file(), f"data/country_maps/{name} exists")
+        for name in ("hungary_answers.csv", "spain_answers.csv"):
+            with open(self.MAPS / name, encoding="utf-8-sig", newline="") as fh:
+                head = next(csv.reader(fh))
+            self.assertEqual(len(head), 5, f"{name}: five columns like germany_answers.csv")
+            self.assertEqual(head[0], "variables")
+            self.assertTrue(head[1].endswith("_label"), f"{name}: second column <language>_label")
+            self.assertEqual(head[2:], ["value", "status", "note"])
+
+    def test_core_aliases_rebuilt_from_key_files(self):
+        committed = committed_dictionary()
+        rebuilt = self.apply(strip_core_aliases(committed))
+        want, got = core_option_set(committed), core_option_set(rebuilt)
+        self.assertEqual(sorted(want - got)[:20], [], "core options missing after the rebuild")
+        self.assertEqual(sorted(got - want)[:20], [], "core options the committed dictionary lacks")
+
+    def test_canonical_additions_restored_on_questionnaire_dictionary(self):
+        committed = committed_dictionary()
+        stripped = strip_core_aliases(committed, drop_new_canonical=True)
+        rebuilt = self.apply(stripped)
+        by_name = {v["variable"]: v for v in rebuilt["variables"]}
+        for name, label, value in NEW_CANONICAL:
+            hits = [o for o in by_name[name]["options"]
+                    if not o.get("alias") and o.get("label") == label and float(o["value"]) == float(value)]
+            self.assertEqual(len(hits), 1, f"{name}: canonical option {label} = {value} added once")
+        self.assertEqual(core_option_set(rebuilt), core_option_set(committed))
+
+    def test_apply_twice_changes_nothing(self):
+        d = self.apply(strip_core_aliases(committed_dictionary(), drop_new_canonical=True))
+        once = copy.deepcopy(d)
+        self.apply(d)
+        self.assertEqual(d, once, "second run changes nothing")
+
+
+def review_rows(country):
+    from openpyxl import load_workbook
+    wb = load_workbook(ROOT / "data" / "country_maps" / f"{country}_review.xlsx", read_only=True)
+    ws = wb.worksheets[0]
+    rows = list(ws.iter_rows(values_only=True))
+    head = list(rows[0])
+    i_id, i_var = head.index("country_orig_id"), head.index("canonical_variable")
+    return [(r[i_id], r[i_var]) for r in rows[1:]]
+
+
+def core_names():
+    return {v["variable"] for v in committed_dictionary()["variables"] if v.get("is_core") is True}
+
+
+class Issue28ReviewWorkbookTest(unittest.TestCase):
+    """Issue #28, section 1: review workbooks record one country column per core variable."""
+
+    def owners(self, country):
+        core = core_names()
+        owners = {}
+        for cid, var in review_rows(country):
+            if not cid:
+                continue
+            for name in str(var or "").replace(",", " ").split():
+                if name in core:
+                    owners.setdefault(name, set()).add(str(cid))
+        return owners
+
+    def recorded(self, country, cid):
+        return {str(var or "").strip() for c, var in review_rows(country) if str(c) == cid}
+
+    def test_no_core_variable_on_two_columns(self):
+        for country in ("hungary", "spain"):
+            dups = {k: sorted(v) for k, v in self.owners(country).items() if len(v) > 1}
+            self.assertEqual(dups, {}, f"{country}: core variables recorded for two columns")
+
+    def test_hungary_recorded_variables(self):
+        for cid, want in (("grade1", "grade1"), ("some_week1:5_1", "smwd1"), ("some_weekend1:5_1", "smwda1")):
+            self.assertEqual(self.recorded("hungary", cid), {want}, f"hungary {cid}")
+        core = core_names()
+        for cid in ("schooltype", "county", "sleep3", "some_week1:5_4", "some_weekend1:5_4"):
+            got = self.recorded("hungary", cid)
+            self.assertTrue(got, f"hungary_review.xlsx has a row for {cid}")
+            self.assertFalse({g for g in got if g in core}, f"hungary {cid} carries no core variable: {got}")
+
+    def test_spain_sleep7_carries_no_core_variable(self):
+        got = self.recorded("spain", "sleep7")
+        self.assertTrue(got, "spain_review.xlsx has a row for sleep7")
+        self.assertFalse(got & core_names(), f"spain sleep7: {got}")
+
+
 if __name__ == "__main__":
     unittest.main()

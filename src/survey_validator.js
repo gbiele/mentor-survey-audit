@@ -302,11 +302,11 @@
   }
 
   /**
-   * Split a respondent cell on semicolons. A segment is rewritten only when
-   * that segment itself ends with an ID tag. Other segments stay as stored.
+   * Split a respondent cell on semicolons, or take the pieces the caller split.
+   * A segment is rewritten only when that segment itself ends with an ID tag.
+   * Other segments stay as stored.
    */
-  function answerSegments(value) {
-    const pieces = String(value).split(";");
+  function answerSegments(value, pieces = String(value).split(";")) {
     return pieces.map(part => {
       const parsed = parseAnswer(part);
       if (parsed.answerId) {
@@ -367,6 +367,19 @@
     return segments.map(seg => (seg.hadId ? seg.label : seg.part)).join(";");
   }
 
+  // Hungary offers these on every question. For now they are missing data.
+  const HUNGARIAN_NON_ANSWERS = new Set([
+    "nem szeretnék válaszolni",
+    "nem tudom / nem vonatkozik rám",
+    "nem tudom",
+    "nem vonatkozik rám"
+  ]);
+
+  /** The whole cell or selection, without its ID tag, is a Hungarian non-answer. */
+  function isHungarianNonAnswer(value) {
+    return typeof value === "string" && HUNGARIAN_NON_ANSWERS.has(normKey(parseAnswer(value).label));
+  }
+
   /**
    * One header row plus one respondent row, with preamble omitted and
    * trailing ID tags removed. Does not recode labels to numeric codes.
@@ -388,6 +401,7 @@
     const audit = new SurveyAuditor(opts.dictionary).auditSheet(rows, { country: opts.country });
     const byCol = new Map(audit.columns.map(c => [c.colIndex, c]));
     const countryName = resolveCountry(rows, opts).name;
+    const isHungary = countryName === "Hungary";
 
     const keep = [];
     for (let i = 0; i < width; i++) {
@@ -401,9 +415,16 @@
       for (let r = 0; r < dataRows.length; r++) {
         const src = dataRows[r] || [];
         const cell = i < src.length ? src[i] : null;
-        base[r + 1][i] = translateAnswerCell(cell, matcher, v, countryName);
+        base[r + 1][i] = translateAnswerCell(cell, matcher, v, countryName, isHungary);
       }
       if (v.is_core === true && v.source === "canonical_en") keep.push(i);
+    }
+
+    // Hungarian non-answers are blank in every column, matched or not.
+    if (isHungary) {
+      dataRows.forEach((src, r) => (src || []).forEach((cell, i) => {
+        if (isHungarianNonAnswer(cell)) base[r + 1][i] = null;
+      }));
     }
 
     if (opts.coreOnly) return base.map(row => keep.map(i => row[i]));
@@ -606,33 +627,68 @@
     return c.length === 1 ? c[0].label : null;
   }
 
+  /** Split on commas outside parentheses: option labels have commas of their own. */
+  function commaSelections(value) {
+    const pieces = [""];
+    let depth = 0;
+    for (const ch of String(value)) {
+      if (ch === "(") depth++;
+      else if (ch === ")" && depth > 0) depth--;
+      if (ch === "," && depth === 0) pieces.push("");
+      else pieces[pieces.length - 1] += ch;
+    }
+    return pieces;
+  }
+
   /**
    * Respondent cell for the cleaned download with a dictionary: the canonical
-   * English option label when the cell, or each semicolon segment of a cell
-   * that does not map as a whole, maps to an option. Other text is cleaned as
-   * in the download without a dictionary.
+   * English option label when the cell, or each selection of a cell that does
+   * not map as a whole, maps to an option. Selections are separated by
+   * semicolons. A multiple-choice cell without a semicolon may use commas
+   * (Qualtrics); it is rewritten only when a selection maps or is dropped, and
+   * is joined with semicolons. With isHungary, a multiple-choice cell loses its
+   * non-answer selections and is null when none is left. Other text is cleaned
+   * as in the download without a dictionary.
    */
-  function translateAnswerCell(value, matcher, canonical, countryName) {
-    if (value == null || value === "" || typeof value === "number" || !matcher) {
+  function translateAnswerCell(value, matcher, canonical, countryName, isHungary) {
+    const multiple = canonical.multiple === true;
+    const dropNonAnswers = isHungary && multiple;
+    if (value == null || value === "" || typeof value === "number" || (!matcher && !dropNonAnswers)) {
       return cleanAnswerCell(value);
     }
     if (typeof value === "string" && !value.trim()) return cleanAnswerCell(value);
 
+    const match = (label, answerId) => (matcher ? matcher.match(label, answerId) : null);
     const observed = labelsFromCell(value, false)[0];
-    const whole = matcher.match(observed.key, observed.answerId);
+    const whole = match(observed.key, observed.answerId);
     if (whole) {
       const label = canonicalLabel(canonical, whole.option);
       return label == null ? cleanAnswerCell(value) : replaceCountry(label, countryName);
     }
-    if (String(value).includes(";")) {
-      return answerSegments(value).map(seg => {
-        const found = matcher.match(seg.label || seg.raw, seg.answerId);
-        const label = found ? canonicalLabel(canonical, found.option) : null;
-        if (label != null) return replaceCountry(label, countryName);
-        return seg.hadId ? seg.label : seg.part;
-      }).join(";");
+    const hasSemicolon = String(value).includes(";");
+    if (!hasSemicolon && !multiple) return cleanAnswerCell(value);
+
+    const segments = hasSemicolon ? answerSegments(value) : answerSegments(value, commaSelections(value));
+    let mapped = false;
+    let dropped = false;
+    const out = [];
+    for (const seg of segments) {
+      if (dropNonAnswers && isHungarianNonAnswer(seg.part)) {
+        dropped = true;
+        continue;
+      }
+      const found = match(seg.label || seg.raw, seg.answerId);
+      const label = found ? canonicalLabel(canonical, found.option) : null;
+      if (label != null) {
+        mapped = true;
+        out.push(replaceCountry(label, countryName));
+      } else {
+        out.push(seg.hadId ? seg.label : seg.part);
+      }
     }
-    return cleanAnswerCell(value);
+    if (dropped && out.every(part => !part.trim())) return null;
+    if (!hasSemicolon && !mapped && !dropped) return cleanAnswerCell(value);
+    return out.join(";");
   }
 
   /**
