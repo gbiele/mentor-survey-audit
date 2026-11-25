@@ -228,7 +228,11 @@ distribution_table <- function(survey, variable, among_asked = FALSE) {
     data.frame(response = lab, n = sum(label == lab, na.rm = TRUE), sort = sort_key, stringsAsFactors = FALSE)
   })
   df <- do.call(rbind, c(rows, extra_rows))
-  long_list <- nrow(meta$options) > 12
+  # Categories that only some countries offer get no empty bar elsewhere.
+  optional <- c("College or university degree", "Vocational training")
+  df <- df[!(df$response %in% optional & df$n == 0), , drop = FALSE]
+  # Birth years are over the limit but are read in year order, empty years included.
+  long_list <- nrow(meta$options) > 12 && variable != "byear1"
   if (long_list) {
     df <- df[df$n > 0, , drop = FALSE]
     df <- df[order(-df$n, df$response), , drop = FALSE]

@@ -1,6 +1,9 @@
 #!/usr/bin/env python3
 """Apply country text keys to the master dictionary.
 
+data/country_maps/canonical_additions.csv (variable, label, value, order,
+is_special, note) adds the canonical options that the questionnaire-derived
+codebook does not contain.
 data/country_maps/<country>_headers.csv (variable, <language>_header) adds the
 header text of a country-language export to variable.header_aliases.<country>.
 data/country_maps/<country>_answers.csv (variables, <language>_label, value, ...)
@@ -52,6 +55,44 @@ def read_rows(path):
         for row in reader:
             row["text"] = row[reader.fieldnames[1]]
             yield reader.line_num, row
+
+
+def apply_canonical_additions(master_dict, path):
+    """Add each row as a canonical option, unless the variable already has it."""
+    by_name = {v["variable"]: v for v in master_dict["variables"]}
+    with open(path, encoding="utf-8", newline="") as f:
+        reader = csv.DictReader(f)
+        for row in reader:
+            where = f"{path.name}:{reader.line_num}"
+            name, label, value = row["variable"], row["label"], int(row["value"])
+            if name not in by_name:
+                raise ValueError(f"{where}: variable {name!r} is not in the dictionary")
+            if row["is_special"] not in ("true", "false"):
+                raise ValueError(f"{where}: is_special must be true or false ({label!r})")
+            is_special = row["is_special"] == "true"
+            var = by_name[name]
+            canon = [o for o in var["options"] if not o.get("alias")]
+            if any(norm_key(o["label"]) == norm_key(label) and same_value(o["value"], value) for o in canon):
+                continue
+            if any(norm_key(o["label"]) == norm_key(label) for o in var["options"]):
+                raise ValueError(f"{where}: label {label!r} already exists in {name} with another definition")
+            if any(same_value(o["value"], value) for o in canon):
+                raise ValueError(
+                    f"{where}: value {value} already has another canonical label in {name} ({label!r})")
+            var["options"].append({
+                "order": int(row["order"]),
+                "label": label,
+                "label_with_id": "",
+                "alias": "",
+                "eusurvey_answer_id": "",
+                "value": value,
+                "scale": var["scale"],
+                "is_special": is_special,
+                "special_type": label if is_special else "",
+            })
+            # n_options counts the canonical options.
+            if var.get("n_options") is not None:
+                var["n_options"] += 1
 
 
 def apply_headers(master_dict, path, country):
@@ -123,9 +164,13 @@ def apply_answers(master_dict, path):
 
 
 def apply_country_text_keys(master_dict, maps_dir):
-    """Add header aliases and alias options from every <country>_headers.csv and
-    <country>_answers.csv in maps_dir. Changes master_dict in place and returns it."""
+    """Add the canonical options of canonical_additions.csv, then header aliases and
+    alias options from every <country>_headers.csv and <country>_answers.csv in
+    maps_dir. Changes master_dict in place and returns it."""
     maps_dir = Path(maps_dir)
+    additions = maps_dir / "canonical_additions.csv"
+    if additions.exists():
+        apply_canonical_additions(master_dict, additions)
     for path in sorted(maps_dir.glob("*_headers.csv")):
         apply_headers(master_dict, path, path.name[: -len("_headers.csv")])
     for path in sorted(maps_dir.glob("*_answers.csv")):

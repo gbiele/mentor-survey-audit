@@ -122,29 +122,45 @@ render_overview_biography <- function(survey) {
   })
 }
 
+# The higher of the mother's and the father's level, one label per young person.
+# The order is written out: College or university degree has value 5 but ranks
+# just above some college. Vocational training is not ranked, so the other
+# parent's level is used. levels lists the categories in figure order.
+highest_parental_education <- function(survey) {
+  college <- "College or university degree"
+  ranked <- c(
+    "Less than high school",
+    "High school diploma or equivalent",
+    "Come college, no degree",
+    college,
+    "Bachelor's degree",
+    "Master's degree or more"
+  )
+  parent_rank <- function(variable) {
+    opts <- survey$meta[[variable]]$options
+    label <- opts$label[match(substantive_matrix(survey, variable)[, 1], opts$value)]
+    unknown <- setdiff(label, c(ranked, "Vocational training", NA))
+    if (length(unknown)) {
+      stop("No rank for the ", variable, " level: ", paste(unknown, collapse = ", "))
+    }
+    match(label, ranked)
+  }
+  shown <- ranked[higher_known(parent_rank("edumom1"), parent_rank("edudad1"))]
+  list(shown = shown, levels = ranked[ranked != college | ranked %in% shown])
+}
+
 render_overview_ses <- function(survey) {
   mentor_collect({
     mentor_emit("\n\n### Highest parental education\n\n")
     mentor_emit(
       "The level is the higher of the mother's and the father's education. ",
       "Don't know and a blank answer are ignored when the other parent has a level. ",
-      "When neither parent has a level, the result is missing.\n\n",
+      "Vocational training is not ranked among the other levels, so the other parent's level is used. ",
+      "When neither parent has a ranked level, the result is missing.\n\n",
       sep = ""
     )
-    opts <- survey$meta$edumom1$options
-    opts <- opts[!opts$special, , drop = FALSE]
-    opts <- opts[order(opts$value), , drop = FALSE]
-    labels <- display_label(opts$label)
-    code <- higher_known(
-      substantive_matrix(survey, "edumom1")[, 1],
-      substantive_matrix(survey, "edudad1")[, 1]
-    )
-    shown <- rep(NA_character_, length(code))
-    for (i in seq_len(nrow(opts))) {
-      hit <- !is.na(code) & code == opts$value[[i]]
-      shown[hit] <- labels[[i]]
-    }
-    show_vector(shown, "Highest parental education", labels)
+    education <- highest_parental_education(survey)
+    show_vector(education$shown, "Highest parental education", education$levels)
 
     ladder <- survey$code$ladder1
     ladder_ci <- mean_ci(ladder)

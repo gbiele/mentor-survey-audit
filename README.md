@@ -44,6 +44,12 @@ The application comes pre-configured with the authoritative **Core Master Survey
 6. **German-language exports**:
    - Exports without ID tags, with German headers and answers, are matched through `data/country_maps/germany_headers.csv` and `germany_answers.csv`. Regenerate the headers from a tagged and an untagged export with `node scripts/build_country_headers.js <tagged.xlsx> <untagged.xlsx> data/country_maps/germany_headers.csv`, then apply both files to the dictionary copies with `python scripts/country_text_keys.py`.
 
+7. **Country key files**:
+   - Country answer labels reach the core variables only through `data/country_maps/<country>_answers.csv` (Germany, Hungary, Spain), one row per label, written by the meaning of the label. Positions in a country's option list are not used. `<country>_headers.csv` adds header texts, and `canonical_additions.csv` adds the canonical options that the questionnaire-derived codebook does not contain.
+   - `python scripts/country_text_keys.py` adds these to the dictionary copies. It does not delete an alias whose row was removed from a key file.
+   - Hungary offers "prefer not to answer" and "don't know / not applicable" on every question. The cleaned export of a Hungarian survey writes a blank cell for them.
+   - **Comparing countries**: Hungary has one option, *College or university degree*, for both Bachelor's and Master's. When countries are compared, merge *Bachelor's degree* and *Master's degree or more* into *College or university degree*. The code does not do this merge.
+
 ---
 
 ## Data Privacy & Security

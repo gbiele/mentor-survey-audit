@@ -1,0 +1,57 @@
+variable,label,value,order,is_special,note
+edumom1,College or university degree,5,6,false,Hungary: Bachelor's and Master's are one option
+edumom1,Vocational training,6,7,false,Spain: not ranked among the education levels
+edudad1,College or university degree,5,6,false,Hungary: Bachelor's and Master's are one option
+edudad1,Vocational training,6,7,false,Spain: not ranked among the education levels
+grade1,Vocational training,8,8,false,Spain
+byear1,2012,2012,12,false,birth year 2012
+aiuse1,For getting information,4,3,false,Hungary
+bplace1,Prefer not to answer,999,53,true,not in the codebook
+bmborn1,Prefer not to answer,999,53,true,not in the codebook
+bfborn1,Prefer not to answer,999,53,true,not in the codebook
+bcfpi_coop1,Prefer not to answer,999,3,true,not in the codebook
+bcfpi_coop2,Prefer not to answer,999,3,true,not in the codebook
+bcfpi_coop3,Prefer not to answer,999,3,true,not in the codebook
+bcfpi_coop4,Prefer not to answer,999,3,true,not in the codebook
+bcfpi_coop5,Prefer not to answer,999,3,true,not in the codebook
+bcfpi_coop6,Prefer not to answer,999,3,true,not in the codebook
+bcfpi_ma1,Prefer not to answer,999,3,true,not in the codebook
+bcfpi_ma2,Prefer not to answer,999,3,true,not in the codebook
+bcfpi_ma3,Prefer not to answer,999,3,true,not in the codebook
+bcfpi_ma4,Prefer not to answer,999,3,true,not in the codebook
+bcfpi_ma5,Prefer not to answer,999,3,true,not in the codebook
+bcfpi_ma6,Prefer not to answer,999,3,true,not in the codebook
+bcfpi_af1,Prefer not to answer,999,3,true,not in the codebook
+bcfpi_af2,Prefer not to answer,999,3,true,not in the codebook
+bcfpi_af3,Prefer not to answer,999,3,true,not in the codebook
+bcfpi_af4,Prefer not to answer,999,3,true,not in the codebook
+bcfpi_af5,Prefer not to answer,999,3,true,not in the codebook
+bcfpi_af6,Prefer not to answer,999,3,true,not in the codebook
+rpginsfy1,Prefer not to answer,999,5,true,not in the codebook
+rpginsfy2,Prefer not to answer,999,5,true,not in the codebook
+dlup1,Prefer not to answer,999,4,true,not in the codebook
+dlupa1,Prefer not to answer,999,2,true,not in the codebook
+dlupa2,Prefer not to answer,999,2,true,not in the codebook
+dlupa3,Prefer not to answer,999,2,true,not in the codebook
+dlupa4,Prefer not to answer,999,2,true,not in the codebook
+dlupa5,Prefer not to answer,999,2,true,not in the codebook
+cyrm01,Prefer not to answer,999,5,true,not in the codebook
+cyrm02,Prefer not to answer,999,5,true,not in the codebook
+cyrm03,Prefer not to answer,999,5,true,not in the codebook
+cyrm04,Prefer not to answer,999,5,true,not in the codebook
+cyrm05,Prefer not to answer,999,5,true,not in the codebook
+cyrm06,Prefer not to answer,999,5,true,not in the codebook
+cyrm07,Prefer not to answer,999,5,true,not in the codebook
+cyrm08,Prefer not to answer,999,5,true,not in the codebook
+cyrm09,Prefer not to answer,999,5,true,not in the codebook
+cyrm10,Prefer not to answer,999,5,true,not in the codebook
+cyrm11,Prefer not to answer,999,5,true,not in the codebook
+cyrm12,Prefer not to answer,999,5,true,not in the codebook
+ksa1,Prefer not to answer,999,5,true,not in the codebook
+ksa2,Prefer not to answer,999,5,true,not in the codebook
+smharm1,Prefer not to answer,999,5,true,not in the codebook
+smharm2,Prefer not to answer,999,5,true,not in the codebook
+smharm3,Prefer not to answer,999,5,true,not in the codebook
+smharm4,Prefer not to answer,999,5,true,not in the codebook
+smharm5,Prefer not to answer,999,5,true,not in the codebook
+smharm6,Prefer not to answer,999,5,true,not in the codebook
