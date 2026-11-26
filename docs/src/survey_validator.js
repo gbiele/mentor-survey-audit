@@ -391,6 +391,10 @@
     return typeof value === "string" && HUNGARIAN_NON_ANSWERS.has(normKey(parseAnswer(value).label));
   }
 
+  function isCoreVariable(v) {
+    return v.is_core === true && v.source === "canonical_en";
+  }
+
   /**
    * One header row plus one respondent row, with preamble omitted and
    * trailing ID tags removed. Does not recode labels to numeric codes.
@@ -428,7 +432,7 @@
         const cell = i < src.length ? src[i] : null;
         base[r + 1][i] = translateAnswerCell(cell, matcher, v, countryName, isHungary);
       }
-      if (v.is_core === true && v.source === "canonical_en") keep.push(i);
+      if (isCoreVariable(v)) keep.push(i);
     }
 
     // Hungarian non-answers are blank in every column, matched or not.
@@ -440,6 +444,32 @@
 
     if (opts.coreOnly) return base.map(row => keep.map(i => row[i]));
     return base;
+  }
+
+  /**
+   * Whether a core export is worth writing: "empty" (no columns), "few"
+   * (less than half of the core questions) or "ok". message is null for "ok".
+   */
+  function checkCoreExport(coreRows, dictionary) {
+    const columns = (coreRows[0] || []).length;
+    const total = dictionary.variables.filter(isCoreVariable).length;
+    if (columns === 0) {
+      return {
+        status: "empty",
+        columns,
+        total,
+        message: `No file was written: no column of this export was matched to a core question (0 of ${total}). Check that the survey country is correct and that this is the right survey export file.`
+      };
+    }
+    if (columns * 2 < total) {
+      return {
+        status: "few",
+        columns,
+        total,
+        message: `Warning: only ${columns} of ${total} core questions were found in this export. The file is written, but the Survey results report may be incomplete or fail. Check that the survey country is correct and that this is the right survey export file.`
+      };
+    }
+    return { status: "ok", columns, total, message: null };
   }
 
   function cleanExportBase(rows) {
@@ -1287,6 +1317,7 @@
   }
 
   SurveyAuditor.cleanExportRows = cleanExportRows;
+  SurveyAuditor.checkCoreExport = checkCoreExport;
   SurveyAuditor.detectExportLayout = detectExportLayout;
   SurveyAuditor.detectSurveyCountry = detectSurveyCountry;
   SurveyAuditor.scrambleExportSample = scrambleExportSample;

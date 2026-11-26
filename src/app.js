@@ -1032,6 +1032,9 @@
       return;
     }
     const cleaned = SurveyAuditor.cleanExportRows(currentSheetRows, { dictionary: auditor.dictionary, country: currentCountry, coreOnly: true });
+    const check = SurveyAuditor.checkCoreExport(cleaned, auditor.dictionary);
+    if (check.message) alert(check.message);
+    if (check.status === 'empty') return;
     writeExportWorkbook(cleaned, 'Cleaned', '_cleaned_core.xlsx');
   };
 
