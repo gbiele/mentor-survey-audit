@@ -21,6 +21,7 @@ source(file.path(report_dir, "R", "scores.R"))
 source(file.path(report_dir, "R", "plots.R"))
 source(file.path(report_dir, "R", "scales.R"))
 source(file.path(report_dir, "R", "scale_page.R"))
+source(file.path(report_dir, "R", "sections.R"))
 source(file.path(report_dir, "R", "overview.R"))
 
 survey <- load_survey(report_dir = report_dir)
