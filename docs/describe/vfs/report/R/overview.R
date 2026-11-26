@@ -1,5 +1,5 @@
 # Compact overview. Score charts, not item charts.
-# Sourced from setup.R after the scale and plot helpers.
+# Sourced from setup.R after the scale and plot helpers and sections.R.
 
 likert_sum <- function(survey, spec) {
   likert_scores(apply_reverse(
@@ -98,27 +98,29 @@ render_overview_biography <- function(survey) {
   mentor_collect({
     mentor_emit("\n\n### Sex\n\n")
     show_dist(survey, "gender1", title = "What gender do you identify as?")
-    mentor_emit(
-      "\n\n### Migration background\n\n",
-      "Born in ", survey$country, " means the birthplace answer is ", survey$country,
-      ". Young people born in ", survey$country,
-      " whose parent birthplaces are not both known, and who do not have a parent born abroad, ",
-      "stay in their own row.\n\n",
-      sep = ""
-    )
-    mig_levels <- c(
-      paste0("Born in ", survey$country, ", both parents born in ", survey$country),
-      paste0("Born in ", survey$country, ", one or both parents born abroad"),
-      "Born abroad",
-      paste0("Born in ", survey$country, ", parent birthplace incomplete")
-    )
-    show_vector(survey$migration, "Migration background", mig_levels)
-    mentor_emit(
-      "\n\n### Living situation\n\n",
-      "Who the young person lives with. Follow-up questions are on the living situation page.\n\n",
-      sep = ""
-    )
-    show_dist(survey, "live1", title = "Thinking about the people you live with, what best describes your situation?")
+    subsection(survey, "Migration background", c("bplace1", "bmborn1", "bfborn1"), {
+      mentor_emit(
+        "Born in ", survey$country, " means the birthplace answer is ", survey$country,
+        ". Young people born in ", survey$country,
+        " whose parent birthplaces are not both known, and who do not have a parent born abroad, ",
+        "stay in their own row.\n\n",
+        sep = ""
+      )
+      mig_levels <- c(
+        paste0("Born in ", survey$country, ", both parents born in ", survey$country),
+        paste0("Born in ", survey$country, ", one or both parents born abroad"),
+        "Born abroad",
+        paste0("Born in ", survey$country, ", parent birthplace incomplete")
+      )
+      show_vector(survey$migration, "Migration background", mig_levels)
+    })
+    subsection(survey, "Living situation", "live1", {
+      mentor_emit(
+        "Who the young person lives with. Follow-up questions are on the living situation page.\n\n",
+        sep = ""
+      )
+      show_dist(survey, "live1", title = "Thinking about the people you live with, what best describes your situation?")
+    })
   })
 }
 
@@ -151,32 +153,34 @@ highest_parental_education <- function(survey) {
 
 render_overview_ses <- function(survey) {
   mentor_collect({
-    mentor_emit("\n\n### Highest parental education\n\n")
-    mentor_emit(
-      "The level is the higher of the mother's and the father's education. ",
-      "Don't know and a blank answer are ignored when the other parent has a level. ",
-      "Vocational training is not ranked among the other levels, so the other parent's level is used. ",
-      "When neither parent has a ranked level, the result is missing.\n\n",
-      sep = ""
-    )
-    education <- highest_parental_education(survey)
-    show_vector(education$shown, "Highest parental education", education$levels)
-
-    ladder <- survey$code$ladder1
-    ladder_ci <- mean_ci(ladder)
-    n_ladder_zero <- sum(survey$status$ladder1 == "unmatched")
-    mentor_emit(
-      "\n\n### Social ladder\n\n",
-      "The ladder runs from 1 to 10 in the survey dictionary. ", n_ladder_zero,
-      " answers of 0 are outside that list: they are shown in the chart and left out of the mean. ",
-      "The mean of the 1-10 answers is ", sprintf("%.2f", ladder_ci$mean),
-      " (95% CI ", sprintf("%.2f", ladder_ci$lo), " to ", sprintf("%.2f", ladder_ci$hi),
-      "; n = ", ladder_ci$n, ").\n\n",
-      sep = ""
-    )
-    show_dist(survey, "ladder1", title = "Where is your family on the social ladder?")
-    mentor_emit("\n\n### Family can afford what it needs\n\n")
-    show_dist(survey, "afford1", title = "I feel that my family can usually afford to buy what we need")
+    subsection(survey, "Highest parental education", c("edumom1", "edudad1"), {
+      mentor_emit(
+        "The level is the higher of the mother's and the father's education. ",
+        "Don't know and a blank answer are ignored when the other parent has a level. ",
+        "Vocational training is not ranked among the other levels, so the other parent's level is used. ",
+        "When neither parent has a ranked level, the result is missing.\n\n",
+        sep = ""
+      )
+      education <- highest_parental_education(survey)
+      show_vector(education$shown, "Highest parental education", education$levels)
+    })
+    subsection(survey, "Social ladder", "ladder1", {
+      ladder <- survey$code$ladder1
+      ladder_ci <- mean_ci(ladder)
+      n_ladder_zero <- sum(survey$status$ladder1 == "unmatched")
+      mentor_emit(
+        "The ladder runs from 1 to 10 in the survey dictionary. ", n_ladder_zero,
+        " answers of 0 are outside that list: they are shown in the chart and left out of the mean. ",
+        "The mean of the 1-10 answers is ", sprintf("%.2f", ladder_ci$mean),
+        " (95% CI ", sprintf("%.2f", ladder_ci$lo), " to ", sprintf("%.2f", ladder_ci$hi),
+        "; n = ", ladder_ci$n, ").\n\n",
+        sep = ""
+      )
+      show_dist(survey, "ladder1", title = "Where is your family on the social ladder?")
+    })
+    subsection(survey, "Family can afford what it needs", "afford1", {
+      show_dist(survey, "afford1", title = "I feel that my family can usually afford to buy what we need")
+    })
   })
 }
 
@@ -186,11 +190,6 @@ render_overview_symptoms <- function(survey) {
     mentor_emit(
       "The later score charts on this page use those same two groups. ",
       "The social media chart is not split by gender.\n\n",
-      "Six sums, each from 0 to 12: attention, cooperativeness, managing anxiety, social anxiety, ",
-      "mood, and emotion regulation. A sum is calculated when at least 5 of the 6 items are answered. ",
-      "A higher score means more of these difficulties, except for emotion regulation. ",
-      "That sum adds the answers as given. Its first three items are about feelings taking over, ",
-      "and its last three are about keeping feelings in. Those last three items are not reversed.\n\n",
       sep = ""
     )
     ids <- c(
@@ -202,89 +201,123 @@ render_overview_symptoms <- function(survey) {
       "Social anxiety", "Mood", "Emotion regulation"
     )
     specs <- scale_specs()
-    scores <- lapply(ids, function(id) likert_sum(survey, specs[[id]])$score)
-    plot_gender_means(survey, scores, labels, "Mean sum (0-12)")
+    miss <- absent_vars(survey, unlist(lapply(ids, function(id) specs[[id]]$items)))
+    if (length(miss)) {
+      emit_absent(miss)
+    } else {
+      mentor_emit(
+        "Six sums, each from 0 to 12: attention, cooperativeness, managing anxiety, social anxiety, ",
+        "mood, and emotion regulation. A sum is calculated when at least 5 of the 6 items are answered. ",
+        "A higher score means more of these difficulties, except for emotion regulation. ",
+        "That sum adds the answers as given. Its first three items are about feelings taking over, ",
+        "and its last three are about keeping feelings in. Those last three items are not reversed.\n\n",
+        sep = ""
+      )
+      scores <- lapply(ids, function(id) likert_sum(survey, specs[[id]])$score)
+      plot_gender_means(survey, scores, labels, "Mean sum (0-12)")
+    }
   })
 }
 
 render_overview_functioning <- function(survey) {
   mentor_collect({
-    mentor_emit(
-      "\n\n### Functioning\n\n",
-      "Three domains, four items each. Each sum runs from 0 to 8 and needs all four answers. ",
-      "A higher score means more difficulty in that domain.\n\n",
-      sep = ""
-    )
     spec <- scale_specs()$functioning
-    scores <- lapply(spec$domains, function(domain) {
-      likert_scores(substantive_matrix(survey, domain$items))$score
+    subsection(survey, "Functioning", spec$items, {
+      mentor_emit(
+        "Three domains, four items each. Each sum runs from 0 to 8 and needs all four answers. ",
+        "A higher score means more difficulty in that domain.\n\n",
+        sep = ""
+      )
+      scores <- lapply(spec$domains, function(domain) {
+        likert_scores(substantive_matrix(survey, domain$items))$score
+      })
+      labels <- vapply(spec$domains, function(domain) domain$name, character(1))
+      plot_gender_means(survey, scores, labels, spec$ylab)
     })
-    labels <- vapply(spec$domains, function(domain) domain$name, character(1))
-    plot_gender_means(survey, scores, labels, spec$ylab)
   })
 }
 
 render_overview_ace <- function(survey) {
   mentor_collect({
-    codes <- as.data.frame(substantive_matrix(survey, ace_scored_items()), stringsAsFactors = FALSE)
-    ace <- score_ace(codes)
-    n_score <- sum(!is.na(ace$ace_binary))
-    mentor_emit(
-      "The World Health Organization guidance asks for two totals. Each counts how many of 13 ",
-      "adversity categories are present, from 0 to 13. The binary total uses the lower threshold. ",
-      "The frequency total uses a higher threshold on some questions. ",
-      n_score, " of ", survey$n,
-      " have both totals. The others are missing because at least one category had no answered item. ",
-      "The chart uses Boy and Girl only. The tables include every young person with a non-missing category.\n\n",
-      sep = ""
-    )
-    means <- rbind(
-      gender_mean_frame(ace$ace_binary, survey$label$gender1, "Binary (0-13)"),
-      gender_mean_frame(ace$ace_frequency, survey$label$gender1, "Frequency (0-13)")
-    )
-    mentor_plot(score_mean_plot(means, "Mean number of categories (0-13)"))
-    emit_prevalence(ace, survey$label$gender1, "binary")
-    emit_prevalence(ace, survey$label$gender1, "frequency")
+    miss <- absent_vars(survey, ace_scored_items())
+    if (length(miss)) {
+      emit_absent(miss)
+    } else {
+      codes <- as.data.frame(substantive_matrix(survey, ace_scored_items()), stringsAsFactors = FALSE)
+      ace <- score_ace(codes)
+      n_score <- sum(!is.na(ace$ace_binary))
+      mentor_emit(
+        "The World Health Organization guidance asks for two totals. Each counts how many of 13 ",
+        "adversity categories are present, from 0 to 13. The binary total uses the lower threshold. ",
+        "The frequency total uses a higher threshold on some questions. ",
+        n_score, " of ", survey$n,
+        " have both totals. The others are missing because at least one category had no answered item. ",
+        "The chart uses Boy and Girl only. The tables include every young person with a non-missing category.\n\n",
+        sep = ""
+      )
+      means <- rbind(
+        gender_mean_frame(ace$ace_binary, survey$label$gender1, "Binary (0-13)"),
+        gender_mean_frame(ace$ace_frequency, survey$label$gender1, "Frequency (0-13)")
+      )
+      mentor_plot(score_mean_plot(means, "Mean number of categories (0-13)"))
+      emit_prevalence(ace, survey$label$gender1, "binary")
+      emit_prevalence(ace, survey$label$gender1, "frequency")
+    }
   })
 }
 
 render_overview_kidscreen <- function(survey) {
   mentor_collect({
     spec <- scale_specs()$kidscreen
-    one <- likert_sum(survey, spec)
-    mentor_emit(
-      "The sum runs from 0 to 40. Felt sad and felt lonely are reversed. ",
-      "A sum needs at least 8 of the 10 answers. A higher sum means better health-related quality of life. ",
-      sum(!is.na(one$score)), " of ", survey$n, " have a sum.\n\n",
-      sep = ""
-    )
-    plot_gender_means(survey, list(one$score), spec$score_name, spec$ylab)
+    miss <- absent_vars(survey, spec$items)
+    if (length(miss)) {
+      emit_absent(miss)
+    } else {
+      one <- likert_sum(survey, spec)
+      mentor_emit(
+        "The sum runs from 0 to 40. Felt sad and felt lonely are reversed. ",
+        "A sum needs at least 8 of the 10 answers. A higher sum means better health-related quality of life. ",
+        sum(!is.na(one$score)), " of ", survey$n, " have a sum.\n\n",
+        sep = ""
+      )
+      plot_gender_means(survey, list(one$score), spec$score_name, spec$ylab)
+    }
   })
 }
 
 render_overview_cyrm <- function(survey) {
   mentor_collect({
     spec <- scale_specs()$cyrm
-    one <- likert_sum(survey, spec)
-    mentor_emit(
-      "The sum runs from 0 to 48. No item is reversed. ",
-      "A sum needs at least 10 of the 12 answers. A higher sum means more of the resources the items ask about. ",
-      sum(!is.na(one$score)), " of ", survey$n, " have a sum.\n\n",
-      sep = ""
-    )
-    plot_gender_means(survey, list(one$score), spec$score_name, spec$ylab)
+    miss <- absent_vars(survey, spec$items)
+    if (length(miss)) {
+      emit_absent(miss)
+    } else {
+      one <- likert_sum(survey, spec)
+      mentor_emit(
+        "The sum runs from 0 to 48. No item is reversed. ",
+        "A sum needs at least 10 of the 12 answers. A higher sum means more of the resources the items ask about. ",
+        sum(!is.na(one$score)), " of ", survey$n, " have a sum.\n\n",
+        sep = ""
+      )
+      plot_gender_means(survey, list(one$score), spec$score_name, spec$ylab)
+    }
   })
 }
 
 render_overview_media <- function(survey) {
   mentor_collect({
-    mentor_emit(
-      "Mean hours on a normal weekday and a normal weekend, for each activity. ",
-      "Less than 1 hour is scored 0.5. 1-2 hours is 1.5, 3-4 hours is 3.5, and 5-6 hours is 5.5. ",
-      "7 hours or more is scored 8. A blank answer is left out of that activity's mean. ",
-      "Weekday and weekend are not added together, and the five activities are not added into one total.\n\n",
-      sep = ""
-    )
-    mentor_plot(media_time_plot(media_time_frame(survey)))
+    miss <- absent_vars(survey, c(weekday_items(), weekend_items()))
+    if (length(miss)) {
+      emit_absent(miss)
+    } else {
+      mentor_emit(
+        "Mean hours on a normal weekday and a normal weekend, for each activity. ",
+        "Less than 1 hour is scored 0.5. 1-2 hours is 1.5, 3-4 hours is 3.5, and 5-6 hours is 5.5. ",
+        "7 hours or more is scored 8. A blank answer is left out of that activity's mean. ",
+        "Weekday and weekend are not added together, and the five activities are not added into one total.\n\n",
+        sep = ""
+      )
+      mentor_plot(media_time_plot(media_time_frame(survey)))
+    }
   })
 }
