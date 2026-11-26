@@ -342,13 +342,24 @@
   }
 
   /**
-   * Header cell for the cleaned download. Tagged headers keep the question
-   * text from parseHeader; every other header stays as stored.
+   * Whether bracket content has the form of a variable ID: it has a letter and
+   * an underscore, or it starts with a letter, has a digit and uses only
+   * letters, digits, "." and ":". parseHeader also reports ordinary words such
+   * as "(snus)" as tags.
+   */
+  function looksLikeVariableTag(tag) {
+    if (!/[A-Za-z]/.test(tag)) return false;
+    return tag.includes("_") || /^[A-Za-z][A-Za-z.:]*[0-9][A-Za-z0-9.:]*$/.test(tag);
+  }
+
+  /**
+   * Header cell for the cleaned download. A variable tag is removed; every
+   * other header stays as stored, so cleaning it again changes nothing.
    */
   function cleanHeaderCell(value) {
     if (value == null || value === "") return value;
     const parsed = parseHeader(value);
-    if (!parsed.hadTag) return value;
+    if (!parsed.hadTag || !looksLikeVariableTag(parsed.varId)) return value;
     return parsed.text;
   }
 

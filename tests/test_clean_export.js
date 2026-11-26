@@ -226,7 +226,7 @@ function testNoDictionaryExport() {
       'Age',
       'Notes',
       'City',
-      'Being overly careful or on guard',
+      'Being overly careful or on guard (checking to see who is around you)',
       'Where were you born?',
       'Refusal',
       'Uncertainty'
