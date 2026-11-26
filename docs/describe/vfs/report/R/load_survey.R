@@ -232,6 +232,9 @@ migration_group <- function(youth, mother, father, country) {
 
 read_cleaned_sheet <- function(path) {
   if (grepl("\\.csv$", path, ignore.case = TRUE)) {
+    # read.csv stops with "no lines available in input" on an empty sheet.
+    lines <- readLines(path, warn = FALSE)
+    if (!any(grepl("[^,\"[:space:]]", lines, useBytes = TRUE))) return(data.frame())
     return(utils::read.csv(
       path,
       check.names = FALSE,
@@ -258,10 +261,21 @@ load_survey <- function(xlsx = NULL, report_dir = NULL) {
 
   meta <- load_dictionary(dictionary_path(report_dir), extra = paste0("smadd", 1:9))
   raw <- read_cleaned_sheet(xlsx)
+  if (ncol(raw) == 0) {
+    stop("The sheet is empty: it has no columns. Export the file again with ",
+         "\"Export cleaned data (core questions)\" on the current auditor page ",
+         "(reload that page first) and check the survey country there.")
+  }
   headers <- names(raw)
   matched <- match_headers(headers, meta)
   for (v in c("gender1", "bage1")) {
-    if (!v %in% matched$variable) stop("The file has no ", v, " column, which the report needs.")
+    if (!v %in% matched$variable) {
+      stop("The file has no ", v, " column, which the report needs. ",
+           sum(!is.na(matched$variable)), " of ", length(headers),
+           " column headers match the core English headers. Choose a file made with ",
+           "\"Export cleaned data (core questions)\" on the current auditor page ",
+           "(reload that page first).")
+    }
   }
   consent_col <- which(matched$role == "consent")
   if (length(consent_col) > 1) stop("Expected at most one participation column")
